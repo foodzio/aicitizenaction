@@ -34,6 +34,8 @@ logs/
 
 # Screenshots
 *.png
+# ...except the build-reference renders, which are tracked project assets
+!input/screenshots/*.png
 
 # Temp files (keep folder via .gitkeep)
 tmp/*

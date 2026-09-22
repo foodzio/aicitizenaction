@@ -1,0 +1,225 @@
+<script>
+(function(){
+"use strict";
+var D = window.__DATA__ || {seats:[],orgs:[]};
+var SEATS = D.seats, ORGS = D.orgs;
+
+var OUTCOMES = [
+ {id:"law", want:"I want a law passed, strengthened or stopped",
+  goes:"Legislative committees with AI jurisdiction, and the campaigns already pushing bills",
+  h:"<h3>Write to the committee that would hear the bill, not to the legislature in general.</h3>"+
+    "<p>Legislatures do not act on topics; they act on texts, in committees. Your message needs to reach the body that would take up the text, and ideally the seat that decides whether it gets heard.</p>"+
+    "<ol><li><b>Find the committee below</b> that matches your jurisdiction and whose remit covers your concern. The remit field is the thing to read carefully — several committees look plausible and only one is right.</li>"+
+    "<li><b>Write to the chair and the ranking or minority member.</b> Two messages, not one. The chair controls the hearing; the minority member can raise it if the chair won't.</li>"+
+    "<li><b>Name something specific.</b> A bill number if one exists, or a single concrete provision. “Regulate AI” is unactionable; “I support the third-party evaluation requirement” is a position a staffer can log.</li>"+
+    "<li><b>Say where you live</b>, even if it isn't their district. Committee correspondence is read differently from constituent mail, and being straight about which you are costs nothing.</li></ol>"},
+
+ {id:"record", want:"I want something on the public record",
+  goes:"Written evidence, public testimony, consultation responses — published and citable",
+  h:"<h3>This is the least gatekept serious channel available to anyone, and almost nobody uses it.</h3>"+
+    "<p>When a committee opens an inquiry or a regulator opens a consultation, submissions are published under your name and cited in the resulting report. An unaffiliated individual's submission sits in the same volume as a company's. There is no credential check.</p>"+
+    "<ol><li><b>Find an open inquiry or consultation</b> whose terms of reference genuinely match your argument. Submitting to the wrong one is the usual failure and it is entirely avoidable.</li>"+
+    "<li><b>Respect the format.</b> Word limits and deadlines are enforced, and a late or overlong submission is simply not published. The format field below gives the rules where they are known.</li>"+
+    "<li><b>Write it to be quoted.</b> Committee staff lift sentences. Give them clean, self-contained ones.</li>"+
+    "<li><b>At US state level especially</b>, position letters and written testimony are open to any resident, have short deadlines, and are read by people deciding a live bill. This is the highest ratio of influence to effort on this entire page.</li></ol>"},
+
+ {id:"audit", want:"I want a company investigated or forced to prove something",
+  goes:"Oversight committees and the regulators with actual enforcement power",
+  h:"<h3>Separate what you want from who can do it.</h3>"+
+    "<p>Almost no body with “AI safety” in its name can compel a company to do anything — the safety institutes test by voluntary agreement. The bodies that can compel are ordinary regulators and oversight committees, which mostly do not think of themselves as AI bodies.</p>"+
+    "<ol><li><b>For a specific deployed system harming specific people</b>, go to a regulator: a market surveillance authority under the EU AI Act, a data protection authority, the FTC, or a state attorney general. They need a named system, an affected person, and ideally a legal duty you think is breached.</li>"+
+    "<li><b>For a pattern rather than an incident</b>, an oversight committee is the better door. They can hold hearings and demand documents, which regulators often won't do on one complaint.</li>"+
+    "<li><b>Check the remit before sending.</b> The register linked at the foot of this page records, for every institution, whether it can compel, investigate, fine, or only advise.</li></ol>"},
+
+ {id:"join", want:"I want to join or support something",
+  goes:"Campaigns, civil society, and professional bodies with AI positions",
+  h:"<h3>Read the ask before you join, because joining means adopting it.</h3>"+
+    "<p>This is the most effective option for most people and there is no shame in it — organised effort beats individual effort, reliably. The only thing to be careful about is that these organisations want quite different things, and some of them want things you may not.</p>"+
+    "<ol><li><b>Compare the asks</b> in the organisations section below. They range from “prohibit superintelligence development” to “pause frontier training” to “enforce existing consumer law harder”. These are not the same position and the differences are real.</li>"+
+    "<li><b>Check the tactics.</b> At least one group on this list works through civil disobedience. That is a legitimate choice and it is also one you should make knowingly rather than discover later.</li>"+
+    "<li><b>Consider a professional body you already belong to.</b> If you are a doctor, teacher, lawyer, engineer or performer, your professional association may have an AI position and a route for members to shape it — and you already have standing there that you don't have anywhere else.</li></ol>"},
+
+ {id:"tip", want:"I want to hand information to someone who can use it",
+  goes:"Organisations that accept tips, and incident databases",
+  h:"<h3>Route it through someone with the access you don't have.</h3>"+
+    "<p>A finding that arrives at a regulator from an established organisation carries weight that the same finding sent by an individual does not. This is an underused strategy and a perfectly honourable one.</p>"+
+    "<ol><li><b>Match the threat model.</b> These organisations differ sharply in what they think the problem is. An alignment concern sent to a near-term-harms group, or the reverse, will be politely ignored by people who simply do not work on that.</li>"+
+    "<li><b>If it is an incident that has been published anywhere citable</b>, the AI Incident Database will take it. If it has not been published, they will not — they anchor records to a source.</li>"+
+    "<li><b>If you are an insider</b>, stop and get legal advice before contacting anyone at all, including the organisations listed here. Protections are narrower than the public discussion suggests and the order of disclosure can determine whether you keep them.</li></ol>"},
+
+ {id:"opposition", want:"I want to understand who is pushing the other way",
+  goes:"Industry lobbying, trade associations and the political money",
+  h:"<h3>Know the shape of the field before you decide where your effort goes.</h3>"+
+    "<p>AI policy is not a debate between the concerned and the indifferent. It is a contest with organised, well-funded participation on the other side, and the asymmetry in resources is large. This is not a reason for despair — it is a reason to put effort where it is scarce rather than where it is abundant.</p>"+
+    "<ol><li><b>The industry side is listed below in amber</b>, with spending figures where they are published.</li>"+
+    "<li><b>The most consequential current fight in the US is preemption</b> — whether federal law overrides state AI laws. State-level rules are where most binding AI regulation currently exists, so this determines whether any of it survives.</li>"+
+    "<li><b>What is genuinely scarce</b> is individual testimony at state level and substantive written evidence to inquiries. Money cannot easily manufacture those, which is precisely why they are worth your time.</li></ol>"}
+];
+
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
+  return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+function isUrl(v){return /^https?:\/\//i.test(v||"");}
+function link(v){ v=(v||"").trim(); if(!v) return "";
+  return isUrl(v)? '<a href="'+esc(v)+'" target="_blank" rel="noopener noreferrer">'+esc(v)+'</a>' : esc(v); }
+function dt(s){ if(!s) return ""; var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(s); if(!m) return s;
+  var M=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  return +m[3]+" "+M[+m[2]-1]+" "+m[1]; }
+
+/* ---------- outcome chooser ---------- */
+var ocWrap=document.getElementById("outcomes"), ansEl=document.getElementById("answer");
+ocWrap.innerHTML = OUTCOMES.map(function(o){
+  var n = SEATS.filter(function(s){return (s.tags||[]).indexOf(o.id)>-1;}).length
+        + ORGS.filter(function(x){return (x.tags||[]).indexOf(o.id)>-1;}).length;
+  return '<button class="oc" data-o="'+o.id+'" aria-pressed="false">'+
+    '<span class="want">'+o.want+'</span><span class="goes">'+o.goes+'</span>'+
+    '<span class="cnt">'+n+' entries</span></button>';
+}).join("");
+
+var sState={q:"",jur:"",lvl:"",tag:"",shown:25};
+var oState={side:new Set(),tag:""};
+
+ocWrap.addEventListener("click",function(ev){
+  var b=ev.target.closest(".oc"); if(!b) return;
+  var id=b.getAttribute("data-o");
+  Array.prototype.forEach.call(ocWrap.querySelectorAll(".oc"),function(x){x.setAttribute("aria-pressed","false");});
+  if(sState.tag===id){ sState.tag=""; oState.tag=""; ansEl.hidden=true; }
+  else{
+    sState.tag=id; oState.tag=id; b.setAttribute("aria-pressed","true");
+    var o=OUTCOMES.filter(function(x){return x.id===id;})[0];
+    var ns=SEATS.filter(function(s){return (s.tags||[]).indexOf(id)>-1;}).length;
+    var no=ORGS.filter(function(x){return (x.tags||[]).indexOf(id)>-1;}).length;
+    var jump=[];
+    if(ns) jump.push('<a href="#seats">'+ns+' bodies &darr;</a>');
+    if(no) jump.push('<a href="#orgs">'+no+' organisations &darr;</a>');
+    ansEl.innerHTML=o.h+'<p class="jump">Now showing: '+jump.join(" &nbsp;&middot;&nbsp; ")+'</p>';
+    ansEl.hidden=false;
+  }
+  sState.shown=25; renderSeats(); renderOrgs();
+});
+
+/* ---------- seats ---------- */
+var jurSel=document.getElementById("jur");
+var jurs=Array.from(new Set(SEATS.map(function(s){return s.jurisdiction;}).filter(Boolean))).sort();
+jurSel.innerHTML='<option value="">Any jurisdiction</option>'+jurs.map(function(j){
+  return '<option value="'+esc(j)+'">'+esc(j)+'</option>';}).join("");
+
+function shay(s){ return (s._h || (s._h=[s.body,s.local_name,s.jurisdiction,s.level,s.chamber,s.ai_jurisdiction,
+  s.business,s.public_route,s.note,s.status,s.key_people,
+  (s.chair&&s.chair.name)||"",(s.ranking&&s.ranking.name)||""].join(" ").toLowerCase())); }
+
+function seatFiltered(){
+  var terms=sState.q.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  return SEATS.filter(function(s){
+    if(sState.jur && s.jurisdiction!==sState.jur) return false;
+    if(sState.lvl && s.level!==sState.lvl) return false;
+    if(sState.tag && (s.tags||[]).indexOf(sState.tag)<0) return false;
+    if(terms.length){var h=shay(s);for(var i=0;i<terms.length;i++){if(h.indexOf(terms[i])<0)return false;}}
+    return true;
+  });
+}
+function whoBox(p,role){
+  if(!p||!p.name) return "";
+  var sub=[p.party,p.state].filter(Boolean).join("-");
+  return '<div class="whobox"><div class="role">'+esc(role)+'</div>'+
+    '<div class="nm">'+esc(p.name)+(sub?' <span style="color:var(--ink-3);font-weight:400">('+esc(sub)+')</span>':'')+'</div>'+
+    (p.role&&p.role!==role?'<div class="asof">'+esc(p.role)+'</div>':'')+
+    (p.verified_on?'<div class="asof">checked '+esc(dt(p.verified_on))+'</div>':'')+'</div>';
+}
+function seatHTML(s){
+  var h='<div class="seat"><div class="seat-top"><div>'+
+    '<div class="seat-name">'+esc(s.body)+'</div>'+
+    '<div class="seat-sub">'+[s.jurisdiction,s.chamber,s.local_name].filter(Boolean).map(esc).join(' &middot; ')+'</div>'+
+    '</div><span class="lvl">'+esc(s.level)+'</span></div>';
+  if(s.ai_jurisdiction) h+='<div class="seat-jur">'+esc(s.ai_jurisdiction)+'</div>';
+  var w=whoBox(s.chair,"Chair")+whoBox(s.ranking,"Ranking / minority");
+  if(w) h+='<div class="who">'+w+'</div>';
+  h+='<dl class="seat-rows">';
+  function row(dtx,dd,cls){ if(!dd) return ""; return '<div class="srow'+(cls?" "+cls:"")+'"><dt>'+dtx+'</dt><dd>'+dd+'</dd></div>'; }
+  h+=row("How you get in", s.public_route?esc(s.public_route):"", "key");
+  h+=row("Submission link", s.public_route_url?link(s.public_route_url):"");
+  h+=row("Format rules", s.format_rules?esc(s.format_rules):"");
+  h+=row("Other seats", s.key_people?esc(s.key_people):"");
+  h+=row("Current business", s.business?esc(s.business):"");
+  h+=row("Status", s.status?esc(s.status):"");
+  h+=row("Enforcement route", s.agency_route?esc(s.agency_route):"");
+  h+=row("Realistic for outsiders", s.realistic?esc(s.realistic):"");
+  h+=row("Language", s.language?esc(s.language):"");
+  h+=row("Live membership list", s.membership_url?link(s.membership_url):"");
+  h+=row("Note", s.note?esc(s.note):"");
+  h+='</dl></div>';
+  return h;
+}
+var seatEl=document.getElementById("seatlist"), scEl=document.getElementById("scount"),
+    smEl=document.getElementById("smore"), sclEl=document.getElementById("sclear");
+function renderSeats(){
+  var l=seatFiltered(), sl=l.slice(0,sState.shown);
+  seatEl.innerHTML = sl.length? sl.map(seatHTML).join("") : '<div class="empty">No bodies match. Try clearing a filter.</div>';
+  scEl.textContent=l.length+" of "+SEATS.length+" bodies";
+  if(l.length>sState.shown){smEl.hidden=false;smEl.textContent="Show "+Math.min(25,l.length-sState.shown)+" more of "+(l.length-sState.shown)+" remaining";}
+  else smEl.hidden=true;
+  sclEl.hidden = !(sState.q||sState.jur||sState.lvl||sState.tag);
+}
+document.getElementById("q").addEventListener("input",function(e){sState.q=e.target.value;sState.shown=25;renderSeats();});
+jurSel.addEventListener("change",function(e){sState.jur=e.target.value;sState.shown=25;renderSeats();});
+document.getElementById("lvl").addEventListener("change",function(e){sState.lvl=e.target.value;sState.shown=25;renderSeats();});
+smEl.addEventListener("click",function(){sState.shown+=25;renderSeats();});
+sclEl.addEventListener("click",function(){
+  sState.q="";sState.jur="";sState.lvl="";sState.tag="";sState.shown=25;
+  document.getElementById("q").value="";jurSel.value="";document.getElementById("lvl").value="";
+  Array.prototype.forEach.call(ocWrap.querySelectorAll(".oc"),function(x){x.setAttribute("aria-pressed","false");});
+  ansEl.hidden=true;oState.tag="";renderSeats();renderOrgs();
+});
+
+/* ---------- orgs ---------- */
+var SIDES=[["safety-advocacy","Safety advocacy"],["civil-liberties","Civil liberties"],
+           ["professional","Professional bodies"],["industry-lobby","Industry lobbying"]];
+var sideWrap=document.getElementById("sidechips");
+sideWrap.innerHTML=SIDES.map(function(s){
+  var n=ORGS.filter(function(o){return o.side===s[0];}).length;
+  return '<button class="chip" data-s="'+s[0]+'" aria-pressed="false">'+s[1]+' <span style="opacity:.6">'+n+'</span></button>';
+}).join("");
+function orgHTML(o){
+  var sideLabel=(SIDES.filter(function(s){return s[0]===o.side;})[0]||["","Organisation"])[1];
+  var h='<div class="orgcard '+esc(o.side)+'">'+
+    '<div><div class="org-side">'+esc(sideLabel)+'</div><div class="org-name">'+esc(o.name)+'</div></div>';
+  if(o.the_ask) h+='<div class="org-ask">'+esc(o.the_ask)+'</div>';
+  if(o.what_they_do) h+='<div class="org-f"><b>What they do</b>'+esc(o.what_they_do)+'</div>';
+  if(o.newcomer_action) h+='<div class="org-f"><b>You could, this week</b>'+esc(o.newcomer_action)+'</div>';
+  var bits=[];
+  if(o.geography) bits.push("<b>Where</b>"+esc(o.geography));
+  if(o.scale) bits.push("<b>Scale</b>"+esc(o.scale));
+  if(o.spending) bits.push("<b>Money</b>"+esc(o.spending));
+  if(o.tips) bits.push("<b>Takes tips</b>"+esc(o.tips));
+  bits.forEach(function(b){h+='<div class="org-f">'+b+'</div>';});
+  if(o.caution) h+='<div class="org-caution"><b>Before you join</b><br>'+esc(o.caution)+'</div>';
+  if(o.action_url) h+='<div class="org-link">'+link(o.action_url)+'</div>';
+  h+='</div>';
+  return h;
+}
+var orgEl=document.getElementById("orglist"), ocEl=document.getElementById("ocount");
+function renderOrgs(){
+  var l=ORGS.filter(function(o){
+    if(oState.side.size && !oState.side.has(o.side)) return false;
+    if(oState.tag && (o.tags||[]).indexOf(oState.tag)<0) return false;
+    return true;
+  });
+  orgEl.innerHTML = l.length? l.map(orgHTML).join("") : '<div class="empty">No organisations match.</div>';
+  ocEl.textContent = l.length+" of "+ORGS.length+" organisations";
+}
+sideWrap.addEventListener("click",function(ev){
+  var b=ev.target.closest(".chip"); if(!b) return;
+  var s=b.getAttribute("data-s");
+  if(oState.side.has(s)){oState.side.delete(s);b.setAttribute("aria-pressed","false");}
+  else{oState.side.add(s);b.setAttribute("aria-pressed","true");}
+  renderOrgs();
+});
+
+/* ---------- tallies ---------- */
+document.getElementById("t-seats").textContent=SEATS.length;
+document.getElementById("t-chairs").textContent=SEATS.filter(function(s){return s.chair&&s.chair.name;}).length;
+document.getElementById("t-jur").textContent=jurs.length;
+document.getElementById("t-orgs").textContent=ORGS.length;
+
+renderSeats(); renderOrgs();
+})();
+</script>

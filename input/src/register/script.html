@@ -1,0 +1,185 @@
+<script>
+(function(){
+"use strict";
+var E = window.__ENTRIES__ || [];
+
+var TRIAGE = [
+ {id:"behaviour", q:"A model did something alarming while I was using it",
+  a:"Deception, manipulation, sycophancy, harmful compliance, a refusal that failed",
+  h:"<h3>Go to the developer first, and to an incident database second.</h3><p>This is the one case where the company itself is genuinely the right first recipient — they are the only body that can change the model, and several of them publish a named address for exactly this. Use the filing format above: the trial count and the reproduction steps are what separate your message from the thousands of “the AI said something weird” reports they receive. If your observation has been published anywhere citable, the AI Incident Database will also take it; if it has not, they will not, because they anchor records to a published source.</p><p>Do <em>not</em> start with a regulator. No law has been broken by a model producing an output you found alarming, and a complaint with no legal hook is a complaint that gets closed.</p>"},
+ {id:"flaw", q:"I found a reproducible flaw, jailbreak or safety bypass",
+  a:"A specific technique that defeats a safeguard, repeatably",
+  h:"<h3>Use a coordinated disclosure route, and read the terms before you submit.</h3><p>Several labs run bounties that cover model safety rather than only infrastructure security, and those are the routes with actual safe-harbour language attached. The terms differ sharply and matter more than the money: at least one major safety bounty places everything you submit — prompts, outputs, findings and correspondence — under an NDA, meaning you cannot publish what you found. Decide whether you are willing to accept that <em>before</em> you submit, because you cannot take it back.</p><p>If you want to retain the right to publish, use the general safety address rather than the bounty programme, and state a disclosure window in part 8.</p>"},
+ {id:"harm", q:"A deployed system is harming people right now",
+  a:"Discrimination, unsafe advice, fraud, a system used on people without recourse",
+  h:"<h3>This is the case with real legal machinery behind it — use it.</h3><p>Article 85 of the EU AI Act gives any person the right to lodge a complaint with a national market surveillance authority. Data protection law gives a parallel route. In the US, the FTC and state attorneys general take AI-related deception complaints, and several states now have specific frontier-AI provisions. These bodies can compel, investigate and fine, which none of the safety institutes can.</p><p>The requirement is different here: you need a <em>specific deployed system</em>, a <em>specific person or group affected</em>, and ideally a <em>specific legal duty</em> you think is being breached. A general argument about risk, however sound, will be closed as outside their remit.</p>"},
+ {id:"systemic", q:"I have an argument about frontier or systemic risk",
+  a:"A reasoned case about trajectory, capability, or governance — not a single incident",
+  h:"<h3>Get it onto a public record, where it becomes citable.</h3><p>This is the hardest kind of concern to place, because it is exactly the kind no complaint mechanism is built for. The route that works is the one nobody thinks of: <strong>written evidence to an open parliamentary inquiry, or a comment on an open consultation or rulemaking docket.</strong> These are published, they are read by committee staff, and they are cited in reports. A well-argued submission from an unaffiliated individual genuinely does get quoted — this is the least gatekept serious channel in the entire register.</p><p>Find an inquiry whose terms of reference your argument actually fits. Submitting to the wrong inquiry is the usual failure. Respect the word limit and the deadline; both are enforced.</p>"},
+ {id:"insider", q:"I know something from inside a company",
+  a:"Non-public knowledge of a practice, a suppressed result, a broken commitment",
+  h:"<h3>Get legal advice before you contact anyone, including the bodies listed here.</h3><p>The protections that exist are narrower than the public discussion implies, they vary enormously by jurisdiction, and the order in which you disclose can determine whether you keep them. Organisations exist specifically to support technology whistleblowers, and some operate information escrow — holding what you know without disclosing it until a condition is met, which is often the right first step.</p><p>Nothing in this register is legal advice and this page is not a safe channel. Talk to a lawyer or one of the support organisations before you talk to a regulator, a journalist, or your employer.</p>"},
+ {id:"law", q:"I want the law changed",
+  a:"The rules themselves are the problem, not one company's conduct",
+  h:"<h3>Aim at a named provision in a named bill, not at the topic.</h3><p>Legislators and their staff are moved by specificity and by constituency. “Regulate AI” reaches nobody; “support the reporting requirement in section 4 of [bill], and here is the one change I would make to it” reaches a staffer. Petition systems and citizens' initiatives exist and have formal thresholds, but be realistic — most produce a written response rather than a change, and their value is usually the attention they generate rather than the mechanism itself.</p><p>Committee evidence, again, outperforms almost everything else available to an individual.</p>"},
+ {id:"research", q:"I want to hand this to someone who can carry it",
+  a:"You have something real but no standing to push it yourself",
+  h:"<h3>Route it through an organisation that already has the access you lack.</h3><p>This is a legitimate and underused strategy. Watchdogs, incident trackers and the smaller policy organisations do read their inboxes — the small ones in particular — and several have formal advisory channels into governments and standards bodies. A finding that arrives at a regulator from an established organisation carries weight that the same finding, sent by you, will not.</p><p>Check the threat model before you send. These organisations differ sharply in what they think the problem is, and an alignment concern sent to a near-term-harms organisation — or the reverse — will be politely ignored by people who simply do not work on that.</p>"}
+];
+
+var GROUPS = ["Companies","Government","Multilateral","Standards","Civil society","Academic","Watchdog","How to file"];
+var state = {q:"", region:"", access:"", groups:new Set(), tag:"", shown:40};
+
+/* ---------- build controls ---------- */
+var regions = Array.from(new Set(E.map(function(e){return e.region;}))).sort();
+var regSel = document.getElementById("region");
+regSel.innerHTML = '<option value="">Any region</option>' + regions.map(function(r){
+  return '<option value="'+esc(r)+'">'+esc(r)+'</option>';}).join("");
+
+var chipWrap = document.getElementById("groupchips");
+chipWrap.innerHTML = GROUPS.map(function(g){
+  var n = E.filter(function(e){return e.group===g;}).length;
+  return '<button class="chip" data-g="'+esc(g)+'" aria-pressed="false">'+esc(g)+' <span style="opacity:.6">'+n+'</span></button>';
+}).join("");
+
+var triWrap = document.getElementById("triage-cards");
+triWrap.innerHTML = TRIAGE.map(function(t){
+  var n = E.filter(function(e){return (e.tags||[]).indexOf(t.id)>-1;}).length;
+  return '<button class="tri" data-t="'+t.id+'" aria-pressed="false"><span class="q">'+t.q+'</span><span class="a">'+t.a+'</span><span class="n">'+n+' bodies</span></button>';
+}).join("");
+
+/* ---------- helpers ---------- */
+function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){
+  return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+function isUrl(v){return /^https?:\/\//i.test(v||"");}
+function isMail(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((v||"").trim());}
+function val(r){
+  var v=(r.value||"").trim();
+  if(!v) return '<span style="color:var(--ink-3)">no address published</span>';
+  if(isUrl(v)) return '<a href="'+esc(v)+'" target="_blank" rel="noopener noreferrer">'+esc(v)+'</a>';
+  if(isMail(v)) return '<a href="mailto:'+esc(v)+'">'+esc(v)+'</a>';
+  return esc(v);
+}
+function hay(e){
+  return (e._h || (e._h = [e.name,e.local_name,e.jurisdiction,e.region,e.group,e.remit,e.notes,e.reality_check,
+    e.accepts,e.does_not_accept,e.how,e.threat_model,e.powers,
+    (e.routes||[]).map(function(r){return [r.label,r.value,r.scope,r.note,r.type].join(" ");}).join(" ")
+  ].join(" ").toLowerCase()));
+}
+
+/* ---------- filtering ---------- */
+function filtered(){
+  var q = state.q.trim().toLowerCase();
+  var terms = q? q.split(/\s+/):[];
+  return E.filter(function(e){
+    if(state.region && e.region!==state.region) return false;
+    if(state.access && e.public_input!==state.access) return false;
+    if(state.groups.size && !state.groups.has(e.group)) return false;
+    if(state.tag && (e.tags||[]).indexOf(state.tag)<0) return false;
+    if(terms.length){ var h=hay(e); for(var i=0;i<terms.length;i++){ if(h.indexOf(terms[i])<0) return false; } }
+    return true;
+  });
+}
+
+function recordHTML(e){
+  var pi = e.public_input||"none";
+  var piLabel = pi==="open"?"Open":pi==="limited"?"Limited":"No public route";
+  var meta = [e.jurisdiction||e.region, e.group].filter(Boolean);
+  var h = '<details class="rec"><summary><div class="rec-main">'+
+    '<div class="rec-name">'+esc(e.name)+(e.local_name?' <span style="color:var(--ink-3);font-weight:400">'+esc(e.local_name)+'</span>':'')+'</div>'+
+    '<div class="rec-meta">'+meta.map(esc).join(' <span class="sep">/</span> ')+'</div>'+
+    '</div><div class="rec-side">'+
+    (e.n_routes? '<span class="rcount">'+e.n_routes+(e.n_routes===1?' route':' routes')+'</span>':'')+
+    '<span class="pill '+esc(pi)+'">'+piLabel+'</span>'+
+    '</div></summary><div class="rec-body">';
+
+  if(e.remit) h+='<div class="blk"><h4>Remit</h4><p>'+esc(e.remit)+'</p></div>';
+  if(e.powers) h+='<div class="blk"><h4>Power</h4><p>'+esc(e.powers)+'</p></div>';
+  if(e.threat_model) h+='<div class="blk"><h4>Threat model</h4><p>'+esc(e.threat_model)+'</p></div>';
+  if(e.does_not_accept) h+='<div class="blk"><h4>Will not accept</h4><p>'+esc(e.does_not_accept)+'</p></div>';
+  if(e.format) h+='<div class="blk"><h4>Expected format</h4><p>'+esc(e.format)+'</p></div>';
+  if(e.timing) h+='<div class="blk"><h4>Timing</h4><p>'+esc(e.timing)+'</p></div>';
+  if(e.after) h+='<div class="blk"><h4>What happens next</h4><p>'+esc(e.after)+'</p></div>';
+
+  if(e.routes && e.routes.length){
+    h+='<div class="blk"><h4>Contact routes</h4><div class="routes">';
+    e.routes.forEach(function(r){
+      h+='<div class="route"><div class="route-top">'+
+        '<span class="route-label">'+esc(r.label||r.type||"Route")+'</span>'+
+        (r.type?'<span class="tag">'+esc(r.type)+'</span>':'')+
+        (r.language?'<span class="tag">'+esc(r.language)+'</span>':'')+
+        '<span class="tag '+(r.verified?'ok':'unv')+'">'+(r.verified?'verified':'unverified')+'</span>'+
+        '</div><div class="route-val">'+val(r)+'</div>'+
+        (r.scope?'<div class="route-scope">'+esc(r.scope)+'</div>':'')+
+        (r.note?'<div class="route-note">'+esc(r.note)+'</div>':'')+
+        '</div>';
+    });
+    h+='</div></div>';
+  }
+  if(e.reality_check) h+='<div class="blk reality"><h4>Does it actually work?</h4><p>'+esc(e.reality_check)+'</p></div>';
+  if(e.notes) h+='<div class="blk"><h4>Before you contact them</h4><p>'+esc(e.notes)+'</p></div>';
+  if(e.framework && e.framework.url) h+='<div class="blk"><h4>Published framework</h4><p class="home">'+esc(e.framework.title||"")+'<br><a href="'+esc(e.framework.url)+'" target="_blank" rel="noopener noreferrer">'+esc(e.framework.url)+'</a></p></div>';
+  if(e.homepage) h+='<div class="blk"><h4>Homepage</h4><p class="home"><a href="'+esc(e.homepage)+'" target="_blank" rel="noopener noreferrer">'+esc(e.homepage)+'</a></p></div>';
+  h+='</div></details>';
+  return h;
+}
+
+var recEl=document.getElementById("records"), cntEl=document.getElementById("count"),
+    moreEl=document.getElementById("more"), clearEl=document.getElementById("clear");
+
+function render(){
+  var list=filtered();
+  var slice=list.slice(0,state.shown);
+  recEl.innerHTML = slice.length? slice.map(recordHTML).join("")
+    : '<div class="empty">Nothing matches those filters. Try clearing one.</div>';
+  var openN=list.filter(function(e){return e.public_input==="open";}).length;
+  cntEl.textContent = list.length+" of "+E.length+" records · "+openN+" open to the public";
+  if(list.length>state.shown){ moreEl.hidden=false; moreEl.textContent="Show "+Math.min(40,list.length-state.shown)+" more of "+(list.length-state.shown)+" remaining"; }
+  else moreEl.hidden=true;
+  var active = state.q||state.region||state.access||state.groups.size||state.tag;
+  clearEl.hidden = !active;
+}
+
+/* ---------- events ---------- */
+document.getElementById("q").addEventListener("input",function(ev){state.q=ev.target.value;state.shown=40;render();});
+regSel.addEventListener("change",function(ev){state.region=ev.target.value;state.shown=40;render();});
+document.getElementById("access").addEventListener("change",function(ev){state.access=ev.target.value;state.shown=40;render();});
+chipWrap.addEventListener("click",function(ev){
+  var b=ev.target.closest(".chip"); if(!b) return;
+  var g=b.getAttribute("data-g");
+  if(state.groups.has(g)){state.groups.delete(g);b.setAttribute("aria-pressed","false");}
+  else{state.groups.add(g);b.setAttribute("aria-pressed","true");}
+  state.shown=40;render();
+});
+var triOut=document.getElementById("triage-out");
+triWrap.addEventListener("click",function(ev){
+  var b=ev.target.closest(".tri"); if(!b) return;
+  var t=b.getAttribute("data-t");
+  Array.prototype.forEach.call(triWrap.querySelectorAll(".tri"),function(x){x.setAttribute("aria-pressed","false");});
+  if(state.tag===t){ state.tag=""; triOut.hidden=true; }
+  else{
+    state.tag=t; b.setAttribute("aria-pressed","true");
+    var item=TRIAGE.filter(function(x){return x.id===t;})[0];
+    var n=E.filter(function(e){return (e.tags||[]).indexOf(t)>-1;}).length;
+    triOut.innerHTML=item.h+'<p class="goto"><a href="#register">Jump to the '+n+' bodies now showing in the register &darr;</a></p>';
+    triOut.hidden=false;
+  }
+  state.shown=40;render();
+});
+moreEl.addEventListener("click",function(){state.shown+=40;render();});
+clearEl.addEventListener("click",function(){
+  state.q="";state.region="";state.access="";state.groups.clear();state.tag="";state.shown=40;
+  document.getElementById("q").value="";regSel.value="";document.getElementById("access").value="";
+  Array.prototype.forEach.call(document.querySelectorAll(".chip,.tri"),function(x){x.setAttribute("aria-pressed","false");});
+  triOut.hidden=true;render();
+});
+
+/* ---------- tallies ---------- */
+document.getElementById("t-inst").textContent=E.length;
+document.getElementById("t-routes").textContent=E.reduce(function(a,e){return a+(e.n_routes||0);},0);
+document.getElementById("t-ver").textContent=E.reduce(function(a,e){return a+(e.verified_routes||0);},0);
+document.getElementById("t-open").textContent=E.filter(function(e){return e.public_input==="open";}).length;
+
+render();
+})();
+</script>

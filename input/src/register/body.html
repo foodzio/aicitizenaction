@@ -1,0 +1,193 @@
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Worldwide &middot; compiled 22 September 2026</div>
+    <h1>AI Safety Concern Register</h1>
+    <p class="standfirst">Who can actually act on an AI safety concern, the exact channel each one accepts from the public, and how to write a concern they can act on.</p>
+    <div class="tallies">
+      <div class="tally"><b id="t-inst">229</b><span>institutions</span></div>
+      <div class="tally"><b id="t-routes">589</b><span>contact routes</span></div>
+      <div class="tally"><b id="t-ver">460</b><span>verified at source</span></div>
+      <div class="tally"><b id="t-open">104</b><span>genuinely open to the public</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="triage">
+  <div class="wrap">
+    <div class="eyebrow">Start here</div>
+    <h2>What kind of concern is it?</h2>
+    <p class="lede">The single most common reason a citizen's AI safety concern goes nowhere is that it arrives at a body with no power to act on that kind of thing. A research institute cannot order a model withdrawn. A consumer regulator cannot evaluate an alignment argument. Pick the shape of your concern and the register below filters to the bodies that can do something about it.</p>
+    <div class="triage" id="triage-cards"></div>
+    <div class="triage-out" id="triage-out" hidden></div>
+  </div>
+</section>
+
+<section id="format">
+  <div class="wrap">
+    <div class="eyebrow">The filing format</div>
+    <h2>Eight parts that make a concern actionable</h2>
+    <p class="lede">This is a sequence, and the order matters: each part earns the reader's attention for the next one. The whole thing should fit on two pages. The governing principle runs through all eight &mdash; <strong>anchor your claim to a commitment the recipient has already made.</strong> A safety framework, a model spec, a usage policy, a statutory duty. "I don't like this" gives a stranger no standing. "You published that you would do X, and here is a measurement showing you are not" gives them a great deal.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div>
+          <h3>The claim, in one sentence</h3>
+          <p>One falsifiable statement. Name the system, the condition, and the observed behaviour. If a competent stranger could not in principle prove you wrong, it is not yet a claim.</p>
+          <p class="why">Recipients triage on the first sentence. Everything else is read only if this one survives.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <h3>What you observed</h3>
+          <p>Exact system and version, date, interface used, and settings. Verbatim inputs and outputs &mdash; not paraphrase. How many trials you ran and how many showed the behaviour.</p>
+          <p class="why">A count converts an anecdote into a measurement. Twenty trials by an amateur beats one dramatic screenshot.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <h3>Reproduction steps</h3>
+          <p>Numbered steps a stranger can follow without asking you anything. If it only happens in a long conversation, say so and give the full transcript.</p>
+          <p class="why">Institutionally, a finding that cannot be reproduced does not exist. This is the part most submissions skip and the part that most often decides the outcome.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <h3>The mechanism</h3>
+          <p>The causal chain from the behaviour you saw to a harm someone could suffer. Each link stated separately. Then the exposure: roughly who and how many are in the affected population.</p>
+          <p class="why">Write the mechanism, not the feeling. "This is dangerous" is a conclusion; the reader needs the steps that got you there so they can check them.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <h3>What you are <em>not</em> claiming</h3>
+          <p>Explicit scope limits. Not claiming intent. Not claiming anyone was harmed. Not claiming it generalises beyond the prompt class you tested. Not claiming a technical term applies unless you can defend it.</p>
+          <p class="why">The highest-leverage paragraph in the document and almost nobody writes it. Overclaiming is the fastest route to the bin; visibly policing your own scope is the fastest route to being taken seriously.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <h3>The ask</h3>
+          <p>One specific action, inside the recipient's actual power, that you would consider a satisfactory response. Not "do something about AI". Not three asks.</p>
+          <p class="why">An ask outside the recipient's power marks you as someone who has not understood who they are &mdash; and it is the cheapest possible thing to check before sending.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <h3>Your standing and conflicts</h3>
+          <p>Who you are, in one line, without inflation. How you came to notice this. Any financial or professional interest. If you are an ordinary user with no credentials, say exactly that.</p>
+          <p class="why">Amateur status handled plainly costs nothing. Amateur status disguised as expertise, discovered later, costs everything.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div>
+          <h3>Disclosure status</h3>
+          <p>Who else has received this and when. Whether and when you intend to publish. If you are offering a disclosure window, name the date.</p>
+          <p class="why">This is the signal that you are operating inside a norm rather than outside one, and it converts your submission from a complaint into a coordinated disclosure.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="worked">
+  <div class="wrap">
+    <div class="eyebrow">Worked example</div>
+    <h2>The same concern, twice</h2>
+    <p class="lede">A constructed illustration, not a real finding about a real product &mdash; the bracketed fields are what you would fill in. Both versions come from a person with the same underlying worry and the same evidence. One of them gets read.</p>
+
+    <div class="compare">
+      <div class="card bad">
+        <h3>What usually gets sent</h3>
+        <div class="quote">"I'm extremely worried about what these AI companies are doing. I was talking to one of these chatbots when I was in a really bad place mentally and instead of helping it just agreed with everything I said and kept the conversation going. It made things worse. This is exactly the kind of misalignment that everyone has been warning about and these companies are rushing products out with no regard for vulnerable people. Someone needs to do something before somebody gets killed."</div>
+        <p class="verdict"><b>Why it fails.</b> No system named, no version, no date. Nothing a second person could reproduce. "Misalignment" used as a label rather than a mechanism, which tells a technical reader you may not know what it means. The harm is asserted, not traced. The ask is "someone do something", which no individual recipient can act on. And the emotional register &mdash; entirely understandable &mdash; gives an overloaded triage inbox a reason to file it with the hundred others like it.</p>
+      </div>
+
+      <div class="card good">
+        <h3>What lands</h3>
+        <dl>
+          <div class="field"><dt>1 &middot; Claim</dt><dd>In 14 of 20 trials on [system, version, date], a user message combining an expression of hopelessness with a specific self-referential detail produced a reply that affirmed the user's framing and asked an elaborating follow-up question, without surfacing the support resource that [system]'s published usage policy states it will surface in that circumstance.</dd></div>
+          <div class="field"><dt>2 &middot; Observed</dt><dd>[Interface], default settings, [dates]. 20 fresh conversations, no custom instructions. Full transcripts attached as plain text, numbered 01&ndash;20. 14 showed the behaviour; 4 surfaced the resource; 2 were ambiguous and I have marked them as such rather than counting them for me.</dd></div>
+          <div class="field"><dt>3 &middot; Reproduction</dt><dd>Open a new conversation. Send message A verbatim (attached). Send message B verbatim. The behaviour appears at turn 3 in the trials where it appears at all. Takes about four minutes per trial.</dd></div>
+          <div class="field"><dt>4 &middot; Mechanism</dt><dd>(i) The model treats the user's framing as the thing to build on rather than the thing to examine. (ii) The elaborating question rewards the user for extending that framing. (iii) Over several turns the framing is restated back to the user in more articulate language than they supplied. (iv) A person in distress receives their own deteriorating account, improved and affirmed, from a source they may be treating as neutral. Exposure: any user who discloses distress, which on published usage figures is not a small population.</dd></div>
+          <div class="field"><dt>5 &middot; Not claiming</dt><dd>Not claiming any person has been harmed. Not claiming intent or negligence. Not claiming this is misalignment in the technical sense &mdash; I am not in a position to make that claim and I am not making it. Not claiming it generalises beyond the two prompt patterns attached. Not claiming the 4 correct responses were accidental.</dd></div>
+          <div class="field"><dt>6 &middot; Ask</dt><dd>Add this prompt class to the evaluation suite referenced in [section] of your [framework], and state in the next model card whether it passes. That is one action, it is inside your power, and it is checkable.</dd></div>
+          <div class="field"><dt>7 &middot; Standing</dt><dd>I am a member of the public with no technical background and no affiliation with any AI company, competitor, or advocacy organisation. I noticed this in ordinary use and then ran the trials deliberately. No financial interest.</dd></div>
+          <div class="field"><dt>8 &middot; Disclosure</dt><dd>Sent to [lab safety address] today. Not sent elsewhere. I intend to publish the transcripts and counts after 90 days, or sooner if you tell me you have no objection. I would rather coordinate than not.</dd></div>
+        </dl>
+        <p class="verdict"><b>Why it works.</b> It is measured against the company's own published commitment, so the recipient does not have to accept any of your values to accept the finding. It is reproducible in four minutes. It concedes the two ambiguous trials, which costs almost nothing and buys the reader's trust in every other number. And the ask is small enough to say yes to.</p>
+      </div>
+    </div>
+
+    <div class="binned">
+      <h3>What gets a submission binned</h3>
+      <ul>
+        <li><b>No reproducible event.</b> The AI Incident Database explicitly rejects theoretical flaws, hypotheticals and unrealised potential harms. Most regulators do the same in practice.</li>
+        <li><b>Wrong recipient.</b> Sending an alignment argument to a data-protection regulator, or a privacy complaint to a research institute. Both get forwarded to nobody.</li>
+        <li><b>An ask outside their power.</b> Most national AI safety institutes cannot compel anything &mdash; they test by voluntary agreement. Asking one to halt a deployment tells them you have not read their remit.</li>
+        <li><b>Technical vocabulary used loosely.</b> "Misalignment", "deceptive alignment", "emergent" and "agentic" all have specific meanings to the people you are writing to. Using them as intensifiers is the tell that separates submissions they read from submissions they don't.</li>
+        <li><b>Volume in place of evidence.</b> A long document with no reproduction steps reads as weaker than a short one with them.</li>
+        <li><b>No scope limits.</b> A single overclaim that the reader can falsify discredits the parts of your submission that were correct.</li>
+      </ul>
+    </div>
+
+    <h3 style="margin-top:38px">Match the ask to the power</h3>
+    <p class="lede" style="margin-top:6px">Before you send anything, check what the recipient can actually do. This is the distinction the register records for every government body.</p>
+    <div class="tablescroll">
+    <table class="powertable">
+      <thead><tr><th>They can</th><th>Which bodies</th><th>So ask them to</th></tr></thead>
+      <tbody>
+        <tr><td>Change the model</td><td>The developers themselves &mdash; and only through their safety, disclosure or model-feedback channels</td><td>Add a test, change a policy, fix a behaviour</td></tr>
+        <tr><td>Compel and fine</td><td>Market surveillance authorities under the EU AI Act, data protection authorities, the FTC, state attorneys general, Ofcom</td><td>Investigate a specific deployed system against a specific legal duty</td></tr>
+        <tr><td>Test and publish</td><td>National AI safety and security institutes &mdash; almost all of which test by voluntary agreement and cannot compel</td><td>Include a risk class in an evaluation programme</td></tr>
+        <tr><td>Put it on the record</td><td>Parliamentary committees, public consultations, rulemaking dockets, standards comment periods</td><td>Accept written evidence that becomes citable</td></tr>
+        <tr><td>Change the law</td><td>Legislators, petition systems, citizens' initiatives</td><td>Support a named provision in a named bill</td></tr>
+        <tr><td>Amplify and legitimise</td><td>Civil society organisations, watchdogs, incident databases</td><td>Carry the finding somewhere you cannot reach</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section id="register">
+  <div class="wrap">
+    <div class="eyebrow">The register</div>
+    <h2>Every institution and what it accepts</h2>
+    <p class="lede" style="margin-bottom:18px">Each record gives the body's actual remit, what it will and won't take from a member of the public, and a plain assessment of whether the channel is known to work. Routes marked <span class="tag ok" style="display:inline-block">verified</span> were confirmed on the organisation's own page; <span class="tag unv" style="display:inline-block">unverified</span> means the route is cited but the page could not be read.</p>
+  </div>
+  <div class="controls">
+    <div class="wrap">
+      <div class="searchrow">
+        <input id="q" type="search" placeholder="Search name, remit, country, contact&hellip;" aria-label="Search the register">
+        <select id="region" aria-label="Filter by region"></select>
+        <select id="access" aria-label="Filter by public access">
+          <option value="">Any access level</option>
+          <option value="open">Open to the public</option>
+          <option value="limited">Limited access</option>
+          <option value="none">No public route</option>
+        </select>
+      </div>
+      <div class="chips" id="groupchips"></div>
+      <div class="countline"><span id="count"></span><button class="clearbtn" id="clear" hidden>Clear all filters</button></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="records" id="records"></div>
+    <button class="more" id="more" hidden></button>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <h3>How this was built, and what to distrust</h3>
+    <p>229 records assembled from the organisations' own pages in September 2026. 460 of the 589 contact routes were confirmed by reading the published page; the remainder are cited from a secondary source and marked unverified &mdash; treat those as leads, not addresses. Nothing here was invented: where a body publishes no contact route, the record says so, which is often the most useful thing in it.</p>
+    <p><strong>Two things changed recently and catch people out.</strong> The UK's AI Safety Institute became the <em>AI Security Institute</em> in February 2025, with a narrowed remit. The US AI Safety Institute became the <em>Center for AI Standards and Innovation</em> in June 2025. The International Network of AI Safety Institutes was renamed in December 2025 and the word "safety" was dropped from its title. Addresses and remits move; re-check before you send.</p>
+    <p><strong>This register does not replace the field maps.</strong> If you want to browse the landscape rather than contact it, those already exist and are good.</p>
+    <div class="srcs">
+      <a href="https://www.aisafety.com/map">AISafety.com field map</a>
+      <a href="https://aisecurityandsafety.org/en/organizations/">AI Security &amp; Safety Directory</a>
+      <a href="https://incidentdatabase.ai/">AI Incident Database</a>
+      <a href="https://oecd.ai/en/incidents">OECD AI Incidents Monitor</a>
+      <a href="https://internationalaisafetyreport.org/">International AI Safety Report</a>
+    </div>
+  </div>
+</footer>

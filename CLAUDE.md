@@ -29,6 +29,12 @@ Update this table as the repo grows — it is the map, so a stale map is a bug.
 | `HANDOVER.md` | Live implementation status / handover notes (see section 4) |
 | `AGENTS.md` | Bootstrap pointers for Codex and other agent frameworks |
 | `docs/` | Requirements, specs, plans, design notes |
+| `docs/ux-brief.md` | UX brief: product definition, user portrait, information architecture, screen flow, testable design principles |
+| `input/` | Source assets from the Sept 2026 research and build pass — see `input/README.md` for the manifest |
+| `input/data/` | Normalized datasets: institutions, committees and organisations, source index |
+| `input/data/raw/` | Unnormalized output from the ten research agents. Expensive to recreate — do not delete |
+| `input/src/` | Page sources for the two published prototype pages (Artifact format — no doctype/head/body) |
+| `input/screenshots/` | Render checks, desktop and mobile |
 | `tmp/` | Scratch output (gitignored; Playwright MCP writes here) |
 | `.claude/` | Claude Code settings, skills, agents for this project |
 | `.codex/config.toml` | Codex-scoped MCP server config |
