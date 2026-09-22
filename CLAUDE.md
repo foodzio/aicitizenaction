@@ -30,6 +30,8 @@ Update this table as the repo grows — it is the map, so a stale map is a bug.
 | `AGENTS.md` | Bootstrap pointers for Codex and other agent frameworks |
 | `docs/` | Requirements, specs, plans, design notes |
 | `docs/ux-brief.md` | UX brief: product definition, user portrait, information architecture, screen flow, testable design principles |
+| `docs/content-architecture.md` | Content architecture: content as data, repo layout, record format, translation, freshness, Resources layer, volunteer roles and lifecycle |
+| `docs/implementation-plan.md` | Phased implementation plan for the brief and the architecture, with open decisions and what each blocks |
 | `input/` | Source assets from the Sept 2026 research and build pass — see `input/README.md` for the manifest |
 | `input/data/` | Normalized datasets: institutions, committees and organisations, source index |
 | `input/data/raw/` | Unnormalized output from the ten research agents. Expensive to recreate — do not delete |
@@ -171,4 +173,4 @@ List every `HANDOVER.md` in this repo and what it covers, so the map stays true:
 | `HANDOVER.md` | Repo-wide work for `aicitizenaction` |
 | _(add rows as subprojects appear)_ | |
 
-Last modified: 2026-09-22T16:26:22Z
+Last modified: 2026-09-22T20:37:19Z

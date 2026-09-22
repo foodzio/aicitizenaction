@@ -33,12 +33,12 @@ Handover files in this repo:
 ---
 
 ## Current Plan
-- **Plan / spec / request:** `docs/ux-brief.md` — UX brief for the citizen-facing site
-- **Goal:** a site that converts alarm about AI into one specific, well-aimed action in a single sitting, ending with a draft message the user sends themselves to an institution that can actually act on their concern
+- **Plan / spec / request:** `docs/implementation-plan.md` — phased plan implementing `docs/ux-brief.md` (the product) and `docs/content-architecture.md` (content as data, translation, freshness, Resources, volunteers)
+- **Goal:** a site that converts alarm about AI into one specific, well-aimed action in a single sitting, ending with a draft message the user sends themselves to an institution that can actually act on their concern — maintained by volunteers, in several languages, with a Resources collection of relevant media and information modelled on the stockspanic resources desk
 - **Started:** 2026-09-22
 
 ## Status
-- **Current phase / task:** research and content complete; UX brief written; no application code written yet
+- **Current phase / task:** Phase 0 of `docs/implementation-plan.md` done; plan revised 2026-09-22T23:37Z after critique. Next: Phase A (validate with five users — needs brief Q1–4 answered) alongside Phase 1 (schemas and migration). No application code written yet
 - **Progress:**
 
 | # | Task | Status | Notes |
@@ -52,15 +52,38 @@ Handover files in this repo:
 | 7 | Export source index with qualifiers | done | 1,170 sources, three-state verification, `input/data/sources-index.json` |
 | 8 | Write UX brief | done | `docs/ux-brief.md` |
 | 9 | Store all assets in repo | done | `input/`, with `input/README.md` as manifest |
-| 10 | Wireframes from the brief | not started | Deliverables listed at the end of `docs/ux-brief.md` |
-| 11 | Build the door / path / reference site | not started | No build tooling chosen yet; CLAUDE.md section 2 still TBD |
-| 12 | Answer the five open questions in the brief | not started | Blocks wireframing |
+| 10 | Wireframes from the brief | not started | Deliverables listed at the end of `docs/ux-brief.md`. Plan phase 3b |
+| 11 | Build the door / path / reference site | not started | Plan phases 3a (reference) and 3b (path). Astro recommended in the plan, not yet scaffolded |
+| 12 | Answer the open questions | not started | Brief Q1–4 block phase 3b; full list with what each blocks in plan section 3 |
+| 13 | Content architecture | done | `docs/content-architecture.md` (owner-written 2026-09-22) — fixed and extended 2026-09-22T20:37Z |
+| 14 | Implementation plan | done | `docs/implementation-plan.md` |
+| 15 | Plan phase 1 — schemas and migration | not started | Unblocked; next step |
+| 15a | Plan phase A — validate with five users | not started | Needs brief Q1–4; runs alongside phases 1, 1b, 2 |
+| 15b | Plan phase 1b — routing research (topics / not_topics / powers) | not started | Unblocked after phase 1; weeks of judgement work; blocks phase 3b |
+| 20 | Plan revision after critique | done | 2026-09-22T23:37Z; only recommendations scored ≥80 confidence applied — see plan section 7 |
+| 16 | Plan phase 2 — CI checks, CODEOWNERS | not started | Needs GitHub team names (open decision 9) |
+| 17 | Plan phase 4 — Resources | not started | Unblocked after phases 1–2 |
+| 18 | Plan phase 5a — volunteer system | not started | Unblocked after phase 2 |
+| 19 | Plan phase 6 — second language | not started | Needs a choice of language (open decision 8) |
 
 Status values: `not started` / `in progress` / `done` / `blocked`.
 
 ## What Was Actually Implemented
 
-Research and content only. No application code exists yet.
+Research, content, and planning. No application code exists yet.
+
+**2026-09-22T20:37Z — architecture and plan**
+
+- `docs/content-architecture.md` (written by the owner, previously untracked; now committed) — changes:
+  - Record example fixed: `owners` quoted (a bare `@` made it invalid YAML); routes are now objects with their own three-state `verified`, `verified_on` and `language` (the original stored bare URLs and would have lost verification on migration); `effort` moved from strings to `facts.effort_minutes`.
+  - Layout: added `channels/` and `orgs/` mapping for all 229 institutions by `group`, `resources/` (sources, media, explainers, windows) replacing `live/`, `schema/vocab/`, `volunteers/`, `scripts/`, and schemas for every content type.
+  - New section "Resources: media, explainers and open windows", modelled on the stockspanic resources desk.
+  - New section "The volunteer lifecycle": ladder, team-based permissions, two owners per path, inactivity handling, stepping back, volunteer privacy and safety.
+  - Editor role added; CODEOWNERS example extended; freshness cycles and CI checks extended for Resources.
+  - Two open questions in the doc recorded as decided: Resources are editorial; Resources live in this repo.
+- `docs/implementation-plan.md` — new: what is adopted and left from stockspanic, decisions, open decisions with what each blocks, phases 0–7 with done-when checks, order, risks.
+- `CLAUDE.md` — directory map rows for both docs.
+- Read-only access to `../stockspanic` was authorized by the owner for this work; nothing there was changed. Its `.env` was not read.
 
 **Files added**
 
@@ -106,17 +129,24 @@ A second deviation: the initial build assumed a user with evidence to submit. It
 2. Do we let a user draft to a body in a country they do not live in? Several accept foreign submissions, but it may reduce the message's weight.
 3. How prominent is the "join an organisation" outcome? Most effective for most people, and also the one that hands them someone else's ask.
 4. Is the industry-lobbying layer shown to a first-time user, or only in the reference?
-5. Who maintains the named seat-holders, and how often? Credibility decays without an answer.
+5. Who maintains the named seat-holders, and how often? The architecture answers it (geography stewards, 90-day cycle) — needs the owner's confirmation.
+
+Further open decisions from the plan (full table in `docs/implementation-plan.md` section 3): counting draft completion without a consent wall on a static site; visitor discussion on Resources (out of scope unless chosen); first second language; GitHub team names; domain.
+
+**2026-09-22T23:37Z plan revision:** Phase A (validate first) and Phase 1b (routing research) added; branch protection starts at one approval with owner bypass; link check tuned; analytics decision (open decision 6) now blocks Phase 3a. The earlier claim that committee `not_topics` data is complete was wrong — it exists only as prose in `ai_jurisdiction`. Known unaddressed gap: a changed seat-holder is not detected automatically.
+
+**Uncommitted work / stale lock:** the commit of the architecture and plan failed on `.git/HEAD.lock` (empty, dated 2026-09-22 19:34, no git process running). All changes are staged, including the pre-commit hook's version bump to 0.1.3. Waiting for the owner's permission to remove the lock and commit.
+
+**Plan recommendations not yet confirmed by the owner:** Astro, YAML + JSON Schema, GitHub Actions + lychee, Railway static hosting via `serve`, Decap CMS later, Weblate later. Change them in the plan before the phase that depends on each.
 
 **Product risk worth naming.** The existing campaign tools are effective partly because they concentrate many people behind one ask. A directory that helps each person articulate their own concern produces more authentic participation and less political force. That trade-off is deliberate, but it should be revisited rather than assumed.
 
 ## How To Resume
 
-1. Read `docs/ux-brief.md` end to end. It is the spec.
-2. Answer the five open questions above — they block wireframing.
-3. Decide build tooling and fill in CLAUDE.md section 2.
-4. Wireframe the five screens at phone width, per the deliverables list at the end of the brief.
-5. The data is ready to build against: `input/data/institutions.json` and `input/data/committees-and-organisations.json` are the two the interface renders from. `input/README.md` documents the shapes.
+1. Read `docs/ux-brief.md`, `docs/content-architecture.md` and `docs/implementation-plan.md`.
+2. Get the owner's answer to brief Q1–4, then run plan phase A. In parallel, start plan phase 1: scaffold `package.json`, write `schema/vocab/` and the `route`/`body`/`channel`/`org` schemas, then `scripts/migrate-input.mjs`. Fill in CLAUDE.md section 2 as commands appear.
+3. Open decision 6 (completion counting) must be decided before phase 3a.
+4. Never edit `input/`; migration reads it and writes `content/`. `input/README.md` documents the shapes.
 
 Reference prototypes (published, private):
 - Concern Register — https://claude.ai/artifact/9BhNrXsW43HJ4rjH5fSuNy
@@ -124,4 +154,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-22T16:50:00Z
+Last modified: 2026-09-22T23:37:38Z
