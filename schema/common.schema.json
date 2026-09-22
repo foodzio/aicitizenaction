@@ -172,6 +172,11 @@
           "type": "string",
           "minLength": 10,
           "description": "Why no source can be cited. Allowed only when research found no URL at all; such a record is shown as unsourced and never recommended by routing"
+        },
+        "research_order": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Position in the research dataset it was migrated from. The researchers listed the most important bodies first; routing uses it as a tie-breaker until phase 1b adds powers and topics"
         }
       },
       "anyOf": [

@@ -123,6 +123,15 @@ export function validateAll({ now = today() } = {}) {
       }
     }
 
+    // Guides: outcome templates must exist; placeholders must be known.
+    if (r._section === 'guides' && r.type === 'draft-templates') {
+      const allowed = new Set(r.facts?.placeholders ?? []);
+      for (const [k, tpl] of Object.entries(r.strings?.templates ?? {})) {
+        for (const m of String(tpl).matchAll(/\{([a-z_]+)\}/g)) if (!allowed.has(m[1])) err(p, `template ${k}: unknown placeholder {${m[1]}}`);
+        if (!String(tpl).includes('{own_words}')) err(p, `template ${k}: must include {own_words} — the user's own words are the centrepiece`);
+      }
+    }
+
     // Dates.
     const m = r.meta ?? {};
     if (m.verified_on && m.verified_on > tomorrow) err(p, 'meta.verified_on is in the future');

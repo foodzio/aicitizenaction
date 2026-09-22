@@ -71,4 +71,5 @@ meta:
   needs_research:
     - topics
   legacy_id: ca5c4c89da
+  research_order: 114
   migrated_from: input/data/institutions.json

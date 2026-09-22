@@ -1,0 +1,77 @@
+# Starting points for the draft on screen 3. They are deliberately short and incomplete:
+# the user's own words ({own_words}) are the centrepiece, and a message without them reads
+# as a form letter. Placeholders: {recipient}, {own_words}. The user edits everything.
+id: draft-templates
+type: draft-templates
+geo:
+  country: global
+facts:
+  placeholders: [recipient, own_words]
+strings:
+  own_words_prompt: In one or two sentences, why does this matter to you?
+  own_words_why: Messages in your own words get read. Identical form letters are counted and set aside.
+  own_words_placeholder: For example — "My daughter uses these chatbots for homework and nobody seems to check what they tell her."
+  templates:
+    law: |
+      Dear {recipient},
+
+      I am writing as a member of the public about artificial intelligence.
+
+      {own_words}
+
+      I understand that you consider legislation in this area. I would like my view to be recorded, and I would be grateful to know what you are doing about it.
+
+      Yours sincerely,
+      [Your name]
+      [Your town]
+    harm: |
+      Dear {recipient},
+
+      I am writing to report harm involving an artificial intelligence system.
+
+      {own_words}
+
+      What happened: [what the system did, when, and which product or company it was]
+      Who was affected: [you, or someone you know]
+
+      I would be grateful to know whether this falls within your remit and what happens next.
+
+      Yours sincerely,
+      [Your name]
+    fix: |
+      Hello,
+
+      I want to report something an AI model did that concerned me.
+
+      {own_words}
+
+      Product and version: [which app or model]
+      Date: [when it happened]
+      What I asked, and what it replied: [paste the exact exchange if you can]
+
+      Thank you for looking into it.
+      [Your name]
+    record: |
+      Submission to {recipient}
+
+      I am responding as a member of the public.
+
+      {own_words}
+
+      I have no professional or financial interest in this consultation.
+
+      [Your name]
+      [Your town]
+    join: |
+      Hello,
+
+      I would like to get involved.
+
+      {own_words}
+
+      Please tell me how I can help.
+      [Your name]
+meta:
+  verified_on: 2026-09-23
+  review_by: 2027-09-23
+  status: draft

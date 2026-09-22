@@ -37,5 +37,6 @@ meta:
     - topics
     - not_topics
   legacy_id: "50936950e0"
+  research_order: 64
   migrated_from: input/data/institutions.json
   unsourced: No URL was found for this entity during research (input/data/institutions.json). It needs a source before it can be relied on.

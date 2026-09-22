@@ -40,4 +40,5 @@ meta:
   needs_research:
     - topics
   legacy_id: "634887e460"
+  research_order: 25
   migrated_from: input/data/committees-and-organisations.json#orgs

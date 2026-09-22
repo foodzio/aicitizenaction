@@ -96,4 +96,5 @@ meta:
     - topics
     - not_topics
   legacy_id: fbeffbadb6
+  research_order: 91
   migrated_from: input/data/institutions.json

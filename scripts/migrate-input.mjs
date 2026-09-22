@@ -100,7 +100,7 @@ const takeSource = (dataset, entity, pred) => {
 const records = [];
 
 // ── Institutions (register) ─────────────────────────────────────────────────────────────
-for (const x of INST) {
+for (const [order, x] of INST.entries()) {
   const type = TYPE_BY_GROUP[x.group];
   const folder = FOLDER_BY_TYPE[type];
   const geo = geoFor(x.jurisdiction, { federalBody: folder === 'bodies' && x.group === 'Government' }, x.name);
@@ -145,14 +145,14 @@ for (const x of INST) {
       meta: {
         verified_on: COMPILED, review_by: addDays(COMPILED, CYCLE.routes), sources: sourcesFrom(routes),
         needs_research: folder === 'orgs' ? ['topics'] : ['powers', 'topics', 'not_topics'],
-        legacy_id: x.id, migrated_from: 'input/data/institutions.json'
+        legacy_id: x.id, research_order: order, migrated_from: 'input/data/institutions.json'
       }
     }
   });
 }
 
 // ── Committees and other seat-holding bodies ────────────────────────────────────────────
-for (const s of SEATS) {
+for (const [order, s] of SEATS.entries()) {
   const geo = geoFor(s.jurisdiction, { level: s.level_raw }, s.body);
   const id = makeId(geo, s.body);
   const routes = [], routeStrings = {};
@@ -183,14 +183,14 @@ for (const s of SEATS) {
       meta: {
         verified_on: verifiedOn, review_by: addDays(verifiedOn, seats.length ? CYCLE.seats : CYCLE.routes),
         sources: sourcesFrom(routes), needs_research: ['powers', 'topics', 'not_topics'],
-        legacy_id: s.id, migrated_from: 'input/data/committees-and-organisations.json#seats'
+        legacy_id: s.id, research_order: order, migrated_from: 'input/data/committees-and-organisations.json#seats'
       }
     }
   });
 }
 
 // ── Organisations ───────────────────────────────────────────────────────────────────────
-for (const o of ORGS) {
+for (const [order, o] of ORGS.entries()) {
   const geo = geoFor(o.geography, { multiMeansGlobal: true }, o.name);
   const id = makeId(geo, o.name);
   const routes = [], routeStrings = {};
@@ -209,7 +209,7 @@ for (const o of ORGS) {
       },
       meta: {
         verified_on: COMPILED, review_by: addDays(COMPILED, CYCLE.routes), sources: sourcesFrom(routes),
-        needs_research: ['topics'], legacy_id: o.id, migrated_from: 'input/data/committees-and-organisations.json#orgs'
+        needs_research: ['topics'], legacy_id: o.id, research_order: order, migrated_from: 'input/data/committees-and-organisations.json#orgs'
       }
     }
   });

@@ -82,4 +82,5 @@ meta:
     - topics
     - not_topics
   legacy_id: 517b56617f
+  research_order: 8
   migrated_from: input/data/institutions.json

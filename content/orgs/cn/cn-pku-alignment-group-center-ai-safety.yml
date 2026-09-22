@@ -80,4 +80,5 @@ meta:
   needs_research:
     - topics
   legacy_id: 659fafa62d
+  research_order: 142
   migrated_from: input/data/institutions.json

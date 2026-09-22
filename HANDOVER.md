@@ -47,13 +47,24 @@ Tracked in git and committed with every step.
 4. **Duplicates reported, not merged** — 40 suspected pairs in `docs/migration-report.md`, as the plan requires human confirmation. The site will show both until merged.
 5. **`meta.unsourced`** allowed for the 2 records where research found no URL at all, instead of inventing a source. Validator warns; routing must never recommend them.
 6. **Enum checks live in `scripts/validate.mjs`**, reading `schema/vocab/`, not duplicated inside the JSON Schemas. One source of truth per list; the Decap CMS (phase 5b) will need enums generated into its config.
+7. **Seat prose kept under original field names** (`ai_jurisdiction`, `business`, …) rather than renamed to `remit`, to avoid changing meaning during migration.
 8. **Own link checker instead of lychee** (`scripts/check-links.mjs`): the plan's two-consecutive-failures rule, unknown-vs-broken classification and owner routing need state. TLS-chain and HTTP/2 client errors count as unknown.
 9. **CODEOWNERS names `@sinscrit`**, not teams: the repo belongs to a personal account and GitHub teams need an organisation. Team lines are left commented.
 10. **Intake bot auto-merge is conditional on a secret `INTAKE_TOKEN`** that is not created: personal repos cannot exempt the Actions bot from reviews. Decision for the owner (`docs/github-setup.md` §3).
 11. **Nothing pushed, no GitHub settings changed** — outward-facing; left for the owner.
-7. **Seat prose kept under original field names** (`ai_jurisdiction`, `business`, …) rather than renamed to `remit`, to avoid changing meaning during migration.
+12. **First-version routing without phase 1b** (`scripts/lib/routing.mjs`, `content/guides/global/outcomes.yml`): outcomes match on record type + concern tags + route types; ranking prefers full committees with a named chair, then the researchers' own ordering (`meta.research_order`, new field). Phase 1b topics/powers will replace the heuristics.
+13. **Open decision 4 given a reversible default**: industry-lobby organisations are excluded from the newcomer "join" outcome (`exclude_perspectives` in outcomes.yml), following the brief's lean; they remain in the reference. "Join" shows one organisation per perspective.
+14. **Outcome labels and draft templates written by me**, marked `meta.status: draft` for owner review.
 
 ## Implementation log (newest first)
+
+### 2026-09-22T23:54:23Z — Routing for the path (start of phases 3a/3b)
+
+- `schema/guide.schema.json`; `content/guides/global/outcomes.yml` (six outcomes incl. insider stop; EU members; max 3 recipients) and `draft-templates.yml` (every template must contain `{own_words}` — validator enforces).
+- `scripts/lib/routing.mjs`: `route()` (country → US state → national → EU bloc → global, with `floor` flag for the honest floor), `contactRoute()` (verified first), `recommendable()` (never unsourced / unreachable), `seatWeight()`, `diversify()`, `fillTemplate()`.
+- `meta.research_order` added to every record by the migration (re-run was safe: no hand edits yet).
+- Spot checks: US law → Senate Commerce, Senate Judiciary, Senate HSGAC; UK law → Commons Science & Tech, Business & Trade, Lords Communications; US harm → FTC, FDA, CISA; Sweden law → EU committees (floor).
+- `tests/routing.test.mjs`. 36 tests pass.
 
 ### 2026-09-22T23:51:33Z — Phase 2: checks that let strangers contribute — done locally
 
@@ -120,4 +131,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-22T23:51:33Z
+Last modified: 2026-09-22T23:54:23Z

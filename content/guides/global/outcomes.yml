@@ -1,0 +1,60 @@
+# The door's one question — "What do you want to happen?" — and how each answer routes.
+# Logic lives in facts (matched against record types, tags and route types); prose in strings.
+# First version: routes on the research datasets' concern tags. Phase 1b adds topics and
+# powers; until then no topic-level narrowing happens.
+id: outcomes
+type: outcomes
+geo:
+  country: global
+facts:
+  outcomes:
+    - id: law
+      match: { sections: [bodies], types: [seat, government], tags_any: [law] }
+      prefer_types: [seat]
+      template: law
+    - id: harm
+      match: { sections: [bodies, channels], types: [government, reporting-channel, watchdog], tags_any: [harm] }
+      template: harm
+    - id: fix
+      match: { sections: [channels], types: [company, reporting-channel, watchdog], tags_any: [behaviour, flaw] }
+      ignore_geo: true
+      template: fix
+    - id: record
+      match: { sections: [bodies], route_types_any: [consultation, docket, evidence, submission] }
+      template: record
+    - id: join
+      match: { sections: [orgs], tags_any: [join] }
+      # The site has no ask of its own: show one organisation per perspective in turn.
+      diversify_by: perspective
+      # Open decision 4 (brief): industry lobbying is reference-only for newcomers until decided.
+      exclude_perspectives: [industry-lobby]
+      template: join
+    - id: insider
+      stop: true
+  eu_members: [at, be, bg, hr, cy, cz, dk, ee, fi, fr, de, gr, hu, ie, it, lv, lt, lu, mt, nl, pl, pt, ro, sk, si, es, se]
+  max_recipients: 3
+strings:
+  question: What do you want to happen?
+  outcomes:
+    law:
+      label: A law or rule about AI
+      hint: Tell the people who write AI laws what you think.
+    harm:
+      label: Harm that has already happened is looked into
+      hint: For when an AI system hurt you or someone you know.
+    fix:
+      label: An AI company fixes something I saw
+      hint: For something a chatbot or model did that worried you.
+    record:
+      label: My view is on the public record
+      hint: Take part in an open consultation, where your words are published.
+    join:
+      label: Join others who want the same thing
+      hint: Find an organisation whose aims match yours — they have their own asks.
+    insider:
+      label: I know something from the inside
+      hint: For people with non-public knowledge about an AI company or project.
+meta:
+  verified_on: 2026-09-23
+  review_by: 2027-09-23
+  status: draft

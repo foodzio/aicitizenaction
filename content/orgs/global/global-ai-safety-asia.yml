@@ -68,4 +68,5 @@ meta:
   needs_research:
     - topics
   legacy_id: bceca78466
+  research_order: 124
   migrated_from: input/data/institutions.json

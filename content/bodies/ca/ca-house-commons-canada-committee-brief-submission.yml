@@ -47,4 +47,5 @@ meta:
     - topics
     - not_topics
   legacy_id: 2a9d942e44
+  research_order: 104
   migrated_from: input/data/committees-and-organisations.json#seats

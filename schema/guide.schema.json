@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aicitizenaction/schema/guide.schema.json",
+  "title": "Guide",
+  "description": "Our own guidance: the door's outcomes and how each routes, draft templates, the generic method for any parliament, the insider stop. Lives in content/guides/global/. Prose in strings, logic in facts.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "type", "geo", "strings", "meta"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "type": { "enum": ["outcomes", "draft-templates", "method", "page"] },
+    "geo": { "$ref": "common.schema.json#/$defs/geo" },
+    "facts": { "type": "object" },
+    "strings": { "type": "object" },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["verified_on", "review_by"],
+      "properties": {
+        "verified_on": { "$ref": "common.schema.json#/$defs/date" },
+        "review_by": { "$ref": "common.schema.json#/$defs/date" },
+        "owners": { "type": "array", "items": { "type": "string", "pattern": "^@[A-Za-z0-9_./-]+$" } },
+        "sources": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/source" } },
+        "status": { "enum": ["draft", "reviewed"], "description": "draft: written without owner review; shown with a notice" }
+      }
+    }
+  }
+}
