@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+*.env
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# Logs
+*.log
+logs/
+
+# Playwright MCP (contains OAuth secrets and session logs)
+.playwright-mcp/
+
+# Screenshots
+*.png
+
+# Temp files (keep folder via .gitkeep)
+tmp/*
+!tmp/.gitkeep
+
+# Handover docs are tracked project artifacts — never ignore them.
+# One per project/study/subproject, at the root of its own folder.
+!HANDOVER.md
+!**/HANDOVER.md
