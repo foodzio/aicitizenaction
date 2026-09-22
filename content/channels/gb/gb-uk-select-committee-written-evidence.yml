@@ -1,0 +1,56 @@
+id: gb-uk-select-committee-written-evidence
+type: reporting-channel
+geo:
+  country: gb
+  label: UK
+facts:
+  routes:
+    - id: submission-page
+      type: consultation
+      value: https://publications.parliament.uk/pa/cm/written-evidence-guidance.htm
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7d3bd5559d3f
+    - id: homepage
+      type: homepage
+      value: https://publications.parliament.uk/pa/cm/written-evidence-guidance.htm
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 46dab162bd4b
+  region: United Kingdom
+  public_input: open
+  tags:
+    - law
+    - systemic
+strings:
+  name: UK select committee written evidence
+  remit: Evidence drawn from research, professional expertise or personal experience. You explicitly do not need to be a formal expert or have any institutional affiliation. Address the questions in the call for evidence; you need not answer all of them.
+  reality_check: "The highest-value consultation route available to an unaffiliated individual, and the clearest counterexample to 'petitions are pointless.' Evidence is published under your name, is permanently citable, is read by clerks and specialist advisers, and is routinely quoted in reports that government must respond to. Two privacy options exist: anonymity (published without your name — 'provides some protection but is not failsafe') and confidentiality (informs members privately, neither name nor contribution published — described by Parliament as 'the safest way' if you fear identification)."
+  accepts: Evidence drawn from research, professional expertise or personal experience. You explicitly do not need to be a formal expert or have any institutional affiliation. Address the questions in the call for evidence; you need not answer all of them.
+  does_not_accept: Evidence about active court proceedings; individual complaints or personal grievances (you are told to contact your MP instead); previously published material — submissions must be original and created specifically for the committee; defamatory statements likely to harm reputations; personal data you would not want made public. House of Lords committees require you to declare substantial AI-generated content.
+  how: Find an inquiry currently accepting evidence via the committees portal filter (committees.parliament.uk/inquiries/ with 'Currently accepting evidence'), then submit through that inquiry's online portal. At the time of this research 27 inquiries were accepting evidence and none was specifically AI-focused — but AI-relevant evidence is regularly submitted to inquiries on employment, financial services, human rights and public services, and recent AI inquiries (Business and Trade Committee on AI and the future workforce; Treasury Committee on AI in financial services; JCHR on human rights and AI regulation) show the pattern.
+  format: Single editable file (Word, ODT or RTF), max 25MB. No PDFs, no logos, no decorative graphics, no repeated headers/footers. Usually no more than 3,000 words. Numbered paragraphs and section headings. Plain language with technical terms explained. Cite published sources with links.
+  timing: Hard deadlines set per inquiry, typically 4–10 weeks from launch. Check the specific inquiry page.
+  after: The committee decides whether to accept and publish. Published evidence becomes part of the permanent parliamentary record and remains publicly accessible indefinitely; you cannot request changes or removal afterwards. Do not self-publish until the committee authorises it. Submissions may be quoted and cited in the committee's report. You are responsible for accuracy — deliberately misleading a committee is a contempt of Parliament.
+  operator: House of Commons and House of Lords select committees, UK Parliament
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Evidence drawn from research, professional expertise or personal experience. You explicitly do not need to be a formal expert or have any institutional affiliation. Address the questions in the call for evidence; you need not answer all of them.
+      note: Find an inquiry currently accepting evidence via the committees portal filter (committees.parliament.uk/inquiries/ with 'Currently accepting evidence'), then submit through that inquiry's online portal. At the time of this research 27 inquiries were accepting evidence and none was specifically AI-focused — but AI-relevant evidence is regularly submitted to inquiries on employment, financial services, human rights and public services, and recent AI inquiries (Business and Trade Committee on AI and the future workforce; Treasury Committee on AI in financial services; JCHR on human rights and AI regulation) show the pattern.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://publications.parliament.uk/pa/cm/written-evidence-guidance.htm
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: e3a75c7a4a
+  migrated_from: input/data/institutions.json

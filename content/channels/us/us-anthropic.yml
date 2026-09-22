@@ -1,0 +1,120 @@
+id: us-anthropic
+type: company
+geo:
+  country: us
+  label: USA
+facts:
+  routes:
+    - id: model-safety-issues-jailbreaks
+      type: email
+      value: usersafety@anthropic.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9ad25716ccb0
+    - id: questions-about-disclosure-policy
+      type: email
+      value: disclosure@anthropic.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b7da28fe5932
+    - id: responsible-disclosure-policy
+      type: disclosure
+      value: https://www.anthropic.com/responsible-disclosure-policy
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f151f78297da
+    - id: hackerone-submission-form
+      type: bounty
+      value: https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ccb8c901350b
+    - id: model-safety-bug-bounty
+      type: bounty
+      value: https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3beb7e70b622
+    - id: usage-policy-trust-safety
+      type: form
+      value: https://support.claude.com/en/articles/8241253-trust-and-safety-warnings-and-appeals
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: b516e902b926
+    - id: homepage
+      type: homepage
+      value: https://www.anthropic.com/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 1dafc6db1f84
+    - id: framework
+      type: framework
+      value: https://www.anthropic.com/rsp
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 7374b9e41624
+  region: United States
+  public_input: open
+  tags:
+    - behaviour
+    - flaw
+    - harm
+    - insider
+strings:
+  name: Anthropic
+  remit: Safeguards team enforces the Usage Policy and runs Constitutional Classifiers; Alignment Science and Frontier Red Team run capability/misalignment evaluations feeding the Responsible Scaling Policy, overseen by a Responsible Scaling Officer.
+  reality_check: Best-documented pathway of any lab. AI Frontiers' 2026 review of jailbreak disclosure found Anthropic runs two programs — a restricted NDA-bound CBRN bounty and an open cyber jailbreak program where 'anyone can submit without an NDA, findings may be publicly disclosed once timing is coordinated' — and named it as one of the few labs with a genuinely working route. Independent researchers pursuing cross-model universal jailbreaks in 2025-26 reported labs have 'very heterogeneous disclosure pathways (or none at all)' but that some, including Anthropic, remediated. No public evidence of usersafety@ being a black hole, but also little public evidence of reply rates.
+  notes: "Write to usersafety@anthropic.com with a reproducible transcript. Safe harbour is real but conditional: 'If you, in our sole determination, make a good faith effort to research and disclose vulnerabilities in accordance with this Policy... we will not pursue any legal action because of your research or responsible disclosure' — note 'in our sole determination'. Whistleblowing is internal only: the RSP Noncompliance Reporting and Anti-Retaliation Policy routes through NAVEX to the Responsible Scaling Officer and is written for employees and Board members, with no public-facing channel."
+  routes:
+    model-safety-issues-jailbreaks:
+      label: Model safety issues and jailbreaks
+      scope: Safety issues, jailbreaks, harmful model behaviour. Named on both the Responsible Disclosure Policy and the Usage Policy.
+      note: The single most useful address for a member of the public with a model-behaviour concern. Anthropic asks for 'sufficient details for us to replicate the issue'.
+    questions-about-disclosure-policy:
+      label: Questions about the disclosure policy
+      scope: Questions about the Responsible Disclosure Policy itself, not for submitting reports.
+      note: Policy questions only; actual reports go to HackerOne or usersafety@.
+    responsible-disclosure-policy:
+      label: Responsible Disclosure Policy
+      scope: "Infrastructure vulnerabilities AND model safety. States: 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models.'"
+      note: Unusual among labs in explicitly putting model safety inside the disclosure policy rather than excluding it.
+    hackerone-submission-form:
+      label: HackerOne submission form
+      scope: Vulnerability submissions under the Responsible Disclosure Policy.
+      note: Embedded form, no HackerOne account gatekeeping described on the policy page.
+    model-safety-bug-bounty:
+      label: Model Safety Bug Bounty Program (application)
+      scope: Universal jailbreaks that defeat Constitutional Classifiers, especially CBRN. Up to $35,000 per novel universal jailbreak.
+      note: "Application-only and invite-based via HackerOne; participation requires an NDA. Program details: https://support.claude.com/en/articles/12119250-model-safety-bug-bounty-program"
+    usage-policy-trust-safety:
+      label: Usage Policy / Trust & Safety appeals
+      scope: Appealing enforcement decisions against your own account.
+      note: Not a safety-reporting channel; for account holders only.
+    homepage:
+      label: Homepage
+    framework:
+      label: Anthropic's Responsible Scaling Policy, Version 3.4 (effective 8 July 2026)
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.anthropic.com/responsible-disclosure-policy
+      checked: 2026-09-22
+    - url: https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
+      checked: 2026-09-22
+    - url: https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 9ca2360419
+  migrated_from: input/data/institutions.json

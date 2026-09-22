@@ -1,0 +1,43 @@
+id: us-center-ai-safety-action-fund-2
+type: organisation
+geo:
+  country: us
+  label: United States, federal.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://action.safe.ai/donate
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8076c535ac6e
+  perspective: safety-advocacy
+  volunteers: no
+  tags:
+    - fund
+    - join
+    - law
+strings:
+  name: Center for AI Safety Action Fund (CAIS AF)
+  the_ask: US policy should maintain American leadership in AI while protecting against AI-related national security threats — chip manufacturing leadership, compute security, preventing malicious use, and global cooperation on safe AI.
+  what_they_do: "501(c)(4) advocacy: convening lawmakers, business leaders and security experts; building bipartisan consensus; educating policymakers. Sister organisation to the Center for AI Safety research nonprofit."
+  newcomer_action: Donate (not tax-deductible), or apply for a job. There is no constituent action tool — this is an inside-Washington operation.
+  tips: no
+  geography: United States, federal.
+  scale: Small professional policy staff. EIN 93-2442608.
+  spending: Not published on its own site; a 501(c)(4) so donations are not tax-deductible and donors need not be disclosed.
+  caution: Its framing is national-security and US competitiveness, not a pause or ban — noticeably more hawkish in framing than PauseAI or ControlAI, and it sits comfortably with 'US leadership in AI'. If your goal is slowing AI, check the framing matches your intent. There is essentially no public participation route.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://action.safe.ai/donate
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 97afcbbd40
+  migrated_from: input/data/committees-and-organisations.json#orgs

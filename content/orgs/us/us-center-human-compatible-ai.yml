@@ -1,0 +1,72 @@
+id: us-center-human-compatible-ai
+type: academic
+geo:
+  country: us
+  label: United States (Berkeley, California)
+facts:
+  routes:
+    - id: general-administrative-contact
+      type: email
+      value: chai-admin@berkeley.edu
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 46c9cca29d86
+    - id: opportunities-internships-roles
+      type: form
+      value: https://humancompatible.ai/jobs/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6e709820c307
+    - id: people-directory
+      type: form
+      value: https://humancompatible.ai/people/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3d083e0649ce
+    - id: homepage
+      type: homepage
+      value: https://humancompatible.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 97b9532339d8
+  region: United States
+  public_input: limited
+  tags:
+    - research
+    - systemic
+strings:
+  name: Center for Human-Compatible AI (CHAI), UC Berkeley
+  remit: Technical research lab founded by Stuart Russell, devoted to the theory, practice and policy of provably beneficial AI. Core research programme is assistance games / cooperative inverse reinforcement learning — designing AI that is uncertain about human objectives and defers to humans, rather than optimising a fixed specified objective. Interdisciplinary across CS, social science, law, philosophy, economics and governance. Runs an annual workshop and an internship programme.
+  threat_model: Misspecified objectives and loss of control — Russell's thesis that 'optimisation alone won't get us to humane AI' and that the standard model of AI (maximise a given objective) is structurally unsafe.
+  reality_check: Publishes a real administrative inbox, which most academic labs do not. The internship route is genuinely open to outsiders. Russell himself is extremely over-subscribed; do not expect a personal reply.
+  gov_channel: Strong by proxy — Stuart Russell sits on the FLI AI Safety Index panel, advises the UN and numerous governments, and was a lead author on the International AI Safety Report.
+  routes:
+    general-administrative-contact:
+      label: General administrative contact
+      scope: Anyone
+      note: "Address: Bakar Gateway, 2300 Hearst Ave, Office 4438, Berkeley CA 94720-1660."
+    opportunities-internships-roles:
+      label: Opportunities — internships and roles
+      scope: Students and researchers
+      note: CHAI's internship programme has historically accepted applicants from outside Berkeley, which is a genuine route in.
+    people-directory:
+      label: People directory
+      scope: Direct researcher contact
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://humancompatible.ai/jobs/
+      checked: 2026-09-22
+    - url: https://humancompatible.ai/people/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: cbacc27010
+  migrated_from: input/data/institutions.json

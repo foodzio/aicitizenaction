@@ -1,0 +1,78 @@
+id: cn-beijing-institute-ai-safety-governance
+type: government
+geo:
+  country: cn
+  label: People's Republic of China (Beijing municipality)
+facts:
+  routes:
+    - id: institute-website
+      type: form
+      value: https://beijing-aisi.ac.cn/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: zh, en
+      source_id: c9c57402b6a0
+    - id: institute-website-2
+      type: form
+      value: https://beijing.ai-safety-and-governance.institute/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: 03ce58752cd2
+    - id: github-organisation
+      type: form
+      value: https://github.com/Beijing-AISI
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: a707b56dd0c8
+    - id: homepage
+      type: homepage
+      value: https://beijing-aisi.ac.cn/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: d6724bfd7fe9
+  local_name: 北京前瞻人工智能安全与治理研究院
+  region: China
+  public_input: none
+  tags:
+    - harm
+strings:
+  name: Beijing Institute of AI Safety and Governance (Beijing-AISI)
+  remit: Research institute founded in the Beijing AI ecosystem, associated with Yi Zeng (Institute of Automation, Chinese Academy of Sciences), who is also a member of the UN High-Level Advisory Body on AI and a leading Chinese voice on AI risk. Works on AI safety evaluation and benchmarking (it hosts a 'foresight safety bench'), governance research, and international engagement. Research body with no regulatory power. A separate Beijing Key Laboratory of AI Safety and Super Alignment also exists at Beijing Normal University — do not conflate them.
+  powers_text: research
+  reality_check: "Academically open in the normal way — its people publish, attend international venues, and are contactable as individual researchers. Institutionally it publishes no contact channel I could verify. The realistic route for a foreigner is academic: cite or engage with their published work, or contact Yi Zeng directly through his CAS affiliation. Not a channel for public complaints."
+  notes: The '.institute' vanity domain and the shared redirect from the CnAISDA network domain suggest a deliberate outward-facing internationalisation effort by this group.
+  routes:
+    institute-website:
+      label: Institute website (Chinese domain)
+      scope: general
+      note: VERIFIED exists and serves an English locale (?lng=en). JavaScript-rendered — no contact details were machine-readable.
+    institute-website-2:
+      label: Institute website (English domain)
+      scope: general
+      note: VERIFIED exists. Also JS-rendered; no contact details extractable.
+    github-organisation:
+      label: GitHub organisation
+      scope: technical/research
+      note: UNVERIFIED (search result). For a researcher this is likely the most practical contact surface — GitHub issues on their published benchmarks.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://beijing-aisi.ac.cn/
+      checked: 2026-09-22
+    - url: https://beijing.ai-safety-and-governance.institute/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c265128024
+  migrated_from: input/data/institutions.json

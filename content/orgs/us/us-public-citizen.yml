@@ -1,0 +1,62 @@
+id: us-public-citizen
+type: civil-society
+geo:
+  country: us
+  label: United States (Washington, DC)
+facts:
+  routes:
+    - id: contact-page
+      type: form
+      value: https://www.citizen.org/about/contact/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6174c911eb9a
+    - id: take-action-petitions-comment
+      type: form
+      value: https://act.citizen.org/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 295262e34dc1
+    - id: homepage
+      type: homepage
+      value: https://www.citizen.org/topic/artificial-intelligence/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: e3db0eb0ea1a
+  region: United States
+  public_input: open
+  tags:
+    - harm
+    - law
+    - research
+strings:
+  name: Public Citizen
+  remit: Consumer advocacy organisation. AI work covers generative AI risks to consumers and democracy, model state AI legislation, campaigns against non-consensual deepfakes and political deepfakes, data-centre environmental and utility-cost impacts, AI companion products aimed at minors, and opposition to federal preemption of state AI laws. Maintains a tracker of state deepfake legislation.
+  threat_model: Near-term consumer protection and democratic integrity — deepfakes in elections, corporate accountability, environmental externalities of compute. Populist/consumer framing, not technical risk.
+  reality_check: Large, campaign-driven and genuinely populist in orientation — more willing than most DC organisations to take up an ordinary person's complaint if it illustrates a systemic pattern. Scope is consumer and democratic harm only.
+  gov_channel: Strong — long-standing congressional and regulatory presence, petitions agencies (FEC on political deepfakes, FTC on AI harms) and drafts state model bills.
+  routes:
+    contact-page:
+      label: Contact page
+      scope: Anyone; Public Citizen has historically been receptive to consumer complaints that can seed campaigns
+      note: No topic-specific email published on the AI page.
+    take-action-petitions-comment:
+      label: Take action — petitions and comment drives
+      scope: Anyone
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.citizen.org/about/contact/
+      checked: 2026-09-22
+    - url: https://act.citizen.org/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 9463478f1d
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,62 @@
+id: us-senate-committee-armed-services
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.armed-services.senate.gov/about/membership
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 83fe0457cf48
+    - id: public-route
+      type: submission
+      value: https://www.armed-services.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f46a1738f639
+  level: federal
+  chamber: Senate
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Roger Wicker
+      party: R
+      region: MS
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Jack Reed
+      party: D
+      region: RI
+      verified_on: 2026-09-22
+strings:
+  name: Senate Committee on Armed Services
+  ai_jurisdiction: "Military AI and, through the NDAA, the one must-pass annual vehicle that reliably carries AI policy. Send here: autonomous weapons, AI in nuclear command and control, DoD AI adoption and the Chief Digital and AI Office, DARPA, military AI testing and evaluation, AI-enabled cyber operations, and DoD compute and data-center buildout. Also covers the nuclear weapons parts of the Department of Energy."
+  business: "VERIFIED: the FY2026 NDAA carried a substantial set of AI and cyber provisions (see CRS In Focus IF13197, 'Cyber and Artificial Intelligence Provisions in the FY2026 National Defense Authorization Act'), and House and Senate AI provisions went to conference in late 2025. The Senate NDAA process has also been the vehicle for tightening AI chip export controls. FY2027 NDAA work ran through 2026."
+  public_route: "VERIFIED: https://www.armed-services.senate.gov/contact and, unusually helpful, a published staff directory at https://www.armed-services.senate.gov/about/committee-staff — this committee names its professional staff members, so a member of the public can address the staffer who actually handles emerging technology. Committee: 228 Russell, 202-224-3871."
+  note: Chair/ranking verified 2026-09-22 against senate.gov committee_memberships_SSAS.htm.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.armed-services.senate.gov/about/membership
+      checked: 2026-09-22
+    - url: https://www.armed-services.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: cffe69ecb8
+  migrated_from: input/data/committees-and-organisations.json#seats

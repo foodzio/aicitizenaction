@@ -1,0 +1,74 @@
+id: eu-general-purpose-ai-code-practice-its
+type: government
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: ai-office-multi-stakeholder
+      type: consultation
+      value: https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 8a8ed8b392a0
+    - id: signatory-taskforce
+      type: form
+      value: https://digital-strategy.ec.europa.eu/en/policies/signatory-taskforce-gpai-code-practice
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: b227d6dfdf2e
+    - id: ai-office
+      type: email
+      value: CNECT-AIOFFICE@ec.europa.eu
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 301f98f55fbd
+    - id: homepage
+      type: homepage
+      value: https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 40aa7c70e44c
+  region: European Union
+  public_input: limited
+  tags:
+    - systemic
+strings:
+  name: General-Purpose AI Code of Practice and its Signatory Taskforce
+  remit: Co-regulatory instrument under Article 56 of the AI Act, published by the Commission in its final form in July 2025 and assessed as adequate by the AI Board and the Commission. Signing is voluntary, but signature is the presumptive route to demonstrating compliance with GPAI obligations, which have applied since 2 August 2025; non-signatories must demonstrate compliance by other means and face greater scrutiny. It has three chapters — Transparency, Copyright, and Safety and Security — with the Safety and Security chapter applying only to providers of models with SYSTEMIC RISK. A Signatory Taskforce, convened by the AI Office, holds ongoing meetings with signatories on implementation. The Code was drafted through an open multi-stakeholder process involving roughly a thousand participants.
+  powers_text: advise
+  reality_check: "The Code's drafting process was, by common consent among AI-governance practitioners, the single most open and most influential frontier-AI policy process to date anywhere — around a thousand stakeholders, published iterative drafts, written comment rounds, and visible textual change between drafts in response to safety-community input. The Safety and Security chapter contains the most detailed frontier-risk obligations in any binding-adjacent instrument in the world: systemic-risk assessment, model evaluations, incident reporting to the AI Office, and cybersecurity of model weights. If you want to influence frontier AI governance and can only do one thing, tracking and responding to the Code's review rounds is it. The Signatory Taskforce itself is closed to non-signatories."
+  notes: Confirm which providers have signed before assuming coverage — signature has not been universal, and several major providers signed only some chapters.
+  routes:
+    ai-office-multi-stakeholder:
+      label: AI Office multi-stakeholder drafting and review process
+      scope: The Code's drafting ran through iterated public drafts with written comment rounds open to registered stakeholders; review rounds are expected.
+      note: UNVERIFIED as fetched; the URL appeared in Commission search results. The final Code text is mirrored at https://code-of-practice.ai/ (also unverified as fetched).
+    signatory-taskforce:
+      label: Signatory Taskforce
+      scope: For signatories only — not a public channel.
+      note: UNVERIFIED as fetched; URL from Commission search results.
+    ai-office:
+      label: AI Office
+      scope: The route for questions on the Code.
+      note: VERIFIED on the AI Office page.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai
+      checked: null
+    - url: https://digital-strategy.ec.europa.eu/en/policies/signatory-taskforce-gpai-code-practice
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: f9e79e5a27
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,43 @@
+id: nl-existential-risk-observatory
+type: organisation
+geo:
+  country: nl
+  label: Netherlands (Groningen), with European media focus.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.existentialriskobservatory.org/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c6047c5d5854
+  perspective: safety-advocacy
+  volunteers: unclear
+  tags:
+    - fund
+    - join
+    - law
+strings:
+  name: Existential Risk Observatory
+  the_ask: Raise public awareness of existential risks — above all unaligned AI — because public understanding is the precondition for policy that reduces them.
+  what_they_do: Media work, op-eds, public debate and campaign work across AI, engineered pandemics, extreme climate scenarios and nuclear war; research and policy specialists on staff.
+  newcomer_action: Read and share its output and contact the team directly; there is no published one-click action page.
+  tips: unclear
+  geography: Netherlands (Groningen), with European media focus.
+  scale: Around 15+ people listed including researchers, campaign managers and policy specialists — several affiliated with the University of Groningen.
+  spending: Not disclosed.
+  caution: Awareness-raising rather than a campaign you can join. Its donate and get-involved pages could not be retrieved, so treat any volunteering or giving route as UNVERIFIED and email first. Its remit is broader than AI.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.existentialriskobservatory.org/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: c7f01b4e8b
+  migrated_from: input/data/committees-and-organisations.json#orgs

@@ -1,0 +1,83 @@
+id: cn-pku-alignment-group-center-ai-safety
+type: academic
+geo:
+  country: cn
+  label: China (Beijing)
+facts:
+  routes:
+    - id: pku-alignment-group-general
+      type: email
+      value: pku.alignment@gmail.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 94e61dce1fab
+    - id: github-open-source-alignment
+      type: submission
+      value: https://github.com/PKU-Alignment
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 26808f6a0e6d
+    - id: recruitment-form
+      type: form
+      value: https://hwcdc27ergv.feishu.cn/share/base/form/shrcnujPFnMnEL4tFrtPLXV9qad
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3dfe8853e075
+    - id: pku-center-ai-safety
+      type: form
+      value: https://www.ai.pku.edu.cn/en/Faculty/AI_Humanities_and_Social_Sciences_Centers/Center_for_AI_Safety_and_Governance.htm
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 2a859e4be9fa
+    - id: homepage
+      type: homepage
+      value: https://pku-alignment.group/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ebd274502841
+  region: China
+  public_input: open
+  tags:
+    - research
+strings:
+  name: PKU Alignment Group / Center for AI Safety and Governance, Peking University
+  remit: PKU-Alignment is a student-organised research team at Peking University working on reinforcement learning, LLMs, world models and AI alignment. Widely known for open-sourcing alignment resources — PKU-SafeRLHF datasets, Safe-RLHF training code, BeaverTails and the Align-Anything framework — published at ACL, NeurIPS and ICLR, with collaborations including Anthropic, Google DeepMind, DeepSeek and Alibaba. PKU's Institute for AI separately hosts a Center for AI Safety and Governance.
+  threat_model: Value alignment of LLMs — safe RLHF, helpfulness/harmlessness tradeoffs, and increasingly scalable oversight. Genuinely alignment-focused, not a near-term-harms group.
+  reality_check: Notably open for a Chinese institution — a public Gmail address, open GitHub, and a public recruitment form. Its open-source alignment work is genuinely used worldwide, making GitHub the highest-bandwidth channel. Student-run, so responsiveness varies with cohort.
+  gov_channel: Indirect — PKU researchers feed into Chinese AI safety standards discussions and the China AI Safety and Development Network.
+  routes:
+    pku-alignment-group-general:
+      label: PKU Alignment Group general contact
+      scope: Anyone
+      note: "Location: West Ziyuan Building, Peking University, Haidian, Beijing."
+    github-open-source-alignment:
+      label: GitHub — open-source alignment datasets and frameworks, open to contribution
+      scope: Anyone
+      note: The most practical route for technical engagement; these repositories are widely used internationally.
+    recruitment-form:
+      label: Recruitment form
+      scope: Prospective members
+    pku-center-ai-safety:
+      label: PKU Center for AI Safety and Governance
+      scope: Reference
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://github.com/PKU-Alignment
+      checked: 2026-09-22
+    - url: https://hwcdc27ergv.feishu.cn/share/base/form/shrcnujPFnMnEL4tFrtPLXV9qad
+      checked: 2026-09-22
+    - url: https://www.ai.pku.edu.cn/en/Faculty/AI_Humanities_and_Social_Sciences_Centers/Center_for_AI_Safety_and_Governance.htm
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 659fafa62d
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,43 @@
+id: us-future-life-institute-2
+type: organisation
+geo:
+  country: us
+  label: United States and European Union (Brussels lobbying presence).
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://futureoflife.org/take-action/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: "6050653768e6"
+  perspective: safety-advocacy
+  volunteers: unclear
+  tags:
+    - fund
+    - join
+    - law
+strings:
+  name: Future of Life Institute (FLI)
+  the_ask: A moratorium on developing artificial superintelligence for at least 15 years, plus licensing, auditing and enforceable safety standards before scaling — and a participatory global process rather than decisions made by a handful of CEOs.
+  what_they_do: Open letters and petitions (Pause Giant AI Experiments, 31,810 signatories; Asilomar AI Principles), a contact-your-legislator tool, EU AI Act implementation work, grantmaking, the Digital Media Accelerator, and a newsletter with about 70,000 subscribers. It is a registered lobbying entity in both the US and EU.
+  newcomer_action: Use the contact-your-legislator tool, sign the open letters, join the action alerts list, or apply to the Digital Media Accelerator if you make creative content.
+  tips: no
+  geography: United States and European Union (Brussels lobbying presence).
+  scale: Mid-sized and well-funded by the standards of this field; a large grantmaker as well as an advocate.
+  spending: Registers as a federal lobbying client in the US (OpenSecrets ID D000087562) and appears on the EU transparency register; specific figures not retrieved from its own pages.
+  caution: FLI does not have a separately branded advocacy arm — its policy and lobbying work runs through the Institute itself plus EU-registered activity. Its ask is a time-limited moratorium on superintelligence, which is weaker than ControlAI's or StopAI's permanent ban and stronger than Encode's transparency agenda. It is also a funder of other groups on this list, so 'independent' endorsements between these organisations are not always independent.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://futureoflife.org/take-action/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 84d70029dc
+  migrated_from: input/data/committees-and-organisations.json#orgs

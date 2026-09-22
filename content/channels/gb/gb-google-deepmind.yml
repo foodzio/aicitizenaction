@@ -1,0 +1,89 @@
+id: gb-google-deepmind
+type: company
+geo:
+  country: gb
+  label: UK / USA
+facts:
+  routes:
+    - id: google-ai-vulnerability-reward
+      type: bounty
+      value: https://bughunters.google.com/about/rules/google-friends/ai-vulnerability-reward-program-rules
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: b13884c87dc9
+    - id: gemini-content-reporting
+      type: form
+      value: https://support.google.com/legal/troubleshooter/1114905
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 4c468fea96e0
+    - id: product-thumbs-down-gemini
+      type: feedback
+      value: https://gemini.google.com/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 1524d5cf46a2
+    - id: homepage
+      type: homepage
+      value: https://deepmind.google/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: db97e994ff4e
+    - id: framework
+      type: framework
+      value: https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 5a3b0e2fbdc8
+  region: United States
+  public_input: limited
+  tags:
+    - behaviour
+    - flaw
+strings:
+  name: Google DeepMind
+  remit: Responsibility and Safety Council (co-chaired by COO Lila Ibrahim and VP Responsibility Helen King) reviews research and deployments; a separate AGI Safety Council led by co-founder Shane Legg works alongside it on frontier risk.
+  reality_check: "Documented black hole for model-safety issues. A researcher who submitted a Gemini guardrail-bypass to the AI VRP on 20 October 2025 published Google's verbatim reply classifying it 'Infeasible / Out of Scope': 'Generating violative content (such as hate speech, violent content, or illegal instructions)...within the user's own session (e.g., jailbreaks, safety bypasses, or alignment bypasses) is not a qualifying report for the AI VRP.' AI Frontiers' 2026 review groups Google DeepMind with Meta and xAI as labs that exclude jailbreaks from their vulnerability programs, leaving only untracked thumbs-down feedback. Neither the Frontier Safety Framework page nor the Responsibility and Safety page publishes any email, form or contact for external safety input — verified by fetching both."
+  notes: "There is no published address to reach the Frontier Safety Framework team or either safety council. Google's own triage will tell you a jailbreak is not a security bug. If your finding has a genuine security impact (data exfiltration, cross-user harm) the AI VRP is the right door; if it is alignment or harmful-content behaviour, there is effectively no door. Treat this as: not found — general contact only."
+  routes:
+    google-ai-vulnerability-reward:
+      label: Google AI Vulnerability Reward Program
+      scope: Security vulnerabilities in AI products. Jailbreaks and in-session harmful content generation are EXPLICITLY OUT OF SCOPE.
+      note: Page returns HTTP 200 but is fully JS-rendered and could not be read as text. Scope confirmed by a researcher who published Google's verbatim rejection (below).
+    gemini-content-reporting:
+      label: Gemini content reporting (legal troubleshooter)
+      scope: Content removal under Google policies and applicable law.
+      note: Cited from Gemini's policy guidelines page. A legal/removal route, not a safety-research route.
+    product-thumbs-down-gemini:
+      label: In-product thumbs-down on Gemini output
+      scope: The only routine route for flagging a bad model response.
+      note: "AI Frontiers: Google 'relies on in-product thumbs-down reporting with no acknowledgement of receipt, and no means to track that action will be taken.'"
+    homepage:
+      label: Homepage
+    framework:
+      label: Frontier Safety Framework, Version 3.1 (17 April 2026)
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://bughunters.google.com/about/rules/google-friends/ai-vulnerability-reward-program-rules
+      checked: null
+    - url: https://support.google.com/legal/troubleshooter/1114905
+      checked: null
+    - url: https://gemini.google.com/
+      checked: null
+    - url: https://deepmind.google/
+      checked: null
+    - url: https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 46ab994423
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,42 @@
+id: us-incompas
+type: organisation
+geo:
+  country: us
+  label: United States.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://incompas.org/advocacy-policy/artificial-intelligence-competition-center/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 53381d014522
+  perspective: industry-lobby
+  volunteers: no
+  tags:
+    - join
+    - opposition
+strings:
+  name: INCOMPAS
+  the_ask: Clear the way for AI infrastructure — faster siting and permitting for data centres, fibre, subsea cables and power — under 'responsible and innovative AI policy'.
+  what_they_do: Trade association rebranded as 'The Competitive Communications and AI Infrastructure Association'; runs an Artificial Intelligence Competition Center and lobbies on infrastructure, siting and energy.
+  newcomer_action: Nothing to join unless your company is a member. If you are fighting a local data centre, this is the association arguing the other side at state and federal level.
+  tips: no
+  geography: United States.
+  scale: Mid-sized trade association with a published member list.
+  spending: Not published.
+  caution: "Its AI interest is infrastructure and competition, not model capability — on frontier safety questions it is mostly absent. The concrete conflict is local: data centre siting, water and electricity."
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://incompas.org/advocacy-policy/artificial-intelligence-competition-center/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: fe03d51ad4
+  migrated_from: input/data/committees-and-organisations.json#orgs

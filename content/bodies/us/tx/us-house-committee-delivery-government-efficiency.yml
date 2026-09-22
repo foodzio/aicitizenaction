@@ -1,0 +1,60 @@
+id: us-house-committee-delivery-government-efficiency
+type: seat
+geo:
+  country: us
+  sub: tx
+  label: Texas
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://capitol.texas.gov/Committees/MembershipCmte.aspx?LegSess=89R&CmteCode=C233
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a4b1e92d6577
+    - id: public-route
+      type: submission
+      value: https://comments.house.texas.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d02ab6634b4c
+  level: state
+  chamber: House
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Giovanni Capriglione
+      party: R
+      verified_on: 2026-09-22
+strings:
+  name: House Committee on Delivery of Government Efficiency
+  ai_jurisdiction: House committee that heard and reported TRAIGA (HB 149) in the 89th Legislature; jurisdiction over state technology, AI governance and government efficiency.
+  business: "HB 149, Texas Responsible Artificial Intelligence Governance Act (TRAIGA), Capriglione — passed House 147-0, Senate 31-0; signed June 2025; IN FORCE since 1 January 2026. Companion 89R AI bills: SB 1964 (state-agency AI use), HB 2818 (AI Division inside DIR), SB 441 and HB 3133 (deepfakes), SB 2420 (App Store Accountability), SB 1188 (health records/AI), HB 3512 (state-employee AI training)."
+  status: VERIFIED, IN FORCE — TRAIGA is intent-based, bars a private right of action, preempts local AI ordinances, gives the AG a 60-day cure period, creates a 7-member Texas Artificial Intelligence Council inside DIR and a 36-month AI regulatory sandbox administered by DIR.
+  public_route: "YES, and unusually easy. Texas runs a dedicated online House Public Comment portal: any member of the public can submit a written comment for or against any bill set for a House committee hearing, from anywhere, without travelling to Austin. Comments are accepted from the time the hearing is posted until the committee closes the record (typically shortly after the hearing adjourns). In-person witness registration is done at Capitol kiosks or via the committee clerk. Note: 2026 is an interim year — the 90th Legislature convenes January 2027 — so the live route right now is interim-charge hearings."
+  agency_route: "Texas Attorney General — sole TRAIGA enforcement authority; TRAIGA required the AG to stand up an online AI complaint mechanism. AI rights and complaint route: https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint/consumer-ai-rights ; portal: https://consumerprotection.texasattorneygeneral.gov/consumercomplaintportal/s/ . Civil penalties $10,000–$200,000."
+  note: "Vice Chair: Salman Bhojani. Also relevant: Texas Artificial Intelligence Council (7 public members, within DIR) created by TRAIGA."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://capitol.texas.gov/Committees/MembershipCmte.aspx?LegSess=89R&CmteCode=C233
+      checked: 2026-09-22
+    - url: https://comments.house.texas.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 65d52c5b99
+  migrated_from: input/data/committees-and-organisations.json#seats

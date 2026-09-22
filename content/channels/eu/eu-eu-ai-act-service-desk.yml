@@ -1,0 +1,57 @@
+id: eu-eu-ai-act-service-desk
+type: reporting-channel
+geo:
+  country: eu
+  label: EU
+facts:
+  routes:
+    - id: submission-page
+      type: complaint
+      value: https://ai-act-service-desk.ec.europa.eu/en/resources
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d8abe1c86c78
+    - id: homepage
+      type: homepage
+      value: https://ai-act-service-desk.ec.europa.eu/en/resources
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 944188b5e92e
+  region: European Union
+  public_input: open
+  tags:
+    - harm
+    - insider
+    - systemic
+strings:
+  name: EU AI Act Service Desk
+  remit: Questions about AI Act interpretation and compliance; routes users to the complaints tool and whistleblower tool.
+  reality_check: Useful as the authoritative starting point for anyone trying to work out which EU route applies to their concern, and as the canonical index of open AI Act consultations. Not itself a lever.
+  accepts: Questions about AI Act interpretation and compliance; routes users to the complaints tool and whistleblower tool.
+  does_not_accept: It is a help desk and resource hub, not an enforcement intake in its own right.
+  how: Browse the AI Act Explorer, Compliance Checker, guidelines and templates; contact the AI Office at CNECT-AIOFFICE@ec.europa.eu; or follow the links to the complaint and whistleblower tools. Available in English, Spanish, German, French, Italian and Polish.
+  format: Web resources and email.
+  timing: Rolling; hosts periodic public consultations on implementation topics.
+  after: Response from the AI Office, or referral to the appropriate tool.
+  operator: European Commission (AI Office / DG CNECT)
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Questions about AI Act interpretation and compliance; routes users to the complaints tool and whistleblower tool.
+      note: Browse the AI Act Explorer, Compliance Checker, guidelines and templates; contact the AI Office at CNECT-AIOFFICE@ec.europa.eu; or follow the links to the complaint and whistleblower tools. Available in English, Spanish, German, French, Italian and Polish.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ai-act-service-desk.ec.europa.eu/en/resources
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: e98c6edd10
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,75 @@
+id: global-unesco-recommendation-ethics-ai-global-ai
+type: multilateral
+geo:
+  country: global
+  label: Global (193 member states)
+facts:
+  routes:
+    - id: global-ai-ethics-governance
+      type: form
+      value: https://www.unesco.org/ethics-ai/en
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3cf9a54c9fb1
+    - id: general-unesco-enquiry
+      type: form
+      value: https://www.unesco.org/en/query-list
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8c4fc042d7e0
+    - id: periodic-thematic-consultations
+      type: consultation
+      value: https://www.unesco.org/en/digital-education/artificial-intelligence/consultation
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 872009c04ddd
+    - id: homepage
+      type: homepage
+      value: https://www.unesco.org/en/artificial-intelligence/recommendation-ethics
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 16ece2ff96de
+  region: Global
+  public_input: limited
+  tags:
+    - systemic
+strings:
+  name: UNESCO — Recommendation on the Ethics of AI / Global AI Ethics and Governance Observatory
+  remit: "Adopted Nov 2021, the first global standard-setting instrument on AI ethics: four core values, ten principles, eleven policy action areas. Implementation tools include the Readiness Assessment Methodology (RAM) and Ethical Impact Assessment, a Global Forum on the Ethics of AI, and the Observatory, which maintains a public directory of civil society organisations working on AI ethics. Co-convenor of the UN Global Dialogue Joint Secretariat."
+  threat_model: "Near-term harms and human-rights framing: discrimination, gender bias, privacy, environmental sustainability, labour, and the digital divide. Explicitly NOT a loss-of-control or frontier-misuse body — do not route a catastrophic-risk concern here expecting traction."
+  reality_check: Bureaucratic and slow, and the bulk of its engagement runs through National Commissions and member-state ministries rather than direct public contact. The Observatory's CSO directory is the one place an outside organisation can actually get itself onto a UN-hosted map at low cost.
+  gov_channel: Strong for human-rights and ethics framing; the Recommendation is implemented via national RAM exercises with ministries.
+  routes:
+    global-ai-ethics-governance:
+      label: Global AI Ethics and Governance Observatory — civil society directory (organisations can be listed)
+      scope: Organisational listing and resource contribution
+      note: The Observatory hosts profiles of CSOs (e.g. AI Safety Asia) with their contact details.
+    general-unesco-enquiry:
+      label: General UNESCO enquiry
+      scope: General correspondence
+    periodic-thematic-consultations:
+      label: Periodic thematic consultations (e.g. education in the age of AI)
+      scope: Time-limited open consultations on specific themes
+      note: Consultations open and close; check the page for a live window.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.unesco.org/ethics-ai/en
+      checked: 2026-09-22
+    - url: https://www.unesco.org/en/query-list
+      checked: 2026-09-22
+    - url: https://www.unesco.org/en/digital-education/artificial-intelligence/consultation
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: af6b381755
+  migrated_from: input/data/institutions.json

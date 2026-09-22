@@ -1,0 +1,81 @@
+id: cn-shanghai-artificial-intelligence-laboratory
+type: government
+geo:
+  country: cn
+  label: People's Republic of China (Shanghai)
+facts:
+  routes:
+    - id: shanghai-ai-lab-website
+      type: form
+      value: https://www.shlab.org.cn/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: zh
+      source_id: 91a2fca0e5eb
+    - id: ai45-research-programme
+      type: form
+      value: https://ai45.shlab.org.cn/research/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en, zh
+      source_id: faea6c828b0f
+    - id: frontier-ai-risk-management
+      type: docket
+      value: https://arxiv.org/abs/2507.16534
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: f363cf9fe1bc
+    - id: homepage
+      type: homepage
+      value: https://www.shlab.org.cn/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 9d8f9efa2744
+  local_name: 上海人工智能实验室
+  region: China
+  public_input: none
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Shanghai Artificial Intelligence Laboratory (Shanghai AI Lab)
+  remit: State-backed AI research laboratory, a CnAISDA member, and the most substantive frontier-safety research operation in China. Published a Frontier AI Risk Management Framework (v1.0, with Concordia AI) and an accompanying technical risk-analysis report assessing frontier models against cyber-offence, biological/chemical, persuasion, and loss-of-control risk categories — methodologically comparable to Western frontier safety frameworks. Also produced the AI-45° Law / SafeWork line of research on co-evolving safety and capability. Pure research; no regulatory power.
+  powers_text: research
+  reality_check: "This is the one Chinese institution where a foreign AI-safety researcher has a genuinely functioning channel: it publishes in English on arXiv, collaborates openly with Concordia AI, and its researchers respond to academic correspondence. That is a real, working route — but it is a research channel, not a governance or complaint channel. It carries no institutional obligation to respond."
+  notes: Its frontier risk framework is the strongest evidence against the claim that China does not engage with catastrophic risk. It explicitly covers loss-of-control and uncontrolled self-replication.
+  routes:
+    shanghai-ai-lab-website:
+      label: Shanghai AI Lab website
+      scope: general
+      note: UNVERIFIED (search result). Not fetched; no contact confirmed.
+    ai45-research-programme:
+      label: AI45 research programme
+      scope: research
+      note: UNVERIFIED (search result).
+    frontier-ai-risk-management:
+      label: Frontier AI Risk Management Framework technical report (arXiv)
+      scope: publication
+      note: UNVERIFIED as fetched, but arXiv is a stable public archive and this is the substantive published output. arXiv author correspondence addresses are the realistic contact route.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.shlab.org.cn/
+      checked: null
+    - url: https://ai45.shlab.org.cn/research/
+      checked: null
+    - url: https://arxiv.org/abs/2507.16534
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 4ea37993d0
+  migrated_from: input/data/institutions.json

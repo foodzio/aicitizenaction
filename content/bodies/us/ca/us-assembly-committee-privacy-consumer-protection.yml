@@ -1,0 +1,60 @@
+id: us-assembly-committee-privacy-consumer-protection
+type: seat
+geo:
+  country: us
+  sub: ca
+  label: California
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://apcp.assembly.ca.gov/welcome-committee-privacy-and-consumer-protection
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3fd5c29263c4
+    - id: public-route
+      type: submission
+      value: https://calegislation.lc.ca.gov/Advocates/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ef9260462412
+  level: state
+  chamber: Assembly
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Rebecca Bauer-Kahan
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: Assembly Committee on Privacy and Consumer Protection
+  ai_jurisdiction: Primary Assembly committee of first referral for AI, algorithmic decision-making, chatbot, data-privacy and AI-transparency bills (e.g. SB 53, AB 1064, AB 1018, companion-chatbot bills). Also runs a joint hearing track with the Select Committee on Biotechnology and Medical Technology on AI in health.
+  business: "SB 53 (Transparency in Frontier Artificial Intelligence Act, Wiener) — signed 25 Sep 2025. 2026 follow-ons signed: SB 813 (independent verification organizations, signed 9 Sep 2026), AB 1405 (AI auditor registry, signed 9 Sep 2026), SB 1119 + SB 867 (companion chatbots / AI toys, signed 10 Sep 2026), AB 1709, AB 1856, AB 2246 (minors/design code, signed 10 Sep 2026), SB 1050 (synthetic performer disclosure, signed 16 Sep 2026). Pending on Governor's desk as of 22 Sep 2026: SB 1000, AB 2713, AB 1609, SB 1111, SB 947, AB 1883."
+  status: VERIFIED — SB 53 in force; CA Dept. of Technology begins annual threshold reviews in 2027. EO N-9-26 (18 Sep 2026) accelerates SB 813/AB 1405 implementation and directs work toward a frontier-model 'kill switch'. 2026 session closed; ~two dozen AI bills signed 9–16 Sep 2026.
+  public_route: "YES — strongest and most underused route in the country. Any individual may register once and file a formal position letter (Support / Oppose / Amend) on any bill through the Legislature's Advocates portal; the letter is entered into the committee's official bill file and summarized in the committee analysis. Deadline convention for this committee: 12:00 noon on the Tuesday one week before the Tuesday hearing. Written testimony submitted this way is public comment and may be read into the record. In-person testimony at the hearing is open (two primary witnesses per side plus an open 'me-too' line); telephonic testimony has been discontinued."
+  agency_route: "CA Attorney General (oag.ca.gov — AI legal advisories, Jan 2025; exclusive SB 53 civil enforcement); California Privacy Protection Agency for automated decision-making technology under the CCPA ADMT regs (https://cppa.ca.gov/regulations/ccpa_updates.html); California Civil Rights Department for FEHA automated-decision-system employment rules. Consumer complaints: https://oag.ca.gov/report"
+  note: The position-letter portal is open to 'individuals' as a registration category, not just lobbyists — confirmed on the portal itself. This is the single highest-leverage public-participation channel in US state AI policy and is dominated by trade associations.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://apcp.assembly.ca.gov/welcome-committee-privacy-and-consumer-protection
+      checked: 2026-09-22
+    - url: https://calegislation.lc.ca.gov/Advocates/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b9d26105a5
+  migrated_from: input/data/committees-and-organisations.json#seats

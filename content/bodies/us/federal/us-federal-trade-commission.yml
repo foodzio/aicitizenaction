@@ -1,0 +1,97 @@
+id: us-federal-trade-commission
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (federal)
+facts:
+  routes:
+    - id: reportfraud-ftc-gov-ftc
+      type: complaint
+      value: https://reportfraud.ftc.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5a07444b4802
+    - id: consumer-helpline
+      type: complaint
+      value: 1-877-FTC-HELP (1-877-382-4357)
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 50ed4f459a79
+    - id: ftc-public-comment-rulemakings
+      type: docket
+      value: https://www.regulations.gov/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 369e7e91bec2
+    - id: public-affairs-press
+      type: email
+      value: opa@ftc.gov
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0d4ad2ba3418
+    - id: mail-confidential-material
+      type: email
+      value: Federal Trade Commission, 600 Pennsylvania Avenue NW, Washington DC 20580
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e65eccc3313a
+    - id: homepage
+      type: homepage
+      value: https://www.ftc.gov/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 73947d297f2b
+  region: United States
+  public_input: open
+  tags:
+    - harm
+    - insider
+    - systemic
+strings:
+  name: Federal Trade Commission (FTC)
+  remit: "Enforces Section 5 of the FTC Act against unfair or deceptive acts and practices, plus COPPA, ROSCA and the Fair Credit Reporting Act. Applied to AI this means: deceptive claims about AI capability ('AI washing'), harms from AI products to children, deceptive chatbot design, and misuse of data for training. Can open investigations, issue compulsory process (civil investigative demands and 6(b) orders), sue in federal court, obtain injunctions and civil penalties, and impose consent decrees including algorithmic disgorgement (deletion of models built on unlawfully obtained data). It is the closest thing the US has to a general-purpose AI consumer regulator."
+  powers_text: compel
+  reality_check: ReportFraud is a real database, not a black hole — but a single consumer complaint rarely triggers action; patterns do. The high-leverage routes are (a) a detailed, documented complaint sent by post to the Bureau of Consumer Protection when the matter is confidential or involves a whistleblower, and (b) public comments on FTC workshops and rulemakings, which are docketed, published, and cited in Commission statements. The FTC's AI work is squarely CONSUMER-HARM oriented — deception, children's safety, data misuse — and it has no theory of action for catastrophic or frontier risk. Do not route an existential-risk argument here.
+  notes: Enforcement priorities shift sharply with commission composition; check current leadership before assuming a given theory of harm is live.
+  routes:
+    reportfraud-ftc-gov-ftc:
+      label: ReportFraud.ftc.gov — the FTC's public complaint intake
+      scope: Anyone may report a business practice, including deceptive AI claims or harmful AI products. Reports feed the Consumer Sentinel database used by FTC and 2,800+ law-enforcement partners.
+      note: VERIFIED on https://www.ftc.gov/about-ftc/contact.
+    consumer-helpline:
+      label: Consumer helpline
+      scope: General consumer inquiries and complaints.
+      note: VERIFIED on the FTC contact page.
+    ftc-public-comment-rulemakings:
+      label: FTC public comment on rulemakings, workshops and 6(b) studies
+      scope: The FTC takes public comment on proposed rules and on workshop records; comments are published on the docket.
+      note: UNVERIFIED as fetched. The FTC also runs its own comment pages linked from each rulemaking announcement.
+    public-affairs-press:
+      label: Public affairs / press
+      scope: Journalists only.
+      note: VERIFIED on the FTC contact page. Also webmaster@ftc.gov (site issues) and electronicfilings@ftc.gov (administrative litigation filings).
+    mail-confidential-material:
+      label: Mail for confidential material
+      scope: The FTC explicitly warns that email is not secure and says to mark confidential information 'Confidential' and send it by post.
+      note: VERIFIED — quoted from the FTC contact page.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://reportfraud.ftc.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: ef05763f41
+  migrated_from: input/data/institutions.json

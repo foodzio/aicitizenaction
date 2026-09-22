@@ -1,0 +1,55 @@
+id: global-mit-ai-incident-tracker
+type: reporting-channel
+geo:
+  country: global
+  label: Global
+facts:
+  routes:
+    - id: submission-page
+      type: reporting
+      value: https://airisk.mit.edu/ai-incident-tracker
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f2006e6cdc83
+    - id: homepage
+      type: homepage
+      value: https://airisk.mit.edu/ai-incident-tracker
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ee29cca78deb
+  region: Global
+  public_input: open
+  tags:
+    - behaviour
+strings:
+  name: MIT AI Incident Tracker (AI Risk Repository)
+  remit: Nothing directly from the public. It ingests and classifies incidents from the AI Incident Database — 1,600+ incidents classified by risk domain, cause, harm type (10 categories including physical harm, financial loss and human rights), severity, entity and timing.
+  reality_check: "Important for a playbook as a multiplier argument, not a separate action: it demonstrates that a single accepted AIID submission propagates into academic and policy-facing infrastructure read by researchers and governments. This is the concrete payoff that makes AIID submission worth the effort."
+  accepts: Nothing directly from the public. It ingests and classifies incidents from the AI Incident Database — 1,600+ incidents classified by risk domain, cause, harm type (10 categories including physical harm, financial loss and human rights), severity, entity and timing.
+  does_not_accept: Direct submissions. The page itself directs people to submit to AIID instead.
+  how: Submit to the AI Incident Database; if accepted there, your incident flows into this tracker automatically and is re-classified against academic taxonomies.
+  format: N/A
+  timing: Periodic updates (e.g. a June 2026 update was published).
+  after: Classified and visualised in timelines, overviews, detailed records and national security impact assessments.
+  operator: MIT FutureTech / MIT AI Risk Repository, with Arcola AI; classification uses the MIT Risk Repository and CSET AI Harm Taxonomy
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Nothing directly from the public. It ingests and classifies incidents from the AI Incident Database — 1,600+ incidents classified by risk domain, cause, harm type (10 categories including physical harm, financial loss and human rights), severity, entity and timing.
+      note: Submit to the AI Incident Database; if accepted there, your incident flows into this tracker automatically and is re-classified against academic taxonomies.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://airisk.mit.edu/ai-incident-tracker
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: f3ee9b5c0a
+  migrated_from: input/data/institutions.json

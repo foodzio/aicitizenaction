@@ -1,0 +1,57 @@
+id: global-openai-inbound-reporting
+type: reporting-channel
+geo:
+  country: global
+  label: Global
+facts:
+  routes:
+    - id: submission-page
+      type: disclosure
+      value: https://openai.com/form/model-behavior-feedback/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6b34ec0adb5c
+    - id: homepage
+      type: homepage
+      value: https://openai.com/form/model-behavior-feedback/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 2c1ab07bf651
+  region: Global
+  public_input: open
+  tags:
+    - behaviour
+    - flaw
+    - systemic
+strings:
+  name: OpenAI inbound reporting (Bugcrowd bug bounty + in-product feedback)
+  remit: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
+  reality_check: "Honestly: weak for safety concerns. OpenAI retired the only structured external model-behaviour channel and replaced it with a thumbs-down button. A serious model-behaviour finding aimed at OpenAI is better served by FLARE-AI (standardised report, external recipients), by AIID (public permanent record), or by publishing — all of which create pressure a thumbs-down cannot."
+  accepts: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
+  does_not_accept: The Bugcrowd engagement page states model safety issues, jailbreaks and hallucinations are excluded from the bug bounty and directs them elsewhere. The dedicated 'Model behavior feedback' web form (openai.com/form/model-behavior-feedback) has been deprecated and no longer accepts submissions.
+  how: "Security: bugcrowd.com/engagements/openai. Model behaviour: OpenAI now directs ChatGPT users to the thumbs-down control under any response or the content reporting form; API customers to enable thumbs-down feedback in the Playground via the API dashboard; everything else to customer support."
+  format: "Security: Bugcrowd vulnerability report. Model behaviour: an in-product thumbs-down with free text — there is no structured external report format any more."
+  timing: Rolling.
+  after: Security reports are triaged and may be rewarded (historically up to $20,000). Model-behaviour feedback disappears into product telemetry with no case number, no acknowledgment and no route back to the reporter.
+  operator: OpenAI, security program run on Bugcrowd
+  routes:
+    submission-page:
+      label: Submission page
+      scope: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
+      note: "Security: bugcrowd.com/engagements/openai. Model behaviour: OpenAI now directs ChatGPT users to the thumbs-down control under any response or the content reporting form; API customers to enable thumbs-down feedback in the Playground via the API dashboard; everything else to customer support."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://openai.com/form/model-behavior-feedback/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: acc09e28da
+  migrated_from: input/data/institutions.json

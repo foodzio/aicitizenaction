@@ -1,0 +1,74 @@
+id: us-stanford-center-research-foundation-models
+type: academic
+geo:
+  country: us
+  label: United States (Stanford, within HAI)
+facts:
+  routes:
+    - id: helm-open-benchmark-models
+      type: submission
+      value: https://crfm.stanford.edu/helm/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 54a76d3dd6c0
+    - id: foundation-model-transparency-index
+      type: submission
+      value: https://crfm.stanford.edu/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7844229bd0b1
+    - id: people-directory-practical-contact
+      type: form
+      value: https://crfm.stanford.edu/people.html
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 563fbc4df604
+    - id: homepage
+      type: homepage
+      value: https://crfm.stanford.edu/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 39f4aa264631
+  region: United States
+  public_input: limited
+  tags:
+    - research
+strings:
+  name: Stanford Center for Research on Foundation Models (CRFM)
+  remit: Interdisciplinary centre spanning 10+ Stanford departments. Coined the term 'foundation models'. Outputs include HELM (Holistic Evaluation of Language Models — a widely used open benchmark suite), the Foundation Model Transparency Index (FMTI, which grades developers on transparency), Ecosystem Graphs, and Levanter. Works across technical foundations, beneficial applications, societal impact (transparency, openness, copyright, privacy, systemic risk) and AI policy.
+  threat_model: Systemic risk from homogenisation and opacity — the founding thesis is that a small number of foundation models become single points of failure across society. Transparency-centred. Covers near-term and structural risk; touches systemic risk but not loss of control.
+  reality_check: No centre-level inbox at all. Everything runs through named researchers or through open-source contribution to HELM, which is the genuinely open channel.
+  gov_channel: Real — CRFM has filed influential comments in US and EU processes (notably on the EU AI Act and on open foundation models) and its transparency work is cited by regulators.
+  routes:
+    helm-open-benchmark-models:
+      label: HELM — open benchmark; models and scenarios can be contributed via GitHub
+      scope: Researchers
+      note: HELM is open source; contributing an evaluation scenario is a real route to influence how models are publicly measured.
+    foundation-model-transparency-index:
+      label: Foundation Model Transparency Index — developers respond to it, and the methodology is public
+      scope: Researchers and developers
+      note: "UNVERIFIED: no public submission form for FMTI input was found."
+    people-directory-practical-contact:
+      label: People directory — the practical contact route is an individual researcher
+      scope: General
+      note: No centre-level contact email is published.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://crfm.stanford.edu/helm/
+      checked: 2026-09-22
+    - url: https://crfm.stanford.edu/
+      checked: 2026-09-22
+    - url: https://crfm.stanford.edu/people.html
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: f0bf9dc429
+  migrated_from: input/data/institutions.json

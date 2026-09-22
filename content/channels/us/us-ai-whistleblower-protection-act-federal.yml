@@ -1,0 +1,57 @@
+id: us-ai-whistleblower-protection-act-federal
+type: reporting-channel
+geo:
+  country: us
+  label: United States (proposed)
+facts:
+  routes:
+    - id: submission-page
+      type: whistleblowing
+      value: https://billsincongress.com/bills/1792s119
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 95bac7a82da1
+    - id: homepage
+      type: homepage
+      value: https://billsincongress.com/bills/1792s119
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 43f36654aa96
+  region: United States
+  public_input: open
+  tags:
+    - insider
+    - law
+    - systemic
+strings:
+  name: AI Whistleblower Protection Act (S.1792) — federal, not law
+  remit: N/A — not enacted.
+  reality_check: "Zero protection as of September 2026. Be precise about this in any playbook: a US AI worker has no AI-specific federal whistleblower statute. Their available routes are SB 53 (if California and catastrophic risk), SEC/Dodd-Frank (if securities fraud at a public company), state law, and contract/NDA analysis with counsel. The Right to Warn letter of June 2024 — signed by current and former OpenAI and Google DeepMind staff, asking for an anonymous process to raise risk concerns, an end to disparagement clauses and non-retaliation — produced voluntary company policy changes and Senate attention, but no enacted federal law."
+  accepts: N/A — not enacted.
+  does_not_accept: N/A
+  how: N/A. Included because it is routinely and wrongly cited as existing protection. Introduced 15 May 2025; still in committee. It had sat in committee for roughly 495 days at the time of this research; of comparable Senate bills stuck in committee that long, about 1% ever advance.
+  format: N/A
+  timing: N/A
+  after: N/A
+  operator: US Senate; sponsored by Sen. Chuck Grassley (R-IA), with Sen. Chris Coons
+  routes:
+    submission-page:
+      label: Submission page
+      scope: N/A — not enacted.
+      note: N/A. Included because it is routinely and wrongly cited as existing protection. Introduced 15 May 2025; still in committee. It had sat in committee for roughly 495 days at the time of this research; of comparable Senate bills stuck in committee that long, about 1% ever advance.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://billsincongress.com/bills/1792s119
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 5d57e8a5d0
+  migrated_from: input/data/institutions.json

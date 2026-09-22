@@ -1,0 +1,63 @@
+id: us-subcommittee-cybersecurity
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.armed-services.senate.gov/about/membership
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b0be21c947e4
+    - id: public-route
+      type: submission
+      value: https://www.armed-services.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: fd4643c104cb
+  level: federal
+  chamber: Senate
+  parent: Senate Committee on Armed Services
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Mike Rounds
+      party: R
+      region: SD
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Jacky Rosen
+      party: D
+      region: NV
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Cybersecurity
+  ai_jurisdiction: AI-enabled offensive and defensive cyber operations, CYBERCOM, AI model security and adversarial attacks on defense systems, and the security of AI supply chains inside DoD.
+  business: "VERIFIED by association: Rounds is co-chair of the Senate AI Caucus and one of the four authors of the Senate's bipartisan AI roadmap, making this subcommittee chair a principal Senate Republican AI interlocutor."
+  public_route: "Full-committee contact page and staff directory: https://www.armed-services.senate.gov/about/committee-staff."
+  note: Leadership verified 2026-09-22 from senate.gov SSAS subcommittee roster.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.armed-services.senate.gov/about/membership
+      checked: 2026-09-22
+    - url: https://www.armed-services.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: de1991db8a
+  migrated_from: input/data/committees-and-organisations.json#seats

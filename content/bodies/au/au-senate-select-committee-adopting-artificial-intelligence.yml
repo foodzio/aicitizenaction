@@ -1,0 +1,51 @@
+id: au-senate-select-committee-adopting-artificial-intelligence
+type: seat
+geo:
+  country: au
+  label: Australia
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.aph.gov.au/Parliamentary_Business/Committees/Senate/Adopting_Artificial_Intelligence_AI
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 89a8581de1e0
+    - id: public-route
+      type: submission
+      value: https://www.aph.gov.au/Parliamentary_Business/Committees/Senate/Adopting_Artificial_Intelligence_AI/AdoptingAI/Submissions
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5861a064a45d
+  level: national
+  tags:
+    - law
+    - record
+strings:
+  name: Senate Select Committee on Adopting Artificial Intelligence (AI) — CEASED
+  ai_jurisdiction: Examined the opportunities and impacts of AI adoption in Australia, with particular attention to generative AI.
+  business: CONCLUDED. The committee's extended reporting deadline was 26 November 2024 and its own page states that 'the tabling of the final report concludes the work of the select committee.' The Australian Government published a formal response to the report (industry.gov.au). Its archived submissions remain online and are a useful precedent library for anyone drafting a submission to the current Joint Select Committee.
+  public_route: No longer accepting submissions. Its archived submissions are public and worth reading before writing to the new Joint Select Committee.
+  format_rules: Not applicable — closed.
+  note: "VERIFIED 2026-09-22 as CEASED. Answering the brief's question directly: it no longer exists; it reported and was dissolved, and the Joint Select Committee on Artificial Intelligence appointed 20 August 2026 is its functional successor. I could not verify the former chair's name from the official page and am not naming one."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.aph.gov.au/Parliamentary_Business/Committees/Senate/Adopting_Artificial_Intelligence_AI
+      checked: 2026-09-22
+    - url: https://www.aph.gov.au/Parliamentary_Business/Committees/Senate/Adopting_Artificial_Intelligence_AI/AdoptingAI/Submissions
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 554594b42c
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,64 @@
+id: us-subcommittee-commerce-3
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://appropriations.house.gov/subcommittees/commerce-justice-science-and-related-agencies-0/member-list
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f1e43deaf9ed
+    - id: public-route
+      type: submission
+      value: https://appropriations.house.gov/subcommittees/commerce-justice-science-and-related-agencies-0
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a8701b55dffa
+  level: federal
+  chamber: House
+  parent: House Committee on Appropriations
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Harold Rogers
+      party: R
+      region: KY
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Grace Meng
+      party: D
+      region: NY
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Commerce, Justice, Science, and Related Agencies
+  ai_jurisdiction: THE House subcommittee that funds NIST and the Center for AI Standards and Innovation (CAISI), plus NSF, NASA, NOAA, DOJ and the FTC. Every argument about whether the US government can evaluate frontier AI models, and whether the FTC can police AI, reduces to a line in this subcommittee's bill.
+  business: "VERIFIED: FY2027 outside witness written testimony accepted with a deadline of 8 May 2026 at 6:00 p.m. ET. FY27 Community Project Funding guidance published for this subcommittee. See CRS report R48929 for the FY2027 CJS picture including NIST and NSF. Rep. Dale Strong (R-AL) is vice chair."
+  public_route: "VERIFIED: subcommittee inquiries 202-225-3351. Testimony intake email CJ.Approp@mail.house.gov. Full-committee contact https://appropriations.house.gov/contact."
+  note: Leadership verified 2026-09-22 from the House Clerk's MemberData.xml (subcommittee code AP19). This is the answer to the brief's question about 'the subcommittee funding NIST/CAISI' on the House side, and it is the most concrete, verifiable public-submission route in this entire dataset.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://appropriations.house.gov/subcommittees/commerce-justice-science-and-related-agencies-0/member-list
+      checked: 2026-09-22
+    - url: https://appropriations.house.gov/subcommittees/commerce-justice-science-and-related-agencies-0
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b0ce50fd4a
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,72 @@
+id: gb-oxford-martin-ai-governance-initiative
+type: academic
+geo:
+  country: gb
+  label: United Kingdom (Oxford)
+facts:
+  routes:
+    - id: oxford-martin-school-general
+      type: email
+      value: info@oxfordmartin.ox.ac.uk
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: cd03fd4408a7
+    - id: newsletter
+      type: form
+      value: https://mailchi.mp/oxfordmartin/subscribe-to-the-aigi-newsletters
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 30015e2039b6
+    - id: aigi-site-research
+      type: form
+      value: https://aigi.ox.ac.uk/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8d710ea1868f
+    - id: homepage
+      type: homepage
+      value: https://aigi.ox.ac.uk/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: e7015955f5ec
+  region: United Kingdom
+  public_input: limited
+  tags:
+    - harm
+    - research
+    - systemic
+strings:
+  name: Oxford Martin AI Governance Initiative (AIGI)
+  remit: "Research initiative within the Oxford Martin School, co-directed by Robert Trager and Maike Osborne. Three research areas: frontier AI governance, international AI governance (including a China AI Governance programme and the Oxford AI Diplomacy Lab), and technical AI governance (including a Hardware AI Governance Lab working on compute verification and on-chip governance mechanisms). Files responses to government consultations."
+  threat_model: Frontier risk and international coordination failure — racing dynamics, verification and enforcement problems, and compute governance as the practical lever. Loss-of-control-aware but institutionally rather than technically framed.
+  reality_check: Contact runs through a shared Oxford Martin School inbox rather than a dedicated one, which dilutes it. Better to approach a named researcher. Technically credible and genuinely influential on compute governance.
+  gov_channel: Strong — files formal responses to US and UK government RFIs (e.g. to the US AI Action Plan RFI), and Trager sits on the FLI AI Safety Index panel and advises international processes.
+  routes:
+    oxford-martin-school-general:
+      label: Oxford Martin School general enquiries (the published route for AIGI)
+      scope: Anyone
+      note: Phone +44 (0)1865 287430. Oxford Martin School, 34 Broad Street, Oxford OX1 3BD.
+    newsletter:
+      label: Newsletter
+      scope: Anyone
+    aigi-site-research:
+      label: AIGI site — research, labs and news
+      scope: Public
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://mailchi.mp/oxfordmartin/subscribe-to-the-aigi-newsletters
+      checked: 2026-09-22
+    - url: https://aigi.ox.ac.uk/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: a754f46e01
+  migrated_from: input/data/institutions.json

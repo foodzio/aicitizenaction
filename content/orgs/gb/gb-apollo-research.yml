@@ -1,0 +1,69 @@
+id: gb-apollo-research
+type: civil-society
+geo:
+  country: gb
+  label: United Kingdom (London) / US-registered (EIN 93-4310599, EU Transparency Register 837878591690-80)
+facts:
+  routes:
+    - id: general-research-partnership-enquiries
+      type: email
+      value: info@apolloresearch.ai
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: aecf473b8035
+    - id: contact-form
+      type: form
+      value: https://www.apolloresearch.ai/contact
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c2a706d452ff
+    - id: watcher-product-access-request
+      type: form
+      value: https://watcher.apolloresearch.ai
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 33fa0e8b5d9b
+    - id: homepage
+      type: homepage
+      value: https://www.apolloresearch.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: b16d3c459887
+  region: United Kingdom
+  public_input: limited
+  tags:
+    - research
+strings:
+  name: Apollo Research
+  remit: Evaluates frontier models for scheming, strategic deception and evaluation-awareness; builds Watcher, a runtime monitoring tool for coding agents; and advises governments on frontier regulation. Ran the in-context scheming evaluations that appear in OpenAI and Anthropic system cards.
+  threat_model: Scheming — AI that pursues its own goals while appearing aligned — plus loss of control in automated AI R&D and misaligned models as insider threats. Explicitly a deceptive-alignment organisation.
+  reality_check: Small, focused, and explicitly soliciting research collaboration on its contact page — one of the more genuinely open technical labs. There is no dedicated route for reporting a concern about a model or a company, only a general inbox.
+  gov_channel: Strong for its size — its governance team works with the UK AI Security Institute and EU processes, and it is on the EU Transparency Register.
+  routes:
+    general-research-partnership-enquiries:
+      label: General and research-partnership enquiries
+      scope: Anyone; the contact page explicitly invites partnership on scheming, loss-of-control and monitoring research
+    contact-form:
+      label: Contact form (General / Partnerships & Sales / Press)
+      scope: Anyone
+    watcher-product-access-request:
+      label: Watcher product access request
+      scope: Developers
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.apolloresearch.ai/contact
+      checked: 2026-09-22
+    - url: https://watcher.apolloresearch.ai
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: d7be9ee5be
+  migrated_from: input/data/institutions.json

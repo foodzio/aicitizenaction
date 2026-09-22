@@ -1,0 +1,5 @@
+id: public-input
+values:
+  - { id: open, label: Open to the public, description: Publishes a route a member of the public can use without affiliation }
+  - { id: limited, label: Limited, description: Has a route, but it is restricted by constituency, membership, timing or format }
+  - { id: none, label: No public route, description: Publishes no public contact route for this purpose. A finding, not a gap }

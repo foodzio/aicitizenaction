@@ -1,0 +1,56 @@
+id: us-us-federal-rulemaking-comments-regulations-gov
+type: reporting-channel
+geo:
+  country: us
+  label: United States
+facts:
+  routes:
+    - id: submission-page
+      type: consultation
+      value: https://www.regulations.gov/assets/files/Public-Comment-on-Federal-Regulations_Final.pdf
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f4234caf977e
+    - id: homepage
+      type: homepage
+      value: https://www.regulations.gov/assets/files/Public-Comment-on-Federal-Regulations_Final.pdf
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: a3b59ec49d3f
+  region: United States
+  public_input: open
+  tags:
+    - flaw
+    - systemic
+strings:
+  name: US federal rulemaking comments — Regulations.gov
+  remit: Comments from anyone, including non-US persons, on proposed rules, requests for information and requests for comment. No affiliation required.
+  reality_check: Genuinely high-leverage and widely underrated for an unaffiliated person, precisely because of the legal duty to respond to significant comments — no other consultation mechanism in this list carries an enforceable response obligation. A single well-evidenced technical comment on a low-volume AI docket can shape a final rule. A form letter does nothing.
+  accepts: Comments from anyone, including non-US persons, on proposed rules, requests for information and requests for comment. No affiliation required.
+  does_not_accept: "It is not a vote. Identical mass comments carry no extra weight: 'multiple identical comments are not likely to be more persuasive than if the comment had been sent only once,' and the number of comments for or against does not determine whether a rule proceeds."
+  how: "Search the docket number on regulations.gov, click 'Comment Now!', complete the fields and attach or type your comment. Live AI-relevant examples at the time of this research: NIST-2026-0100 (Modernizing the National Vulnerability Database in the Age of AI, comments due 13 October 2026) and NIST-2025-0035 (Security Considerations for AI Agents, closed 9 March 2026 with 937 comments)."
+  format: "No length limit, but substance over volume. What works: explain concretely how the policy would affect a specific situation, supply reasoning and evidence, or offer a perspective the agency has not previously considered. What fails: bare statements of support or opposition. Agencies invite 'concrete examples, best practices, case studies, and actionable recommendations.'"
+  timing: Typically a 30–60 day window after a proposed rule is issued; the deadline is stated in the preamble of each notice. RFIs vary.
+  after: Comments are posted publicly on the docket. Agencies must respond to significant, relevant comments when publishing a final rule, and may explain how comments changed the rule. Inadequate response to significant comments is a ground for legal challenge.
+  operator: eRulemaking Program (US federal government); individual agencies own each docket
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Comments from anyone, including non-US persons, on proposed rules, requests for information and requests for comment. No affiliation required.
+      note: "Search the docket number on regulations.gov, click 'Comment Now!', complete the fields and attach or type your comment. Live AI-relevant examples at the time of this research: NIST-2026-0100 (Modernizing the National Vulnerability Database in the Age of AI, comments due 13 October 2026) and NIST-2025-0035 (Security Considerations for AI Agents, closed 9 March 2026 with 937 comments)."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.regulations.gov/assets/files/Public-Comment-on-Federal-Regulations_Final.pdf
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 1aa4221761
+  migrated_from: input/data/institutions.json

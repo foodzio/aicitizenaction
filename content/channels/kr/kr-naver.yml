@@ -1,0 +1,59 @@
+id: kr-naver
+type: company
+geo:
+  country: kr
+  label: South Korea
+facts:
+  routes:
+    - id: naver-cloud-sales-support
+      type: form
+      value: https://www.ncloud.com/support/question/sales?parentCode=SALES_PNSTS
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ccff1a5eda78
+    - id: homepage
+      type: homepage
+      value: https://clova.ai/en
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 4ec05008ab9c
+    - id: framework
+      type: framework
+      value: https://clova.ai/en/tech-blog/en-navers-ai-safety-framework-asf
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c0f4e2cd3499
+  region: South Korea
+  public_input: none
+  tags:
+    - behaviour
+    - systemic
+strings:
+  name: NAVER
+  remit: Future AI Center, supported by a risk management working group and a board-level risk management committee, operates the AI Safety Framework; frontier systems are reassessed every three months or when capability increases 6x.
+  reality_check: No public accounts found of anyone contacting NAVER about HyperCLOVA X safety. NAVER was among the earliest non-US companies to publish a frontier safety framework and extended it in 2026 to user-facing services, so the internal governance is real; but the framework document points an interested outsider at a cloud sales form, which is a telling gap between governance and accessibility.
+  notes: "Record as: framework published, no public safety channel. If you have a concern, the sales/support form is the only published door and you should expect it to be routed commercially."
+  routes:
+    naver-cloud-sales-support:
+      label: NAVER Cloud sales/support enquiry
+      scope: The only contact route published alongside the ASF — a sales enquiry form.
+      note: Not a safety channel. This is the literal state of NAVER's published external surface for its safety framework.
+    homepage:
+      label: Homepage
+    framework:
+      label: NAVER AI Safety Framework (ASF), published 7 August 2024; ASF 2.0 reported in 2026 extending to user-facing services
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.ncloud.com/support/question/sales?parentCode=SALES_PNSTS
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c65b3091f4
+  migrated_from: input/data/institutions.json

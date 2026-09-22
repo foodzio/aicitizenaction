@@ -1,0 +1,55 @@
+id: us-government-accountability-project
+type: reporting-channel
+geo:
+  country: us
+  label: United States (some international work)
+facts:
+  routes:
+    - id: submission-page
+      type: whistleblowing
+      value: https://whistleblower.org/how-to-request-assistance/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: fc0a83f71728
+    - id: homepage
+      type: homepage
+      value: https://whistleblower.org/how-to-request-assistance/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 01cd07864a81
+  region: United States
+  public_input: open
+  tags:
+    - insider
+strings:
+  name: Government Accountability Project
+  remit: People who have discovered illegality, gross mismanagement or waste of funds, or threats to health and safety in their employment. Focus is on widespread, systemic issues affecting the public interest.
+  reality_check: "The most established US whistleblower legal organisation, with decades of litigation record and demonstrated willingness to fight identity subpoenas. The deadline warning is the single most important operational fact for anyone in this position: waiting for GAP's one-month review can itself blow a 30-day filing window. Take that as an instruction to identify your deadlines independently and immediately."
+  accepts: People who have discovered illegality, gross mismanagement or waste of funds, or threats to health and safety in their employment. Focus is on widespread, systemic issues affecting the public interest.
+  does_not_accept: "Explicitly: small-scale issues lacking broad public concern; Section 8 housing fraud; EEOC employment discrimination claims; benefit denial cases unless whistleblower-related; scam victim cases."
+  how: "Complete the intake form at intake.whistleblower.org. Reviewed by staff, with a response typically within about a month. Important: contacting them does not create legal representation and does not toll any statute of limitations — you bear responsibility for your own filing deadlines, which range from 30 days to three years depending on claim type, and GAP will not alert you to them during the application process."
+  format: Online intake application.
+  timing: Rolling; roughly one month to a response. Your legal deadlines run regardless.
+  after: Possible representation. Services at a 'greatly reduced public interest rate'; pro bono for those unemployed and without resources until reemployment; litigation costs assessed on financial capacity and typically recoverable on a win or settlement. Communications are attorney-client privileged, and GAP has successfully resisted subpoenas seeking whistleblower identities in federal court.
+  operator: Government Accountability Project (US nonprofit legal organisation)
+  routes:
+    submission-page:
+      label: Submission page
+      scope: People who have discovered illegality, gross mismanagement or waste of funds, or threats to health and safety in their employment. Focus is on widespread, systemic issues affecting the public interest.
+      note: "Complete the intake form at intake.whistleblower.org. Reviewed by staff, with a response typically within about a month. Important: contacting them does not create legal representation and does not toll any statute of limitations — you bear responsibility for your own filing deadlines, which range from 30 days to three years depending on claim type, and GAP will not alert you to them during the application process."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://whistleblower.org/how-to-request-assistance/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: ed9d0bc1cf
+  migrated_from: input/data/institutions.json

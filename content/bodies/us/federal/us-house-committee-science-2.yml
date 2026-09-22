@@ -1,0 +1,62 @@
+id: us-house-committee-science-2
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://science.house.gov/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: cfc7ef58f8a5
+    - id: public-route
+      type: submission
+      value: https://science.house.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 73bfad1c5ed1
+  level: federal
+  chamber: House
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Brian Babin
+      party: R
+      region: TX
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Zoe Lofgren
+      party: D
+      region: CA
+      verified_on: 2026-09-22
+strings:
+  name: House Committee on Science, Space, and Technology
+  ai_jurisdiction: "Non-defense federal R&D. Owns NIST (and therefore CAISI), NSF, OSTP, NASA, and the civilian side of DOE including the national labs. Send here: AI standards and measurement science, AI testing and evaluation methods, AI safety research funding, the National AI Research Resource, AI workforce and education, AI incident and flaw reporting, and federal AI R&D coordination. In the 119th Congress this committee has produced more reported AI legislation than any other House committee."
+  business: "VERIFIED: full-committee markup of ten AI bills on 25 Jun 2026 — H.R.9341 AI-Ready Federal Data Guidelines Act; H.R.9363 AI Security and Innovation Act; H.R.2385 CREATE AI Act (Obernolte), reported 29-0; H.R.5351 NSF AI Education Act of 2025 (Fong), reported 33-0; H.R.5584 LIFT AI Act (34-1); H.R.6461 READ AI Models Act; H.R.8893 Protecting Consumers from Deceptive AI Act; H.R.9333 AI Flaw Reporting and Security Enhancement Act; H.R.9334 Workforce for AI Trust Act; H.R.9372 Data Infrastructure Energy Measurement and Standards Act (34-1). Nine were favorably reported. Also: Research and Technology Subcommittee hearing 'Advancing America's AI Action Plan' with OSTP Director Michael Kratsios, 14 Jan 2026, 2318 Rayburn."
+  public_route: "VERIFIED: https://science.house.gov/contact, 202-225-6371. Minority: https://democrats-science.house.gov/."
+  note: Chair/ranking verified 2026-09-22 from the House Clerk's MemberData.xml. If you care about AI evaluation capacity and standards, this committee plus Appropriations CJS is the pair that matters.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://science.house.gov/members
+      checked: 2026-09-22
+    - url: https://science.house.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: e64a4104d1
+  migrated_from: input/data/committees-and-organisations.json#seats

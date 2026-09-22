@@ -1,0 +1,58 @@
+id: eu-european-parliament-committee-internal-market-consumer-2
+type: seat
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.europarl.europa.eu/committees/en/imco/home/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6ddb385e91d6
+    - id: public-route
+      type: submission
+      value: https://www.europarl.europa.eu/committees/en/imco/home/highlights
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 26aff465c565
+  level: bloc
+  tags:
+    - law
+    - petition
+  seats:
+    - role: chair
+      name: Anna Cavazzini (Greens/EFA, Germany, Bündnis 90/Die Grünen)
+      verified_on: 2026-09-22
+strings:
+  name: European Parliament — Committee on the Internal Market and Consumer Protection (IMCO)
+  ai_jurisdiction: "Co-lead committee on the AI Act and its successors. IMCO owns the AI Act as a product-safety and internal-market instrument: placing AI systems on the market, conformity assessment, high-risk classification, obligations on providers and deployers, and consumer protection. It was joint-lead with LIBE on the Digital Omnibus on AI and is lead on the Cloud and AI Development Act."
+  business: Cloud and AI Development Act, 2026/0138(COD), Commission proposal 3 June 2026, IMCO rapporteur appointed September 2026. Digital Omnibus on AI, 2025/0359(COD), concluded — plenary approved the trilogue deal on 16 June 2026 by 423/57/174. Ongoing scrutiny of AI Act implementation via the joint Working Group.
+  public_route: "Three real routes: (1) email the rapporteur and every shadow rapporteur on the file directly — MEP addresses are public and they read constituent-independent mail; (2) file a petition through PETI, which is the only formal citizen channel into Parliament; (3) attend or watch committee meetings, which are webstreamed, and submit through a registered organisation's position paper. Committee secretariats also accept papers at imco-secretariat@europarl.europa.eu."
+  format_rules: No formal word limit or portal for citizen input to a committee. Position papers to rapporteurs are conventionally 2–4 pages with concrete amendment text. Anyone paid to influence should be on the EU Transparency Register; MEPs are required to publish meetings with registered interest representatives. Nothing sent to an MEP is automatically published.
+  key_people: "Vice-Chairs: Christian Doleschal (EPP, DE); Nikola Minchev (Renew, BG); Maria Grapini (S&D, RO); Kamila Gasiuk-Pihowicz (EPP, PL). The seats that actually matter on AI are not the Vice-Chairs but the file-holders: Brando Benifei (S&D, IT) — AI Act co-rapporteur in the previous term and IMCO co-chair of the AI Act Working Group; Arba Kokalari (EPP, SE) — IMCO rapporteur on the Digital Omnibus on AI; Reinier van Lanschot (Greens/EFA, NL) — IMCO rapporteur on the Cloud and AI Development Act; Alex Agius Saliba (S&D, MT)."
+  note: VERIFIED 2026-09-22 from the official IMCO member list PDF at europarl.europa.eu/committees/en/imco/home/members/pdf.
+  seat_notes:
+    chair: Chair
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.europarl.europa.eu/committees/en/imco/home/members
+      checked: 2026-09-22
+    - url: https://www.europarl.europa.eu/committees/en/imco/home/highlights
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 3abd917800
+  migrated_from: input/data/committees-and-organisations.json#seats

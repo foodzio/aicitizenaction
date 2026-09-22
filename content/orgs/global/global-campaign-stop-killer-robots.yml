@@ -1,0 +1,42 @@
+id: global-campaign-stop-killer-robots
+type: organisation
+geo:
+  country: global
+  label: Global — 300+ member organisations in 70+ countries.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.stopkillerrobots.org/take-action/sign-our-petition-now/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8a173795ea87
+  perspective: safety-advocacy
+  volunteers: yes
+  tags:
+    - join
+    - law
+strings:
+  name: Campaign to Stop Killer Robots
+  the_ask: A new international treaty on autonomy in weapons systems, to ensure meaningful human control over the use of force.
+  what_they_do: "Coalition campaigning: petitions, a parliamentary pledge, research and monitoring, and diplomatic advocacy at the UN. Steering committee includes Human Rights Watch, Amnesty International, Article 36, ICRAC, Mines Action Canada, PAX and SEHLAC."
+  newcomer_action: Sign the petition and use the 'get politicians involved' tool to ask your MP or representative to sign the parliamentary pledge; join the newsletter.
+  tips: unclear
+  geography: Global — 300+ member organisations in 70+ countries.
+  scale: Large coalition, small secretariat. 20,000+ petition signatures and 150+ parliamentary pledge signatories by its own count.
+  spending: Not disclosed; accepts donations and organisational membership.
+  caution: Covers autonomous weapons specifically, not general AI risk. If you belong to an organisation (a union branch, faith group, NGO), it will sign that organisation up as a member — the highest-leverage thing most people can do here.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.stopkillerrobots.org/take-action/sign-our-petition-now/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: b86d03164d
+  migrated_from: input/data/committees-and-organisations.json#orgs

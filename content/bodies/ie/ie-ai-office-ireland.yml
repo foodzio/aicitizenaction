@@ -1,0 +1,67 @@
+id: ie-ai-office-ireland
+type: government
+geo:
+  country: ie
+  label: Ireland
+facts:
+  routes:
+    - id: dete-eu-ai-act
+      type: consultation
+      value: https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/publications/eu-artificial-intelligence-ai-act/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: 861fafdfbf24
+    - id: publication-regulation-ai-bill
+      type: docket
+      value: https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: cb3f70c8d30c
+    - id: homepage
+      type: homepage
+      value: https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/publications/eu-artificial-intelligence-ai-act/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 4540a307e2fa
+  local_name: Oifig IS na hÉireann
+  region: European Union
+  public_input: limited
+  tags:
+    - law
+    - systemic
+strings:
+  name: AI Office of Ireland (proposed)
+  remit: STATUS UNCERTAIN AS OF SEPT 2026 — this body does not yet exist. The Regulation of Artificial Intelligence Bill 2026 was published 17 June 2026 by the Department of Enterprise, Tourism and Employment and would establish 'Oifig IS na hÉireann (AI Office of Ireland)' as an independent statutory body acting as Ireland's central coordinating authority for AI Act implementation. As of this research date the Bill was awaiting passage through the Oireachtas. Ireland had already designated a distributed set of eight/nine existing sectoral regulators as national competent authorities in 2025.
+  powers_text: advise
+  reality_check: Do not list the AI Office of Ireland as an operating body — it is a creature of a Bill that had not passed when I checked. Ireland matters disproportionately because most major US AI firms have their EU establishment there, so Irish authorities will in practice supervise them. Until the Office exists, the route is the Department and the existing sectoral regulators. No AI-specific public contact route is published.
+  notes: Ireland is NOT a member of the international network. Irish Oireachtas committees do accept written submissions on Bills from any party, including foreigners, during pre-legislative scrutiny — that is the realistic input window.
+  routes:
+    dete-eu-ai-act:
+      label: DETE EU AI Act information page
+      scope: general
+      note: VERIFIED — this URL is published on the Bill's press release, which I fetched. It is the department's signposted information route.
+    publication-regulation-ai-bill:
+      label: Publication of the Regulation of AI Bill 2026 (press release)
+      scope: legislative
+      note: VERIFIED fetched. Contains NO consultation email — I checked specifically.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/publications/eu-artificial-intelligence-ai-act/
+      checked: 2026-09-22
+    - url: https://www.gov.ie/en/department-of-enterprise-tourism-and-employment/press-releases/publication-of-the-regulation-of-artificial-intelligence-bill-2026/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 390543a2ba
+  migrated_from: input/data/institutions.json

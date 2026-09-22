@@ -1,0 +1,53 @@
+id: global-mitre-atlas
+type: reporting-channel
+geo:
+  country: global
+  label: Global
+facts:
+  routes:
+    - id: submission-page
+      type: reporting
+      value: https://github.com/mitre-atlas/atlas-data
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ab0befdf8f12
+    - id: homepage
+      type: homepage
+      value: https://github.com/mitre-atlas/atlas-data
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 1f0c3c12b070
+  region: Global
+  public_input: open
+strings:
+  name: MITRE ATLAS (Adversarial Threat Landscape for AI Systems)
+  remit: Adversarial ML tactics, techniques and real-world case studies — i.e. attacks against AI systems. Contributions are curated into the ATLAS matrix and case study set.
+  reality_check: Genuinely consequential within AI security — ATLAS IDs are used by vendors, red teams and compliance products. But the bar is a well-evidenced adversarial technique, and a GitHub PR against a MITRE schema is a high-skill submission. Wrong venue for most non-technical safety concerns.
+  accepts: Adversarial ML tactics, techniques and real-world case studies — i.e. attacks against AI systems. Contributions are curated into the ATLAS matrix and case study set.
+  does_not_accept: Model-behaviour or societal-harm concerns with no adversary. ATLAS is a security threat knowledge base modelled on ATT&CK, not a harm registry. Also not a disclosure channel — it documents attacks after the fact.
+  how: Contributions flow through the public data repository github.com/mitre-atlas/atlas-data (CONTRIBUTING.md, pull requests against YAML technique and case study files) and via MITRE's ATLAS contact channels. The repo has active open issues and pull requests, so outside PRs are a live route.
+  format: Structured YAML records matching the ATLAS schema; case studies follow a fixed template (summary, incident details, procedure mapped to ATLAS technique IDs, references).
+  timing: Rolling; batched into periodic ATLAS releases.
+  after: MITRE curators review; accepted content appears in a versioned ATLAS release with attribution and is consumed by security tooling.
+  operator: MITRE, with the Center for Threat-Informed Defense (CTID) and industry partners
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Adversarial ML tactics, techniques and real-world case studies — i.e. attacks against AI systems. Contributions are curated into the ATLAS matrix and case study set.
+      note: Contributions flow through the public data repository github.com/mitre-atlas/atlas-data (CONTRIBUTING.md, pull requests against YAML technique and case study files) and via MITRE's ATLAS contact channels. The repo has active open issues and pull requests, so outside PRs are a live route.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://github.com/mitre-atlas/atlas-data
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: ee335f664e
+  migrated_from: input/data/institutions.json

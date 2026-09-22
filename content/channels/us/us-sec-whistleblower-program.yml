@@ -1,0 +1,57 @@
+id: us-sec-whistleblower-program
+type: reporting-channel
+geo:
+  country: us
+  label: United States; covers publicly traded companies and securities-law violations
+facts:
+  routes:
+    - id: submission-page
+      type: whistleblowing
+      value: https://www.sec.gov/enforcement-litigation/whistleblower-program/information-about-submitting-whistleblower-tip
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8f02d7b47e38
+    - id: homepage
+      type: homepage
+      value: https://www.sec.gov/enforcement-litigation/whistleblower-program/information-about-submitting-whistleblower-tip
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: a6163f09f428
+  region: United States
+  public_input: open
+  tags:
+    - flaw
+    - harm
+    - insider
+strings:
+  name: SEC Whistleblower Program (Form TCR)
+  remit: "Original information about potential violations of the federal securities laws. For AI: material misrepresentation of model capability, safety practices or risk to investors — 'AI-washing' cases have been brought. Reaches Google, Microsoft, Meta and Nvidia; reaches private labs only where securities law otherwise bites."
+  reality_check: "The only route in this entire list that pays the whistleblower substantial money and has a long, documented record of doing so. The critical mechanic: you may submit anonymously, but only if you are represented by an attorney who provides their contact information — anonymity and award eligibility both depend on having counsel. Requires reframing an AI safety concern as an investor-disclosure concern, which is a genuine constraint but often achievable where a company has made public safety claims."
+  accepts: "Original information about potential violations of the federal securities laws. For AI: material misrepresentation of model capability, safety practices or risk to investors — 'AI-washing' cases have been brought. Reaches Google, Microsoft, Meta and Nvidia; reaches private labs only where securities law otherwise bites."
+  does_not_accept: Safety concerns with no securities-law dimension. 'This model is dangerous' is not an SEC matter unless the company told investors otherwise.
+  how: Submit through the SEC's Tips, Complaints and Referrals portal (recommended — gives immediate confirmation and a submission number), or mail/fax Form TCR to SEC Office of the Whistleblower, c/o ENF-CPU, 1604 Springhill Road, Suite 110, Vienna, VA 22182, fax +1 703-813-9322. You must answer 'yes' to filing under the whistleblower program and complete the whistleblower declaration to get award eligibility and enhanced confidentiality.
+  format: "Form TCR: detailed narrative plus supporting documents."
+  timing: Rolling, but you must submit directly to the SEC in a timely way — reporting elsewhere first does not satisfy the requirement and can cost you award eligibility.
+  after: Triage by the Office of the Whistleblower; possible investigation; awards of 10–30% of sanctions over $1 million.
+  operator: US Securities and Exchange Commission, Office of the Whistleblower
+  routes:
+    submission-page:
+      label: Submission page
+      scope: "Original information about potential violations of the federal securities laws. For AI: material misrepresentation of model capability, safety practices or risk to investors — 'AI-washing' cases have been brought. Reaches Google, Microsoft, Meta and Nvidia; reaches private labs only where securities law otherwise bites."
+      note: Submit through the SEC's Tips, Complaints and Referrals portal (recommended — gives immediate confirmation and a submission number), or mail/fax Form TCR to SEC Office of the Whistleblower, c/o ENF-CPU, 1604 Springhill Road, Suite 110, Vienna, VA 22182, fax +1 703-813-9322. You must answer 'yes' to filing under the whistleblower program and complete the whistleblower declaration to get award eligibility and enhanced confidentiality.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.sec.gov/enforcement-litigation/whistleblower-program/information-about-submitting-whistleblower-tip
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: dea66c4367
+  migrated_from: input/data/institutions.json

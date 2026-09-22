@@ -1,0 +1,64 @@
+id: us-house-committee-foreign-affairs
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://foreignaffairs.house.gov/about/membership
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f3d6e46b040a
+    - id: public-route
+      type: submission
+      value: https://foreignaffairs.house.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 105d0a91a93d
+  level: federal
+  chamber: House
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Brian J. Mast
+      party: R
+      region: FL
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Gregory W. Meeks
+      party: D
+      region: NY
+      verified_on: 2026-09-22
+strings:
+  name: House Committee on Foreign Affairs
+  ai_jurisdiction: "The House door for AI export controls and AI diplomacy. Unlike the Senate — where export-control statute sits in Banking — the House routes AI chip export legislation through Foreign Affairs. Send here: export licensing for advanced AI chips and model weights, entity listings, allied controls coordination, State Department AI policy, and AI in foreign influence operations."
+  business: "VERIFIED: H.R.3447 Chip Security Act (Huizenga) referred to this committee 15 May 2025; committee mark-up held and the bill ordered reported in the nature of a substitute by 42-0 on 26 Mar 2026; on reaching the Senate it was referred to Senate Banking. The committee has also advanced AI export-licensing legislation in the ENFORCE Act line of work."
+  public_route: "VERIFIED membership page; committee office 2170 Rayburn House Office Building, Washington DC 20515, 202-225-5021. Minority: https://democrats-foreignaffairs.house.gov/."
+  note: Included although not on the brief's list, because it is where House AI chip export legislation actually moves. Chair/ranking verified 2026-09-22 from the House Clerk's MemberData.xml.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://foreignaffairs.house.gov/about/membership
+      checked: 2026-09-22
+    - url: https://foreignaffairs.house.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c045eae3ed
+  migrated_from: input/data/committees-and-organisations.json#seats

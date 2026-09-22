@@ -1,0 +1,60 @@
+id: us-house-economic-matters-committee
+type: seat
+geo:
+  country: us
+  sub: md
+  label: Maryland
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://msa.maryland.gov/msa/mdmanual/06hse/html/com/03eco.html
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f4445b680f9d
+    - id: public-route
+      type: submission
+      value: https://mgaleg.maryland.gov/pubs-current/current-ecm-faqs.pdf
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 921fe728a395
+  level: state
+  chamber: House of Delegates
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Kriselda Valderrama
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: House Economic Matters Committee
+  ai_jurisdiction: House committee of reference for AI consumer-protection, surveillance-pricing, business-regulation and technology-commerce bills. 19 members appointed by the Speaker.
+  business: "2026 surveillance-pricing legislation restricting AI-driven individualized pricing; HB 1057 (crossfile of SB 720, AI Ready Schools, Chapter 634). Related: AI Governance Act of 2024 (SB 818)."
+  status: VERIFIED — Maryland enacted targeted 2026 AI measures (education, state AI partnership, surveillance pricing) but no comprehensive private-sector AI risk statute.
+  public_route: YES — same MyMGA Witness Signup system. Submission window 8:00 a.m.–6:00 p.m. two business days before the hearing. Economic Matters publishes its own witness guidelines PDF with panel rules and time limits.
+  agency_route: "Maryland Attorney General Consumer Protection Division; Maryland DoIT. Program hub: https://ai.maryland.gov/ai-maryland/legislation"
+  note: "Vice Chair: Lorig Charkoudian. Committee email aa_ecm@mga.maryland.gov, phone (410) 841-3519, House Office Building Room 231."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://msa.maryland.gov/msa/mdmanual/06hse/html/com/03eco.html
+      checked: 2026-09-22
+    - url: https://mgaleg.maryland.gov/pubs-current/current-ecm-faqs.pdf
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: a3010577d3
+  migrated_from: input/data/committees-and-organisations.json#seats

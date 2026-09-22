@@ -1,0 +1,42 @@
+id: us-common-sense-media
+type: organisation
+geo:
+  country: us
+  label: United States, with strong California state activity.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://commonsense.quorum.us/campaign/156791/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4b22d75a7837
+  perspective: safety-advocacy
+  volunteers: yes
+  tags:
+    - join
+    - law
+strings:
+  name: Common Sense Media
+  the_ask: Children should be protected from unsafe AI — independent risk ratings for AI products, and states must keep the power to pass their own children's AI safety laws.
+  what_they_do: Independent risk assessments of AI products (rating Google Search AI, ChatGPT-5, Grok, Perplexity, Claude and AI mental health apps from 'Moderate Risk' to 'Unacceptable Risk'); research on teen AI use; campaigns against the executive order blocking state AI laws; work on deepfakes, AI toys and AI companions.
+  newcomer_action: Sign the petition challenging the executive order blocking state AI laws; check the AI ratings before your child uses a tool; subscribe to the newsletters.
+  tips: unclear
+  geography: United States, with strong California state activity.
+  scale: Large and well-established — by far the biggest child-safety-focused organisation on this list, with its own research institute.
+  spending: Not disclosed on the pages checked; accepts donations.
+  caution: Its frame is child safety and product harm, not catastrophic or existential risk. Broad public appeal but a narrower ask than the pause/ban groups — a good fit if your concern is kids and chatbots, a poor one if it is frontier capability.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://commonsense.quorum.us/campaign/156791/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 34a46f5b3e
+  migrated_from: input/data/committees-and-organisations.json#orgs

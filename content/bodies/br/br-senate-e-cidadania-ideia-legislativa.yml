@@ -1,0 +1,62 @@
+id: br-senate-e-cidadania-ideia-legislativa
+type: seat
+geo:
+  country: br
+  label: Brazil
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www12.senado.leg.br/ecidadania/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Portuguese only.
+      source_id: 74e7b39dcd17
+    - id: public-route
+      type: submission
+      value: https://www12.senado.leg.br/ecidadania/comofuncionaideia
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Portuguese only.
+      source_id: 98ca9ed66b93
+  local_name: Portal e-Cidadania — Ideia Legislativa / Sugestão Legislativa
+  level: national
+  tags:
+    - law
+    - petition
+  seats:
+    - role: chair
+      name: Not applicable
+      verified_on: 2026-09-22
+strings:
+  name: Senate e-Cidadania — Ideia Legislativa
+  ai_jurisdiction: Not AI-specific. A general citizen-initiated legislative proposal channel with a real numeric trigger, usable for an AI proposal.
+  business: "Continuously open. Cumulative platform figures run to roughly 148,000 ideas submitted, 80,000 authors and 12.5 million supports, which tells you the base rate: the overwhelming majority never clear threshold. A first Sugestão Legislativa of 2026 reached the CDH in January 2026, and a military-pay proposal cleared 20,000 in mid-2026 — so the mechanism does fire, a few times a year."
+  public_route: Register free on the e-Cidadania portal. Submit an Ideia Legislativa (you may submit several, but not duplicates of your own open ones). It then has exactly 4 months to gather 20,000 supports from other registered users. On reaching 20,000 it is forwarded to the CDH and formalised as a Sugestão Legislativa (SUG), which senators debate in that committee; the CDH issues a final opinion, and a favourable one can become a Senate bill. Ideas that miss the threshold close after 4 months but remain permanently readable on the portal.
+  format_rules: 20,000 supports within 4 months. Free registration required to submit and to support. The portal explicitly warns users not to post CPF, ID numbers, phone numbers or addresses in the idea text.
+  realistic: "Formally strong, practically hard. Like Korea's system it has a genuine automatic trigger — 20,000 supports forces the idea onto the CDH's agenda as a Sugestão Legislativa. Unlike Korea's, the ceiling is lower: the CDH issues an opinion, and converting that into law still requires the ordinary legislative process. And 20,000 supports in 4 months requires real organised mobilisation; out of ~148,000 ideas submitted, successes are counted in the dozens, and the ones that succeed are typically backed by a large occupational constituency (e.g. military pay). An individual with no organisation behind them will not clear it. Registration and submission themselves are genuinely free and open to any Portuguese speaker."
+  language_note: Portuguese only.
+  note: The 20,000-in-4-months threshold, the CDH referral, the conversion to Sugestão Legislativa and the registration/duplication rules are VERIFIED from the Senate's own 'como funciona' page. Cumulative platform statistics VERIFIED from the Senate's published e-Cidadania report PDF. Note there is a pending proposal to revise the admission criteria for Ideias Legislativas — the rules above are current but under review.
+  seat_notes:
+    chair: Operated by the Federal Senate. Successful ideas are handled by the Comissão de Direitos Humanos e Legislação Participativa (CDH).
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www12.senado.leg.br/ecidadania/
+      checked: 2026-09-22
+    - url: https://www12.senado.leg.br/ecidadania/comofuncionaideia
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: f7b6d8c988
+  migrated_from: input/data/committees-and-organisations.json#seats

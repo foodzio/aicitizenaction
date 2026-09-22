@@ -1,0 +1,63 @@
+id: global-oecd-ai-incidents-hazards-monitor
+type: watchdog
+geo:
+  country: global
+  label: OECD
+facts:
+  routes:
+    - id: open-submission-process-announced
+      type: submission
+      value: https://oecd.ai/en/incidents-methodology
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 10f4932af455
+    - id: incidents-dashboard
+      type: form
+      value: https://oecd.ai/en/incidents
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 2e29adf64108
+    - id: homepage
+      type: homepage
+      value: https://oecd.ai/en/incidents
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: cbff411f31ac
+  region: Other
+  public_input: none
+  tags:
+    - behaviour
+    - research
+strings:
+  name: OECD AI Incidents and Hazards Monitor (AIM)
+  remit: Tracks AI incidents and hazards to build an evidence base for policy, currently by automated monitoring of 150,000+ news articles daily via Event Registry, with LLM-based classification against the OECD's common reporting framework for AI incidents.
+  threat_model: Realised harms and near-misses across all severities — closest to an aviation-safety model. Empirical rather than theoretical; captures near-term harms far better than speculative catastrophic risk.
+  reality_check: Do not route an incident here yet — there is nowhere to put it. Use the AI Incident Database (incidentdatabase.ai), which accepts public submissions today and which OECD AIM draws on conceptually. Check back when OECD opens submissions.
+  gov_channel: Strong — designed explicitly to feed OECD and G7 policy work on incident reporting.
+  routes:
+    open-submission-process-announced:
+      label: Open submission process — announced as under development, NOT yet live
+      scope: Will follow the common reporting framework once launched
+      note: As of this check the methodology page states the open submission process 'is currently being developed'. There is no public submission form or incident inbox today.
+    incidents-dashboard:
+      label: Incidents dashboard (read-only)
+      scope: Browsing indexed incidents
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://oecd.ai/en/incidents-methodology
+      checked: 2026-09-22
+    - url: https://oecd.ai/en/incidents
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 3fc18661ff
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,87 @@
+id: ca-cohere
+type: company
+geo:
+  country: ca
+  label: Canada
+facts:
+  routes:
+    - id: safety-misuse-reports
+      type: email
+      value: safety@cohere.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d2c15df6cbf0
+    - id: thumbs-down-output
+      type: feedback
+      value: https://coral.cohere.com/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 4c38f662abaa
+    - id: responsible-disclosure-policy-via
+      type: disclosure
+      value: https://trustcenter.cohere.com/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 023b865473da
+    - id: homepage
+      type: homepage
+      value: https://cohere.com/security
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 50e7ee83a150
+    - id: framework
+      type: framework
+      value: https://cohere.com/security/the-cohere-secure-ai-frontier-model-framework-february-2025.pdf
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 011ce49c6c31
+  region: Canada
+  public_input: open
+  tags:
+    - behaviour
+    - flaw
+    - harm
+strings:
+  name: Cohere
+  remit: Chief Scientist holds 'final authority to determine if our products are safe, secure, and ready to be made available to our customers', delegated by the CEO under the Secure AI Frontier Model Framework.
+  reality_check: No public accounts found either way — no complaints of a black hole, and no published confirmations of response. Cohere is a smaller enterprise-focused developer with a correspondingly low volume of external safety research directed at it. The framework names external partners (NIST, Humane Intelligence) but describes no public intake process.
+  notes: Use safety@cohere.com; it is explicitly scoped to model safety in the Usage Policy, which is more than most publish. The framework itself publishes no contact address, so the Usage Policy is the document to cite when you write.
+  routes:
+    safety-misuse-reports:
+      label: Safety and misuse reports
+      scope: "Usage Policy states: 'please notify us immediately at safety@cohere.com'. Covers policy violations, misuse or abuse of Cohere Services, model safety issues, and security research falling outside the disclosure procedure."
+      note: A real, named, published safety address — rarer than it should be. This is the strongest single route on Cohere's surface.
+    thumbs-down-output:
+      label: Thumbs-down on output
+      scope: In-product feedback on a bad model output, offered in the Usage Policy as an alternative to emailing.
+    responsible-disclosure-policy-via:
+      label: Responsible Disclosure Policy via Trust Center
+      scope: Security vulnerability disclosure; the policy document is downloadable from the Trust Center.
+      note: Document is gated behind the Trust Center; no plain-text email published on the public security page.
+    homepage:
+      label: Homepage
+    framework:
+      label: The Cohere Secure AI Frontier Model Framework, V1.0 (February 2025)
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://coral.cohere.com/
+      checked: null
+    - url: https://trustcenter.cohere.com/
+      checked: null
+    - url: https://cohere.com/security
+      checked: null
+    - url: https://cohere.com/security/the-cohere-secure-ai-frontier-model-framework-february-2025.pdf
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 4cedd06861
+  migrated_from: input/data/institutions.json

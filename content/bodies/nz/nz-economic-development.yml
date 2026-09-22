@@ -1,0 +1,59 @@
+id: nz-economic-development
+type: seat
+geo:
+  country: nz
+  label: New Zealand
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.parliament.nz/en/pb/sc/scl/economic-development-science-and-innovation/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 22aaf106bee6
+    - id: public-route
+      type: submission
+      value: https://www.parliament.nz/en/pb/sc/how-to-make-a-submission/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f17f8afb7fca
+  level: national
+  tags:
+    - law
+    - petition
+    - record
+  seats:
+    - role: chair
+      name: Dr Parmjeet Parmar, MP (ACT Party, List)
+      verified_on: 2026-09-22
+strings:
+  name: Economic Development, Science and Innovation Committee (54th Parliament)
+  ai_jurisdiction: "The New Zealand select committee whose subject area covers AI. Its stated remit: 'business development, tourism, Crown minerals, commerce, consumer protection and trading standards, research, science, innovation, intellectual property, broadcasting, communications, and information technology.' AI sits inside 'research, science, innovation' and 'information technology', and AI-and-copyright inside 'intellectual property'. This is New Zealand's default destination for an AI bill, petition or briefing."
+  business: Bills and items referred by the House plus briefings and petitions. No AI-titled inquiry was listed as open for submissions on 22 Sep 2026.
+  public_route: "Two routes. (1) Make a submission when the committee calls for them on a bill or inquiry — the live list of items open for submissions is on the select committees home page. (2) Petition the House: a petition can be lodged by any person, goes to the Petitions Committee, and is then routinely referred to the relevant subject committee such as this one. Committee secretariat: edsi@parliament.govt.nz."
+  format_rules: No word limit. You may write in English or in Māori. Submissions can be released by the committee at any time, which makes them public on the Parliament website — this can take a few months. You may ask to make an oral submission in person, by phone or by video conference; remote appearance is explicitly offered to people outside Wellington and to disabled submitters. If the meeting is livestreamed your submission will appear publicly. Advisers read and analyse all submissions and summarise them for the committee in a departmental report, which is also published.
+  key_people: 8 members in total; the full list is on the committee's members page.
+  note: VERIFIED 2026-09-22 by direct fetch of the committee's own page on parliament.nz, which names the chairperson and states the subject remit verbatim.
+  seat_notes:
+    chair: Chairperson
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.parliament.nz/en/pb/sc/scl/economic-development-science-and-innovation/
+      checked: 2026-09-22
+    - url: https://www.parliament.nz/en/pb/sc/how-to-make-a-submission/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: cbec976991
+  migrated_from: input/data/committees-and-organisations.json#seats

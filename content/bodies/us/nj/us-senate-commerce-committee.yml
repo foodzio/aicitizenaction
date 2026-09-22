@@ -1,0 +1,54 @@
+id: us-senate-commerce-committee
+type: seat
+geo:
+  country: us
+  sub: nj
+  label: New Jersey
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.njleg.state.nj.us/committees/senate-committees
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: f086b0b5c307
+    - id: public-route
+      type: submission
+      value: https://njleg.gov/committee-registrations
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: ec158a4222ac
+  level: state
+  chamber: Senate
+  tags:
+    - audit
+    - law
+strings:
+  name: Senate Commerce Committee
+  ai_jurisdiction: Senate committee of referral for AI consumer-protection and companion-chatbot bills.
+  business: S4474, 'Establishes safety requirements for artificial intelligence companion operators' (Sens. Paul Moriarty and Angela McKnight, D) — introduced 18 June 2026, referred to Senate Commerce, PENDING IN COMMITTEE as of 22 Sep 2026. Also S1840, S2862. Senate Democrats separately moved legislation on energy demand from AI data centers.
+  status: VERIFIED for the bill; CHAIR UNVERIFIED. S4474 has not advanced out of committee.
+  public_route: YES — register through the Legislature's Committee Registrations portal to testify at a Senate committee meeting; written statements accepted via the committee aide. Because S4474 is stalled in committee, requesting a hearing from the chair and the sponsors is the operative action.
+  agency_route: NJ Division on Civil Rights algorithmic discrimination guidance and complaint route — https://www.njoag.gov/about/divisions-and-offices/division-on-civil-rights-home/ ; NJ Division of Consumer Affairs for consumer AI matters.
+  note: CHAIR UNVERIFIED — the njleg.state.nj.us committee member pages did not render retrievable rosters for the 2026-2027 (222nd) Legislature. Verify with the Office of Legislative Services, 800-792-8630 or leginfo@njleg.org.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.njleg.state.nj.us/committees/senate-committees
+      checked: null
+    - url: https://njleg.gov/committee-registrations
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: dbec09ee4c
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,99 @@
+id: us-far-ai
+type: civil-society
+geo:
+  country: us
+  label: United States (Berkeley)
+facts:
+  routes:
+    - id: contact-page
+      type: form
+      value: https://www.far.ai/contact
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 913389a80f0d
+    - id: grants-academics-independent-researchers
+      type: submission
+      value: https://www.far.ai/donate
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e12f4038ed18
+    - id: far-labs-berkeley-co
+      type: membership
+      value: https://www.far.ai/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 38ff7a5d4714
+    - id: careers
+      type: form
+      value: https://www.far.ai/careers
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4c5700e304c0
+    - id: newsletter
+      type: form
+      value: https://www.far.ai/newsletter
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 612eba61bdee
+    - id: homepage
+      type: homepage
+      value: https://far.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: cc61a2a9e9c8
+  region: United States
+  public_input: limited
+  tags:
+    - flaw
+    - research
+strings:
+  name: FAR.AI
+  remit: "Runs three distinct arms: in-house research on a portfolio of agendas (robustness, deception detection, red-teaming, safeguard vulnerabilities); a field-building events programme (Alignment Workshops, the Seoul and Cambridge workshops, verification workshops, technical-governance convenings); and FAR.Labs, a Berkeley co-working space for AI safety researchers, plus a grantmaking programme for academics and independent researchers."
+  threat_model: Broad frontier-risk portfolio — reward hacking, deception, jailbreaking through layered defences, and misuse. Deliberately agenda-agnostic; its comparative advantage is convening rather than a single thesis.
+  reality_check: "Genuinely a connector organisation and a good place for a technically credible outsider to get into the room via workshops or FAR.Labs. Weakness for routing purposes: no published email, only a form."
+  gov_channel: Indirect but useful — its workshops convene government, lab and academic participants, including around the safety-summit circuit.
+  routes:
+    contact-page:
+      label: Contact page
+      scope: General
+      note: No public email address is listed on the site.
+    grants-academics-independent-researchers:
+      label: Grants for academics and independent researchers
+      scope: Researchers
+      note: UNVERIFIED whether a specific open application window exists; the grantmaking programme is described on the site but application mechanics were not confirmed.
+    far-labs-berkeley-co:
+      label: FAR.Labs Berkeley co-working space
+      scope: AI safety researchers
+      note: Application-based.
+    careers:
+      label: Careers
+      scope: Applicants
+    newsletter:
+      label: Newsletter
+      scope: Anyone
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.far.ai/contact
+      checked: 2026-09-22
+    - url: https://www.far.ai/donate
+      checked: 2026-09-22
+    - url: https://www.far.ai/
+      checked: 2026-09-22
+    - url: https://www.far.ai/careers
+      checked: 2026-09-22
+    - url: https://www.far.ai/newsletter
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 6bfbd4d123
+  migrated_from: input/data/institutions.json

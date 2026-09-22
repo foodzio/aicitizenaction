@@ -1,0 +1,77 @@
+id: us-colorado-attorney-general-automated-decision-making
+type: government
+geo:
+  country: us
+  sub: co
+  label: Colorado, USA
+facts:
+  routes:
+    - id: open-rulemaking
+      type: consultation
+      value: https://coag.gov/ai/automated-decision-making-technology-act-and-chatbot-safety-act-form/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c724cc609811
+    - id: public-comment-repository
+      type: docket
+      value: https://comments.coag.gov/s/colorado-automated-decision-making
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e0973be6db76
+    - id: comment-email
+      type: email
+      value: none published
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a4b1f3b678c0
+    - id: homepage
+      type: homepage
+      value: https://coag.gov/ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c72d0ff67fe1
+  region: United States
+  public_input: open
+  tags:
+    - flaw
+    - harm
+    - systemic
+strings:
+  name: Colorado Attorney General — Automated Decision-Making Technology Act and Chatbot Safety Act rulemaking
+  remit: "RESTRUCTURED: the original Colorado AI Act (SB 24-205) was repealed and reenacted by SB 26-189 in 2026 after its predecessor's enforcement was blocked in federal court; the replacement regime is the Automated Decision-Making Technology (ADMT) Act, with provisions taking effect 1 January 2027, alongside a separate Chatbot Safety Act (passed May 2026) requiring disclosure of AI interaction, protection of minors from harmful content and safety protocols. The Attorney General has exclusive enforcement authority and rulemaking power; no private right of action."
+  powers_text: fine
+  reality_check: "An OPEN, PUBLISHED, NAMED comment window closing 26 October 2026 with a public comment repository — this is among the highest-value live levers in the US right now, and materially easier to influence than a federal docket because the volume is far lower. Colorado's AG is writing the operative definitions for 'consequential decision', chatbot safety duties and minors' protections from scratch. Scope is algorithmic discrimination and chatbot harms, NOT catastrophic risk. The 2026 repeal-and-reenact is critical: SB 24-205 analyses are obsolete."
+  notes: Colorado's reset was explicitly a pivot away from the EU model after federal pressure, including a White House callout.
+  routes:
+    open-rulemaking:
+      label: "OPEN RULEMAKING: ADMT Act and Chatbot Safety Act proposed rules"
+      scope: Formal public comment on the draft rules filed 11 August 2026. Deadline 26 October 2026 at 11:59pm MST (or the last day of the formal hearing if extended); comments received by 4 September 2026 were considered for the revised draft.
+      note: VERIFIED — the form URL and both deadlines are published at https://coag.gov/ai/.
+    public-comment-repository:
+      label: Public comment repository
+      scope: All submitted comments are posted publicly here.
+      note: VERIFIED — cited on the Colorado AG's AI page.
+    comment-email:
+      label: Comment email
+      scope: n/a
+      note: VERIFIED ABSENCE — the AG's page states comments must be submitted via the form; no email address is given.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://coag.gov/ai/automated-decision-making-technology-act-and-chatbot-safety-act-form/
+      checked: 2026-09-22
+    - url: https://comments.coag.gov/s/colorado-automated-decision-making
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 2a852f711d
+  migrated_from: input/data/institutions.json

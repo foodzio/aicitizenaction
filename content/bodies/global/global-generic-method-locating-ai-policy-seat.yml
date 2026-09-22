@@ -1,0 +1,73 @@
+id: global-generic-method-locating-ai-policy-seat
+type: seat
+geo:
+  country: global
+  label: Any other country
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.ipu.org/impact/democracy-and-strong-parliaments/artificial-intelligence/parliamentary-actions-ai-policy
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: "Method is language-neutral. Applying it is not: assume the participation layer of any national system is monolingual in the national language even when the ministry maintains an English site, and budget for translation. English-language government pages are usually the PR layer, not the participation layer — the Kantei English site is a rare exception that is genuinely current."
+      source_id: 0ea86f73b65a
+    - id: public-route
+      type: submission
+      value: https://data.ipu.org/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: "Method is language-neutral. Applying it is not: assume the participation layer of any national system is monolingual in the national language even when the ministry maintains an English site, and budget for translation. English-language government pages are usually the PR layer, not the participation layer — the Kantei English site is a rare exception that is genuinely current."
+      source_id: 9a00e55c88ec
+  local_name: n/a
+  level: national
+  tags:
+    - audit
+    - law
+    - petition
+    - record
+  seats:
+    - role: chair
+      name: Not applicable
+      verified_on: 2026-09-22
+strings:
+  name: GENERIC METHOD — locating the AI policy seat and the public route in an arbitrary jurisdiction
+  ai_jurisdiction: Applies to any parliamentary or presidential system not covered above.
+  business: |-
+    STEP 1 — FIND THE COMMITTEE. Go to the parliament's official domain (almost always a .gov/.gob/.gouv/.parl/.leg national domain; find it via the Inter-Parliamentary Union's Parline database at data.ipu.org, which lists every national parliament with its official site). Look for the page named 'Committees' / 'Commissions' / 'Ausschüsse' / 'Comisiones' / '委員会' / '위원회'. AI almost never has its own standing committee. It sits in one of four places, and you should check in this order: (a) the committee shadowing the ICT/digital/communications ministry — the single most common home; (b) the committee shadowing science, technology, innovation or research; (c) the committee shadowing economy/industry/trade, where AI is framed as industrial policy; (d) the justice, home affairs or constitutional committee, where AI is framed as rights, surveillance or liability. In bicameral systems check both chambers — they often differ, and the upper house is frequently more accessible. Also search the site for 'special committee', 'select committee', 'ad hoc', 'temporary' or 'inquiry' plus 'artificial intelligence': many jurisdictions create a one-off AI committee that outranks the standing one, as Brazil and the EU did. CROSS-CHECK against the OECD.AI policy observatory (oecd.ai/en/dashboards) and the IPU's AI tracker, both of which index national AI bodies and are more current than Wikipedia.
+
+    STEP 2 — FIND THE CHAIR. The committee's own page on the parliament site carries the chair and member list; this is the only source to trust. Look for an 'as of' or 'current as at' date stamp on the roster — Japan and Korea both print one, and it is the field that tells you whether the page is stale. Two hard rules learned the hard way in this research. First, NEVER use Wikipedia for a current officeholder: English Wikipedia's Japanese cabinet article was eleven months out of date. Second, ALWAYS check whether the person you found has since been promoted into the executive — in parliamentary systems a committee chair who joins the cabinet must vacate the chair, and rosters lag by weeks. If a roster is stale, corroborate with a same-month news report naming the person in that role. If you cannot corroborate, say UNVERIFIED and give the live URL rather than naming a stale person.
+
+    STEP 3 — FIND WHETHER SUBMISSIONS ARE ACCEPTED. Search the committee or parliament site for: 'call for evidence', 'written submissions', 'inquiry', 'consultation', 'memorandum', 'contribución', 'contribuição', 'Stellungnahme', 'audition', '意見募集', '입법예고'. Three patterns exist and they determine everything. PATTERN A, OPEN CALL (Westminster-derived systems — UK, Canada, Australia, NZ, Ireland, India for Bills, South Africa): the committee publishes a call for written evidence with a deadline and an upload form or email; anyone worldwide may submit; submissions are usually published. This is the best case. PATTERN B, PRE-ANNOUNCEMENT (Korea, Japan, most civil-law systems): the legislature is closed, but the EXECUTIVE must publish draft rules for a statutory comment period; go there instead. PATTERN C, CLOSED (Japan's Diet, many others): witnesses by invitation only and petitions require a member's sponsorship; there is no direct route and you must work through a member's office or an affiliated association. Do not pretend Pattern C is Pattern A.
+
+    STEP 4 — THE FOUR UNIVERSAL ROUTES. In nearly every democracy exactly these four exist, in descending order of usefulness. (1) MINISTRY CONSULTATION / NOTICE-AND-COMMENT. Nearly always the highest-value route, because it is statutory, has a defined minimum period, and frequently obliges the agency to publish a response. Find it at the ministry's 'consultations' page or a central portal: e-Gov (Japan), 국민참여입법센터 (Korea), Participa+Brasil (Brazil), regulations.gov (US), 'Have your say' (EU), gov.uk/government/consultations (UK), consultations.gc.ca (Canada). Search '<country> public consultation portal' plus the local-language term. (2) COMMITTEE EVIDENCE. Highest visibility when Pattern A applies; your text may be published and cited. Zero cost. (3) PETITION. Check whether it has a real trigger or is symbolic — this is the single most important distinction and most people get it wrong. Real triggers: Korea 50,000/30 days forces committee referral; Brazil Senate 20,000/4 months forces CDH consideration; UK 100,000 forces a Westminster Hall debate; EU ECI 1 million across 7 states forces a Commission response; Germany Bundestag 50,000/4 weeks gets a public committee hearing. Symbolic: petitions requiring a legislator's sponsorship (Japan), or with no numeric consequence at all. Always establish what the number actually compels — in every case above it compels PROCESS, never an outcome, and Korea's experience shows referral can be followed by indefinite inaction. (4) OMBUDSMAN / DATA PROTECTION AUTHORITY / HUMAN RIGHTS INSTITUTION. Underrated and often the only route with a binding individual remedy. Where AI touches personal data, the DPA usually has jurisdiction TODAY under existing data protection law, without waiting for an AI act — and unlike a committee it must respond to a complaint. Find the DPA via the Global Privacy Assembly member list; find the ombudsman via the International Ombudsman Institute; find the national human rights institution via GANHRI. A fifth route worth knowing: FREEDOM OF INFORMATION. Roughly 130 countries have an access-to-information law; an FOI request is often the only way to see inside a closed inter-ministerial AI body. Check whether your country's law is open to foreigners — India's RTI is citizens-only, the EU's and the UK's are not.
+
+    STEP 5 — SANITY CHECKS BEFORE YOU ACT. Confirm the legislature is in session (committees do not meet in recess, and rosters are reconstituted at session start — India reconstitutes standing committees around September, so a chair verified in June may be wrong in October). Confirm the bill is in the chamber you think it is: Brazil's PL 2338 left the Senate in March 2025 and anyone still lobbying senators in 2026 is wasting effort. Confirm whether an AI-specific body has displaced the one you found: Japan's AI Strategy Council was superseded by the statutory AI Strategy Headquarters and most secondary commentary still points at the dead one. And confirm the language reality — if the route is single-language and requires domestic identity verification, as Korea's and to a lesser degree Japan's are, say so plainly rather than presenting a route the person cannot actually walk.
+  public_route: "See STEP 4. In priority order: ministry notice-and-comment, committee written evidence, petition with a verified trigger, ombudsman/DPA complaint, FOI request."
+  format_rules: "Varies. The discipline is to always ask two questions of any threshold: what number, over what period — and then the question most people skip: what exactly does hitting it COMPEL? In every real-trigger system documented here, the answer is 'a procedural step', never a policy outcome."
+  realistic: "This method is reliable for locating the seat and the route. It cannot make a closed system open. The honest headline finding across all four jurisdictions researched: the executive-branch consultation route is consistently more open, more predictable and more consequential than the legislative route, and it is the one to use by default. Legislative committees are more visible but far more gatekept. The second finding: language is the dominant practical barrier, not formal eligibility — Japan, Korea and Brazil all impose no nationality bar on written comments, yet all three are effectively closed to a non-speaker acting alone. Budget for a native-language submission or a local intermediary, or accept that the route is theoretical."
+  language_note: "Method is language-neutral. Applying it is not: assume the participation layer of any national system is monolingual in the national language even when the ministry maintains an English site, and budget for translation. English-language government pages are usually the PR layer, not the participation layer — the Kantei English site is a rare exception that is genuinely current."
+  note: This is methodology, not a factual claim about any one body, so 'verified' refers to the method having been derived from and tested against the four jurisdictions researched above rather than asserted abstractly. The specific petition thresholds cited for Korea and Brazil are VERIFIED in their own entries above. The thresholds cited for the UK (100,000), EU ECI (1 million / 7 states) and Germany (50,000 / 4 weeks) are from background knowledge and were NOT verified in this research — treat them as UNVERIFIED starting points and confirm on the relevant official site before relying on them. data.ipu.org, oecd.ai and the IPU AI tracker are verified as live authoritative directories.
+  seat_notes:
+    chair: Method, not a body.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.ipu.org/impact/democracy-and-strong-parliaments/artificial-intelligence/parliamentary-actions-ai-policy
+      checked: 2026-09-22
+    - url: https://data.ipu.org/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c6967c30ac
+  migrated_from: input/data/committees-and-organisations.json#seats

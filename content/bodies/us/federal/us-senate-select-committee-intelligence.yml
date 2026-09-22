@@ -1,0 +1,62 @@
+id: us-senate-select-committee-intelligence
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.intelligence.senate.gov/about-the-committee/committee-members/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 147edef8adc4
+    - id: public-route
+      type: submission
+      value: https://www.intelligence.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: efba63a48ebc
+  level: federal
+  chamber: Senate
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Tom Cotton
+      party: R
+      region: AR
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Mark Warner
+      party: D
+      region: VA
+      verified_on: 2026-09-22
+strings:
+  name: Senate Select Committee on Intelligence
+  ai_jurisdiction: "Intelligence Community use of AI and AI as an intelligence target. Send here: IC adoption of frontier models, AI in signals and open-source intelligence, foreign adversary AI capabilities assessments, AI-enabled foreign influence operations, and counterintelligence risk to US AI labs (including insider threat and foreign talent access). Proceedings are largely classified, so the public route is narrow and mostly one-way."
+  business: "VERIFIED by referral: Cotton is lead sponsor of S.1705 Chip Security Act (referred to Banking). The committee's AI work is carried in the annual Intelligence Authorization Act. UNVERIFIED for open 2026 AI hearing titles — most sessions are closed."
+  public_route: "VERIFIED: https://www.intelligence.senate.gov/about-the-committee/contact/. Committee: 211 Hart, Washington DC 20510, 202-224-1700. This committee also operates the statutory Intelligence Community whistleblower channel, which is the realistic route for someone with classified or contractor-side AI concerns."
+  note: Chair verified 2026-09-22 against senate.gov committee_memberships_SLIN.htm; the minority leader of this committee holds the title Vice Chairman, not Ranking Member.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.intelligence.senate.gov/about-the-committee/committee-members/
+      checked: 2026-09-22
+    - url: https://www.intelligence.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: adf6b9874b
+  migrated_from: input/data/committees-and-organisations.json#seats

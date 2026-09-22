@@ -1,0 +1,60 @@
+id: in-mygov
+type: seat
+geo:
+  country: in
+  label: India
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.mygov.in/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: English and Hindi interface; some content in other Indian languages. No foreign-language support.
+      source_id: 50e275e405c5
+    - id: public-route
+      type: submission
+      value: https://www.mygov.in/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: English and Hindi interface; some content in other Indian languages. No foreign-language support.
+      source_id: 16084f531fb1
+  local_name: माईगव
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: UNVERIFIED
+      verified_on: 2026-09-22
+strings:
+  name: MyGov (Citizen Engagement Platform)
+  ai_jurisdiction: Cross-government citizen consultation platform under MeitY/Digital India Corporation. Used inconsistently for MeitY drafts; hosts discussions, polls, and 'Share your ideas' consultations, including on AI and digital policy.
+  business: Runs alongside, not instead of, MeitY's email-based consultations. Not every MeitY AI consultation is mirrored here — the 2026 IT Rules AI-labelling consultation ran by email only.
+  public_route: Register a free account (mobile number or email), then comment on an open 'Discuss' or 'Consultation' task. Comments are public and visible to other users, which is the opposite of MeitY's confidential email route.
+  format_rules: None. Free registration. Requires an Indian mobile number for some functions.
+  realistic: Usable and low-friction if a relevant consultation is live, and it is the only Indian route where your submission is publicly visible. But it is not the authoritative channel — for AI policy specifically, the email consultation is where MeitY actually reads submissions. Treat MyGov as supplementary. Do not rely on it as the only place you check for open windows.
+  language_note: English and Hindi interface; some content in other Indian languages. No foreign-language support.
+  note: Platform existence and function VERIFIED; I deliberately did not verify current MyGov leadership and have marked it UNVERIFIED rather than guess. MyGov's role relative to MeitY email consultations is inferred from the observed pattern that the April 2026 IT Rules consultation used email only.
+  seat_notes:
+    chair: CEO, MyGov — I did not verify the current officeholder and am not naming one.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.mygov.in/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 6d7c4f75de
+  migrated_from: input/data/committees-and-organisations.json#seats

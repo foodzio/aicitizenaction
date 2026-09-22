@@ -1,0 +1,55 @@
+id: global-humane-intelligence-bias-bounty
+type: reporting-channel
+geo:
+  country: global
+  label: Global — Zindi has users in 185+ countries
+facts:
+  routes:
+    - id: submission-page
+      type: disclosure
+      value: https://humane-intelligence.org/programs-services/bias-bounty/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f55464b61aad
+    - id: homepage
+      type: homepage
+      value: https://humane-intelligence.org/programs-services/bias-bounty/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 54e35741ccb0
+  region: Global
+  public_input: open
+  tags:
+    - flaw
+strings:
+  name: Humane Intelligence Bias Bounty
+  remit: Structured challenge entries that surface and measure biased or exclusionary outcomes in AI systems, and — unusually — that design technical mitigations, not just identify problems. Domains span generative AI, computer vision, environmental decision-making and digital accessibility.
+  reality_check: "Real but narrow. Its value to an unaffiliated person is credentialing and access: it is a legitimate, low-barrier way to build a public track record in AI evaluation, and Humane Intelligence has run challenges with government and lab partners (including DEF CON-scale exercises). It will not help with a concern that does not match an open challenge."
+  accepts: Structured challenge entries that surface and measure biased or exclusionary outcomes in AI systems, and — unusually — that design technical mitigations, not just identify problems. Domains span generative AI, computer vision, environmental decision-making and digital accessibility.
+  does_not_accept: Unsolicited, out-of-challenge reports. This is a time-boxed competition format, not an always-open intake. If no challenge is running on your topic, there is nothing to submit to.
+  how: Register on Zindi and enter the live challenge. Prize tiers are structured for beginner, intermediate and advanced participants, which makes it one of the few routes deliberately open to non-experts. Partnership enquiries to info@humane-intelligence.org.
+  format: Whatever the specific challenge specifies — typically code, analysis and a written finding submitted to the Zindi platform.
+  timing: Windowed. The Bias Bounty Mapping Equity Challenge ran 28 August – 31 October 2026. Watch humane-intelligence.org for the next window.
+  after: Entries are judged; winners announced publicly; findings feed transparency reports (e.g. the 2024 Generative AI Red Teaming Challenge transparency report).
+  operator: Humane Intelligence (nonprofit, founded by Rumman Chowdhury), challenges hosted on Zindi
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Structured challenge entries that surface and measure biased or exclusionary outcomes in AI systems, and — unusually — that design technical mitigations, not just identify problems. Domains span generative AI, computer vision, environmental decision-making and digital accessibility.
+      note: Register on Zindi and enter the live challenge. Prize tiers are structured for beginner, intermediate and advanced participants, which makes it one of the few routes deliberately open to non-experts. Partnership enquiries to info@humane-intelligence.org.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://humane-intelligence.org/programs-services/bias-bounty/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 45ce09318c
+  migrated_from: input/data/institutions.json

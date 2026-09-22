@@ -1,0 +1,76 @@
+id: eu-european-parliament-committee-civil-liberties
+type: government
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: committee-pages
+      type: evidence
+      value: https://www.europarl.europa.eu/committees/en/libe/about
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a04df776f2a0
+    - id: libe-secretariat-email
+      type: email
+      value: not published on the committee's public pages
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: cdcb430078ec
+    - id: committee-petitions-parliament-s
+      type: petition
+      value: https://www.europarl.europa.eu/petitions/en/home
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1c0380001761
+    - id: homepage
+      type: homepage
+      value: https://www.europarl.europa.eu/committees/en/libe/about
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 41d7fc945f93
+  region: European Union
+  public_input: limited
+  tags:
+    - harm
+    - law
+    - systemic
+strings:
+  name: European Parliament Committee on Civil Liberties, Justice and Home Affairs (LIBE)
+  remit: Joint lead committee with IMCO on the AI Act. Described by its chair as 'the leading body of the European Parliament for shaping and overseeing EU legislation and policies that ensure EU citizens enjoy an area of freedom, security, and justice'. Responsibilities include rule of law, fundamental rights, anti-discrimination, data protection and privacy, asylum and migration, organised crime and citizen security. On AI it drove the prohibited-practices list, biometric surveillance restrictions and fundamental-rights impact assessments. Legislative co-decision power; no investigative or enforcement power over private parties.
+  powers_text: advise
+  reality_check: "Same structural reality as IMCO: no public evidence call, no published secretariat address, influence via named rapporteurs and shadow rapporteurs during the amendment window. LIBE is however the most receptive committee to civil-society and academic input on AI, and its members' offices routinely cite NGO analyses in amendments — several AI Act prohibitions trace directly to civil-society drafting. The practical sequence is: identify the shadow rapporteur from the political group closest to your position, contact their adviser, supply drafted amendment text rather than a position paper. LIBE's frame is fundamental rights and surveillance, not catastrophic risk."
+  notes: LIBE is also the committee for GDPR and law-enforcement AI, so biometric and predictive-policing concerns belong here rather than IMCO.
+  routes:
+    committee-pages:
+      label: Committee pages, documents and public hearings
+      scope: Agendas, draft reports, amendments and hearing streams.
+      note: VERIFIED — page fetched. It references a 'Contacts' section but publishes NO email or postal address in the retrievable content.
+    libe-secretariat-email:
+      label: LIBE secretariat email
+      scope: n/a
+      note: VERIFIED ABSENCE in the retrievable content. Do not guess the address.
+    committee-petitions-parliament-s:
+      label: Committee on Petitions (PETI) — the Parliament's actual public channel
+      scope: See the separate PETI entry; this is the route with a right of access, not LIBE.
+      note: VERIFIED.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.europarl.europa.eu/committees/en/libe/about
+      checked: 2026-09-22
+    - url: https://www.europarl.europa.eu/petitions/en/home
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c5f92fb472
+  migrated_from: input/data/institutions.json

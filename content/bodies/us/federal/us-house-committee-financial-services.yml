@@ -1,0 +1,62 @@
+id: us-house-committee-financial-services
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://financialservices.house.gov/about/members.htm
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a5d779638b07
+    - id: public-route
+      type: submission
+      value: https://financialservices.house.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3711f603289a
+  level: federal
+  chamber: House
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: J. French Hill
+      party: R
+      region: AR
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Maxine Waters
+      party: D
+      region: CA
+      verified_on: 2026-09-22
+strings:
+  name: House Committee on Financial Services
+  ai_jurisdiction: "AI in banking, securities, insurance and payments, plus the House side of export-control and sanctions policy touching AI hardware. Send here: AI in credit underwriting and algorithmic discrimination in lending, AI in trading and market structure, AI-enabled financial fraud and deepfake-driven scams, AI and anti-money-laundering, and financial-stability questions from AI concentration."
+  business: "VERIFIED: subcommittee hearing 'Unlocking the Next Generation of AI in the U.S. Financial System for Consumers, Businesses, and Competitiveness', 17 Jul 2026 (docket HHRG-119-BA21-20260717). H.R.3447 Chip Security Act, after House Foreign Affairs reported it 42-0 on 26 Mar 2026, was referred on reaching the Senate to Senate Banking — the House-side financial-services committees are part of that chain."
+  public_route: "VERIFIED: https://financialservices.house.gov/contact, plus a dedicated whistleblower page at https://financialservices.house.gov/contact/whistleblower.htm. Committee: 2129 Rayburn House Office Building, Washington DC 20515, 202-225-7502. Minority: https://democrats-financialservices.house.gov/."
+  note: Chair verified 2026-09-22 from the House Clerk's MemberData.xml. The FLI guide does not cover this committee; it should, because one of its subcommittees is formally named for AI.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://financialservices.house.gov/about/members.htm
+      checked: 2026-09-22
+    - url: https://financialservices.house.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 160f7b386f
+  migrated_from: input/data/committees-and-organisations.json#seats

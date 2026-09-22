@@ -1,0 +1,82 @@
+id: global-iso-iec-jtc-1-sc-42
+type: standards
+geo:
+  country: global
+  label: International (ISO/IEC); secretariat held by ANSI (United States)
+facts:
+  routes:
+    - id: participate-via-your-national
+      type: membership
+      value: https://www.iso.org/committee/6794475.html
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 12bb2e37e39e
+    - id: ansi-general-enquiries
+      type: email
+      value: info@ansi.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b9b8ec46506b
+    - id: sc-42-committee-manager
+      type: email
+      value: hbenko@ansi.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9a127685861d
+    - id: public-enquiry-ballot-comment
+      type: consultation
+      value: https://www.iso.org/committee/6794475.html
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d2ed362f7239
+    - id: homepage
+      type: homepage
+      value: https://www.iso.org/committee/6794475.html
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 8a3dc6a82ef6
+  region: Global
+  public_input: limited
+  tags:
+    - systemic
+strings:
+  name: ISO/IEC JTC 1/SC 42 — Artificial Intelligence
+  remit: The lead international AI standardisation committee, established 2017. Five working groups (WG1 foundational standards, WG2 data, WG3 trustworthiness, WG4 use cases and applications, WG5 computational approaches and system characteristics) plus seven joint working groups with other committees. 59 participating and 25 observing member bodies; 44 published standards and ~49 in development — including ISO/IEC 42001 (AI management systems) and 23894 (risk management).
+  threat_model: "Trustworthiness as an engineering property: robustness, bias, transparency, risk management, functional safety. Not oriented to catastrophic or loss-of-control risk."
+  reality_check: Not closed, but gated and slow. A determined individual genuinely can get into the room via a mirror committee, and mirror committees are frequently under-subscribed for civil-society voices — the marginal outsider has unusually high influence there. Expect a 1–3 year horizon and unpaid meeting-heavy work. Drafts are copyrighted and not public, which is the real barrier.
+  gov_channel: Very high leverage indirectly — ISO/IEC standards are referenced by regulators worldwide and ISO/IEC 42001 is becoming the de facto compliance artefact.
+  routes:
+    participate-via-your-national:
+      label: Participate via your NATIONAL standards body's mirror committee — the only route for an individual
+      scope: Anyone in a participating member country
+      note: "Concretely: find your country's ISO member (ANSI in the US, BSI in the UK, DIN in Germany, SCC in Canada, BIS in India, SAC in China, Standards Australia), apply to join its SC 42 mirror committee, and you become eligible to be nominated as a national delegate/expert to SC 42 WGs. Fees and eligibility vary by country — some (e.g. SCC Canada) accept individuals free of charge; others require corporate membership."
+    ansi-general-enquiries:
+      label: ANSI (SC 42 secretariat) general enquiries
+      scope: US route / secretariat questions
+    sc-42-committee-manager:
+      label: SC 42 Committee Manager, Heather Benko (ANSI)
+      scope: Direct secretariat contact
+      note: Named on the ISO committee page.
+    public-enquiry-ballot-comment:
+      label: Public enquiry/ballot comment on draft standards — submitted through your national body
+      scope: Anyone, but comments are channelled and consolidated nationally
+      note: You cannot comment directly to ISO; your national body aggregates and submits its country position.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.iso.org/committee/6794475.html
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 5e2d8db0ad
+  migrated_from: input/data/institutions.json

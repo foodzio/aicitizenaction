@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aicitizenaction/schema/org.schema.json",
+  "title": "Organisation",
+  "description": "A campaign, civil society, academic, professional or industry organisation. Its ask is recorded as its own, plainly, and never adopted. Lives in content/orgs/.",
+  "allOf": [{ "$ref": "record.schema.json" }],
+  "properties": {
+    "type": { "enum": ["civil-society", "academic", "organisation"] },
+    "facts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["routes"],
+      "properties": {
+        "routes": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/route" } },
+        "local_name": { "type": "string" },
+        "region": { "type": "string" },
+        "perspective": { "$ref": "common.schema.json#/$defs/vocabId" },
+        "public_input": { "enum": ["open", "limited", "none"] },
+        "volunteers": { "type": "string" },
+        "tags": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/vocabId" } },
+        "topics": { "$ref": "common.schema.json#/$defs/vocabList" }
+      }
+    }
+  }
+}

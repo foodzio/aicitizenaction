@@ -1,0 +1,61 @@
+id: us-ai-lab-watch
+type: watchdog
+geo:
+  country: us
+  label: United States (individual project)
+facts:
+  routes:
+    - id: resources-page
+      type: form
+      value: https://ailabwatch.org/resources
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 66a39c591897
+    - id: blog-substack
+      type: form
+      value: https://ailabwatch.substack.com/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5557d8a0fbba
+    - id: homepage
+      type: homepage
+      value: https://ailabwatch.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 0e902c3f475b
+  region: United States
+  public_input: none
+  tags:
+    - research
+strings:
+  name: AI Lab Watch
+  remit: "Scorecard grading Anthropic, Google DeepMind, OpenAI, Meta, xAI, Microsoft and DeepSeek across seven safety categories: risk assessment, scheming-risk prevention, safety research, misuse prevention, extreme security, risk information sharing, and planning for dangerous capabilities. Created and run solo by Zach Stein-Perlman."
+  threat_model: Explicitly catastrophic-risk and loss-of-control framing — scheming, dangerous capabilities, weight security. The sharpest frontier-safety-only scorecard of the trackers.
+  reality_check: DORMANT. The site states the author stopped maintaining it in September 2025, and no contact email is published. Do not route anything here. For a live equivalent use FLI's AI Safety Index, SaferAI's ratings, or the Midas Project's Seoul Tracker and Watchtower.
+  gov_channel: None formal.
+  routes:
+    resources-page:
+      label: Resources page (still maintained per the site)
+      scope: Read-only
+    blog-substack:
+      label: Blog / Substack
+      scope: Following
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ailabwatch.org/resources
+      checked: 2026-09-22
+    - url: https://ailabwatch.substack.com/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b64daba222
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,63 @@
+id: us-senate-committee-judiciary
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.judiciary.senate.gov/about/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b519e44e6da7
+    - id: public-route
+      type: submission
+      value: https://www.judiciary.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0318a0b81442
+  level: federal
+  chamber: Senate
+  tags:
+    - audit
+    - law
+  seats:
+    - role: chair
+      name: Chuck Grassley
+      party: R
+      region: IA
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Dick Durbin
+      party: D
+      region: IL
+      verified_on: 2026-09-22
+strings:
+  name: Senate Committee on the Judiciary
+  ai_jurisdiction: "Rights, remedies and law enforcement. Send here: whether AI companies can be sued (duty of care, product liability, Section 230), AI and copyright/right of publicity, AI-generated CSAM and deepfakes as crimes, DOJ and FBI use of AI, antitrust in AI and cloud/compute markets, AI and immigration adjudication, and constitutional/civil-liberties questions. This is the liability door; Commerce is the regulation door."
+  business: "VERIFIED: S.2937 AI LEAD Act (Durbin/Hawley, introduced 29 Sep 2025) — first federal AI duty-of-care/product-liability bill, referred to this committee. S.1367 NO FAKES Act of 2026 (Coons) — digital replicas/voice and likeness — referred here and now on the Senate Legislative Calendar. Hearing 'Examining the Harm of AI Chatbots' (S.Hrg. 119-256, 16 Sep 2025, Crime and Counterterrorism Subcommittee). Hearing 'The Good, the Bad, and the Ugly: AI-Generated Deepfakes in 2025' (S.Hrg. 119-171). Prior series 'Oversight of AI' including 'Oversight of AI: Insiders' Perspectives'."
+  public_route: "VERIFIED: no /contact page exists on judiciary.senate.gov. Routes are the chair's and ranking member's own Senate offices (Grassley: 202-224-3744; Durbin: 202-224-2152) and the committee's published rules at https://www.judiciary.senate.gov/about/committee/rules. Committee main line 202-224-5225 (Dirksen 224)."
+  note: Chair/ranking verified 2026-09-22 against senate.gov committee_memberships_SSJU.htm.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.judiciary.senate.gov/about/members
+      checked: 2026-09-22
+    - url: https://www.judiciary.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 5073286ff2
+  migrated_from: input/data/committees-and-organisations.json#seats

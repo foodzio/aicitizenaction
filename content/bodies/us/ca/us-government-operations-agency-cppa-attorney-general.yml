@@ -1,0 +1,55 @@
+id: us-government-operations-agency-cppa-attorney-general
+type: seat
+geo:
+  country: us
+  sub: ca
+  label: California
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 097de47f6c80
+    - id: public-route
+      type: submission
+      value: https://cppa.ca.gov/regulations/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: fc33316d9c7f
+  level: state
+  chamber: Executive
+  tags:
+    - audit
+    - law
+    - record
+strings:
+  name: Government Operations Agency / CPPA / Attorney General (executive AI oversight)
+  ai_jurisdiction: Implementation and enforcement of SB 53, SB 813 and AB 1405; ADMT regulation; FEHA automated-decision rules.
+  business: Executive Order N-9-26 (18 Sep 2026) — directs GovOps, with Cal OES, to convene national experts and deliver recommendations within two months on onsite audits of frontier labs, independent verification of safety frameworks, an emergency shutoff mechanism, and an expanded definition of critical safety incidents to cover loss-of-control scenarios.
+  status: VERIFIED — EO issued 18 Sep 2026; recommendations due approximately Nov 2026.
+  public_route: Expert convening under EO N-9-26 is not a public hearing, but CPPA rulemaking is subject to full APA public comment, and the Joint California Policy Working Group on AI Frontier Models took public input. Watch cppa.ca.gov for comment windows.
+  agency_route: https://oag.ca.gov/report (AG consumer/civil-rights complaints); CPPA complaints via cppa.ca.gov; California Civil Rights Department for employment AI discrimination.
+  note: Not a legislative committee — included because EO N-9-26 is the live implementation vehicle for California frontier-AI oversight and the comment windows are the practical participation route between sessions.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/
+      checked: 2026-09-22
+    - url: https://cppa.ca.gov/regulations/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: a4230c31b5
+  migrated_from: input/data/committees-and-organisations.json#seats

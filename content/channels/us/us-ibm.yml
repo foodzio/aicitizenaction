@@ -1,0 +1,82 @@
+id: us-ibm
+type: company
+geo:
+  country: us
+  label: USA
+facts:
+  routes:
+    - id: ibm-psirt
+      type: email
+      value: psirt@us.ibm.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ca735c19cc59
+    - id: ibm-hackerone
+      type: disclosure
+      value: https://hackerone.com/ibm?type=team
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 2f3ea5273b93
+    - id: ibm-safe-harbor-policy
+      type: disclosure
+      value: https://www.ibm.com/trust/security-psirt
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 02ede153665e
+    - id: homepage
+      type: homepage
+      value: https://www.ibm.com/trust
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 36c8c88be9d2
+    - id: framework
+      type: framework
+      value: https://www.ibm.com/impact/ai-ethics
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 26156bc25339
+  region: United States
+  public_input: limited
+  tags:
+    - behaviour
+    - flaw
+strings:
+  name: IBM
+  remit: AI Ethics Board plus a Responsible Technology function governing watsonx and Granite models; PSIRT handles security and, unusually, explicitly names AI vulnerabilities in scope.
+  reality_check: No public accounts found of AI-specific reports to IBM PSIRT. IBM's AI Ethics Board is well-documented in its governance publications but is an internal review body with no published external intake. The PSIRT route is professional and long-established; whether a pure model-behaviour finding survives triage there is untested in public.
+  notes: psirt@us.ibm.com is the route, and you can cite that AI vulnerabilities are in its published scope. There is no channel to the AI Ethics Board. IBM is one of the few here offering both anonymous submission and a written safe harbour policy.
+  routes:
+    ibm-psirt:
+      label: IBM PSIRT
+      scope: "'Potential security and AI vulnerabilities in IBM products and websites.' AI vulnerabilities explicitly in scope. PGP available."
+      note: One of only a handful of PSIRTs to name AI vulnerabilities in its remit.
+    ibm-hackerone:
+      label: IBM on HackerOne
+      scope: Third-party researcher submissions.
+    ibm-safe-harbor-policy:
+      label: IBM Safe Harbor Policy
+      scope: The PSIRT page states vulnerability reporting is 'protected by IBM Safe Harbor Policy', available as a downloadable document.
+      note: The full text is in a linked PDF rather than inline; read it before testing. Anonymous form submission is also offered.
+    homepage:
+      label: Homepage
+    framework:
+      label: Responsible Technology / AI ethics principles (no frontier safety framework published)
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://hackerone.com/ibm?type=team
+      checked: 2026-09-22
+    - url: https://www.ibm.com/trust/security-psirt
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 63dd881c22
+  migrated_from: input/data/institutions.json

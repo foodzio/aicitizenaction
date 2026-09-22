@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aicitizenaction/schema/record.schema.json",
+  "title": "Directory record envelope",
+  "description": "The envelope shared by bodies, channels and organisations: identity and place, language-independent facts, translatable strings, and maintenance metadata.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "type", "geo", "facts", "strings", "meta"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "type": { "$ref": "common.schema.json#/$defs/vocabId" },
+    "geo": { "$ref": "common.schema.json#/$defs/geo" },
+    "facts": { "type": "object" },
+    "strings": { "type": "object", "required": ["name"], "properties": { "name": { "type": "string", "minLength": 1 } } },
+    "meta": { "$ref": "common.schema.json#/$defs/meta" }
+  }
+}

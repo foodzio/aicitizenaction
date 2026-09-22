@@ -1,0 +1,60 @@
+id: us-senate-standing-committee-internet-technology
+type: seat
+geo:
+  country: us
+  sub: ny
+  label: New York
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.nysenate.gov/committees/internet-and-technology
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 73acf5fd5d75
+    - id: public-route
+      type: submission
+      value: https://www.nysenate.gov/citizen-guide
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 433cb1e6c7bc
+  level: state
+  chamber: Senate
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Kristen Gonzalez
+      party: D/WF
+      verified_on: 2026-09-22
+strings:
+  name: Senate Standing Committee on Internet and Technology
+  ai_jurisdiction: Lead Senate committee for AI, frontier-model safety, algorithmic pricing, AI training-data transparency and companion-chatbot bills. Held a dedicated public hearing on AI in consequential/high-risk contexts on 15 Jan 2026.
+  business: "RAISE Act, S6953B / A6453B (Gounardes / Bores) — signed 19 Dec 2025 (chapter amendments negotiated with Gov. Hochul). 2026 passed and awaiting Hochul action: A3411B (generative-AI inaccuracy notice, passed Senate 9 Mar 2026); A6578/S6955 (AI training-data transparency); A10379/S9051 (companion chatbots + 5-year AI children's-toy moratorium); A9349/S8623 (One Fair Price Act, surveillance pricing); A9581/S8706 (AI employment-impact reporting)."
+  status: VERIFIED — RAISE Act takes effect 1 January 2027. Chapter amendments lowered the 'large developer' trigger from $100M compute spend to $500M annual revenue and cut penalties from $10–30M to $1–3M. 2026 bills remain on the Governor's desk; she has until year-end 2026 to act.
+  public_route: "PARTIAL but real. Two routes: (1) any New Yorker can register a formal position on any bill directly on its NYSenate.gov page using the 'Aye'/'Nay' buttons with a written comment — the position and comment are transmitted immediately to that person's own senator's office; this is free, open, and almost entirely unused by the public. (2) For a noticed committee public hearing, testimony is by hearing-specific reply form circulated with the hearing notice, filed in advance with the committee; written statements are accepted from anyone even without speaking."
+  agency_route: "New York Attorney General — exclusive RAISE Act civil enforcement (complaints: https://ag.ny.gov/complaint-forms). Separate frontier-AI oversight office created inside the Department of Financial Services to assess large frontier developers, collect fees, issue regulations and publish annual reports (https://www.dfs.ny.gov)."
+  note: "Ranking minority member: Daniel G. Stec (R/C/IP, SD-45), verified 2026-09-22. Members: Gounardes, Hinchey, Parker, Walczyk, Zellner."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.nysenate.gov/committees/internet-and-technology
+      checked: 2026-09-22
+    - url: https://www.nysenate.gov/citizen-guide
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 8912a0c9ab
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,43 @@
+id: global-ai-safety-asia-2
+type: organisation
+geo:
+  country: global
+  label: Asia, with emphasis on Southeast Asia and middle powers.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.aisafety.asia/get-involved
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d6c27a709ae7
+  perspective: safety-advocacy
+  volunteers: unclear
+  tags:
+    - fund
+    - join
+    - law
+strings:
+  name: AI Safety Asia (AISA)
+  the_ask: Asian institutions — especially Southeast Asian and middle-power states — should have real leverage over how frontier AI is built and governed, before the terms are locked in by a handful of dominant actors.
+  what_they_do: "Three programmes: Curate (helps governments map AI dependencies and connect to frontier-risk scientists), Inform (translates technical foresight into safeguards for negotiations), Catalyse (maintains channels between senior officials across bridge states). Listed by UNESCO as a civil society organisation and by the World Economic Forum."
+  newcomer_action: Subscribe to the AI governance briefing newsletter; if you are a policymaker, researcher or organisation working on AI governance in Asia, email contact@aisafety.asia.
+  tips: no
+  geography: Asia, with emphasis on Southeast Asia and middle powers.
+  scale: Small; headcount not disclosed. Non-profit.
+  spending: Not disclosed; no donation page found.
+  caution: Aimed at officials and researchers, not the general public — the get-involved page explicitly invites policymakers, researchers and organisations. If you are none of those, the newsletter is realistically your only route. No verified donation route.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.aisafety.asia/get-involved
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 5c24a5c02c
+  migrated_from: input/data/committees-and-organisations.json#orgs

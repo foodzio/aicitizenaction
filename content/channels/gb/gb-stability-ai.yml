@@ -1,0 +1,80 @@
+id: gb-stability-ai
+type: company
+geo:
+  country: gb
+  label: UK / USA
+facts:
+  routes:
+    - id: safety-misuse-reports
+      type: email
+      value: safety@stability.ai
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5010705a67db
+    - id: appeals-request-form
+      type: form
+      value: https://stability.ai/safety
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e0a9795c591b
+    - id: trust-center
+      type: program
+      value: https://trust.stability.ai/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 1a29dd733a75
+    - id: homepage
+      type: homepage
+      value: https://stability.ai/safety
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 131b8676a2a7
+    - id: framework
+      type: framework
+      value: https://stability.ai/use-policy
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: f60e3f3c9ce0
+  region: United States
+  public_input: open
+  tags:
+    - behaviour
+    - harm
+strings:
+  name: Stability AI
+  remit: "'Stable Safety' — the publicly branded safety function covering open-weight image and audio models, built around six principles including Safety-First Open Source and Banning AI Misuse, plus an annual Integrity Transparency Report."
+  reality_check: No public accounts found of response rates to safety@stability.ai. Stability's safety posture has been heavily criticised in the context of open-weight image models and CSAM (the LAION training-data findings), and its transparency reporting is the main published evidence of enforcement. The address is real; its throughput is unknown.
+  notes: safety@stability.ai is the route. Note there is no frontier safety framework or scaling policy — the AUP and the six Stable Safety principles are the whole published governance surface. For open-weight models, reporting misuse to the developer has limited effect once weights are distributed; that is a structural limit, not a channel failure.
+  routes:
+    safety-misuse-reports:
+      label: Safety and misuse reports
+      scope: Reporting misuse of Stability models and safety concerns.
+      note: Published on the Stable Safety page. A named, dedicated safety address.
+    appeals-request-form:
+      label: Appeals request form
+      scope: Appealing a policy-violation determination believed to be in error.
+      note: Linked from the safety page.
+    trust-center:
+      label: Trust Center
+      scope: Security and compliance documentation.
+    homepage:
+      label: Homepage
+    framework:
+      label: Acceptable Use Policy (Stable Safety principles)
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://stability.ai/safety
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: e42dd6b50b
+  migrated_from: input/data/institutions.json

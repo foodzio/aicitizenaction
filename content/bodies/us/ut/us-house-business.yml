@@ -1,0 +1,58 @@
+id: us-house-business
+type: seat
+geo:
+  country: us
+  sub: ut
+  label: Utah
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://le.utah.gov/committee/committee.jsp?year=2026&com=HSTBUS
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d5741fe707f6
+    - id: public-route
+      type: submission
+      value: https://le.utah.gov/committee/committee.jsp?year=2026&com=HSTBUS
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 2a77da8a7884
+  level: state
+  chamber: House
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: A. Cory Maloy
+      party: R
+      verified_on: 2026-09-22
+strings:
+  name: House Business, Labor, and Commerce Committee
+  ai_jurisdiction: House standing committee for AI consumer-protection, generative-AI disclosure and technology-commerce bills, including amendments to the Artificial Intelligence Policy Act and the Office of Artificial Intelligence Policy.
+  business: "Utah Artificial Intelligence Policy Act (SB 149, 2024), narrowed by SB 226 (2025) which limited generative-AI disclosure duties to high-risk interactions and regulated occupations. 2026 session sent NINE AI bills to the Governor: HB 276 (nonconsensual deepfake intimate imagery, AI provenance disclosures, platform safeguards — Defay/Cullimore); SB 256 (defamation law extended to AI-generated content, unauthorized use of personal identity — Cullimore/Teuscher); HB 289 (AI-generated CSAM); SB 319 (human judgment required in insurance preauthorization, AI disclosure); SB 150 (restricts AI giving medical advice absent a practitioner-patient relationship); HB 273 and HB 218 (AI in schools and required digital-skills curriculum); SB 73 (age verification); SB 69 (school device restrictions). HB 320 (Office of Artificial Intelligence Policy Amendments) also moved in 2026."
+  status: VERIFIED — Utah's model is disclosure-plus-sandbox rather than risk-tiering. The Office of Artificial Intelligence Policy runs an AI Learning Laboratory offering regulatory mitigation agreements to participants.
+  public_route: PARTIAL / CHAIR'S DISCRETION — Utah committee meetings are streamed live and also offered as a virtual meeting with an explicit 'option to provide public comment (at committee chair's discretion)'; to use it you join the virtual meeting and submit your name and email. In-person public comment at the hearing is also at the chair's discretion and time-limited. Utah's session is very short (45 days, Jan–Mar), so contacting the committee analyst (Rohnin Randles) ahead of the bill's hearing is the practical route.
+  agency_route: "Utah Division of Consumer Protection, which houses the Office of Artificial Intelligence Policy — enforcement of the AI Policy Act and administration of the AI Learning Laboratory. Complaints: https://dcp.utah.gov/complaints/"
+  note: "Vice Chair: Jason B. Kyle. 15 members (12 R / 3 D). Utah's Rep. Doug Fiefia (R) co-chairs the Future Caucus National Task Force on State AI Policy."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://le.utah.gov/committee/committee.jsp?year=2026&com=HSTBUS
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: a71ee11892
+  migrated_from: input/data/committees-and-organisations.json#seats

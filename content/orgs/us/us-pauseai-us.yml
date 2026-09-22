@@ -1,0 +1,43 @@
+id: us-pauseai-us
+type: organisation
+geo:
+  country: us
+  label: United States; local groups nationwide.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.pauseai-us.org/takeaction/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1848aab7991d
+  perspective: safety-advocacy
+  volunteers: yes
+  tags:
+    - fund
+    - join
+    - law
+strings:
+  name: PauseAI US
+  the_ask: The United States should lead an international treaty to pause frontier AI development, and should pass domestic bills including a 'kill switch' and an AI Risk Evaluation Act.
+  what_they_do: Grassroots lobbying (trains volunteers then arranges constituent meetings with members of Congress), petitions, local groups, protests outside OpenAI and Anthropic offices, film screenings and educational events.
+  newcomer_action: Sign the treaty petition, send the pre-written emails on the AI Risk Evaluation Act and Kill Switch Act, then apply via the lobbying form to be trained and matched to a meeting with your representative.
+  tips: unclear — general contact only (contact@pauseai-us.org)
+  geography: United States; local groups nationwide.
+  scale: Small 501(c)(3) (EIN 99-0899650, San Francisco). Median donation about $100 — a genuinely small-donor, volunteer-driven operation.
+  spending: Not disclosed; donations via Zeffy.
+  caution: Legally and financially separate from PauseAI Global (Dutch foundation) and PauseAI UK — a US 501(c)(3) with its own EIN and board. Shares the movement's name and broad ask but sets its own US legislative priorities. The ask is a development pause, which most US lawmakers do not currently support; expect to be advocating a minority position.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.pauseai-us.org/takeaction/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 168ca01673
+  migrated_from: input/data/committees-and-organisations.json#orgs

@@ -1,0 +1,49 @@
+id: gb-house-lords-dedicated-ai-select-committee
+type: seat
+geo:
+  country: gb
+  label: United Kingdom
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://committees.parliament.uk/committee/376/artificial-intelligence-committee
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 2ddeb64a451a
+    - id: public-route
+      type: submission
+      value: https://committees.parliament.uk/committee/170/communications-and-digital-committee/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 02ec6de14c8d
+  level: national
+  tags:
+    - law
+strings:
+  name: House of Lords — dedicated AI select committee (status check)
+  ai_jurisdiction: "A standalone Lords AI committee. The Lords Artificial Intelligence Committee (committee id 376) was an ad hoc special inquiry committee that reported 'AI in the UK: ready, willing and able?' in 2018 and was followed up by the Liaison Committee; it is not a standing body."
+  business: No currently constituted Lords committee is dedicated solely to AI. AI work in the Lords runs through the Communications and Digital Committee. The Lords Liaison Committee selects new special inquiry committees annually (41 member proposals were received for the 2026 round; shortlisting 11 September, nominations 12 November, House approval in December).
+  public_route: Watch the Lords Liaison Committee's annual special inquiry round — members propose topics and the House approves them each December for the following year. Any new AI committee would open a call for evidence on appointment.
+  note: PARTIALLY VERIFIED 2026-09-22. I confirmed the historical Artificial Intelligence Committee page exists and that the Liaison Committee runs the annual special-inquiry selection, but I could NOT retrieve the full current list of Lords committees (the committees directory paginates and my fetches returned only the first page). I am therefore not asserting that no AI-specific Lords committee exists — only that I did not find one, and that Communications and Digital is the operative venue.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://committees.parliament.uk/committee/376/artificial-intelligence-committee
+      checked: null
+    - url: https://committees.parliament.uk/committee/170/communications-and-digital-committee/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: a562af0c0a
+  migrated_from: input/data/committees-and-organisations.json#seats

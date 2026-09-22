@@ -1,0 +1,58 @@
+id: eu-european-parliament-committee-legal-affairs
+type: seat
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.europarl.europa.eu/committees/en/juri/home/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4608d034e705
+    - id: public-route
+      type: submission
+      value: https://www.europarl.europa.eu/committees/en/juri/home/highlights
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7bd4a5f2c795
+  level: bloc
+  tags:
+    - law
+    - petition
+  seats:
+    - role: chair
+      name: Ilhan Kyuchyuk (Renew Europe, Bulgaria, Movement for Rights and Freedoms)
+      verified_on: 2026-09-22
+strings:
+  name: European Parliament — Committee on Legal Affairs (JURI)
+  ai_jurisdiction: "AI and law: copyright and text-and-data-mining exceptions for model training, liability for AI-caused harm (the AI Liability Directive, which the Commission withdrew), legal personality questions, and the civil-law consequences of generative AI. JURI is the committee that decides whether AI training on copyrighted works is lawful in the EU."
+  business: AI and copyright/TDM; follow-up to the withdrawn AI Liability Directive; own-initiative work on generative AI and authorship.
+  public_route: Rapporteur/shadow correspondence; JURI secretariat at juri-secretariat@europarl.europa.eu; PETI petition; public hearings.
+  format_rules: No formal limits. Not published by Parliament.
+  key_people: "Vice-Chairs: Marion Walsmann (EPP, DE); Mario Mantovani (ECR, IT); Lara Wolters (S&D, NL); Emil Radev (EPP, BG)."
+  note: VERIFIED 2026-09-22 from the official JURI member list PDF at europarl.europa.eu/committees/en/juri/home/members/pdf.
+  seat_notes:
+    chair: Chair
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.europarl.europa.eu/committees/en/juri/home/members
+      checked: 2026-09-22
+    - url: https://www.europarl.europa.eu/committees/en/juri/home/highlights
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b43344ba63
+  migrated_from: input/data/committees-and-organisations.json#seats

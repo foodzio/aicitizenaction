@@ -1,0 +1,60 @@
+id: us-redwood-research
+type: civil-society
+geo:
+  country: us
+  label: United States (Berkeley)
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: info@rdwrs.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: cf0c34e320a4
+    - id: research-engagement-via-public
+      type: submission
+      value: https://www.redwoodresearch.org/research
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 549d1bbacf61
+    - id: homepage
+      type: homepage
+      value: https://www.redwoodresearch.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 90477836982d
+  region: United States
+  public_input: limited
+  tags:
+    - harm
+    - research
+strings:
+  name: Redwood Research
+  remit: "Non-profit research organisation that effectively founded the 'AI control' agenda: designing and red-teaming protocols that keep deployments safe even if the model is actively trying to subvert them. Known for control evaluations, monitoring protocols for malign LLM agents, the alignment-faking work with Anthropic, and helping developers build safety cases."
+  threat_model: Intentional misalignment and scheming — models that purposefully act against their developers' interests. Distinctively assumes alignment may fail and asks what safety measures survive that assumption. Loss-of-control, not misuse or near-term harms.
+  reality_check: Small and technically serious; will engage substantively with a good technical argument, and its researchers are notably responsive in public research forums. Will not engage with policy complaints or non-technical concerns.
+  gov_channel: Indirect — AI control has been adopted into frontier-lab safety frameworks and cited in safety-institute work; Redwood advises labs rather than governments.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+      note: Note the unusual domain — rdwrs.com, not redwoodresearch.org.
+    research-engagement-via-public:
+      label: Research engagement via public writing
+      scope: Researchers
+      note: Redwood staff engage actively and publicly on the Alignment Forum and LessWrong — in practice the highest-bandwidth way to reach them with a technical argument.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.redwoodresearch.org/research
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: b06fb03244
+  migrated_from: input/data/institutions.json

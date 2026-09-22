@@ -1,0 +1,56 @@
+id: gb-uk-parliament-e-petitions
+type: reporting-channel
+geo:
+  country: gb
+  label: UK
+facts:
+  routes:
+    - id: submission-page
+      type: consultation
+      value: https://petition.parliament.uk/help
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3cd5b07e6dd9
+    - id: homepage
+      type: homepage
+      value: https://petition.parliament.uk/help
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: eb1774e60714
+  region: United Kingdom
+  public_input: open
+  tags:
+    - law
+    - systemic
+strings:
+  name: UK Parliament e-petitions
+  remit: Petitions from British citizens and UK residents that ask for a clear action from the UK Government or Parliament on a matter within their responsibility.
+  reality_check: Largely symbolic, and should be labelled as such. The 10,000 threshold buys a departmental form response drafted to restate existing policy; the 100,000 threshold buys, at best, a sparsely-attended Westminster Hall debate that binds nobody. It is not remotely equivalent to written evidence to a select committee, which is published under your name, permanently citable and quoted in reports the Government must formally answer. Use petitions for public attention and media hooks, not for influence.
+  accepts: Petitions from British citizens and UK residents that ask for a clear action from the UK Government or Parliament on a matter within their responsibility.
+  does_not_accept: Local council matters; anything not calling for a clear action; petitions failing the standards check. Only petitions created on petition.parliament.uk qualify — petitions hosted elsewhere (Change.org, 38 Degrees) receive no government response and no committee consideration whatsoever.
+  how: Draft the petition, secure 5 supporters, submit for standards review, and if approved it is published and open for signatures for 6 months.
+  format: A short, single, clearly-actionable request.
+  timing: 6 months open once published.
+  after: At 10,000 signatures the Government publishes a written response. At 100,000 the petition is considered for a Westminster Hall debate — the Petitions Committee retains discretion and may decline if the topic was recently debated or is already scheduled.
+  operator: UK Government and Parliament, overseen by the Commons Petitions Committee
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Petitions from British citizens and UK residents that ask for a clear action from the UK Government or Parliament on a matter within their responsibility.
+      note: Draft the petition, secure 5 supporters, submit for standards review, and if approved it is published and open for signatures for 6 months.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://petition.parliament.uk/help
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c10a15d9c7
+  migrated_from: input/data/institutions.json

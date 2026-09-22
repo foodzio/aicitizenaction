@@ -1,0 +1,63 @@
+id: us-california-governor-s-office-emergency-services
+type: government
+geo:
+  country: us
+  sub: ca
+  label: California, USA
+facts:
+  routes:
+    - id: tfaia-reporting-portal
+      type: form
+      value: https://app.kaseware.us/public/#CALOES/e8921920-9735-4798-b24d-9c28c306f6e8
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0f62eab77d0a
+    - id: distinct-public-reporting-channel
+      type: form
+      value: not separately published
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 344578b9c1cf
+    - id: homepage
+      type: homepage
+      value: https://www.caloes.ca.gov/office-of-the-director/operations/homeland-security/california-cybersecurity-integration-center/transparency-in-frontier-ai-act-reporting/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 53185464688e
+  region: United States
+  public_input: open
+  tags:
+    - harm
+    - law
+strings:
+  name: California Governor's Office of Emergency Services (Cal OES) — Transparency in Frontier AI Act reporting, via the California Cybersecurity Integration Center
+  remit: Statutory recipient under SB 53 of critical safety incident reports from frontier AI developers (within 15 days of discovery; 24 hours where there is imminent risk of death or serious physical injury) and of periodic catastrophic-risk assessment summaries. SB 53 ALSO requires Cal OES to establish a mechanism for THE PUBLIC to report critical safety incidents. Cal OES does not fine or investigate developers itself; it receives, aggregates and refers, and reports to the legislature.
+  powers_text: investigate
+  reality_check: "Genuinely novel: a government incident-report inbox for frontier AI catastrophic risk that anyone can reach. It is brand new, thinly staffed, and sits inside the state's cyber-threat integration centre rather than an AI-specific unit, so expect reports to be triaged as security incidents. Its value is that filings here become part of the statutory record that feeds the AG's enforcement and the legislature's review. No email, no phone — the portal is the only published route, and reports are confidential."
+  notes: Buried four levels deep on the Cal OES site under Cal-CSIC; almost nobody finds it without the direct link.
+  routes:
+    tfaia-reporting-portal:
+      label: TFAIA reporting portal (secure)
+      scope: Submission of critical safety incidents and catastrophic-risk assessments. Cal OES describes it as a 'secure TFAIA Portal', also reachable by QR code from its page.
+      note: VERIFIED — this exact URL is published on the Cal OES TFAIA reporting page. It is a third-party (Kaseware) hosted intake, which is why the URL looks unofficial; it is the one Cal OES publishes.
+    distinct-public-reporting-channel:
+      label: Distinct public reporting channel
+      scope: n/a
+      note: VERIFIED PARTIAL ABSENCE — SB 53 requires a public reporting mechanism, but the Cal OES page presents a single portal without distinguishing a public-facing channel from the developer channel. In practice the portal above is the published route.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://app.kaseware.us/public/#CALOES/e8921920-9735-4798-b24d-9c28c306f6e8
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: a081ba0a1a
+  migrated_from: input/data/institutions.json

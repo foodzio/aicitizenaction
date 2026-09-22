@@ -1,0 +1,72 @@
+id: kr-seoul-national-university-ai-policy-trustworthy
+type: academic
+geo:
+  country: kr
+  label: Republic of Korea (Seoul)
+facts:
+  routes:
+    - id: center-trustworthy-ai
+      type: form
+      value: https://ctai.snu.ac.kr/en/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: "1338075268e3"
+    - id: snu-ai-policy-initiative
+      type: form
+      value: https://sapi.co.kr/eng/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 97d6cc2841c9
+    - id: seoul-ai-policy-conference
+      type: form
+      value: https://www.saipcon.com/2026-about/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d57be284cc09
+    - id: homepage
+      type: homepage
+      value: https://ctai.snu.ac.kr/en/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 322f5fc38b96
+  region: South Korea
+  public_input: limited
+  tags:
+    - research
+strings:
+  name: Seoul National University — AI policy and trustworthy AI centres
+  remit: "Two relevant SNU bodies: the Center for Trustworthy AI (CTAI) at ctai.snu.ac.kr, and the SNU AI Policy Initiative (SAPI) at sapi.co.kr, which convenes the annual Seoul AI Policy Conference (SAIPCON, 2026 edition held). Korea is a significant venue — it hosted the 2024 Seoul AI Summit that produced the Frontier AI Safety Commitments, and operates its own AI Safety Institute."
+  threat_model: Trustworthy AI and AI policy/regulation, with Korea's own AI Framework Act as a focal point. Governance-framed rather than technical-alignment framed.
+  reality_check: Poorly documented in English and I could not verify contact addresses. The conference route is the reliable one. Korea matters because of the Seoul Commitments lineage, but SNU is not a high-yield destination for an outside concern.
+  gov_channel: Real in Korea — SAPI convenes government, industry and academia, and Korea's AI Framework Act implementation is an active policy process.
+  routes:
+    center-trustworthy-ai:
+      label: Center for Trustworthy AI (CTAI)
+      scope: Public
+      note: "UNVERIFIED: no contact email confirmed."
+    snu-ai-policy-initiative:
+      label: SNU AI Policy Initiative (SAPI)
+      scope: Public
+      note: UNVERIFIED — the site returned a 403 to automated fetching. Check in a browser; do not assume an email address.
+    seoul-ai-policy-conference:
+      label: Seoul AI Policy Conference (SAIPCON)
+      scope: Conference participation
+      note: An open conference is the most tractable route in.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ctai.snu.ac.kr/en/
+      checked: 2026-09-22
+    - url: https://www.saipcon.com/2026-about/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 16febc88ab
+  migrated_from: input/data/institutions.json

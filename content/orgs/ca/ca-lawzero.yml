@@ -1,0 +1,67 @@
+id: ca-lawzero
+type: civil-society
+geo:
+  country: ca
+  label: Canada (Montreal)
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: info@lawzero.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 2a7bd61768a1
+    - id: media
+      type: email
+      value: media@lawzero.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ec5ebf064c3e
+    - id: careers
+      type: form
+      value: https://job-boards.greenhouse.io/lawzero
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: bc16b26987be
+    - id: homepage
+      type: homepage
+      value: https://lawzero.org/en
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: d95d5f414a42
+  region: Canada
+  public_input: limited
+  tags:
+    - research
+strings:
+  name: LawZero
+  remit: Non-profit founded by Yoshua Bengio in June 2025 to develop safe-by-design AI. Core technical bet is 'Scientist AI' — a non-agentic, uncertainty-quantifying system designed to understand and predict rather than to act, usable as a guardrail that monitors and vetoes unsafe actions by agentic systems.
+  threat_model: Loss of control from agentic AI with goals and self-preservation drives. Bengio's explicit thesis is that agency itself is the hazard and that non-agentic systems are the safe substrate.
+  reality_check: New and building. Two real published inboxes, which is more than most technical labs offer. Be aware that Bengio is spread across three major roles — reaching LawZero is not the same as reaching him, and volume to him is extremely high.
+  gov_channel: Very strong by proxy — Bengio chairs both the International AI Safety Report and co-chairs the UN Scientific Panel. LawZero itself has no formal advisory seat, but its founder is the single most connected individual in global AI safety governance.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+    media:
+      label: Media
+      scope: Press
+    careers:
+      label: Careers
+      scope: Researchers and engineers
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://job-boards.greenhouse.io/lawzero
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 32334e5cb2
+  migrated_from: input/data/institutions.json

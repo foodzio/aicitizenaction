@@ -1,0 +1,62 @@
+id: us-house-committee-energy-commerce
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://energycommerce.house.gov/representatives
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 21b62f893ad4
+    - id: public-route
+      type: submission
+      value: https://energycommerce.house.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c33cf4753421
+  level: federal
+  chamber: House
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Brett Guthrie
+      party: R
+      region: KY
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Frank Pallone, Jr.
+      party: D
+      region: NJ
+      verified_on: 2026-09-22
+strings:
+  name: House Committee on Energy and Commerce
+  ai_jurisdiction: "The broadest authorizing jurisdiction in the House and the main House counterpart to Senate Commerce. Owns the FTC, FCC, NTIA, interstate commerce, consumer protection, telecommunications, electricity and the grid, and health (FDA/HHS). Send here: comprehensive federal AI legislation and preemption of state AI laws, commercial data privacy, AI consumer protection and deceptive practices, AI and kids, AI's electricity demand and ratepayer impact, AI in health care, and communications infrastructure for AI."
+  business: "VERIFIED: 'AI Regulation and the Future of US Leadership' (Commerce, Manufacturing and Trade Subcommittee, 21 May 2025, 2322 Rayburn). 'Seizing America's AI Opportunity' (CMT Subcommittee). 'AI and the Grid: Meeting Growing Power Demand While Protecting Ratepayers' (Energy Subcommittee). Communications and Technology Subcommittee hearing on network infrastructure demands for AI and AI in media and entertainment; a separate C&T hearing on AI and communications infrastructure. CMT hearing on AI in American manufacturing, 3 Jun 2026 (docket HHRG-119-IF17-20260603). The committee was also the House locus of the 2025 fight over a federal moratorium on state AI laws."
+  public_route: "VERIFIED: https://energycommerce.house.gov/contact-us. Committee: 2125 Rayburn House Office Building, Washington DC 20515, 202-225-3641; press 202-226-4972. Minority site: https://democrats-energycommerce.house.gov/ (separate Democratic staff and contact)."
+  note: Chair/ranking verified 2026-09-22 from the House Clerk's official MemberData.xml, publish-date 2 Sep 2026, 119th Congress 2nd session.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://energycommerce.house.gov/representatives
+      checked: 2026-09-22
+    - url: https://energycommerce.house.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 1e6dd17906
+  migrated_from: input/data/committees-and-organisations.json#seats

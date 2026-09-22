@@ -1,0 +1,64 @@
+id: us-subcommittee-digital-assets-2
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://financialservices.house.gov/about/members.htm
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 65f575004111
+    - id: public-route
+      type: submission
+      value: https://financialservices.house.gov/subcommittees
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4148c0db752d
+  level: federal
+  chamber: House
+  parent: House Committee on Financial Services
+  tags:
+    - audit
+    - law
+  seats:
+    - role: chair
+      name: Bryan Steil
+      party: R
+      region: WI
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Stephen F. Lynch
+      party: D
+      region: MA
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Digital Assets, Financial Technology, and Artificial Intelligence
+  ai_jurisdiction: "The only House subcommittee outside Judiciary with 'Artificial Intelligence' in its name. Send here: AI in financial services products, AI agents transacting autonomously, algorithmic underwriting and fair lending, AI fraud detection and AI-enabled fraud, and the regulatory treatment of AI by the SEC, CFTC, OCC, Fed and CFPB."
+  business: "VERIFIED: hearing 'Unlocking the Next Generation of AI in the U.S. Financial System for Consumers, Businesses, and Competitiveness', 17 Jul 2026 — committee memorandum published at docs.house.gov/meetings/BA/BA21/20260717/119461/HHRG-119-BA21-20260717-SD002.pdf. The subcommittee has also handled the CLARITY Act digital-asset market-structure work."
+  public_route: Full-committee contact https://financialservices.house.gov/contact, 202-225-7502; whistleblower route at /contact/whistleblower.htm.
+  note: Exact name and leadership verified 2026-09-22 from the House Clerk's MemberData.xml (subcommittee code BA21).
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://financialservices.house.gov/about/members.htm
+      checked: 2026-09-22
+    - url: https://financialservices.house.gov/subcommittees
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: d42fa85b2b
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,62 @@
+id: us-subcommittee-commerce
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.appropriations.senate.gov/subcommittees/commerce-justice-science-and-related-agencies
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9fc73389e533
+    - id: public-route
+      type: submission
+      value: https://www.appropriations.senate.gov/subcommittees/commerce-justice-science-and-related-agencies
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: cf9037ad677d
+  level: federal
+  chamber: Senate
+  parent: Senate Committee on Appropriations
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Jerry Moran
+      party: R
+      region: KS
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Chris Van Hollen
+      party: D
+      region: MD
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Commerce, Justice, Science, and Related Agencies
+  ai_jurisdiction: THE subcommittee that funds NIST and, within it, the Center for AI Standards and Innovation (CAISI, the former US AI Safety Institute). Also funds NSF (including the National AI Research Resource), NASA, NOAA, DOJ and the FTC. If your concern is whether the US government has the capacity to evaluate frontier models at all, the number that decides it is written here.
+  business: "VERIFIED: subcommittee markup of the FY2027 Commerce, Justice, Science and Related Agencies Appropriations Act held in 2026; public written testimony for FY2027 accepted through 22 May 2026. See CRS report R48929, 'Overview of FY2027 Appropriations for Commerce, Justice, Science, and Related Agencies (CJS)', for the NIST and NSF lines."
+  public_route: Committee office S-128, The Capitol, 202-224-7257; subcommittee guidance is posted annually on the subcommittee page.
+  note: Leadership verified 2026-09-22 from senate.gov SSAP subcommittee roster. This is the answer to the brief's question about 'the subcommittee funding NIST/CAISI' on the Senate side.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.appropriations.senate.gov/subcommittees/commerce-justice-science-and-related-agencies
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b0ce50fd4a
+  migrated_from: input/data/committees-and-organisations.json#seats

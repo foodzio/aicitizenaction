@@ -1,0 +1,43 @@
+id: global-pauseai-2
+type: organisation
+geo:
+  country: global
+  label: International. Legally Stichting PauseAI (KvK 92951031), Netherlands. Local communities in many countries.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://pauseai.info/action
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 73e0dfa6dc4c
+  perspective: safety-advocacy
+  volunteers: yes
+  tags:
+    - join
+    - law
+    - tip
+strings:
+  name: PauseAI (PauseAI Global)
+  the_ask: Stop the development of the most powerful general AI systems, internationally, until we know how to make them safe.
+  what_they_do: Federation of local chapters coordinated by a global entity; petitions, protests, an email-your-representative builder, lobbying guides, 'microcommits' (weekly bite-sized actions), microgrants and volunteer stipends.
+  newcomer_action: Sign the PauseAI statement and the 'Say No To Superintelligent AI' petition (5 minutes), join the Discord, then use the email builder to write to your representative.
+  tips: No formal tip line; contact form and Discord
+  geography: International. Legally Stichting PauseAI (KvK 92951031), Netherlands. Local communities in many countries.
+  scale: Small paid core (CEO, Organizing Director, Communications Director; chapter directors paid by PauseAI Global) plus a large volunteer base. Budget not published.
+  spending: Not disclosed. Accepts donations at pauseai.info/donate.
+  caution: The ask is a halt to frontier development, not tighter rules. Protest-based but explicitly lawful — distinct from StopAI. Chapters vary a lot in activity; check your local one is alive before committing.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://pauseai.info/action
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 69e2e6158a
+  migrated_from: input/data/committees-and-organisations.json#orgs

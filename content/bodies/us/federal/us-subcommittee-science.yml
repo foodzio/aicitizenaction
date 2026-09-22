@@ -1,0 +1,62 @@
+id: us-subcommittee-science
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.commerce.senate.gov/about/commerce-subcommittees/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 753c6f8fb3ea
+    - id: public-route
+      type: submission
+      value: https://www.commerce.senate.gov/about/commerce-subcommittees/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d488b5fc4bce
+  level: federal
+  chamber: Senate
+  parent: Senate Committee on Commerce, Science, and Transportation
+  tags:
+    - law
+    - petition
+  seats:
+    - role: chair
+      name: Ted Budd
+      party: R
+      region: NC
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Tammy Baldwin
+      party: D
+      region: WI
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Science, Manufacturing, and Competitiveness
+  ai_jurisdiction: "NIST, CAISI, NSF and the standards/measurement side of AI. Send here: AI evaluation science and benchmarks, AI standards development, the National AI Research Resource, AI workforce and education, AI in manufacturing, and US-vs-China AI competitiveness framing. If your concern is 'who measures whether a model is safe', this is the authorizing subcommittee (the money is in Appropriations CJS)."
+  business: "VERIFIED: 3 Mar 2026 subcommittee hearing chaired by Sen. Budd evaluating innovative deployment of AI to support workforce, healthcare and industry (commerce.senate.gov/2026/3/senator-budd-chairs-subcommittee-hearing-to-evaluate-innovative-deployment-of-ai-to-support-workforce-healthcare-and-industry). Full-committee hearing 'Measuring What Matters: Science, Standards, and Strategic Competition' (21 Jul 2026) covers the same NIST/standards terrain."
+  public_route: "Full-committee staff lines: majority 202-224-1251, minority 202-224-0411."
+  note: Chair/ranking verified 2026-09-22 from senate.gov subcommittee roster.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.commerce.senate.gov/about/commerce-subcommittees/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: de207f4cb6
+  migrated_from: input/data/committees-and-organisations.json#seats

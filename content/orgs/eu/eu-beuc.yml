@@ -1,0 +1,43 @@
+id: eu-beuc
+type: organisation
+geo:
+  country: eu
+  label: European Union / Europe — 44 member organisations, 31 countries.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.beuc.eu/general/artificial-intelligence
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4efb0627a24e
+  perspective: civil-liberties
+  volunteers: no
+  tags:
+    - audit
+    - harm
+    - join
+strings:
+  name: BEUC (European Consumer Organisation)
+  the_ask: The EU AI Act must give consumers real, enforceable rights — accountability, transparency and control over AI — and must not be hollowed out by the digital omnibus deregulation.
+  what_they_do: Umbrella body for 44 independent national consumer organisations in 31 countries; lobbies EU institutions, files joint letters (e.g. July 2026 on keeping medical devices in the AI Act's scope) and publicly warned in May 2026 that the adopted AI omnibus 'risks creating dangerous regulatory loopholes and weakening consumer protection'.
+  newcomer_action: Join or contact your own national consumer organisation (the BEUC member in your country) — that is the only individual route; BEUC itself works with institutions, not individuals.
+  tips: no — complaints go to national member organisations
+  geography: European Union / Europe — 44 member organisations, 31 countries.
+  scale: Mid-sized Brussels secretariat representing very large national members.
+  spending: Member-funded and EU-grant funded; registered on the EU transparency register.
+  caution: BEUC does not take individual cases. Its influence is real but institutional; your leverage is through your national member organisation's campaigns.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.beuc.eu/general/artificial-intelligence
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: d1bc211a63
+  migrated_from: input/data/committees-and-organisations.json#orgs

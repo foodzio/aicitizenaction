@@ -1,0 +1,53 @@
+id: kr-ministry-science-ict-korea-ai-basic
+type: government
+geo:
+  country: kr
+  label: Republic of Korea
+facts:
+  routes:
+    - id: korea-ai-basic-act
+      type: docket
+      value: https://aibasicact.kr/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: ko
+      source_id: ec020a4e0e25
+    - id: homepage
+      type: homepage
+      value: https://aibasicact.kr/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 7e1ff505f5be
+  local_name: 인공지능 기본법
+  region: South Korea
+  public_input: limited
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Ministry of Science and ICT — Korea AI Basic Act information portal
+  remit: Dedicated government information portal for the AI Framework Act (commonly 'AI Basic Act'), which took effect 22 January 2026. Provides the statutory text, enforcement decree materials and guidance for businesses subject to high-impact AI and generative AI obligations, including the domestic-representative requirement for foreign providers.
+  powers_text: advise
+  reality_check: Relevant to foreign companies because the Act reaches them extraterritorially, but the portal is Korean-language and oriented to compliance, not to public input. Foreign firms engage through Korean counsel and their mandated domestic representative.
+  notes: Listed to give foreign parties a concrete starting point for the one non-Western AI statute that actually binds them.
+  routes:
+    korea-ai-basic-act:
+      label: Korea AI Basic Act portal
+      scope: statutory guidance
+      note: UNVERIFIED (search result). Not fetched; Korean-language.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://aibasicact.kr/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 6770ad86cd
+  migrated_from: input/data/institutions.json

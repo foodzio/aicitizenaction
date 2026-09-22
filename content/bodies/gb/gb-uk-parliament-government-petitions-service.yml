@@ -1,0 +1,64 @@
+id: gb-uk-parliament-government-petitions-service
+type: government
+geo:
+  country: gb
+  label: United Kingdom
+facts:
+  routes:
+    - id: start-petition
+      type: petition
+      value: https://petition.parliament.uk/petitions/start
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 60a06523914b
+    - id: browse-sign-open-petitions
+      type: petition
+      value: https://petition.parliament.uk/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4142196f65a7
+    - id: homepage
+      type: homepage
+      value: https://petition.parliament.uk/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 2bde4a98fd13
+  region: United Kingdom
+  public_input: open
+  tags:
+    - law
+    - systemic
+strings:
+  name: UK Parliament and Government Petitions Service
+  remit: Statutory-adjacent petitions platform run jointly by the House of Commons Petitions Committee and the Government. A petition reaching 10,000 signatures receives a written Government response; one reaching 100,000 signatures is considered for a Westminster Hall debate by the Petitions Committee. Petitions are open to British citizens and UK residents. The Committee can also take evidence and hold sessions on petition topics.
+  powers_text: advise
+  reality_check: "Honest assessment: the 10,000-signature Government response is almost always a restatement of existing policy drafted by the department, and is worth little on its own. The 100,000 threshold is different — a Westminster Hall debate creates a Hansard record, forces a minister to the despatch box, and generates press. For AI, no petition has yet moved policy. Its real utility is as a coordination and visibility device that makes a later select-committee submission or media campaign land harder, not as a lever in itself. Low cost, low expected value."
+  notes: Petitions close after six months and are rejected if they duplicate an existing petition or fall outside Government/Parliament responsibility.
+  routes:
+    start-petition:
+      label: Start a petition
+      scope: Any British citizen or UK resident. Requires five supporters before publication.
+      note: VERIFIED — https://petition.parliament.uk/ was fetched and confirmed live, with both thresholds and the start URL.
+    browse-sign-open-petitions:
+      label: Browse and sign open petitions
+      scope: Public signing; Government responses to petitions over 10,000 signatures are published on the site.
+      note: VERIFIED.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://petition.parliament.uk/petitions/start
+      checked: 2026-09-22
+    - url: https://petition.parliament.uk/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 6eb5a7944c
+  migrated_from: input/data/institutions.json

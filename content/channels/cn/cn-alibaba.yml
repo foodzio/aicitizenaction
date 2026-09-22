@@ -1,0 +1,73 @@
+id: cn-alibaba
+type: company
+geo:
+  country: cn
+  label: China
+facts:
+  routes:
+    - id: alibaba-security-response-center
+      type: disclosure
+      value: https://asrc.alibaba.com/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: e1422378dff4
+    - id: alibaba-cloud-trust-center
+      type: form
+      value: https://www.alibabacloud.com/en/trust-center/security-compliance-practice
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: b4f3b57c77f3
+    - id: homepage
+      type: homepage
+      value: https://qwen.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 49695afa9c14
+    - id: framework
+      type: framework
+      value: https://qwen.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 7b5cdf9bdca5
+  region: China
+  public_input: limited
+  tags:
+    - behaviour
+    - flaw
+strings:
+  name: Alibaba (Qwen)
+  remit: No separately named frontier safety or alignment function published in English. Security is handled by the Alibaba Security Response Center (ASRC); model governance follows PRC regulatory requirements (CAC algorithm and generative AI filings).
+  reality_check: No public accounts found of a foreign researcher successfully reporting a Qwen model-safety issue to Alibaba. Qwen weights are widely distributed on Hugging Face and most published safety findings about Qwen (red-teaming reports, jailbreak evaluations) are released as papers or blog posts rather than disclosed to Alibaba, which is itself the signal. CISA's September 2026 advisory on PRC AI developers adds a geopolitical overlay that makes direct engagement harder for some researchers.
+  notes: "Treat as: no verified English-language model-safety channel. ASRC exists and is real but is an infrastructure security platform with registration friction. If you have a finding about open-weight Qwen models, publishing it and filing on the Hugging Face model repo is likely to have more effect than the SRC."
+  routes:
+    alibaba-security-response-center:
+      label: Alibaba Security Response Center (ASRC)
+      scope: Vulnerability reporting across Alibaba properties. Page is fully JS-rendered and returned only a 'please enable JS' message when fetched, so scope, AI coverage and registration requirements could not be confirmed.
+      note: An ASRC Vulnerability Rewards Program exists (https://security.alibaba.com/announcement/announcement?id=151). Chinese SRC platforms typically require account registration and, often, a mainland phone number — a practical barrier for outside researchers.
+    alibaba-cloud-trust-center:
+      label: Alibaba Cloud trust center
+      scope: Compliance documentation, not an incident channel.
+    homepage:
+      label: Homepage
+    framework:
+      label: No published frontier safety framework found in English
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://asrc.alibaba.com/
+      checked: null
+    - url: https://www.alibabacloud.com/en/trust-center/security-compliance-practice
+      checked: null
+    - url: https://qwen.ai/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: f7edc9635d
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,58 @@
+id: us-assembly-standing-committee-science-technology
+type: seat
+geo:
+  country: us
+  sub: ny
+  label: New York
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://nyassembly.gov/comm/?id=159
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 62da620b2b74
+    - id: public-route
+      type: submission
+      value: https://nyassembly.gov/comm/?id=159
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 680234e892ad
+  level: state
+  chamber: Assembly
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Steven Otis
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: Assembly Standing Committee on Science and Technology
+  ai_jurisdiction: Assembly committee of reference for AI, emerging-technology and frontier-model bills. Alex Bores, the RAISE Act Assembly sponsor, sits on it.
+  business: A6453B (RAISE Act, Bores) — signed 19 Dec 2025, effective 1 Jan 2027; A6578 (AI training-data transparency); A10379 (companion chatbots); A9349 (One Fair Price Act); A9581 (AI employment-impact reporting); A3411B (generative-AI notice).
+  status: "VERIFIED — members listed 22 Sep 2026: Blumencranz, Bores, Burke, Conrad, Durso, Gibbs, Hooks, Vanel."
+  public_route: PARTIAL — the Assembly does not run a general online bill-comment tool equivalent to the Senate's. Participation is via (a) written testimony to noticed Assembly or joint public hearings, submitted to the committee in advance per the hearing notice, and (b) direct written submissions to the chair and your own member. Anyone may submit written testimony to a public hearing without appearing.
+  agency_route: NY Attorney General (https://ag.ny.gov/complaint-forms); NY Department of Financial Services frontier-AI oversight office.
+  note: Ranking minority member not published on the committee page; Blumencranz and Durso are the Republican members listed.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://nyassembly.gov/comm/?id=159
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 537d38aebd
+  migrated_from: input/data/committees-and-organisations.json#seats

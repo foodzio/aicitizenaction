@@ -1,0 +1,63 @@
+id: global-g7-hiroshima-ai-process-reporting-framework
+type: multilateral
+geo:
+  country: global
+  label: G7 / OECD-administered, global voluntary participation
+facts:
+  routes:
+    - id: haip-transparency-reporting-portal
+      type: submission
+      value: https://transparency.oecd.ai/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9ec2f95964bd
+    - id: haip-overview-framework-documents
+      type: form
+      value: https://oecd.ai/en/hiroshima
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f326d90aba1a
+    - id: homepage
+      type: homepage
+      value: https://oecd.ai/en/transparency/overview
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: f53be9f9224f
+  region: Other
+  public_input: limited
+  tags:
+    - flaw
+    - systemic
+strings:
+  name: G7 Hiroshima AI Process (HAIP) Reporting Framework
+  remit: Voluntary transparency reporting against the G7 Hiroshima Code of Conduct for organisations developing advanced AI. Launched by the OECD Feb 2025; first reports published April 2025; a streamlined version for SMEs launched May 2026. Companies self-report on risk identification, incident handling, security, content authentication and governance; reports are published on a public portal.
+  threat_model: Frontier-developer risk management — misuse, security, and safety-framework adequacy. Self-reported, so it measures disclosure, not actual safety.
+  reality_check: Useful as a source of citable company commitments you can hold firms to (as the Midas Project and SaferAI do), rather than as a place to send a concern. There is no public comment or challenge mechanism against a company's self-report — that gap is exactly what the independent trackers fill.
+  gov_channel: Direct into the G7 and OECD; reports are cited in G7 ministerial work.
+  routes:
+    haip-transparency-reporting-portal:
+      label: HAIP transparency reporting portal (for organisations that develop AI)
+      scope: AI-developing organisations of any size, voluntary
+      note: Not a channel for the general public; it is a self-disclosure form for developers.
+    haip-overview-framework-documents:
+      label: HAIP overview and framework documents
+      scope: Reference
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://transparency.oecd.ai/
+      checked: 2026-09-22
+    - url: https://oecd.ai/en/hiroshima
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: e0ae8f3d49
+  migrated_from: input/data/institutions.json

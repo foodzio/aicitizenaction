@@ -1,0 +1,64 @@
+id: us-regulations-gov-federal-register
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (federal) — operated by GSA's eRulemaking Program on behalf of ~300 agencies
+facts:
+  routes:
+    - id: submit-comment-any-federal
+      type: docket
+      value: https://www.regulations.gov/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: a8bd0135b537
+    - id: federal-register-where-comment
+      type: docket
+      value: https://www.federalregister.gov/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: f9e15bdebbfa
+    - id: homepage
+      type: homepage
+      value: https://www.regulations.gov/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: de79d733c60c
+  region: United States
+  public_input: open
+  tags:
+    - systemic
+strings:
+  name: Regulations.gov / the Federal Register (cross-cutting US public docket system)
+  remit: The single statutory channel through which any member of the public can submit a comment on a federal rulemaking, RFI, notice or guidance document, under the Administrative Procedure Act. Agencies must consider and respond to significant comments; failure to do so is grounds for a rule being vacated in court. Comments are published on the docket and are citable.
+  powers_text: advise
+  reality_check: "THIS IS THE REAL US LEVER and it is systematically under-used by safety-focused groups. Unlike a letter to an agency, a docket comment creates a legal record the agency must address, and it is the evidentiary basis for later litigation. Practitioner consensus is: comment early in the window (late comments get less analytical attention), address the agency's specific questions in their order, provide data the agency does not already have, and file separately rather than signing a mass-comment campaign — agencies weigh unique substantive comments and count form letters. The OSTP AI Action Plan RFI drew 10,000+ comments and visibly shaped the output; mass identical submissions in that docket were counted, not read."
+  notes: Included as a routing entry rather than a body, because for most US agencies it is the only input channel that legally matters.
+  routes:
+    submit-comment-any-federal:
+      label: Submit a comment on any federal docket
+      scope: Free, open to anyone worldwide, no account required for most dockets. Search by agency, docket ID or keyword.
+      note: UNVERIFIED BY FETCH — the site serves a JavaScript shell and returned no readable content to the retrieval tool, twice. The domain and function are not in doubt; the specific submission-flow text could not be confirmed.
+    federal-register-where-comment:
+      label: Federal Register — where comment windows are announced
+      scope: Every comment opportunity appears here first, with the docket ID and closing date.
+      note: UNVERIFIED as fetched; individual FR document URLs cited elsewhere in this directory WERE confirmed via agency pages.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.regulations.gov/
+      checked: null
+    - url: https://www.federalregister.gov/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: f54d7d407e
+  migrated_from: input/data/institutions.json

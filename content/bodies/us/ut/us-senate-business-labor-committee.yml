@@ -1,0 +1,58 @@
+id: us-senate-business-labor-committee
+type: seat
+geo:
+  country: us
+  sub: ut
+  label: Utah
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://le.utah.gov/committee/committee.jsp?year=2026&com=SSTBUS
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b9d9d9cf956a
+    - id: public-route
+      type: submission
+      value: https://le.utah.gov/committee/committee.jsp?year=2026&com=SSTBUS
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b333e02bdeb7
+  level: state
+  chamber: Senate
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Evan J. Vickers
+      party: R
+      verified_on: 2026-09-22
+strings:
+  name: Senate Business and Labor Committee
+  ai_jurisdiction: Senate standing committee for AI consumer-protection and technology-commerce bills, including SB 226 and the 2026 AI package.
+  business: "SB 226 (2025, narrowing the AI Policy Act); 2026: SB 256 (AI defamation and identity), SB 319 (insurance preauthorization human review), SB 150 (AI medical advice — Vickers' own bill), SB 73 (age verification), SB 69 (school devices)."
+  status: VERIFIED — nine AI bills cleared the 2026 general session; Utah continues to narrow broad disclosure duties while expanding targeted harms coverage (deepfakes, CSAM, health, insurance).
+  public_route: "PARTIAL — same Utah convention: virtual meeting attendance with an option to provide public comment at the chair's discretion, plus in-person comment at the chair's discretion. Contact committee secretary Zoe Adams or analyst Rohnin Randles in advance of the hearing."
+  agency_route: Utah Division of Consumer Protection / Office of Artificial Intelligence Policy — https://dcp.utah.gov/complaints/
+  note: "Members: Cullimore, Ipson, McCay, Musselman, Pitcher (D), Sandall, Weiler. Eight members total."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://le.utah.gov/committee/committee.jsp?year=2026&com=SSTBUS
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 944532a9c8
+  migrated_from: input/data/committees-and-organisations.json#seats

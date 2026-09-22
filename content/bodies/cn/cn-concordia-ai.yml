@@ -1,0 +1,90 @@
+id: cn-concordia-ai
+type: government
+geo:
+  country: cn
+  label: China (Beijing) and Singapore — NON-GOVERNMENTAL
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: info@concordia-ai.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en, zh
+      source_id: 116411fcba80
+    - id: contact-form
+      type: form
+      value: https://concordia-ai.com/contact/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: 1b7877173d95
+    - id: state-ai-safety-china
+      type: consultation
+      value: https://aisafetychina.com/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 00c85c9fff01
+    - id: chinese-perspectives-ai-safety
+      type: consultation
+      value: https://chineseperspectives.ai/About
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: bd2e173c93c4
+    - id: homepage
+      type: homepage
+      value: https://concordia-ai.com/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c4df734c93c3
+  local_name: "安远AI (registered entity: 北京谋远咨询有限公司)"
+  region: China
+  public_input: open
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Concordia AI
+  remit: "NOT a government body. A social enterprise 'dedicated to advancing global AI safety and governance', with offices in Beijing and Singapore. It is the de facto bridge organisation between the Chinese and international AI safety communities: it publishes the 'State of AI Safety in China' report series and the AI Safety in China newsletter, co-authored the Frontier AI Risk Management Framework with Shanghai AI Lab, and runs the Chinese Perspectives on AI Safety translation project. Included here because for most outsiders it is the only functioning entry point to Chinese AI safety governance."
+  powers_text: research
+  threat_model: Frontier AI risks including loss of control, CBRN and cyber misuse, framed through international coordination — with the specific thesis that US-China mutual understanding is a precondition for any effective global regime.
+  reality_check: "The single most reliable route for a non-Chinese-speaker trying to understand or engage with Chinese AI governance. English-language, responsive, explicitly international in mission. The caveat is the obvious one: it is a private organisation with no authority, cannot transmit complaints to Chinese regulators, and its access depends on remaining uncontroversial with Chinese authorities. Use it for understanding, not for redress."
+  notes: Category is marked 'government' only because the output schema requires that field; this organisation is explicitly non-governmental.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: general
+      note: VERIFIED — published on concordia-ai.com and fetched.
+    contact-form:
+      label: Contact form
+      scope: general
+      note: VERIFIED — published on the homepage.
+    state-ai-safety-china:
+      label: State of AI Safety in China
+      scope: publications
+      note: UNVERIFIED (search result).
+    chinese-perspectives-ai-safety:
+      label: Chinese Perspectives on AI Safety (translations)
+      scope: translations
+      note: UNVERIFIED (search result).
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://concordia-ai.com/contact/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: a14c1cab7b
+  migrated_from: input/data/institutions.json

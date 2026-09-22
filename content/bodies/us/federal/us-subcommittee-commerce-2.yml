@@ -1,0 +1,63 @@
+id: us-subcommittee-commerce-2
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://energycommerce.house.gov/committees/subcommittee/Commerce
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a154e01bd2a7
+    - id: public-route
+      type: submission
+      value: https://energycommerce.house.gov/committees/subcommittee/Commerce
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 23ceb9a35365
+  level: federal
+  chamber: House
+  parent: House Committee on Energy and Commerce
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Gus M. Bilirakis
+      party: R
+      region: FL
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Janice D. Schakowsky
+      party: D
+      region: IL
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Commerce, Manufacturing, and Trade
+  ai_jurisdiction: "The House's front-line AI regulation subcommittee. FTC jurisdiction, consumer protection, product safety, data privacy and security, and manufacturing/trade. Send here: general AI regulatory frameworks, federal preemption of state AI laws, AI transparency and disclosure to consumers, deceptive AI, AI in products and toys, and AI in manufacturing."
+  business: "VERIFIED: 'AI Regulation and the Future of US Leadership' (21 May 2025); 'Seizing America's AI Opportunity'; hearing on American leadership in manufacturing and AI's role in reshaping US manufacturing (3 Jun 2026, HHRG-119-IF17-20260603). Bilirakis has run a multi-hearing AI series continuing the committee's earlier 'Safeguarding Americans' Data' AI series."
+  public_route: "Full-committee contact: https://energycommerce.house.gov/contact-us, 2125 Rayburn, 202-225-3641; minority via https://democrats-energycommerce.house.gov/."
+  note: "IMPORTANT NAME CORRECTION: in the 119th Congress this subcommittee is 'Commerce, Manufacturing, and Trade'. The name 'Innovation, Data, and Commerce' used in the task brief was the 118th Congress name and no longer exists. Leadership verified 2026-09-22 from the House Clerk's MemberData.xml."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://energycommerce.house.gov/committees/subcommittee/Commerce
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 372a12e059
+  migrated_from: input/data/committees-and-organisations.json#seats

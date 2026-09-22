@@ -1,0 +1,62 @@
+id: cn-baidu
+type: company
+geo:
+  country: cn
+  label: China
+facts:
+  routes:
+    - id: baidu-security-response-center
+      type: disclosure
+      value: https://bsrc.baidu.com/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 88189b06f0c6
+    - id: homepage
+      type: homepage
+      value: https://www.baidu.com/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 57aaf548fad9
+    - id: framework
+      type: framework
+      value: https://yiyan.baidu.com/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: bd8ce2c30383
+  region: China
+  public_input: limited
+  tags:
+    - flaw
+strings:
+  name: Baidu
+  remit: No publicly named frontier safety function in English. Baidu Security Response Center (BSRC) handles vulnerabilities across Baidu properties including Ernie.
+  reality_check: No public accounts found of external researchers reporting Ernie model-safety issues to Baidu. BSRC is an established security platform with a long history, but there is no English-language AI safety intake and no published framework. Baidu's AI governance is driven by CAC filing requirements rather than a voluntary published framework.
+  notes: "Record as: no verified English-language model-safety channel. BSRC is the only real route and it is security-scoped and Chinese-language."
+  routes:
+    baidu-security-response-center:
+      label: Baidu Security Response Center (BSRC)
+      scope: Vulnerability reporting for Baidu products. Chinese-language platform; AI model safety scope not established.
+      note: Could not be fetched and read. Chinese SRC platforms generally require registration and often a mainland identity or phone number.
+    homepage:
+      label: Homepage
+    framework:
+      label: No published frontier safety framework found in English
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://bsrc.baidu.com/
+      checked: null
+    - url: https://www.baidu.com/
+      checked: null
+    - url: https://yiyan.baidu.com/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: bfd0c33fc6
+  migrated_from: input/data/institutions.json

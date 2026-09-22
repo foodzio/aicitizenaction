@@ -1,0 +1,73 @@
+id: us-algorithmic-justice-league
+type: civil-society
+geo:
+  country: us
+  label: United States (Cambridge, MA)
+facts:
+  routes:
+    - id: report-ai-harm-share
+      type: submission
+      value: https://report.ajl.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b424fd2e1acf
+    - id: general-contact
+      type: form
+      value: https://www.ajl.org/contact
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 44f97822bad0
+    - id: newsletter
+      type: form
+      value: https://newsletter.ajl.org/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3056c88a8bbf
+    - id: homepage
+      type: homepage
+      value: https://www.ajl.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 8af2f50ba425
+  region: United States
+  public_input: open
+  tags:
+    - research
+strings:
+  name: Algorithmic Justice League (AJL)
+  remit: Founded by Joy Buolamwini. Combines art, research and advocacy to expose AI bias and harm — the Gender Shades audits of facial recognition, the Coded Bias documentary, and campaigns against biometric surveillance. Operates a public harm-reporting platform and builds the voice of the most-impacted communities.
+  threat_model: Near-term algorithmic harm to real people, especially racialised and gendered bias in facial recognition, biometrics and automated decision-making. Civil-rights framing throughout. Absolutely not an alignment organisation.
+  reality_check: Small, mission-driven, and one of the few organisations that has built an actual intake for individual harm stories and has a track record of acting on them. High responsiveness for in-scope harms; out of scope for anything frontier or speculative.
+  gov_channel: Real — AJL research has directly driven municipal facial-recognition bans, FTC and congressional attention, and corporate product withdrawals (IBM, Amazon, Microsoft facial recognition).
+  routes:
+    report-ai-harm-share:
+      label: Report an AI harm / share your story — a genuine public harm intake
+      scope: Anyone who has experienced or witnessed algorithmic harm
+      note: One of the very few public-facing harm-reporting channels run by a civil society organisation. If a person has been harmed by a deployed system, this is a primary route.
+    general-contact:
+      label: General contact
+      scope: General
+      note: No public email address listed.
+    newsletter:
+      label: Newsletter
+      scope: Anyone
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://report.ajl.org
+      checked: 2026-09-22
+    - url: https://www.ajl.org/contact
+      checked: 2026-09-22
+    - url: https://newsletter.ajl.org/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 93dd8dcc6a
+  migrated_from: input/data/institutions.json

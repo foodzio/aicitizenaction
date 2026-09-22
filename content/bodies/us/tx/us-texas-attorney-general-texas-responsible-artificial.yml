@@ -1,0 +1,51 @@
+id: us-texas-attorney-general-texas-responsible-artificial
+type: government
+geo:
+  country: us
+  sub: tx
+  label: Texas, USA
+facts:
+  routes:
+    - id: file-ai-complaint-online
+      type: complaint
+      value: https://consumerprotection.texasattorneygeneral.gov/consumercomplaintportal/s/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f3b642008512
+    - id: homepage
+      type: homepage
+      value: https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint/consumer-ai-rights
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 936e8fae989b
+  region: United States
+  public_input: open
+  tags:
+    - harm
+strings:
+  name: Texas Attorney General — Texas Responsible Artificial Intelligence Governance Act (TRAIGA)
+  remit: Enforces TRAIGA, effective 1 January 2026. Prohibits AI developed or deployed to manipulate human behaviour to incite harm, social scoring by government, unlawful capture of biometric identifiers, AI intended to infringe constitutional rights, unlawful discrimination, and certain sexually explicit AI content; requires government agencies deploying consumer-facing AI to disclose it. The AG has exclusive enforcement, with a 60-day cure period, civil penalties and injunctive relief; there is no private right of action. TRAIGA also creates a regulatory sandbox and an AI Council.
+  powers_text: fine
+  reality_check: One of the very few US state routes where an ordinary member of the public can file an AI-specific complaint that lands in an enforcement queue. The Texas AG has stood up a dedicated AI complaint intake and published consumer-facing guidance — a stronger operational posture than most states. But TRAIGA turns on INTENT for most prohibitions, which is a high bar, and the 60-day cure period blunts enforcement. Scope is manipulation, discrimination, biometrics and government use — explicitly not frontier or catastrophic risk.
+  notes: TRAIGA is the template the preemption-minded federal position points to as a preferred state model, so it is less exposed to the December 2025 Executive Order than California's or New York's regimes.
+  routes:
+    file-ai-complaint-online:
+      label: File an AI complaint online (Texas AG consumer protection portal)
+      scope: Anyone may file an AI-specific complaint under TRAIGA. The AG's dedicated 'Consumer AI Rights' page links to this portal under the heading 'File An AI Complaint Online'.
+      note: VERIFIED at https://www.texasattorneygeneral.gov/consumer-protection/file-consumer-complaint/consumer-ai-rights.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://consumerprotection.texasattorneygeneral.gov/consumercomplaintportal/s/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 9b0bf65712
+  migrated_from: input/data/institutions.json

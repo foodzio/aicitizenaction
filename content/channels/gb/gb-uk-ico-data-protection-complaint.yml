@@ -1,0 +1,55 @@
+id: gb-uk-ico-data-protection-complaint
+type: reporting-channel
+geo:
+  country: gb
+  label: UK
+facts:
+  routes:
+    - id: submission-page
+      type: complaint
+      value: https://ico.org.uk/make-a-complaint/data-protection-framework/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e45597d4ee99
+    - id: homepage
+      type: homepage
+      value: https://ico.org.uk/make-a-complaint/data-protection-framework/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: efecb13b71df
+  region: United Kingdom
+  public_input: open
+  tags:
+    - harm
+strings:
+  name: UK ICO data protection complaint
+  remit: Complaints about how an organisation has handled your personal information. General customer service complaints only if combined with a data protection concern.
+  reality_check: "Be realistic: the modal outcome is that your complaint is logged as intelligence. Its value is cumulative and systemic — the ICO acts on patterns, so a well-evidenced complaint contributes to a case file even when your individual outcome is nil. Do not expect personal redress."
+  accepts: Complaints about how an organisation has handled your personal information. General customer service complaints only if combined with a data protection concern.
+  does_not_accept: Non-data-protection grievances. The ICO does not award compensation or obtain individual redress — outcomes are regulatory, not remedial. Compensation requires a court claim.
+  how: Raise it with the organisation first and give them a chance to put things right, then complain via ico.org.uk/make-a-complaint. Expect the ICO to ask what the organisation said.
+  format: Online form; concise factual narrative plus the organisation's response.
+  timing: Rolling. Where you ask the ICO to review how it handled your complaint, a reviewing officer writes to you within 30 calendar days.
+  after: Outcomes range from recording the complaint for intelligence purposes, to confirming the organisation complied, to asking the organisation to improve practice, to regulatory action in appropriate cases. Most complaints end at the first two.
+  operator: Information Commissioner's Office
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Complaints about how an organisation has handled your personal information. General customer service complaints only if combined with a data protection concern.
+      note: Raise it with the organisation first and give them a chance to put things right, then complain via ico.org.uk/make-a-complaint. Expect the ICO to ask what the organisation said.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ico.org.uk/make-a-complaint/data-protection-framework/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c34364b81d
+  migrated_from: input/data/institutions.json

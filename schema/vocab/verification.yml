@@ -1,0 +1,6 @@
+# Three states, not two. There is no default: every route states one explicitly.
+id: verification
+values:
+  - { id: "true", label: Verified, description: The page was fetched and the contact route was seen on it }
+  - { id: "false", label: Unverified, description: Cited by a secondary source; the page could not be read. A lead to confirm, not an address to rely on }
+  - { id: "null", label: Unchecked, description: Not independently checked. Homepage and framework links, recorded as listed }

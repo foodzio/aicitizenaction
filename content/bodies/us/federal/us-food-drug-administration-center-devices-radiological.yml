@@ -1,0 +1,87 @@
+id: us-food-drug-administration-center-devices-radiological
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (federal), HHS
+facts:
+  routes:
+    - id: open-consultation
+      type: docket
+      value: https://www.regulations.gov/docket/FDA-2026-N-7874
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0f3d19f0d1f0
+    - id: ask-digital-health-regulatory
+      type: form
+      value: https://www.fda.gov/medical-devices/digital-health-center-excellence/ask-question-about-digital-health-regulatory-policies
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b651050fcc52
+    - id: medwatch-adverse-event-reporting
+      type: complaint
+      value: https://www.fda.gov/safety/medwatch-fda-safety-information-and-adverse-event-reporting-program
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: a69269f4bc59
+    - id: named-dhcoe-email
+      type: email
+      value: none published
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 05ecadf934c2
+    - id: homepage
+      type: homepage
+      value: https://www.fda.gov/medical-devices/digital-health-center-excellence
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 711106e4f7fe
+  region: United States
+  public_input: open
+  tags:
+    - harm
+    - systemic
+strings:
+  name: U.S. Food and Drug Administration (FDA) — Center for Devices and Radiological Health / Digital Health Center of Excellence
+  remit: Regulates AI/ML-enabled medical devices and Software as a Medical Device. Can require premarket clearance (510(k)), De Novo or PMA approval; mandates Predetermined Change Control Plans for adaptive models; can order recalls, issue warning letters, and impose civil money penalties. Runs a Digital Health Advisory Committee. In Aug 2026 it opened a major consultation on how to regulate GENERATIVE AI-enabled devices, including foundation models and agentic AI systems.
+  powers_text: compel
+  reality_check: This is one of the best-value open windows in the entire US landscape RIGHT NOW. FDA-2026-N-7874 closes 19 October 2026, explicitly invites the public, and explicitly asks about foundation models and agentic systems — meaning frontier-adjacent arguments are in scope here in a way they are not at the FTC. Docket comments are published, read by the review divisions, and FDA routinely publishes a comment-response analysis. The generic 1-888 line and the question form are for regulatory-status queries and will not carry a policy argument.
+  notes: FDA's remit stops at devices and drug development; a general-purpose chatbot giving health advice may fall outside it depending on claims made.
+  routes:
+    open-consultation:
+      label: "OPEN CONSULTATION: Considerations for the Regulation of Generative AI-Enabled Medical Devices"
+      scope: Open to 'device manufacturers, clinicians, consumers, researchers, the public, and other interested parties'. Covers a two-axis risk framework, competency-assessment-based premarket evaluation, postmarket monitoring, and foundation models / agentic AI. Announced 18 August 2026; comments due 19 October 2026.
+      note: VERIFIED via the FDA press announcement, which states the docket number and deadline.
+    ask-digital-health-regulatory:
+      label: Ask a digital health regulatory policy question
+      scope: Public questions on digital health regulatory policy.
+      note: VERIFIED — linked from the Digital Health Center of Excellence page.
+    medwatch-adverse-event-reporting:
+      label: MedWatch adverse event reporting
+      scope: Patients and clinicians can report harm from an AI-enabled device.
+      note: UNVERIFIED as fetched; standard FDA URL.
+    named-dhcoe-email:
+      label: Named DHCoE email
+      scope: n/a
+      note: VERIFIED ABSENCE — the Digital Health Center of Excellence page publishes no email address, only the question form and the FDA general line 1-888-INFO-FDA (1-888-463-6332).
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.regulations.gov/docket/FDA-2026-N-7874
+      checked: 2026-09-22
+    - url: https://www.fda.gov/medical-devices/digital-health-center-excellence/ask-question-about-digital-health-regulatory-policies
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b26d78c7eb
+  migrated_from: input/data/institutions.json

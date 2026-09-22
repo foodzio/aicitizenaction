@@ -1,0 +1,75 @@
+id: us-ai-whistleblower-initiative
+type: civil-society
+geo:
+  country: us
+  label: United States
+facts:
+  routes:
+    - id: contact-hub-connects-vetted
+      type: form
+      value: https://aiwi.org/contact-hub/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 07382d6db50c
+    - id: general-contact
+      type: form
+      value: https://aiwi.org/contact/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b7f133fdd3fd
+    - id: third-opinion-independent-expert
+      type: submission
+      value: https://aiwi.org/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 71b5b089c44a
+    - id: homepage
+      type: homepage
+      value: https://aiwi.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 1e301437a6b7
+  region: United States
+  public_input: open
+  tags:
+    - flaw
+    - insider
+    - research
+    - systemic
+strings:
+  name: AI Whistleblower Initiative (AIWI)
+  remit: Research, policy and direct support for frontier-AI employees considering disclosure. Founded by Karl Koch. Offers free consultations with specialist whistleblowing attorneys (pro bono or via a defence fund), an AI Whistleblower Defense Fund, a 'Third Opinion' service for independent expert assessment of a concern, privacy and security guidance, and a published AI Whistleblower Guide. Also does policy work on whistleblower protections for AI.
+  threat_model: "Meta-level: the information asymmetry between frontier labs and the public. Agnostic as to which risk — it exists so that insiders with any credible safety concern can surface it safely."
+  reality_check: "Not on the original list but it is the single most important routing destination for anyone inside an AI company with a safety concern — every other watchdog here defers to it. Small, purpose-built, responsive. UNVERIFIED: no dedicated secure email or Signal channel was published on the homepage; use the Contact Hub."
+  gov_channel: Policy work on whistleblower protection statutes (e.g. proposed AI whistleblower protection legislation); no formal advisory seat.
+  routes:
+    contact-hub-connects-vetted:
+      label: Contact Hub — connects to vetted specialist attorneys
+      scope: Current and former employees of AI companies
+    general-contact:
+      label: General contact
+      scope: Anyone
+    third-opinion-independent-expert:
+      label: "'Third Opinion' — independent expert assessment of whether a concern is well-founded"
+      scope: Insiders unsure whether their concern warrants escalation
+      note: "Unusual and valuable: a way to get a concern sanity-checked before taking legal or public risk."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://aiwi.org/contact-hub/
+      checked: 2026-09-22
+    - url: https://aiwi.org/contact/
+      checked: 2026-09-22
+    - url: https://aiwi.org/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: df706bdae1
+  migrated_from: input/data/institutions.json

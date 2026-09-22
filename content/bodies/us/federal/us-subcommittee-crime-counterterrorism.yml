@@ -1,0 +1,61 @@
+id: us-subcommittee-crime-counterterrorism
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.judiciary.senate.gov/about/subcommittees
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: deb39ecb87eb
+    - id: public-route
+      type: submission
+      value: https://www.judiciary.senate.gov/about/subcommittees
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d99a27db53f4
+  level: federal
+  chamber: Senate
+  parent: Senate Committee on the Judiciary
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Josh Hawley
+      party: R
+      region: MO
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Dick Durbin
+      party: D
+      region: IL
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Crime and Counterterrorism
+  ai_jurisdiction: Criminal misuse of AI and, in the 119th Congress, the de facto venue for AI chatbot harms to children and vulnerable users. Also AI-enabled fraud and impersonation, AI-generated CSAM, and AI in terrorism and bioweapon uplift framed as a criminal matter.
+  business: "VERIFIED: hearing 'Examining the Harm of AI Chatbots' (S.Hrg. 119-256, 16 Sep 2025), at which Durbin previewed the AI LEAD Act; S.2937 AI LEAD Act introduced 29 Sep 2025 by Durbin and Hawley. Hawley is also lead sponsor of S.2938 Artificial Intelligence Risk Evaluation Act of 2025 (referred to Commerce, not here)."
+  public_route: Full-committee routes; Hawley 202-224-6154, Durbin 202-224-2152. Hawley's office has actively solicited accounts from families harmed by AI chatbots.
+  note: Verified 2026-09-22 from senate.gov SSJU subcommittee roster. Worth knowing because the FLI guide points chatbot-harm concerns at the Privacy/Technology subcommittee, but the actual 119th Congress hearing and bill came out of this one.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.judiciary.senate.gov/about/subcommittees
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: f64e074899
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,79 @@
+id: sg-infocomm-media-development-authority
+type: government
+geo:
+  country: sg
+  label: Singapore
+facts:
+  routes:
+    - id: imda-ai-page
+      type: consultation
+      value: https://www.imda.gov.sg/about-imda/emerging-technologies-and-research/artificial-intelligence
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: acb3b19cd6e7
+    - id: imda-trust-tech-page
+      type: consultation
+      value: https://www.imda.gov.sg/about-imda/emerging-technologies-and-research/trust-tech
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 2423d18b979f
+    - id: aisi-factsheet
+      type: docket
+      value: https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2024/digital-trust-centre
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 29dfcf47c9d3
+    - id: homepage
+      type: homepage
+      value: https://www.imda.gov.sg/about-imda/emerging-technologies-and-research/artificial-intelligence
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: b101fe92b656
+  region: Singapore
+  public_input: open
+  tags:
+    - systemic
+strings:
+  name: Infocomm Media Development Authority (IMDA)
+  remit: Statutory board and the policy owner for the Singapore AI Safety Institute, responsible for baseline AI policy and international AI-safety engagement. Produced the Model AI Governance Framework for Generative AI (2024), AI Verify (an open-source AI governance testing toolkit) and the AI Verify Foundation. IMDA holds genuine statutory regulatory powers over telecoms, media and data (as PDPA administrator, with fining power), though its AI governance instruments are voluntary frameworks rather than binding AI rules.
+  powers_text: fine
+  reality_check: "IMDA is the realistic Singapore channel. It has historically run genuinely open public consultations on AI governance (the GenAI framework consultation drew international submissions from major AI labs and foreign industry bodies, and responses were published), everything is in English, and Singapore actively courts international input as part of its convening strategy. This is one of the few entries where 'accepts foreign input: yes' is evidenced rather than assumed."
+  notes: AI Verify is open-source and accepts external contributions, which is another genuine foreign-participation route. Singapore's AI safety framing centres on practical assurance and testing rather than catastrophic risk.
+  routes:
+    imda-ai-page:
+      label: IMDA AI page
+      scope: general
+      note: UNVERIFIED (search result).
+    imda-trust-tech-page:
+      label: IMDA Trust Tech page
+      scope: general
+      note: UNVERIFIED (search result).
+    aisi-factsheet:
+      label: AISI factsheet (designation of DTC)
+      scope: background
+      note: UNVERIFIED (search result).
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.imda.gov.sg/about-imda/emerging-technologies-and-research/artificial-intelligence
+      checked: null
+    - url: https://www.imda.gov.sg/about-imda/emerging-technologies-and-research/trust-tech
+      checked: null
+    - url: https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2024/digital-trust-centre
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 91bbbabcee
+  migrated_from: input/data/institutions.json

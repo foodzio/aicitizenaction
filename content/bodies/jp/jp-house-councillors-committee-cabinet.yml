@@ -1,0 +1,61 @@
+id: jp-house-councillors-committee-cabinet
+type: seat
+geo:
+  country: jp
+  label: Japan
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.sangiin.go.jp/japanese/joho1/kousei/konkokkai/current/list/l0063.htm
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Japanese only. The Sangiin site has a thin English section but committee rosters and petition procedure are Japanese-only.
+      source_id: 86cb48178e3f
+    - id: public-route
+      type: submission
+      value: https://www.sangiin.go.jp/japanese/joho1/kousei/konkokkai/current/list/l0063.htm
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Japanese only. The Sangiin site has a thin English section but committee rosters and petition procedure are Japanese-only.
+      source_id: 5f0cc9fd3686
+  local_name: 参議院 内閣委員会
+  level: national
+  tags:
+    - audit
+    - law
+    - petition
+  seats:
+    - role: chair
+      name: KITAMURA Tsuneo (北村経夫)
+      verified_on: 2026-09-21
+strings:
+  name: House of Councillors Committee on Cabinet
+  ai_jurisdiction: "Upper-house counterpart. Same jurisdiction: Cabinet Office bills including AI, science and technology policy, digital, personal information protection. Reviews AI legislation after Lower House passage."
+  business: "AI Act implementation oversight and the AI Basic Plan Phase II. Committee composition: chair plus 4 理事 (directors) and 18 members, spanning LDP, CDP, DPP, Komeito, Ishin, Sanseitō, JCP and others."
+  public_route: "Same as the Lower House: 参考人 (expert witness) appearance by committee invitation only, or a 請願 (petition) which requires a sitting Councillor to introduce it. No open written-evidence process."
+  format_rules: Petition requires a sponsoring member (紹介議員). No numeric threshold.
+  realistic: Not realistically usable by an outsider. Same assessment as the Lower House committee. Its one practical advantage is that the Sangiin roster page is better maintained — it carried an as-of date of 21 September 2026, one day before this research, which is why this chair is verified and the Lower House one is not.
+  language_note: Japanese only. The Sangiin site has a thin English section but committee rosters and petition procedure are Japanese-only.
+  note: "Chair VERIFIED from the official Sangiin roster page, as-of date 21 September 2026. Session context: the 221st Diet (special session) shown as running 18 February to 25 July 2026."
+  seat_notes:
+    chair: 委員長 (Chair), Liberal Democratic Party
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-21
+  review_by: 2026-12-20
+  sources:
+    - url: https://www.sangiin.go.jp/japanese/joho1/kousei/konkokkai/current/list/l0063.htm
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 2cc3971aaf
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,58 @@
+id: gb-house-commons-science-technology-committee
+type: seat
+geo:
+  country: gb
+  label: United Kingdom
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/membership/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 23e1122ab035
+    - id: public-route
+      type: submission
+      value: https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: af00424415d8
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Dame Chi Onwurah MP (Labour, Newcastle upon Tyne Central and West)
+      verified_on: 2026-09-22
+strings:
+  name: House of Commons Science and Technology Committee (committee id 135; formerly the Science, Innovation and Technology Committee)
+  ai_jurisdiction: "Commons departmental select committee for science, research and technology policy. Following the abolition of DSIT in July 2026 its title reverted to 'Science and Technology Committee'. It scrutinises AI research, compute, AI in government, and has written to Government on UK AI sovereignty (letter reported 15 September 2026). Its live inquiries touch AI obliquely rather than head-on: 'Low-energy computing' (opened 16 April 2026) and 'Neuroscience and digital childhoods' (opened 24 March 2026)."
+  business: "7 open inquiries as at 22 Sep 2026: Low-energy computing; Neuroscience and digital childhoods; Science and regulation of hair and beauty products; Innovation and global food security; Science diplomacy (reported 7 Jul 2026); Digital centre of government (reported 3 Jun 2026); Innovation showcase."
+  public_route: Submit written evidence to an open inquiry via the secure online portal linked from that inquiry's page. Anyone may submit — no need to be an expert or an organisation.
+  format_rules: Usually no more than 3,000 words; numbered paragraphs and headings; single Word/ODT/RTF file, max 25MB; no logos or decorative graphics. Must not have been published elsewhere. Accepted evidence becomes the property of the committee, is published online permanently and forms part of the parliamentary record; you may not republish it yourself until the committee authorises publication.
+  key_people: "George Freeman MP (Con) and Rt Hon Kit Malthouse MP (Con) are the senior opposition members; Dr Allison Gardner MP (Lab) sits on the committee AND chairs the APPG on AI — she is the single most efficient point of contact for AI in the Commons. Other members: Tom Collins, Emily Darlington, Maya Ellis, Samantha Niblett, Freddie van Mierlo (LD), Martin Wrigley (LD), Daniel Zeichner."
+  note: "VERIFIED 2026-09-22 from the committee's own membership and news pages. NAME CHANGE: the URL slug still reads 'science-innovation-and-technology-committee' but the page heading and browser title now read 'Science and Technology Committee'. No inquiry with 'AI' in the title is currently open here."
+  seat_notes:
+    chair: Chair
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/membership/
+      checked: 2026-09-22
+    - url: https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 86ee135bc7
+  migrated_from: input/data/committees-and-organisations.json#seats

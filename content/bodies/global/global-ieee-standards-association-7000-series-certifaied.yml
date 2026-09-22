@@ -1,0 +1,86 @@
+id: global-ieee-standards-association-7000-series-certifaied
+type: standards
+geo:
+  country: global
+  label: International (US-headquartered professional body)
+facts:
+  routes:
+    - id: ieee-sa-individual-membership
+      type: membership
+      value: https://standards.ieee.org/about/membership/individuals/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6b1e30b71261
+    - id: opportunities-participate
+      type: membership
+      value: https://standards.ieee.org/participate/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0ca953d8e6ad
+    - id: ieee-sa-contact
+      type: form
+      value: https://standards.ieee.org/about/contact/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: dd9cab385c40
+    - id: certifaied-programme-enquiry
+      type: form
+      value: https://forms1.ieee.org/CertifAIEd.html
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4ee433b3c5da
+    - id: homepage
+      type: homepage
+      value: https://standards.ieee.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: a5c30e4be273
+  region: Global
+  public_input: open
+  tags:
+    - systemic
+strings:
+  name: IEEE Standards Association — 7000 series and CertifAIEd
+  remit: IEEE 7000-series standards on ethical system design (IEEE 7000 process standard, 7001 transparency, 7002 data privacy, 7010 wellbeing, etc.), the Ethically Aligned Design framework from the Global Initiative on Ethics of Autonomous and Intelligent Systems, and CertifAIEd, an ethics certification/assessment programme for AI systems with trained assessors.
+  threat_model: "Applied ethics and value-alignment-by-design at the system level: transparency, bias, privacy, wellbeing, accountability. Near-term and design-stage, not frontier catastrophic risk."
+  reality_check: "The single most open standards route for an individual. Working groups are frequently small and welcome active contributors; an engaged newcomer can have real drafting influence within months. Trade-off: IEEE 7000-series standards have much less regulatory force than ISO/IEC 42001 or the CEN-CENELEC harmonised standards."
+  gov_channel: Moderate — IEEE standards are widely referenced and CertifAIEd has been piloted by public bodies, but IEEE has no regulatory mandate.
+  routes:
+    ieee-sa-individual-membership:
+      label: IEEE SA individual membership — the distinguishing feature vs ISO/CEN
+      scope: Any individual, worldwide, for a membership fee
+      note: IEEE runs an individual-based standards process alongside its entity-based one. You do NOT need a national standards body or an employer to join a working group. This makes IEEE by far the most accessible major standards body for an unaffiliated person.
+    opportunities-participate:
+      label: Opportunities to participate (working groups, ballot groups)
+      scope: Open
+    ieee-sa-contact:
+      label: IEEE SA contact
+      scope: General enquiries about joining a working group or balloting
+    certifaied-programme-enquiry:
+      label: CertifAIEd programme enquiry
+      scope: Assessors and organisations seeking certification
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://standards.ieee.org/about/membership/individuals/
+      checked: 2026-09-22
+    - url: https://standards.ieee.org/participate/
+      checked: 2026-09-22
+    - url: https://standards.ieee.org/about/contact/
+      checked: 2026-09-22
+    - url: https://forms1.ieee.org/CertifAIEd.html
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 2ec26e107f
+  migrated_from: input/data/institutions.json

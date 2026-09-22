@@ -1,0 +1,78 @@
+id: br-autoridade-nacional-protecao-dados
+type: government
+geo:
+  country: br
+  label: Brazil
+facts:
+  routes:
+    - id: anpd-consultation-ai-data
+      type: consultation
+      value: https://www.gov.br/participamaisbrasil/tomada-de-subsidios-inteligencia-artificial-e-revisao-de-decisoes-automatizadas
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: pt
+      source_id: b6c72753c6c4
+    - id: migration-contact-replacement-platform
+      type: email
+      value: participacaodigital@presidencia.gov.br
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: pt
+      source_id: 6ecebd85e655
+    - id: anpd-official-site
+      type: complaint
+      value: https://www.gov.br/anpd/pt-br
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: pt
+      source_id: 0ee0fb204282
+    - id: homepage
+      type: homepage
+      value: https://www.gov.br/anpd/pt-br
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: bae0f0978161
+  local_name: Autoridade Nacional de Proteção de Dados
+  region: Latin America
+  public_input: open
+  tags:
+    - harm
+    - law
+    - systemic
+strings:
+  name: Autoridade Nacional de Proteção de Dados (ANPD)
+  remit: Brazil's data protection authority, an autonomous federal agency. Already regulates AI indirectly through LGPD Article 20 (right to review of automated decisions) and has issued preventive measures against AI training on personal data (notably the 2024 order suspending Meta's use of Brazilian personal data for AI training — real, exercised power). Under PL 2338/2023 as approved by the Senate in December 2024, ANPD would coordinate the proposed Sistema Nacional de Regulação e Governança de IA (SIA). Can investigate, issue preventive suspension orders, and fine (LGPD fines up to 2% of Brazilian turnover, capped at BRL 50 million per infraction).
+  powers_text: fine
+  reality_check: Mixed. ANPD genuinely runs open consultations and genuinely enforces. But the consultation infrastructure moved during 2025–26 (Participa+Brasil shut down, replaced by Brasil Participativo), so verify any URL before use. Formal complaint filing requires a gov.br account tied to a CPF (Brazilian taxpayer number), which effectively excludes non-residents. Everything is in Portuguese. Informal email to ANPD's ouvidoria is the realistic foreign route, but I could not verify that address.
+  notes: Brazil is not a network member and has no AI safety institute.
+  routes:
+    anpd-consultation-ai-data:
+      label: ANPD consultation on AI and data protection (Participa+Brasil archive)
+      scope: closed consultation
+      note: "VERIFIED fetched — and the result is important: this consultation is CLOSED ('Envio de opiniões não permitido') and the entire Participa+Brasil platform has been SHUT DOWN ('o Participa +Brasil foi ENCERRADO!'). Any directory still citing Participa+Brasil is broken."
+    migration-contact-replacement-platform:
+      label: Migration contact for the replacement platform (Brasil Participativo)
+      scope: platform enquiries
+      note: VERIFIED — published on the Participa+Brasil shutdown notice that I fetched. This is a platform-administration mailbox, not an ANPD policy channel.
+    anpd-official-site:
+      label: ANPD official site (complaints / peticionamento)
+      scope: data protection complaints
+      note: UNVERIFIED URL. ANPD complaints normally run through the federal Fala.BR / peticionamento eletrônico system, which typically requires a gov.br account — obtainable in practice only with a CPF.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.gov.br/participamaisbrasil/tomada-de-subsidios-inteligencia-artificial-e-revisao-de-decisoes-automatizadas
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 34faeb1926
+  migrated_from: input/data/institutions.json

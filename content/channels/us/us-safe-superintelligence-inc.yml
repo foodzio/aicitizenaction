@@ -1,0 +1,60 @@
+id: us-safe-superintelligence-inc
+type: company
+geo:
+  country: us
+  label: USA / Israel
+facts:
+  routes:
+    - id: contact-page
+      type: form
+      value: https://ssi.inc/contact
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 9da26e4f9110
+    - id: homepage
+      type: homepage
+      value: https://ssi.inc/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 4e73e452bdd3
+    - id: framework
+      type: framework
+      value: https://ssi.inc/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: a0ae81c87c27
+  region: United States
+  public_input: none
+  tags:
+    - behaviour
+strings:
+  name: Safe Superintelligence Inc. (SSI)
+  remit: The entire company is framed as a safety-first effort — 'safety and capabilities in tandem' — but no internal safety function, framework, model spec or governance structure has been published.
+  reality_check: Nothing to report on, which is itself the finding. SSI has shipped no product, published no safety framework, joined no public commitment process with a published framework, and has essentially no public communications surface beyond a single-page site and a jobs link. There is no external safety channel and no evidence anyone has reached one.
+  notes: "A company whose name is its safety claim publishes no safety framework and no safety contact. Record as: no meaningful public safety channel. For a citizen this is a dead end; the accountability route is press and policy, not correspondence."
+  routes:
+    contact-page:
+      label: Contact page
+      scope: The only contact route linked from the homepage. No email address is published anywhere on the site.
+      note: Verified that the homepage publishes no email addresses; the contact page itself was not readable.
+    homepage:
+      label: Homepage
+    framework:
+      label: No published safety framework, scaling policy or model spec
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ssi.inc/contact
+      checked: null
+    - url: https://ssi.inc/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: bb9b2144fe
+  migrated_from: input/data/institutions.json

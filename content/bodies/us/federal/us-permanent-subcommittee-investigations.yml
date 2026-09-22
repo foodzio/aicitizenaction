@@ -1,0 +1,64 @@
+id: us-permanent-subcommittee-investigations
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.hsgac.senate.gov/about/members/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0ce9bcdb58a2
+    - id: public-route
+      type: submission
+      value: https://www.hsgac.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 42e1f3d3b7e9
+  level: federal
+  chamber: Senate
+  parent: Senate Committee on Homeland Security and Governmental Affairs
+  tags:
+    - audit
+    - law
+  seats:
+    - role: chair
+      name: Ron Johnson
+      party: R
+      region: WI
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Richard Blumenthal
+      party: D
+      region: CT
+      verified_on: 2026-09-22
+strings:
+  name: Permanent Subcommittee on Investigations
+  ai_jurisdiction: The Senate's standing investigative body, with subpoena power. Not an AI-jurisdiction subcommittee by name, but the correct destination for evidence-backed allegations about an AI company's conduct, federal AI contracting abuse, or AI-enabled fraud schemes. If you have documents rather than an opinion, this is the door.
+  business: UNVERIFIED for AI-specific 2025-2026 investigations. Blumenthal, as ranking member here, is co-sponsor of S.2938 Artificial Intelligence Risk Evaluation Act and a co-author of the bipartisan AI framework work with Hawley.
+  public_route: Via HSGAC contact page https://www.hsgac.senate.gov/contact and the subcommittee's majority/minority staff. PSI accepts information from the public and from whistleblowers regardless of state of residence.
+  note: Leadership verified 2026-09-22 from senate.gov SSGA roster.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.hsgac.senate.gov/about/members/
+      checked: 2026-09-22
+    - url: https://www.hsgac.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 0e3db80c3c
+  migrated_from: input/data/committees-and-organisations.json#seats

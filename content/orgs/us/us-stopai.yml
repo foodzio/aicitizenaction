@@ -1,0 +1,71 @@
+id: us-stopai
+type: civil-society
+geo:
+  country: us
+  label: United States (San Francisco Bay Area)
+facts:
+  routes:
+    - id: general-contact
+      type: email
+      value: contactstopai@gmail.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3b3ca0f62eee
+    - id: events-meetings
+      type: form
+      value: https://lu.ma/stopai_info
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c5452e2a1902
+    - id: history-actions
+      type: form
+      value: https://www.stopai.info/history
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: dc45d4520e42
+    - id: homepage
+      type: homepage
+      value: https://www.stopai.info/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 3ab629917977
+  region: United States
+  public_input: open
+  tags:
+    - law
+    - research
+strings:
+  name: StopAI
+  remit: "Grassroots direct-action movement. Calls for a permanent global ban on frontier AI development and proposes citizen oversight bodies empowered to regulate or dismantle threatening technologies. Operates on three fronts: public awareness, influencing decision-makers and legislation, and non-violent direct action — including blockades and civil disobedience at AI company offices, with members having been arrested."
+  threat_model: Extinction and human-dignity framing, combined — AI and Big Tech as threats to 'human dignity, freedom, democracy, and nature'. The most maximalist position in this list.
+  reality_check: Tiny and entirely open — anyone can turn up. Will certainly read your email. Has zero institutional access and association with it may actively reduce your credibility with policy bodies. Route here only if direct action is what you want.
+  gov_channel: None. It is explicitly an outside-game actor.
+  routes:
+    general-contact:
+      label: General contact
+      scope: Anyone
+      note: A Gmail address — an accurate signal of the organisation's scale and informality.
+    events-meetings:
+      label: Events and meetings
+      scope: Anyone
+    history-actions:
+      label: History of actions
+      scope: Reference
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://lu.ma/stopai_info
+      checked: 2026-09-22
+    - url: https://www.stopai.info/history
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: a3bc7b8284
+  migrated_from: input/data/institutions.json

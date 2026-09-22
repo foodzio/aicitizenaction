@@ -1,0 +1,76 @@
+id: in-indiaai-safety-institute
+type: government
+geo:
+  country: in
+  label: India
+facts:
+  routes:
+    - id: meity-indiaai-safe-trusted
+      type: email
+      value: fellow2.gpai-india@meity.gov.in
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: d7627a4c5875
+    - id: call-partnerships
+      type: docket
+      value: https://indiaai.s3.ap-south-1.amazonaws.com/docs/sg-call-for-partnerships-indiaai-safety-institute.pdf
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: c6e1c8adbd49
+    - id: indiaai-portal
+      type: form
+      value: https://indiaai.gov.in/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: b17605603544
+    - id: homepage
+      type: homepage
+      value: https://indiaai.gov.in/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 675c186c3125
+  region: India
+  public_input: limited
+  tags:
+    - harm
+    - systemic
+strings:
+  name: IndiaAI Safety Institute
+  remit: Announced 30 January 2025 under the IndiaAI Mission (an Independent Business Division of MeitY, the Ministry of Electronics and Information Technology), within the Mission's 'Safe & Trusted AI' pillar. Operates on a hub-and-spoke model contracting research to partner institutions via Calls for Partnerships (2025 rounds, deadline extended to 9 July 2025). No statutory basis, no enforcement power. India has no AI Act; the Nov 2025 India AI Governance Guidelines are non-binding and propose an AI Governance Group (AIGG) and a Technology & Policy Expert Committee (TPEC) whose operational status I could NOT verify as of Sept 2026.
+  powers_text: research
+  reality_check: India is NOT a member of the international network despite having an institute. Its partnership calls are explicitly restricted to Indian entities — this is the clearest 'domestic only' eligibility statement of any body here. MeitY does run public consultations (it consulted on establishing the institute, and on the Governance Guidelines) and those are technically open, but they are oriented to Indian industry and civil society. A foreigner's realistic route is commenting on a live MeitY draft, not contacting the institute.
+  notes: Name appears inconsistently as 'IndiaAI Safety Institute', 'India AI Safety Institute' and 'AI Safety Institute (AISI)' in official IndiaAI communications. Existence is confirmed; operational maturity is uncertain.
+  routes:
+    meity-indiaai-safe-trusted:
+      label: MeitY / IndiaAI Safe & Trusted AI EoI contact
+      scope: narrow — Safe & Trusted AI expression-of-interest process only
+      note: "VERIFIED fetched from indiaai.gov.in. CAUTION: this is a GPAI-fellow mailbox tied to a specific EoI round, not a general AISI contact. Likely stale outside that round."
+    call-partnerships:
+      label: Call for Partnerships, IndiaAI Safety Institute
+      scope: Indian institutions only
+      note: UNVERIFIED (search result). Eligibility is explicitly Indian academic institutions, research organisations, startups, autonomous bodies and government entities.
+    indiaai-portal:
+      label: IndiaAI portal
+      scope: general
+      note: VERIFIED accessible.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://indiaai.gov.in/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 6caaf7ec3f
+  migrated_from: input/data/institutions.json

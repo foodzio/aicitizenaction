@@ -1,0 +1,59 @@
+id: eu-european-parliament-committee-petitions-2
+type: seat
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.europarl.europa.eu/committees/en/peti/home/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7588e5a6dd9d
+    - id: public-route
+      type: submission
+      value: https://www.europarl.europa.eu/petitions/en/home
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8acb3dba45ab
+  level: bloc
+  tags:
+    - audit
+    - law
+    - petition
+  seats:
+    - role: chair
+      name: Bogdan Rzońca (ECR, Poland, Prawo i Sprawiedliwość)
+      verified_on: 2026-09-22
+strings:
+  name: European Parliament — Committee on Petitions (PETI)
+  ai_jurisdiction: PETI has no AI portfolio of its own, but it is the ONLY formal channel through which a private individual can compel the European Parliament to consider a matter. An admissible AI petition — for example on AI Act non-enforcement in a Member State, biometric surveillance, or algorithmic discrimination — is put to the committee, can trigger questions to the Commission, a committee debate, a fact-finding visit, or a referral to LIBE or IMCO.
+  business: Ordinary petition sittings roughly monthly; agendas published as PETI_OJ documents on europarl.europa.eu/doceo.
+  public_route: "WHO MAY PETITION: 'Any citizen of the European Union, or resident in a Member State', individually or collectively, and 'any company, organisation or association with its headquarters in the European Union'. SUBJECT MATTER: the petition must concern a matter 'which comes within the European Union's fields of activity and which affects them directly' — this is the admissibility test and the most common reason petitions are rejected. It may be a complaint, a request, or an observation on the application of EU law, or an appeal for Parliament to take a position. PROCESS: file through the Petitions Web Portal in any of the 24 official EU languages; the secretariat assesses admissibility; admissible petitions go to the committee, which may ask the Commission for a preliminary investigation, put the petition on a meeting agenda, invite the petitioner to speak, refer it to another committee for opinion, or close it with a reasoned reply. THRESHOLD: there is NO signature threshold — one person suffices. (Do not confuse this with the European Citizens' Initiative, which does require one million signatures across at least seven Member States; that is a separate instrument aimed at the Commission, not Parliament.)"
+  format_rules: No word limit. Available in all 24 official EU languages. Petitions and the committee's handling of them are published on the petitions portal unless the petitioner requests confidentiality. You may support an existing petition rather than filing a new one.
+  key_people: "Vice-Chairs: Dolors Montserrat (EPP, ES); Fredis Beleris (EPP, GR); Nils Ušakovs (S&D, LV); Cristina Guarda (Greens/EFA, IT). The committee has 35 members."
+  note: "VERIFIED 2026-09-22: chair from the official PETI member list PDF; eligibility and subject-matter wording quoted from the European Parliament's own 'Be heard — petitions' page at europarl.europa.eu/at-your-service/en/be-heard/petitions."
+  seat_notes:
+    chair: Chair
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.europarl.europa.eu/committees/en/peti/home/members
+      checked: 2026-09-22
+    - url: https://www.europarl.europa.eu/petitions/en/home
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: caca6aa23e
+  migrated_from: input/data/committees-and-organisations.json#seats

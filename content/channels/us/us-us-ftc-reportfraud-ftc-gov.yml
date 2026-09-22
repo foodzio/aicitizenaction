@@ -1,0 +1,55 @@
+id: us-us-ftc-reportfraud-ftc-gov
+type: reporting-channel
+geo:
+  country: us
+  label: United States
+facts:
+  routes:
+    - id: submission-page
+      type: complaint
+      value: https://reportfraud.ftc.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4f99aef140c8
+    - id: homepage
+      type: homepage
+      value: https://reportfraud.ftc.gov/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 581158921c73
+  region: United States
+  public_input: open
+  tags:
+    - harm
+strings:
+  name: US FTC — ReportFraud.ftc.gov
+  remit: "Reports of fraud, scams and bad business practices — which covers AI-related deception: false capability claims, deceptive AI marketing, undisclosed AI use, AI-enabled impersonation. The FTC has brought AI-deception cases under its Section 5 unfair-or-deceptive-practices authority."
+  reality_check: Purely aggregate. A single report is a statistic. Its real utility is when many reports converge on one practice, or when a report accompanies a documented, novel AI deception pattern that the FTC has signalled interest in. Do not present an FTC report as equivalent to a regulatory complaint with a duty to respond.
+  accepts: "Reports of fraud, scams and bad business practices — which covers AI-related deception: false capability claims, deceptive AI marketing, undisclosed AI use, AI-enabled impersonation. The FTC has brought AI-deception cases under its Section 5 unfair-or-deceptive-practices authority."
+  does_not_accept: The FTC does not resolve individual complaints and will not obtain redress for you in the ordinary case. Reports feed the Consumer Sentinel Network, a law enforcement intelligence database shared with federal, state and international enforcers.
+  how: "Online at reportfraud.ftc.gov. Note: at the time of this research the site was returning a government shutdown notice and was unable to offer the reporting service, directing users to consumer.ftc.gov instead — verify availability before relying on it. An alternative framing for AI-safety-adjacent harms is a complaint to a State Attorney General."
+  format: "Structured web form: what happened, who, when, amounts, documents."
+  timing: Rolling (subject to the availability issue above).
+  after: Data enters Consumer Sentinel and is used to spot patterns and build cases. No individual case is opened and you get no case outcome.
+  operator: Federal Trade Commission
+  routes:
+    submission-page:
+      label: Submission page
+      scope: "Reports of fraud, scams and bad business practices — which covers AI-related deception: false capability claims, deceptive AI marketing, undisclosed AI use, AI-enabled impersonation. The FTC has brought AI-deception cases under its Section 5 unfair-or-deceptive-practices authority."
+      note: "Online at reportfraud.ftc.gov. Note: at the time of this research the site was returning a government shutdown notice and was unable to offer the reporting service, directing users to consumer.ftc.gov instead — verify availability before relying on it. An alternative framing for AI-safety-adjacent harms is a complaint to a State Attorney General."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://reportfraud.ftc.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 0114cf6952
+  migrated_from: input/data/institutions.json

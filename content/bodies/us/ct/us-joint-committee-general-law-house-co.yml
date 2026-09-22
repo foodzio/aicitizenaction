@@ -1,0 +1,60 @@
+id: us-joint-committee-general-law-house-co
+type: seat
+geo:
+  country: us
+  sub: ct
+  label: Connecticut
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.cga.ct.gov/gl/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b733dc4930c0
+    - id: public-route
+      type: submission
+      value: https://cga.ct.gov/aspx/CGATestimonySub/CGAtestimonysubmission.aspx?comm_code=gl
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3b1107cabfaf
+  level: state
+  chamber: House (joint committee)
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Roland J. Lemar
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: Joint Committee on General Law — House co-chair
+  ai_jurisdiction: Same joint committee; House-side leadership for AI and consumer-protection bills.
+  business: SB 5 / Public Act 26-15 (CART Act), signed 2 June 2026.
+  status: VERIFIED — see Senate entry for effective dates.
+  public_route: YES — identical joint-committee process; one submission covers the joint hearing for both chambers. Submit online before the hearing begins; sign-up for oral testimony per the hearing notice.
+  agency_route: Connecticut Attorney General (https://portal.ct.gov/ag); CT Department of Consumer Protection.
+  note: "House ranking member: David Rutigliano (R-123). House vice chair: Gary A. Turco (D-27). Committee phone (860) 240-0470."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.cga.ct.gov/gl/
+      checked: 2026-09-22
+    - url: https://cga.ct.gov/aspx/CGATestimonySub/CGAtestimonysubmission.aspx?comm_code=gl
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: f79299135d
+  migrated_from: input/data/committees-and-organisations.json#seats

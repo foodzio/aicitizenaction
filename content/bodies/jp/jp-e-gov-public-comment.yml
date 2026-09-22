@@ -1,0 +1,63 @@
+id: jp-e-gov-public-comment
+type: seat
+geo:
+  country: jp
+  label: Japan
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://public-comment.e-gov.go.jp/contents/about-public-comment
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Japanese only. There is no English interface, no English guidance, and comments are expected in Japanese. Nothing formally bars a non-Japanese speaker or a foreign national from submitting — there is no nationality check — but in practice a submission that officials cannot read will not be processed meaningfully.
+      source_id: 1961638da293
+    - id: public-route
+      type: submission
+      value: https://public-comment.e-gov.go.jp/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Japanese only. There is no English interface, no English guidance, and comments are expected in Japanese. Nothing formally bars a non-Japanese speaker or a foreign national from submitting — there is no nationality check — but in practice a submission that officials cannot read will not be processed meaningfully.
+      source_id: 4ce91dea747c
+  local_name: e-Gov パブリックコメント（意見公募手続）
+  level: national
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Not applicable
+      verified_on: 2026-09-22
+strings:
+  name: e-Gov Public Comment (Administrative Procedure Act public comment procedure)
+  ai_jurisdiction: "The single mandatory consultation channel for all Japanese ministries when making 命令等 (cabinet orders, ministerial ordinances, notices/告示, administrative guidance). Every AI-related ordinance, notice and Basic Plan draft from the Cabinet Office, METI, MIC and the Digital Agency passes through here. Statutory basis: Administrative Procedure Act (行政手続法), Chapter 6. Policy oversight sits with MIC's Administrative Management Bureau."
+  business: "Continuously open. Live cases are listed on the portal's 意見募集中案件一覧. AI-relevant recent case: the AI Basic Plan Phase II draft (人工知能基本計画（素案）), comment call announced 19 June 2026."
+  public_route: "Find the case on the portal, open it, read the 意見募集要項 (the case-specific comment call sheet — this is the load-bearing document), then use the 意見提出 (submit opinion) form. Required fields vary BY CASE and are controlled by that sheet: if a name/address/phone/email field is not displayed on the form, that information is not required. The only universally mandatory field is the opinion text itself, which has a character limit that will hard-error if exceeded. No account registration is required."
+  format_rules: "No signature or supporter threshold. Statutory minimum comment period: in principle 30 days or more from the notice date. The agency must publish a summary of comments received and its response when it finalises the rule."
+  realistic: "This is the single most usable formal route in Japan and the one to actually recommend — no account, no fee, no nationality bar, a statutory 30-day floor, and a legal duty on the agency to publish its response to comments. Two honest limits. First, language: it is Japanese-only end to end, so a non-speaker needs a translated submission and cannot navigate the portal unaided; machine translation of the interface works but machine-translating your own submission into Japanese produces text officials visibly discount. Second, the system explicitly weights substance over volume and says identical repeated opinions do not get proportional weight — a coordinated campaign of identical comments is designed not to work here. One well-argued Japanese-language submission beats a thousand copies."
+  language_note: Japanese only. There is no English interface, no English guidance, and comments are expected in Japanese. Nothing formally bars a non-Japanese speaker or a foreign national from submitting — there is no nationality check — but in practice a submission that officials cannot read will not be processed meaningfully.
+  note: System description, the 30-day statutory floor, the no-account/conditional-fields submission mechanics and the substance-over-volume rule are all VERIFIED from the official e-Gov pages public-comment.e-gov.go.jp/contents/about-public-comment and /contents/help/guide/submission.html. The absence of English support is a verified negative — the official pages carry no language options and no guidance for foreign submitters. The e-Gov top page is JavaScript-rendered and will not load for simple fetchers; the /contents/ subpages do.
+  seat_notes:
+    chair: System, not a body. Administered across government; procedure overseen by the Ministry of Internal Affairs and Communications (総務省行政管理局).
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://public-comment.e-gov.go.jp/contents/about-public-comment
+      checked: 2026-09-22
+    - url: https://public-comment.e-gov.go.jp/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 7f37c11d88
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,54 @@
+id: us-house-committee-cybersecurity
+type: seat
+geo:
+  country: us
+  sub: il
+  label: Illinois
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://ilga.gov/House/Committees
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 9d3ecfa52784
+    - id: public-route
+      type: submission
+      value: https://ilga.gov/uploads/tutorials/WitnessSlips/Submit%20Witness%20Slips.pdf
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 8ff57c7a6a12
+  level: state
+  chamber: House
+  tags:
+    - audit
+    - law
+strings:
+  name: House Committee on Cybersecurity, Data Analytics, & IT (with its Artificial Intelligence Subcommittee, HCDA-HAIE)
+  ai_jurisdiction: "Primary House committee for AI, data privacy, algorithmic systems and social-media bills. Has three standing subcommittees: Artificial Intelligence (HAIE), Data Privacy and Analytics (HDPA), and Social Media and Content Moderation (HSMC)."
+  business: "SB 315, Artificial Intelligence Safety Measures Act — Senate sponsor Sen. Mary Edly-Allen (D-Grayslake), House sponsor Rep. Daniel Didech (D-Buffalo Grove). Passed Senate 52-5 and House 110-0; signed by Gov. Pritzker 6 July 2026; effective 1 January 2027 (some analyses cite full compliance obligations phasing to 2028). Also in force: HB 3773 (AI in employment decisions under the Illinois Human Rights Act, effective 1 Jan 2026); the AI Video Interview Act; and the WOPR Act restricting AI therapy."
+  status: VERIFIED for the legislation; UNVERIFIED for the chair. SB 315 is the first US state law to require independent third-party safety audits of frontier developers (models from developers with >$500M annual revenue), publication of safety frameworks, catastrophic-risk reporting, and 72-hour (24-hour for imminent risk) incident reporting. Enforced by the Illinois Attorney General with penalties up to $1M first violation / $3M subsequent.
+  public_route: "YES — Illinois has the single most frictionless public-position system of any state: the electronic WITNESS SLIP. Any person may file a slip on any bill before any committee hearing, recording their name, whether they represent themselves or an organization, and their position (Proponent / Opponent / No Position), with an option to request to testify orally or submit a record of appearance only. No lobbyist registration, no fee. Slips are counted and displayed publicly and legislators visibly react to the tallies. Deadline convention: file at least one hour before the hearing (ideally the day before); the Senate accepts and allows edits until the end of the hearing day, the House until the hearing concludes. A separate slip is required for each committee hearing and for each amendment."
+  agency_route: "Illinois Attorney General — enforcement of the AI Safety Measures Act; consumer fraud complaints at https://www.illinoisattorneygeneral.gov/file-a-complaint/consumer/ . For AI employment discrimination under HB 3773: Illinois Department of Human Rights (dhr.illinois.gov)."
+  note: CHAIR UNVERIFIED — the ILGA site blocked automated retrieval of the committee detail page and no 2025–2026 source names the chair. Prior chairs (Jaime Andrade 2017, Lamont Robinson 2023) have both left the role. Verify by phone with the House Clerk or at ilga.gov/House/Committees. Committee composition for 2025–2026 is 8 Democrats / 4 Republicans. Witness slips are filed from the specific hearing page, e.g. https://ilga.gov/House/hearings — the linked PDF is the official ILGA tutorial.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ilga.gov/House/Committees
+      checked: null
+    - url: https://ilga.gov/uploads/tutorials/WitnessSlips/Submit%20Witness%20Slips.pdf
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: e9fd449eac
+  migrated_from: input/data/committees-and-organisations.json#seats

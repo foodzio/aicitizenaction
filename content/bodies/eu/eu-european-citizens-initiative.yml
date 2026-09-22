@@ -1,0 +1,87 @@
+id: eu-european-citizens-initiative
+type: government
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: find
+      type: petition
+      value: https://citizens-initiative.europa.eu/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 269ce3dc9840
+    - id: organisers-register
+      type: form
+      value: https://register.eci.ec.europa.eu/organisers
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: f01c2d35f3b4
+    - id: open-ai-related-initiatives
+      type: form
+      value: none identified
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: cb9bec18d893
+    - id: submission-page
+      type: consultation
+      value: https://citizens-initiative.europa.eu/how-it-works_en
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: cc8ce523b6a5
+    - id: homepage
+      type: homepage
+      value: https://citizens-initiative.europa.eu/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c4e0a79d516d
+  region: European Union
+  public_input: open
+  tags:
+    - harm
+    - law
+    - systemic
+strings:
+  name: European Citizens' Initiative (ECI)
+  remit: Treaty-based participatory instrument administered by the European Commission. Allows citizens to 'call on the European Commission to propose new laws'. On reaching one million valid signatures across a minimum number of Member States within the collection period, the Commission must meet the organisers, the Parliament holds a public hearing, and the Commission must respond formally setting out what action it will take and why. The Commission is NOT obliged to legislate.
+  powers_text: advise
+  reality_check: High cost, low probability, occasionally decisive. Fewer than a dozen ECIs have ever reached a million signatures in the instrument's lifetime, and the Commission has declined to legislate even on several that did. It requires a citizens' committee from seven Member States, a year of collection, national ID-number verification in many countries, and real money. It is not a route for an individual or a small group. Where it pays off is agenda-setting and the mandatory Parliament hearing, which produces a public record and press. For AI, no initiative has yet been mounted; the more efficient EU routes by an order of magnitude are a PETI petition, a Have your say consultation response, or direct rapporteur engagement.
+  notes: Do not confuse with a PETI petition (no threshold, complains about existing law) or with the Ombudsman (maladministration only).
+  routes:
+    find:
+      label: Find, sign or register an initiative
+      scope: Public signing and organiser registration. Official Commission portal.
+      note: VERIFIED as live — the site was fetched and confirms the one-million-signature rule, though the landing page is a language selector and the procedural detail sits on deeper pages.
+    organisers-register:
+      label: Organisers' register
+      scope: Where a citizens' committee registers a proposed initiative for Commission admissibility screening.
+      note: UNVERIFIED as fetched; referenced from the verified ECI find-initiative page.
+    open-ai-related-initiatives:
+      label: Open AI-related initiatives
+      scope: n/a
+      note: UNVERIFIED — the initiative database could not be read (the listing pages returned navigation shells only). No AI-related open initiative was found, but absence could not be confirmed.
+    submission-page:
+      label: Submission page
+      scope: Proposals for EU legal acts in areas where the Commission has power to propose legislation.
+      note: Form an organising group of at least 7 EU citizens resident in 7 different Member States, register the initiative, then collect at least 1 million signatures from EU citizens old enough to vote in European elections (16 in some countries), meeting minimum country thresholds in at least 7 Member States.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://citizens-initiative.europa.eu/
+      checked: 2026-09-22
+    - url: https://citizens-initiative.europa.eu/how-it-works_en
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 08afab5ce6
+  migrated_from: input/data/institutions.json

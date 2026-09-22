@@ -1,0 +1,60 @@
+id: us-joint-committee-general-law-senate-co
+type: seat
+geo:
+  country: us
+  sub: ct
+  label: Connecticut
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.cga.ct.gov/gl/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0fed672b4ec7
+    - id: public-route
+      type: submission
+      value: https://cga.ct.gov/aspx/CGATestimonySub/CGAtestimonysubmission.aspx?comm_code=gl
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1623bb6b7ae9
+  level: state
+  chamber: Senate (joint committee)
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: James J. Maroney
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: Joint Committee on General Law — Senate co-chair
+  ai_jurisdiction: Connecticut's lead committee on AI, consumer protection and data privacy. Sen. Maroney has driven CT's AI agenda from this chair since 2023.
+  business: "SB 5, the Connecticut Artificial Intelligence Responsibility and Transparency Act (CART Act) — PUBLIC ACT 26-15, signed by Gov. Lamont 2 June 2026. Covers employment AI disclosure, frontier-developer obligations, AI companion/chatbot safeguards including suicidal-ideation detection, youth online safety, an AI Academy and AI literacy training, and an AI regulatory sandbox. Predecessor: SB 2 (2024, 2025) which passed the Senate but did not become law."
+  status: "VERIFIED — PA 26-15 enacted. Staggered effective dates: 1 Oct 2026 (employment AI framework and frontier-developer provisions), 1 Jan 2027 (AI companion regulations), 1 Oct 2027 (main employment disclosure requirements)."
+  public_route: "YES — Connecticut is one of the most genuinely open testimony regimes in the US. For every public hearing, any member of the public may submit written testimony through the committee's online submission form and/or sign up to speak. There is no residency, registration or organizational requirement. Deadline convention: written testimony must be submitted before the start of the hearing (committees typically post a cut-off of 24 hours prior for guaranteed distribution); speaker sign-up for major hearings is by lottery opening roughly 24 hours before. All testimony — written and spoken — is permanent public record, posted on the CGA website and indexed by search engines, including your name, address, phone and email."
+  agency_route: Connecticut Attorney General — exclusive enforcement over the CART Act's employment-AI provisions (https://portal.ct.gov/ag). Connecticut Department of Consumer Protection for consumer-facing matters.
+  note: "Senate ranking member: Paul Cicarella (R-34). Senate vice chair: John W. Fonfara (D-1). Connecticut uses joint House/Senate committees, so this committee is one body with two co-chairs; listed twice here to capture both chambers' leadership. Participation guide: https://www.cga.ct.gov/asp/content/yourvoice.asp"
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.cga.ct.gov/gl/
+      checked: 2026-09-22
+    - url: https://cga.ct.gov/aspx/CGATestimonySub/CGAtestimonysubmission.aspx?comm_code=gl
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 206ca005f5
+  migrated_from: input/data/committees-and-organisations.json#seats

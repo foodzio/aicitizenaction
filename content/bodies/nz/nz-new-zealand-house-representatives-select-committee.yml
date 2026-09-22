@@ -1,0 +1,51 @@
+id: nz-new-zealand-house-representatives-select-committee
+type: seat
+geo:
+  country: nz
+  label: New Zealand
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.parliament.nz/en/pb/sc/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: aa4815193e98
+    - id: public-route
+      type: submission
+      value: https://www.parliament.nz/en/pb/sc/how-to-make-a-submission/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 464507f10690
+  level: national
+  tags:
+    - law
+    - record
+strings:
+  name: New Zealand House of Representatives — select committee submission system (the public route)
+  ai_jurisdiction: The mechanism for reaching any New Zealand select committee, including on any future AI bill.
+  business: "Items open for submissions as at 22 Sep 2026: Building Amendment Bill (Transport and Infrastructure); Local Government (Rates Capping) Amendment Bill (Finance and Expenditure); three References to Tiriti o Waitangi/Treaty of Waitangi amendment bills (Justice); Taxation (Annual Rates for 2026-27, FBT Simplification, Foreign Investment Funds, and Remedial Measures) Bill (Finance and Expenditure). None is AI-related."
+  public_route: "Check the 'open for submissions' list, then submit through the form on that item's page. Official description: 'A submission is your chance to present your opinions, observations, and recommendations on a matter before a select committee. Submissions are written, but you may also ask to talk to the committee in person' — and committees may hear submitters 'face to face, by phone, or by video conference'. Anyone can submit. General enquiries: Select.Committees@parliament.govt.nz."
+  format_rules: No word limit stated. English or Māori. 'Once you've made your submission, it can be released by the committee at any time, which means making it available to the public via the Parliament website. It can take a few months for submissions to be made available online.' A team of advisers reads and analyses all submissions and reports the results to the committee in a departmental report; both that report and the committee's report to the House are published.
+  note: VERIFIED 2026-09-22 by direct fetch of parliament.nz 'How to make a submission' and the select committees home page (open-for-submissions list read live).
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.parliament.nz/en/pb/sc/
+      checked: 2026-09-22
+    - url: https://www.parliament.nz/en/pb/sc/how-to-make-a-submission/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 859984bdbd
+  migrated_from: input/data/committees-and-organisations.json#seats

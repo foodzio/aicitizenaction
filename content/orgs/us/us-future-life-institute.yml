@@ -1,0 +1,110 @@
+id: us-future-life-institute
+type: civil-society
+geo:
+  country: us
+  label: US and EU (Brussels presence, EU Transparency Register)
+facts:
+  routes:
+    - id: general-enquiries-states-3
+      type: email
+      value: contact@futureoflife.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: cca6172e369c
+    - id: policy-team
+      type: email
+      value: policy@futureoflife.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 76d9b8bf0f51
+    - id: grants
+      type: email
+      value: grants@futureoflife.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 71ceff030ff1
+    - id: press-speaking-requests
+      type: email
+      value: press@futureoflife.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 460562bb7207
+    - id: futures-programme
+      type: email
+      value: futures@futureoflife.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5aa6987e1d9b
+    - id: grant-programmes-open-calls
+      type: submission
+      value: https://futureoflife.org/our-work/grantmaking-work/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 25a2d8f4f4b0
+    - id: ai-safety-index
+      type: form
+      value: https://futureoflife.org/index
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 924fc8d223c9
+    - id: homepage
+      type: homepage
+      value: https://futureoflife.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 5aee6f6ec586
+  region: European Union
+  public_input: open
+  tags:
+    - research
+strings:
+  name: Future of Life Institute (FLI)
+  remit: Advocacy, grantmaking and policy across AI, biotechnology and nuclear weapons. Outputs include the AI Safety Index (latest edition Summer 2026, published July 2026, grading nine companies — Anthropic C+, OpenAI C, Google DeepMind C, Meta D+, Z.ai D-, Alibaba Cloud D-, xAI F, DeepSeek F, Mistral F — reviewed by a seven-member panel of David Krueger, Sharon Li, Tegan Maharaj, Sneha Revanur, Stuart Russell, Robert Trager and Yi Zeng), the 2023 pause letter, EU AI Act advocacy, and substantial grant programmes.
+  threat_model: Extreme large-scale and existential risk, with loss of control and uncontrolled capability escalation as the central AI concern. Also carries structural concerns (power concentration, autonomous weapons). Not a near-term-harms organisation, though the Index rates some near-term practices.
+  reality_check: Unusually responsive for its size, and the only major org here that publishes an explicit response-time commitment. Well-resourced, so it can act on what it receives. The Index gives it leverage over company behaviour that few others have.
+  gov_channel: Strong — EU Transparency Register presence and sustained EU AI Act engagement, plus US state and federal advocacy and UN input.
+  routes:
+    general-enquiries-states-3:
+      label: General enquiries — states a 3-business-day response target
+      scope: Anyone
+    policy-team:
+      label: Policy team (including AI Safety Index input)
+      scope: Policy matters
+      note: Listed on the Index page as the route for input on the Index.
+    grants:
+      label: Grants
+      scope: Grant applicants
+    press-speaking-requests:
+      label: Press and speaking requests
+      scope: Media
+    futures-programme:
+      label: Futures programme
+      scope: Positive-futures work
+    grant-programmes-open-calls:
+      label: Grant programmes — open calls (PhD/postdoc fellowships, project grants)
+      scope: Researchers and organisations
+    ai-safety-index:
+      label: AI Safety Index
+      scope: Read; input via policy@
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://futureoflife.org/our-work/grantmaking-work/
+      checked: 2026-09-22
+    - url: https://futureoflife.org/index
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: f6c82db06c
+  migrated_from: input/data/institutions.json

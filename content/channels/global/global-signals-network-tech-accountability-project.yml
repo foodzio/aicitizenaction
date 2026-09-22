@@ -1,0 +1,55 @@
+id: global-signals-network-tech-accountability-project
+type: reporting-channel
+geo:
+  country: global
+  label: International
+facts:
+  routes:
+    - id: submission-page
+      type: whistleblowing
+      value: https://thesignalsnetwork.org/tech-accountability-project/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ce46a0bc4d1d
+    - id: homepage
+      type: homepage
+      value: https://thesignalsnetwork.org/tech-accountability-project/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 6e6151e592cf
+  region: Global
+  public_input: open
+  tags:
+    - insider
+strings:
+  name: The Signals Network — Tech Accountability Project
+  remit: Tech workers with public-interest concerns, including those considering going to media.
+  reality_check: Distinctive for covering the non-legal costs of whistleblowing — housing, mental health, career — which are what actually break people, and which legal-only services do not touch. The media-coordination function makes it the right partner when the intended endpoint is publication rather than regulatory action. Funded by donations and grants; no fee stated.
+  accepts: Tech workers with public-interest concerns, including those considering going to media.
+  does_not_accept: Does not act as a regulator; works in coordination with other organisations rather than independently.
+  how: "Secure contact at thesignalsnetwork.org/contact/. Support offered: legal counsel, psychological support, safe housing, press and career assistance, and connection to journalist networks for coordinated story development. Also publishes the Tech Worker Handbook as a self-serve resource."
+  format: Confidential intake.
+  timing: Rolling.
+  after: Wraparound support package; potential coordinated media investigation.
+  operator: The Signals Network (nonprofit); supported by Knight Foundation; partners with Amnesty International
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Tech workers with public-interest concerns, including those considering going to media.
+      note: "Secure contact at thesignalsnetwork.org/contact/. Support offered: legal counsel, psychological support, safe housing, press and career assistance, and connection to journalist networks for coordinated story development. Also publishes the Tech Worker Handbook as a self-serve resource."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://thesignalsnetwork.org/tech-accountability-project/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 139c8809f4
+  migrated_from: input/data/institutions.json

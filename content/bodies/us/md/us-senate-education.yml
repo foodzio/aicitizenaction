@@ -1,0 +1,60 @@
+id: us-senate-education
+type: seat
+geo:
+  country: us
+  sub: md
+  label: Maryland
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://mgaleg.maryland.gov/mgawebsite/Committees/Details?cmte=eee&ys=2026RS
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8366b428a5fd
+    - id: public-route
+      type: submission
+      value: https://mgaleg.maryland.gov/pubs-current/current-ecm-faqs.pdf
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e651c0f11cfd
+  level: state
+  chamber: Senate
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Brian J. Feldman
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: Senate Education, Energy, and the Environment Committee (EEE)
+  ai_jurisdiction: Senate committee of reference for AI in education, state AI governance and technology policy bills.
+  business: "SB 720, Artificial Intelligence Ready Schools Act (Hester, Attar, Brooks, Feldman and others; crossfile HB 1057) — Senate 41-0, House 129-8, APPROVED BY GOVERNOR 26 May 2026 as CHAPTER 634. Also 2026: SB 597, Maryland Artificial Intelligence Partnership Act (Chapter 633) creating the Maryland AI Partnership in the University System of Maryland, an AI Public Services Fellowship and an AI Incubation Lab; SB 114 (Chapter 434) 3-1-1 systems with AI. Foundation: Artificial Intelligence Governance Act of 2024 (SB 818, Chapter 496) — state AI inventory, Governor's AI Subcabinet, DoIT guardrails."
+  status: VERIFIED — Maryland's approach is government-capacity and education focused rather than private-sector risk regulation. A 2026 surveillance-pricing bill targeting AI-driven individualized pricing also moved.
+  public_route: "YES — Maryland runs one of the most structured online witness systems. Create a free MyMGA account, log in, choose 'Witness Signup', find your bill, state your position (Favorable / Unfavorable / Favorable with Amendments), indicate whether you will testify orally or written-only, and upload your testimony as a PDF. HARD DEADLINE: the signup window is open only between 8:00 a.m. and 6:00 p.m. TWO BUSINESS DAYS BEFORE the scheduled hearing. Miss it and you cannot file. Each committee publishes its own witness guidelines."
+  agency_route: Maryland Attorney General, Consumer Protection Division (https://www.marylandattorneygeneral.gov/Pages/CPD/default.aspx); Maryland Department of Information Technology and the Governor's AI Subcabinet for state-agency AI; ai.maryland.gov for the state AI program.
+  note: "Vice Chair: Cheryl C. Kagan. Chair verified through 2026 session committee testimony documents addressed to 'Chair Brian J. Feldman'. The two-business-day 8am–6pm witness window is the most commonly missed deadline in state AI advocacy."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://mgaleg.maryland.gov/mgawebsite/Committees/Details?cmte=eee&ys=2026RS
+      checked: 2026-09-22
+    - url: https://mgaleg.maryland.gov/pubs-current/current-ecm-faqs.pdf
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: daac8e323c
+  migrated_from: input/data/committees-and-organisations.json#seats

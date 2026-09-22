@@ -1,0 +1,62 @@
+id: kr-ai-safety-institute-2
+type: seat
+geo:
+  country: kr
+  label: South Korea
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.aisi.re.kr/eng/contents/23
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Korean and English. Korea AISI maintains a genuine English site — a notable exception in this jurisdiction and the most accessible Korean AI body for a non-Korean speaker.
+      source_id: 9e86e9d2e725
+    - id: public-route
+      type: submission
+      value: https://www.aisi.re.kr/eng
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Korean and English. Korea AISI maintains a genuine English site — a notable exception in this jurisdiction and the most accessible Korean AI body for a non-Korean speaker.
+      source_id: 0e116887f0c7
+  local_name: AI안전연구소
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: KIM Myuhngjoo
+      verified_on: 2026-09-22
+strings:
+  name: AI Safety Institute (Korea AISI)
+  ai_jurisdiction: Statutory body established under the AI Framework Act to evaluate AI risk and develop safety standards. Korea's node in the International Network of AI Safety Institutes. Co-produced the bilingual Korea AI Basic Act resource with the Future of Life Institute.
+  business: "Operates under MSIT with the Electronics and Telecommunications Research Institute (ETRI) as host/supporting organisation — note this dual line: it is statutorily grounded but institutionally embedded in a government research institute rather than standing alone. Work programme covers AI safety policy, evaluation methodology and international AISI collaboration."
+  public_route: "No formal comment mechanism. Practical routes: research collaboration enquiries and general contact via aisi.re.kr; international engagement through the AI Safety Institute network; policy input indirectly via MSIT pre-announcement."
+  format_rules: None; no formal participation process exists to have a threshold.
+  realistic: Not a participation route in any formal sense, but it is the most approachable Korean AI institution for an outsider because it has a working English presence and an internationally-facing research remit. Researchers and technical contributors can realistically make contact. Ordinary citizens have no route here and should use the petition or the MSIT pre-announcement instead.
+  language_note: Korean and English. Korea AISI maintains a genuine English site — a notable exception in this jurisdiction and the most accessible Korean AI body for a non-Korean speaker.
+  note: Director and the MSIT/ETRI institutional relationship VERIFIED from the institute's own English site aisi.re.kr/eng/contents/23 and its site footer. The statutory basis under the AI Framework Act is VERIFIED indirectly via Cooley's analysis, which refers to an 'AI Safety Research Institute' established by the law; the exact article number is UNVERIFIED.
+  seat_notes:
+    chair: Director, AI Safety Institute
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.aisi.re.kr/eng/contents/23
+      checked: 2026-09-22
+    - url: https://www.aisi.re.kr/eng
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c1ddf99070
+  migrated_from: input/data/committees-and-organisations.json#seats

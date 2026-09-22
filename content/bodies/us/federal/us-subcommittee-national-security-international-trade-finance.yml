@@ -1,0 +1,63 @@
+id: us-subcommittee-national-security-international-trade-finance
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.banking.senate.gov/about/membership
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0d9787a0ebf6
+    - id: public-route
+      type: submission
+      value: https://www.banking.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3f6ddc59e69a
+  level: federal
+  chamber: Senate
+  parent: Senate Committee on Banking, Housing, and Urban Affairs
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Bill Hagerty
+      party: R
+      region: TN
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Andy Kim
+      party: D
+      region: NJ
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on National Security and International Trade and Finance
+  ai_jurisdiction: "The export-control workbench within Banking: BIS authorities and resourcing, entity-list designations, chip and semiconductor-tooling controls, outbound investment screening, and sanctions touching AI supply chains."
+  business: UNVERIFIED for AI-specific 2026 subcommittee hearings; the Chip Security Act (S.1705) work is being handled at full-committee level.
+  public_route: Full-committee contact page https://www.banking.senate.gov/contact.
+  note: Leadership verified 2026-09-22 from senate.gov SSBK subcommittee roster.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.banking.senate.gov/about/membership
+      checked: 2026-09-22
+    - url: https://www.banking.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 58e424bc66
+  migrated_from: input/data/committees-and-organisations.json#seats

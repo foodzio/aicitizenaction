@@ -1,0 +1,85 @@
+id: eu-european-parliament-committee-internal-market-consumer
+type: government
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: committee-homepage
+      type: evidence
+      value: https://www.europarl.europa.eu/committees/en/imco/home/highlights
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: fb3a8ffcf6b4
+    - id: imco-secretariat-email
+      type: email
+      value: not published on the committee's public pages
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3ace0326d0bc
+    - id: ask-ep-parliament-s
+      type: form
+      value: https://www.europarl.europa.eu/forms/en/ask-ep
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 1cd8e0b16c1d
+    - id: legislative-observatory-track-file
+      type: docket
+      value: https://oeil.europarl.europa.eu/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 89ca63f950f2
+    - id: homepage
+      type: homepage
+      value: https://www.europarl.europa.eu/committees/en/imco/home/highlights
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ef81f6e98cce
+  region: European Union
+  public_input: limited
+  tags:
+    - harm
+    - law
+    - systemic
+strings:
+  name: European Parliament Committee on the Internal Market and Consumer Protection (IMCO)
+  remit: One of the two lead committees (jointly with LIBE) that steered the AI Act through Parliament, and lead committee on the Digital Omnibus on AI. Remit covers single market rules, product safety, consumer protection and digital markets. Can amend and vote on legislation, hold hearings, commission studies and question the Commission. Legislative power is real — Parliament is a co-legislator — but individual committees cannot investigate or fine.
+  powers_text: advise
+  reality_check: "European Parliament committees do not run UK-style open written-evidence calls, and they publish no secretariat email — so there is no analogue to a select-committee submission. What actually works is the rapporteur system: each legislative file has a named rapporteur and shadow rapporteurs from each political group, all identifiable from the Legislative Observatory, and their policy advisers actively take meetings and written input during the amendment phase. That window — between the draft report and the committee vote — is the real lever, and it is short. Registering in the EU Transparency Register is a practical prerequisite for meetings. Ask EP is for citizens' questions, not policy influence."
+  notes: IMCO and LIBE shared the AI Act file; expect the same joint pattern on major AI files.
+  routes:
+    committee-homepage:
+      label: Committee homepage, meeting documents and public hearings
+      scope: Agendas, minutes, draft reports and amendment tables are published; public hearings are streamed and occasionally invite written contributions.
+      note: VERIFIED — page fetched; it confirms AI regulation is among IMCO's active files but publishes NO committee email or secretariat address.
+    imco-secretariat-email:
+      label: IMCO secretariat email
+      scope: n/a
+      note: VERIFIED ABSENCE — the IMCO pages carry no secretariat contact. A contacts sub-page exists but is blocked to automated retrieval (robots.txt), so its contents could not be confirmed. Do NOT assume the commonly cited imco-secretariat@europarl.europa.eu pattern is correct without reading it off the page yourself.
+    ask-ep-parliament-s:
+      label: Ask EP — Parliament's citizens' enquiry service
+      scope: The general public route into Parliament; the Citizens' Enquiries Unit answers questions and routes issues.
+      note: UNVERIFIED as fetched — europarl.europa.eu/at-your-service pages are blocked by robots.txt. This form URL appeared in Parliament's own search results.
+    legislative-observatory-track-file:
+      label: Legislative Observatory (OEIL) — track a file and its amendments
+      scope: Follow the Digital Omnibus on AI and AI Act files, rapporteurs and shadow rapporteurs.
+      note: UNVERIFIED as fetched. The Legislative Train for the Digital Omnibus on AI is at https://www.europarl.europa.eu/legislative-train/package-digital-package/file-digital-omnibus-on-ai (seen in search results).
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.europarl.europa.eu/committees/en/imco/home/highlights
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: adc3b89c20
+  migrated_from: input/data/institutions.json

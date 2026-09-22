@@ -1,0 +1,87 @@
+id: es-agencia-espanola-supervision-inteligencia-artificial
+type: government
+geo:
+  country: es
+  label: Spain
+facts:
+  routes:
+    - id: aesia-general-inquiries
+      type: email
+      value: info@aesia.gob.es
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: es (en likely tolerated)
+      source_id: fe8c7b2ea476
+    - id: aesia-human-resources
+      type: email
+      value: rrhh@aesia.gob.es
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: es
+      source_id: "12355e791990"
+    - id: aesia-website
+      type: form
+      value: https://aesia.digital.gob.es/en/es
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en, es, ca, val, gl, eu
+      source_id: eefcb1184e4f
+    - id: sede-electronica
+      type: complaint
+      value: null
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: es
+    - id: homepage
+      type: homepage
+      value: https://aesia.digital.gob.es/en/es
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 2b19a48eed55
+  local_name: Agencia Española de Supervisión de la Inteligencia Artificial
+  region: European Union
+  public_input: limited
+  tags:
+    - harm
+strings:
+  name: Agencia Española de Supervisión de la Inteligencia Artificial (AESIA)
+  remit: Created by Royal Decree 729/2023, headquartered in A Coruña — the first dedicated national AI supervisory agency in the EU. Designated as Spain's market-surveillance authority for most of the EU AI Act, attached to the Ministry for Digital Transformation and the Civil Service. Under the AI Act it can investigate, demand documentation and access to models, order withdrawal of non-compliant systems, and impose administrative fines. Spain's draft national AI law (anteproyecto, 2025) would set the domestic penalty schedule.
+  powers_text: fine
+  reality_check: "Among the best of any body here for an outsider: a published general mailbox on a .gob.es domain plus a real English-language site. And EU AI Act Article 85 gives any person — explicitly not limited to EU residents — the right to complain to a market-surveillance authority. The catch is that a formal complaint (as opposed to an informal email) typically goes through the sede electrónica, which requires Spanish electronic identity credentials. Informal email is the realistic foreign route."
+  notes: Spain is NOT a member of the international network. AESIA's public materials emphasise ethical/safe use and AI Act compliance; I found no explicit frontier or catastrophic-risk positioning on the pages fetched.
+  routes:
+    aesia-general-inquiries:
+      label: AESIA general inquiries
+      scope: general
+      note: VERIFIED — published on the AESIA site and fetched.
+    aesia-human-resources:
+      label: AESIA human resources
+      scope: recruitment only
+      note: VERIFIED fetched. Included for completeness; not a policy channel.
+    aesia-website:
+      label: AESIA website (multilingual)
+      scope: general
+      note: VERIFIED fetched — genuinely available in English plus all Spanish co-official languages. Unusually accessible.
+    sede-electronica:
+      label: Sede electrónica (e-government portal for formal filings)
+      scope: formal administrative filings
+      note: UNVERIFIED — a sede electrónica almost certainly exists but no URL was published on the pages I fetched. Formal Spanish administrative filings normally require Cl@ve or a digital certificate, which foreigners generally cannot obtain.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://aesia.digital.gob.es/en/es
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 9d69a70eb4
+  migrated_from: input/data/institutions.json

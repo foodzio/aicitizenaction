@@ -1,0 +1,71 @@
+id: gb-centre-governance-ai
+type: civil-society
+geo:
+  country: gb
+  label: United Kingdom (Oxford), with a US policy presence
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: contact@governance.ai
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1de073bfc245
+    - id: opportunities-page-fellowships
+      type: submission
+      value: https://www.governance.ai/opportunities
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 576384f0d279
+    - id: general-expression-interest-form
+      type: form
+      value: https://airtable.com/app7yGiAaPGJ173Hz/pagi6elN7olrBGaUn/form
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: dbc130ef290d
+    - id: homepage
+      type: homepage
+      value: https://www.governance.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c0de4be5a378
+  region: United Kingdom
+  public_input: open
+  tags:
+    - harm
+    - research
+strings:
+  name: Centre for the Governance of AI (GovAI)
+  remit: Research institute producing academic-quality AI governance research and, critically, a talent pipeline — GovAI Fellowships (biannual UK editions plus other cohorts), an Entrepreneur-in-Residence programme offering a salaried year plus ~$150k seed funding to launch new AI governance organisations, and policy roles. Research spans compute governance, corporate governance of labs, international institutions, and dual-use capability risk (e.g. bioterrorism risk from dual-use AI).
+  threat_model: "Frontier and transformative-AI governance: dual-use misuse (especially bio), racing dynamics, institutional readiness, and loss of control. Long-termist in origin, increasingly mainstream-policy in output."
+  reality_check: Responsive and actively recruiting outsiders — the fellowship and EiR routes are real and competitive rather than nominal. It is a research and talent institution, not a complaints channel; it will engage with a well-argued governance proposal, not with a grievance.
+  gov_channel: Strong — GovAI alumni populate the UK AI Security Institute, the European Commission's AI Office, and frontier-lab policy teams. Its researchers advise governments directly.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+    opportunities-page-fellowships:
+      label: Opportunities page — fellowships, roles, and the Entrepreneur-in-Residence programme
+      scope: Researchers and would-be founders
+      note: EiR runs on a rolling basis — a genuinely open route for someone with a good new-organisation idea.
+    general-expression-interest-form:
+      label: General expression of interest form
+      scope: Anyone interested in future roles/fellowships
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.governance.ai/opportunities
+      checked: 2026-09-22
+    - url: https://airtable.com/app7yGiAaPGJ173Hz/pagi6elN7olrBGaUn/form
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 7fa7a31337
+  migrated_from: input/data/institutions.json

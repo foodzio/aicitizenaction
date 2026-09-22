@@ -1,0 +1,63 @@
+id: us-congressional-artificial-intelligence-caucus
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (federal legislature) — informal bipartisan, bicameral member organisation
+facts:
+  routes:
+    - id: caucus-contact
+      type: evidence
+      value: (202) 225-4376 — 1226 Longworth House Office Building, Washington DC 20515
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e91eba0c5353
+    - id: caucus-email
+      type: email
+      value: none published
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 63e352aa2346
+    - id: homepage
+      type: homepage
+      value: https://artificialintelligencecaucus-beyer.house.gov/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 100e911098b1
+  region: United States
+  public_input: limited
+  tags:
+    - law
+    - systemic
+strings:
+  name: Congressional Artificial Intelligence Caucus
+  remit: An informal caucus, NOT a committee. Exists to 'inform policymakers of the technological, economic, and social impacts of advances in AI' and to convene experts from academia, government and industry for member briefings. It has no jurisdiction, no staff of its own beyond member offices, no subpoena power and no ability to legislate as a body. Co-chairs announced vice-chairs and a core initiative in a recent Congress.
+  powers_text: convene
+  reality_check: "A caucus is a briefing venue, not a decision-making body. The realistic use is offering a briefing: caucus staff programme lunch briefings and are receptive to a credible outside expert with a clear, short, non-partisan presentation. That contact runs through the co-chairs' personal office staff, reached by the phone number above, not through any caucus address. Nothing you send to a caucus creates a record or obliges a response. The separate House Bipartisan Task Force on AI (2024) produced a substantial report but was time-limited — check whether it still exists before citing it."
+  notes: "The multiple House-domain mirrors are a genuine trap: several are stale and name former co-chairs."
+  routes:
+    caucus-contact:
+      label: Caucus contact (hosted on a co-chair's House site)
+      scope: The caucus's about page publishes only this phone and address plus the X account https://x.com/AICaucus.
+      note: "VERIFIED at https://artificialintelligencecaucus-beyer.house.gov/about. NOTE: the caucus site is mirrored across several members' House domains (…-beyer, …-eshoo, …-olson), which change as membership changes — always check which mirror is current."
+    caucus-email:
+      label: Caucus email
+      scope: n/a
+      note: VERIFIED ABSENCE — the about page identifies no co-chairs by name and publishes no email, referring only generically to 'Chair offices'.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://artificialintelligencecaucus-beyer.house.gov/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 97606cd792
+  migrated_from: input/data/institutions.json

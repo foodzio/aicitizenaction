@@ -1,0 +1,43 @@
+id: us-build-american-ai
+type: organisation
+geo:
+  country: us
+  label: United States, national ad campaigns.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://aimoneywatch.org/ltf
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 0c65c0e18d42
+  perspective: industry-lobby
+  volunteers: no
+  tags:
+    - join
+    - opposition
+    - tip
+strings:
+  name: Build American AI
+  the_ask: Shift public opinion toward AI deregulation and a federal framework pre-empting state laws.
+  what_they_do: The advocacy/dark-money arm of Leading the Future, led by Nathan Leamer; runs paid public-opinion campaigns. Reported to deliberately steer debate away from technical safety questions.
+  newcomer_action: Nothing to join. If you see AI ads in your area, check whether they are Build American AI's before assuming they are grassroots.
+  tips: no
+  geography: United States, national ad campaigns.
+  scale: Well-funded ad operation.
+  spending: Reported $10 million national campaign.
+  caution: UNVERIFIED against its own site — figures from Forbes and Wikipedia. As a 501(c)(4) it does not disclose donors, so 'who is paying for this ad' is not answerable from public filings.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://aimoneywatch.org/ltf
+      checked: null
+  needs_research:
+    - topics
+  legacy_id: "634887e460"
+  migrated_from: input/data/committees-and-organisations.json#orgs

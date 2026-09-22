@@ -1,0 +1,63 @@
+id: us-senate-committee-health
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.help.senate.gov/about/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 04223306af64
+    - id: public-route
+      type: submission
+      value: https://www.help.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 75ab425d0efd
+  level: federal
+  chamber: Senate
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Bill Cassidy
+      party: R
+      region: LA
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Bernie Sanders
+      party: I
+      region: VT
+      verified_on: 2026-09-22
+strings:
+  name: Senate Committee on Health, Education, Labor, and Pensions
+  ai_jurisdiction: "AI where it touches work, health and school. Send here: AI and job displacement, worker surveillance and algorithmic management, AI in hiring and employment discrimination (with EEOC), FDA regulation of AI medical devices and clinical decision support, AI in drug development, AI in K-12 and higher education, and AI literacy. If your concern is 'my employer is using AI on me' or 'an AI tool is making medical decisions', this is the door."
+  business: "VERIFIED: Cassidy released a committee white paper on artificial intelligence (https://www.help.senate.gov/help-committee-gop-final-ai-white-paper) covering AI in health care, education, labor and the FDA, and solicited stakeholder responses — an explicit, documented public-comment opportunity. Hearing 'The Impact of AI on the Workforce' (https://www.help.senate.gov/hearings/the-impact-of-ai-on-the-workforce). Sanders as ranking member has made AI-driven job displacement and a shorter work week a signature theme."
+  public_route: "VERIFIED: there is no committee-wide /contact page. Published routes are the chair's and ranking member's own Senate offices — Cassidy at https://www.cassidy.senate.gov/contact and Sanders press at https://www.sanders.senate.gov/contact/press-inquiries/. Committee: 428 Dirksen, Washington DC 20510, 202-224-5375."
+  note: Chair/ranking verified 2026-09-22 against senate.gov committee_memberships_SSHR.htm.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.help.senate.gov/about/members
+      checked: 2026-09-22
+    - url: https://www.help.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 09cc918429
+  migrated_from: input/data/committees-and-organisations.json#seats

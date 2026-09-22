@@ -1,0 +1,64 @@
+id: global-independent-international-scientific-panel-ai
+type: multilateral
+geo:
+  country: global
+  label: Global (UN General Assembly)
+facts:
+  routes:
+    - id: mailing-list-panel-updates
+      type: form
+      value: https://un.us19.list-manage.com/subscribe?u=8b32a6b56219d56e50ca23917&id=a9a462d861
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f18f428fe6a2
+    - id: generic-un-contact-form
+      type: form
+      value: https://www.un.org/en/contact-us-0
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9c4a93b5dbe6
+    - id: homepage
+      type: homepage
+      value: https://www.un.org/independent-international-scientific-panel-ai/en
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ba9fc6cf6dfd
+  region: Global
+  public_input: none
+  tags:
+    - systemic
+strings:
+  name: Independent International Scientific Panel on AI (UN)
+  remit: 40-member panel created by UNGA resolution (Aug 2025), members appointed by the General Assembly 12 Feb 2026, co-chairs Yoshua Bengio (Canada) and Maria Ressa (Philippines) elected 3 Mar 2026. Produces one annual evidence-based assessment of AI opportunities/risks/impacts plus thematic briefs; may update the GA up to twice a year. Preliminary Report launched 1 July 2026; first full annual report due at the second Global Dialogue (New York, May 2027).
+  threat_model: Deliberately spans the whole range — capability/risk assessment covering misuse, loss-of-control, and systemic/societal impacts — modelled on the IPCC. It is an assessment body, not an advocacy body, so it has no single threat model.
+  reality_check: Effectively closed to outsiders. The FAQ says only that the Panel 'may consult informally with external experts' and may form working groups; there is no call for evidence, no submission portal, and no published contact address. The realistic route in is to reach an individual Panel member through their home institution, or to route through the Global Dialogue's written-inputs process instead.
+  notes: Members were selected from 2,600+ applicants across 140+ countries. Bengio simultaneously chairs the International AI Safety Report and runs LawZero, so he is a heavily saturated single point of contact.
+  gov_channel: Maximal — reports directly to the UN General Assembly and to the Global Dialogue on AI Governance. But the channel runs one way, from Panel to states.
+  routes:
+    mailing-list-panel-updates:
+      label: Mailing list for Panel updates (only public-facing mechanism found)
+      scope: Notifications only — not a submission channel
+      note: Linked from the Panel homepage footer.
+    generic-un-contact-form:
+      label: Generic UN contact form (not Panel-specific)
+      scope: General UN correspondence
+      note: No Panel-specific inbox exists; mail here is very unlikely to reach members.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://un.us19.list-manage.com/subscribe?u=8b32a6b56219d56e50ca23917&id=a9a462d861
+      checked: 2026-09-22
+    - url: https://www.un.org/en/contact-us-0
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b7521e6258
+  migrated_from: input/data/institutions.json

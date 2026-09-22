@@ -1,0 +1,56 @@
+id: eu-eu-ai-act-complaints-tool
+type: reporting-channel
+geo:
+  country: eu
+  label: EU
+facts:
+  routes:
+    - id: submission-page
+      type: complaint
+      value: https://digital-strategy.ec.europa.eu/en/policies/ai-act-complaints-tool
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8047dfed55c3
+    - id: homepage
+      type: homepage
+      value: https://digital-strategy.ec.europa.eu/en/policies/ai-act-complaints-tool
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 6d5ad0d05c00
+  region: European Union
+  public_input: open
+  tags:
+    - harm
+    - insider
+strings:
+  name: EU AI Act complaints tool (AI Office)
+  remit: Complaints from individuals and organisations about alleged AI Act infringements falling within the exclusive competence of the AI Office, under Article 85. All official EU languages. Supporting detail and a stated country of incident are required.
+  reality_check: "This is the single most usable EU route for an unaffiliated person, because it solves the 'which national authority?' problem: you file centrally and the AI Office refers onward with your consent. It is brand new, so there is no outcome track record. The non-anonymity requirement is a real constraint for anyone with an employment relationship to the target — use the whistleblower tool instead in that case."
+  accepts: Complaints from individuals and organisations about alleged AI Act infringements falling within the exclusive competence of the AI Office, under Article 85. All official EU languages. Supporting detail and a stated country of incident are required.
+  does_not_accept: Infringements outside the AI Act's scope; breaches of other EU or national law; matters under Articles 53–55 (GPAI model obligations from downstream providers, which have a separate channel); and matters covered by Article 89(2). Submissions are NOT anonymous — complainant identification is required.
+  how: Web form at ai-act-complaints.integrityline.app, reached from the Commission's AI Act complaints tool page. State the country, describe the alleged infringement in detail, identify yourself.
+  format: Structured online form, any official EU language, with attachments.
+  timing: Rolling. The Commission page was last updated 31 July 2026.
+  after: The AI Office treats complaints confidentially and will notify you if your complaint falls outside its jurisdiction. With your prior consent it may refer the complaint on to national market surveillance authorities or fundamental rights enforcement bodies.
+  operator: European Commission — AI Office / DG CNECT; hosted on EQS Integrity Line
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Complaints from individuals and organisations about alleged AI Act infringements falling within the exclusive competence of the AI Office, under Article 85. All official EU languages. Supporting detail and a stated country of incident are required.
+      note: Web form at ai-act-complaints.integrityline.app, reached from the Commission's AI Act complaints tool page. State the country, describe the alleged infringement in detail, identify yourself.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://digital-strategy.ec.europa.eu/en/policies/ai-act-complaints-tool
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: e2a593d2e0
+  migrated_from: input/data/institutions.json

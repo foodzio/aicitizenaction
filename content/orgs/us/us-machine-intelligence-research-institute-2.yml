@@ -1,0 +1,42 @@
+id: us-machine-intelligence-research-institute-2
+type: organisation
+geo:
+  country: us
+  label: United States primarily (the contact tool finds US representatives); global readership.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://ifanyonebuildsit.com/act
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e7626ccffd64
+  perspective: safety-advocacy
+  volunteers: unclear
+  tags:
+    - join
+    - law
+strings:
+  name: Machine Intelligence Research Institute (MIRI)
+  the_ask: A globally coordinated and collectively enforced moratorium on the development of artificial superintelligence, because on current methods the most likely outcome is human extinction.
+  what_they_do: "Since 2024 primarily a communications and advocacy organisation rather than a technical lab: the book 'If Anyone Builds It, Everyone Dies', the AI StopWatch daily news service, a documentary, and a contact-your-representative tool run off the book's site."
+  newcomer_action: Use ifanyonebuildsit.com/act to call, email or post a letter to your representative asking them to push for an international pause; add your name to the pledge to march in Washington DC (the march is contingent on reaching 100,000 pledges).
+  tips: no
+  geography: United States primarily (the contact tool finds US representatives); global readership.
+  scale: Small research-and-comms nonprofit, long-established (founded 2000), donor-funded.
+  spending: Not disclosed on the pages checked; accepts donations.
+  caution: MIRI's stated position is that building superintelligence with current techniques most likely kills everyone. That is the strongest claim on this list; endorsing it publicly has social and professional costs in some workplaces. The DC march is conditional and may never happen.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ifanyonebuildsit.com/act
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 84e7c5a357
+  migrated_from: input/data/committees-and-organisations.json#orgs

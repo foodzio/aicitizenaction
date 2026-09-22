@@ -1,0 +1,46 @@
+id: gb-all-party-parliamentary-group-ai-safety
+type: seat
+geo:
+  country: gb
+  label: United Kingdom
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://publications.parliament.uk/pa/cm/cmallparty/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 542597a85982
+    - id: public-route
+      type: submission
+      value: https://publications.parliament.uk/pa/cm/cmallparty/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 02b4a174b573
+  level: national
+  tags:
+    - law
+strings:
+  name: All-Party Parliamentary Group on AI safety (searched for; none found)
+  ai_jurisdiction: A dedicated AI-safety APPG distinct from the APPG on Artificial Intelligence.
+  public_route: If one is later registered it will appear in the Register of All-Party Parliamentary Groups under its own heading; check the current register index.
+  note: UNVERIFIED / NOT FOUND as at 2026-09-22. Searches of the APPG register surfaced only the All-Party Parliamentary Group on Artificial Intelligence. I found no separately registered AI-safety APPG and am not asserting one exists. Check the live register index before relying on this.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://publications.parliament.uk/pa/cm/cmallparty/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: cc7d0eb7c8
+  migrated_from: input/data/committees-and-organisations.json#seats

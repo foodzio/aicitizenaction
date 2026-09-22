@@ -1,0 +1,62 @@
+id: kr-national-ai-committee
+type: seat
+geo:
+  country: kr
+  label: South Korea
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.msit.go.kr/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: Korean only.
+      source_id: caf80775cc84
+    - id: public-route
+      type: submission
+      value: https://opinion.lawmaking.go.kr/gcom/ogLmPp
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: Korean only.
+      source_id: b7402ea5b922
+  local_name: 국가인공지능위원회 (National AI Strategy Committee / 국가인공지능전략위원회 — naming UNVERIFIED, see note)
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: UNVERIFIED
+      verified_on: 2026-09-22
+strings:
+  name: National AI Committee
+  ai_jurisdiction: Presidentially-chaired apex AI body referenced in the AI Framework Act. Article 34 empowers it to impose additional safety and reliability requirements on high-impact AI deployers beyond the Act's baseline — a genuinely substantive power, not merely advisory. Functions as the national AI control tower above MSIT.
+  business: Operative under the AI Framework Act since 22 January 2026. Its Article 34 power to add requirements on high-impact AI is the provision to watch, because it lets Korea tighten obligations without amending the statute.
+  public_route: "No direct public submission route. Indirect only: comment on MSIT drafts via 국민참여입법센터, or reach the committee's agenda through the National Assembly's 과방위."
+  format_rules: None applicable.
+  realistic: "Not usable directly. A presidentially-chaired committee with closed membership. Its importance to an outside observer is analytical rather than participatory: because Article 34 lets it add binding requirements administratively, watching its output matters more than trying to address it."
+  language_note: Korean only.
+  note: MARKED UNVERIFIED ON NAME AND MEMBERSHIP. The Act's creation of a presidentially-chaired national AI committee and its Article 34 power are VERIFIED from FPF and Cooley analyses of the Act, which use the English rendering 'National AI Committee'. Separately, Korean-language sources use 국가인공지능전략위원회 ('National AI Strategy Committee') for a body launched under the Lee administration. I could not establish within this research whether these are the same body, a renaming, or two distinct structures. Resolve this before citing — do not treat the Korean and English names above as confirmed equivalents, and do not name a vice-chair.
+  seat_notes:
+    chair: Chaired ex officio by the President of the Republic of Korea (currently Lee Jae-myung). The vice-chair and the private-sector membership were not verified and are not named here.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.msit.go.kr/
+      checked: null
+    - url: https://opinion.lawmaking.go.kr/gcom/ogLmPp
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 070d364c4a
+  migrated_from: input/data/committees-and-organisations.json#seats

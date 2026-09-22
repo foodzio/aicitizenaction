@@ -1,0 +1,63 @@
+id: eu-digital-omnibus-ai-regulation-2026-1744
+type: government
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: european-parliament-legislative-train
+      type: docket
+      value: https://www.europarl.europa.eu/legislative-train/package-digital-package/file-digital-omnibus-on-ai
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 535f1569be62
+    - id: council-press-release-political
+      type: docket
+      value: https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ce6feca440c0
+    - id: homepage
+      type: homepage
+      value: https://artificialintelligenceact.eu/ai-act-explorer/digital-omnibus/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 57e7972c0aee
+  region: European Union
+  public_input: none
+  tags:
+    - harm
+    - law
+    - systemic
+strings:
+  name: Digital Omnibus on AI — Regulation (EU) 2026/1744
+  remit: "NOT A BODY — included because it changed the legal facts every other EU entry depends on, and because prior knowledge of the AI Act timeline is now wrong. Provisional political agreement was reached between Council and Parliament on 7 May 2026; the regulation was published in the Official Journal and ENTERED INTO FORCE ON 27 JULY 2026. It DEFERS the AI Act's high-risk obligations: stand-alone Annex III high-risk systems move from 2 August 2026 to 2 DECEMBER 2027, and Annex I high-risk systems embedded in regulated products to 2 AUGUST 2028. The deferral is limited to Chapter III and does NOT extend to other obligations — notably the Article 50 transparency obligations, which still applied from 2 August 2026. It did NOT defer the GPAI/systemic-risk regime, which has applied since 2 August 2025. It also expanded the AI Office's powers to supervise GPAI providers and certain very large online platforms."
+  powers_text: advise
+  reality_check: "The single most important 2026 correction for anyone working from earlier knowledge. Two errors are now common: believing the AI Act's high-risk regime went live in August 2026 (it did not — December 2027 and August 2028), and believing the omnibus also delayed the frontier-model rules (it did not — GPAI and systemic-risk obligations have been live since August 2025, and the AI Office's enforcement powers over them since August 2026). Practically: the frontier-AI part of the EU regime is the part that is actually operating, and the consumer-protection part is the part that slipped. Anyone arguing about EU AI enforcement should check which of the two they mean."
+  notes: Also note Article 85's individual complaint right took effect 2 August 2026 and was not deferred.
+  routes:
+    european-parliament-legislative-train:
+      label: European Parliament Legislative Train — Digital Omnibus on AI
+      scope: Legislative history and current status.
+      note: UNVERIFIED as fetched; URL from europarl search results.
+    council-press-release-political:
+      label: Council press release on the political agreement
+      scope: The 7 May 2026 provisional agreement, with the revised deadlines.
+      note: VERIFIED — fetched and confirms the dates and the then-provisional status.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.consilium.europa.eu/en/press/press-releases/2026/05/07/artificial-intelligence-council-and-parliament-agree-to-simplify-and-streamline-rules/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 3f0292e12d
+  migrated_from: input/data/institutions.json

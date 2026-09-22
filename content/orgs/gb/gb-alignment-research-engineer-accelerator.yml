@@ -1,0 +1,70 @@
+id: gb-alignment-research-engineer-accelerator
+type: academic
+geo:
+  country: gb
+  label: United Kingdom (London, hosted at LISA in Shoreditch)
+facts:
+  routes:
+    - id: applications-three-stages
+      type: submission
+      value: https://www.arena.education/applications
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: aefa4bb33cb9
+    - id: general-enquiries
+      type: email
+      value: info@arena.education
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: eca832c46ad4
+    - id: expression-interest
+      type: form
+      value: https://airtable.com/appZIMMH3ywSxS0A9/pag5hzxSeGb5FA7nT/form
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: fcdb02fd46aa
+    - id: homepage
+      type: homepage
+      value: https://www.arena.education/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c0efe3ddea70
+  region: United Kingdom
+  public_input: open
+  tags:
+    - research
+strings:
+  name: Alignment Research Engineer Accelerator (ARENA)
+  remit: Intensive 4–5 week in-person bootcamp training people in the engineering skills for technical AI safety work — transformer internals, interpretability, RL, evals. Runs 2–3 cohorts a year (ARENA 9.0 scheduled 5 Oct – 6 Nov 2026). Covers travel, visas, accommodation and meals to remove financial barriers. Curriculum is public and self-studiable.
+  threat_model: Talent-pipeline intervention for technical alignment broadly — it is upstream of any particular threat model, though its curriculum is oriented toward interpretability, evaluations and alignment rather than near-term harms.
+  reality_check: One of the most concretely open doors in the entire ecosystem for a technically-inclined individual with no credentials or connections — funded, structured, and explicitly designed to remove barriers. Competitive, but the curriculum is free online regardless.
+  gov_channel: None directly; alumni populate safety teams at labs and institutes.
+  routes:
+    applications-three-stages:
+      label: "Applications — three stages: form (<90 min), coding test (6 questions, 1 hour), 30-minute interview"
+      scope: Anyone with Python proficiency and foundational maths (linear algebra, calculus, probability); no institutional affiliation needed
+      note: Financially supported, which makes it genuinely accessible.
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+    expression-interest:
+      label: Expression of interest (for future cohorts)
+      scope: Anyone
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.arena.education/applications
+      checked: 2026-09-22
+    - url: https://airtable.com/appZIMMH3ywSxS0A9/pag5hzxSeGb5FA7nT/form
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 3409ddab7c
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,43 @@
+id: global-stopai
+type: organisation
+geo:
+  country: global
+  label: Primarily San Francisco Bay Area; one protest documented in Kinshasa, DRC.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://lu.ma/stopai_info
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 002eb1f7c176
+  perspective: safety-advocacy
+  volunteers: yes
+  tags:
+    - fund
+    - join
+    - law
+strings:
+  name: StopAI
+  the_ask: A permanent, enforceable global ban on all further development of frontier AI, plus citizen oversight bodies empowered to regulate or dismantle dangerous technologies.
+  what_they_do: "Three fronts: public awareness, legislative influence, and non-violent direct action. Its own history page documents sit-ins inside OpenAI offices, a road blockade in front of OpenAI, banner drops and repeated protests at OpenAI and Microsoft since 2024."
+  newcomer_action: Attend an event from its Luma calendar, or attend the court proceedings of member Wynd Kaufmyn in San Francisco (it asks local supporters to show up in red shirts); donate.
+  tips: unclear — contactstopai@gmail.com
+  geography: Primarily San Francisco Bay Area; one protest documented in Kinshasa, DRC.
+  scale: Very small — a core of activists, not a staffed organisation. No published budget or headcount.
+  spending: Not disclosed; donations via Donorbox.
+  caution: "This is a civil-disobedience group and you should join only knowing that. Members have blockaded OpenAI's doors and been prosecuted: member Wynd Kaufmyn faced four misdemeanour charges (case CRI-25404422, San Francisco Superior Court), was denied the necessity defence, and the site states she was due to surrender to serve a sentence on 14 Aug 2026. It also subpoenaed Sam Altman (quashed). Its platform is broader than AI risk — it includes rejecting transhumanism and AI personhood, calls for a smaller economy, and bans on AI weapons. Not all actions are legal; attending a protest can carry arrest risk."
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://lu.ma/stopai_info
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 1ed8571539
+  migrated_from: input/data/committees-and-organisations.json#orgs

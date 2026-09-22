@@ -1,0 +1,60 @@
+id: us-joint-committee-advanced-information-technology-2
+type: seat
+geo:
+  country: us
+  sub: ma
+  label: Massachusetts
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://malegislature.gov/Committees/Detail/J33
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5c108b7c16ba
+    - id: public-route
+      type: submission
+      value: https://malegislature.gov/Events/Hearings
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 74c5e083140c
+  level: state
+  chamber: House (joint committee)
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Tricia Farley-Bouvier
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: Joint Committee on Advanced Information Technology, the Internet and Cybersecurity — House chair
+  ai_jurisdiction: House-side leadership of the same joint AI/technology committee.
+  business: S.2632 (AI in healthcare decision-making); the committee's broader 2025-2026 docket on AI, data privacy and mental-health AI.
+  status: VERIFIED — no comprehensive MA AI statute enacted in the 194th General Court.
+  public_route: YES — same MyLegislature online testimony route; open to any member of the public, no organizational affiliation needed.
+  agency_route: Massachusetts Attorney General consumer complaint — https://www.mass.gov/how-to/file-a-consumer-complaint
+  note: "House vice chair: James K. Hawkins. House ranking minority: Marc T. Lombardo. Committee phone (617) 722-2676."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://malegislature.gov/Committees/Detail/J33
+      checked: 2026-09-22
+    - url: https://malegislature.gov/Events/Hearings
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: d5a7382876
+  migrated_from: input/data/committees-and-organisations.json#seats

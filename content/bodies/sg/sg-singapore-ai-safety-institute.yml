@@ -1,0 +1,78 @@
+id: sg-singapore-ai-safety-institute
+type: government
+geo:
+  country: sg
+  label: Singapore
+facts:
+  routes:
+    - id: singapore-aisi-website
+      type: form
+      value: https://sgaisi.sg/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: eccb6f584064
+    - id: singapore-aisi-about-us
+      type: form
+      value: https://sgaisi.sg/about-us/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: b176cc3257f9
+    - id: imda-dtc-innovation-grant
+      type: consultation
+      value: https://www.imda.gov.sg/proposal-submission/dtc-sg-innovation-grant-call
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: da99b7230b75
+    - id: homepage
+      type: homepage
+      value: https://sgaisi.sg/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 395cf6a4554c
+  region: Singapore
+  public_input: limited
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Singapore AI Safety Institute (Singapore AISI)
+  remit: "Designated May 2024. Split model: IMDA (Infocomm Media Development Authority, a statutory board) is the policy owner and handles international engagement; the Digital Trust Centre (DTC), hosted at Nanyang Technological University, executes the technical work. Focus areas: multilingual and multicultural testing, agentic AI testing, societal-impact studies, international partnerships. Research/standards body — the institute itself has no enforcement power, though IMDA as a statutory board has regulatory powers in adjacent media/telecom domains."
+  powers_text: research
+  reality_check: Fully English-language and internationally oriented in tone, but I verified by fetching that the AISI's own site publishes no contact route at all. Realistic access is via IMDA's general corporate channels or via NTU DTC researchers. Singapore does run genuine open consultations on AI governance through IMDA (e.g. Model AI Governance Framework for GenAI), and those have historically accepted international industry submissions — but that is IMDA, not the AISI.
+  notes: "The Wikipedia framing 'renamed from Digital Trust Centre' is imprecise: DTC still exists as the technical host; the AISI designation was layered on top."
+  routes:
+    singapore-aisi-website:
+      label: Singapore AISI website
+      scope: general
+      note: VERIFIED that the site exists and is English-language.
+    singapore-aisi-about-us:
+      label: Singapore AISI 'About Us'
+      scope: general
+      note: VERIFIED fetched — and confirms there is NO public contact email, contact form, or engagement channel published. Only a LinkedIn link.
+    imda-dtc-innovation-grant:
+      label: IMDA DTC innovation grant call (proposal submission)
+      scope: research funding, Singapore-linked entities
+      note: UNVERIFIED (search result). Grant route, not a public-comment route; almost certainly restricted to Singapore-based institutions.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://sgaisi.sg/
+      checked: 2026-09-22
+    - url: https://sgaisi.sg/about-us/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: "91e9447772"
+  migrated_from: input/data/institutions.json

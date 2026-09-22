@@ -1,0 +1,56 @@
+id: gb-uk-public-interest-disclosure-act-protected
+type: reporting-channel
+geo:
+  country: gb
+  label: UK
+facts:
+  routes:
+    - id: submission-page
+      type: whistleblowing
+      value: https://www.handleygill.co.uk/handley-gill-blog/public-interest-disclosure-prescribed-persons-order-2026-whistleblowing
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 20cfc72695aa
+    - id: homepage
+      type: homepage
+      value: https://www.handleygill.co.uk/handley-gill-blog/public-interest-disclosure-prescribed-persons-order-2026-whistleblowing
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 1cd242721547
+  region: United Kingdom
+  public_input: open
+  tags:
+    - flaw
+    - insider
+strings:
+  name: UK Public Interest Disclosure Act — protected disclosure to a prescribed person
+  remit: Qualifying disclosures by workers, in the public interest, to a prescribed person with responsibility for the relevant subject matter — giving statutory protection against detriment and dismissal.
+  reality_check: "Meaningful but reactive: PIDA does not stop retaliation, it gives you a claim after it happens. The 2026 addition of DSIT is a genuine and underpublicised development, creating for the first time a UK prescribed route for technology-policy disclosures. Take legal advice on which prescribed person covers your concern before disclosing — getting this wrong forfeits the protection."
+  accepts: Qualifying disclosures by workers, in the public interest, to a prescribed person with responsibility for the relevant subject matter — giving statutory protection against detriment and dismissal.
+  does_not_accept: Disclosures to a body that is not prescribed for that subject matter do not attract the same protection. This is the most common and most costly error.
+  how: "Identify the correct prescribed person for the subject matter and disclose to them. Relevant to AI: the Public Interest Disclosure (Prescribed Persons) (Amendment) Order 2026 (SI 2026/478), in force 2 June 2026, added the Secretary of State for Science, Innovation and Technology as a prescribed person — the first explicitly AI/digital-policy route — and expanded the scope for existing regulators including Ofcom and the FCA. The ICO remains prescribed for data protection matters."
+  format: Per the receiving regulator's whistleblowing process (e.g. Ofcom's protected disclosure route, ICO's whistleblowing disclosures page).
+  timing: Rolling. Employment tribunal claims have short deadlines — typically 3 months less one day.
+  after: The prescribed person considers the disclosure; prescribed persons must report annually on disclosures received. Protection is enforced retrospectively via employment tribunal if you suffer detriment.
+  operator: Prescribed persons listed in secondary legislation; PIDA 1998 as amended
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Qualifying disclosures by workers, in the public interest, to a prescribed person with responsibility for the relevant subject matter — giving statutory protection against detriment and dismissal.
+      note: "Identify the correct prescribed person for the subject matter and disclose to them. Relevant to AI: the Public Interest Disclosure (Prescribed Persons) (Amendment) Order 2026 (SI 2026/478), in force 2 June 2026, added the Secretary of State for Science, Innovation and Technology as a prescribed person — the first explicitly AI/digital-policy route — and expanded the scope for existing regulators including Ofcom and the FCA. The ICO remains prescribed for data protection matters."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.handleygill.co.uk/handley-gill-blog/public-interest-disclosure-prescribed-persons-order-2026-whistleblowing
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 104a2fa2e8
+  migrated_from: input/data/institutions.json

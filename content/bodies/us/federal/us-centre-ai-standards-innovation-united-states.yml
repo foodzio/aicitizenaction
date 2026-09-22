@@ -1,0 +1,43 @@
+id: us-centre-ai-standards-innovation-united-states
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (out of scope)
+facts:
+  routes:
+    - id: nist-network-announcement
+      type: docket
+      value: https://www.nist.gov/news-events/news/2026/02/international-network-advanced-ai-measurement-evaluation-and-science
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: 6350ec9b00ed
+  region: United States
+  public_input: limited
+  tags:
+    - systemic
+strings:
+  name: Centre for AI Standards and Innovation (CAISI) — United States, listed only to prevent acronym confusion
+  remit: OUT OF SCOPE for this directory but included as a disambiguation warning. The former US AI Safety Institute was renamed the Center for AI Standards and Innovation in June 2025, sits within NIST/Department of Commerce, and convened the founding meeting of the international network in November 2024. Its acronym 'CAISI' collides exactly with the Canadian AI Safety Institute's, and the two are frequently conflated in secondary sources and existing directories.
+  powers_text: research
+  reality_check: Included solely so a directory builder does not merge the US and Canadian CAISI entries. Verify which CAISI any source means before citing it.
+  notes: "Also note the UK's parallel rename: AI Safety Institute became AI Security Institute in February 2025, retaining the AISI acronym. Both renames signal a policy shift away from 'safety' framing, mirrored at network level in December 2025."
+  routes:
+    nist-network-announcement:
+      label: NIST network announcement
+      scope: network publications
+      note: VERIFIED fetched.
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.nist.gov/news-events/news/2026/02/international-network-advanced-ai-measurement-evaluation-and-science
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 8b4d104f53
+  migrated_from: input/data/institutions.json

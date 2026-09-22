@@ -1,0 +1,59 @@
+id: us-senate-executive-committee
+type: seat
+geo:
+  country: us
+  sub: il
+  label: Illinois
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://ilga.gov/Senate/Committees
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: cdb35cb06537
+    - id: public-route
+      type: submission
+      value: https://ilga.gov/uploads/tutorials/WitnessSlips/Submit%20Witness%20Slips.pdf
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: fa7a696719fd
+  level: state
+  chamber: Senate
+  tags:
+    - audit
+    - law
+  seats:
+    - role: chair
+      name: Cristina Castro
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: Senate Executive Committee (with its AI and Social Media Subcommittee, SEXC-AISM)
+  ai_jurisdiction: Senate committee of reference for the 2026 AI package; the AI and Social Media subcommittee sits under Executive. SB 315 and the companion Senate AI bills were heard on this track in May 2026.
+  business: "SB 315 (AI Safety Measures Act, Edly-Allen) — signed 6 Jul 2026, effective 1 Jan 2027. Companion 2026 Senate package: SB 316 (chatbot safeguards, Ellman), SB 317 (customer-service chatbot disclosure, Ventura), SB 318 (ticket-resale bots, Stadelman), SB 340 (consumer data, Murphy), SB 343 (rental pricing algorithms, Guzmán), SB 415 (facial recognition in schools, Villa), SB 416 (AI classroom grading, Martwick)."
+  status: VERIFIED — package reported out of committee 13 May 2026; SB 315 signed. Illinois is the only state so far to add mandatory third-party frontier-model audits on top of the California/New York disclosure model.
+  public_route: YES — electronic witness slips, same system as the House. Senate slips may be submitted and edited until the end of the hearing day. Anyone may file as an individual; you do not need to attend or speak.
+  agency_route: Illinois Attorney General Kwame Raoul — AI Safety Measures Act enforcement; consumer complaints https://www.illinoisattorneygeneral.gov/file-a-complaint/consumer/
+  note: Executive Committee chair verified via the Illinois Senate Democrats' official 104th GA committee-assignment page, 2026-09-22. The AI and Social Media subcommittee is listed on ILGA as SEXC-AISM but had no scheduled hearings at time of check; its chair is not separately published.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://ilga.gov/Senate/Committees
+      checked: 2026-09-22
+    - url: https://ilga.gov/uploads/tutorials/WitnessSlips/Submit%20Witness%20Slips.pdf
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: a801018c9d
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,60 @@
+id: us-house-committee-communications
+type: seat
+geo:
+  country: us
+  sub: va
+  label: Virginia
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://house.vga.virginia.gov/committees/H21
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 748a87df3a01
+    - id: public-route
+      type: submission
+      value: https://hodspeak.house.virginia.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6b45a0e30feb
+  level: state
+  chamber: House of Delegates
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: C. E. (Cliff) Hayes, Jr.
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: House Committee on Communications, Technology and Innovation
+  ai_jurisdiction: Primary House committee for AI, technology and innovation bills, with a Technology and Innovation Subcommittee. 28 members (20 D / 8 R); meets 10:00 a.m. Mondays, House Committee Room C-206.
+  business: "HB 2094, High-Risk Artificial Intelligence Developer and Deployer Act (2025) — passed both chambers 20 Feb 2025, VETOED by Gov. Youngkin March 2025; would have taken effect 1 July 2026 with exclusive AG enforcement. 2026 session: most AI bills CONTINUED TO 2027 — HB 668 (AI therapy), HB 1294 (police AI disclosure), HB 310 (AI workforce reports), HB 982 (campaign-ad AI disclosure), HB 825 (ticket-resale bots), SB 586 (health-carrier AI claims disclosure, Salim), and Del. Maldonado's children's-chatbot bill. Still advancing in 2026: SB 394 / HB 1186 (Pekarsky/Rasoul) requiring state guidance on AI in schools."
+  status: "VERIFIED — Virginia has NO comprehensive AI statute. The 2026 session under Gov. Spanberger largely deferred AI legislation to 2027, with legislators citing the December 2025 federal executive order and its child-safety carve-out. Executive action instead: EXECUTIVE ORDER 22, signed 18 September 2026, creating Virginia's first AI task force (data privacy, cybersecurity, workforce displacement) alongside data-center accountability measures."
+  public_route: "YES, and Virginia is unusually low-friction: citizens DO NOT need to register in advance to speak in person at a committee or subcommittee meeting — the chair invites members of the audience to speak. For remote participation the House runs HODSpeak, an online portal through which any member of the public can sign up to give remote testimony on a bill before a House committee. Note Senate subcommittees do not offer remote testimony. Session is short (roughly Jan–Mar), so the window is narrow; the 2027 session is where the continued AI bills return."
+  agency_route: Virginia Attorney General — would have held exclusive enforcement under HB 2094; currently handles AI matters under the Virginia Consumer Protection Act (https://www.oag.state.va.us/consumer-protection/index.php/file-a-complaint). Also the new EO 22 AI task force.
+  note: "Vice Chair: Irene Shin (D-8). Clerk: Robert Asplund, (804) 698-1946. General participation guidance: https://vga.virginia.gov/engage/participation-public-comment/"
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://house.vga.virginia.gov/committees/H21
+      checked: 2026-09-22
+    - url: https://hodspeak.house.virginia.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 2afef396c4
+  migrated_from: input/data/committees-and-organisations.json#seats

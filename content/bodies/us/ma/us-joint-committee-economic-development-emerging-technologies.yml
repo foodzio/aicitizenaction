@@ -1,0 +1,60 @@
+id: us-joint-committee-economic-development-emerging-technologies
+type: seat
+geo:
+  country: us
+  sub: ma
+  label: Massachusetts
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://malegislature.gov/Committees/Detail/J12
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: bab2d417af30
+    - id: public-route
+      type: submission
+      value: https://malegislature.gov/Events/Hearings
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d97381c41a0c
+  level: state
+  chamber: Senate (joint committee)
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Barry R. Finegold
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: Joint Committee on Economic Development and Emerging Technologies — Senate chair
+  ai_jurisdiction: The committee that actually produced Massachusetts' frontier-AI safety language, attached to the economic development bond bill.
+  business: "H.5527, An Act relative to Massachusetts winning global investment, talent, and innovation ('Mass Wins Act') — released by this committee 22 June 2026 with frontier-AI provisions covering labs with >$500M annual AI-derived revenue or >$1B annual AI R&D: catastrophic-capability identification, mitigation, third-party review by independent evaluators at least every six months, whistleblower protections, critical-safety-incident reporting, and AG enforcement by court order. Anthropic publicly backed the provisions."
+  status: VERIFIED — NOT ENACTED as of 22 Sep 2026. H.5527 was superseded by a new draft (H.5562) on 8 July 2026; the Senate passed its version (S.3178) on 24 July 2026 with responsible-AI provisions. The bill is in CONFERENCE COMMITTEE. On 18 Sep 2026 Gov. Healey publicly pressed the conferees to strengthen it with independent reviews of the most powerful models and faster serious-incident reporting.
+  public_route: "YES — online written testimony via MyLegislature for any noticed hearing of this committee. NOTE: the bill is now in conference, where there are no public hearings; the effective route at this stage is written comment directly to the six conferees and to the Governor's office, plus testimony when the next session's bills are heard."
+  agency_route: Massachusetts Attorney General (Chapter 93A AI advisory) — https://www.mass.gov/how-to/file-a-consumer-complaint ; Massachusetts AI Hub (created by the 2024 Mass Leads Act, $100M).
+  note: "Senate vice chair: Nick Collins. Senate ranking minority: Peter J. Durant. THIS IS THE LIVE MASSACHUSETTS AI FIGHT as of late September 2026 and the conference committee is the pressure point."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://malegislature.gov/Committees/Detail/J12
+      checked: 2026-09-22
+    - url: https://malegislature.gov/Events/Hearings
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 7ddc1d6c56
+  migrated_from: input/data/committees-and-organisations.json#seats

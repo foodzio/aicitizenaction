@@ -1,0 +1,50 @@
+id: ca-house-commons-canada-committee-brief-submission
+type: seat
+geo:
+  country: ca
+  label: Canada
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.ourcommons.ca/Committees/en/Participate
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6dd99bb62d22
+    - id: public-route
+      type: submission
+      value: https://www.ourcommons.ca/procedure/guides/brief-e.html
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9ab1e4ad3f75
+  level: national
+  tags:
+    - law
+    - record
+strings:
+  name: House of Commons of Canada — committee brief submission system (the public route)
+  ai_jurisdiction: The mechanism, not a body. Every Commons standing, special and legislative committee accepts briefs from the public on any study it is conducting.
+  public_route: "Go to the committee's page, find the active study, and send a brief to the clerk by email or the online form. No invitation is needed. This is genuinely underused: most Canadian committee studies receive a small number of briefs, so a well-made one is disproportionately likely to be quoted in the report. You may also ask to appear as a witness — the request is made to the clerk in the same email."
+  format_rules: Maximum 10 pages. Longer briefs require a summary of no more than 500 words, and the committee may translate and circulate only that summary. English or French; the clerk arranges translation, and members will not receive the brief until it exists in both languages — so submit well before the study's hearings end. Author identified on the cover, personal contact details in the email only. Briefs become public archives, may be published online, and authors are listed in the committee's report.
+  note: VERIFIED 2026-09-22 against the official procedural guide at ourcommons.ca/procedure/guides/brief-e.html.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.ourcommons.ca/Committees/en/Participate
+      checked: 2026-09-22
+    - url: https://www.ourcommons.ca/procedure/guides/brief-e.html
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 2a9d942e44
+  migrated_from: input/data/committees-and-organisations.json#seats

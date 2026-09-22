@@ -1,0 +1,62 @@
+id: eu-european-parliament-committee-industry
+type: government
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: committee-pages-documents
+      type: evidence
+      value: https://www.europarl.europa.eu/committees/en/itre/home/highlights
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 1f5fdfc4869a
+    - id: itre-secretariat-email
+      type: email
+      value: not published
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 01d429297780
+    - id: homepage
+      type: homepage
+      value: https://www.europarl.europa.eu/committees/en/itre/home/highlights
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: be5c83badaa3
+  region: European Union
+  public_input: limited
+  tags:
+    - law
+    - systemic
+strings:
+  name: European Parliament Committee on Industry, Research and Energy (ITRE)
+  remit: Opinion-giving committee on AI files, with lead responsibility for industrial policy, research (Horizon Europe), telecommunications and energy — including the compute and data-centre dimension of AI, the AI Continent Action Plan, AI gigafactories and EuroHPC. On the AI Act it gave an opinion rather than leading. Co-legislative power on files within its own competence.
+  powers_text: advise
+  reality_check: The least useful of the three committees for AI risk input and the most useful for AI infrastructure and compute policy. Same rapporteur-centric access model. If your concern is compute governance, chip supply or data-centre siting in the EU, ITRE is the committee; if it is model risk, it is not.
+  notes: ITRE's AI work is growth- and sovereignty-framed; safety arguments land poorly here unless recast as strategic-autonomy or resilience arguments.
+  routes:
+    committee-pages-documents:
+      label: Committee pages and documents
+      scope: Agendas, opinions, draft reports and public hearings.
+      note: UNVERIFIED as fetched — the ITRE pages were not individually retrieved; URL follows the confirmed europarl committee scheme used by the verified IMCO page.
+    itre-secretariat-email:
+      label: ITRE secretariat email
+      scope: n/a
+      note: UNVERIFIED ABSENCE — by analogy with IMCO and LIBE, whose pages were fetched and publish none. Verify directly.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.europarl.europa.eu/committees/en/itre/home/highlights
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 66bf7bd099
+  migrated_from: input/data/institutions.json

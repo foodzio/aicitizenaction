@@ -1,0 +1,41 @@
+id: cl-chile-artificial-intelligence-bill-ministry-science
+type: government
+geo:
+  country: cl
+  label: Chile
+facts:
+  routes:
+    - id: chilean-senate-legislative-tracking
+      type: docket
+      value: null
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: es
+  local_name: Ministerio de Ciencia, Tecnología, Conocimiento e Innovación; Proyecto de ley que regula los sistemas de inteligencia artificial
+  region: Latin America
+  public_input: open
+  tags:
+    - law
+    - systemic
+strings:
+  name: Chile — Artificial Intelligence Bill (Boletín 16821-19) and Ministry of Science, Technology, Knowledge and Innovation
+  remit: "STATUS AS OF SEPT 2026: STILL A BILL. Chile's comprehensive AI bill, sent by the executive in May 2024 and modelled on the EU AI Act's risk tiers (unacceptable / high / limited / no evident risk), was still in Senate committee proceedings as of February 2026. It would designate an existing or new supervisory authority with sanctioning powers. Chile also has an updated National AI Policy (2024) and leads the Latin American AI Index (ILIA) with Brazil and Uruguay. Until passage, the ministry is a policy body only."
+  powers_text: advise
+  reality_check: Chile is the most regulatorily advanced Spanish-speaking jurisdiction on AI but still has no law in force. Its previous AI policy consultations were genuinely open and Chile has a good record of participatory policymaking, but I verified no live channel and no URLs. Spanish only. No frontier-risk dimension beyond what it inherits from the EU AI Act template.
+  notes: Listed with low confidence. Verify the bill's status directly before publishing — Latin American AI bills have slipped repeatedly.
+  routes:
+    chilean-senate-legislative-tracking:
+      label: Chilean Senate legislative tracking
+      scope: legislative record
+      note: UNVERIFIED — I did not verify a Senate URL for this bill. Chilean congressional committees do receive written submissions and hear external experts, but the process is Spanish-language and by invitation.
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: "50936950e0"
+  migrated_from: input/data/institutions.json
+  unsourced: No URL was found for this entity during research (input/data/institutions.json). It needs a source before it can be relied on.

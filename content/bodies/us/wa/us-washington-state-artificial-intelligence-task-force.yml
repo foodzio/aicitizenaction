@@ -1,0 +1,53 @@
+id: us-washington-state-artificial-intelligence-task-force
+type: seat
+geo:
+  country: us
+  sub: wa
+  label: Washington
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.atg.wa.gov/aitaskforce
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 647dba4893bf
+    - id: public-route
+      type: submission
+      value: https://www.atg.wa.gov/aitaskforce
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0b3d577c5b03
+  level: state
+  chamber: Executive
+  tags:
+    - audit
+    - law
+    - record
+strings:
+  name: Washington State Artificial Intelligence Task Force (Office of the Attorney General)
+  ai_jurisdiction: Statutory 19-member task force created by ESSB 5838 (2024), housed in the AG's Office, assessing AI use across sectors and recommending legislation.
+  business: ESSB 5838 (2024). Final Report issued July 2026, containing 11 policy recommendations plus three commissioned research studies on AI risks, worker sentiment, and existing regulation.
+  status: VERIFIED — final report published July 2026; the task force fed directly into the 2026 bills (HB 2225, HB 1170, HB 2157).
+  public_route: PARTIAL — task force meetings are public, recorded and carried on TVW, and minutes are published on the AG's site, but a formal public-comment procedure is not published. Contact the AG's Office directly to submit input. The legislative CSI portal remains the reliable public route.
+  agency_route: Washington Attorney General, Consumer Protection Division — https://www.atg.wa.gov/file-complaint
+  note: Membership spans legislators, academia, labor, industry and community advocates. No single named chair is published on the task force landing page.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.atg.wa.gov/aitaskforce
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: e1e7a36853
+  migrated_from: input/data/committees-and-organisations.json#seats

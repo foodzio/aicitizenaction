@@ -1,0 +1,63 @@
+id: us-subcommittee-energy-water-development-related-agencies
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://appropriations.house.gov/about/membership/subcommittee-rosters
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7402cfde7fc4
+    - id: public-route
+      type: submission
+      value: https://appropriations.house.gov/subcommittees
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c98ccc63353d
+  level: federal
+  chamber: House
+  parent: House Committee on Appropriations
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Charles J. "Chuck" Fleischmann
+      party: R
+      region: TN
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Marcy Kaptur
+      party: D
+      region: OH
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Energy and Water Development and Related Agencies
+  ai_jurisdiction: "Funds the Department of Energy and the national laboratories — increasingly the government's largest AI compute holder and a proposed venue for frontier-model risk evaluation. Send here: DOE AI program funding, lab compute, and the energy-side of AI buildout."
+  business: UNVERIFIED for AI-specific FY27 actions. Relevant because S.2938 (Artificial Intelligence Risk Evaluation Act) would site an advanced-AI evaluation program at DOE, which would be funded here.
+  public_route: Full-committee contact https://appropriations.house.gov/contact, 202-225-2771.
+  note: Leadership verified 2026-09-22 from the House Clerk's MemberData.xml (subcommittee code AP10). Ranking member identified as the highest-ranking Democrat on the subcommittee roster.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://appropriations.house.gov/about/membership/subcommittee-rosters
+      checked: 2026-09-22
+    - url: https://appropriations.house.gov/subcommittees
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 5c4dc237bb
+  migrated_from: input/data/committees-and-organisations.json#seats

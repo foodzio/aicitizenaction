@@ -1,0 +1,57 @@
+id: eu-eu-ai-act-whistleblower-tool
+type: reporting-channel
+geo:
+  country: eu
+  label: EU
+facts:
+  routes:
+    - id: submission-page
+      type: whistleblowing
+      value: https://digital-strategy.ec.europa.eu/en/policies/ai-act-whistleblower-tool
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3b15e0868a20
+    - id: homepage
+      type: homepage
+      value: https://digital-strategy.ec.europa.eu/en/policies/ai-act-whistleblower-tool
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ca2f56527d54
+  region: European Union
+  public_input: open
+  tags:
+    - harm
+    - insider
+    - systemic
+strings:
+  name: EU AI Act Whistleblower Tool (AI Office)
+  remit: Reports of harmful practices or other AI Act violations, from 'individuals who are professionally connected to providers of general-purpose AI (GPAI) models or of AI systems' within the AI Office's enforcement scope. Supporting documents may be attached.
+  reality_check: Strong on mechanics — genuine anonymity with two-way follow-up is rare and is exactly what the Right to Warn signatories asked for. Legally reinforced by AI Act Article 87, which applies the EU Whistleblower Directive (EU) 2019/1937 to AI Act infringement reporting from 2 August 2026, giving confidentiality and anti-retaliation protection. No outcome data yet; the AI Office's enforcement capacity is unproven.
+  accepts: Reports of harmful practices or other AI Act violations, from 'individuals who are professionally connected to providers of general-purpose AI (GPAI) models or of AI systems' within the AI Office's enforcement scope. Supporting documents may be attached.
+  does_not_accept: "Matters outside the AI Office's enforcement remit. Note the professional-connection framing: this is an insider channel, not a general public complaint route (use the complaints tool for that)."
+  how: Anonymous submission via the hosted portal, available in all EU languages. You receive a secure inbox so you can track progress and answer follow-up questions while remaining anonymous. The AI Office states it maintains a high standard of confidentiality with documented internal procedures to maximise protection of reporter identity.
+  format: Structured online form plus free text and attachments.
+  timing: Rolling.
+  after: The report enters AI Office handling; the whistleblower monitors progress and receives communications through the secure inbox.
+  operator: European Commission — AI Office; hosted on EQS Integrity Line (ai-act-whistleblower.integrityline.app)
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Reports of harmful practices or other AI Act violations, from 'individuals who are professionally connected to providers of general-purpose AI (GPAI) models or of AI systems' within the AI Office's enforcement scope. Supporting documents may be attached.
+      note: Anonymous submission via the hosted portal, available in all EU languages. You receive a secure inbox so you can track progress and answer follow-up questions while remaining anonymous. The AI Office states it maintains a high standard of confidentiality with documented internal procedures to maximise protection of reporter identity.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://digital-strategy.ec.europa.eu/en/policies/ai-act-whistleblower-tool
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: "0057472511"
+  migrated_from: input/data/institutions.json

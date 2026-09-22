@@ -1,0 +1,61 @@
+id: us-subcommittee-emergency-management-technology
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://homeland.house.gov/subcommittees
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7b9e91f6714e
+    - id: public-route
+      type: submission
+      value: https://homeland.house.gov/subcommittees
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 258cf7ce28f8
+  level: federal
+  chamber: House
+  parent: House Committee on Homeland Security
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Dale W. Strong
+      party: R
+      region: AL
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Timothy M. Kennedy
+      party: D
+      region: NY
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Emergency Management and Technology
+  ai_jurisdiction: DHS Science and Technology Directorate, FEMA, and department-wide technology adoption — the venue for DHS's own use of AI, AI in emergency response, and DHS AI research programs.
+  business: UNVERIFIED for a named 2026 AI hearing. Strong also serves as vice chair of House Appropriations' CJS subcommittee, giving him a foot in both the DHS-technology and NIST-funding conversations.
+  public_route: Full-committee contact https://homeland.house.gov/contact, 202-226-8417.
+  note: Leadership verified 2026-09-22 from the House Clerk's MemberData.xml.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://homeland.house.gov/subcommittees
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 32cae180c0
+  migrated_from: input/data/committees-and-organisations.json#seats

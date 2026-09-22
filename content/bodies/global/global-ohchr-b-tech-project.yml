@@ -1,0 +1,75 @@
+id: global-ohchr-b-tech-project
+type: multilateral
+geo:
+  country: global
+  label: Global (UN, Geneva)
+facts:
+  routes:
+    - id: general-ohchr-contact
+      type: form
+      value: https://www.ohchr.org/en/contact-us
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1376ff5bb996
+    - id: ohchr-business-human-rights
+      type: form
+      value: https://www.ohchr.org/en/business-and-human-rights/ohchr-helpdesk-business-and-human-rights
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 97a2f241b3a8
+    - id: b-tech-project-hub
+      type: consultation
+      value: https://www.ohchr.org/en/b-tech
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e7bce6b10058
+    - id: homepage
+      type: homepage
+      value: https://www.ohchr.org/en/business-and-human-rights/b-tech-project
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: beaa569d5d54
+  region: Global
+  public_input: limited
+  tags:
+    - systemic
+strings:
+  name: OHCHR B-Tech Project (UN Human Rights Office)
+  remit: Launched 2019 to apply the UN Guiding Principles on Business and Human Rights to the tech sector. Its generative AI workstream has produced a foundational paper on responsible development/deployment of generative AI, a Taxonomy of Generative AI Human Rights Harms, and headline recommendations (2025). Engages states, companies, investors and civil society on human-rights due diligence.
+  threat_model: "Near-term and structural human-rights harms: discrimination, privacy, freedom of expression, labour, and accountability gaps in corporate AI value chains. Not a loss-of-control body."
+  reality_check: Small team, human-rights framing only. If your concern is a documented corporate harm to identifiable people, this is a serious channel. If it is frontier misalignment, it will not land.
+  gov_channel: Real but indirect — feeds Human Rights Council sessions, Special Procedures, and the annual UN Forum on Business and Human Rights. Separately, HRC Special Rapporteurs run their own open calls for input, which is often the faster UN human-rights route.
+  routes:
+    general-ohchr-contact:
+      label: General OHCHR contact
+      scope: General correspondence
+      note: No B-Tech-specific inbox is published.
+    ohchr-business-human-rights:
+      label: OHCHR Business and Human Rights Helpdesk
+      scope: Business-and-human-rights queries — the most targeted route
+      note: Better-aimed than the generic form for a corporate-conduct concern.
+    b-tech-project-hub:
+      label: B-Tech project hub (consultations and papers announced here)
+      scope: Periodic multi-stakeholder consultations
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.ohchr.org/en/contact-us
+      checked: 2026-09-22
+    - url: https://www.ohchr.org/en/business-and-human-rights/ohchr-helpdesk-business-and-human-rights
+      checked: 2026-09-22
+    - url: https://www.ohchr.org/en/b-tech
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 5d95b741aa
+  migrated_from: input/data/institutions.json

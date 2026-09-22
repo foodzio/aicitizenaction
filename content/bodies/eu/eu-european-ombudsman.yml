@@ -1,0 +1,76 @@
+id: eu-european-ombudsman
+type: government
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: online-complaint-form-only
+      type: complaint
+      value: https://www.ombudsman.europa.eu/en/make-a-complaint
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a2efe2104d00
+    - id: complaint-by-email
+      type: email
+      value: not accepted
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ab5f7e8aa2ac
+    - id: general-contact
+      type: form
+      value: https://www.ombudsman.europa.eu/contacts
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 97f2029a7ec5
+    - id: homepage
+      type: homepage
+      value: https://www.ombudsman.europa.eu/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 7501652c825a
+  region: European Union
+  public_input: open
+  tags:
+    - harm
+    - law
+    - systemic
+strings:
+  name: European Ombudsman
+  remit: Investigates maladministration by EU institutions, bodies, offices and agencies — which includes the European Commission and therefore the AI Office, DG CONNECT, and the AI Act's governance bodies. Can open own-initiative inquiries, demand documents from institutions, make findings of maladministration and issue recommendations; can refer a refusal to comply to the European Parliament. It CANNOT overturn a decision, fine anyone, or act against private companies or Member State authorities.
+  powers_text: investigate
+  reality_check: "A real and surprisingly effective route, but only for a specific complaint type: that an EU institution handled something badly — refused access to documents, failed to consult properly, missed a legal deadline, or had an undeclared conflict of interest. Applied to AI, that means the Ombudsman is the address if the AI Office refuses your document request, or if a consultation was run unfairly, or if expert-group appointments were opaque. The Ombudsman has previously found maladministration in Commission expert-group composition and in access-to-documents refusals, which is directly relevant to the Scientific Panel and Advisory Forum selection processes. It is NOT an address for complaining about an AI system, a company, or the content of EU law. Note the two mandatory preconditions: prior contact with the institution, and the two-year limit — complaints fail on these more often than on the merits."
+  notes: "Pair it with an access-to-documents request under Regulation 1049/2001 first: the refusal is what creates the admissible Ombudsman complaint."
+  routes:
+    online-complaint-form-only:
+      label: Online complaint form — the ONLY accepted channel
+      scope: Open to 'a citizen of the European Union', 'a resident of a Member State', or 'a legal person having your registered office in a Member State'. Must be within two years of becoming aware of the facts, and you must first have tried to resolve the matter with the institution concerned.
+      note: "VERIFIED — and note the explicit warning: 'Only complaints submitted using the online complaint form below will be processed. Please note that complaints sent by email will not be accepted.'"
+    complaint-by-email:
+      label: Complaint by email
+      scope: n/a
+      note: VERIFIED ABSENCE — the Ombudsman expressly refuses email complaints.
+    general-contact:
+      label: General contact (not complaints)
+      scope: "General enquiries. Phone +33 3 88 17 23 13. Post: Médiateur européen, 1 avenue du Président Robert Schuman, CS 30403, F-67001 Strasbourg Cedex. Offices at Bâtiment Václav Havel, Allée Spach, F-67000 Strasbourg and Bâtiment Froissart, 87 rue Froissart, B-1000 Bruxelles."
+      note: VERIFIED.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.ombudsman.europa.eu/en/make-a-complaint
+      checked: 2026-09-22
+    - url: https://www.ombudsman.europa.eu/contacts
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 40d4189af0
+  migrated_from: input/data/institutions.json

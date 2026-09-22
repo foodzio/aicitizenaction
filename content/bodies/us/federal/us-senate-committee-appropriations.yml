@@ -1,0 +1,63 @@
+id: us-senate-committee-appropriations
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.appropriations.senate.gov/about/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 992a7ec5c784
+    - id: public-route
+      type: submission
+      value: https://www.appropriations.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d30f1cb838d5
+  level: federal
+  chamber: Senate
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Susan Collins
+      party: R
+      region: ME
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Patty Murray
+      party: D
+      region: WA
+      verified_on: 2026-09-22
+strings:
+  name: Senate Committee on Appropriations
+  ai_jurisdiction: Money, and therefore the real leverage over AI agencies. Appropriations bills carry both funding levels and policy riders for NIST/CAISI, NSF, DOE labs, DHS/CISA, DoD AI programs and the FTC. Also the only committee in Congress that formally invites written testimony from the general public every year.
+  business: "VERIFIED: the committee accepted public written testimony for FY2027, with the Commerce, Justice, Science subcommittee deadline of 22 May 2026. Subcommittee markup of the FY2027 Commerce, Justice, Science and Related Agencies Appropriations Act held in 2026."
+  public_route: "VERIFIED: the /contact page is retired (returns HTTP 410). Working routes: committee office S-128, The Capitol, Washington DC 20510, 202-224-7257, and the FAQ page https://www.appropriations.senate.gov/about/faqs. Hearings are open to the public subject to space."
+  note: Chair/ranking verified 2026-09-22 against senate.gov committee_memberships_SSAP.htm.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.appropriations.senate.gov/about/members
+      checked: 2026-09-22
+    - url: https://www.appropriations.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: f2ddefc192
+  migrated_from: input/data/committees-and-organisations.json#seats

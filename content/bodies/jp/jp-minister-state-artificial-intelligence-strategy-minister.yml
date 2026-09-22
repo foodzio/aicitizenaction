@@ -1,0 +1,62 @@
+id: jp-minister-state-artificial-intelligence-strategy-minister
+type: seat
+geo:
+  country: jp
+  label: Japan
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://japan.kantei.go.jp/105/meibo/daijin/index.html
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: The Kantei site has a full English mirror at japan.kantei.go.jp, which is genuinely useful and one of the few English-language Japanese government resources that is kept current. Consultation itself is Japanese-only.
+      source_id: 48a92b55f36c
+    - id: public-route
+      type: submission
+      value: https://public-comment.e-gov.go.jp/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: The Kantei site has a full English mirror at japan.kantei.go.jp, which is genuinely useful and one of the few English-language Japanese government resources that is kept current. Consultation itself is Japanese-only.
+      source_id: 7f3c6f3c723e
+  local_name: AI戦略担当大臣 / デジタル大臣
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: FURUKAWA Toshiharu
+      verified_on: 2026-09-22
+strings:
+  name: Minister of State for Artificial Intelligence Strategy / Minister for Digital Transformation
+  ai_jurisdiction: The named political owner of the AI brief. Concurrently Minister for Digital Transformation and Minister of State for Science and Technology Policy, plus cybersecurity, intellectual property, space and ocean policy. Deputy Director of the AI Strategy Headquarters.
+  business: "Delivering the AI Basic Plan Phase II (Cabinet decision 14 July 2026). Note the significant 2026 consolidation: AI Strategy, Digital Transformation and Science & Technology Policy are now held by one person, where in the first Takaichi cabinet (Oct 2025) AI Strategy sat with Science & Technology under Onoda and Digital sat separately."
+  public_route: No direct route to the minister. Digital Agency and Cabinet Office rule-making under this portfolio goes out for public comment via e-Gov.
+  format_rules: None.
+  realistic: The minister is not directly reachable, but japan.kantei.go.jp is the correct authoritative English source for who holds the AI brief, and it is updated promptly — it already reflected the 17 September 2026 reshuffle. Use it rather than Wikipedia, which was still showing the October 2025 line-up.
+  language_note: The Kantei site has a full English mirror at japan.kantei.go.jp, which is genuinely useful and one of the few English-language Japanese government resources that is kept current. Consultation itself is Japanese-only.
+  note: "VERIFIED from the official Kantei English cabinet list at japan.kantei.go.jp/105/meibo/daijin/index.html, which explicitly attributes 'Minister of State for Artificial Intelligence Strategy' to FURUKAWA Toshiharu and dates the cabinet to 17 September 2026. Other ministers verified on the same page: AKAZAWA Ryosei (METI), FUJII Hisayuki (MIC), KIHARA Minoru (Chief Cabinet Secretary). Cross-check note: English Wikipedia's 'First Takaichi cabinet' article gave the superseded October 2025 line-up (Onoda for AI, Hayashi for MIC) — a concrete example of why prior knowledge fails here."
+  seat_notes:
+    chair: "Minister for Digital Transformation / Minister of State for Artificial Intelligence Strategy / Minister of State for Science and Technology Policy (plus further portfolios). Appointed in the Takaichi reshuffled cabinet inaugurated 17 September 2026. Predecessor in the AI Strategy brief: ONODA Kimi, who moved to Economic Security."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://japan.kantei.go.jp/105/meibo/daijin/index.html
+      checked: 2026-09-22
+    - url: https://public-comment.e-gov.go.jp/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 7a787f465b
+  migrated_from: input/data/committees-and-organisations.json#seats

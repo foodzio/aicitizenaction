@@ -1,0 +1,59 @@
+id: us-senate-committee-judiciary-2
+type: seat
+geo:
+  country: us
+  sub: ca
+  label: California
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://sjud.senate.ca.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a23f64d16c73
+    - id: public-route
+      type: submission
+      value: https://calegislation.lc.ca.gov/Advocates/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6311c7eaad9d
+  level: state
+  chamber: Senate
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Thomas J. Umberg
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: Senate Committee on Judiciary
+  ai_jurisdiction: Senate committee of first referral for frontier-AI safety, liability, digital replica, civil-rights and privacy AI bills. SB 53's Senate policy vehicle.
+  business: SB 53 (TFAIA, 2025); SB 813 (independent verification organizations, signed 9 Sep 2026); SB 1111 (digital replicas, pending); SB 947 (automated employment decisions, pending, would take effect 1 Jul 2027).
+  status: VERIFIED — Umberg appointed Judiciary chair for the 2025–2026 session; still chair at close of the 2026 session.
+  public_route: "YES — position letters accepted from any member of the public via the Advocates portal, by email to sjud.fax@sen.ca.gov, by fax (916) 403-7394, or by mail (1021 O Street, Room 3240, Sacramento CA 95814). Deadline: 12:00 p.m. the Tuesday before the hearing unless otherwise stated. Committee staff explicitly warn they do not forward letters to individual members' offices, so copy members directly."
+  agency_route: Same as Assembly entry — CA AG (oag.ca.gov/report), CPPA, California Civil Rights Department.
+  note: Committee letter-policy page and deadline verified on sjud.senate.ca.gov 22 Sep 2026. Member roster not enumerated on the landing page; use the site's Members tab.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://sjud.senate.ca.gov/
+      checked: 2026-09-22
+    - url: https://calegislation.lc.ca.gov/Advocates/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: af08c1eb3a
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,58 @@
+id: gb-house-commons-business
+type: seat
+geo:
+  country: gb
+  label: United Kingdom
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://committees.parliament.uk/committee/365/business-and-trade-committee/membership/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 60e90d359892
+    - id: public-route
+      type: submission
+      value: https://committees.parliament.uk/work/9674/artificial-intelligence-business-and-the-future-of-the-workforce/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5c2974b47288
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Rt Hon Liam Byrne MP (Labour, Birmingham Hodge Hill and Solihull North)
+      verified_on: 2026-09-22
+strings:
+  name: House of Commons Business, Innovation, Science and Trade Committee (committee id 365; formerly the Business and Trade Committee)
+  ai_jurisdiction: Departmental select committee for the new Department for Business, Innovation, Science and Trade (DBIST), which absorbed much of the abolished DSIT. It ran the inquiry 'Artificial Intelligence, business and the future of the workforce' — the most substantial Commons AI inquiry of this Parliament. AI's effect on employment, skills, business adoption and industrial strategy sits here.
+  business: "'Artificial Intelligence, business and the future of the workforce' (work id 9674) — written evidence CLOSED at 11:59pm on 3 April 2026; the committee is in the report/oral-evidence phase."
+  public_route: Written evidence when a call is open; otherwise write to the Chair or the committee clerk, and watch for the next call for evidence.
+  format_rules: "Standard Commons rules: usually max 3,000 words, numbered paragraphs, single editable file under 25MB, published permanently."
+  key_people: "Members: Dan Aldridge, Antonia Bance, Chris Bloore, John Cooper (Con), Sarah Edwards, Alison Griffiths (Con), Leigh Ingham, Justin Madders, Charlie Maynard (LD), Joshua Reynolds (LD)."
+  note: VERIFIED 2026-09-22. The committee page URL still says 'business-and-trade-committee' but the membership page heading reads 'Business, Innovation, Science and Trade Committee' — renamed after the July 2026 machinery-of-government changes. The AI/workforce inquiry is no longer accepting evidence.
+  seat_notes:
+    chair: Chair
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://committees.parliament.uk/committee/365/business-and-trade-committee/membership/
+      checked: 2026-09-22
+    - url: https://committees.parliament.uk/work/9674/artificial-intelligence-business-and-the-future-of-the-workforce/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 27d60f4712
+  migrated_from: input/data/committees-and-organisations.json#seats

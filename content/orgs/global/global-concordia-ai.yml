@@ -1,0 +1,44 @@
+id: global-concordia-ai
+type: organisation
+geo:
+  country: global
+  label: China (Beijing) and Singapore, with global engagement.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://concordia-ai.com/contact/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9a07fb4bab06
+  perspective: safety-advocacy
+  volunteers: no
+  tags:
+    - fund
+    - join
+    - law
+    - tip
+strings:
+  name: Concordia AI
+  the_ask: Build AI safety capacity and international coordination in and with China — better risk monitoring, standards input and cross-border dialogue.
+  what_they_do: Research, convenings, consulting to AI labs on risk management, contributions to Chinese national AI standards and policy consultations, and frontier risk monitoring across cyber, bio, chemical and manipulation domains. Runs the AI Risk Monitor and the State of AI Safety in China reports.
+  newcomer_action: Subscribe to the AI Safety in China newsletter (aisafetychina.substack.com) and read the State of AI Safety reports; apply for a job if you have relevant expertise.
+  tips: no
+  geography: China (Beijing) and Singapore, with global engagement.
+  scale: Small; headcount not disclosed. Note it describes itself as a 'social enterprise', not a charity.
+  spending: Commercial consulting revenue; no donation route.
+  caution: It is a social enterprise that consults for AI companies, so it is not a disinterested campaigner and takes no donations or volunteers. There is no advocacy route for a member of the public — its value to you is information.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://concordia-ai.com/contact/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 492cdad88a
+  migrated_from: input/data/committees-and-organisations.json#orgs

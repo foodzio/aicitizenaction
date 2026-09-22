@@ -1,0 +1,62 @@
+id: us-subcommittee-research-technology
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://science.house.gov/subcommittee-research-technology
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d67590d8ee65
+    - id: public-route
+      type: submission
+      value: https://science.house.gov/subcommittee-research-technology
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f951ede32fbe
+  level: federal
+  chamber: House
+  parent: House Committee on Science, Space, and Technology
+  tags:
+    - audit
+    - law
+  seats:
+    - role: chair
+      name: Jay Obernolte
+      party: R
+      region: CA
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Haley M. Stevens
+      party: D
+      region: MI
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Research and Technology
+  ai_jurisdiction: "NIST, CAISI, NSF and OSTP at subcommittee level — the most AI-specific authorizing subcommittee in the House. Send here: AI standards, model evaluation methodology, AI safety and security research, AI flaw and incident reporting, AI education and workforce, and oversight of the federal AI Action Plan."
+  business: "VERIFIED: hearing 'Advancing America's AI Action Plan', 14 Jan 2026, witness OSTP Director Michael Kratsios. Obernolte is lead sponsor of H.R.2385 CREATE AI Act (reported 29-0 on 25 Jun 2026) and was co-chair of the House Bipartisan Task Force on Artificial Intelligence that issued the December 2024 final report. On 4 Jun 2026 Obernolte, with Rep. Lori Trahan and Rep. Erin Houchin, released the ~270-page bipartisan 'Great American AI Act' discussion draft — codifying CAISI at $100M/year through FY2029, frontier-developer critical-safety-incident reporting, AI testbeds at DOE/NIST/NSF, codification of NAIRR, and preemption of most state frontier-AI regulation."
+  public_route: "Full committee: https://science.house.gov/contact, 202-225-6371. UNIQUELY: the Great American AI Act discussion draft solicits public feedback directly at GAAIA@mail.house.gov — a live, open, non-constituent-accessible channel into the most substantial bipartisan House AI bill. This is the best single email address in this whole list for a member of the public with a substantive AI policy view."
+  note: Leadership verified 2026-09-22 from the House Clerk's MemberData.xml. Obernolte is, on the evidence of 2025-2026 activity, the single most consequential House Republican on AI.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://science.house.gov/subcommittee-research-technology
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 31193826f9
+  migrated_from: input/data/committees-and-organisations.json#seats

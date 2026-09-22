@@ -1,0 +1,60 @@
+id: us-senate-commerce-consumer-protection-committee
+type: seat
+geo:
+  country: us
+  sub: mn
+  label: Minnesota
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.senate.mn/committees/committee_bio.html?ls=94&cmte_id=3118
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8b26a82f4ba9
+    - id: public-route
+      type: submission
+      value: https://www.leg.mn.gov/leg/faq/faq?id=117
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0cfefd6f0dea
+  level: state
+  chamber: Senate
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Matt D. Klein
+      party: DFL
+      verified_on: 2026-09-22
+strings:
+  name: Senate Commerce and Consumer Protection Committee
+  ai_jurisdiction: Senate committee of reference for AI consumer-facing bills, chatbot restrictions and data privacy. Meets Tue/Thu 12:30–2:30 p.m., Room G-15 Capitol.
+  business: 2026 bipartisan Senate package on consumer-facing AI, including a proposed ban on minors' access to companion chatbots; SF 1886; companion measures to HF 4452. Minnesota's enacted AI nudification ban is the subject of xAI v. Minnesota (D. Minn., filed July 2026; preliminary injunction denied).
+  status: VERIFIED — bipartisan Senate AI package presented and moving through committee in 2026; nudification ban in effect pending litigation.
+  public_route: "PARTIAL — arrange with committee staff in advance. Committee administrator: Bill Lunzer, 651-296-2090. Senate Information: 651-296-0504 or senate.information@senate.mn. No online portal; written testimony is delivered to the administrator for distribution to members."
+  agency_route: Minnesota Attorney General — https://www.ag.state.mn.us/Office/Complaint.asp
+  note: "Vice Chair: Judy Seeberger (DFL-41). Ranking Minority Member: Gary H. Dahms (R-15). Eleven members total."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.senate.mn/committees/committee_bio.html?ls=94&cmte_id=3118
+      checked: 2026-09-22
+    - url: https://www.leg.mn.gov/leg/faq/faq?id=117
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: dd4c599b4e
+  migrated_from: input/data/committees-and-organisations.json#seats

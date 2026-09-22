@@ -1,0 +1,64 @@
+id: us-congressional-artificial-intelligence-caucus-2
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://artificialintelligencecaucus-beyer.house.gov/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 06206c866885
+    - id: public-route
+      type: submission
+      value: https://artificialintelligencecaucus-beyer.house.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ae541ac09ad1
+  level: federal
+  chamber: House
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Don Beyer
+      party: D
+      region: VA
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Michael T. McCaul
+      party: R
+      region: TX
+      verified_on: 2026-09-22
+strings:
+  name: Congressional Artificial Intelligence Caucus
+  ai_jurisdiction: "Not a jurisdictional body — no bills are referred here and it cannot hold official hearings or markups. Its function is member education and cross-committee coordination: briefings for members and staff, sign-on letters, and building bipartisan support before a bill reaches a committee of jurisdiction. Useful to a member of the public as a way to reach AI-attentive offices in bulk, and as a signal of who is engaged."
+  business: "VERIFIED: 16 Sep 2026 bipartisan letter to House leadership urging immediate action on AI guardrails, oversight, security and transparency, signed by Don Beyer, Jay Obernolte, Lori Trahan, Ted Lieu, Scott Franklin, Sara Jacobs, Gabe Amo, Valerie Foushee, Brian Fitzpatrick and Veronica Escobar (beyer.house.gov DocumentID 9218). 17 Sep 2026: Beyer publicly warned Congress 'may not receive another warning shot' on AI."
+  public_route: "VERIFIED: caucus office at 1226 Longworth House Office Building, Washington DC 20515, 202-225-4376; contact form at https://artificialintelligencecaucus-beyer.house.gov/contact-us. Caucus membership is for Members of Congress only; the public engages by contacting the co-chairs' offices or by asking their own representative to join."
+  note: Co-chairs verified 2026-09-22 from the caucus's official House website. Beyer and McCaul are listed as co-chairs; the 'chair'/'ranking' fields above are used to carry the two co-chairs, not a majority/minority relationship. Note the caucus historically ran from Rep. Eshoo's site (artificialintelligencecaucus-eshoo.house.gov), which is now legacy.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://artificialintelligencecaucus-beyer.house.gov/members
+      checked: 2026-09-22
+    - url: https://artificialintelligencecaucus-beyer.house.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: e1e6742a69
+  migrated_from: input/data/committees-and-organisations.json#seats

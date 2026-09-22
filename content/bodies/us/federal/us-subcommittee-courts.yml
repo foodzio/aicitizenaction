@@ -1,0 +1,61 @@
+id: us-subcommittee-courts
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://judiciary.house.gov/subcommittees/committee-judiciary-119th-congress/courts-intellectual-property-artificial
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: cb081c61f6b6
+    - id: public-route
+      type: submission
+      value: https://judiciary.house.gov/subcommittees/committee-judiciary-119th-congress/courts-intellectual-property-artificial
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b6c1ff6e9d17
+  level: federal
+  chamber: House
+  parent: House Committee on the Judiciary
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Darrell Issa
+      party: R
+      region: CA
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Henry C. "Hank" Johnson, Jr.
+      party: D
+      region: GA
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Courts, Intellectual Property, Artificial Intelligence, and the Internet
+  ai_jurisdiction: "The only subcommittee in Congress with 'Artificial Intelligence' in its formal name on the Judiciary side. Send here: AI training data and copyright (fair use, licensing, transparency of training corpora), digital replicas and the right of publicity, AI and patents/inventorship, Copyright Office and USPTO policy, Section 230 and platform liability, and courts' use of AI. If you are a creator, rightsholder or platform, this is the House door."
+  business: "VERIFIED: July 2026 hearing at which witnesses urged action on a site-blocking mechanism and the NO FAKES Act (ipwatchdog, 2 Jul 2026). Hearing on protecting creators in the age of AI and the internet. The subcommittee continues the 'Artificial Intelligence and Intellectual Property' hearing series begun with 'Part I — Interoperability of AI and Copyright Law'. CSET and other research organizations have testified here on AI."
+  public_route: Full-committee contact https://judiciary.house.gov/contact, 2138 Rayburn, 202-225-6906; minority via democrats-judiciary.house.gov.
+  note: Exact name and leadership verified 2026-09-22 from the House Clerk's MemberData.xml (subcommittee code JU03).
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://judiciary.house.gov/subcommittees/committee-judiciary-119th-congress/courts-intellectual-property-artificial
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 339342d0f3
+  migrated_from: input/data/committees-and-organisations.json#seats

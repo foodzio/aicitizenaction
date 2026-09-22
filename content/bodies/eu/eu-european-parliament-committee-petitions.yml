@@ -1,0 +1,63 @@
+id: eu-european-parliament-committee-petitions
+type: government
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: submit-petition-european-parliament
+      type: petition
+      value: https://www.europarl.europa.eu/petitions/en/home
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9d6c68e8a2a1
+    - id: petitions-faq
+      type: form
+      value: https://www.europarl.europa.eu/petitions/en/faq/det?sectionor=1
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 944c01250ad2
+    - id: homepage
+      type: homepage
+      value: https://www.europarl.europa.eu/petitions/en/home
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 73d8178a17f7
+  region: European Union
+  public_input: open
+  tags:
+    - harm
+    - law
+    - systemic
+strings:
+  name: European Parliament Committee on Petitions (PETI)
+  remit: Handles petitions submitted under the Treaty right of petition — a fundamental right of every EU citizen and resident. Examines admissibility, may ask the Commission for information or a legal opinion, can hold hearings, conduct fact-finding visits, and report to plenary. Through petitions it 'conducts an ongoing reality check on the way in which European legislation is implemented'. It cannot legislate or fine, but it can force the Commission to answer in writing on a specific implementation failure.
+  powers_text: investigate
+  reality_check: "Underrated and genuinely open — unlike a UK petition, a single EU petition from one person can succeed on its merits with no signature threshold at all. If declared admissible, the Commission must respond in writing, the petition is discussed in committee, and MEPs can question the Commission on it. For AI this is a viable route to force an official answer on, say, a Member State's failure to designate a market surveillance authority, or non-enforcement of a prohibited practice. The constraints are real: it must fall within EU competence and affect you directly, and the process is slow (often a year or more). But it creates an official record that nothing else at EU level gives an individual."
+  notes: Distinct from the European Citizens' Initiative, which proposes new law and needs a million signatures. A petition complains about existing EU law or its implementation and needs one person.
+  routes:
+    submit-petition-european-parliament:
+      label: Submit a petition to the European Parliament
+      scope: Open to 'all European citizens and residents'. Petitions must concern a matter within the EU's fields of activity and affect the petitioner directly. Submission is online via the portal's 'Start a petition' route.
+      note: VERIFIED — portal fetched and confirmed live, with eligibility and process guides ('How do I submit a petition?', 'How is my petition treated?').
+    petitions-faq:
+      label: Petitions FAQ
+      scope: Admissibility rules and process detail.
+      note: UNVERIFIED as fetched; URL appeared in Parliament's own search results.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.europarl.europa.eu/petitions/en/home
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 843035c892
+  migrated_from: input/data/institutions.json

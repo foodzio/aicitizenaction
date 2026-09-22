@@ -1,0 +1,42 @@
+id: us-american-technology-excellence-project
+type: organisation
+geo:
+  country: us
+  label: United States — state elections, with heavy California activity.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.axios.com/2025/09/23/meta-superpac-ai-regulation
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: a6d674dd818a
+  perspective: industry-lobby
+  volunteers: no
+  tags:
+    - join
+    - opposition
+strings:
+  name: American Technology Excellence Project (Meta)
+  the_ask: Stop states passing their own AI and tech rules; replace the 'patchwork' with a single permissive national approach.
+  what_they_do: Meta's bipartisan super PAC, announced 23 September 2025, aimed squarely at state-level AI legislation and state races.
+  newcomer_action: Nothing to join. If you are lobbying a state legislator on AI, expect this money to be on the other side of the conversation.
+  tips: no
+  geography: United States — state elections, with heavy California activity.
+  scale: Large.
+  spending: Announced as 'tens of millions'; subsequent reporting describes a roughly $65 million election push in 2026.
+  caution: UNVERIFIED against Meta's own filings — figures from Axios, TechRepublic and GV Wire. This is separate from and additional to Leading the Future, so the two should not be added together casually, but they do point the same way.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.axios.com/2025/09/23/meta-superpac-ai-regulation
+      checked: null
+  needs_research:
+    - topics
+  legacy_id: b3bc316d7d
+  migrated_from: input/data/committees-and-organisations.json#orgs

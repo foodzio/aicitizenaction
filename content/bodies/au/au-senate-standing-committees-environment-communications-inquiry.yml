@@ -1,0 +1,52 @@
+id: au-senate-standing-committees-environment-communications-inquiry
+type: seat
+geo:
+  country: au
+  label: Australia
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.aph.gov.au/Parliamentary_Business/Committees/Senate/Environment_and_Communications
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b83ce9a99e25
+    - id: public-route
+      type: submission
+      value: https://www.aph.gov.au/Parliamentary_Business/Committees/Senate/Environment_and_Communications/AIdatacentres48P
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 34e3c3cc83f8
+  level: national
+  tags:
+    - audit
+    - law
+    - record
+strings:
+  name: Senate Standing Committees on Environment and Communications (References Committee) — inquiry into Artificial intelligence and data centres
+  ai_jurisdiction: "AI infrastructure. Terms of reference referred on 13 May 2026: the effectiveness of existing regulatory frameworks in managing the growth of data centres in Australia, including in relation to existing and future deals between the Government and global AI companies; the potential impacts of AI and data centres on Australian communities, industries and the environment, water and energy; and any other related matters."
+  business: Submissions closed 1 September 2026. REPORTING DATE 16 NOVEMBER 2026. Public hearings continuing.
+  public_route: Submissions have closed; contact the secretariat about late submissions or appearing at a hearing. Committee Secretary, Senate Standing Committees on Environment and Communications, PO Box 6100, Parliament House, Canberra ACT 2600; phone +61 2 6277 3526; ec.sen@aph.gov.au.
+  format_rules: Standard Senate committee rules — lodged online via My Parliament, or by email/post; published only once the committee authorises.
+  note: Inquiry details VERIFIED 2026-09-22 by direct fetch of the inquiry page (dates, terms of reference and secretariat contact are quoted from it). The COMMITTEE CHAIR IS UNVERIFIED — the aph.gov.au Senate committee membership pages returned 404/504 to my fetcher and I will not guess a name.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.aph.gov.au/Parliamentary_Business/Committees/Senate/Environment_and_Communications
+      checked: 2026-09-22
+    - url: https://www.aph.gov.au/Parliamentary_Business/Committees/Senate/Environment_and_Communications/AIdatacentres48P
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 7731cf83ab
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,44 @@
+id: us-algorithmic-justice-league-2
+type: organisation
+geo:
+  country: us
+  label: United States primarily, international reach.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.ajl.org/take-action
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 94b1c951dc24
+  perspective: civil-liberties
+  volunteers: yes
+  tags:
+    - audit
+    - harm
+    - join
+    - tip
+strings:
+  name: Algorithmic Justice League (AJL)
+  the_ask: Stop AI harms and bias — especially from facial recognition and biometric systems — by centring the people most affected and giving them a way to report what happened to them.
+  what_they_do: "Research, art and advocacy founded by Joy Buolamwini; runs report.ajl.org to collect public accounts of AI harm, campaigns such as #FreedomFlyers on TSA facial recognition, and equips advocates with empirical research."
+  newcomer_action: If an AI system has harmed you — a facial recognition misidentification, an airport scan, a rejected application — file it at report.ajl.org this week. Otherwise take an action from the Take Action page.
+  tips: yes — report.ajl.org is an explicit public harm-reporting channel
+  geography: United States primarily, international reach.
+  scale: Small organisation with very large cultural reach (Coded Bias, Buolamwini's research).
+  spending: Donations via ActBlue and merchandise sales.
+  caution: Its remit is bias, biometrics and civil rights harm, not frontier model risk. Reporting a harm is not legal representation — AJL is not a law firm and cannot act on your case.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.ajl.org/take-action
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: e099457440
+  migrated_from: input/data/committees-and-organisations.json#orgs

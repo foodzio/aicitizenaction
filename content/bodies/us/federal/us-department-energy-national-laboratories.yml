@@ -1,0 +1,78 @@
+id: us-department-energy-national-laboratories
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (federal)
+facts:
+  routes:
+    - id: genesis-mission-funding-announcements
+      type: consultation
+      value: https://www.energy.gov/undersecretaryforscience/genesis-mission/genesis-mission-national-science-and-technology-challenges
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 01ca9ef78003
+    - id: doe-requests-information-federal
+      type: docket
+      value: https://www.federalregister.gov/agencies/energy-department
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 5971696dfd02
+    - id: ai-risk-specific-public
+      type: email
+      value: none published
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 008fa36d6699
+    - id: homepage
+      type: homepage
+      value: https://www.energy.gov/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 83c01ff7ca5c
+  region: United States
+  public_input: limited
+  tags:
+    - law
+    - systemic
+strings:
+  name: U.S. Department of Energy (DOE) and the National Laboratories
+  remit: Runs the Genesis Mission (EO-established AI-for-science programme; DOE published 26 Genesis Mission national science and technology challenges and made awards through 2026) and operates the national laboratories (LLNL, Los Alamos, Sandia, Argonne, Oak Ridge). DOE/NNSA labs hold the classified expertise for nuclear and radiological risk and partner with CAISI on classified evaluations of frontier models for nuclear and radiological uplift. DOE has no general AI regulatory power over the public; its AI risk role is evaluation, classified red-teaming and compute provision.
+  powers_text: research
+  reality_check: There is effectively NO public input route into DOE's frontier-AI risk work — the classified evaluation programme with CAISI is not consultable and the labs do not take public submissions on it. The Genesis Mission is AI-for-science acceleration, not AI risk mitigation, and its openings are research funding calls for eligible institutions. If you want to reach this work, the realistic paths are a lab affiliation, a university PI on a Genesis award, or the congressional appropriations and authorisation process for NNSA.
+  notes: Do not conflate Genesis Mission (AI accelerating science) with DOE's much smaller classified AI-risk evaluation role.
+  routes:
+    genesis-mission-funding-announcements:
+      label: Genesis Mission funding announcements and RFA webinars
+      scope: Research community input via funding calls, not a general public comment route.
+      note: UNVERIFIED as fetched; URL from search results on energy.gov.
+    doe-requests-information-federal:
+      label: DOE Requests for Information in the Federal Register
+      scope: DOE issues occasional RFIs on AI and grid/compute siting that take public comment.
+      note: UNVERIFIED as fetched.
+    ai-risk-specific-public:
+      label: AI-risk-specific public contact at DOE or the labs
+      scope: n/a
+      note: UNVERIFIED ABSENCE — no dedicated AI-risk public inbox was found. Lab AI-safety work is reached through named researchers' institutional pages, not a central address.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.energy.gov/undersecretaryforscience/genesis-mission/genesis-mission-national-science-and-technology-challenges
+      checked: null
+    - url: https://www.federalregister.gov/agencies/energy-department
+      checked: null
+    - url: https://www.energy.gov/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: fd463ecf3d
+  migrated_from: input/data/institutions.json

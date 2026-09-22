@@ -1,0 +1,63 @@
+id: us-subcommittee-privacy
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.judiciary.senate.gov/about/subcommittees
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9d15d09d29f9
+    - id: public-route
+      type: submission
+      value: https://www.judiciary.senate.gov/about/subcommittees
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d83e5b8fe272
+  level: federal
+  chamber: Senate
+  parent: Senate Committee on the Judiciary
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Marsha Blackburn
+      party: R
+      region: TN
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Amy Klobuchar
+      party: D
+      region: MN
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Privacy, Technology, and the Law
+  ai_jurisdiction: "The named AI-oversight subcommittee of Senate Judiciary and the venue that produced the 2023-2024 'Oversight of AI' hearing series. Send here: AI and civil liberties, government and corporate surveillance, biometric and facial recognition, AI transparency and audit obligations framed as a legal duty, and whistleblower accounts from inside AI labs. Distinct from Commerce's consumer subcommittee: this one frames AI as a rights-and-rule-of-law problem rather than a marketplace problem."
+  business: "VERIFIED: this subcommittee ran the 'Oversight of AI' hearing series including 'Oversight of AI: Rules for Artificial Intelligence' and 'Oversight of AI: Insiders' Perspectives' (whistleblower testimony from former frontier-lab staff). 2026 work centers on a federal privacy framework and AI data use. Note: the Sept 2025 'Examining the Harm of AI Chatbots' hearing was held by the Crime and Counterterrorism Subcommittee (Hawley), not this one — chatbot-harm work has partly migrated there."
+  public_route: Through full-committee routes and the two members' own offices (Blackburn 202-224-3344; Klobuchar 202-224-3244).
+  note: Chair/ranking verified 2026-09-22 from senate.gov SSJU subcommittee roster. Blackburn chairs both this subcommittee and Senate Commerce's consumer/tech subcommittee — a single office is the pivot for much Senate AI work.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.judiciary.senate.gov/about/subcommittees
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 57b6e5d90a
+  migrated_from: input/data/committees-and-organisations.json#seats

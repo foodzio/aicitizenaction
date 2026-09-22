@@ -1,0 +1,43 @@
+id: fr-saferai-2
+type: organisation
+geo:
+  country: fr
+  label: France (Paris) and EU-level; registered French nonprofit, reg. no. 919 185 199 00016.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.safer-ai.org/about#donate
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 725296e25adb
+  perspective: safety-advocacy
+  volunteers: no
+  tags:
+    - fund
+    - join
+    - law
+strings:
+  name: SaferAI
+  the_ask: AI companies should be held to real risk-management standards, and governance should be built on rigorous, auditable frameworks rather than voluntary promises.
+  what_they_do: Research on risk management frameworks, public ratings of AI companies' safety practices (ratings.safer-ai.org), and standards work in EU and international governance processes.
+  newcomer_action: Read and cite the company ratings when arguing with policymakers or employers; donate; apply for an open role.
+  tips: unclear
+  geography: France (Paris) and EU-level; registered French nonprofit, reg. no. 919 185 199 00016.
+  scale: Small technical nonprofit; headcount not published.
+  spending: Not disclosed.
+  caution: A research and standards body, not a campaign — there is no membership or activist route. Its ratings are useful ammunition for other people's campaigns.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.safer-ai.org/about#donate
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 421f461bd7
+  migrated_from: input/data/committees-and-organisations.json#orgs

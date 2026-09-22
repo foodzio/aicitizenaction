@@ -1,0 +1,64 @@
+id: us-nist-ai-consortium
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (federal), NIST
+facts:
+  routes:
+    - id: submit-letter-interest-join
+      type: form
+      value: https://www.nist.gov/artificial-intelligence/nist-ai-consortium/submit-letter-interest-join-nist-ai-consortium
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e36b4d26266c
+    - id: federal-register-notice-expanded
+      type: docket
+      value: https://www.federalregister.gov/d/2026-10779
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d9de29db77dc
+    - id: homepage
+      type: homepage
+      value: https://www.nist.gov/artificial-intelligence/nist-ai-consortium
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ee591d9d1a6b
+  region: United States
+  public_input: limited
+  tags:
+    - systemic
+strings:
+  name: NIST AI Consortium
+  remit: "RENAMED: was the 'Artificial Intelligence Safety Institute Consortium (AISIC)'; renamed the 'NIST AI Consortium' in May 2026 with scope expanded from safety to 'AI measurement, innovation and adoption', building an AI evaluation ecosystem and promoting US-developed AI. Members join by Cooperative Research and Development Agreement (CRADA); existing members had to sign an amendment to continue."
+  powers_text: convene
+  reality_check: Organisational membership only — there is no individual public route. Membership gets you into working groups where draft guidance is actually shaped, which is far more influential than commenting from outside, but it requires a CRADA and a demonstrable technical capability. The 2026 rename narrowed the safety framing; groups whose contribution was framed as catastrophic-risk work should expect a cooler reception than those offering evaluation infrastructure.
+  notes: Second rename in this cluster (after US AISI to CAISI). Prior knowledge referring to 'AISIC' is out of date.
+  routes:
+    submit-letter-interest-join:
+      label: Submit a letter of interest to join
+      scope: Organisations with relevant technical capabilities, first-come first-served.
+      note: VERIFIED via NIST news release, May 2026.
+    federal-register-notice-expanded:
+      label: Federal Register notice for the expanded consortium
+      scope: The formal notice setting out the new scope and membership terms.
+      note: VERIFIED — cited by NIST in its own release.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.nist.gov/artificial-intelligence/nist-ai-consortium/submit-letter-interest-join-nist-ai-consortium
+      checked: 2026-09-22
+    - url: https://www.federalregister.gov/d/2026-10779
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 5a377cb5e3
+  migrated_from: input/data/institutions.json

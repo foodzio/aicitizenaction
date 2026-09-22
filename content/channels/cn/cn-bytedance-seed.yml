@@ -1,0 +1,62 @@
+id: cn-bytedance-seed
+type: company
+geo:
+  country: cn
+  label: China / Singapore
+facts:
+  routes:
+    - id: no-verified-safety-or
+      type: form
+      value: https://seed.bytedance.com/en/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 93e4ea1e9a86
+    - id: homepage
+      type: homepage
+      value: https://seed.bytedance.com/en/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: cb100cd96279
+    - id: framework
+      type: framework
+      value: https://seed.bytedance.com/en/direction/responsible_ai
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: d3515942aab1
+  region: China
+  public_input: none
+  tags:
+    - behaviour
+    - flaw
+    - harm
+strings:
+  name: ByteDance Seed
+  remit: A Responsible AI research direction within Seed; TechNode reported in August 2026 that ByteDance formed a new AI Data and Safety department. No named external-facing safety office.
+  reality_check: "ByteDance's AI safety responses in 2026 were driven by legal and commercial pressure rather than researcher reports: it pledged safeguards for Seedance 2.0 only after legal threats from Disney and Paramount over IP, and suspended a photo-to-voice feature over risk concerns. Both were reactive and externally forced. No evidence of a functioning researcher channel."
+  notes: "Record as: no meaningful public safety channel for the Seed research arm. A concern about Seedance or Doubao output realistically has to go through the consumer product's in-app reporting, or through press and legal pressure — which is what has demonstrably moved them."
+  routes:
+    no-verified-safety-or:
+      label: No verified safety or disclosure channel found
+      scope: Not found — general contact only. The Responsible AI page returned no readable body content when fetched (JS-rendered) and no contact details.
+      note: ByteDance operates a security response centre for its consumer products, but no AI-model-safety intake is published for Seed.
+    homepage:
+      label: Homepage
+    framework:
+      label: No published frontier safety framework found
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://seed.bytedance.com/en/
+      checked: null
+    - url: https://seed.bytedance.com/en/direction/responsible_ai
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 0895177c44
+  migrated_from: input/data/institutions.json

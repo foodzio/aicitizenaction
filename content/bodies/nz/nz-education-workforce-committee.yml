@@ -1,0 +1,59 @@
+id: nz-education-workforce-committee
+type: seat
+geo:
+  country: nz
+  label: New Zealand
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.parliament.nz/en/pb/sc/scl/education-and-workforce/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 39014a3ea8ea
+    - id: public-route
+      type: submission
+      value: https://www.parliament.nz/en/pb/sc/how-to-make-a-submission/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 66c77257f4aa
+  level: national
+  tags:
+    - law
+    - petition
+    - record
+  seats:
+    - role: chair
+      name: Katie Nimon, MP (National Party, Napier)
+      verified_on: 2026-09-22
+strings:
+  name: Education and Workforce Committee (54th Parliament)
+  ai_jurisdiction: "Remit: 'education, training, employment, immigration, industrial relations, health and safety, and accident compensation.' This is where AI's labour-market effects land in New Zealand — automation and job displacement, AI in workplaces and workplace surveillance, and AI in education and training. It has produced MPs' reporting on AI and business returns."
+  business: "Bills, estimates and annual reviews referred by the House, plus briefings. Secretariat: ew@parliament.govt.nz."
+  public_route: Submission when a call is open, or a petition referred to this committee.
+  format_rules: "Same New Zealand rules: no word limit, English or Māori, published by the committee, oral submissions available including remotely."
+  key_people: 9 members in total.
+  note: VERIFIED 2026-09-22 by direct fetch of the committee's own page on parliament.nz.
+  seat_notes:
+    chair: Chairperson
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.parliament.nz/en/pb/sc/scl/education-and-workforce/
+      checked: 2026-09-22
+    - url: https://www.parliament.nz/en/pb/sc/how-to-make-a-submission/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 1f9cd57032
+  migrated_from: input/data/committees-and-organisations.json#seats

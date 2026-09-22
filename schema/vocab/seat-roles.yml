@@ -1,0 +1,9 @@
+id: seat-roles
+values:
+  - { id: chair, label: Chair }
+  - { id: ranking, label: Ranking or minority member }
+  - { id: rapporteur, label: Rapporteur }
+  - { id: minister, label: Minister }
+  - { id: head, label: Head of body }
+  - { id: member, label: Member }
+  - { id: other, label: Other named role }

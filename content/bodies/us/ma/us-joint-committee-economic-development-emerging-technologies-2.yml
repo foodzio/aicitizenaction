@@ -1,0 +1,60 @@
+id: us-joint-committee-economic-development-emerging-technologies-2
+type: seat
+geo:
+  country: us
+  sub: ma
+  label: Massachusetts
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://malegislature.gov/Committees/Detail/J12
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f1b638e4b505
+    - id: public-route
+      type: submission
+      value: https://malegislature.gov/assets/documents/how-to-submit-testimony-v1.1.pdf
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9aeed7202015
+  level: state
+  chamber: House (joint committee)
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Carole A. Fiola
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: Joint Committee on Economic Development and Emerging Technologies — House chair
+  ai_jurisdiction: House-side leadership on the frontier-AI provisions of the economic development bill.
+  business: H.5527 → H.5562 / S.3178 ('Mass Wins Act') frontier-AI safety provisions; in conference committee as of 22 Sep 2026.
+  status: VERIFIED — unresolved; Gov. Healey is pushing publicly for stronger independent-evaluation and incident-reporting language.
+  public_route: YES for committee hearings via MyLegislature online testimony; no hearings during conference.
+  agency_route: Massachusetts Attorney General — https://www.mass.gov/how-to/file-a-consumer-complaint
+  note: "House vice chair: Jessica Ann Giannino. House ranking minority: Michael J. Soter."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://malegislature.gov/Committees/Detail/J12
+      checked: 2026-09-22
+    - url: https://malegislature.gov/assets/documents/how-to-submit-testimony-v1.1.pdf
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: f4f08f7875
+  migrated_from: input/data/committees-and-organisations.json#seats

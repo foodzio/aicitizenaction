@@ -1,0 +1,62 @@
+id: us-subcommittee-communications-technology
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://energycommerce.house.gov/committees/subcommittee/communications-technology
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7229d2cb17fd
+    - id: public-route
+      type: submission
+      value: https://energycommerce.house.gov/committees/subcommittee/communications-technology
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: aea2c84b879d
+  level: federal
+  chamber: House
+  parent: House Committee on Energy and Commerce
+  tags:
+    - audit
+    - law
+  seats:
+    - role: chair
+      name: Richard Hudson
+      party: R
+      region: NC
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Doris O. Matsui
+      party: D
+      region: CA
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Communications and Technology
+  ai_jurisdiction: "FCC and NTIA jurisdiction. Send here: spectrum and network capacity for AI, broadband and data-center connectivity, AI in media and content distribution, robocalls and AI voice cloning in telecom, Section 230 in its communications-law aspect, and NTIA's role in AI policy and open model weights."
+  business: "VERIFIED: subcommittee hearing on network infrastructure demands for AI and AI uses in the media and entertainment industries; an announced hearing on artificial intelligence and communications infrastructure; NTIA oversight hearing; a markup of six bills on communications networks and satellite regulation."
+  public_route: "Full-committee contact: https://energycommerce.house.gov/contact-us, 202-225-3641."
+  note: Leadership verified 2026-09-22 from the House Clerk's MemberData.xml.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://energycommerce.house.gov/committees/subcommittee/communications-technology
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: e5ac601720
+  migrated_from: input/data/committees-and-organisations.json#seats

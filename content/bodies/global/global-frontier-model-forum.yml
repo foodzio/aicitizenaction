@@ -1,0 +1,72 @@
+id: global-frontier-model-forum
+type: standards
+geo:
+  country: global
+  label: International (industry consortium, US-based)
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: info@frontiermodelforum.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ee62fed727c1
+    - id: contact-page
+      type: form
+      value: https://www.frontiermodelforum.org/contact/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 15dc907d4405
+    - id: membership-criteria
+      type: membership
+      value: https://www.frontiermodelforum.org/membership/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f6a17f5fb1c5
+    - id: homepage
+      type: homepage
+      value: https://www.frontiermodelforum.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 2bf15bb5f1d9
+  region: Global
+  public_input: limited
+  tags:
+    - systemic
+strings:
+  name: Frontier Model Forum
+  remit: Industry-supported non-profit founded by Amazon, Anthropic, Google, Meta, Microsoft and OpenAI. Publishes technical reports and issue briefs on frontier capability assessments and safety frameworks, with workstreams on AI-Bio, AI-Cyber, AI-Nuclear, AI Security and Safety Frameworks. Runs information-sharing between member labs and with government.
+  threat_model: "Severe misuse risk at the frontier — CBRN and offensive cyber uplift — plus security of model weights. Explicitly narrow: it is a misuse-and-security body, not an alignment or near-term-harms body."
+  reality_check: Effectively closed. It is a members' club of the largest labs with a single generic inbox. Sending a concern here is close to sending it to the labs' shared comms function. Its technical publications are worth reading; it is not a route in.
+  gov_channel: Strong and quiet — the FMF is a recognised industry interlocutor for the US and UK governments and for the AI Safety/Security Institute network.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: The only published address
+    contact-page:
+      label: Contact page
+      scope: General
+    membership-criteria:
+      label: Membership criteria (for frontier developers only)
+      scope: Organisations that develop and deploy frontier models and have a safety framework
+      note: Individuals cannot join.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.frontiermodelforum.org/contact/
+      checked: 2026-09-22
+    - url: https://www.frontiermodelforum.org/membership/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b21f5e2e44
+  migrated_from: input/data/institutions.json

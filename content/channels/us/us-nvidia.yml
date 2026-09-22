@@ -1,0 +1,83 @@
+id: us-nvidia
+type: company
+geo:
+  country: us
+  label: USA
+facts:
+  routes:
+    - id: nvidia-psirt
+      type: email
+      value: psirt@nvidia.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 2eec0dd526f7
+    - id: report-security-vulnerability-or
+      type: disclosure
+      value: https://app.intigriti.com/company/programs/nvidia/nvidiavdp/detail
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6c4bdbe3cbe0
+    - id: nvidia-public-bug-bounty
+      type: bounty
+      value: https://app.intigriti.com/company/programs/nvidia/nvidiapublicbugbounty/detail
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 701c2c3d45fa
+    - id: homepage
+      type: homepage
+      value: https://www.nvidia.com/en-us/security/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 0afe9f5a6da6
+    - id: framework
+      type: framework
+      value: https://images.nvidia.com/content/pdf/NVIDIA-Frontier-AI-Risk-Assessment.pdf
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: db76a1d26f2f
+  region: United States
+  public_input: open
+  tags:
+    - behaviour
+    - flaw
+    - harm
+strings:
+  name: NVIDIA
+  remit: NVIDIA PSIRT handles product security including AI-specific concerns; a Trustworthy AI function publishes model cards and the NeMo Guardrails tooling.
+  reality_check: No public complaints found about NVIDIA PSIRT being unresponsive; PSIRT is an established, publicly active team (it posts as @nvidiapsirt). The AI-concern category on the VDP intake form is genuine and unusual. Note that from 1 October 2026 NVIDIA PSIRT will publish security bulletins only on GitHub (github.com/nvidia/product-security), so that is where to watch for outcomes.
+  notes: The intake form's 'NVIDIA Artificial Intelligence (AI) Concern' option is the route to use — it is a real dropdown, not marketing. No explicit safe-harbour language was visible on the report-vulnerability page; check the PSIRT policies page before doing anything aggressive.
+  routes:
+    nvidia-psirt:
+      label: NVIDIA PSIRT
+      scope: Product security vulnerabilities and AI concerns.
+      note: PGP key at https://www.nvidia.com/en-us/security/pgp-key/
+    report-security-vulnerability-or:
+      label: Report a Security Vulnerability or NVIDIA AI Concern
+      scope: Explicitly includes 'AI vulnerability or hack, AI trust concern, malicious prompt engineering, data poisoning possibility'.
+      note: One of the very few intake forms in this list that names AI trust concerns as a first-class category rather than excluding them.
+    nvidia-public-bug-bounty:
+      label: NVIDIA public bug bounty (Intigriti)
+      scope: Paid security research.
+    homepage:
+      label: Homepage
+    framework:
+      label: NVIDIA Frontier AI Risk Assessment (17 February 2025)
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://app.intigriti.com/company/programs/nvidia/nvidiavdp/detail
+      checked: 2026-09-22
+    - url: https://app.intigriti.com/company/programs/nvidia/nvidiapublicbugbounty/detail
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 391733a025
+  migrated_from: input/data/institutions.json

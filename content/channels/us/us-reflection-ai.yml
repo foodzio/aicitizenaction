@@ -1,0 +1,69 @@
+id: us-reflection-ai
+type: company
+geo:
+  country: us
+  label: USA
+facts:
+  routes:
+    - id: single-catch-all-contact
+      type: email
+      value: https://reflection.ai/legal/privacy-policy/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 67bf5712544f
+    - id: support-knowledge-base
+      type: form
+      value: https://support.reflection.ai/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 1ac29f32c55f
+    - id: homepage
+      type: homepage
+      value: https://reflection.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 993ddc20a3a5
+    - id: framework
+      type: framework
+      value: https://reflection.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 860293d76ac5
+  region: United States
+  public_input: none
+  tags:
+    - behaviour
+    - flaw
+strings:
+  name: Reflection AI
+  remit: No publicly named safety or alignment function and no published safety framework, despite positioning as an open frontier lab.
+  reality_check: No public accounts of safety contact. Reflection raised at frontier-lab scale and positions itself as America's open-weights answer to Chinese labs, but publishes no safety framework, no disclosure policy and no security contact — only a privacy policy with one catch-all address. The fact that 'correction requests regarding AI model outputs' are handled as a privacy-law obligation rather than a safety process is the tell.
+  notes: "Record as: no meaningful public safety channel. Read the address off the privacy policy yourself; do not trust a transcribed version. Expect it to be handled as a data-subject request."
+  routes:
+    single-catch-all-contact:
+      label: Single catch-all contact
+      scope: The privacy policy routes everything — privacy rights, children's privacy, appeals, and notably 'factual accuracy correction requests regarding AI model outputs' — to one address published in that document.
+      note: The address itself was redacted by the fetch tool and could not be independently confirmed character-by-character, so it is not reproduced here rather than risk inventing it. Read it directly from the privacy policy page.
+    support-knowledge-base:
+      label: Support knowledge base
+      scope: Product support.
+    homepage:
+      label: Homepage
+    framework:
+      label: No published safety framework found
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://reflection.ai/legal/privacy-policy/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 1433aaba65
+  migrated_from: input/data/institutions.json

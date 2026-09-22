@@ -1,0 +1,62 @@
+id: br-chamber-deputies-e-democracia-participa-brasil
+type: seat
+geo:
+  country: br
+  label: Brazil
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://edemocracia.camara.leg.br/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Portuguese only on both platforms.
+      source_id: 45ea7cc81186
+    - id: public-route
+      type: submission
+      value: https://www.gov.br/participamaisbrasil/consultas-publicas
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Portuguese only on both platforms.
+      source_id: def0ef68ae0c
+  local_name: Portal e-Democracia (Câmara dos Deputados) / Participa + Brasil (Governo Federal)
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Not applicable
+      verified_on: 2026-09-22
+strings:
+  name: Chamber of Deputies e-Democracia and Participa + Brasil
+  ai_jurisdiction: Two general-purpose participation platforms covering AI when an AI bill or an AI-related regulation is open. e-Democracia covers Chamber bills including PL 2338/2023 and its 37 appended bills; Participa + Brasil covers executive-branch consultations including ANPD's.
+  business: e-Democracia offers Wikilegis (clause-by-clause commenting on bill text), enquetes (polls for/against a bill), and Audiências Interativas (submit questions live during committee hearings, which deputies read out). The Chamber has announced a restructuring of the e-Democracia portal, so URLs and feature names may shift. Participa + Brasil hosts open federal consultations with comment forms.
+  public_route: "e-Democracia: free registration, then comment on a bill's text in Wikilegis, vote in an enquete, or submit a question during a live committee hearing. Participa + Brasil: open the consultation, fill the form; some consultations do not require registration."
+  format_rules: None on either. No signature or supporter counts. Free, and largely registration-light.
+  realistic: "These are the genuinely low-friction Brazilian routes for an ordinary person and the ones to recommend first. Audiências Interativas in particular are a real and underused lever: you can put a question directly into a live committee hearing on PL 2338 and have a deputy read it aloud, at zero cost and with no gatekeeper. Honest limits: comments carry no obligation on anyone to respond, Wikilegis contributions are advisory, and reach depends on whether staff choose to compile them. Portuguese-only. But 'can an ordinary person actually use this' — yes, unambiguously, for a Brazilian."
+  language_note: Portuguese only on both platforms.
+  note: Both platforms VERIFIED as live official portals. The announced restructuring of e-Democracia is VERIFIED from the Chamber's own notice page — expect URL churn. The specific feature set (Wikilegis, enquetes, audiências interativas) is drawn from official Chamber participation documentation; confirm current feature availability after the restructuring.
+  seat_notes:
+    chair: e-Democracia operated by the Chamber of Deputies; Participa + Brasil operated by the federal executive (Controladoria-Geral da União / Secretaria-Geral da Presidência). Brasil Participativo is a related Decidim-based platform run by the Presidency.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://edemocracia.camara.leg.br/
+      checked: 2026-09-22
+    - url: https://www.gov.br/participamaisbrasil/consultas-publicas
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 1092267aad
+  migrated_from: input/data/committees-and-organisations.json#seats

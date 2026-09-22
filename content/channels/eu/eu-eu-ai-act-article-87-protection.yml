@@ -1,0 +1,57 @@
+id: eu-eu-ai-act-article-87-protection
+type: reporting-channel
+geo:
+  country: eu
+  label: EU
+facts:
+  routes:
+    - id: submission-page
+      type: whistleblowing
+      value: https://artificialintelligenceact.eu/article/87/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0afb3b99c532
+    - id: homepage
+      type: homepage
+      value: https://artificialintelligenceact.eu/article/87/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 057045d64481
+  region: European Union
+  public_input: open
+  tags:
+    - flaw
+    - insider
+    - systemic
+strings:
+  name: EU AI Act Article 87 — protection of persons reporting infringements
+  remit: Reports of AI Act infringements by workers in the broad sense covered by the Whistleblower Directive.
+  reality_check: This is the most substantive statutory AI whistleblower protection in force anywhere as of September 2026 — notably stronger than the US position, where the federal AI Whistleblower Protection Act remains stuck in committee. Its weakness is that it covers AI Act infringements, not 'AI is dangerous' concerns that break no specific provision.
+  accepts: Reports of AI Act infringements by workers in the broad sense covered by the Whistleblower Directive.
+  does_not_accept: Does not create a new standalone AI whistleblower regime; it imports the existing Directive wholesale.
+  how: "Its single operative sentence: 'Directive (EU) 2019/1937 shall apply to the reporting of infringements of this Regulation and the protection of persons reporting such infringements.' In practice this means internal channels first, then the competent national authority, with external/public disclosure protected in defined circumstances. The AI Office's whistleblower tool is the EU-level external channel."
+  format: As per national implementations of the Directive.
+  timing: Applies from 2 August 2026.
+  after: Confidentiality safeguards and anti-retaliation protection apply; remedies are pursued under national implementing law.
+  operator: European Commission / Member States, applying Directive (EU) 2019/1937
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Reports of AI Act infringements by workers in the broad sense covered by the Whistleblower Directive.
+      note: "Its single operative sentence: 'Directive (EU) 2019/1937 shall apply to the reporting of infringements of this Regulation and the protection of persons reporting such infringements.' In practice this means internal channels first, then the competent national authority, with external/public disclosure protected in defined circumstances. The AI Office's whistleblower tool is the EU-level external channel."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://artificialintelligenceact.eu/article/87/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 82702c5c19
+  migrated_from: input/data/institutions.json

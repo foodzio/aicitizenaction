@@ -1,0 +1,69 @@
+id: gb-centre-study-existential-risk
+type: academic
+geo:
+  country: gb
+  label: United Kingdom (Cambridge)
+facts:
+  routes:
+    - id: cser-general-enquiries
+      type: email
+      value: enquiries@cser.cam.ac.uk
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 22a4cc63aab7
+    - id: institute-technology-humanity
+      type: email
+      value: info@ith.cam.ac.uk
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 05276382f25f
+    - id: visitor-affiliate-programmes
+      type: membership
+      value: https://www.cser.ac.uk/education/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c76daabf40fd
+    - id: homepage
+      type: homepage
+      value: https://www.cser.ac.uk/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 3773234e746f
+  region: United Kingdom
+  public_input: limited
+  tags:
+    - research
+strings:
+  name: Centre for the Study of Existential Risk (CSER), University of Cambridge
+  remit: Interdisciplinary research centre on risks that threaten human extinction or civilisational collapse — AI, biological risk, climate and ecological risk, and systemic/cascading risk. Now part of Cambridge's Institute for Technology and Humanity (ITH) alongside LCFI and the Centre for Human-Inspired AI. Runs education programmes, visitor and affiliate schemes.
+  threat_model: Global catastrophic and existential risk across multiple hazard classes; on AI, both loss of control and AI as a risk-amplifier for other hazards. Also strong on the governance of extreme risk generally.
+  reality_check: A published, monitored inbox and an explicit invitation to contact centre teams about visiting and affiliation — notably more open than most academic centres. Academic pace; it will not act as a rapid-response channel.
+  gov_channel: Real in the UK — CSER researchers have given parliamentary evidence and advised on UK risk registers and international processes.
+  routes:
+    cser-general-enquiries:
+      label: CSER general enquiries
+      scope: Anyone
+      note: Verified via the ITH contact page, which explicitly invites direct contact with centre teams about education, visitor and affiliate programmes.
+    institute-technology-humanity:
+      label: Institute for Technology and Humanity (parent institute)
+      scope: General
+    visitor-affiliate-programmes:
+      label: Visitor and affiliate programmes
+      scope: Researchers
+      note: A real route for external academics to affiliate.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.cser.ac.uk/education/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 6f40f73cc5
+  migrated_from: input/data/institutions.json

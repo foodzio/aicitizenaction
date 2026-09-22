@@ -1,0 +1,42 @@
+id: global-national-union-journalists
+type: organisation
+geo:
+  country: global
+  label: United Kingdom and Ireland.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.nuj.org.uk/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 51cc3714c3d4
+  perspective: professional
+  volunteers: yes — members only, through chapels and branches
+  tags:
+    - join
+    - tip
+strings:
+  name: National Union of Journalists (NUJ)
+  the_ask: AI must not be used to cut journalism jobs or degrade editorial standards; its use should be negotiated with the union, with transparency and protection of journalists' work.
+  what_they_do: "UK and Ireland journalists' union: chapel-level negotiation over AI in newsrooms, industrial action where AI is used to justify job losses (Mirror journalists balloted for strike action over AI-linked job threats), parliamentary work on AI in journalism, and an AI policy for members."
+  newcomer_action: If you are a journalist, join the NUJ and raise AI at your chapel; ask your employer for its AI policy in writing.
+  tips: unclear
+  geography: United Kingdom and Ireland.
+  scale: Mid-sized union (roughly 30,000 members).
+  spending: Membership funded.
+  caution: "UNVERIFIED: the NUJ website blocked automated access, so the specific AI policy page URL and current wording could not be confirmed — only nuj.org.uk itself is given, and the 2026 industrial action is from third-party reporting (Personnel Today, Nieman Lab). Confirm directly. Route in is membership."
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.nuj.org.uk/
+      checked: null
+  needs_research:
+    - topics
+  legacy_id: 58a47237f2
+  migrated_from: input/data/committees-and-organisations.json#orgs

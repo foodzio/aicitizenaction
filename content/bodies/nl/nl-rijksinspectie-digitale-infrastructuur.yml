@@ -1,0 +1,40 @@
+id: nl-rijksinspectie-digitale-infrastructuur
+type: government
+geo:
+  country: nl
+  label: Netherlands
+facts:
+  routes:
+    - id: rdi-ai-act-complaints
+      type: complaint
+      value: null
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: nl, en
+  local_name: Rijksinspectie Digitale Infrastructuur
+  region: European Union
+  public_input: limited
+  tags:
+    - harm
+strings:
+  name: Rijksinspectie Digitale Infrastructuur (RDI)
+  remit: Designated in 2026 as the Netherlands' coordinating market-surveillance authority for the EU AI Act, working alongside the Autoriteit Persoonsgegevens. As an AI Act market-surveillance authority it will hold investigative powers, the ability to require documentation and model access, and to order corrective measures and withdrawal of non-compliant systems, with penalty powers flowing from the national implementing law.
+  powers_text: investigate
+  reality_check: Under EU AI Act Article 85, any person may lodge a complaint with a market-surveillance authority — no nationality or residency requirement. That right applies here and is the operative mechanism for foreigners in any EU state. But the Dutch designation was only settled during 2026 and I could verify no working AI complaint route at RDI. Treat the legal right as real and the administrative channel as unconfirmed.
+  notes: Included because the Dutch supervision model is split and a directory listing only the AP would be incomplete.
+  routes:
+    rdi-ai-act-complaints:
+      label: RDI AI Act complaints
+      scope: AI Act market surveillance
+      note: UNVERIFIED — I did NOT fetch or confirm any RDI URL or contact address. Listed for completeness of the Dutch designation only. Verify before publishing anything.
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 580506feca
+  migrated_from: input/data/institutions.json
+  unsourced: No URL was found for this entity during research (input/data/institutions.json). It needs a source before it can be relied on.

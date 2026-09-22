@@ -1,0 +1,43 @@
+id: gb-british-medical-association
+type: organisation
+geo:
+  country: gb
+  label: United Kingdom.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.bma.org.uk/media/njgfbmnn/bma-principles-for-artificial-intelligence-ai-and-its-application-in-healthcare.pdf
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 3891f56f2ce7
+  perspective: professional
+  volunteers: yes — members only, through BMA committee structures
+  tags:
+    - fund
+    - join
+    - tip
+strings:
+  name: British Medical Association (BMA)
+  the_ask: AI in the NHS must support and not supplant doctors, with clear principles for safe clinical use and protection of NHS patient data.
+  what_they_do: Publishes BMA Principles for Artificial Intelligence and its Application in Healthcare; responds to NHS plans (it has publicly opposed AI being used to supplant doctors in the NHS plan) and has warned about risks to NHS data from AI deals; represents doctors in negotiation and in the press.
+  newcomer_action: If you are a BMA member, read the AI principles document and raise AI in your local negotiating committee or through a motion to the Annual Representative Meeting.
+  tips: no
+  geography: United Kingdom.
+  scale: Large — the UK doctors' trade union and professional association.
+  spending: Membership funded.
+  caution: "UNVERIFIED: the principles PDF URL is on the BMA's own domain but was located via search rather than fetched, and the 2026 positions cited (NHS plan, NHS data warnings) come from third-party reporting. Confirm on bma.org.uk before relying on it. Route in is membership."
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.bma.org.uk/media/njgfbmnn/bma-principles-for-artificial-intelligence-ai-and-its-application-in-healthcare.pdf
+      checked: null
+  needs_research:
+    - topics
+  legacy_id: e26261e01c
+  migrated_from: input/data/committees-and-organisations.json#orgs

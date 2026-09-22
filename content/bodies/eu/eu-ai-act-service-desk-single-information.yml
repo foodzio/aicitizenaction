@@ -1,0 +1,61 @@
+id: eu-ai-act-service-desk-single-information
+type: government
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: ai-act-service-desk
+      type: form
+      value: https://ai-act-service-desk.ec.europa.eu/en/ai-act-service-desk
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5f5111921566
+    - id: ai-office
+      type: email
+      value: CNECT-AIOFFICE@ec.europa.eu
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4a7b9e96d699
+    - id: homepage
+      type: homepage
+      value: https://ai-act-service-desk.ec.europa.eu/en
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: b11a1b557afc
+  region: European Union
+  public_input: open
+  tags:
+    - harm
+strings:
+  name: AI Act Service Desk / Single Information Platform
+  remit: Commission-run help service operated by the AI Office. Described as 'a central initiative to help stakeholders navigate the AI Act requirements', providing interactive tools to determine whether a given actor falls within the Act's obligations, and a staffed desk where anyone can 'submit questions about the AI Act and receive answers from a team of experts' in their own language. It gives guidance; it does not take complaints, does not enforce, and its answers are not legally binding.
+  powers_text: advise
+  reality_check: "Genuinely staffed and genuinely useful — the only place in the EU AI governance architecture where a non-expert can ask a question and get a human answer. But its purpose is compliance navigation, not risk reporting: if you write to it about a dangerous model it will answer a question about legal classification, not open a case. For an actual complaint use the Article 85 route to your national market surveillance authority (AI systems) or, for GPAI models, there is no public complaint route at all — only the AI Office's general inbox."
+  notes: Included because it is the most reachable EU AI address for an ordinary person, and because it is frequently mistaken for a complaints channel.
+  routes:
+    ai-act-service-desk:
+      label: AI Act Service Desk — ask a question
+      scope: Open to anyone, in any EU language. Compliance and interpretation questions about the AI Act.
+      note: VERIFIED — the Single Information Platform was fetched and publishes this as its question route.
+    ai-office:
+      label: AI Office (behind the service desk)
+      scope: General AI Office correspondence.
+      note: VERIFIED on the Single Information Platform page.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ai-act-service-desk.ec.europa.eu/en/ai-act-service-desk
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 855d49ae60
+  migrated_from: input/data/institutions.json

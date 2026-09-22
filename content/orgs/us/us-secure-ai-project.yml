@@ -1,0 +1,43 @@
+id: us-secure-ai-project
+type: organisation
+geo:
+  country: us
+  label: "United States, with a strong California state focus. Address: 584 Castro Street #3160, San Francisco."
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://secureaiproject.org/bills-we-support
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5e13c4e4d395
+  perspective: safety-advocacy
+  volunteers: unclear
+  tags:
+    - fund
+    - join
+    - law
+strings:
+  name: Secure AI Project
+  the_ask: Adopt policies that reduce the risk of severe harm from advanced AI, built on transparency, accountability and safe development.
+  what_they_do: Drafts and advocates for specific bills — notably associated with California SB 53 — and publishes a list of bills it supports. Staff include Thomas Woodside.
+  newcomer_action: Read the 'bills we support' page, then write to your California or federal legislator citing it; donate; contact them if you have drafting or technical expertise.
+  tips: unclear
+  geography: "United States, with a strong California state focus. Address: 584 Castro Street #3160, San Francisco."
+  scale: Very small. Its own site names no team, which is itself a signal about size.
+  spending: Not disclosed.
+  caution: Its own website discloses no team, no board and no budget — you would be donating to an organisation whose scale is not public. Its ask is targeted transparency legislation, not a pause.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://secureaiproject.org/bills-we-support
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: a8f7f7be83
+  migrated_from: input/data/committees-and-organisations.json#orgs

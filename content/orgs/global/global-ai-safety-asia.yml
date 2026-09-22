@@ -1,0 +1,71 @@
+id: global-ai-safety-asia
+type: civil-society
+geo:
+  country: global
+  label: Asia-Pacific (Southeast, East and South Asia; listed activity in Cambodia, China, Indonesia, Japan, Malaysia, Republic of Korea, Singapore, Thailand)
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: contact@aisafety.asia
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e2367cd4c8fe
+    - id: linkedin
+      type: form
+      value: https://www.linkedin.com/company/103351153
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9f82568e2ca8
+    - id: unesco-observatory-profile
+      type: form
+      value: https://www.unesco.org/ethics-ai/en/civil-society-organizations/ai-safety-asia
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7777f1a0944b
+    - id: homepage
+      type: homepage
+      value: https://www.unesco.org/ethics-ai/en/civil-society-organizations/ai-safety-asia
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 5c4db2a59ef9
+  region: China
+  public_input: open
+  tags:
+    - law
+    - research
+strings:
+  name: AI Safety Asia (AISA)
+  remit: Non-profit working to harmonise international governance of safe and secure AI 'the Asia way'. Delivers AI governance training to government officials and civil society — including director-level officials in Indonesia and parliamentarians in Malaysia — conducts policy research (including with Brookings on Southeast Asian AI safety governance), and runs courses such as a 10-week cooperative AI course with the Cooperative AI Foundation. Listed in UNESCO's Global AI Ethics Observatory CSO directory and the WEF AI Global Alliance.
+  threat_model: Governance capacity and regional representation — the concern that AI safety norms are set in the West and imposed on Asia without local capability to evaluate them. Covers safety and security broadly rather than a specific technical threat.
+  reality_check: "Small and growing; the kind of organisation that reads its own email. Strongest value if your concern needs a hearing in an Asian jurisdiction where Western AI safety organisations have no standing. UNVERIFIED: an independent aisafety.asia homepage was not confirmed — the UNESCO profile is the verified reference."
+  gov_channel: Real and direct in-region — trains sitting officials and parliamentarians in several Asian states, which is unusually concrete access.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+      note: Verified via the UNESCO Observatory CSO profile.
+    linkedin:
+      label: LinkedIn
+      scope: Anyone
+    unesco-observatory-profile:
+      label: UNESCO Observatory profile
+      scope: Reference
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.linkedin.com/company/103351153
+      checked: 2026-09-22
+    - url: https://www.unesco.org/ethics-ai/en/civil-society-organizations/ai-safety-asia
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: bceca78466
+  migrated_from: input/data/institutions.json

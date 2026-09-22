@@ -1,0 +1,61 @@
+id: in-india-ai-impact-summit-2026
+type: seat
+geo:
+  country: in
+  label: India
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://impact.indiaai.gov.in/about-summit
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: English.
+      source_id: 1edf0f6ef6fa
+    - id: public-route
+      type: submission
+      value: https://impact.indiaai.gov.in/stakeholder-consultation
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: English.
+      source_id: 8d113af629bc
+  local_name: भारत एआई इम्पैक्ट शिखर सम्मेलन 2026
+  level: national
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Ashwini Vaishnaw
+      verified_on: 2026-09-22
+strings:
+  name: India AI Impact Summit 2026
+  ai_jurisdiction: Host of the fourth in the series of global AI summits (after Bletchley, Seoul, Paris). Held 19-20 February 2026 at Bharat Mandapam, New Delhi. Organised by MeitY/IndiaAI under a 'Sutras and Chakras' framework. Set the agenda for Global South AI positioning; the India AI Governance Guidelines were foregrounded there.
+  business: Concluded 20 February 2026. Current business is implementation and follow-through of summit outcomes. The Summit ran a formal pre-summit stakeholder consultation in June 2025 with dedicated category sessions for international organisations, industry, startups, academia AND civil society, plus a Global South Showcase and a research symposium. UN ODET ran side events.
+  public_route: The stakeholder consultation form at impact.indiaai.gov.in/stakeholder-consultation (now closed — the sessions it served ran in June 2025). Civil society was a named, separately-slotted category, so engagement was formally possible. Physical attendance required accreditation/registration. Side events were the more open route.
+  format_rules: No signature threshold. Accreditation and invitation controlled participation in the main programme.
+  realistic: "Civil society engagement was real but curated. The stakeholder consultation genuinely had a civil-society slot, which is better than the Paris or Bletchley precedent. However, the window was in June 2025 — eight months before the event — so anyone who discovered the Summit in 2026 had already missed the substantive input point. The realistic lesson for future summits: the consultation opens roughly 6-9 months before, on the summit's own domain, not on the ministry's. Watch impact.indiaai.gov.in, not meity.gov.in."
+  language_note: English.
+  note: Summit dates, venue and the existence of a civil-society consultation track VERIFIED from impact.indiaai.gov.in. The consultation sessions are dated June 2025 on that page; the page does not state whether the form remains open, and it appears to be historical.
+  seat_notes:
+    chair: Minister responsible (MeitY); hosted by Prime Minister Narendra Modi
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://impact.indiaai.gov.in/about-summit
+      checked: 2026-09-22
+    - url: https://impact.indiaai.gov.in/stakeholder-consultation
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 03624ba117
+  migrated_from: input/data/committees-and-organisations.json#seats

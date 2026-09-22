@@ -1,0 +1,56 @@
+id: us-california-attorney-general-consumer-complaint
+type: reporting-channel
+geo:
+  country: us
+  sub: ca
+  label: California (reaches most major AI developers, which are California-domiciled)
+facts:
+  routes:
+    - id: submission-page
+      type: complaint
+      value: https://oag.ca.gov/contact/consumer-complaint-against-business-or-company
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b0a6b91e3a1b
+    - id: homepage
+      type: homepage
+      value: https://oag.ca.gov/contact/consumer-complaint-against-business-or-company
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 9dae01766790
+  region: Other
+  public_input: open
+  tags:
+    - harm
+strings:
+  name: California Attorney General — consumer complaint
+  remit: Complaints about businesses, including AI companies. The AG investigates where complaints suggest patterns of consumer harm or systematic violations of consumer protection law.
+  reality_check: "Worth more than its bureaucratic appearance because of jurisdiction: California's AG has direct reach over OpenAI, Anthropic, Google and Meta, and California has become the lead US AI regulator via SB 53. A well-documented complaint alleging a pattern lands in the office with both the authority and the demonstrated appetite to act. Still: no individual remedy, no guaranteed response."
+  accepts: Complaints about businesses, including AI companies. The AG investigates where complaints suggest patterns of consumer harm or systematic violations of consumer protection law.
+  does_not_accept: "The form is explicit: 'The Attorney General cannot provide you with legal advice or represent you in personal legal actions' and 'cannot act as my personal lawyer.' It will not adjudicate your individual dispute."
+  how: Online web form at oag.ca.gov, or download, print and mail the form. Forms available in English, Spanish, Chinese and Vietnamese. Provide your contact details, the business's details, the product/service, transaction dates, names of representatives, your desired resolution, and evidence of prior contact attempts with the business.
+  format: Structured form; up to 5 supporting documents, max 50MB each, PDF/DOC.
+  timing: Rolling.
+  after: Review; possible investigation if a pattern emerges; possible referral to a more appropriate agency.
+  operator: California Department of Justice, Office of the Attorney General
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Complaints about businesses, including AI companies. The AG investigates where complaints suggest patterns of consumer harm or systematic violations of consumer protection law.
+      note: Online web form at oag.ca.gov, or download, print and mail the form. Forms available in English, Spanish, Chinese and Vietnamese. Provide your contact details, the business's details, the product/service, transaction dates, names of representatives, your desired resolution, and evidence of prior contact attempts with the business.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://oag.ca.gov/contact/consumer-complaint-against-business-or-company
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: a1b8c154bb
+  migrated_from: input/data/institutions.json

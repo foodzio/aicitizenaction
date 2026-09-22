@@ -1,0 +1,63 @@
+id: eu-european-commission-have-your-say-portal
+type: government
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: have-your-say-give
+      type: consultation
+      value: https://have-your-say.ec.europa.eu/index_en
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b009f7e0ca39
+    - id: legacy-better-regulation-url
+      type: consultation
+      value: https://ec.europa.eu/info/law/better-regulation/have-your-say_en
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b42ce3331d1e
+    - id: homepage
+      type: homepage
+      value: https://have-your-say.ec.europa.eu/index_en
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 31693c8a89c3
+  region: European Union
+  public_input: open
+  tags:
+    - systemic
+strings:
+  name: European Commission 'Have your say' portal
+  remit: The Commission's single public feedback and consultation platform under the Better Regulation framework. Every Commission initiative — call for evidence, draft delegated or implementing act, public consultation, evaluation — is published here with a feedback window, and all feedback received is published alongside. The Commission must publish a synopsis report summarising and responding to feedback. This is the formal EU equivalent of the US regulations.gov docket.
+  powers_text: advise
+  reality_check: "THE MAIN FORMAL EU LEVER, and the AI Act's implementing machinery runs through it — codes of practice, guidelines on GPAI, risk-classification guidance and delegated acts all pass through a feedback window here. Feedback is published, attributed and answered in a synopsis report, which makes it far more consequential than a letter. The caveats practitioners repeat: windows are short (often four weeks) and poorly publicised, the Commission weights structured, evidence-bearing responses from identifiable organisations much more heavily than individual comments, and a response that does not engage the specific questions asked is summarised away in one line. Set up an alert on the portal for the AI Act rather than checking periodically — most people miss the window entirely."
+  notes: Complements rather than replaces the AI Office's own targeted multi-stakeholder consultations, which have been the more substantive route for the GPAI Code of Practice.
+  routes:
+    have-your-say-give:
+      label: Have your say — give feedback on EU initiatives
+      scope: Open to anyone worldwide, though respondents are asked to identify themselves and their category (citizen, company, NGO, public authority). Feedback is published publicly with the respondent's name unless anonymity is requested.
+      note: VERIFIED as live and as the Commission's own canonical URL. The landing page is a language gateway; individual initiative pages carry the actual feedback forms and deadlines. No AI-specific item was visible from the landing page.
+    legacy-better-regulation-url:
+      label: Legacy Better Regulation URL (redirects)
+      scope: Older link still in wide circulation.
+      note: VERIFIED as resolving to the Have your say portal.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://have-your-say.ec.europa.eu/index_en
+      checked: 2026-09-22
+    - url: https://ec.europa.eu/info/law/better-regulation/have-your-say_en
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 584cf35a82
+  migrated_from: input/data/institutions.json

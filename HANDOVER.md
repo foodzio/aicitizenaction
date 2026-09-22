@@ -1,152 +1,104 @@
 # HANDOVER.md — aicitizenaction
 
-**Scope of this file:** `aicitizenaction` (repo root).
-
-**Purpose:** the single source of truth for what is being implemented right now,
-*for this project only*. Any LLM or human developer must be able to read this file
-and resume the work without further context. Keep it updated as you go, not just at
-the end. This file is tracked in git — commit it with the work it describes.
-
-Structural facts about the repo (layout, tooling, commands) belong in `CLAUDE.md`,
-not here.
-
-## One HANDOVER.md per project / study / subproject
-
-If this repo grows to hold several projects, studies, or subprojects, **each one gets
-its own `HANDOVER.md` at the root of its own folder** (e.g.
-`studies/study-a/HANDOVER.md`, `projects/foo/HANDOVER.md`).
-
-- Write only to the `HANDOVER.md` of the project/subproject you are working on.
-- Never edit, reset, merge, or delete another project's `HANDOVER.md` — they are
-  independent and must not affect one another.
-- Work that spans subprojects means updating each affected subproject's own file
-  separately, cross-referencing them by path.
-- This root file covers repo-wide work only; it is not a rollup of subproject files.
-
-Handover files in this repo:
+**Scope of this file:** `aicitizenaction` (repo root). Single-project repo: this is the only
+HANDOVER.md. Structural facts (layout, commands) live in `CLAUDE.md`; live progress lives here.
+Tracked in git and committed with every step.
 
 | HANDOVER.md path | Covers |
 | --- | --- |
 | `HANDOVER.md` | `aicitizenaction` (repo-wide) |
-| _(add rows as subprojects appear)_ | |
 
 ---
 
-## Current Plan
-- **Plan / spec / request:** `docs/implementation-plan.md` — phased plan implementing `docs/ux-brief.md` (the product) and `docs/content-architecture.md` (content as data, translation, freshness, Resources, volunteers)
-- **Goal:** a site that converts alarm about AI into one specific, well-aimed action in a single sitting, ending with a draft message the user sends themselves to an institution that can actually act on their concern — maintained by volunteers, in several languages, with a Resources collection of relevant media and information modelled on the stockspanic resources desk
-- **Started:** 2026-09-22
+## Current plan
 
-## Status
-- **Current phase / task:** Phase 0 of `docs/implementation-plan.md` done; plan revised 2026-09-22T23:37Z after critique. Next: Phase A (validate with five users — needs brief Q1–4 answered) alongside Phase 1 (schemas and migration). No application code written yet
-- **Progress:**
+- **Plan:** `docs/implementation-plan.md` — implements `docs/ux-brief.md` (the product) and
+  `docs/content-architecture.md` (content as data, translation, freshness, Resources, volunteers).
+- **Goal:** a site that turns alarm about AI into one well-aimed action in one sitting, ending with
+  a draft the user sends themselves — maintained by volunteers, multilingual, with a Resources
+  collection modelled on the stockspanic resources desk.
+- **Mode:** on 2026-09-23 (local) the owner asked for the plan to be implemented autonomously:
+  "perform all logical steps… use your best judgement… if you really get stuck move on to the next
+  independent topic… commit after every step". Judgement calls made under that instruction are
+  listed below so the owner can reverse any of them.
 
-| # | Task | Status | Notes |
-| --- | --- | --- | --- |
-| 1 | Survey existing directories and action tools | done | Field maps exist (AISafety.com, aisecurityandsafety.org); US contact tools exist (CAIS, ControlAI, PauseAI). None do contact routing or non-US coverage |
-| 2 | Research institutions and contact routes | done | 229 institutions, 589 routes, `input/data/institutions.json` |
-| 3 | Research committees with AI jurisdiction | done | 144 bodies, 27 jurisdictions, 126 named holders, `input/data/committees-and-organisations.json` |
-| 4 | Research organisations and campaigns | done | 50 entries with asks stated plainly, incl. industry lobbying |
-| 5 | Build prototype: Concern Register | done | Published as an Artifact; source in `input/src/register/` |
-| 6 | Build prototype: outcome routing page | done | Published as an Artifact; source in `input/src/routing/` |
-| 7 | Export source index with qualifiers | done | 1,170 sources, three-state verification, `input/data/sources-index.json` |
-| 8 | Write UX brief | done | `docs/ux-brief.md` |
-| 9 | Store all assets in repo | done | `input/`, with `input/README.md` as manifest |
-| 10 | Wireframes from the brief | not started | Deliverables listed at the end of `docs/ux-brief.md`. Plan phase 3b |
-| 11 | Build the door / path / reference site | not started | Plan phases 3a (reference) and 3b (path). Astro recommended in the plan, not yet scaffolded |
-| 12 | Answer the open questions | not started | Brief Q1–4 block phase 3b; full list with what each blocks in plan section 3 |
-| 13 | Content architecture | done | `docs/content-architecture.md` (owner-written 2026-09-22) — fixed and extended 2026-09-22T20:37Z |
-| 14 | Implementation plan | done | `docs/implementation-plan.md` |
-| 15 | Plan phase 1 — schemas and migration | not started | Unblocked; next step |
-| 15a | Plan phase A — validate with five users | not started | Needs brief Q1–4; runs alongside phases 1, 1b, 2 |
-| 15b | Plan phase 1b — routing research (topics / not_topics / powers) | not started | Unblocked after phase 1; weeks of judgement work; blocks phase 3b |
-| 20 | Plan revision after critique | done | 2026-09-22T23:37Z; only recommendations scored ≥80 confidence applied — see plan section 7 |
-| 16 | Plan phase 2 — CI checks, CODEOWNERS | not started | Needs GitHub team names (open decision 9) |
-| 17 | Plan phase 4 — Resources | not started | Unblocked after phases 1–2 |
-| 18 | Plan phase 5a — volunteer system | not started | Unblocked after phase 2 |
-| 19 | Plan phase 6 — second language | not started | Needs a choice of language (open decision 8) |
+## Phase status
 
-Status values: `not started` / `in progress` / `done` / `blocked`.
+| Phase | Status | Notes |
+| --- | --- | --- |
+| 0 — Architecture fixed | done | |
+| A — Validate with five users | blocked | Needs owner answers to brief Q1–4 and five real participants. A testable path prototype can still be built (see phase 3b) |
+| 1 — Schemas and migration | **done** | 423 records, all counts preserved, 22 tests pass |
+| 1b — Routing research | not started | Next after phase 2 scaffolding; drafted values must be marked `routing_review: drafted` |
+| 2 — CI checks, CODEOWNERS | not started | |
+| 3a — Reference site | not started | Open decision 6 (completion counting) was meant to be decided first — see judgement calls |
+| 3b — Door, path, draft | not started | Blocked on phase A findings and 1b routing for the real thing |
+| 4 — Resources | not started | |
+| 5a — Volunteer system (git) | not started | |
+| 5b — Web CMS | deferred | Until the first non-git volunteer |
+| 6 — Second language | not started | |
+| 7 — Launch | not started | Deploys need the owner's approval |
 
-## What Was Actually Implemented
+## Judgement calls made without the owner (reverse any of them)
 
-Research, content, and planning. No application code exists yet.
+1. **Removed the stale `.git/HEAD.lock`** (empty, 2026-09-22 19:34, no git process) so commits could proceed.
+2. **ISO country codes**: the UK is `gb` (the architecture example said `uk`). Architecture doc updated.
+3. **File name = full id** (`us-senate-committee-commerce-2.yml`), not a short slug; id starts with the country code.
+4. **Duplicates reported, not merged** — 40 suspected pairs in `docs/migration-report.md`, as the plan requires human confirmation. The site will show both until merged.
+5. **`meta.unsourced`** allowed for the 2 records where research found no URL at all, instead of inventing a source. Validator warns; routing must never recommend them.
+6. **Enum checks live in `scripts/validate.mjs`**, reading `schema/vocab/`, not duplicated inside the JSON Schemas. One source of truth per list; the Decap CMS (phase 5b) will need enums generated into its config.
+7. **Seat prose kept under original field names** (`ai_jurisdiction`, `business`, …) rather than renamed to `remit`, to avoid changing meaning during migration.
 
-**2026-09-22T20:37Z — architecture and plan**
+## Implementation log (newest first)
 
-- `docs/content-architecture.md` (written by the owner, previously untracked; now committed) — changes:
-  - Record example fixed: `owners` quoted (a bare `@` made it invalid YAML); routes are now objects with their own three-state `verified`, `verified_on` and `language` (the original stored bare URLs and would have lost verification on migration); `effort` moved from strings to `facts.effort_minutes`.
-  - Layout: added `channels/` and `orgs/` mapping for all 229 institutions by `group`, `resources/` (sources, media, explainers, windows) replacing `live/`, `schema/vocab/`, `volunteers/`, `scripts/`, and schemas for every content type.
-  - New section "Resources: media, explainers and open windows", modelled on the stockspanic resources desk.
-  - New section "The volunteer lifecycle": ladder, team-based permissions, two owners per path, inactivity handling, stepping back, volunteer privacy and safety.
-  - Editor role added; CODEOWNERS example extended; freshness cycles and CI checks extended for Resources.
-  - Two open questions in the doc recorded as decided: Resources are editorial; Resources live in this repo.
-- `docs/implementation-plan.md` — new: what is adopted and left from stockspanic, decisions, open decisions with what each blocks, phases 0–7 with done-when checks, order, risks.
-- `CLAUDE.md` — directory map rows for both docs.
-- Read-only access to `../stockspanic` was authorized by the owner for this work; nothing there was changed. Its `.env` was not read.
+### 2026-09-22T23:46Z — Phase 1: schemas and migration — done
 
-**Files added**
+- `package.json` (Node ≥20, ESM; deps `ajv`, `ajv-formats`, `yaml`), scripts `migrate`, `validate`, `test`, `check`.
+- `schema/vocab/*.yml`: `route-types` (18), `record-types` (10, each with its folder), `public-input`, `verification`, `perspectives`, `levels`, `action-tags`, `seat-roles`. `topics` and `powers` intentionally **not** created yet — phase 1b.
+- `schema/common.schema.json` (id, date, url, geo, route, source, meta, routeStrings, vocabList), `record.schema.json` (envelope), `body`, `channel`, `org`.
+- `scripts/lib/`: `content.mjs` (loaders; `AICA_CONTENT`/`AICA_I18N` overrides), `geo.mjs` (free-text jurisdiction → ISO path), `slug.mjs`, `i18n.mjs` (hashes, stale/fallback resolution — used by validate now and phase 6 later).
+- `scripts/migrate-input.mjs`: reads `input/data/`, writes `content/{bodies,channels,orgs}/…` and `docs/migration-report.md`. Verification taken from `sources-index.json`. Result: 423 records (bodies 250, channels 74, orgs 99); 1,177 routes = 1,170 indexed (774 / 145 / 251 preserved) + 7 "looked for, not found" (`value: null`, `verified: false`); 177 named seat-holders.
+- `scripts/validate.mjs`: schema, vocab, file name = id, path matches geo, type in right folder, duplicate ids, verified-route rule, route strings match routes, dates, needs_research consistency, Resources rules (ready for phase 4), translation integrity (ready for phase 6). Current result: 0 errors, 4 warnings (2 overdue Indian bodies, 2 unsourced).
+- `tests/`: `migration.test.mjs` (counts, verification, seat-holders, validity), `validate.test.mjs` (each check catches its failure), `helpers.mjs`. 22 pass.
+- Docs: `CLAUDE.md` sections 1–2 filled; architecture doc aligned (gb, id file names, unsourced rule, example record matches implementation).
 
-- `docs/ux-brief.md` — product definition, user portrait, job to be done, information architecture (door / path / reference), five-screen flow, fifteen testable design principles, anti-patterns, edge cases, success measures, deliverables and open questions.
-- `input/README.md` — manifest for everything under `input/`, including verification states and known decay.
-- `input/data/institutions.json` — 229 institutions, 589 contact routes, remits, access levels, and a per-entry assessment of whether the channel actually works.
-- `input/data/committees-and-organisations.json` — `seats`: 144 bodies with AI jurisdiction across 27 jurisdictions, 126 with named current holders and `verified_on` dates. `orgs`: 50 campaigns, civil society, professional and industry bodies with their asks stated plainly.
-- `input/data/sources-index.json` — 1,170 sources, three-state verification, self-documenting `qualifiers` block.
-- `input/data/directory-full.json` — complete record set behind both prototype pages.
-- `input/data/raw/research-register.json`, `input/data/raw/research-routing.json` — unnormalized output from ten research agents.
-- `input/src/register/`, `input/src/routing/` — page sources, each as `index.html` plus the `head`/`body`/`script` parts it was assembled from.
-- `input/screenshots/` — eight render checks, desktop and mobile.
+### 2026-09-22T20:37Z–23:37Z — architecture fixed, plan written and revised
 
-**Files modified**
+See `docs/implementation-plan.md` section 7 for the revision log. Read-only access to the
+stockspanic project (`../stockspanic`) was
+authorized by the owner; nothing there was changed and its `.env` was not read.
 
-- `CLAUDE.md` — directory map extended with `docs/ux-brief.md` and the `input/` tree.
-- `.gitignore` — added `!input/screenshots/*.png` so the reference renders are tracked despite the blanket `*.png` rule.
+### 2026-09-22 — research and UX brief (before this plan)
 
-**Deviations from plan**
+229 institutions, 144 seat-holding bodies, 50 organisations, 1,170 sources, two published prototype
+Artifacts, and `docs/ux-brief.md`. Details in `input/README.md`. Deviations then: scope narrowed to
+contact routing, committee seats and non-US coverage after existing field maps were found; audience
+re-aimed at the alarmed non-expert rather than someone with evidence.
 
-The first research pass built an institution directory before checking whether one already existed. It largely did — several good field maps are published. The scope was then narrowed to the layers nobody covers: contact routing, committee seats with named holders, and non-US jurisdictions. The original institution dataset was kept because the contact and remit detail in it is not duplicated anywhere.
+## What to watch
 
-A second deviation: the initial build assumed a user with evidence to submit. It was redirected after the user clarified that the primary audience is an alarmed non-expert with no evidence, who needs routing and a draft rather than a filing format.
+- **Three-state verification.** `true` / `false` / `null` are different. Never collapse `null` into `false`.
+- **`content/` is now the source of truth.** Re-running `npm run migrate` overwrites `content/bodies|channels|orgs`. Do not re-run it once anyone has edited content by hand.
+- **Duplicates** (40 pairs) need a human decision; see `docs/migration-report.md`.
+- **Seat-holder decay** is a known gap: nothing detects a changed chair automatically (plan risk table).
+- **Two Indian bodies are already overdue** for review (their input `verified_on` dates were June and April 2026).
+- **Data decay notes from research:** UK DSIT abolished July 2026; International Network of AI Safety Institutes renamed Dec 2025; Indian and Japanese committee chairs reconstituted annually.
+- **Prototype pages in `input/src/` are Artifact-format** (no doctype/head/body).
+- **Product trade-off:** helping each person write their own message produces authentic participation but less concentrated force than campaign tools. Deliberate; revisit.
 
-## What To Watch
+## Open decisions (owner)
 
-**Data decay — the main risk to credibility.**
+1. Brief Q1–4 (location first?, cross-border drafts?, prominence of "join", lobbying layer for newcomers) — block phase A and 3b.
+2. Brief Q5 answered by the architecture (geography stewards, 90 days) — confirm.
+3. How draft completion is counted without a consent wall — meant to block phase 3a.
+4. Second language; GitHub organisation/team names; domain; visitor discussion (out of scope unless chosen).
+5. Tooling recommendations not yet confirmed: Astro, YAML + JSON Schema (now in use), GitHub Actions + lychee, Railway static hosting via `serve`.
 
-- Named seat-holders change with elections, reshuffles and annual committee reconstitutions; EU rapporteurs change with every file. Every name carries `verified_on` and `membership_url`. The interface must show the date and treat the membership link as first-class, so a stale name degrades gracefully instead of misleading.
-- Indian and Japanese committee chairs rely on bodies reconstituted annually — re-confirm before relying on them.
-- The UK's DSIT was abolished in July 2026 and the Commons committee reverted to its former name. Some register entries written against the older structure are partly stale.
-- The International Network of AI Safety Institutes was renamed in December 2025, dropping "safety" from its title.
+## How to resume
 
-**Verification is three-state, not boolean.** 774 verified (page fetched, route seen), 145 unverified (cited but unread — leads, not addresses), 251 unchecked (`null`, homepage and framework links). Treating `null` as `false`, or either as verified, will misrepresent the dataset.
-
-**Prototype pages are Artifact-format.** No doctype, `head` or `body` tags — the platform wraps them at publish time. Hosting them anywhere else requires adding a document skeleton.
-
-**No build tooling chosen.** CLAUDE.md section 2 still says TBD for install / build / test / lint / run. That decision blocks task 11.
-
-**Open decisions, carried from the brief:**
-
-1. Does the door ask for location, or is jurisdiction inferred later from the outcome chosen?
-2. Do we let a user draft to a body in a country they do not live in? Several accept foreign submissions, but it may reduce the message's weight.
-3. How prominent is the "join an organisation" outcome? Most effective for most people, and also the one that hands them someone else's ask.
-4. Is the industry-lobbying layer shown to a first-time user, or only in the reference?
-5. Who maintains the named seat-holders, and how often? The architecture answers it (geography stewards, 90-day cycle) — needs the owner's confirmation.
-
-Further open decisions from the plan (full table in `docs/implementation-plan.md` section 3): counting draft completion without a consent wall on a static site; visitor discussion on Resources (out of scope unless chosen); first second language; GitHub team names; domain.
-
-**2026-09-22T23:37Z plan revision:** Phase A (validate first) and Phase 1b (routing research) added; branch protection starts at one approval with owner bypass; link check tuned; analytics decision (open decision 6) now blocks Phase 3a. The earlier claim that committee `not_topics` data is complete was wrong — it exists only as prose in `ai_jurisdiction`. Known unaddressed gap: a changed seat-holder is not detected automatically.
-
-**Uncommitted work / stale lock:** the commit of the architecture and plan failed on `.git/HEAD.lock` (empty, dated 2026-09-22 19:34, no git process running). All changes are staged, including the pre-commit hook's version bump to 0.1.3. Waiting for the owner's permission to remove the lock and commit.
-
-**Plan recommendations not yet confirmed by the owner:** Astro, YAML + JSON Schema, GitHub Actions + lychee, Railway static hosting via `serve`, Decap CMS later, Weblate later. Change them in the plan before the phase that depends on each.
-
-**Product risk worth naming.** The existing campaign tools are effective partly because they concentrate many people behind one ask. A directory that helps each person articulate their own concern produces more authentic participation and less political force. That trade-off is deliberate, but it should be revisited rather than assumed.
-
-## How To Resume
-
-1. Read `docs/ux-brief.md`, `docs/content-architecture.md` and `docs/implementation-plan.md`.
-2. Get the owner's answer to brief Q1–4, then run plan phase A. In parallel, start plan phase 1: scaffold `package.json`, write `schema/vocab/` and the `route`/`body`/`channel`/`org` schemas, then `scripts/migrate-input.mjs`. Fill in CLAUDE.md section 2 as commands appear.
-3. Open decision 6 (completion counting) must be decided before phase 3a.
-4. Never edit `input/`; migration reads it and writes `content/`. `input/README.md` documents the shapes.
+1. `npm install && npm run check` — must show 0 errors and all tests passing.
+2. Next step: **phase 2** (CI workflows, lychee config, CODEOWNERS, issue templates), then **phase 1b** routing research drafts, then **phase 3a** site.
+3. Never edit `input/`. Never deploy without asking the owner.
 
 Reference prototypes (published, private):
 - Concern Register — https://claude.ai/artifact/9BhNrXsW43HJ4rjH5fSuNy
@@ -154,4 +106,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-22T23:37:38Z
+Last modified: 2026-09-22T23:46:14Z

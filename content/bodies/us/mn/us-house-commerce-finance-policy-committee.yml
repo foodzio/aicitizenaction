@@ -1,0 +1,60 @@
+id: us-house-commerce-finance-policy-committee
+type: seat
+geo:
+  country: us
+  sub: mn
+  label: Minnesota
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.house.mn.gov/Committees/home/94004
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 39d01d6766e4
+    - id: public-route
+      type: submission
+      value: https://www.leg.mn.gov/leg/faq/faq?id=117
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f77f8a5cc3f2
+  level: state
+  chamber: House
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Tim O'Driscoll (R) and Erin Koegel (DFL) — CO-CHAIRS
+      party: R / DFL
+      verified_on: 2026-09-22
+strings:
+  name: House Commerce Finance and Policy Committee
+  ai_jurisdiction: House committee of reference for AI chatbot, data-privacy, deepfake/'nudification' and consumer-protection bills. Meets Tue/Wed/Thu 8:15 a.m., Capitol 120.
+  business: HF 4452, AI chatbot technology requirements with a private cause of action for harm (2026). HF 4456 and related 2026 AI and data-privacy bills. Minnesota's flagship enacted law is its AI 'nudification' ban — the nation's first — which xAI sued to block in July 2026; a federal judge DENIED xAI's request to pause the law, so the ban is in effect during the litigation. Penalties reach $500,000.
+  status: VERIFIED — nudification ban in force and surviving preliminary challenge; 2026 chatbot and AI bills advanced through committee. Minnesota also considered legislation denying free-speech rights to AI agents.
+  public_route: "PARTIAL — Minnesota has NO central online testimony portal. The rule is: 'members of the general public are encouraged to testify before committees, though testimony will need to be arranged with committee staff prior to a scheduled hearing.' Contact the committee administrator a day or two before the hearing; same-day sign-up is sometimes possible if time permits. Bring written copies to hand out. Committee administrators for this committee: Ben Frese (GOP) and Sam O'Neill (DFL). House Public Information Services: 651-296-2146."
+  agency_route: Minnesota Attorney General — consumer protection and enforcement of the nudification statute; complaint form at https://www.ag.state.mn.us/Office/Complaint.asp
+  note: "The 94th Legislature's House operated under a power-sharing arrangement, hence dual co-chairs. Vice chairs: Steve Elkins (DFL) and Bernie Perryman (R). Minnesota's arrange-with-staff convention makes it the least automated of the 13 states and therefore the one where a single phone call has the most disproportionate effect."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.house.mn.gov/Committees/home/94004
+      checked: 2026-09-22
+    - url: https://www.leg.mn.gov/leg/faq/faq?id=117
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 42d7bcd8ef
+  migrated_from: input/data/committees-and-organisations.json#seats

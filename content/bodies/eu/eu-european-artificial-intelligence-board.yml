@@ -1,0 +1,61 @@
+id: eu-european-artificial-intelligence-board
+type: government
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: register-commission-expert-groups
+      type: docket
+      value: https://ec.europa.eu/transparency/expert-groups-register/screen/expert-groups/consult?lang=en&groupID=3966
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 84dd197e669d
+    - id: direct-public-contact
+      type: email
+      value: none published
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 537bf72d18f6
+    - id: homepage
+      type: homepage
+      value: https://digital-strategy.ec.europa.eu/en/policies/ai-board
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: bb0dd4add847
+  region: European Union
+  public_input: none
+  tags:
+    - systemic
+strings:
+  name: European Artificial Intelligence Board
+  remit: Advisory and co-ordination body created by the AI Act, operational since the Act took effect on 1 August 2024. Composed of one representative per Member State, chaired by a Member State, with the EDPS and EEA-EFTA states as observers; the AI Office is its secretariat. Ensures consistent application of the AI Act, co-ordinates national competent authorities, issues opinions and recommendations, and endorses key documents — it endorsed the adequacy assessments of the GPAI Code of Practice and of the Transparency of AI-Generated Content code, and guidance on harmonised standards for high-risk systems. It advises; it does not itself fine or investigate.
+  powers_text: advise
+  reality_check: "NO PUBLIC INPUT ROUTE. The AI Board is a Member-State intergovernmental body; the public cannot address it. The only realistic influence is indirect — through your own national competent authority, which sits on the Board, or through the AI Office as secretariat. The expert-groups register is nonetheless valuable: minutes reveal what the Board is about to endorse, months before it appears as guidance, which is exactly when a national authority can still be lobbied."
+  notes: Distinct from both the Scientific Panel (independent experts) and the Advisory Forum (stakeholders). All three are separate AI Act bodies.
+  routes:
+    register-commission-expert-groups:
+      label: Register of Commission Expert Groups — AI Board entry (agendas, participants, minutes)
+      scope: Public transparency record only. Agendas, membership and minutes are published here.
+      note: VERIFIED — published on https://digital-strategy.ec.europa.eu/en/policies/ai-board.
+    direct-public-contact:
+      label: Direct public contact
+      scope: n/a
+      note: VERIFIED ABSENCE — the Commission publishes no email or form for the AI Board; correspondence would go via the AI Office as secretariat (CNECT-AIOFFICE@ec.europa.eu).
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ec.europa.eu/transparency/expert-groups-register/screen/expert-groups/consult?lang=en&groupID=3966
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 8ef9f20828
+  migrated_from: input/data/institutions.json

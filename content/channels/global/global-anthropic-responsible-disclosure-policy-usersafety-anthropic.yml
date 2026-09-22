@@ -1,0 +1,57 @@
+id: global-anthropic-responsible-disclosure-policy-usersafety-anthropic
+type: reporting-channel
+geo:
+  country: global
+  label: Global
+facts:
+  routes:
+    - id: submission-page
+      type: disclosure
+      value: https://www.anthropic.com/responsible-disclosure-policy
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: dde7fdbf9d5e
+    - id: homepage
+      type: homepage
+      value: https://www.anthropic.com/responsible-disclosure-policy
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: e2d7a5916452
+  region: Global
+  public_input: open
+  tags:
+    - behaviour
+    - flaw
+    - harm
+strings:
+  name: Anthropic Responsible Disclosure Policy / usersafety@anthropic.com
+  remit: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
+  reality_check: "The security lane has a real, contractual process and safe harbour ('we will not pursue legal action against researchers acting in good faith', provided disclosure is unconditional and involves no extortion or threats). The model-safety email lane is a genuine, officially sanctioned channel but is a black box: no acknowledgment commitment, no tracking, no public outcome data. Published complaints exist from researchers who report receiving no response to model-flaw disclosures."
+  accepts: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
+  does_not_accept: SSL/TLS issues without a proof of concept, physical intrusion, rate limiting on unauthenticated endpoints, social engineering, phishing, DoS, and widely publicised zero-days with no patch or a patch under 30 days old.
+  how: "Security bugs: submit through Anthropic's HackerOne program with vulnerability type, technical detail, reproduction steps, URLs, PoC and impact. Model behaviour and jailbreaks: email usersafety@anthropic.com. This is the cleanest published example of the procedural split — a model-behaviour finding sent to a security intake will be closed as out of scope, and a security bug emailed to a safety address loses bounty eligibility."
+  format: "Security: standard vulnerability report. Model safety: prose email with exact prompts, transcripts, model version, date and reproducibility notes."
+  timing: Rolling. Anthropic commits to acknowledge HackerOne submissions within three business days.
+  after: Security reports are triaged on HackerOne with possible bounty. Model-safety emails have no published SLA, triage process or feedback loop.
+  operator: Anthropic
+  routes:
+    submission-page:
+      label: Submission page
+      scope: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
+      note: "Security bugs: submit through Anthropic's HackerOne program with vulnerability type, technical detail, reproduction steps, URLs, PoC and impact. Model behaviour and jailbreaks: email usersafety@anthropic.com. This is the cleanest published example of the procedural split — a model-behaviour finding sent to a security intake will be closed as out of scope, and a security bug emailed to a safety address loses bounty eligibility."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.anthropic.com/responsible-disclosure-policy
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 6b6853ba78
+  migrated_from: input/data/institutions.json

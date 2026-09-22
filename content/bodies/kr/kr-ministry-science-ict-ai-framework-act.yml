@@ -1,0 +1,57 @@
+id: kr-ministry-science-ict-ai-framework-act
+type: government
+geo:
+  country: kr
+  label: Republic of Korea
+facts:
+  routes:
+    - id: extraterritorial-reach-domestic-representative
+      type: complaint
+      value: https://www.aisi.re.kr/eng
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: ko
+      source_id: ee70d054e0e0
+    - id: statutory-text
+      type: consultation
+      value: https://cset.georgetown.edu/publication/south-korea-ai-law-2025/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 8bb151a87910
+  local_name: 과학기술정보통신부; 인공지능 발전과 신뢰 기반 조성 등에 관한 기본법
+  region: South Korea
+  public_input: limited
+  tags:
+    - flaw
+    - harm
+    - systemic
+strings:
+  name: Ministry of Science and ICT (MSIT) — AI Framework Act supervisory authority
+  remit: "Administers the Framework Act on the Development of Artificial Intelligence and Establishment of Trust ('AI Framework Act'), in force 22 January 2026 — the world's second comprehensive national AI statute. This is a genuine regulator: it designates high-impact AI domains (energy, water, healthcare, medical devices, nuclear, biometric criminal analysis, employment and lending decisions, transport, government functions, student assessment), imposes transparency/labelling, lifecycle risk-management and human-oversight duties, and can levy administrative fines up to KRW 30 million (~USD 21,000). It also sets compute thresholds by Presidential Decree triggering additional safety obligations — the closest thing to a frontier-model trigger outside the EU."
+  powers_text: fine
+  reality_check: The compute-threshold provision means a foreign frontier lab can fall inside Korean law, which in turn means foreign parties genuinely have standing to raise issues — unusually for Asia. But the compliance route runs through a mandated Korean domestic representative and Korean-language administrative process. I could not verify a public-facing complaint form in English; MSIT's AI supervision channels appear to be Korean-only.
+  notes: The fine ceiling (~USD 21k) is trivially small relative to EU AI Act penalties — treat this as a disclosure-and-registration regime with teeth mainly through market access, not through fines.
+  routes:
+    extraterritorial-reach-domestic-representative:
+      label: Extraterritorial reach / domestic representative duty
+      scope: regulatory
+      note: VERIFIED that the Act binds foreign providers above user/revenue thresholds, who must appoint a Korean domestic representative — this is the practical hook for foreigners. The MSIT complaint/reporting portal URL itself is UNVERIFIED; I did not fetch a working MSIT AI complaint form.
+    statutory-text:
+      label: Statutory text (English translation, CSET)
+      scope: reference
+      note: UNVERIFIED (search result). Third-party translation, not an official channel.
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.aisi.re.kr/eng
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c5aa151b0d
+  migrated_from: input/data/institutions.json

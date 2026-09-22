@@ -1,0 +1,64 @@
+id: us-subcommittee-investigations-oversight
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://science.house.gov/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7f5ab6653a7c
+    - id: public-route
+      type: submission
+      value: https://science.house.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4eed08e8603d
+  level: federal
+  chamber: House
+  parent: House Committee on Science, Space, and Technology
+  tags:
+    - audit
+    - law
+  seats:
+    - role: chair
+      name: Richard McCormick
+      party: R
+      region: GA
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Emilia Strong Sykes
+      party: D
+      region: OH
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Investigations and Oversight
+  ai_jurisdiction: Oversight of federal science agencies' AI programs — whether NIST, NSF, DOE and OSTP are actually doing what statute directs on AI, research security, and foreign influence in federally funded AI research.
+  business: "UNVERIFIED for a named 2026 AI hearing. This subcommittee previously held the joint hearing 'Balancing Knowledge and Governance: Foundations for Effective Risk Management of Artificial Intelligence' with Research and Technology."
+  public_route: https://science.house.gov/contact, 202-225-6371.
+  note: Leadership verified 2026-09-22 from the House Clerk's MemberData.xml.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://science.house.gov/members
+      checked: 2026-09-22
+    - url: https://science.house.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: a608ae62f6
+  migrated_from: input/data/committees-and-organisations.json#seats

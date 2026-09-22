@@ -1,0 +1,80 @@
+id: au-australian-ai-safety-institute
+type: government
+geo:
+  country: au
+  label: Australia
+facts:
+  routes:
+    - id: disr-ai-safety-institute
+      type: form
+      value: https://www.industry.gov.au/science-technology-and-innovation/technology/artificial-intelligence/ai-safety-institute
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 893cc6f07a77
+    - id: ministerial-announcement
+      type: consultation
+      value: https://www.minister.industry.gov.au/charlton/media/establishment-australian-ai-safety-institute
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: e969052a4774
+    - id: disr-what-is-ai
+      type: consultation
+      value: https://www.industry.gov.au/science-technology-and-innovation/technology/artificial-intelligence/ai-safety-science
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: c7c2c2f43e2e
+    - id: homepage
+      type: homepage
+      value: https://www.industry.gov.au/science-technology-and-innovation/technology/artificial-intelligence/ai-safety-institute
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 7096a1f0d0e2
+  region: Australia
+  public_input: limited
+  tags:
+    - law
+    - systemic
+strings:
+  name: Australian AI Safety Institute (AAISI)
+  remit: Announced 2025 and established November 2025 within the Department of Industry, Science and Resources (DISR), alongside the National AI Plan. Technical AI safety science, evaluation capability, international engagement. Australia abandoned its proposed mandatory guardrails legislation in favour of a non-regulatory, existing-regulator approach, so the institute is advisory/research — it cannot compel or fine.
+  powers_text: research
+  reality_check: Australia historically runs excellent, genuinely open consultations through DISR's consultation hub, and past AI consultations (2023 Safe and Responsible AI, 2024 mandatory guardrails) accepted and published submissions from foreign organisations including US labs. That is the realistic route in. The institute itself is new enough (Nov 2025) that I could not verify a direct contact channel — industry.gov.au blocked automated fetching throughout.
+  notes: Australia is a full network member. The retreat from mandatory guardrails to a 'gap-filling' approach in 2025 means frontier-risk work here is research-only.
+  routes:
+    disr-ai-safety-institute:
+      label: DISR AI Safety Institute page
+      scope: general
+      note: UNVERIFIED — URL from search results; fetch blocked by robots.txt timeout on industry.gov.au. Contact email NOT confirmed.
+    ministerial-announcement:
+      label: Ministerial announcement (Minister Andrew Charlton)
+      scope: background
+      note: UNVERIFIED — fetch blocked by robots.txt.
+    disr-what-is-ai:
+      label: DISR 'What is AI safety science'
+      scope: background
+      note: UNVERIFIED (search result).
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.industry.gov.au/science-technology-and-innovation/technology/artificial-intelligence/ai-safety-institute
+      checked: null
+    - url: https://www.minister.industry.gov.au/charlton/media/establishment-australian-ai-safety-institute
+      checked: null
+    - url: https://www.industry.gov.au/science-technology-and-innovation/technology/artificial-intelligence/ai-safety-science
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: da9bc334d6
+  migrated_from: input/data/institutions.json

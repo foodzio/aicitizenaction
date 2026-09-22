@@ -1,0 +1,91 @@
+id: cn-cyberspace-administration-china
+type: government
+geo:
+  country: cn
+  label: People's Republic of China
+facts:
+  routes:
+    - id: cac-official-site-generative
+      type: docket
+      value: https://www.cac.gov.cn/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: zh
+      source_id: a8b97bfa4b42
+    - id: ai-safety-governance-framework
+      type: docket
+      value: https://www.cac.gov.cn/2025-09/15/c_1759653448369123.htm
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: zh
+      source_id: 77268687cdd8
+    - id: internet-information-service-algorithm
+      type: form
+      value: https://beian.cac.gov.cn/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: zh
+      source_id: 4d40d4024c1e
+    - id: page-level-error-report
+      type: complaint
+      value: /cms/pub/interact/jiucuo.htm
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: zh
+      source_id: 39b3545d7523
+    - id: homepage
+      type: homepage
+      value: https://www.cac.gov.cn/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 309b805420b4
+  local_name: 国家互联网信息办公室 / 中央网络安全和信息化委员会办公室
+  region: China
+  public_input: limited
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Cyberspace Administration of China (CAC)
+  remit: China's principal AI content regulator and by far the most powerful body in this directory. Administers the Algorithmic Recommendation Provisions (2022), Deep Synthesis Provisions (2023), Interim Measures for Generative AI Services (2023) and the Labelling Measures for AI-Generated Synthetic Content (in force 1 Sept 2025). Runs the algorithm and generative-AI filing (备案) regimes. Can order rectification, suspend or terminate services, remove apps from stores, refer for criminal prosecution, and fine. Co-published the AI Safety Governance Framework 2.0 (人工智能安全治理框架2.0) on 15 September 2025 at National Cybersecurity Publicity Week, with the National Internet Emergency Center coordinating and TC260 handling the technical file.
+  powers_text: compel
+  reality_check: "CAC does run real public-comment windows on draft measures (征求意见稿), and international companies and law firms have in practice filed comments on drafts such as the Generative AI Interim Measures. Those windows are real. But: they are Chinese-language only, run 30 days or less, are announced without notice, and the filing systems behind them (算法备案, 大模型备案) require a Chinese business entity and real-name verification. There is no route by which an individual foreigner obtains standing. Framework 2.0 is a guidance document with no complaint mechanism attached."
+  notes: Framework 2.0 refines risk classification and explores risk grading relative to the 2024 version. The document series does address loss-of-control (失控) risk categories, though the announcement page I fetched does not detail them. CAC is not a member of, and China does not participate in, the international network.
+  routes:
+    cac-official-site-generative:
+      label: CAC official site — generative AI filing announcements
+      scope: official notices
+      note: VERIFIED accessible. CAC publishes bi-monthly lists of filed generative-AI services (e.g. the Jan 2026 and Jul 2026 announcements), which is the authoritative public record of which models are legally deployable in China.
+    ai-safety-governance-framework:
+      label: AI Safety Governance Framework 2.0 announcement
+      scope: policy document
+      note: VERIFIED fetched. Confirms publication date and publishing bodies.
+    internet-information-service-algorithm:
+      label: Internet Information Service Algorithm Filing System (算法备案)
+      scope: domestic filers only
+      note: UNVERIFIED — confirmed as the official system via CAC-linked search results, but direct fetch was blocked by robots.txt. Requires a Chinese business licence and real-name credentials. Closed to foreigners in practice.
+    page-level-error-report:
+      label: Page-level error-report link on CAC articles
+      scope: website error corrections only
+      note: VERIFIED present on the fetched CAC article as '【纠错】'. This is a typo/error-correction form, NOT a substantive complaint channel. Do not present it as one.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.cac.gov.cn/
+      checked: 2026-09-22
+    - url: https://www.cac.gov.cn/2025-09/15/c_1759653448369123.htm
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 3e5a27a254
+  migrated_from: input/data/institutions.json

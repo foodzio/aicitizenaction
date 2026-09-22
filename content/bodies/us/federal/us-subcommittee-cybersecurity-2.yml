@@ -1,0 +1,62 @@
+id: us-subcommittee-cybersecurity-2
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://oversight.house.gov/subcommittee/cybersecurity-information-technology-government-innovation/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b3b8847e6100
+    - id: public-route
+      type: submission
+      value: https://oversight.house.gov/subcommittee/cybersecurity-information-technology-government-innovation/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e2f889c5aa3d
+  level: federal
+  chamber: House
+  parent: House Committee on Oversight and Government Reform
+  tags:
+    - audit
+    - law
+  seats:
+    - role: chair
+      name: Nancy Mace
+      party: R
+      region: SC
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Shontel M. Brown
+      party: D
+      region: OH
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Cybersecurity, Information Technology, and Government Innovation
+  ai_jurisdiction: "The House's dedicated federal-AI-use subcommittee. Send here: whether and how agencies deploy AI in decisions affecting the public, AI procurement standards, OMB memoranda on AI, federal cybersecurity, IT modernization, and emerging technology inside government. This is the House venue where the 'government is using an algorithm on me' complaint belongs."
+  business: "VERIFIED: hearings 'Examining the Federal Government's Use of Artificial Intelligence' (with published wrap-up 'Federal Government Use of Artificial Intelligence Poses Promise, Peril'), 'The Future of Artificial Intelligence', a hearing on White House AI policy, a hearing on unlocking government efficiency through IT modernization, and a bipartisan AI roundtable. The subcommittee maintains a public archive at https://oversight.house.gov/category/cybersecurity-information-technology-and-government-innovation/."
+  public_route: Full-committee contact https://oversight.house.gov/contact, 202-225-5074. The bipartisan roundtable format this subcommittee has used is unusually open to outside experts — watch for announcements.
+  note: Leadership verified 2026-09-22 from the House Clerk's MemberData.xml (subcommittee code GO12).
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://oversight.house.gov/subcommittee/cybersecurity-information-technology-government-innovation/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: "0275060373"
+  migrated_from: input/data/committees-and-organisations.json#seats

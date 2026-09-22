@@ -1,0 +1,88 @@
+id: ca-mila-quebec-ai-institute
+type: academic
+geo:
+  country: ca
+  label: Canada (Montreal)
+facts:
+  routes:
+    - id: general-information
+      type: email
+      value: info@mila.quebec
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 769fefcf317d
+    - id: media-requests
+      type: email
+      value: medias@mila.quebec
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d088a0d700f8
+    - id: continuing-education
+      type: email
+      value: education@mila.quebec
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 67152078cd79
+    - id: mila-ventures
+      type: email
+      value: ventures@mila.quebec
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f7dbd3a912af
+    - id: careers
+      type: form
+      value: https://apply.workable.com/mila-2/?lng=en
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e97aa011775a
+    - id: homepage
+      type: homepage
+      value: https://mila.quebec/en
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: f92cfb23cd11
+  region: Canada
+  public_input: limited
+  tags:
+    - research
+strings:
+  name: Mila — Quebec AI Institute
+  remit: Research institute founded by Yoshua Bengio in 1993, uniting researchers from Université de Montréal, McGill, Polytechnique Montréal and HEC Montréal — 1,400+ researchers and 140+ affiliated professors. AI safety and governance work runs through an AI Governance, Policy and Inclusion division, the AI Policy Compass programme for policymakers, TRAIL responsible-AI training, and the AI4Good Lab, plus Indigenous-AI work.
+  threat_model: Broad. Bengio's presence anchors serious loss-of-control work, while the institutional programmes emphasise responsible AI, inclusion and policy capacity. Do not assume Mila as an institution shares Bengio's x-risk position — most of it does not.
+  reality_check: Several real published inboxes, which is good. But it is a large general ML institute, not a safety organisation — most of its 1,400 researchers do capabilities work. Route safety concerns to LawZero or to Bengio's academic page rather than to Mila's general inbox.
+  gov_channel: Strong in Canada — Mila researchers advise the Canadian government and Bengio chairs both the International AI Safety Report and co-chairs the UN Scientific Panel.
+  routes:
+    general-information:
+      label: General information
+      scope: Anyone
+      note: "Address: 6666 St-Urbain #200, Montreal, Quebec H2S 3H1."
+    media-requests:
+      label: Media requests
+      scope: Press
+    continuing-education:
+      label: Continuing education (TRAIL, AI Policy Compass)
+      scope: Professionals and policymakers
+    mila-ventures:
+      label: Mila Ventures
+      scope: Startups
+    careers:
+      label: Careers
+      scope: Applicants
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://apply.workable.com/mila-2/?lng=en
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 2f70b8425a
+  migrated_from: input/data/institutions.json

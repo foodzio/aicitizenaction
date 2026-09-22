@@ -1,0 +1,60 @@
+id: ie-committee-public-petitions-ombudsmen
+type: seat
+geo:
+  country: ie
+  label: Ireland
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.oireachtas.ie/en/committees/34/petitions-and-the-ombudsmen/membership/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 526dca5d0000
+    - id: public-route
+      type: submission
+      value: https://www.oireachtas.ie/en/committees/making-a-submission/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4a81efc62c0a
+  level: national
+  tags:
+    - audit
+    - law
+    - petition
+    - record
+  seats:
+    - role: chair
+      name: Louise O'Reilly, TD (Sinn Féin)
+      verified_on: 2026-09-22
+strings:
+  name: Committee on Public Petitions and the Ombudsmen (Houses of the Oireachtas)
+  ai_jurisdiction: No AI remit of its own; it is Ireland's citizen-initiated route into the Oireachtas. An AI-related petition — on enforcement of the EU AI Act in Ireland, on data centres, on algorithmic decision-making by a public body — is considered here and can be referred onward to the Joint Committee on Artificial Intelligence.
+  business: Rolling petitions caseload plus oversight of the Ombudsman offices.
+  public_route: "'You can also petition the Houses of the Oireachtas on matters on which it has the power to act. A special Committee of TDs and Senators, the Committee on Public Petitions, will consider your petition. The Committee will publish your petition and may invite you to speak directly to them.' No signature threshold — an individual may petition."
+  format_rules: Petitions are PUBLISHED by the committee. The petitioner may be invited to address the committee in person. The matter must be one on which the Houses have power to act.
+  key_people: "Deputies: Pat Buckley (SF), Peter 'Chap' Cleere (FF), Eoin Hayes (Social Democrats), David Maxwell (FG), Maeve O'Connell (FG), Brendan Smith (FF). Senators: Chris Andrews (SF), Paraic Brady (FG), Joe Flaherty (FF), Aubrey McCarthy (Independent)."
+  note: VERIFIED 2026-09-22 by direct fetch of the committee's Oireachtas membership page and the Oireachtas 'Making a submission' page, from which the quoted description is taken.
+  seat_notes:
+    chair: Cathaoirleach (Chair)
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.oireachtas.ie/en/committees/34/petitions-and-the-ombudsmen/membership/
+      checked: 2026-09-22
+    - url: https://www.oireachtas.ie/en/committees/making-a-submission/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 3df62beba3
+  migrated_from: input/data/committees-and-organisations.json#seats

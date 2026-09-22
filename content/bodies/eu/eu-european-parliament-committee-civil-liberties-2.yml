@@ -1,0 +1,60 @@
+id: eu-european-parliament-committee-civil-liberties-2
+type: seat
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.europarl.europa.eu/committees/en/libe/home/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b6d6ba706c91
+    - id: public-route
+      type: submission
+      value: https://www.europarl.europa.eu/committees/en/libe/home/highlights
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9b6ddcd3a11a
+  level: bloc
+  tags:
+    - audit
+    - law
+    - petition
+    - record
+  seats:
+    - role: chair
+      name: Javier Zarzalejos (EPP, Spain, Partido Popular)
+      verified_on: 2026-09-22
+strings:
+  name: European Parliament — Committee on Civil Liberties, Justice and Home Affairs (LIBE)
+  ai_jurisdiction: "Co-lead committee on the AI Act. LIBE owns the fundamental-rights half: prohibited practices (Article 5), biometric identification, emotion recognition, predictive policing, AI in migration and law enforcement, and the interaction with GDPR. Joint-lead with IMCO on the Digital Omnibus on AI and co-owner of the AI Act Working Group."
+  business: AI Act implementation and enforcement scrutiny through the joint IMCO-LIBE Working Group; follow-through on the Digital Omnibus on AI (2025/0359(COD)) adopted 16 June 2026, which delayed high-risk standards and added a ban on non-consensual intimate ('nudifier') image generation.
+  public_route: Direct correspondence with the rapporteur/shadows on a file; PETI petition; LIBE secretariat at libe-secretariat@europarl.europa.eu. LIBE also holds public hearings where civil-society organisations are routinely invited.
+  format_rules: No formal limits. Civil-society submissions to LIBE are conventionally short position papers with specific article-by-article amendment language. Not published by the Parliament unless the committee chooses to.
+  key_people: "Vice-Chairs: Marina Kaljurand (S&D, EE); Charlie Weimers (ECR, SE); Alessandro Zan (S&D, IT); Estrella Galán (The Left, ES). The decisive AI seat is Michael McNamara (Renew, Ireland) — LIBE co-chair of the AI Act Working Group AND LIBE rapporteur on the Digital Omnibus on AI."
+  note: VERIFIED 2026-09-22 from the official LIBE member list PDF at europarl.europa.eu/committees/en/libe/home/members/pdf.
+  seat_notes:
+    chair: Chair
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.europarl.europa.eu/committees/en/libe/home/members
+      checked: 2026-09-22
+    - url: https://www.europarl.europa.eu/committees/en/libe/home/highlights
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 1c1af03e89
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aicitizenaction/schema/common.schema.json",
+  "title": "Shared definitions",
+  "description": "Building blocks shared by every content type. Enum-valued fields (types, tags, perspectives, levels) are checked against schema/vocab/ by scripts/validate.mjs, so each list has one source of truth.",
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "maxLength": 90
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^https?://"
+    },
+    "vocabId": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "geo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "country"
+      ],
+      "properties": {
+        "country": {
+          "type": "string",
+          "pattern": "^([a-z]{2}|global)$",
+          "description": "ISO 3166-1 alpha-2, lower case, plus eu and global"
+        },
+        "sub": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$",
+          "description": "Second path segment: a US state code, federal, or another sub-national unit"
+        },
+        "label": {
+          "type": "string",
+          "description": "The jurisdiction as the research recorded it, kept verbatim"
+        }
+      }
+    },
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "type",
+        "value",
+        "verified"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/id"
+        },
+        "type": {
+          "$ref": "#/$defs/vocabId"
+        },
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1,
+          "description": "URL, email address, or other text. null records that a route was looked for and not found"
+        },
+        "verified": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "true: fetched and seen. false: cited, unread. null: unchecked. Required, no default"
+        },
+        "verification_method": {
+          "enum": [
+            "fetched_source_page",
+            "secondary_citation",
+            "listed_not_independently_checked"
+          ]
+        },
+        "verified_on": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "language": {
+          "type": "string"
+        },
+        "source_id": {
+          "type": "string"
+        }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "url"
+      ],
+      "properties": {
+        "url": {
+          "$ref": "#/$defs/url"
+        },
+        "checked": {
+          "oneOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "verified_on",
+        "review_by"
+      ],
+      "properties": {
+        "verified_on": {
+          "$ref": "#/$defs/date"
+        },
+        "review_by": {
+          "$ref": "#/$defs/date"
+        },
+        "owners": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^@[A-Za-z0-9_./-]+$"
+          }
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/source"
+          }
+        },
+        "needs_research": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "powers",
+              "topics",
+              "not_topics"
+            ]
+          },
+          "description": "Routing fields not yet researched. A record listed here is not used by routing for that field"
+        },
+        "legacy_id": {
+          "type": "string",
+          "description": "id in input/data, for traceability"
+        },
+        "migrated_from": {
+          "type": "string"
+        },
+        "unsourced": {
+          "type": "string",
+          "minLength": 10,
+          "description": "Why no source can be cited. Allowed only when research found no URL at all; such a record is shown as unsourced and never recommended by routing"
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "sources"
+          ]
+        },
+        {
+          "required": [
+            "unsourced"
+          ]
+        }
+      ]
+    },
+    "routeStrings": {
+      "type": "object",
+      "description": "Translatable prose for each route, keyed by route id",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "label": {
+            "type": "string"
+          },
+          "scope": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "vocabList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/vocabId"
+      },
+      "uniqueItems": true
+    }
+  }
+}

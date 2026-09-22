@@ -1,0 +1,43 @@
+id: us-ai-now-institute-2
+type: organisation
+geo:
+  country: us
+  label: United States, with international influence.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://ainowinstitute.org/publications
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 330afbbd8cbf
+  perspective: civil-liberties
+  volunteers: no
+  tags:
+    - audit
+    - harm
+    - join
+strings:
+  name: AI Now Institute
+  the_ask: Challenge the current trajectory of AI by confronting industry concentration and power — antitrust scrutiny, limits on data centre expansion, and worker protection — rather than accepting scale as inevitable.
+  what_they_do: Independent research and policy analysis; maps the AI market and the industry's sources of power; publishes data centre policy toolkits and labour research (including AI in nursing); testifies to Congress (Monopoly Busters Caucus, Senate Banking Committee); investigates AI security incidents.
+  newcomer_action: Use its data centre policy toolkit if there is a proposed facility near you; cite its market-power research in submissions; apply for a role.
+  tips: no public tip line found
+  geography: United States, with international influence.
+  scale: Small research institute, co-led by Amba Kak and Sarah Myers West; high influence per head.
+  spending: Grant-funded.
+  caution: A research institute, not a campaign — there is no petition, no membership and no volunteering. Its critique targets AI companies' power and is often explicitly at odds with the existential-risk framing used by groups like MIRI and ControlAI.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ainowinstitute.org/publications
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: bfa72a95c8
+  migrated_from: input/data/committees-and-organisations.json#orgs

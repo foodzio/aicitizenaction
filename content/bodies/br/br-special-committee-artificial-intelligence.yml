@@ -1,0 +1,62 @@
+id: br-special-committee-artificial-intelligence
+type: seat
+geo:
+  country: br
+  label: Brazil
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www2.camara.leg.br/atividade-legislativa/comissoes/comissoes-temporarias/especiais/57a-legislatura/comissao-especial-sobre-inteligencia-artificial-pl-2338-23/membros
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Portuguese only. The Chamber portal has no functional English participation layer.
+      source_id: c50eb6c2af98
+    - id: public-route
+      type: submission
+      value: https://edemocracia.camara.leg.br/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Portuguese only. The Chamber portal has no functional English participation layer.
+      source_id: b707caef32ed
+  local_name: Comissão Especial sobre Inteligência Artificial (PL 2338/23) — Câmara dos Deputados
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Luisa Canziani (President) and Aguinaldo Ribeiro (Relator)
+      verified_on: 2026-09-22
+strings:
+  name: Special Committee on Artificial Intelligence (on PL 2338/2023)
+  ai_jurisdiction: The decisive seat for Brazilian AI regulation right now. A temporary special committee of the Chamber of Deputies, 57th Legislature, created to analyse PL 2338/2023 (the Marco Legal da IA) after the Senate passed it. Under Brazil's rapporteur system, the relator's substitutive text is what the Chamber votes on — the relator, not the committee president, is the controlling seat.
+  business: "Status as of September 2026: 'Aguardando Parecer do(a) Relator(a) na Comissão Especial' — still awaiting the rapporteur's opinion, sixteen months after his designation. 31 meetings held, 180 guests heard, 163 proposals voted. 37 bills now appended (apensados) to PL 2338/2023, with further appendings approved by the Mesa Diretora on 17 June, 1 September and 2 September 2026. The bill is under regime de prioridade (Art. 151, II, RICD) and will go to Plenary. The government's own AI governance bill creating the Sistema Nacional de Governança para a IA (SIA), proposed December 2025, was articulated with the relator and folded into this process. Separately PL 762/2026 (Rubens Pereira Júnior, PT-MA, 25 Feb 2026, high-consequence-sector AI framework amending the LGPD, Marco Civil and Consumer Code) was appended to PL 7132/2025 and received by this committee on 6 April 2026."
+  public_route: Three real routes. (1) AUDIÊNCIAS PÚBLICAS — the committee has held 31 meetings and heard 180 guests; hearing requests are made by deputies, but civil society organisations are routinely invited and Data Privacy Brasil, IDEC and others have appeared. The route for an outsider is to ask a committee member to request your inclusion. (2) Written contributions sent directly to the committee secretariat or to the relator's office (gabinete) — Brazilian practice accepts and often publishes these as 'contribuições'. (3) e-Democracia, the Chamber's citizen participation portal, which runs Wikilegis text-commenting and enquetes on bills.
+  format_rules: No threshold for written contributions or e-Democracia comments. Speaking at a hearing requires a deputy's request (requerimento) approved by the committee.
+  realistic: "Better than most. Brazil's legislature is genuinely more porous to civil society than Japan's or Korea's — 180 guests heard is a real number, and organised Brazilian civil society has demonstrably shaped this text. But 'ordinary person' is a stretch: hearing slots go to organisations, and the effective lever is the relator's office, which is lobbied intensively and privately. A Portuguese-speaking individual can file a written contribution and comment on e-Democracia at no cost and with no gatekeeping, and that is a real if modest channel. A non-Portuguese speaker is effectively excluded. Note also that the committee has been 'awaiting the relator's opinion' since 2025 — the schedule slips repeatedly, so windows that look closed often reopen."
+  language_note: Portuguese only. The Chamber portal has no functional English participation layer.
+  note: President and relator VERIFIED from the Chamber's own news release (camara.leg.br/noticias/1160383, dated 20 May 2025) and the relator designation VERIFIED from the bill's tramitação sheet (idProposicao 2487262). Meeting/guest/proposal counts and current status VERIFIED from the committee's official page. The /membros sub-page returned HTTP 500 during this research, so the current full membership list is UNVERIFIED — the URL is given because it is the correct official location, not because it was read.
+  seat_notes:
+    chair: "Presidente: Dep. Luisa Canziani (PSD-PR). Relator: Dep. Aguinaldo Ribeiro (PP-PB), designated 20 May 2025. Committee installed 20 May 2025. Secretary-Executive: Ana Karina de Macedo Tito, +55 61 3216-6235."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www2.camara.leg.br/atividade-legislativa/comissoes/comissoes-temporarias/especiais/57a-legislatura/comissao-especial-sobre-inteligencia-artificial-pl-2338-23/membros
+      checked: 2026-09-22
+    - url: https://edemocracia.camara.leg.br/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 230eafcb09
+  migrated_from: input/data/committees-and-organisations.json#seats

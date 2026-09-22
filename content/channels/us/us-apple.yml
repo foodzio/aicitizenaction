@@ -1,0 +1,72 @@
+id: us-apple
+type: company
+geo:
+  country: us
+  label: USA
+facts:
+  routes:
+    - id: apple-security-bounty
+      type: bounty
+      value: https://security.apple.com/submit/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8f423382b21e
+    - id: bounty-terms-conditions
+      type: disclosure
+      value: https://security.apple.com/terms-and-conditions/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b76f9bc7b1a2
+    - id: homepage
+      type: homepage
+      value: https://security.apple.com/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 6cdbf149996e
+    - id: framework
+      type: framework
+      value: https://security.apple.com/bounty/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: f12627e11fcf
+  region: United States
+  public_input: limited
+  tags:
+    - behaviour
+    - flaw
+strings:
+  name: Apple
+  remit: No publicly named AI safety or alignment function. Apple Security Engineering and Architecture runs the bounty; Private Cloud Compute is the published mechanism for AI privacy guarantees.
+  reality_check: Apple's bounty is well-funded and known to pay, but it is a security program. Apple has historically been criticised by researchers for slow triage and for disputes over credit and payout, though the 2025-26 program restructure raised maximums substantially. There is no published channel of any kind for Apple Intelligence model behaviour — no safety@, no model feedback form, no responsible AI contact.
+  notes: "If your concern is that Apple Intelligence produced something harmful, there is no published route: not found — general contact only, via https://www.apple.com/contact/. The bounty is for security and privacy vulnerabilities only. Apple publishes no frontier safety framework."
+  routes:
+    apple-security-bounty:
+      label: Apple Security Bounty
+      scope: "'If you've discovered a security or privacy vulnerability that affects Apple devices, software, or services, please report it directly to us.' Covers Apple products and public-facing services; rewards up to $2M for exploit chains, over $5M with bonuses. AI/Apple Intelligence is not named in the terms."
+      note: Security and privacy only. Nothing about model behaviour.
+    bounty-terms-conditions:
+      label: Bounty terms and conditions
+      scope: Section 8 provides a limited exemption from reverse-engineering restrictions where 'The actions were performed during good-faith security research, which was — or was intended to be — responsibly reported to Apple'.
+      note: "This is the safe-harbour language, and it is narrow: it covers reverse engineering, not a general no-legal-action promise, and applies only within the program terms."
+    homepage:
+      label: Homepage
+    framework:
+      label: No frontier safety framework or model spec published
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://security.apple.com/submit/
+      checked: 2026-09-22
+    - url: https://security.apple.com/terms-and-conditions/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b4bcb8772b
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,70 @@
+id: us-scale-ai
+type: company
+geo:
+  country: us
+  label: USA
+facts:
+  routes:
+    - id: vulnerability-reports
+      type: email
+      value: vulnerabilities@scale.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4a5dbb344c0d
+    - id: trust-center
+      type: program
+      value: https://trust.scale.com/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3dbc8844b80b
+    - id: homepage
+      type: homepage
+      value: https://scale.com/security
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c6f68a9e1a60
+    - id: framework
+      type: framework
+      value: https://scale.com/blog/risk-matrix
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 811654b0a348
+  region: United States
+  public_input: limited
+  tags:
+    - behaviour
+    - flaw
+strings:
+  name: Scale AI
+  remit: Safety, Evaluations and Alignment Lab (SEAL) produces third-party model evaluations and red-teaming for other developers; internally a trust/security function runs disclosure.
+  reality_check: Scale's public safety relevance is as an evaluator of others rather than a developer, so external safety reports about Scale itself are rare. Scale had a significant 2025 incident in which public Google Docs exposed confidential client project details and contractor data, surfaced by journalists rather than through disclosure. Since Meta's investment and the departure of leadership to Meta, SEAL's independence as a third-party evaluator has been publicly questioned — which matters if you are considering Scale as a neutral route for a finding about another lab.
+  notes: vulnerabilities@scale.com is security-scoped. Scale is not a route for reporting concerns about frontier models generally, and its evaluator independence is contested post-Meta investment. No safe-harbour language found.
+  routes:
+    vulnerability-reports:
+      label: Vulnerability reports
+      scope: Responsible disclosure of security vulnerabilities. AI model safety is not mentioned.
+      note: Published on scale.com/security. No formal bug bounty is described.
+    trust-center:
+      label: Trust Center
+      scope: Compliance artifacts (SOC 2 Type II, ISO 27001, FedRAMP High, DoD IL4).
+      note: Documentation, not an incident channel.
+    homepage:
+      label: Homepage
+    framework:
+      label: No frontier safety framework (not a frontier model developer); publishes evaluation methodology such as the AI Risk Matrix
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://trust.scale.com/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 5eed4d4f98
+  migrated_from: input/data/institutions.json

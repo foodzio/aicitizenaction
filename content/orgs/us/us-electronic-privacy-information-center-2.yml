@@ -1,0 +1,44 @@
+id: us-electronic-privacy-information-center-2
+type: organisation
+geo:
+  country: us
+  label: United States, federal and state.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://epic.org/about/contact/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0bd9ec20e3bd
+  perspective: civil-liberties
+  volunteers: unclear
+  tags:
+    - audit
+    - harm
+    - join
+    - tip
+strings:
+  name: Electronic Privacy Information Center (EPIC)
+  the_ask: AI systems used on people — in policing, hiring, housing, healthcare, insurance and government — must be transparent, tested and accountable, and discriminatory screening and scoring tools should not be used.
+  what_they_do: Legal and policy advocacy across seven AI areas including AI in law enforcement, chatbot harms, commercial AI use, government AI use, risk assessments and screening/scoring. Files comments, complaints and amicus briefs; maintains a public digital library of AI documents.
+  newcomer_action: Search its digital library for the agency or company you are dealing with, then contact Calli Schroeder (Senior Counsel, AI & Human Rights Director) via the contact page if you have a concrete case.
+  tips: unclear — no published tip line; contact page is the only route
+  geography: United States, federal and state.
+  scale: Mid-sized, lawyer-heavy nonprofit.
+  spending: Donation-funded.
+  caution: No public intake form for complaints — do not assume a tip will be acted on. Its focus is harm to identifiable people from deployed systems, not frontier or catastrophic risk.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://epic.org/about/contact/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 1600224bcf
+  migrated_from: input/data/committees-and-organisations.json#orgs

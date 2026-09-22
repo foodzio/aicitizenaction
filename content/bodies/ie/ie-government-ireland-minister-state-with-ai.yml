@@ -1,0 +1,55 @@
+id: ie-government-ireland-minister-state-with-ai
+type: seat
+geo:
+  country: ie
+  label: Ireland
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.oireachtas.ie/en/committees/34/artificial-intelligence/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d8e04e510441
+    - id: public-route
+      type: submission
+      value: https://www.oireachtas.ie/en/committees/34/artificial-intelligence/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 22f989a82136
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Niamh Smyth
+      verified_on: 2026-09-22
+strings:
+  name: Government of Ireland — Minister of State with the AI brief, Department of Enterprise, Tourism and Employment
+  ai_jurisdiction: The Irish ministerial holder engaging the Oireachtas AI committee. Ireland's AI policy sits in the Department of Enterprise, Tourism and Employment, which is also the department that leads on EU AI Act implementation and the designation of national competent authorities.
+  business: Appearing before the Joint Committee on Artificial Intelligence on 23 September 2026 at 16:30.
+  public_route: Raise the matter in writing with the Joint Committee on Artificial Intelligence ahead of a ministerial session — committees regularly put constituent-raised points to ministers directly — or contact the Minister through a TD.
+  format_rules: No formal rules for ministerial correspondence; not published.
+  note: VERIFIED 2026-09-22 from the Oireachtas AI committee's own scheduling entry, which names her as 'Minister Niamh Smyth, Minister of State at the Department of Enterprise, Tourism and Employment'. I did NOT independently verify the precise title of her delegated AI responsibility on gov.ie, so the exact wording of her AI-specific brief is UNVERIFIED.
+  seat_notes:
+    chair: Minister of State at the Department of Enterprise, Tourism and Employment
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.oireachtas.ie/en/committees/34/artificial-intelligence/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 58faa1b571
+  migrated_from: input/data/committees-and-organisations.json#seats

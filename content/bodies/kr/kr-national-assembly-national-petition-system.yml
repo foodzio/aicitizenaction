@@ -1,0 +1,60 @@
+id: kr-national-assembly-national-petition-system
+type: seat
+geo:
+  country: kr
+  label: South Korea
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://petitions.assembly.go.kr/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Korean only. No English interface. Identity verification is built on Korean domestic authentication infrastructure.
+      source_id: 46d555d6e0a4
+    - id: public-route
+      type: submission
+      value: https://petitions.assembly.go.kr/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Korean only. No English interface. Identity verification is built on Korean domestic authentication infrastructure.
+      source_id: 27e3302060e2
+  local_name: 국민동의청원 (국회전자청원)
+  level: national
+  tags:
+    - law
+    - petition
+  seats:
+    - role: chair
+      name: Not applicable
+      verified_on: 2026-09-22
+strings:
+  name: National Assembly National Petition System (electronic petition with public assent)
+  ai_jurisdiction: Not AI-specific, but AI petitions are routed to the 과학기술정보방송통신위원회. This is the one route in this entire research with a genuine, automatic legislative trigger, which is why it deserves precise treatment.
+  business: Continuously open. Any petition reaching threshold is referred to the subject-matter standing committee.
+  public_route: "Precise mechanism, in three stages. (1) REGISTRATION: an identity-verified citizen drafts a petition. (2) PUBLICITY GATE: the petition must gather 100 supporters within a set window; the Assembly then conducts a compliance/legality review within 7 days, and if it passes, the petition becomes publicly listed. (3) ASSENT: 50,000 signatures within 30 days of public listing. On reaching 50,000 the petition is 성립 (established) and is AUTOMATICALLY REFERRED to the relevant standing committee, which is then obliged to take it up as a formal agenda item under its petition-review procedure. The threshold was lowered from 100,000 to 50,000 in December 2021. Both petitioning and signing require real-name authentication (본인인증), which eliminates duplicate-account inflation — a deliberate design difference from the former Blue House petition system."
+  format_rules: 100 supporters to pass the publicity gate; then 50,000 verified signatures within 30 days to be formally established and referred to committee. Real-name authentication required to create or to sign.
+  realistic: "The trigger is real and this is the most powerful citizen route in any of the four jurisdictions covered — 50,000 verified signatures compel committee referral, which no other system here does. But be honest about two things. First, referral is not action: Korean press and civic groups have documented petitions that cleared 50,000 and were then left without a single 청원심사소위 review session, sometimes indefinitely, with the criticism '5만명 동의 받으면 뭐하나' ('what good is 50,000 signatures'). The trigger compels referral, not consideration, and certainly not legislation. Second, the real-name authentication gate means it is a Korean-citizens-and-residents system in practice; a non-Korean-speaker cannot use it and a non-resident generally cannot authenticate. Within those limits, an ordinary Korean citizen genuinely can use it, and 50,000 in 30 days is achievable for a motivated constituency."
+  language_note: Korean only. No English interface. Identity verification is built on Korean domestic authentication infrastructure.
+  note: The two-stage threshold (100 then 50,000/30 days), the December 2021 reduction from 100,000, the automatic committee referral and the real-name authentication requirement are VERIFIED from Korean-language sources including the National Assembly's own guidance page (assembly.go.kr menuNo=600249, which blocks automated fetching via robots.txt but is publicly readable). The portal URL is VERIFIED as the National Assembly e-petition site (국회전자청원). The post-referral inaction problem is VERIFIED from Korean press criticism (Newstomato, Danbi News).
+  seat_notes:
+    chair: System operated by the National Assembly Secretariat.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://petitions.assembly.go.kr/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: cac707fa49
+  migrated_from: input/data/committees-and-organisations.json#seats

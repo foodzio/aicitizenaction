@@ -1,0 +1,56 @@
+id: eu-european-parliament-rapporteur-shadow-rapporteur-system
+type: seat
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://oeil.europarl.europa.eu/oeil/en/home
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4089f9eb27a4
+    - id: public-route
+      type: submission
+      value: https://oeil.europarl.europa.eu/oeil/en/home
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7d77b98fd511
+  level: bloc
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Michael McNamara (Renew Europe, Ireland)
+      verified_on: 2026-09-22
+strings:
+  name: European Parliament — the rapporteur and shadow rapporteur system (the highest-leverage seats in EU legislating)
+  ai_jurisdiction: "Applies to every AI legislative file. WHAT A RAPPORTEUR IS: when the Commission sends a legislative proposal to Parliament, one committee is designated lead. Within that committee the political groups bid for the file using an auction system based on group size, and the winning group appoints ONE MEP as rapporteur. That single MEP drafts Parliament's report — the consolidated set of amendments that becomes Parliament's official position — decides which of the thousands of tabled amendments are folded into compromise texts, chairs the technical meetings, and then personally leads Parliament's delegation in the closed trilogue negotiations with the Council and Commission where the final law is actually written. WHAT A SHADOW RAPPORTEUR IS: every other political group appoints one shadow to follow the same file. Shadows negotiate the compromise amendments with the rapporteur; a compromise that the EPP, S&D and Renew shadows sign will pass, and one they refuse will not. The rapporteur plus roughly six shadows — under ten people — effectively write EU law on a given file. This is why the rapporteur seat is worth more than a committee chair: the chair runs the meeting, the rapporteur writes the text."
+  business: "Cloud and AI Development Act 2026/0138(COD) is the live AI file: Commission proposal 3 June 2026, rapporteur appointed September 2026, committee stage running now — which means the amendment window is OPEN and this is the moment at which outside input has effect. The Digital Omnibus on AI is closed: provisional trilogue agreement 7 May 2026, Coreper 13 May 2026, IMCO/LIBE approval 2 June 2026, plenary adoption 16 June 2026 (423 for, 57 against, 174 abstentions)."
+  public_route: "HOW AN OUTSIDER ACTUALLY REACHES A RAPPORTEUR: (1) Identify the file and its holders in the Legislative Observatory (oeil.europarl.europa.eu) or the Legislative Train (europarl.europa.eu/legislative-train) — both list the procedure number, lead committee and rapporteur. (2) Go to that MEP's page at europarl.europa.eu/meps/en/<id> which publishes their Brussels and Strasbourg office email and phone. (3) Write to the rapporteur AND every shadow at once — reaching only the rapporteur means your point dies if their group disagrees with it. (4) Time it to the draft-report and amendment-tabling window, which is the only period at which text can still change; after a trilogue deal nothing moves. (5) Say what you want in amendment form: name the article, give replacement wording, give one paragraph of justification. Rapporteurs' assistants triage hundreds of submissions and the ones that arrive as usable text get used. (6) An MEP office will normally meet a credible outside party; ask for a 20-minute meeting with the policy adviser, not the MEP. If you are paid to do this you must register on the EU Transparency Register first."
+  format_rules: No word limit, no portal, no deadline other than the committee's amendment-tabling deadline (published on the file page). Correspondence is not published. If you are an interest representative, entry in the EU Transparency Register is a precondition of meeting MEPs holding rapporteur roles, and such meetings must be declared.
+  key_people: "CURRENT AI FILE-HOLDERS, verified 2026-09-22: Digital Omnibus on AI, 2025/0359(COD), joint IMCO-LIBE — rapporteurs Arba Kokalari (EPP, Sweden) and Michael McNamara (Renew, Ireland). Cloud and AI Development Act, 2026/0138(COD) — IMCO rapporteur Reinier van Lanschot (Greens/EFA, Netherlands), appointed September 2026. AI Act implementation oversight — Brando Benifei (S&D, Italy) and Michael McNamara. Shadow rapporteurs are listed on each file's page in the Legislative Observatory (oeil.europarl.europa.eu) under 'Committee opinion / Shadow rapporteur' — I did not verify the individual shadows by name and am not asserting them."
+  note: "VERIFIED 2026-09-22: rapporteur identities from the European Parliament Legislative Train Schedule file pages for the Digital Omnibus on AI and the Cloud and AI Development Act. The procedural description of the rapporteur/shadow system is standard EP practice under the Rules of Procedure, not a claim about a named individual. Individual shadow rapporteurs are deliberately NOT named here because I did not verify them."
+  seat_notes:
+    chair: Rapporteur, Digital Omnibus on AI (2025/0359(COD)); LIBE co-chair of the AI Act Working Group
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://oeil.europarl.europa.eu/oeil/en/home
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: f0d594ae6e
+  migrated_from: input/data/committees-and-organisations.json#seats

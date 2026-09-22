@@ -1,0 +1,22 @@
+# Types of contact route. Every route in content/ uses one of these ids.
+# Adding a type is a maintainer change: routing and every language depend on this list.
+id: route-types
+values:
+  - { id: email, label: Email address }
+  - { id: form, label: Web form }
+  - { id: consultation, label: Public consultation }
+  - { id: docket, label: Regulatory docket }
+  - { id: complaint, label: Complaint route }
+  - { id: submission, label: Written submission }
+  - { id: disclosure, label: Responsible disclosure programme }
+  - { id: bounty, label: Bug or safety bounty }
+  - { id: whistleblowing, label: Whistleblower channel }
+  - { id: evidence, label: Call for evidence }
+  - { id: petition, label: Petition system }
+  - { id: reporting, label: Incident reporting }
+  - { id: feedback, label: Product feedback }
+  - { id: program, label: Programme or fellowship }
+  - { id: membership, label: Official membership list }
+  - { id: homepage, label: Homepage }
+  - { id: framework, label: Published policy or framework }
+  - { id: action, label: Organisation's own action page }

@@ -1,0 +1,7 @@
+id: levels
+values:
+  - { id: federal, label: Federal }
+  - { id: national, label: National }
+  - { id: state, label: State or regional }
+  - { id: bloc, label: Bloc (EU and similar) }
+  - { id: global, label: Global or multilateral }

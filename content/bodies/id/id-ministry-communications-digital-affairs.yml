@@ -1,0 +1,67 @@
+id: id-ministry-communications-digital-affairs
+type: government
+geo:
+  country: id
+  label: Indonesia
+facts:
+  routes:
+    - id: komdigi-legal-documentation-portal
+      type: docket
+      value: https://jdih.komdigi.go.id/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: id
+      source_id: 271a10a2a0f9
+    - id: komdigi-main-site
+      type: form
+      value: https://www.komdigi.go.id/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: id
+      source_id: 0af9254d7525
+    - id: homepage
+      type: homepage
+      value: https://www.komdigi.go.id/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ee7bdaa0c0b9
+  local_name: Kementerian Komunikasi dan Digital
+  region: Asia-Pacific
+  public_input: limited
+  tags:
+    - law
+    - systemic
+strings:
+  name: Ministry of Communications and Digital Affairs (Komdigi)
+  remit: STATUS IN FLUX AS OF SEPT 2026. Indonesia has no AI act. Komdigi (renamed from Kominfo in late 2024) issued a non-binding AI Ethics Circular (Circular Letter 9/2023) and as of 2026 had submitted two draft Presidential Regulations (Rancangan Peraturan Presiden / Perpres) on AI to the President, with the Deputy Minister publicly explaining that AI would be regulated by Perpres first as a foundation for later primary AI legislation. Komdigi does hold hard powers over electronic system operators under MR 5/2020 — registration requirements, content takedown orders, and the ability to block platforms — which it has used aggressively.
+  powers_text: compel
+  reality_check: Poor for outsiders. Indonesian AI rulemaking is happening through Presidential Regulations drafted inside the executive, a process with limited public consultation and none in English. Komdigi's real power over foreign platforms (blocking, registration) means foreign companies do engage — but through local counsel and registration compliance, not through any open channel. Bahasa Indonesia only.
+  notes: Two draft Perpres on AI were pending as of 2026; I could not confirm whether either had been signed. Treat Indonesian AI regulation as unsettled.
+  routes:
+    komdigi-legal-documentation-portal:
+      label: Komdigi legal documentation portal (JDIH)
+      scope: regulatory texts and drafting documents
+      note: UNVERIFIED — the domain appeared in search results hosting an AI regulation study document; not fetched.
+    komdigi-main-site:
+      label: Komdigi main site
+      scope: general
+      note: UNVERIFIED — not fetched. No contact address confirmed.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://jdih.komdigi.go.id/
+      checked: null
+    - url: https://www.komdigi.go.id/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: bc545ce70d
+  migrated_from: input/data/institutions.json

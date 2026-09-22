@@ -1,0 +1,82 @@
+id: us-resolution
+type: civil-society
+geo:
+  country: us
+  label: United States (Berkeley HQ), with London and Melbourne presence
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: hello@resolution.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9bc96c8b6562
+    - id: careers
+      type: form
+      value: https://resolution.org/careers
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1ad9147ba713
+    - id: launch-announcement
+      type: form
+      value: https://resolution.org/launch/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b16eb9d8958a
+    - id: legacy-timaeus-site
+      type: form
+      value: https://timaeus.co/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a9a94701dec3
+    - id: homepage
+      type: homepage
+      value: https://resolution.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 3afa8e38a670
+  region: United States
+  public_input: limited
+  tags:
+    - research
+strings:
+  name: Resolution (formerly Timaeus; launched as Sequent)
+  remit: Non-profit alignment research organisation formed by merging researchers from Timaeus (which pioneered applying singular learning theory to alignment and developmental interpretability) with the UK AI Security Institute's Alignment Team. Launched under the name Sequent, then rebranded to Resolution. Portfolio spans scalable oversight, learning theory (SLT, deep learning theory), mechanistic understanding and heuristic arguments, agent foundations, and model personas — with heavy investment in automating alignment research. Targeting 40–80 FTE researchers within two years.
+  threat_model: Misalignment and loss of control, approached through theory. The explicit bet is that theory unlocks automation of alignment research before capabilities outrun it.
+  reality_check: "Brand-new and actively hiring, which makes it unusually open to technical newcomers right now. IMPORTANT for routing: do not address correspondence to 'Timaeus' — that name is retired. The SLT research community around it has historically been very welcoming to outside contributors via Discord and open seminars."
+  gov_channel: Indirect via the UK AISI alumni network; no formal advisory seat.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+    careers:
+      label: Careers
+      scope: Researchers
+    launch-announcement:
+      label: Launch announcement (explains the Timaeus/Sequent lineage)
+      scope: Reference
+    legacy-timaeus-site:
+      label: Legacy Timaeus site (redirects/announces the rebrand), Discord and GitHub
+      scope: Legacy community
+      note: timaeus.co now carries the banner 'Timaeus is now Resolution'. The old Timaeus Discord and github.com/timaeus-research remain the community entry points for SLT work.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://resolution.org/careers
+      checked: 2026-09-22
+    - url: https://resolution.org/launch/
+      checked: 2026-09-22
+    - url: https://timaeus.co/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: f3e86b053b
+  migrated_from: input/data/institutions.json

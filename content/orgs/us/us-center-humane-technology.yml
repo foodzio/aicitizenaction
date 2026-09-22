@@ -1,0 +1,43 @@
+id: us-center-humane-technology
+type: organisation
+geo:
+  country: us
+  label: United States, global audience.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.humanetech.com/policy-reforms
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d69c6f5e0f40
+  perspective: safety-advocacy
+  volunteers: unclear
+  tags:
+    - fund
+    - join
+    - law
+strings:
+  name: Center for Humane Technology
+  the_ask: Change the incentives driving AI deployment, and establish new norms, legal protections and fundamental rights to preserve what makes human life meaningful in the age of AI.
+  what_they_do: Public education (the Your Undivided Attention podcast, The AI Dilemma talk, a free course), a policy reforms toolkit, and the 'AI and What Makes Us Human' initiative; works with decision-makers on systems-level interventions.
+  newcomer_action: Take the free course and use the Policy Reforms toolkit to brief a local official, employer or school; subscribe to the Substack.
+  tips: no
+  geography: United States, global audience.
+  scale: Mid-sized nonprofit with a fellowship programme and well-known founders (Tristan Harris, Aza Raskin).
+  spending: Not disclosed; accepts donations.
+  caution: Framing is attention economy, mental health and social harm rather than extinction risk, though it covers both. High-profile media presence; less legislative throughput than Encode or Secure AI Project.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.humanetech.com/policy-reforms
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: b63b36e56c
+  migrated_from: input/data/committees-and-organisations.json#orgs

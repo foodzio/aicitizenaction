@@ -1,0 +1,62 @@
+id: us-subcommittee-consumer-protection
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.commerce.senate.gov/about/commerce-subcommittees/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c47865163341
+    - id: public-route
+      type: submission
+      value: https://www.commerce.senate.gov/about/commerce-subcommittees/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d4f560ebd8f7
+  level: federal
+  chamber: Senate
+  parent: Senate Committee on Commerce, Science, and Transportation
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Marsha Blackburn
+      party: R
+      region: TN
+      verified_on: 2026-09-22
+    - role: ranking
+      name: John Hickenlooper
+      party: D
+      region: CO
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Consumer Protection, Technology, and Data Privacy
+  ai_jurisdiction: "The FTC-facing consumer door. AI harms to individual consumers: deceptive AI claims, algorithmic pricing, AI chatbots and companion apps marketed to minors, dark patterns, commercial surveillance and data privacy as inputs to AI training, kids' online safety. This is where a parent, a consumer, or a state AG concern about a specific AI product lands. Not the venue for compute, export controls or model-level safety testing."
+  business: "VERIFIED: Blackburn is lead sponsor of S.1748 Kids Online Safety Act, advanced by the full committee 5 Aug 2026 alongside three AI-specific children's bills (S.4199, S.4407, S.5171). May 2026: Blackburn and Blumenthal announced OpenAI's endorsement of KOSA ahead of a Senate hearing on social-media verdicts. Blackburn simultaneously chairs Senate Judiciary's Privacy, Technology and the Law subcommittee, so consumer-AI and civil-liberties-AI work runs through the same senator in both committees."
+  public_route: "Same as parent committee: majority 202-224-1251 (Dirksen 554), minority 202-224-0411 (Hart 428). Subcommittee-specific staff are not published separately. A constituent of Tennessee or Colorado should go through the member's own state office first."
+  note: Exact 119th Congress name verified 2026-09-22 on senate.gov and commerce.senate.gov. The task brief's 'Consumer Protection / Technology subcommittees' are now a single merged subcommittee with this name.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.commerce.senate.gov/about/commerce-subcommittees/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 8080d57e38
+  migrated_from: input/data/committees-and-organisations.json#seats

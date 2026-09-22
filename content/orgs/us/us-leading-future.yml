@@ -1,0 +1,43 @@
+id: us-leading-future
+type: organisation
+geo:
+  country: us
+  label: United States — federal and increasingly state races.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://aimoneywatch.org/ltf
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: d0031319abff
+  perspective: industry-lobby
+  volunteers: no
+  tags:
+    - join
+    - opposition
+    - tip
+strings:
+  name: Leading the Future
+  the_ask: Elect politicians who will keep AI lightly regulated, and secure a single federal framework that pre-empts state AI laws.
+  what_they_do: Super PAC network formed 15 August 2025, led by Zac Moffatt (R) and Josh Vlasto (D). Endorses and spends in both parties' primaries; affiliated vehicles include Build American AI (advocacy nonprofit), American Mission PAC and Think Big PAC. Targeted New York Assemblymember Alex Bores, author of the RAISE Act.
+  newcomer_action: Nothing to join — this is the opposition. Look up its spending in your race on AI Money Watch before you vote or volunteer for a candidate.
+  tips: no
+  geography: United States — federal and increasingly state races.
+  scale: Very large relative to every safety organisation on this list combined.
+  spending: $100M+ at launch; over $140 million raised per public reporting, with Andreessen Horowitz alone above $50 million by April 2026; FEC-derived tracker shows $75.5M raised and ~$70M cash on hand in January 2026. Funders reported to include a16z, OpenAI president Greg Brockman, Joe Lonsdale and Perplexity.
+  caution: UNVERIFIED against the PAC's own site — figures here come from Wikipedia, Forbes, CNBC and the FEC-based AI Money Watch tracker, and 'raised', 'pledged' and 'cash on hand' are different numbers that press coverage often conflates. Reported controversies include an AI-generated news site using fake journalist personas (April 2026), $5,000-per-video payments to influencers pushing a China-threat message (May 2026), and an FEC complaint over shell-company payments (May 2026) — all allegations reported by third parties.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://aimoneywatch.org/ltf
+      checked: null
+  needs_research:
+    - topics
+  legacy_id: 185e27a17d
+  migrated_from: input/data/committees-and-organisations.json#orgs

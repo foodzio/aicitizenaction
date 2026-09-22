@@ -1,0 +1,98 @@
+id: us-electronic-frontier-foundation
+type: civil-society
+geo:
+  country: us
+  label: United States (with international advocacy)
+facts:
+  routes:
+    - id: legal-assistance-request-eff
+      type: form
+      value: https://www.eff.org/pages/legal-assistance
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 53ba72db4fa8
+    - id: general-contact
+      type: form
+      value: https://www.eff.org/about/contact
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 35d51fe58574
+    - id: action-centre-campaigns-comment
+      type: form
+      value: https://act.eff.org/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a7eb42b6f98b
+    - id: press-contact
+      type: form
+      value: https://www.eff.org/press/contact
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5aa1cb6fe522
+    - id: security-vulnerability-matters
+      type: submission
+      value: https://www.eff.org/security
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e9153520f92e
+    - id: homepage
+      type: homepage
+      value: https://www.eff.org/issues/ai
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: e23407249d99
+  region: United States
+  public_input: open
+  tags:
+    - flaw
+    - research
+strings:
+  name: Electronic Frontier Foundation (EFF)
+  remit: Civil liberties organisation using litigation, pressure campaigns, technical analysis and advocacy. On AI it focuses on who uses AI and how — opposing government surveillance expansion, algorithmic policing, corporate data practices, and moves that would entrench incumbent platforms; also defends fair use and the right to build and study models.
+  threat_model: "Civil liberties and power: state surveillance, corporate data extraction, algorithmic discrimination, and market concentration. Explicitly rejects the 'AI is magic' framing and treats AI as a general-purpose tool. Not an alignment or catastrophic-risk organisation, and often in direct opposition to restriction-oriented AI safety policy."
+  reality_check: Large, well-staffed, and genuinely does read legal intake — but very selective, and its AI positions frequently cut against the AI-safety community's. Route surveillance, speech or researcher-protection concerns here; do not route frontier-risk concerns.
+  gov_channel: Strong — files amicus briefs, testifies, and litigates against federal and state agencies; comments in FTC, FCC and Copyright Office proceedings.
+  routes:
+    legal-assistance-request-eff:
+      label: Legal assistance request — EFF takes on impact cases
+      scope: People facing a digital-rights legal problem; EFF also maintains a referral list of cooperating attorneys
+      note: A real intake with real outcomes if your matter fits its docket.
+    general-contact:
+      label: General contact
+      scope: Anyone
+    action-centre-campaigns-comment:
+      label: Action centre — campaigns and comment drives
+      scope: Anyone
+    press-contact:
+      label: Press contact
+      scope: Media
+    security-vulnerability-matters:
+      label: Security/vulnerability matters
+      scope: Researchers
+      note: EFF has a long record of defending security researchers facing legal threats.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.eff.org/pages/legal-assistance
+      checked: 2026-09-22
+    - url: https://www.eff.org/about/contact
+      checked: 2026-09-22
+    - url: https://act.eff.org/
+      checked: 2026-09-22
+    - url: https://www.eff.org/press/contact
+      checked: 2026-09-22
+    - url: https://www.eff.org/security
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: a76e9570bb
+  migrated_from: input/data/institutions.json

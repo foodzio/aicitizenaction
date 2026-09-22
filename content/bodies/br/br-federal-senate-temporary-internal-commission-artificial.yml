@@ -1,0 +1,62 @@
+id: br-federal-senate-temporary-internal-commission-artificial
+type: seat
+geo:
+  country: br
+  label: Brazil
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www25.senado.leg.br/web/atividade/materias/-/materia/157233
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Portuguese only.
+      source_id: 95a7d6be343c
+    - id: public-route
+      type: submission
+      value: https://www12.senado.leg.br/ecidadania/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Portuguese only.
+      source_id: 0236fb26cb71
+  local_name: Comissão Temporária Interna sobre Inteligência Artificial no Brasil (CTIA) — Senado Federal
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Eduardo Gomes (Relator, concluded)
+      verified_on: 2026-09-22
+strings:
+  name: Federal Senate — Temporary Internal Commission on Artificial Intelligence (concluded) and Senate Plenary
+  ai_jurisdiction: Originating chamber for PL 2338/2023. The CTIA analysed the bill and produced the favourable opinion that the Senate plenary adopted. Its work is done; the Senate regains jurisdiction only if the Chamber amends the text, in which case it returns for a final Senate vote.
+  business: CONCLUDED IN THE SENATE. Approved by the Senate plenary on 10 December 2024 (Parecer nº 207/2024-PLEN/SF) and remitted to the Chamber of Deputies on 17 March 2025. Anyone targeting the Senate for AI regulation in 2026 is targeting the wrong chamber — the action is in the Chamber's special committee. The Senate's remaining role is the final revision vote if the Chamber changes the text, which it certainly will given 37 appended bills.
+  public_route: "Senate e-Cidadania: 'Consulta Pública' allows any registered user to vote for or against, and comment on, any bill under consideration in the Senate; 'Audiências Interativas' allow live questions to hearing witnesses. Both remain available for any Senate matter."
+  format_rules: None for consultation voting or commenting. Free registration required.
+  realistic: "The Senate consultation tools are genuinely easy — free registration, click to support or oppose, leave a comment, no gatekeeping. But for AI specifically this is now a dead channel: the bill left the Senate in March 2025. Included here so the seat is correctly identified as historical rather than current. Re-engage with the Senate only when the Chamber returns an amended text."
+  language_note: Portuguese only.
+  note: Senate approval date (10 December 2024), the parecer number, the relator, the author and the 17 March 2025 remittance to the Chamber are all VERIFIED from the Senate's own matéria page for PL 2338/2023. CTIA membership is UNVERIFIED — the commission is dissolved and its roster was not retrieved.
+  seat_notes:
+    chair: "Relator: Sen. Eduardo Gomes (PL-TO), who filed successive reports between June and December 2024. Author of PL 2338/2023: Sen. Rodrigo Pacheco (PSD-MG), presented 3 May 2023."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www25.senado.leg.br/web/atividade/materias/-/materia/157233
+      checked: 2026-09-22
+    - url: https://www12.senado.leg.br/ecidadania/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 726035f8eb
+  migrated_from: input/data/committees-and-organisations.json#seats

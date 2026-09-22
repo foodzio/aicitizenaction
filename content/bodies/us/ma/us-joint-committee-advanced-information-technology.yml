@@ -1,0 +1,60 @@
+id: us-joint-committee-advanced-information-technology
+type: seat
+geo:
+  country: us
+  sub: ma
+  label: Massachusetts
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://malegislature.gov/Committees/Detail/J33
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e61f4132736a
+    - id: public-route
+      type: submission
+      value: https://malegislature.gov/assets/documents/how-to-submit-testimony-v1.1.pdf
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 446d668f7221
+  level: state
+  chamber: Senate (joint committee)
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Michael O. Moore
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: Joint Committee on Advanced Information Technology, the Internet and Cybersecurity — Senate chair
+  ai_jurisdiction: The named AI/technology policy committee of the General Court; handles AI in healthcare decision-making, data privacy, cybersecurity and internet bills.
+  business: S.2632, An Act relative to the use of artificial intelligence and other software tools in healthcare decision-making (from S.46, Sens. Moore and Eldridge) — reported favorably 16 Oct 2025, recommended for passage and sent to Senate Ways and Means 2 April 2026.
+  status: VERIFIED — S.2632 sitting in Senate Ways and Means as of 22 Sep 2026. Massachusetts has no comprehensive AI statute; the 194th General Court's formal sessions ended 31 July 2026 and the frontier-AI provisions moved to the economic development vehicle instead (see Economic Development entry).
+  public_route: "YES — Massachusetts accepts online written testimony from any member of the public for any noticed hearing. Create a free MyLegislature account, open the hearing's detail page, and use 'Submit Testimony'; testimony is attached to the hearing record and shared with committee members. Sign-up to speak is handled per hearing notice. Deadline convention: testimony is generally accepted up to and for a short window after the hearing, but committees ask for submission by the hearing start."
+  agency_route: Massachusetts Attorney General — April 2024 AI advisory applying Chapter 93A consumer protection and anti-discrimination law to AI; complaints at https://www.mass.gov/how-to/file-a-consumer-complaint
+  note: "Senate vice chair: Pavel M. Payano. Senate ranking minority: Peter J. Durant. Committee phone (617) 722-1485."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://malegislature.gov/Committees/Detail/J33
+      checked: 2026-09-22
+    - url: https://malegislature.gov/assets/documents/how-to-submit-testimony-v1.1.pdf
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 6d958d9285
+  migrated_from: input/data/committees-and-organisations.json#seats

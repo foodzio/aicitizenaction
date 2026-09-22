@@ -1,0 +1,56 @@
+id: global-house-evaluation-is-not-enough-third
+type: reporting-channel
+geo:
+  country: global
+  label: Global (norm-setting, not binding)
+facts:
+  routes:
+    - id: submission-page
+      type: disclosure
+      value: https://arxiv.org/abs/2503.16861
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 884144de82eb
+    - id: homepage
+      type: homepage
+      value: https://arxiv.org/abs/2503.16861
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 0b24f4313c3a
+  region: Global
+  public_input: open
+  tags:
+    - flaw
+    - systemic
+strings:
+  name: "'In-House Evaluation Is Not Enough' — third-party AI flaw disclosure framework"
+  remit: N/A — it is the proposal document that defines the emerging norm. Read it to understand the vocabulary that labs and coordinators are converging on.
+  reality_check: "This is where the coordinated flaw disclosure push landed: as of September 2026 the standardised report and routing layer exist (FLARE-AI, live July 2026), but broad statutory or contractual safe harbour for AI model-behaviour research does not. Labs still grant safe harbour only inside their own programs, on their own terms."
+  accepts: N/A — it is the proposal document that defines the emerging norm. Read it to understand the vocabulary that labs and coordinators are converging on.
+  does_not_accept: N/A
+  how: "Three proposals: (1) standardised flaw reports and published rules of engagement, so researchers know what they may test and how to report; (2) broadly-scoped disclosure programs with legal safe harbours modelled on bug bounties; (3) coordinated distribution infrastructure, because jailbreaks and flaws transfer across providers. Its practical successor is FLARE-AI, which implements the standardised report and the distribution layer."
+  format: Academic position paper (arXiv 2503.16861, March 2025).
+  timing: N/A
+  after: N/A
+  operator: Shayne Longpre, Kevin Klyman, Ruth E. Appel and 30+ co-authors (MIT, Stanford HAI/CRFM, Princeton and others); endorsed by HackerOne
+  routes:
+    submission-page:
+      label: Submission page
+      scope: N/A — it is the proposal document that defines the emerging norm. Read it to understand the vocabulary that labs and coordinators are converging on.
+      note: "Three proposals: (1) standardised flaw reports and published rules of engagement, so researchers know what they may test and how to report; (2) broadly-scoped disclosure programs with legal safe harbours modelled on bug bounties; (3) coordinated distribution infrastructure, because jailbreaks and flaws transfer across providers. Its practical successor is FLARE-AI, which implements the standardised report and the distribution layer."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://arxiv.org/abs/2503.16861
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 1ad82fad8c
+  migrated_from: input/data/institutions.json

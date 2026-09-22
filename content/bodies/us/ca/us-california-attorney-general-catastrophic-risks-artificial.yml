@@ -1,0 +1,63 @@
+id: us-california-attorney-general-catastrophic-risks-artificial
+type: government
+geo:
+  country: us
+  sub: ca
+  label: California, USA — but binding on frontier developers doing business in California, so de facto national
+facts:
+  routes:
+    - id: sb-53-covered-employee
+      type: complaint
+      value: https://oag.ca.gov/contact/general-contact-form
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: fc40c41e8ab9
+    - id: dedicated-sb-53-email
+      type: email
+      value: none published
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3dcdeac6af36
+    - id: homepage
+      type: homepage
+      value: https://oag.ca.gov/sb53
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 8e727cefbd7d
+  region: United States
+  public_input: open
+  tags:
+    - harm
+    - insider
+strings:
+  name: California Attorney General — Catastrophic Risks in Artificial Intelligence Foundation Models (SB 53 / TFAIA enforcement)
+  remit: Enforces the Transparency in Frontier Artificial Intelligence Act (SB 53, signed 29 September 2025). Large frontier developers must publish a Frontier AI Framework covering catastrophic-risk identification, mitigation and governance; all frontier developers must publish transparency reports before deployment; critical safety incidents must be reported to Cal OES within 15 days (24 hours if imminent danger). The AG can seek civil penalties of up to $1,000,000 per violation. SB 53 also creates whistleblower protection for covered employees and requires anonymous internal reporting channels. The AG must publish an annual anonymised, aggregated report on employee reports received.
+  powers_text: fine
+  reality_check: This is, as of now, the ONLY government channel anywhere in the US built specifically to receive reports about CATASTROPHIC risk from frontier models, with statutory whistleblower protection behind it and a $1m-per-violation penalty. It is a real lever and it is badly publicised — the route is a category buried in the AG's generic contact form. Covered employees are the intended users, but the form itself is open. The AG's annual aggregate report means submissions become part of a public record. If you have insider information about a frontier developer's safety practices, this is the highest-value single address in this directory.
+  notes: California's Department of Technology may recommend updates to statutory definitions such as the 'frontier model' compute threshold, so the covered set will shift over time.
+  routes:
+    sb-53-covered-employee:
+      label: SB 53 covered-employee reports to the Attorney General
+      scope: Complete the online contact form and select the category 'Catastrophic risks in AI foundation models – employee reports (SB 53)'. For employees and contractors of frontier developers reporting catastrophic risk or non-compliance.
+      note: VERIFIED — quoted from https://oag.ca.gov/sb53. This dedicated category on a general form is easy to miss.
+    dedicated-sb-53-email:
+      label: Dedicated SB 53 email address
+      scope: n/a
+      note: VERIFIED ABSENCE — the AG's SB 53 page states submissions must go through the online form; no email is given.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://oag.ca.gov/contact/general-contact-form
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 454965ef25
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,74 @@
+id: us-department-commerce-bureau-industry-security
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (federal), with extraterritorial reach via the Export Administration Regulations
+facts:
+  routes:
+    - id: confidential-export-enforcement-lead
+      type: form
+      value: https://www.bis.gov/contact-us
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c339b4c30ec2
+    - id: export-counselling
+      type: email
+      value: (202) 482-4811 — phone only; no public email published
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 03bcc43d45ba
+    - id: public-comment-proposed-ear
+      type: docket
+      value: https://www.regulations.gov/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 85aa91da2017
+    - id: homepage
+      type: homepage
+      value: https://www.bis.gov/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ee17249543f2
+  region: United States
+  public_input: limited
+  tags:
+    - harm
+    - systemic
+strings:
+  name: U.S. Department of Commerce — Bureau of Industry and Security (BIS)
+  remit: Administers and enforces the EAR, including export controls on advanced computing chips, semiconductor manufacturing equipment and (under some rules) model weights. Rescinded the Biden-era AI Diffusion Rule in 2025 and codified a revised advanced-chip licence review policy in Jan 2026 (see 91 FR, doc 2026-00789). Can deny licences, impose civil penalties, add parties to the Entity List / Denied Persons List, and refer criminal cases. This is the single hardest-edged US compute-governance lever.
+  powers_text: fine
+  reality_check: The tip line is real and is read — export-enforcement leads are triaged by OEE agents and this is one of the very few US channels where a member of the public can trigger an actual investigation into AI-related conduct. Comment on interim final rules is technically open but BIS rules take effect immediately and are rarely reversed by comment; industry influence here runs through licensing counsel and direct agency meetings. If your concern is frontier compute proliferation, this is the agency with teeth — but frame it as a control violation, not as a safety argument.
+  notes: BIS policy on AI chips changed materially in Jan 2026; anything relying on the 2025 AI Diffusion Rule is obsolete (it was rescinded).
+  routes:
+    confidential-export-enforcement-lead:
+      label: Confidential export-enforcement lead/tip form
+      scope: Report suspected export-control violations, including diversion of controlled AI chips. BIS's contact page links a confidential lead/tip form and its OEE field offices.
+      note: VERIFIED — the contact page was fetched and shows the confidential tip route; the form's own deep link was not separately fetched.
+    export-counselling:
+      label: Export counselling
+      scope: Guidance on EAR obligations, Mon-Fri 8am-5pm ET, Washington DC office.
+      note: VERIFIED on https://www.bis.gov/contact-us. BIS publishes phone lines rather than email for counselling (Denied Persons List 202-482-0043; Entity List 202-482-5991; Unverified List 202-482-4255).
+    public-comment-proposed-ear:
+      label: Public comment on proposed EAR rules
+      scope: BIS interim final rules on AI chips routinely invite comment for 30-60 days after publication.
+      note: UNVERIFIED as fetched. Find the docket number in the Federal Register notice for the specific rule.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.bis.gov/contact-us
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 37eadd37b3
+  migrated_from: input/data/institutions.json

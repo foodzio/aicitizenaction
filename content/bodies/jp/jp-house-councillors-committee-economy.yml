@@ -1,0 +1,61 @@
+id: jp-house-councillors-committee-economy
+type: seat
+geo:
+  country: jp
+  label: Japan
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.sangiin.go.jp/japanese/joho1/kousei/konkokkai/current/list/l0071.htm
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Japanese only.
+      source_id: 5a4bb32dcaa3
+    - id: public-route
+      type: submission
+      value: https://www.sangiin.go.jp/japanese/joho1/kousei/konkokkai/current/list/l0071.htm
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Japanese only.
+      source_id: bb5ede6b9f3e
+  local_name: 参議院 経済産業委員会
+  level: national
+  tags:
+    - audit
+    - law
+    - petition
+  seats:
+    - role: chair
+      name: HAMAGUCHI Makoto (浜口誠)
+      verified_on: 2026-09-11
+strings:
+  name: House of Councillors Committee on Economy, Trade and Industry
+  ai_jurisdiction: "Upper-house METI oversight: AI industrial policy, compute and semiconductor strategy, AI Guidelines for Business."
+  business: METI oversight under AKAZAWA Ryosei; AI Basic Plan Phase II industrial delivery.
+  public_route: 参考人 by invitation; 請願 requires a sponsoring Councillor.
+  format_rules: Petition requires a sponsoring member.
+  realistic: Not usable directly by an outsider. Use e-Gov public comment for METI rule-making instead.
+  language_note: Japanese only.
+  note: "Chair VERIFIED from the official Sangiin roster page, as-of 令和8年9月11日 = 11 September 2026. Caution: automated readers frequently mis-convert Reiwa 8 to 2024 — Reiwa 8 is 2026."
+  seat_notes:
+    chair: 委員長 (Chair)
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-11
+  review_by: 2026-12-10
+  sources:
+    - url: https://www.sangiin.go.jp/japanese/joho1/kousei/konkokkai/current/list/l0071.htm
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: ad416d61b9
+  migrated_from: input/data/committees-and-organisations.json#seats

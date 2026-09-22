@@ -1,0 +1,99 @@
+id: global-access-now
+type: civil-society
+geo:
+  country: global
+  label: International (offices across all regions; RightsCon convener)
+facts:
+  routes:
+    - id: digital-security-helpline-24
+      type: email
+      value: security@accessnow.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8329975dbcf6
+    - id: general-enquiries
+      type: email
+      value: info@accessnow.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: bbc83dbb5133
+    - id: legal
+      type: email
+      value: legal@accessnow.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 85915ee4fad9
+    - id: press
+      type: email
+      value: press@accessnow.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ea42d25b6fec
+    - id: rightscon
+      type: email
+      value: rightscon@accessnow.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 44a190522cd3
+    - id: contact-page
+      type: form
+      value: https://www.accessnow.org/contact-us/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f1dabb442cec
+    - id: homepage
+      type: homepage
+      value: https://www.accessnow.org/issue/artificial-intelligence/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 52be6ce32702
+  region: Global
+  public_input: open
+  tags:
+    - research
+strings:
+  name: Access Now
+  remit: Digital rights organisation defending users at risk. On AI, advocates binding, enforceable human-rights-based governance and works against rights-violating automated decision systems. Operates a 24/7 Digital Security Helpline for civil society, and convenes RightsCon, the largest global digital-rights summit.
+  threat_model: Human rights harms — surveillance, discrimination in ADM, censorship, and threats to activists, journalists and human rights defenders. Near-term and acute, with a strong Global Majority focus.
+  reality_check: Among the most genuinely responsive organisations here, because it runs an actual operational helpline with staff obliged to answer. Scope is human rights and at-risk users; a frontier-alignment concern is out of scope.
+  gov_channel: Strong — formal engagement at the UN Human Rights Council, EU institutions, and national regulators; a recognised civil-society interlocutor in multiple multilateral processes.
+  routes:
+    digital-security-helpline-24:
+      label: Digital Security Helpline — 24/7, free, for civil society at risk
+      scope: Activists, journalists, human rights defenders and civil society organisations facing a digital threat
+      note: A real staffed emergency line, not a general inbox. https://www.accessnow.org/help/
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+    legal:
+      label: Legal
+      scope: Legal matters
+    press:
+      label: Press
+      scope: Media
+    rightscon:
+      label: RightsCon
+      scope: Summit participation; RightsCon runs an open session-proposal call each cycle
+      note: The open call for RightsCon sessions is a genuine route to put a topic in front of the global digital-rights community.
+    contact-page:
+      label: "Contact page (phone: +1 888 414 0100)"
+      scope: General
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.accessnow.org/contact-us/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 5ead6964e1
+  migrated_from: input/data/institutions.json

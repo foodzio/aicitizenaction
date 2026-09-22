@@ -1,0 +1,64 @@
+id: us-senate-committee-foreign-relations
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.foreign.senate.gov/about/membership
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 25438741da16
+    - id: public-route
+      type: submission
+      value: https://www.foreign.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8003cd519b1e
+  level: federal
+  chamber: Senate
+  tags:
+    - audit
+    - law
+    - petition
+  seats:
+    - role: chair
+      name: Jim Risch
+      party: R
+      region: ID
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Jeanne Shaheen
+      party: D
+      region: NH
+      verified_on: 2026-09-22
+strings:
+  name: Senate Committee on Foreign Relations
+  ai_jurisdiction: "AI diplomacy, not AI regulation. Send here: international AI governance bodies and treaties, State Department AI policy and the Bureau of Cyberspace and Digital Policy, AI provisions in bilateral technology agreements, AI and human rights abroad, foreign assistance involving AI, and confirmation of relevant ambassadors and State officials. Note that the statutory export-control authority sits in Banking, not here — Foreign Relations gets the diplomacy and the sanctions framing."
+  business: UNVERIFIED for a named 2026 AI hearing. The committee's AI-relevant work in the 119th Congress has run through nominations, China technology-competition oversight, and its Subcommittee on East Asia, the Pacific, and International Cybersecurity Policy.
+  public_route: "VERIFIED: https://www.foreign.senate.gov/about/contact. Committee: 423 Dirksen, Washington DC 20510, 202-224-4651."
+  note: Chair/ranking verified 2026-09-22 against senate.gov committee_memberships_SSFR.htm.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.foreign.senate.gov/about/membership
+      checked: 2026-09-22
+    - url: https://www.foreign.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: d2dc8fb7dc
+  migrated_from: input/data/committees-and-organisations.json#seats

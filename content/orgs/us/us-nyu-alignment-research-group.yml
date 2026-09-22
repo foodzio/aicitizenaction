@@ -1,0 +1,60 @@
+id: us-nyu-alignment-research-group
+type: academic
+geo:
+  country: us
+  label: United States (New York)
+facts:
+  routes:
+    - id: people-page-only-contact
+      type: form
+      value: https://wp.nyu.edu/arg/people/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ed54064512ac
+    - id: blog-why-ai-safety
+      type: form
+      value: https://wp.nyu.edu/arg/why-ai-safety/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e8ada9075526
+    - id: homepage
+      type: homepage
+      value: https://wp.nyu.edu/arg/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: e0a607462ce6
+  region: United States
+  public_input: none
+  tags:
+    - research
+strings:
+  name: NYU Alignment Research Group (ARG)
+  remit: A set of NYU researchers doing empirical work with language models aimed at longer-term concerns about deploying highly capable AI. Associated with Sam Bowman's group and collaborating across NYU's ML2, CILVR, the Center for Data Science and the Department of Linguistics. Known for work on debate and scalable oversight, chain-of-thought faithfulness, and benchmarks that resist saturation.
+  threat_model: Scalable oversight and honesty — how humans supervise models that exceed them, and whether stated model reasoning reflects actual computation. Alignment-focused, empirical rather than theoretical.
+  reality_check: Effectively closed as an institution — it is a loose grouping of academics, not an entity with an inbox. Contact individual faculty via their NYU pages. Several ARG-affiliated researchers have since moved to frontier labs, so the group is less central than it was.
+  gov_channel: None directly.
+  routes:
+    people-page-only-contact:
+      label: People page — the only contact route is individual researchers
+      scope: Researchers
+      note: No group-level email or contact form is published anywhere on the site.
+    blog-why-ai-safety:
+      label: Blog and 'why AI safety' introduction
+      scope: Public
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://wp.nyu.edu/arg/people/
+      checked: 2026-09-22
+    - url: https://wp.nyu.edu/arg/why-ai-safety/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: b9f23afb5e
+  migrated_from: input/data/institutions.json

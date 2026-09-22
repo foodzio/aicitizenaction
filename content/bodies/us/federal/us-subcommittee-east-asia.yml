@@ -1,0 +1,64 @@
+id: us-subcommittee-east-asia
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.foreign.senate.gov/about/membership
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 708cc35be567
+    - id: public-route
+      type: submission
+      value: https://www.foreign.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 89f1cf667db4
+  level: federal
+  chamber: Senate
+  parent: Senate Committee on Foreign Relations
+  tags:
+    - law
+    - petition
+  seats:
+    - role: chair
+      name: Pete Ricketts
+      party: R
+      region: NE
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Chris Coons
+      party: D
+      region: DE
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on East Asia, the Pacific, and International Cybersecurity Policy
+  ai_jurisdiction: China AI competition, allied coordination on AI and semiconductor controls, international cyber norms and their extension to AI, and AI in the Indo-Pacific.
+  business: UNVERIFIED for a named 2026 AI hearing. Coons is separately the lead sponsor of S.1367 NO FAKES Act, so his office engages AI issues in both committees.
+  public_route: Full-committee contact page https://www.foreign.senate.gov/about/contact.
+  note: Leadership verified 2026-09-22 from senate.gov SSFR subcommittee roster.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.foreign.senate.gov/about/membership
+      checked: 2026-09-22
+    - url: https://www.foreign.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 5546d7364a
+  migrated_from: input/data/committees-and-organisations.json#seats

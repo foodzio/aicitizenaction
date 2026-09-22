@@ -1,0 +1,41 @@
+id: global-acm-technology-policy-council
+type: organisation
+geo:
+  country: global
+  label: Global, with US and Europe committees.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.acm.org/public-policy
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a6b7114c9c40
+  perspective: professional
+  volunteers: unclear
+  tags:
+    - join
+strings:
+  name: ACM Technology Policy Council (with USTPC and Europe TPC)
+  the_ask: Generative AI and algorithmic systems should be built and deployed according to published principles covering safety, intellectual property, workforce impact, accountability, transparency and fairness.
+  what_they_do: "Issues global and regional technology policy statements: the 'Principles for the Development, Deployment, and Use of Generative AI Technologies' (eight principles) and the joint US/Europe 'Statement on Principles for Responsible Algorithmic Systems' (nine principles). Provides nonpartisan technical briefings to policymakers. Chairs: James Hendler (TPC), Larry Medsker (USTPC), Chris Hankin (Europe TPC)."
+  newcomer_action: If you are an ACM member, read the generative AI principles and contact the relevant committee about contributing; use the principles as a citable standard in your own workplace or submission.
+  tips: no
+  geography: Global, with US and Europe committees.
+  scale: ACM is the largest computing professional society; the policy committees are small volunteer bodies with a small Washington office.
+  spending: Membership-funded.
+  caution: The public policy pages do not explain how to volunteer for the committees — treat joining as UNVERIFIED and email the ACM Technology Policy Office. Principles are advisory and carry no enforcement.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.acm.org/public-policy
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 89534a99d3
+  migrated_from: input/data/committees-and-organisations.json#orgs

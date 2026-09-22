@@ -1,0 +1,73 @@
+id: us-national-institute-standards-technology-information-technology
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (federal), US Department of Commerce
+facts:
+  routes:
+    - id: nist-itl-ai-contact
+      type: email
+      value: itlmail@nist.gov
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 52a73fa2b43f
+    - id: federal-register-notices-nist
+      type: docket
+      value: https://www.federalregister.gov/agencies/national-institute-of-standards-and-technology
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 6b7706470673
+    - id: nist-ai-landing-page
+      type: consultation
+      value: https://www.nist.gov/artificial-intelligence
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 85770844fc2f
+    - id: homepage
+      type: homepage
+      value: https://www.nist.gov/artificial-intelligence
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: b7f5a82c080b
+  region: United States
+  public_input: open
+  tags:
+    - systemic
+strings:
+  name: National Institute of Standards and Technology (NIST) — Information Technology Laboratory and AI programmes
+  remit: Non-regulatory standards agency. Publishes the AI Risk Management Framework (AI RMF 1.0) and its profiles (including Generative AI and critical-infrastructure profiles), measurement science, benchmarks and evaluation methods. Hosts CAISI and the NIST AI Consortium. In Dec 2025 NIST also launched centers for AI in manufacturing and critical infrastructure. Its outputs are voluntary but are widely incorporated by reference into procurement, insurance and state law.
+  powers_text: research
+  reality_check: "NIST's public-comment process is one of the genuinely effective US routes: comment periods on draft NIST AI publications are real, staff read and tabulate every submission, and substantive technical comments visibly change the text between draft and final. The trick is timing — you must catch the window, which is announced in the Federal Register and on the NIST AI page, not by writing in unsolicited. Technical specificity beats advocacy: NIST responds to measurement proposals, not to position statements."
+  notes: Non-regulatory by statute. NIST cannot compel, fine or investigate anyone.
+  routes:
+    nist-itl-ai-contact:
+      label: NIST ITL AI contact
+      scope: General AI programme correspondence.
+      note: VERIFIED at https://www.nist.gov/itl/ai/contact-us (published as 'itlmail [at] nist.gov').
+    federal-register-notices-nist:
+      label: Federal Register notices for NIST AI drafts and RFIs
+      scope: All NIST comment opportunities are announced here with a docket number and a regulations.gov link.
+      note: UNVERIFIED as fetched; URL follows the Federal Register's documented agency-page scheme.
+    nist-ai-landing-page:
+      label: NIST AI landing page (drafts open for comment listed here)
+      scope: NIST posts draft publications with comment deadlines and a submission address on this hub.
+      note: VERIFIED — page fetched; it lists AI RMF, CAISI and NIST AI Consortium but publishes no AI-specific email.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.nist.gov/artificial-intelligence
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 9e3e7b36f0
+  migrated_from: input/data/institutions.json

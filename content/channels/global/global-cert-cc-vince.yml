@@ -1,0 +1,56 @@
+id: global-cert-cc-vince
+type: reporting-channel
+geo:
+  country: global
+  label: US-based, globally used
+facts:
+  routes:
+    - id: submission-page
+      type: disclosure
+      value: https://kb.cert.org/vince/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 52ab77e46f66
+    - id: homepage
+      type: homepage
+      value: https://kb.cert.org/vince/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 2c30318eb773
+  region: Other
+  public_input: open
+  tags:
+    - behaviour
+    - flaw
+strings:
+  name: CERT/CC VINCE (Vulnerability Information and Coordination Environment)
+  remit: Vulnerability reports from anyone — you can report with or without a VINCE account. CERT/CC coordinates multi-vendor disclosure where a flaw affects several parties, which is precisely the case for transferable AI jailbreaks and shared model weaknesses.
+  reality_check: The strongest escalation path when a vendor ignores you. CERT/CC's leverage is that it will publish on a clock whether or not the vendor cooperates, and vendors know it. Decades of track record in software; its applicability to AI model behaviour is new and being established via FLARE-AI.
+  accepts: Vulnerability reports from anyone — you can report with or without a VINCE account. CERT/CC coordinates multi-vendor disclosure where a flaw affects several parties, which is precisely the case for transferable AI jailbreaks and shared model weaknesses.
+  does_not_accept: Pure content/quality complaints with no security dimension. Historically security-focused, though the FLARE-AI partnership extends it to AI flaws.
+  how: "'Report a Vulnerability' form at kb.cert.org/vince/, or email cert@cert.org (phone +1 412-268-5800). FLARE-AI routes reports here as one of its named recipients."
+  format: "Technical report: affected system and version, description, reproduction steps, impact, and any proof of concept."
+  timing: Rolling. CERT/CC operates a published coordinated disclosure policy with a default disclosure timeline (historically 45 days) after which it may publish regardless of vendor response.
+  after: CERT/CC validates, contacts affected vendors, coordinates a fix and a disclosure date, and may publish a Vulnerability Note in its public database.
+  operator: CERT Coordination Center, Software Engineering Institute, Carnegie Mellon University
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Vulnerability reports from anyone — you can report with or without a VINCE account. CERT/CC coordinates multi-vendor disclosure where a flaw affects several parties, which is precisely the case for transferable AI jailbreaks and shared model weaknesses.
+      note: "'Report a Vulnerability' form at kb.cert.org/vince/, or email cert@cert.org (phone +1 412-268-5800). FLARE-AI routes reports here as one of its named recipients."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://kb.cert.org/vince/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: bf339e616a
+  migrated_from: input/data/institutions.json

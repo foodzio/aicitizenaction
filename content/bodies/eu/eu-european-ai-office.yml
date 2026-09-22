@@ -1,0 +1,84 @@
+id: eu-european-ai-office
+type: government
+geo:
+  country: eu
+  label: "European Union (extraterritorial: applies to providers placing models on the EU market wherever established)"
+facts:
+  routes:
+    - id: ai-office-general-inquiries
+      type: email
+      value: CNECT-AIOFFICE@ec.europa.eu
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 442a488e362d
+    - id: ai-office-recruitment
+      type: email
+      value: CNECT-AIOFFICE-RECRUITMENT@ec.europa.eu
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 905c5f0108e8
+    - id: ai-act-service-desk
+      type: form
+      value: https://ai-act-service-desk.ec.europa.eu/en/ai-act-service-desk
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 865d861df4af
+    - id: commission-consultations-ai-act
+      type: consultation
+      value: https://digital-strategy.ec.europa.eu/en/consultations
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: c43968c1aefe
+    - id: homepage
+      type: homepage
+      value: https://digital-strategy.ec.europa.eu/en/policies/ai-office
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: e153f17940e5
+  region: European Union
+  public_input: open
+  tags:
+    - harm
+    - systemic
+strings:
+  name: European AI Office (within DG CONNECT, European Commission)
+  remit: The AI Act's central enforcement body for general-purpose AI. Exclusive supervisory and enforcement competence over GPAI model providers. Can conduct inspections, require technical documentation and access to models to assess capabilities, request corrective action, RESTRICT THE PUBLIC AVAILABILITY OF A MODEL, and impose fines directly (up to 3% of global turnover or EUR 15m for GPAI provider breaches; up to 7% or EUR 35m for prohibited-practice breaches enforced elsewhere). Develops evaluation tools, methodologies and benchmarks. Serves as secretariat to the AI Board. Under the Digital Omnibus on AI its supervisory powers were expanded. GPAI obligations have applied since 2 August 2025; the AI Office's enforcement powers over GPAI became exercisable from 2 August 2026.
+  powers_text: fine
+  reality_check: The AI Office is the most consequential AI-safety regulator on earth by formal power — it is the only body that can order a frontier model off the market and fine its provider — and it publishes a working email and a genuinely staffed multilingual service desk. But the service desk answers COMPLIANCE questions; it is not a complaints channel and not a policy channel. The real input levers are (1) the multi-stakeholder drafting processes for codes of practice and guidelines, which were genuinely open and where civil-society drafting comments visibly changed text, and (2) the Have your say portal when an implementing act is out for feedback. Systemic-risk GPAI is explicitly within the AI Office's mandate, making this the ONLY jurisdiction where frontier risk is a statutory supervisory duty rather than a research interest.
+  notes: "CRITICAL 2026 UPDATE: the Digital Omnibus on AI — Regulation (EU) 2026/1744 — entered into force on 27 July 2026. It DEFERRED high-risk obligations (stand-alone Annex III systems to 2 December 2027; Annex I embedded systems to 2 August 2028) but did NOT defer the GPAI/systemic-risk regime, which has applied since 2 August 2025, and did NOT defer the Article 50 transparency obligations, which apply from 2 August 2026. So the frontier-model part of the AI Act is fully live; the consumer high-risk part is delayed."
+  routes:
+    ai-office-general-inquiries:
+      label: AI Office general inquiries
+      scope: General correspondence with the AI Office.
+      note: VERIFIED — published on https://digital-strategy.ec.europa.eu/en/policies/ai-office.
+    ai-office-recruitment:
+      label: AI Office recruitment
+      scope: Recruitment only; applications must go through the Expression of Interest form, not by email.
+      note: VERIFIED on the same page.
+    ai-act-service-desk:
+      label: AI Act Service Desk (Single Information Platform)
+      scope: Submit questions about the AI Act in any EU language and receive answers from a team of experts; includes interactive compliance-checker tools.
+      note: VERIFIED — the Single Information Platform was fetched and this is the route it publishes.
+    commission-consultations-ai-act:
+      label: Commission consultations on AI Act implementing acts, guidelines and codes of practice
+      scope: The AI Office has run multi-stakeholder consultations on the GPAI Code of Practice, the transparency code, GPAI guidelines and risk-classification guidance.
+      note: UNVERIFIED as fetched; consultations are also mirrored on the Have your say portal.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ai-act-service-desk.ec.europa.eu/en/ai-act-service-desk
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 393273bcdd
+  migrated_from: input/data/institutions.json

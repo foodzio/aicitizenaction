@@ -1,0 +1,69 @@
+id: us-ai-now-institute
+type: civil-society
+geo:
+  country: us
+  label: United States (New York)
+facts:
+  routes:
+    - id: general-enquiries-but-see
+      type: email
+      value: contact@ainowinstitute.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 999cd1eece9c
+    - id: press
+      type: email
+      value: press@ainowinstitute.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 640a85162bac
+    - id: contact-page-newsletter-signup
+      type: form
+      value: https://ainowinstitute.org/contact-us
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9bb47de92afb
+    - id: homepage
+      type: homepage
+      value: https://ainowinstitute.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 215d1ce1ad49
+  region: United States
+  public_input: limited
+  tags:
+    - law
+    - research
+strings:
+  name: AI Now Institute
+  remit: "Independent policy research institute. Current agenda centres on the political economy of AI: market concentration and monopoly (co-executive director Amba Kak has testified before the congressional Monopoly Busters Caucus), data-centre expansion and its infrastructure harms, labour and the gig-ification of professions such as nursing, industry opacity, and AI security vulnerabilities. Publishes the Landscape reports."
+  threat_model: Concentration of corporate power and structural/political-economy harm — the thesis is that the danger is who controls AI and to what commercial end, not that AI will escape control. Sharply and deliberately opposed to the existential-risk framing.
+  reality_check: Publishes an email but explicitly warns it may not respond — take that at face value. Small team, high inbound. Route here only if your concern is corporate power, labour, or infrastructure; a misalignment concern will be actively unwelcome.
+  gov_channel: Real — congressional testimony, FTC and antitrust engagement, and strong influence on the competition-policy framing of AI.
+  routes:
+    general-enquiries-but-see:
+      label: General enquiries — but see the caveat
+      scope: Anyone
+      note: "The contact page itself states: 'due to the high volume of inquiries, we are currently unable to guarantee a prompt response to general inquiries.'"
+    press:
+      label: Press
+      scope: Media — the more responsive route
+    contact-page-newsletter-signup:
+      label: Contact page and newsletter signup
+      scope: General
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ainowinstitute.org/contact-us
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: c5a80a0c0c
+  migrated_from: input/data/institutions.json

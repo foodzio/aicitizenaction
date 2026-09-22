@@ -1,0 +1,42 @@
+id: global-caes-collective-action-existential-safety
+type: organisation
+geo:
+  country: global
+  label: Global / online.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://existentialsafety.org/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b9f35a2ca00a
+  perspective: safety-advocacy
+  volunteers: yes
+  tags:
+    - join
+    - law
+strings:
+  name: CAES — Collective Action for Existential Safety (Center for Existential Safety)
+  the_ask: Individuals, organisations and nations should each take concrete personal action on existential risk — from AI, nuclear weapons and engineered pandemics — starting today.
+  what_they_do: Runs a structured action plan with separate tracks for individuals, organisations and nations, a 30-second quiz that routes you to a first action, a commitment tracker, a Discord community, and a pledge site. Curates other groups' actions rather than lobbying itself.
+  newcomer_action: Take the quiz on the homepage, tick five commitments in the action tracker, sign the Existential Safety Action Pledge and join the Discord.
+  tips: no — but it takes suggestions for missing actions via an Airtable form
+  geography: Global / online.
+  scale: Very small. Copyright notice reads 'Center for Existential Safety'; the pledge site lists only a handful of public signatories (including James Norris). Treat as a small project, not an institution.
+  spending: Not disclosed; donations via Givebutter.
+  caution: "The pledge is demanding: signers commit to 'take at least one action every workday to reduce existential risks until an international body of recognized experts has declared humanity's risk of extinction is under 0.1% per year'. Read that before signing. The site is a directory that points to other organisations — useful as a front door, but joining CAES is not the same as joining a campaign with staff and legislative access."
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://existentialsafety.org/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 07ae4c6963
+  migrated_from: input/data/committees-and-organisations.json#orgs

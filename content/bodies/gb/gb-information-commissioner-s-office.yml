@@ -1,0 +1,86 @@
+id: gb-information-commissioner-s-office
+type: government
+geo:
+  country: gb
+  label: United Kingdom
+facts:
+  routes:
+    - id: make-complaint
+      type: complaint
+      value: https://ico.org.uk/make-a-complaint/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1fa3f4ebb306
+    - id: concerns-about-how-organisation
+      type: complaint
+      value: https://ico.org.uk/for-the-public/i-m-worried-about-how-an-organisation-has-handled-my-information/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 0b4fd8830efd
+    - id: ico-helpline-live-chat
+      type: form
+      value: https://ico.org.uk/global/contact-us/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 51902a603ea4
+    - id: ico-calls-views-draft
+      type: consultation
+      value: https://ico.org.uk/about-the-ico/ico-and-stakeholder-consultations/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 3a44f9e34d79
+    - id: homepage
+      type: homepage
+      value: https://ico.org.uk/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: a5011dca162e
+  region: United Kingdom
+  public_input: open
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Information Commissioner's Office (ICO)
+  remit: Independent data protection and information rights regulator. Enforces UK GDPR and the Data Protection Act 2018, which govern AI training data, automated decision-making and profiling (Article 22 rights), and data subject rights. Can issue information notices and assessment notices, conduct audits, issue enforcement notices requiring a company to stop processing (including stopping a model's deployment), and fine up to £17.5m or 4% of global turnover. Also enforces PECR. Publishes AI and data protection guidance and runs a regulatory sandbox.
+  powers_text: fine
+  reality_check: The ICO complaint route is real and heavily used, but the practitioner experience is that individual complaints usually end in advice or a 'we have asked the organisation to improve' letter rather than enforcement; the ICO has been notably reluctant to fine large technology firms. The effective lever is the ICO's consultation and call-for-views process on AI guidance, where structured responses visibly move the text, and coordinated complaints that establish a pattern. Scope is personal data and automated decisions about individuals — NOT frontier or catastrophic risk. The ICO also has no jurisdiction over a model that harms no identifiable data subject.
+  notes: The Data (Use and Access) Act has altered parts of the UK automated-decision-making regime; check current Article 22 equivalents before relying on pre-2025 guidance.
+  routes:
+    make-complaint:
+      label: Make a complaint
+      scope: Complaints about how an organisation handled your personal information, including AI training on your data and automated decisions about you. Sub-routes include nuisance calls (https://ico.org.uk/for-the-public/nuisance-calls/) and FOI complaints.
+      note: VERIFIED — page fetched; it is a hub that routes by complaint type. The ICO's contact pages are JavaScript-heavy and the helpline number could not be read off them directly.
+    concerns-about-how-organisation:
+      label: Concerns about how an organisation handled your information
+      scope: The public-facing entry point for a data-protection concern.
+      note: UNVERIFIED as fetched; appeared in ICO search results.
+    ico-helpline-live-chat:
+      label: ICO helpline and live chat
+      scope: ICO operates a telephone helpline and live chat for the public.
+      note: PARTIALLY VERIFIED — the page loaded and confirmed a helpline and live chat exist (it carried a notice about closure on specific bank holidays) but the phone number itself did not render to the retrieval tool. Read it from the page directly rather than trusting a remembered number.
+    ico-calls-views-draft:
+      label: ICO calls for views and draft guidance consultations
+      scope: The ICO consults on AI and data protection guidance, generative AI, and biometrics.
+      note: UNVERIFIED as fetched; confirm from the ICO site navigation.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ico.org.uk/make-a-complaint/
+      checked: 2026-09-22
+    - url: https://ico.org.uk/global/contact-us/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c626970750
+  migrated_from: input/data/institutions.json

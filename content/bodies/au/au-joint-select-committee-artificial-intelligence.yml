@@ -1,0 +1,59 @@
+id: au-joint-select-committee-artificial-intelligence
+type: seat
+geo:
+  country: au
+  label: Australia
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/Artificial_Intelligence/Committee_Membership
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6cc629708729
+    - id: public-route
+      type: submission
+      value: https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/Artificial_Intelligence
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8c34433fc38a
+  level: national
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Ms Jo Briskey MP (Australian Labor Party, Maribyrnong, VIC)
+      verified_on: 2026-09-22
+strings:
+  name: Joint Select Committee on Artificial Intelligence
+  ai_jurisdiction: "Australia's principal current AI inquiry body, appointed by resolution of BOTH the House of Representatives and the Senate on 20 August 2026. Its terms of reference are unusually broad and are the best single statement of Australian AI policy scope: AI's contribution to resilience, productivity, competitiveness and living standards; spreading benefits to suburbs and regions; AI and robotics in research, new industries and exports (agriculture, resources, health and medical research, advanced manufacturing, financial services, defence industry); rate and barriers to adoption by SMEs and family businesses; sovereign AI capability and its commercialisation, R&D, investment and talent; data sovereignty and narrow domain-specific models trained on Australian data; workforce and skills implications including job creation and displacement and job quality and security; adoption of AI by Commonwealth departments and agencies and the transparency and accountability measures applying to it; THE ADEQUACY OF AUSTRALIA'S EXISTING LAWS AND REGULATORY FRAMEWORKS AS THEY APPLY TO AI AND WHETHER THERE ARE GAPS WARRANTING REFORM; AI's interaction with intellectual property and copyright law including use of Australian creative, cultural and media content in training; risks and harms including fraud and scams, deepfakes and risks to children and vulnerable Australians; national security and cyber security opportunities and foreign interference risks including supply chains and critical infrastructure; and the implications of emerging AI capability for national security and strategic resilience, including the ability of regulators, THE AUSTRALIAN AI SAFETY INSTITUTE and the intelligence and security community to identify and respond to emerging risks."
+  business: Inquiry running now. Submissions closed 14 September 2026. FINAL REPORT DUE NO LATER THAN 30 NOVEMBER 2026. The establishing resolution is in Journals of the Senate No. 64, Thursday 20 August 2026.
+  public_route: "The submission window has closed, but the secretariat can still be contacted and the committee 'may ask submitters to provide further evidence at public hearings'. Late submissions are sometimes accepted at the secretariat's discretion — ask. Secretariat: Joint Select Committee on Artificial Intelligence, PO Box 6100, Parliament House, Canberra ACT 2600; phone +61 2 6277 3863; ai.joint@aph.gov.au."
+  format_rules: "The committee's own instruction: 'Given the timeframe for this inquiry, the committee would appreciate submissions to be kept as brief as possible, ideally around 5-6 pages.' It also draws attention to the advice that 'if you are making a submission to a committee, you are responsible for the quality and accuracy of the content of that submission, including where AI tools have been used' — an explicit warning against AI-generated submissions. Submissions are published only after the committee accepts and authorises them; you may not disclose your own submission until then."
+  key_people: "Deputy Chair: Senator the Hon Jonathon Duniam (Liberal Party, TAS). Members: Senator Ross Cadell (Nationals, NSW); Ms Kate Chaney MP (Independent, Curtin WA); Senator Josh Dolega (ALP, TAS); Hon Andrew Hastie MP (Liberal, Canning WA); Ms Zaneta Mascarenhas MP (ALP, Swan WA); Senator David Pocock (Independent, ACT); Senator Tony Sheldon (ALP, NSW); Senator Marielle Smith (ALP, SA); Mr Aaron Violi MP (Liberal, Casey VIC); Hon Tim Watts MP (ALP, Gellibrand VIC). The two crossbench senators, Pocock and Chaney, are the members most likely to engage with unaffiliated public submissions."
+  note: VERIFIED 2026-09-22 by direct fetch of the committee's own aph.gov.au page and its membership page. This committee did not exist before 20 August 2026 and supersedes the earlier Senate Select Committee on Adopting AI as Australia's main AI forum.
+  seat_notes:
+    chair: Chair
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/Artificial_Intelligence/Committee_Membership
+      checked: 2026-09-22
+    - url: https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/Artificial_Intelligence
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: a5e1378bb6
+  migrated_from: input/data/committees-and-organisations.json#seats

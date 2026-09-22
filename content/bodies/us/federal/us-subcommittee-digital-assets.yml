@@ -1,0 +1,63 @@
+id: us-subcommittee-digital-assets
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.banking.senate.gov/about/membership
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4442fe14ede0
+    - id: public-route
+      type: submission
+      value: https://www.banking.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: aa32204e654d
+  level: federal
+  chamber: Senate
+  parent: Senate Committee on Banking, Housing, and Urban Affairs
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Cynthia Lummis
+      party: R
+      region: WY
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Ruben Gallego
+      party: D
+      region: AZ
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Digital Assets
+  ai_jurisdiction: Newly created in the 119th Congress. Relevant to AI where AI agents transact — autonomous agents holding or moving assets, AI-driven trading, AI-enabled financial fraud, and identity/authentication for machine actors.
+  business: UNVERIFIED for AI-specific activity; included because it is the Senate counterpart to the House Financial Services subcommittee that has 'Artificial Intelligence' in its name.
+  public_route: Full-committee contact page https://www.banking.senate.gov/contact.
+  note: Leadership verified 2026-09-22 from senate.gov SSBK subcommittee roster.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.banking.senate.gov/about/membership
+      checked: 2026-09-22
+    - url: https://www.banking.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 25bbe917b5
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,85 @@
+id: eu-cen-cenelec-jtc-21-artificial-intelligence
+type: standards
+geo:
+  country: eu
+  label: European Union / EEA
+facts:
+  routes:
+    - id: join-via-your-national
+      type: membership
+      value: https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b07ead91b8d3
+    - id: cen-cenelec-project-manager
+      type: email
+      value: ichourmouziadis@cencenelec.eu
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 18d8e5558389
+    - id: etuc-ai-standardisation-inclusiveness
+      type: email
+      value: TG_Inclusiveness@etuc.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 47fdfa34781e
+    - id: european-standards-ai-linkedin
+      type: membership
+      value: https://www.linkedin.com/groups/8793224/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 59898674ca0b
+    - id: homepage
+      type: homepage
+      value: https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c66305ac7dc6
+  region: European Union
+  public_input: limited
+  tags:
+    - harm
+    - systemic
+strings:
+  name: CEN-CENELEC JTC 21 — Artificial Intelligence
+  remit: Established 1 June 2021; 300+ experts from 20+ countries across five working groups. Develops the harmonised European standards that give presumption of conformity with the EU AI Act once cited in the Official Journal — e.g. AI trustworthiness framework, AI risk management, AI quality management system (prEN 18286), conformity assessment, datasets and bias, cybersecurity, robustness, logging. CEN/CENELEC decided in late 2025 to accelerate the work programme after delays.
+  threat_model: "EU AI Act risk categories: health, safety and fundamental rights of persons affected by high-risk systems, plus GPAI systemic risk. Compliance-engineering framing."
+  reality_check: The most consequential standards body for anyone in Europe right now, and the most criticised for weak civil-society representation relative to industry. The Annex III organisations are chronically under-resourced and actively want outside expertise — approaching ANEC, ECOS or ETUC is a far more tractable route than approaching CEN-CENELEC directly.
+  gov_channel: Direct legal effect — these standards operationalise the EU AI Act.
+  routes:
+    join-via-your-national:
+      label: Join via your National Standardization Body / National Committee — primary route
+      scope: Residents/organisations in CEN-CENELEC member countries
+      note: Contact your NSB (AFNOR, DIN, UNI, NEN, BSI, etc.) and ask to join its JTC 21 mirror committee. This is the concrete individual route.
+    cen-cenelec-project-manager:
+      label: CEN-CENELEC Project Manager Yannis Chourmouziadis — for European/international organisations seeking to join directly
+      scope: European and international organisations (Annex III-type bodies), not individuals
+      note: Annex III organisations (ANEC for consumers, ETUC for workers, ECOS for environment, SBS for SMEs) hold standing seats and are the designated civil-society voice.
+    etuc-ai-standardisation-inclusiveness:
+      label: ETUC AI standardisation inclusiveness mailing list
+      scope: Civil society and worker representatives following JTC 21
+      note: Practical way to track the work without a committee seat.
+    european-standards-ai-linkedin:
+      label: European Standards & AI LinkedIn group (informal tracking)
+      scope: Open
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.cencenelec.eu/areas-of-work/cen-cenelec-topics/artificial-intelligence/
+      checked: 2026-09-22
+    - url: https://www.linkedin.com/groups/8793224/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 3d7849a091
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,51 @@
+id: eu-european-commission-have-your-say-consultation
+type: seat
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://ec.europa.eu/info/law/better-regulation/have-your-say
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 00da470346c9
+    - id: public-route
+      type: submission
+      value: https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 4ee682e2047e
+  level: bloc
+  tags:
+    - law
+    - record
+strings:
+  name: European Commission — 'Have your say' consultation portal
+  ai_jurisdiction: The single entry point for public input to every EU legislative initiative before it is proposed, including all AI initiatives. Each initiative passes through a 'call for evidence' stage and often a full public consultation, both open to comment.
+  business: AI-related initiatives that have used the portal include 'Artificial intelligence strategy for the cultural and creative sectors' (initiative 18592) and the Apply AI Strategy consultation. Open/closed status changes constantly — the portal's own search is the only reliable source.
+  public_route: "Anyone in the world may register an EU Login account and submit feedback on any published initiative. This is the least gatekept formal channel in the entire EU system: no residency, nationality, or organisational requirement."
+  format_rules: Feedback is limited to 4,000 characters plus an attachment (normally one document up to 1MB). Calls for evidence typically run 4 weeks; full public consultations 12 weeks. Feedback is PUBLISHED on the initiative's feedback page with your name, your organisation and your country; organisations must supply an EU Transparency Register number. Anonymity can be requested.
+  note: PARTIALLY VERIFIED 2026-09-22. The portal URL and the existence of AI initiatives on it are verified from Commission pages. The 4,000-character limit and 4-week/12-week convention are standard Better Regulation practice but I could NOT re-verify them on 22 Sep 2026 because the portal page returned only metadata to my fetcher — treat those two figures as UNVERIFIED and check the portal before relying on them.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ec.europa.eu/info/law/better-regulation/have-your-say
+      checked: null
+    - url: https://ec.europa.eu/info/law/better-regulation/have-your-say/initiatives
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 44380f2ed2
+  migrated_from: input/data/committees-and-organisations.json#seats

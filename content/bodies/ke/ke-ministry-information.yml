@@ -1,0 +1,82 @@
+id: ke-ministry-information
+type: government
+geo:
+  country: ke
+  label: Kenya
+facts:
+  routes:
+    - id: kenya-ai-emerging-technologies
+      type: consultation
+      value: https://www.ict.go.ke/index.php/kenya-ai-and-et-policy-public-participation-2026
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: b69a5c5ef5f9
+    - id: draft-policy-text
+      type: docket
+      value: https://ict.go.ke/sites/default/files/AI%20Policy%20Doc/draft-kenya-ai-and-emerging-technologies-policy-2026.pdf
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 66166fd593c0
+    - id: kenya-ai-strategy-2025
+      type: consultation
+      value: https://ict.go.ke/sites/default/files/2025-03/Kenya%20AI%20Strategy%202025%20-%202030.pdf
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 42d4362c14ae
+    - id: homepage
+      type: homepage
+      value: https://ict.go.ke/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 50a38ea712ef
+  region: Africa
+  public_input: open
+  tags:
+    - law
+    - systemic
+strings:
+  name: Ministry of Information, Communications and the Digital Economy (MICDE) — State Department for ICT and the Digital Economy
+  remit: Owns the Kenya AI Strategy 2025–2030 and the draft Kenya Artificial Intelligence and Other Emerging Technologies Policy (July 2026). Kenya is the only African member of the international network, though as of Sept 2026 I found NO evidence that a Kenyan AI Safety Institute has actually been stood up — Kenya 'agreed to join' the network with an institute 'in development'. A separate Artificial Intelligence Bill 2026 is before Parliament, which if passed would create statutory powers; until then the ministry is a policy body.
+  powers_text: advise
+  reality_check: Kenya runs formal 'public participation' — a constitutional requirement under Article 118/201 for legislation and policy, which is genuinely more binding than a discretionary consultation elsewhere. That is a real opportunity. But public participation in Kenya is constitutionally framed around 'the people' and is oriented to Kenyan stakeholders; foreign submissions are not excluded in law but carry no weight. I could not fetch the ministry's site at all (TLS/robots failures), so I cannot confirm the live submission address — flag this as needing manual verification before any directory publishes it.
+  notes: English is an official language of Kenya, so no translation barrier. Kenya's network membership is diplomatically significant (sole African seat) but appears institutionally thin.
+  routes:
+    kenya-ai-emerging-technologies:
+      label: Kenya AI and Emerging Technologies Policy — public participation 2026
+      scope: draft policy comment
+      note: UNVERIFIED — the page exists per search results but fetch was blocked (TLS/robots failure on ict.go.ke). Submission email and deadline NOT confirmed. Do not publish a contact address for this without re-checking.
+    draft-policy-text:
+      label: Draft policy text (July 2026)
+      scope: draft policy
+      note: UNVERIFIED — fetch blocked by robots/TLS.
+    kenya-ai-strategy-2025:
+      label: Kenya AI Strategy 2025–2030
+      scope: strategy
+      note: UNVERIFIED (search result).
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.ict.go.ke/index.php/kenya-ai-and-et-policy-public-participation-2026
+      checked: null
+    - url: https://ict.go.ke/sites/default/files/AI%20Policy%20Doc/draft-kenya-ai-and-emerging-technologies-policy-2026.pdf
+      checked: null
+    - url: https://ict.go.ke/sites/default/files/2025-03/Kenya%20AI%20Strategy%202025%20-%202030.pdf
+      checked: null
+    - url: https://ict.go.ke/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: fdcf5e4128
+  migrated_from: input/data/institutions.json

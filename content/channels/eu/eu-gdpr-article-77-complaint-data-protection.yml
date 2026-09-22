@@ -1,0 +1,55 @@
+id: eu-gdpr-article-77-complaint-data-protection
+type: reporting-channel
+geo:
+  country: eu
+  label: EU/EEA (and UK equivalent)
+facts:
+  routes:
+    - id: submission-page
+      type: complaint
+      value: https://gdpr-info.eu/art-77-gdpr/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 62a2615182cb
+    - id: homepage
+      type: homepage
+      value: https://gdpr-info.eu/art-77-gdpr/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: e367d009f49a
+  region: United Kingdom
+  public_input: open
+  tags:
+    - harm
+strings:
+  name: GDPR Article 77 — complaint to a data protection supervisory authority
+  remit: Complaints from any data subject who considers that processing of their personal data infringes the GDPR. You may complain to the authority in your Member State of habitual residence, your place of work, or the place of the alleged infringement.
+  reality_check: The most battle-tested adjacent route, with a real enforcement record against AI systems (the Italian Garante's ChatGPT actions being the best-known). Its power is the duty to inform you of progress and outcome — a stronger procedural guarantee than Article 85 of the AI Act gives. Its limit is that it only bites where personal data is involved.
+  accepts: Complaints from any data subject who considers that processing of their personal data infringes the GDPR. You may complain to the authority in your Member State of habitual residence, your place of work, or the place of the alleged infringement.
+  does_not_accept: "Concerns that do not involve processing of personal data. This is the key limit for AI safety work: it reaches training data, inference on personal data, profiling, automated decision-making and accuracy of personal data, but not model capability, misuse potential or catastrophic risk."
+  how: File with the chosen supervisory authority, usually via their online form. Frame the concern in data protection terms — lawful basis, accuracy, transparency, Article 22 automated decision-making — because a concern framed as 'this AI is unsafe' will be rejected as out of scope, while the same facts framed as a data protection issue may be entertained.
+  format: Authority-specific form; identify the controller, the processing, the provision breached, and the effect on you.
+  timing: Rolling.
+  after: The supervisory authority must inform the complainant of the progress and outcome of the complaint, and of the possibility of a judicial remedy under Article 78. Without prejudice to other remedies.
+  operator: National data protection authorities (EU/EEA); ICO in the UK
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Complaints from any data subject who considers that processing of their personal data infringes the GDPR. You may complain to the authority in your Member State of habitual residence, your place of work, or the place of the alleged infringement.
+      note: File with the chosen supervisory authority, usually via their online form. Frame the concern in data protection terms — lawful basis, accuracy, transparency, Article 22 automated decision-making — because a concern framed as 'this AI is unsafe' will be rejected as out of scope, while the same facts framed as a data protection issue may be entertained.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://gdpr-info.eu/art-77-gdpr/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: bb8c64ed4c
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,62 @@
+id: us-senate-committee-banking
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.banking.senate.gov/about/membership
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e0d45fe2bac7
+    - id: public-route
+      type: submission
+      value: https://www.banking.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 074ea708b1ef
+  level: federal
+  chamber: Senate
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Tim Scott
+      party: R
+      region: SC
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Elizabeth Warren
+      party: D
+      region: MA
+      verified_on: 2026-09-22
+strings:
+  name: Senate Committee on Banking, Housing, and Urban Affairs
+  ai_jurisdiction: "Export controls and financial-sector AI. This committee owns the Export Control Reform Act and the Commerce Department's Bureau of Industry and Security — so every question about AI chip export controls, location verification on advanced chips, and smuggling to China lands here, not in Foreign Relations. Also: AI in credit decisions, underwriting, insurance and fraud detection, algorithmic discrimination in lending, AI and financial stability, and CFIUS review of AI investments."
+  business: "VERIFIED: S.1705 Chip Security Act (Cotton) referred here 8 May 2025 and still pending; its House companion H.R.3447 (Huizenga) was ordered reported by House Foreign Affairs 42-0 on 26 Mar 2026 and, on reaching the Senate, was referred to this committee — so this committee is the chokepoint for AI chip export legislation. Hearing 'AI and the American Dream: Promoting Innovation, Affordability, and American Dominance' (June 2026), chaired by Scott, focused on affordability, innovation and national security. 8 Jun 2026: Warren letter pressing Chairman Scott to hold an additional AI hearing with senior administration officials on data-center costs borne by ratepayers."
+  public_route: "VERIFIED contact page https://www.banking.senate.gov/contact. Committee: 534 Dirksen, Washington DC 20510; majority 202-224-7391, minority 202-224-5842 (numbers listed on the contact page)."
+  note: Chair/ranking verified 2026-09-22 against senate.gov committee_memberships_SSBK.htm. The export-control jurisdiction here is the single most commonly misrouted AI issue in Congress.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.banking.senate.gov/about/membership
+      checked: 2026-09-22
+    - url: https://www.banking.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: acdac98eaf
+  migrated_from: input/data/committees-and-organisations.json#seats

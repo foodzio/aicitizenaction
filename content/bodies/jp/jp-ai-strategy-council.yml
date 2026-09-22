@@ -1,0 +1,60 @@
+id: jp-ai-strategy-council
+type: seat
+geo:
+  country: jp
+  label: Japan
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www8.cao.go.jp/cstp/ai/ai_senryaku/ai_senryaku.html
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Japanese only.
+      source_id: fca924d08857
+    - id: public-route
+      type: submission
+      value: https://www8.cao.go.jp/cstp/ai/ai_senryaku/ai_senryaku.html
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Japanese only.
+      source_id: fc4945852de0
+  local_name: AI戦略会議
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: UNVERIFIED
+      verified_on: 2026-09-22
+strings:
+  name: AI Strategy Council
+  ai_jurisdiction: The non-statutory expert advisory council established in 2023 that produced Japan's interim AI policy positions and laid the groundwork for the AI Act. Now largely superseded.
+  business: Largely dormant. The most recent meeting recorded on the Cabinet Office page is the 14th session on 2 June 2025, with the previous one on 4 February 2025. Its function has been absorbed by the statutory AI Strategy Headquarters and its expert panel (専門調査会). Included here specifically so it is not mistaken for the live body — a lot of secondary commentary still points at it.
+  public_route: None. Advisory body, closed membership. Agendas, distributed materials and summary minutes are published as PDFs after each meeting.
+  format_rules: None.
+  realistic: Not usable and, more importantly, no longer the right target. If someone directs you to the AI戦略会議 as Japan's AI control tower, that advice is out of date — go to the 人工知能戦略本部 instead.
+  language_note: Japanese only.
+  note: Meeting history (last recorded session 2 June 2025) VERIFIED from the Cabinet Office page. The chair is deliberately left UNVERIFIED. The supersession by the statutory Headquarters is an inference from the meeting record plus the AI Act's creation of the Headquarters — stated here as an inference, not a fact.
+  seat_notes:
+    chair: Chair — I did not verify the current or final chair and will not name one.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www8.cao.go.jp/cstp/ai/ai_senryaku/ai_senryaku.html
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: e727ce0874
+  migrated_from: input/data/committees-and-organisations.json#seats

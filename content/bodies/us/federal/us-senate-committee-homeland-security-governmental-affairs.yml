@@ -1,0 +1,63 @@
+id: us-senate-committee-homeland-security-governmental-affairs
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.hsgac.senate.gov/about/members/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9c1c3d7379fc
+    - id: public-route
+      type: submission
+      value: https://www.hsgac.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 44308362895b
+  level: federal
+  chamber: Senate
+  tags:
+    - audit
+    - law
+  seats:
+    - role: chair
+      name: Rand Paul
+      party: R
+      region: KY
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Gary Peters
+      party: D
+      region: MI
+      verified_on: 2026-09-22
+strings:
+  name: Senate Committee on Homeland Security and Governmental Affairs
+  ai_jurisdiction: "How the federal government itself buys, builds and uses AI, plus DHS and CISA. Send here: federal AI procurement rules and contract terms, agency Chief AI Officers, AI risk management inside agencies, AI in federal benefits and enforcement decisions, government use of AI for surveillance or content moderation, GSA and OMB AI policy, federal AI workforce, and AI threats to critical infrastructure on the DHS side. NOT the place for rules on private-sector AI products."
+  business: "VERIFIED: S.3410 (Kim, D-NJ) to establish federal agency technology and AI talent teams — referred here. Peters is the committee's long-running AI-in-government legislator; his PREPARED for AI Act (risk-based federal AI procurement, Chief AI Officers, high-risk contract terms) was reported by this committee in the 118th Congress as S.4495 and remains the template for 119th Congress procurement work. Chairman Paul's AI emphasis is the opposite direction — restricting government use of AI for surveillance and speech moderation. UNVERIFIED: no specific 2026 full-committee AI hearing title confirmed; the committee's 2026 AI-adjacent activity is mostly bill referrals and oversight letters."
+  public_route: "VERIFIED contact page https://www.hsgac.senate.gov/contact (also /about/contact/). Committee: 340 Dirksen, Washington DC 20510, 202-224-4751. The committee also runs a whistleblower/tips intake — HSGAC and its Permanent Subcommittee on Investigations actively accept documents and allegations from the public, including from non-constituents, which makes it an unusually real door for someone with inside information about federal AI misuse."
+  note: Chair/ranking verified 2026-09-22 against senate.gov committee_memberships_SSGA.htm. The chair holds unilateral subpoena authority in this committee, which is why oversight requests land here.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.hsgac.senate.gov/about/members/
+      checked: 2026-09-22
+    - url: https://www.hsgac.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: d766cddd7b
+  migrated_from: input/data/committees-and-organisations.json#seats

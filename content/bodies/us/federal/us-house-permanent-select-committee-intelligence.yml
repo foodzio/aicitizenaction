@@ -1,0 +1,62 @@
+id: us-house-permanent-select-committee-intelligence
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://intelligence.house.gov/about/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 106faa9098c2
+    - id: public-route
+      type: submission
+      value: https://intelligence.house.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9e0c9561c059
+  level: federal
+  chamber: House
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Eric A. "Rick" Crawford
+      party: R
+      region: AR
+      verified_on: 2026-09-22
+    - role: ranking
+      name: James A. Himes
+      party: D
+      region: CT
+      verified_on: 2026-09-22
+strings:
+  name: House Permanent Select Committee on Intelligence
+  ai_jurisdiction: "Intelligence Community AI adoption and AI as an intelligence subject. Send here: IC use of frontier models, open-source intelligence and AI, adversary AI capability assessments, AI-enabled influence operations, and counterintelligence risk to US AI developers. Mostly classified; the public-facing output is the annual Intelligence Authorization Act and occasional public warnings."
+  business: "VERIFIED: FY2026 Intelligence Authorization Act passed the House 10 Dec 2025 (joint Crawford-Himes statement). The FY2027 Intelligence Authorization Act was reported out of committee 20 Jul 2026, featuring AI, audits and open-source intelligence provisions (Federal News Network, July 2026). 31 Aug 2026: the committee publicly warned of 'Black Swan' AI risks (CNBC)."
+  public_route: "VERIFIED: no /contact page. Routes are the committee's about page https://intelligence.house.gov/about/ and the committee office, HVC-304, The Capitol, Washington DC 20515, 202-225-4121. Minority: https://democrats-intelligence.house.gov/. For classified or contractor-side concerns, use the Intelligence Community Whistleblower Protection Act channel through the Intelligence Community Inspector General, not an open letter."
+  note: "CORRECTION TO THE FLI GUIDE: it lists Mike Turner (R-OH) as chair and 'Rick Crawford (R-AR)' as ranking member. Both are wrong. Verified 2026-09-22 from the House Clerk's MemberData.xml: Crawford is Chairman and Jim Himes (D-CT) is the ranking Democrat."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://intelligence.house.gov/about/
+      checked: 2026-09-22
+    - url: https://intelligence.house.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b1026c6bd5
+  migrated_from: input/data/committees-and-organisations.json#seats

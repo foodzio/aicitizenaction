@@ -1,0 +1,55 @@
+id: fr-institut-national-pour-l-evaluation-et
+type: government
+geo:
+  country: fr
+  label: France
+facts:
+  routes:
+    - id: inesia-roadmap-2026-2027
+      type: consultation
+      value: https://www.sgdsn.gouv.fr/files/files/Nos_missions/Feuille%20de%20route%20INESIA%202026-2027.pdf
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: fr
+      source_id: 68d6665cc140
+    - id: inria-announcement-inesia
+      type: consultation
+      value: https://www.inria.fr/fr/creation-institut-evaluation-securite-intelligence-artificielle
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: fr
+      source_id: b06ae22cb9e0
+  local_name: Institut national pour l'évaluation et la sécurité de l'intelligence artificielle
+  region: European Union
+  public_input: none
+  tags:
+    - systemic
+strings:
+  name: Institut national pour l'évaluation et la sécurité de l'intelligence artificielle (INESIA)
+  remit: "Announced 31 Jan 2025 ahead of the Paris AI Action Summit. NOT a new legal entity — it is a coordination structure federating four existing bodies: ANSSI (cyber agency), Inria (public research), LNE (national metrology/testing laboratory) and PEReN (digital-platform regulation expertise centre). Coordinated under SGDSN (Secretariat-General for Defence and National Security), which also handles French participation in the international network. Its published 2026–2027 roadmap is explicit that it 'is not empowered to regulate' and instead supports the authorities implementing the EU AI Act. Research, evaluation and foresight only."
+  powers_text: research
+  reality_check: Worst-in-class for public access among network members. INESIA has no website of its own that I could find, no email, no consultation process, and its own roadmap document publishes zero contact information. Access is only via the four constituent bodies (ANSSI, Inria, LNE, PEReN), each of which has separate French-language channels. A foreigner has no route in.
+  notes: Strongest explicit catastrophic-risk language of any body in this list. The roadmap commits INESIA to evaluate how high-impact models 'could generate negative real effects on public health, safety, security, fundamental rights or society itself, propagated at scale', naming information manipulation, offensive cyber, CBRN (NRBC) proliferation and autonomous-agent behaviours. France is the only EU member state in the international network.
+  routes:
+    inesia-roadmap-2026-2027:
+      label: INESIA roadmap 2026–2027 (SGDSN)
+      scope: publication
+      note: VERIFIED fetched. Contains NO email, no contact point, and no public engagement channel — I checked specifically.
+    inria-announcement-inesia:
+      label: Inria announcement of INESIA
+      scope: background
+      note: UNVERIFIED (search result).
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.sgdsn.gouv.fr/files/files/Nos_missions/Feuille%20de%20route%20INESIA%202026-2027.pdf
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 5486ff855b
+  migrated_from: input/data/institutions.json

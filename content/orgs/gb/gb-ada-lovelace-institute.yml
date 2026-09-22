@@ -1,0 +1,74 @@
+id: gb-ada-lovelace-institute
+type: civil-society
+geo:
+  country: gb
+  label: United Kingdom (London)
+facts:
+  routes:
+    - id: contact-page
+      type: form
+      value: https://www.adalovelaceinstitute.org/about/contact/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ed82068a1604
+    - id: public-deliberation-participation-programmes
+      type: consultation
+      value: https://www.adalovelaceinstitute.org/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 58381f5a9dfc
+    - id: newsletter
+      type: form
+      value: https://www.adalovelaceinstitute.org/newsletter-subscribe
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4336d687478b
+    - id: homepage
+      type: homepage
+      value: https://www.adalovelaceinstitute.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 975c581d88fd
+  region: United Kingdom
+  public_input: limited
+  tags:
+    - research
+    - systemic
+strings:
+  name: Ada Lovelace Institute
+  remit: Independent research institute (funded by the Nuffield Foundation) working on AI governance, policy and regulation; AI evaluation methods; public-sector AI; public participation and deliberation about AI; and law and policy. Notable for running genuine public deliberation exercises and for rigorous work on the limits of AI evaluation and audit.
+  threat_model: "Near-term and structural: distributional justice, public legitimacy, regulatory capacity, and accountability for deployed systems. Explicitly NOT an existential-risk organisation — it has published critiques of the frontier-risk framing. Do not mislabel it as an alignment body."
+  reality_check: "Reputable and moderately responsive, with a genuine methodological commitment to public voice. Email addresses are deliberately obscured on the site, so use the form. UNVERIFIED: exact email addresses could not be confirmed — do not guess them."
+  gov_channel: Strong in the UK — regularly cited in parliamentary committee work and consulted on UK AI regulation; also active in EU debates.
+  routes:
+    contact-page:
+      label: Contact page
+      scope: General and media enquiries
+      note: "The page lists a general enquiries address and a media contact (George Lloyd-King), but the addresses are obfuscated against scraping and could not be read reliably — use the page itself. Phone: +44 (0)207 631 0566. Address: 100 St John Street, London EC1M 4EH."
+    public-deliberation-participation-programmes:
+      label: Public deliberation and participation programmes
+      scope: Members of the public are recruited into deliberative exercises
+      note: One of very few organisations that structurally involves ordinary members of the public in its method.
+    newsletter:
+      label: Newsletter
+      scope: Anyone
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.adalovelaceinstitute.org/about/contact/
+      checked: 2026-09-22
+    - url: https://www.adalovelaceinstitute.org/
+      checked: 2026-09-22
+    - url: https://www.adalovelaceinstitute.org/newsletter-subscribe
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: ca5c4c89da
+  migrated_from: input/data/institutions.json

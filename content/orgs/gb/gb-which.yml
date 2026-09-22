@@ -1,0 +1,43 @@
+id: gb-which
+type: organisation
+geo:
+  country: gb
+  label: United Kingdom.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.which.co.uk/policy-and-insight
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1a2a469d591b
+  perspective: civil-liberties
+  volunteers: unclear
+  tags:
+    - audit
+    - harm
+    - join
+strings:
+  name: Which?
+  the_ask: Consumers should be protected in digital markets and against fraud, including AI-enabled scams.
+  what_they_do: "UK consumer champion: product testing, consumer rights guidance, policy and insight work across nine areas including Digital Markets, Fraud and Consumer Insight, and a Scam Alerts service."
+  newcomer_action: Subscribe to Scam Alerts and read the AI scams guidance; if you want to influence policy, respond to its Consumer Insight Tracker work or contact its policy team.
+  tips: unclear — it runs a Scam Alerts service but a public AI-harm reporting tool was not confirmed
+  geography: United Kingdom.
+  scale: Large, long-established consumer organisation with its own testing labs.
+  spending: Subscription funded.
+  caution: "FLAG: Which? has no dedicated AI policy programme that could be verified on its own site — AI appears inside fraud and digital markets work. If AI is your issue, this is a weaker route in the UK than approaching an MP directly or going through PauseAI UK or ControlAI."
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.which.co.uk/policy-and-insight
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: d33f6d8834
+  migrated_from: input/data/committees-and-organisations.json#orgs

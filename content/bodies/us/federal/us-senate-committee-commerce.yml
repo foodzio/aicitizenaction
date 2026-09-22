@@ -1,0 +1,86 @@
+id: us-senate-committee-commerce
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (federal legislature)
+facts:
+  routes:
+    - id: majority-office
+      type: evidence
+      value: 202-224-1251 — Dirksen Senate Office Building 554, Washington DC 20510
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5b54c0d1e748
+    - id: minority-office
+      type: evidence
+      value: 202-224-0411 — Hart Senate Office Building 428, Washington DC 20510
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0002fb1f50b2
+    - id: committee-email-or-public
+      type: email
+      value: none published
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e139957f7489
+    - id: statements-record
+      type: evidence
+      value: submitted through the hearing's designated staff contact, announced per hearing
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 20aaf44c2cfc
+    - id: homepage
+      type: homepage
+      value: https://www.commerce.senate.gov/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 050b42e135de
+  region: United States
+  public_input: limited
+  tags:
+    - harm
+    - law
+    - systemic
+strings:
+  name: U.S. Senate Committee on Commerce, Science, and Transportation
+  remit: Primary Senate committee of jurisdiction for AI policy, NIST/CAISI authorisation and oversight, the FTC, NTIA and commercial data privacy. Holds hearings, authorises and oversees NIST, and originates most federal AI legislation. It can subpoena, compel testimony and legislate, but does not adjudicate individual complaints.
+  powers_text: compel
+  reality_check: "US committees are NOT like UK select committees: there is no open written-evidence call and no published submission portal. Unsolicited mail to the committee is not read by policy staff. What actually works is (1) being a constituent of a member and going through that member's state office, (2) reaching the named professional staff member handling AI on the majority or minority side — identifiable from hearing transcripts, LegiStorm and staff directories — and (3) submitting a statement for the record when a hearing is noticed, which is published in the hearing record. A phone call to the committee switchboard to ask who handles AI is the cheapest first move and often works."
+  notes: Jurisdiction over CAISI's authorisation makes this the committee that matters most for the US AI-safety institutional question.
+  routes:
+    majority-office:
+      label: Majority (Republican) office
+      scope: Phone and post only.
+      note: VERIFIED on https://www.commerce.senate.gov/contact.
+    minority-office:
+      label: Minority (Democratic) office
+      scope: Phone and post only.
+      note: VERIFIED on the same page.
+    committee-email-or-public:
+      label: Committee email or public submission form
+      scope: n/a
+      note: VERIFIED ABSENCE — the committee's own contact page publishes no email address and no web form, and directs visitors to an FAQ first.
+    statements-record:
+      label: Statements for the record
+      scope: US committees accept 'statements for the record' around a hearing, typically within two weeks after, but the process is not published centrally.
+      note: UNVERIFIED — unlike the UK, the US Senate has no standing public written-evidence portal.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.commerce.senate.gov/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: "7580202834"
+  migrated_from: input/data/institutions.json

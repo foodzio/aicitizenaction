@@ -1,0 +1,43 @@
+id: us-technet
+type: organisation
+geo:
+  country: us
+  label: United States — federal and all major state capitals.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.technet.org/issues/artificial-intelligence/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3d7f0d25cf19
+  perspective: industry-lobby
+  volunteers: no
+  tags:
+    - fund
+    - join
+    - opposition
+strings:
+  name: TechNet
+  the_ask: Congress should pass a narrow, risk-based federal AI framework that pre-empts state AI laws, without private rights of action or mandatory independent audits.
+  what_they_do: Trade association lobbying for major AI developers and deployers; state and federal advocacy; runs the AI for America campaign (ai4america.com). Its own policy page states that 'federal preemption of state laws and regulations is needed to prevent a patchwork'.
+  newcomer_action: Nothing to join unless you are a company. Read its stated positions before a state hearing — it is usually the most organised voice in the room opposing state AI bills.
+  tips: no
+  geography: United States — federal and all major state capitals.
+  scale: Large, professionally staffed trade association with state directors.
+  spending: Not published on its own site.
+  caution: "Stated fairly: TechNet is not anti-safety in its own framing — it supports the voluntary NIST AI Risk Management Framework and sector-specific laws. What it actively opposes is state-level binding rules, private lawsuits and mandatory audits. Its member list is at technet.org/our-story/members/."
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.technet.org/issues/artificial-intelligence/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 6355a64d7d
+  migrated_from: input/data/committees-and-organisations.json#orgs

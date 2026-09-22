@@ -1,0 +1,44 @@
+id: global-access-now-2
+type: organisation
+geo:
+  country: global
+  label: Global, with regional teams.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.accessnow.org/help/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ebbdacbd1343
+  perspective: civil-liberties
+  volunteers: unclear
+  tags:
+    - audit
+    - harm
+    - join
+    - tip
+strings:
+  name: Access Now
+  the_ask: AI must be governed by binding, enforceable rules rooted in international human rights law — transparent, accountable and in the public interest — with particular scrutiny of biometric surveillance and AI in warfare.
+  what_they_do: "Global digital rights advocacy, research (including 'Bodily harms: how AI and biometrics curtail human rights'), UN and EU policy work, opposition to autonomous weapons, and the RightsCon conference. Runs a 24/7 Digital Security Helpline."
+  newcomer_action: If you are an activist, journalist or human rights defender facing a digital threat, open a case with the Digital Security Helpline; otherwise read and share its AI issue page.
+  tips: yes — the Digital Security Helpline takes cases 24/7 from at-risk users worldwide
+  geography: Global, with regional teams.
+  scale: Large international NGO.
+  spending: Grant and donation funded.
+  caution: Its position is rights-based governance, not bans on AI development. The helpline is for people at risk, not a general complaints line — do not clog it with policy questions.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.accessnow.org/help/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: cf68d1b913
+  migrated_from: input/data/committees-and-organisations.json#orgs

@@ -1,0 +1,63 @@
+id: us-subcommittee-emerging-threats-capabilities
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.armed-services.senate.gov/about/membership
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3587c09a3f28
+    - id: public-route
+      type: submission
+      value: https://www.armed-services.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 00d6150d4f39
+  level: federal
+  chamber: Senate
+  parent: Senate Committee on Armed Services
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Joni Ernst
+      party: R
+      region: IA
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Elissa Slotkin
+      party: D
+      region: MI
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Emerging Threats and Capabilities
+  ai_jurisdiction: DARPA, DoD science and technology accounts, special operations, and emerging-technology threat assessment — including AI-enabled bio and chemical threats, and frontier-model capability risks framed as national security.
+  business: UNVERIFIED for a specific 2026 AI hearing title; the subcommittee's AI work is expressed through NDAA S&T titles.
+  public_route: Full-committee contact page and published staff directory.
+  note: Leadership verified 2026-09-22 from senate.gov SSAS subcommittee roster.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.armed-services.senate.gov/about/membership
+      checked: 2026-09-22
+    - url: https://www.armed-services.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: f714fc9f83
+  migrated_from: input/data/committees-and-organisations.json#seats

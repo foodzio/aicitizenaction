@@ -1,0 +1,63 @@
+id: global-oecd-ai-policy-observatory
+type: multilateral
+geo:
+  country: global
+  label: OECD members + partners
+facts:
+  routes:
+    - id: oecd-ai-network-experts
+      type: membership
+      value: https://oecd.ai/en/network-of-experts
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: af9bff38831f
+    - id: wonk-blog-expert-commentary
+      type: submission
+      value: https://oecd.ai/en/wonk
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: bd72512fcab8
+    - id: homepage
+      type: homepage
+      value: https://oecd.ai/en/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c559517b0038
+  region: Other
+  public_input: limited
+  tags:
+    - systemic
+strings:
+  name: OECD.AI Policy Observatory (OECD AI Policy Observatory)
+  remit: Hub for the OECD AI Principles, national AI policy database, AI Incidents & Hazards Monitor, HAIP transparency reporting, and the GPAI expert community. Underpinned by the Working Party on AI Governance (AIGO) under the Digital Policy Committee.
+  threat_model: "Governance-neutral and comprehensive: trustworthy AI, incidents, labour market effects, compute and diffusion. Risk taxonomy is broad rather than catastrophe-focused."
+  reality_check: Closed by design. Everything runs through national delegations and the four chartered stakeholder groups. An individual's realistic move is to join a CSISAC-affiliated organisation rather than approach the OECD directly.
+  gov_channel: Strong — OECD AI Principles are the reference text for the G7, and OECD work feeds directly into member-state policy.
+  routes:
+    oecd-ai-network-experts:
+      label: OECD.AI Network of Experts — nomination only
+      scope: Members nominated by OECD member states, the European Commission, or one of four recognised stakeholder groups (BIAC business, TUAC labour, CSISAC civil society, ITAC technical)
+      note: CSISAC is the formal civil-society door into OECD digital policy — that is the concrete route for an individual, not a direct application.
+    wonk-blog-expert-commentary:
+      label: Wonk blog — expert commentary
+      scope: Invited/pitched expert posts
+      note: UNVERIFIED whether unsolicited pitches are accepted; no submission form was found.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://oecd.ai/en/network-of-experts
+      checked: 2026-09-22
+    - url: https://oecd.ai/en/wonk
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b01236b09a
+  migrated_from: input/data/institutions.json

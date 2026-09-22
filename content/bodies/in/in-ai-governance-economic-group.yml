@@ -1,0 +1,62 @@
+id: in-ai-governance-economic-group
+type: seat
+geo:
+  country: in
+  label: India
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2252739
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: English.
+      source_id: 220e481e6df6
+    - id: public-route
+      type: submission
+      value: https://rtionline.gov.in/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: English.
+      source_id: c6ba190c2efd
+  local_name: एआई गवर्नेंस एंड इकोनॉमिक ग्रुप
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Ashwini Vaishnaw
+      verified_on: 2026-04-16
+strings:
+  name: AI Governance and Economic Group (AIGEG)
+  ai_jurisdiction: India's central institutional mechanism for AI governance policy development and inter-ministerial coordination. Mandate covers cross-sectoral AI governance, policy alignment across government, and labour-market impacts of AI. This is the seat where an Indian AI law would be shaped before it reaches Cabinet.
+  business: Constituted 16 April 2026. Composed of senior Government of India stakeholders across policy development, science and technology, security and economic affairs. Supported by a Technology and Policy Expert Committee (TPEC) which advises it on global developments, emerging technologies, risks and regulation. Operationalises the India AI Governance Guidelines.
+  public_route: "None. There is no public submission mechanism, no published meeting calendar, no minutes. Indirect routes only: a MeitY consultation, the Parliamentary Standing Committee, or an RTI application to MeitY for AIGEG records."
+  format_rules: RTI application fee INR 10. RTI is restricted to Indian citizens — foreign nationals cannot file.
+  realistic: "Not usable directly. This is a closed inter-ministerial body of serving officials. Be honest with anyone planning engagement: the only handle an outsider has is RTI (citizens only) or influencing MeitY upstream. Membership of the TPEC is by invitation and the criteria are not published."
+  language_note: English.
+  note: Chair, vice-chair, constitution date and the TPEC relationship VERIFIED from PIB Press Release PRID 2252739. Full membership list is stated in the release to be in a linked annex PDF which I did not retrieve — individual members beyond the chair and vice-chair are UNVERIFIED.
+  seat_notes:
+    chair: "Chairperson (Minister of Electronics and IT, Railways, and I&B). Vice-Chairperson: Jitin Prasada, Minister of State for Electronics & IT and Commerce & Industry."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-04-16
+  review_by: 2026-07-15
+  sources:
+    - url: https://www.pib.gov.in/PressReleasePage.aspx?PRID=2252739
+      checked: 2026-09-22
+    - url: https://rtionline.gov.in/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 5ee0436108
+  migrated_from: input/data/committees-and-organisations.json#seats

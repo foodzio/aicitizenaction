@@ -1,0 +1,56 @@
+id: gb-ofcom-online-safety-super-complaints
+type: reporting-channel
+geo:
+  country: gb
+  label: UK
+facts:
+  routes:
+    - id: submission-page
+      type: complaint
+      value: https://www.ofcom.org.uk/online-safety/online-safety-super-complaints
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c3be7595c9d3
+    - id: homepage
+      type: homepage
+      value: https://www.ofcom.org.uk/online-safety/online-safety-super-complaints
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 7ffd8616ee94
+  region: United Kingdom
+  public_input: open
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Ofcom Online Safety super-complaints
+  remit: Complaints from eligible entities about a feature or conduct of one or more regulated services presenting a material risk of significant harm, of significant adverse impact on freedom of expression, or other significant adverse impacts. For a single-service complaint you must additionally explain its particular importance or the scale of user impact.
+  reality_check: "This is the UK's real lever on platform-level AI harms, with binding response timescales — a sharp contrast to individual complaints, which Ofcom will not investigate. The whole design assumes intermediation by civil society. For a playbook, the actionable instruction is: package your evidence to Ofcom's stated standard (current, objective, verifiable) and hand it to an eligible body."
+  accepts: Complaints from eligible entities about a feature or conduct of one or more regulated services presenting a material risk of significant harm, of significant adverse impact on freedom of expression, or other significant adverse impacts. For a single-service complaint you must additionally explain its particular importance or the scale of user impact.
+  does_not_accept: Individuals cannot bring super-complaints. The entity must represent the interests of users, the public or a specific group; be independent of regulated services; be a significant expert contributor to public online safety discussion; and have regard to Ofcom's guidance.
+  how: Written submission to Ofcom with organisational contact details, description of the feature or conduct, identification of the services/providers, and evidence of material risk. Supporting evidence must be current, objective and verifiable. An unaffiliated individual's realistic route is to supply evidence to an eligible organisation rather than to file directly.
+  format: Written submission per Ofcom's super-complaints guidance; evidence-led.
+  timing: Rolling. Regime commenced 1 January 2026.
+  after: Ofcom decides eligibility within 30 days of a completed submission, and responds to an admissible complaint usually within 90 days (extendable if further information is needed).
+  operator: Ofcom, under the Online Safety Act 2023
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Complaints from eligible entities about a feature or conduct of one or more regulated services presenting a material risk of significant harm, of significant adverse impact on freedom of expression, or other significant adverse impacts. For a single-service complaint you must additionally explain its particular importance or the scale of user impact.
+      note: Written submission to Ofcom with organisational contact details, description of the feature or conduct, identification of the services/providers, and evidence of material risk. Supporting evidence must be current, objective and verifiable. An unaffiliated individual's realistic route is to supply evidence to an eligible organisation rather than to file directly.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.ofcom.org.uk/online-safety/online-safety-super-complaints
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 74846c8fbb
+  migrated_from: input/data/institutions.json

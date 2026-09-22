@@ -1,0 +1,56 @@
+id: eu-eu-ai-act-article-73-serious
+type: reporting-channel
+geo:
+  country: eu
+  label: EU
+facts:
+  routes:
+    - id: submission-page
+      type: reporting
+      value: https://artificialintelligenceact.eu/article/73/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 80c10aed8f93
+    - id: homepage
+      type: homepage
+      value: https://artificialintelligenceact.eu/article/73/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 3c95dead923d
+  region: European Union
+  public_input: open
+  tags:
+    - behaviour
+    - harm
+strings:
+  name: EU AI Act Article 73 — serious incident reporting
+  remit: "Serious incidents as defined in Article 3(49), reported by the provider. Deadlines: immediately after establishing a causal link and in any case not later than 15 days after awareness; 2 days for widespread infringement or certain serious incidents; and for a death, immediately after establishing or suspecting a causal relationship and within 10 days maximum. Incomplete initial reports are permitted, followed by a complete report."
+  reality_check: "Real legal force but a closed circuit for outsiders. The leverage for an ordinary person is asymmetric and underused: putting a provider on written notice of a serious incident converts their silence into a reportable regulatory breach. That is a stronger move than the complaint itself."
+  accepts: "Serious incidents as defined in Article 3(49), reported by the provider. Deadlines: immediately after establishing a causal link and in any case not later than 15 days after awareness; 2 days for widespread infringement or certain serious incidents; and for a death, immediately after establishing or suspecting a causal relationship and within 10 days maximum. Incomplete initial reports are permitted, followed by a complete report."
+  does_not_accept: Reports from members of the public. The duty sits on providers and deployers only. A member of the public cannot file an Article 73 report and cannot directly compel one.
+  how: "Indirect only, and this is the practically important point: a member of the public cannot trigger Article 73 directly, but can (a) notify the provider, which starts the provider's own awareness clock and creates evidence of when they knew, and (b) file an Article 85 complaint with the market surveillance authority alleging a serious incident went unreported — failure to report is itself an infringement the authority can act on."
+  format: Commission draft guidance and a reporting template were consulted on (responses due 7 November 2025) ahead of the August 2026 application date.
+  timing: Obligations for high-risk AI apply from 2 August 2026.
+  after: National competent authorities immediately notify the Commission.
+  operator: Providers (and in some cases deployers) of high-risk AI systems, reporting to national market surveillance authorities; Commission draft guidance and template consulted in late 2025
+  routes:
+    submission-page:
+      label: Submission page
+      scope: "Serious incidents as defined in Article 3(49), reported by the provider. Deadlines: immediately after establishing a causal link and in any case not later than 15 days after awareness; 2 days for widespread infringement or certain serious incidents; and for a death, immediately after establishing or suspecting a causal relationship and within 10 days maximum. Incomplete initial reports are permitted, followed by a complete report."
+      note: "Indirect only, and this is the practically important point: a member of the public cannot trigger Article 73 directly, but can (a) notify the provider, which starts the provider's own awareness clock and creates evidence of when they knew, and (b) file an Article 85 complaint with the market surveillance authority alleging a serious incident went unreported — failure to report is itself an infringement the authority can act on."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://artificialintelligenceact.eu/article/73/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 00b720aeca
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,88 @@
+id: gb-department-science
+type: government
+geo:
+  country: gb
+  label: United Kingdom
+facts:
+  routes:
+    - id: dsit-ministerial-correspondence-form
+      type: form
+      value: https://correspondence-for-ministerial-support.dsit.gov.uk/s/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: fe7d19da6807
+    - id: dsit-consultations-gov-uk
+      type: consultation
+      value: https://www.gov.uk/search/policy-papers-and-consultations?organisations[]=department-for-science-innovation-and-technology
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f1b9dc46d9c5
+    - id: all-uk-government-open
+      type: consultation
+      value: https://www.gov.uk/search/policy-papers-and-consultations?content_store_document_type=open_consultations
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 333dff301a33
+    - id: data-protection
+      type: email
+      value: dataprotection@dsit.gov.uk
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d486fb67bd31
+    - id: homepage
+      type: homepage
+      value: https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 843abb2beaaf
+  region: United Kingdom
+  public_input: open
+  tags:
+    - law
+    - systemic
+strings:
+  name: Department for Science, Innovation and Technology (DSIT)
+  remit: Lead UK department for AI policy. Parent of the AI Security Institute. Responsible for the UK's context-based, regulator-led AI approach (no cross-sector AI statute in force), the AI Opportunities Action Plan, AI and copyright policy (including the Section 137 Data (Use and Access) Act progress reporting), and online safety policy alongside Ofcom. DSIT sets policy and can sponsor legislation; it does not itself adjudicate or fine.
+  powers_text: advise
+  reality_check: "The ministerial correspondence form is the classic example of a route that is logged but not read by policy officials — it generates a templated reply from a correspondence unit. The real DSIT lever is a consultation window: responses are analysed, quoted in the government response document, and named organisations' positions are visible in the outcome. DSIT ran substantial AI and copyright and children's-online-experience consultations in 2025-26. Watch the GOV.UK consultation feed and respond inside the window; outside it, go via the Commons SIT Committee instead, where your evidence is published."
+  notes: The UK still has no general AI statute; a frontier AI bill has been repeatedly trailed and repeatedly deferred. Verify the current legislative position before assuming a bill exists.
+  routes:
+    dsit-ministerial-correspondence-form:
+      label: DSIT ministerial correspondence form
+      scope: General enquiries and correspondence to ministers.
+      note: VERIFIED — this is the contact route published on DSIT's GOV.UK organisation page. No general DSIT email or phone number is published.
+    dsit-consultations-gov-uk:
+      label: DSIT consultations on GOV.UK
+      scope: All DSIT open and closed consultations, with closing dates and response documents.
+      note: VERIFIED as the URL DSIT's own GOV.UK page directs to; there is no dedicated DSIT consultations hub.
+    all-uk-government-open:
+      label: All UK government open consultations
+      scope: Cross-government listing; filter by keyword and department.
+      note: "VERIFIED — fetched and returned a live list of 24 open consultations. NOTE: a keyword filter for 'artificial intelligence' returned NO AI-specific open consultations at the time of checking, so AI consultation windows are episodic, not continuous."
+    data-protection:
+      label: Data protection
+      scope: Subject access requests and data-protection queries only.
+      note: "VERIFIED on DSIT's personal information charter. Postal address: 22-26 Whitehall, London SW1A 2EG."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://correspondence-for-ministerial-support.dsit.gov.uk/s/
+      checked: 2026-09-22
+    - url: https://www.gov.uk/search/policy-papers-and-consultations?organisations[]=department-for-science-innovation-and-technology
+      checked: 2026-09-22
+    - url: https://www.gov.uk/search/policy-papers-and-consultations?content_store_document_type=open_consultations
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: f61bab5c55
+  migrated_from: input/data/institutions.json

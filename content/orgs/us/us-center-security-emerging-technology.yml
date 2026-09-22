@@ -1,0 +1,69 @@
+id: us-center-security-emerging-technology
+type: academic
+geo:
+  country: us
+  label: United States (Washington, DC)
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: cset@georgetown.edu
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4990aa1b48bb
+    - id: media-enquiries-danny-hague
+      type: email
+      value: danny.hague@georgetown.edu
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0d565e9d9a55
+    - id: publications-data-tools
+      type: form
+      value: https://cset.georgetown.edu/publications/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ec0bfe672e43
+    - id: homepage
+      type: homepage
+      value: https://cset.georgetown.edu/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 761238b3a332
+  region: United States
+  public_input: limited
+  tags:
+    - law
+    - research
+strings:
+  name: Center for Security and Emerging Technology (CSET), Georgetown University
+  remit: Data-driven, nonpartisan policy research at the intersection of security and technology, covering AI, advanced computing and biotechnology. Research lines include Applications, Assessment, Bio-Risk, Competition, CyberAI, Data and Workforce. Staff give congressional testimony and consult with policymakers; maintains large datasets (e.g. on Chinese AI research and chip supply chains).
+  threat_model: Great-power competition and national security, with sober empiricism about capability claims. Covers AI-enabled cyber and bio-risk; notably sceptical of both hype and doom framings. Not an x-risk organisation and not a civil-rights organisation.
+  reality_check: A real published inbox but a large institution with a set research agenda; unsolicited concerns rarely change what it works on. Its public data tools are the highest-value thing an outsider can extract from it.
+  gov_channel: Very strong — congressional testimony is routine and CSET alumni staff senior executive-branch AI roles.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+    media-enquiries-danny-hague:
+      label: Media enquiries — Danny Hague
+      scope: Press
+    publications-data-tools:
+      label: Publications and data tools
+      scope: Public
+      note: CSET's open datasets and ETO tools are genuinely usable by outsiders.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://cset.georgetown.edu/publications/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: a92ff2c7f1
+  migrated_from: input/data/institutions.json

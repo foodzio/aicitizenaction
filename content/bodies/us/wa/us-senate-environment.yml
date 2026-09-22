@@ -1,0 +1,60 @@
+id: us-senate-environment
+type: seat
+geo:
+  country: us
+  sub: wa
+  label: Washington
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://leg.wa.gov/about-the-legislature/committees/senate/enet/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6ab5f66f93e1
+    - id: public-route
+      type: submission
+      value: https://app.leg.wa.gov/csi/Senate
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 81150f82314c
+  level: state
+  chamber: Senate
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Sharon Shewmake
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: Senate Environment, Energy & Technology Committee (ENET)
+  ai_jurisdiction: Senate committee of referral for AI and telecommunications bills, including HB 2225 on its Senate passage.
+  business: HB 2225 / SB 5984 (AI companion chatbots) — signed 24 Mar 2026, C 168 L 26, effective 1 Jan 2027. E2SHB 1170 (deepfakes) received a Senate bill report Feb 2026.
+  status: VERIFIED — HB 2225 enacted; HB 1170 stalled at Senate Ways & Means.
+  public_route: YES — same CSI portal, Senate instance. Sign in PRO/CON/OTHER, upload written testimony, or register for remote video testimony. Positions are counted even if you never speak, which makes this the cheapest meaningful civic action available on a state AI bill.
+  agency_route: Washington Attorney General Consumer Protection (https://www.atg.wa.gov/file-complaint); Washington State AI Task Force at https://www.atg.wa.gov/aitaskforce
+  note: "Vice Chairs: Victoria Hunt and Vandana Slatter. Ranking Minority Member: Matt Boehnke (R). Composition 7 D / 4 R; members include Dhingra, Harris, Liias, Lovelett, MacEwen, Short, Wellman."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://leg.wa.gov/about-the-legislature/committees/senate/enet/
+      checked: 2026-09-22
+    - url: https://app.leg.wa.gov/csi/Senate
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: d5e27ec144
+  migrated_from: input/data/committees-and-organisations.json#seats

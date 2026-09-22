@@ -1,0 +1,76 @@
+id: us-cybersecurity-infrastructure-security-agency
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (federal), DHS component
+facts:
+  routes:
+    - id: report-cyber-incident-cisa
+      type: complaint
+      value: https://www.cisa.gov/report
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: a7eee241a1b8
+    - id: cisa-central
+      type: email
+      value: central@cisa.dhs.gov
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 5f0368673ca3
+    - id: cisa-24-7-incident
+      type: form
+      value: 888-282-0870
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 47486bd58314
+    - id: homepage
+      type: homepage
+      value: https://www.cisa.gov/ai
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 5c342ebec437
+  region: United States
+  public_input: open
+  tags:
+    - flaw
+    - harm
+strings:
+  name: Cybersecurity and Infrastructure Security Agency (CISA)
+  remit: Operational cyber-defence agency for federal civilian networks and critical infrastructure. Issues joint guidance on securing AI systems and on agentic AI governance (2026), runs CISA Central for incident intake, and administers CIRCIA incident-reporting rules for covered entities. Powers are largely voluntary/advisory toward the private sector, with administrative subpoena authority for vulnerability identification and binding operational directives that bind FEDERAL agencies only — not AI developers.
+  powers_text: investigate
+  reality_check: CISA's incident intake is genuinely staffed and 24/7 — a credible report of an AI-enabled intrusion or a compromised AI system will be actioned. But CISA has no authority over how frontier models are trained or released; framing a frontier-risk concern as a CISA incident report will be closed as out of scope. Its AI guidance documents are produced with industry partners and occasionally take comment via the Federal Register; that is the policy lever, the incident line is the operational one.
+  notes: "Note the practical caveat on CISA's own site: email is not secure and CISA prefers its structured reporting forms."
+  routes:
+    report-cyber-incident-cisa:
+      label: Report a cyber incident to CISA
+      scope: Anyone may report a cyber incident, including AI-enabled attacks or compromise of AI systems.
+      note: UNVERIFIED as fetched; the reporting hub https://www.cisa.gov/reporting-cyber-incident appeared in search results.
+    cisa-central:
+      label: CISA Central
+      scope: General incident reporting and CISA Central intake.
+      note: UNVERIFIED as a live fetch — the CISA contact page was fetched but the email strings were machine-redacted. This address appears in CISA's own published PDF guidance. Confirm at https://www.cisa.gov/about/contact-us before relying on it.
+    cisa-24-7-incident:
+      label: CISA 24/7 incident line
+      scope: General and cybersecurity incident reporting.
+      note: VERIFIED on https://www.cisa.gov/about/contact-us.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.cisa.gov/report
+      checked: null
+    - url: https://www.cisa.gov/ai
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: d1df635c35
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,76 @@
+id: us-california-privacy-protection-agency
+type: government
+geo:
+  country: us
+  sub: ca
+  label: California, USA
+facts:
+  routes:
+    - id: cppa-complaint-form
+      type: complaint
+      value: https://www.cppa.ca.gov/webapplications/complaint
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c9716f9d4e12
+    - id: rulemaking-proposed-regulations-comment
+      type: consultation
+      value: https://www.cppa.ca.gov/regulations
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c1e7cce1d9c0
+    - id: named-staff-email
+      type: email
+      value: none published
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7fabed9c05a5
+    - id: homepage
+      type: homepage
+      value: https://www.cppa.ca.gov/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 488a18016776
+  region: United States
+  public_input: open
+  tags:
+    - harm
+    - systemic
+strings:
+  name: California Privacy Protection Agency (CPPA)
+  remit: The only dedicated US privacy regulator. Enforces the CCPA/CPRA, including regulations on automated decisionmaking technology (ADMT), risk assessments and cybersecurity audits — the ADMT rules reach AI used for significant decisions about Californians. Can investigate, hold administrative hearings, issue orders and impose administrative fines (up to $2,500 per violation, $7,500 for intentional violations or violations involving minors). Conducts formal rulemaking with public comment.
+  powers_text: fine
+  reality_check: "The complaint form genuinely initiates enforcement review and the CPPA has been willing to act. Its formal rulemaking is the better lever for policy input: California's Administrative Procedure Act requires the agency to publish and respond to every comment, and the ADMT regulations changed substantially across drafts in response to comments. Scope is data-protection and automated decisions about individuals — NOT frontier or catastrophic risk. Route those to the AG (SB 53) or Cal OES instead."
+  notes: ADMT obligations phase in over 2026-2027; check current compliance dates before relying on a deadline.
+  routes:
+    cppa-complaint-form:
+      label: CPPA complaint form
+      scope: Any consumer may complain about a business's handling of personal information, including ADMT and AI-driven decisions.
+      note: VERIFIED on https://www.cppa.ca.gov/about_us/contact.html.
+    rulemaking-proposed-regulations-comment:
+      label: Rulemaking — proposed regulations and comment periods
+      scope: The ADMT, risk-assessment and cyber-audit regulations went through formal notice-and-comment here.
+      note: VERIFIED as the page the CPPA's own contact page directs to for laws and regulations.
+    named-staff-email:
+      label: Named staff email
+      scope: n/a
+      note: "VERIFIED ABSENCE — CPPA publishes no email addresses and directs all contact to web forms. Phone 916-572-2900; fax 916-744-2560; post: 400 R Street Suite 350, Sacramento CA 95811."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.cppa.ca.gov/webapplications/complaint
+      checked: 2026-09-22
+    - url: https://www.cppa.ca.gov/regulations
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 82b8a3bf3b
+  migrated_from: input/data/institutions.json

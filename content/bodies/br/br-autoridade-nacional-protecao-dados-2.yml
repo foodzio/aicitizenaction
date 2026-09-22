@@ -1,0 +1,62 @@
+id: br-autoridade-nacional-protecao-dados-2
+type: seat
+geo:
+  country: br
+  label: Brazil
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/composicao
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: Portuguese only.
+      source_id: 31320645ba1d
+    - id: public-route
+      type: submission
+      value: https://www.gov.br/participamaisbrasil/consultas-publicas
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: Portuguese only.
+      source_id: 0dc22ffec24b
+  local_name: Autoridade Nacional de Proteção de Dados (ANPD)
+  level: national
+  tags:
+    - audit
+    - law
+  seats:
+    - role: chair
+      name: UNVERIFIED
+      verified_on: 2026-09-22
+strings:
+  name: Autoridade Nacional de Proteção de Dados (National Data Protection Authority)
+  ai_jurisdiction: "Currently: data protection enforcement under the LGPD where AI processes personal data, plus a Regulatory Sandbox for AI project. Prospectively: the leading candidate to coordinate the Sistema Nacional de Governança da IA (SIA). ANPD filed formal proposed amendments to the substitutive text of PL 2338 — it is an active participant in shaping its own future mandate, not a passive recipient."
+  business: AI Regulatory Sandbox project (an international award finalist). Open 'tomadas de subsídios' (calls for contributions) for its regulatory agenda, with contributions accepted until 16 October, including a topic on 'IA e proteção dos dados dos Titulares' (AI and data subjects' data protection). Proposed amendments to the PL 2338 substitutive are published on its site. Competing 2026 bills (PL 762/2026, PL 704/2026) would give ANPD the lead AI supervisory role with mandatory algorithmic impact assessments.
+  public_route: Two formal instruments. (1) CONSULTA PÚBLICA — formal public consultation on a draft regulation, with a published response. (2) TOMADA DE SUBSÍDIOS — an earlier-stage, more open call for evidence used to shape the regulatory agenda before drafting. Both are announced on gov.br/anpd and usually run through the federal Participa + Brasil platform. There is also a complaints channel (petição de titular) for individual LGPD violations, which is a genuine individual remedy.
+  format_rules: None. Open to any person or organisation. The individual complaint route requires first attempting contact with the controller.
+  realistic: "Genuinely usable, and the tomada de subsídios instrument is unusually open — it invites input before a draft exists, which is the stage at which input actually matters. Any Portuguese speaker can file. The ANPD publishes contributions and its responses. The one honest caveat: the 16 October deadline mentioned on its site does not state a year on the page as read, so confirm the year before relying on it. The individual complaint channel is a real, working remedy for an ordinary person whose data was misused by an AI system — that is the most concretely useful thing in this entry."
+  language_note: Portuguese only.
+  note: ANPD's AI sandbox, its open tomadas de subsídios including an AI-and-data-protection topic, and its formal amendment proposals to PL 2338 are VERIFIED from gov.br/anpd. THE DIRECTOR-PRESIDENT IS DELIBERATELY UNVERIFIED AND UNNAMED — the site's leadership page was not retrieved and I will not guess. The 16 October deadline is verified as stated on the site but its year is UNVERIFIED. The claim that ANPD will lead the SIA is a proposal in pending bills, NOT current law.
+  seat_notes:
+    chair: Director-President — I did not verify the current officeholder and will not name one. ANPD is governed by a five-member Conselho Diretor appointed by the President with Senate confirmation, plus a multi-stakeholder Conselho Nacional de Proteção de Dados (CNPD).
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/composicao
+      checked: null
+    - url: https://www.gov.br/participamaisbrasil/consultas-publicas
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 6d53c7d2bc
+  migrated_from: input/data/committees-and-organisations.json#seats

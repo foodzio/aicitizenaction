@@ -1,0 +1,60 @@
+id: us-senate-committee-business
+type: seat
+geo:
+  country: us
+  sub: co
+  label: Colorado
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://leg.colorado.gov/committees/2026A/senate/BusinessLaborTechnology
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d1b74c33927a
+    - id: public-route
+      type: submission
+      value: https://www.leg.state.co.us/CLICS/WitnessR.nsf/register.xsp
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9312c21eb810
+  level: state
+  chamber: Senate
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Jessie Danielson
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: Senate Committee on Business, Labor, & Technology
+  ai_jurisdiction: Senate committee of reference for AI, automated decision-making technology, consumer protection and technology bills. SB 26-189 was referred here.
+  business: "SB 26-189 'Automated Decision-Making Technology' (Rodriguez, Coleman / Duran, Bacon) — repeals and replaces the Colorado AI Act (SB 24-205). Signed 14 May 2026, effective 1 Jan 2027. Predecessor history: SB 24-205 enacted 2024; SB 25B-004 (Aug 2025 special session) pushed its effective date to 30 Jun 2026; AG delayed enforcement Apr 2026; a federal court then restrained enforcement."
+  status: VERIFIED, WITH LITIGATION RISK — SB 26-189 drops SB 24-205's algorithmic-discrimination duty of care and risk-management program in favor of disclosure/transparency plus consumer rights over ADMT in consequential decisions. A federal district court ordered the AG not to initiate enforcement of SB 24-205 or replacement legislation for conduct occurring before 14 days after it rules on x.AI's preliminary-injunction motion, so the 1 Jan 2027 date is not secure.
+  public_route: YES — Colorado is one of the most open states. Any member of the public may testify in person OR remotely by video at a committee hearing, and may submit written testimony, after registering through the General Assembly's Public Testimony Registration system. Register in advance of the hearing (sign-ups typically open once the hearing is noticed and close shortly before it starts). Written testimony is accepted from anyone and is distributed to committee members.
+  agency_route: "Colorado Attorney General — exclusive enforcement under the Colorado Consumer Protection Act; ADMT violations are deceptive trade practices. Complaints: https://coag.gov/file-complaint/"
+  note: "Vice Chair: Nick Hinrichsen. Members: Marc Catlin, Iman Jodeh, Larry Liston. See also https://content.leg.colorado.gov/agencies/senate/participation-legislative-hearings for the hearing-participation rules."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://leg.colorado.gov/committees/2026A/senate/BusinessLaborTechnology
+      checked: 2026-09-22
+    - url: https://www.leg.state.co.us/CLICS/WitnessR.nsf/register.xsp
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 4d5e56339a
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,110 @@
+id: us-microsoft
+type: company
+geo:
+  country: us
+  label: USA
+facts:
+  routes:
+    - id: msrc-researcher-portal
+      type: disclosure
+      value: https://msrc.microsoft.com/report/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 00c15175379f
+    - id: microsoft-copilot-ai-bounty
+      type: bounty
+      value: https://www.microsoft.com/en-us/msrc/bounty-ai
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f13a69b17948
+    - id: ai-ml-vulnerability-severity
+      type: disclosure
+      value: https://www.microsoft.com/en-us/msrc/aibugbar
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 09315f610f5a
+    - id: report-concern
+      type: form
+      value: https://www.microsoft.com/digitalsafety/report-a-concern
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 3daf378c646d
+    - id: enterprise-ai-services-abuse
+      type: form
+      value: https://go.microsoft.com/fwlink/?linkid=2299798
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 71145e9c411d
+    - id: homepage
+      type: homepage
+      value: https://www.microsoft.com/ai/responsible-ai
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: dcdc307198ed
+    - id: framework
+      type: framework
+      value: https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/Frontier-Governance-Framework-Feb-2026.pdf
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: d739c285acca
+  region: United States
+  public_input: limited
+  tags:
+    - behaviour
+    - flaw
+    - harm
+    - insider
+    - systemic
+strings:
+  name: Microsoft
+  remit: Office of Responsible AI and a Chief Responsible AI Officer maintain the Responsible AI Standard and review revisions to the Frontier Governance Framework; MSRC handles security and an AI-specific severity bug bar.
+  reality_check: "No large body of public complaints specific to Microsoft's AI safety intake, and the AI bug bar is unusually candid about what it will and will not investigate. The honest read: security-impacting AI bugs get a real, paid, well-run process through MSRC; pure model-behaviour findings get a 'Responsible AI' classification with no severity and no stated timeline, which is closer to a content-moderation queue than a safety review. Microsoft has publicly said it will pay out for high-impact bugs even outside formal bounty scope (The Register, Dec 2025)."
+  notes: Use the AI bug bar page first to decide which door you are at — it is the single most useful triage document published by any company here. Safe harbour exists as 'Legal Safe Harbor' in the bounty terms at https://www.microsoft.com/en-us/msrc/bounty-guidelines#safeharbor. The Frontier Governance Framework's whistleblower route is internal only, with anonymous reporting and anti-retaliation for employees; there is no external equivalent.
+  routes:
+    msrc-researcher-portal:
+      label: MSRC Researcher Portal
+      scope: Security vulnerability submissions including AI systems, graded against the AI bug bar.
+      note: Also reachable as aka.ms/secure-at per the Copilot bounty page.
+    microsoft-copilot-ai-bounty:
+      label: Microsoft Copilot AI Bounty
+      scope: $250-$30,000. Security vulnerabilities in Copilot surfaces. Explicitly EXCLUDES 'AI prompt injection attacks that do not have a security impact on users other than the attacker', 'model hallucination where the model pretends to run arbitrary code', and 'attacks that aim to leak (part of) the system/meta prompt'. Content issues must be reported separately as 'AI derived harm'.
+      note: One of the clearest published statements anywhere that jailbreak-style findings are not a bounty item.
+    ai-ml-vulnerability-severity:
+      label: AI/ML Vulnerability Severity Classification (AI bug bar)
+      scope: "Splits AI issues into security vulnerabilities (CVSS-rated: inference manipulation, membership inference, model theft) and Responsible AI issues (hate speech, misinformation, sexual content, self-harm) classified only 'In Scope' or 'Out of Scope for investigation, without severity ratings'."
+      note: Notably says Microsoft 'actively welcome[s] submissions related to safety and societal harm' — a rare explicit invitation. CSEAM must go to Report a Concern instead.
+    report-concern:
+      label: Report a Concern (Digital Safety)
+      scope: Harmful content across Microsoft services, including AI-generated.
+      note: The consumer-facing route MSRC redirects content reports to.
+    enterprise-ai-services-abuse:
+      label: Enterprise AI Services abuse report
+      scope: Reporting abusive, illegal or infringing use of a Microsoft AI Service.
+      note: Published in the Code of Conduct for Microsoft AI Services.
+    homepage:
+      label: Homepage
+    framework:
+      label: Frontier Governance Framework (February 2026; first version February 2025)
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.microsoft.com/en-us/msrc/bounty-ai
+      checked: 2026-09-22
+    - url: https://www.microsoft.com/en-us/msrc/aibugbar
+      checked: 2026-09-22
+    - url: https://go.microsoft.com/fwlink/?linkid=2299798
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 156d5f5b4d
+  migrated_from: input/data/institutions.json

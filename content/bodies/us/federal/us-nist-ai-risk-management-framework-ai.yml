@@ -1,0 +1,86 @@
+id: us-nist-ai-risk-management-framework-ai
+type: standards
+geo:
+  country: us
+  sub: federal
+  label: United States (federal, non-regulatory)
+facts:
+  routes:
+    - id: ai-rmf-team-inbox
+      type: email
+      value: AIframework@nist.gov
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0fcb1540216e
+    - id: formal-requests-information-public
+      type: consultation
+      value: https://www.nist.gov/itl/ai-risk-management-framework
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 244770b88d56
+    - id: mailing-list-nist-ai
+      type: form
+      value: https://public.govdelivery.com/accounts/USNIST/subscriber/new?topic_id=USNIST_465
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 132ac6153f97
+    - id: ai-resource-center
+      type: form
+      value: https://airc.nist.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 11c8b8307bb1
+    - id: homepage
+      type: homepage
+      value: https://www.nist.gov/itl/ai-risk-management-framework
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: f469bea763fc
+  region: United States
+  public_input: open
+  tags:
+    - systemic
+strings:
+  name: NIST AI Risk Management Framework (AI RMF) and AI Resource Center
+  remit: AI RMF 1.0 (Jan 2023) — a voluntary framework structured around Govern, Map, Measure, Manage — plus the Generative AI Profile (NIST AI 600-1), crosswalks to other frameworks, the AI RMF Roadmap, and the AI Resource Center (AIRC) with the Trustworthy & Responsible AI playbooks. The RMF is being revised under the White House AI Action Plan.
+  threat_model: "Sociotechnical risk across the board: validity, safety, security/resilience, accountability/transparency, explainability, privacy, and bias. The GenAI Profile explicitly covers CBRN information access, confabulation, dangerous/violent content and harmful bias — so it does reach misuse risk, but not loss of control."
+  reality_check: "Genuinely responsive by government standards: a real published inbox, real published comment dockets, and a track record of incorporating external crosswalks. A substantive, well-structured comment submitted during an open RFI is one of the highest-yield low-cost actions available anywhere in this list for a US-relevant concern. Note that NIST's AI safety posture shifted substantially with the 2025 AI Action Plan and the CAISI reorganisation — the framing is now innovation-and-security rather than safety."
+  gov_channel: Direct — NIST is a US federal agency; the AI RMF is referenced in federal procurement, state legislation and international crosswalks.
+  routes:
+    ai-rmf-team-inbox:
+      label: AI RMF team inbox — reads and logs external comments
+      scope: Anyone; feedback on the framework, roadmap, crosswalks
+      note: Published on NIST's own Engage page. NIST has historically published the comments it receives.
+    formal-requests-information-public:
+      label: Formal Requests for Information / public comment dockets
+      scope: Anyone, during open windows; comments are published
+      note: Prior RFI responses are archived at https://www.nist.gov/itl/ai-risk-management-framework/comments-received-rfi-artificial-intelligence-risk-management — evidence that submissions are genuinely published.
+    mailing-list-nist-ai:
+      label: Mailing list for NIST AI activity announcements (catches new comment windows)
+      scope: Anyone
+    ai-resource-center:
+      label: AI Resource Center
+      scope: Playbooks, crosswalks, glossary
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.nist.gov/itl/ai-risk-management-framework
+      checked: 2026-09-22
+    - url: https://public.govdelivery.com/accounts/USNIST/subscriber/new?topic_id=USNIST_465
+      checked: 2026-09-22
+    - url: https://airc.nist.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: f95a8da259
+  migrated_from: input/data/institutions.json

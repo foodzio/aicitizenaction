@@ -1,0 +1,59 @@
+id: us-center-ai-safety-action-fund
+type: civil-society
+geo:
+  country: us
+  label: United States (registered federal lobbying entity)
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: caisaf@safe.ai
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ffef4b25e619
+    - id: news-policy-updates
+      type: form
+      value: https://action.safe.ai/news
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 2390f2936833
+    - id: homepage
+      type: homepage
+      value: https://action.safe.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: f522b7e7bccf
+  region: United States
+  public_input: limited
+  tags:
+    - law
+    - research
+strings:
+  name: Center for AI Safety Action Fund (CAIS AF)
+  remit: "501(c)(4) advocacy arm of CAIS. Nonpartisan lobbying and policymaker education. Stated policy focus areas: US leadership in AI chip manufacturing, compute security, preventing malicious use of AI, and global cooperation for safe and secure AI. Registered federal lobbyist; active in state legislation."
+  threat_model: Catastrophic misuse and national-security risk, plus compute governance. More security-and-competitiveness framed than the research arm.
+  reality_check: If you want a catastrophic-risk concern carried into US legislative offices, this is one of about three organisations that can actually do it (with Encode and FLI). Contributions are not tax-deductible, which is the price of the lobbying capability.
+  gov_channel: Direct — registered federal lobbying disclosures (OpenSecrets, LegiStorm) and sustained state-legislature engagement. One of the few AI safety organisations that formally lobbies.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+      note: Verified on action.safe.ai.
+    news-policy-updates:
+      label: News and policy updates
+      scope: Anyone
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://action.safe.ai/news
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: "1380955610"
+  migrated_from: input/data/institutions.json

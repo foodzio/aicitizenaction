@@ -1,0 +1,64 @@
+id: us-house-committee-oversight-government-reform
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://oversight.house.gov/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 2d8ded1bea0b
+    - id: public-route
+      type: submission
+      value: https://oversight.house.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 15498d6a05bd
+  level: federal
+  chamber: House
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: James Comer
+      party: R
+      region: KY
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Robert Garcia
+      party: D
+      region: CA
+      verified_on: 2026-09-22
+strings:
+  name: House Committee on Oversight and Government Reform
+  ai_jurisdiction: "The House counterpart to Senate HSGAC: how the federal government itself uses AI. Send here: agency AI use cases and inventories, federal AI procurement, OMB AI guidance, GSA, federal IT modernization, the federal AI workforce, and the civil-liberties consequences of government AI. Also the House's broadest general-investigative committee, so evidence-backed allegations about AI companies or federal AI contracts can land here."
+  business: "VERIFIED: H.R.9125 Sectoral AI Governance Act of 2026 (Jacobs) referred here jointly with Judiciary, 3 Jun 2026. Subcommittee hearings including 'Examining the Federal Government's Use of Artificial Intelligence', 'The Future of Artificial Intelligence', a hearing on White House AI policy, a hearing on quantum computing and US cybersecurity, and a bipartisan roundtable on artificial intelligence — all convened by Subcommittee Chair Nancy Mace."
+  public_route: "VERIFIED: https://oversight.house.gov/contact. Committee: 2157 Rayburn House Office Building, Washington DC 20515, 202-225-5074. Minority: https://oversightdemocrats.house.gov/. The committee also runs whistleblower intake, which accepts submissions from non-constituents."
+  note: Chair/ranking verified 2026-09-22 from the House Clerk's MemberData.xml. Ranking member changed during the 119th Congress — it is Robert Garcia, not the member named in older guides.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://oversight.house.gov/members
+      checked: 2026-09-22
+    - url: https://oversight.house.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 83668c7bdb
+  migrated_from: input/data/committees-and-organisations.json#seats

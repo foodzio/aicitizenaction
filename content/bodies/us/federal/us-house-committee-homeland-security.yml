@@ -1,0 +1,63 @@
+id: us-house-committee-homeland-security
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://homeland.house.gov/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d50c851972b3
+    - id: public-route
+      type: submission
+      value: https://homeland.house.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9b5c355c3516
+  level: federal
+  chamber: House
+  tags:
+    - audit
+    - law
+  seats:
+    - role: chair
+      name: Andrew R. Garbarino
+      party: R
+      region: NY
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Bennie G. Thompson
+      party: D
+      region: MS
+      verified_on: 2026-09-22
+strings:
+  name: House Committee on Homeland Security
+  ai_jurisdiction: "DHS, CISA, TSA and DHS Science and Technology. Send here: AI threats to critical infrastructure, AI-enabled cyberattacks, securing AI systems used in government and industry, AI in border and screening operations, AI and CBRN threat detection, and the AI capabilities of adversary states as a homeland-security matter."
+  business: "VERIFIED: 21 Jan 2026 oversight hearing with CISA, TSA and DHS S&T, opened by Chairman Garbarino. May 2026: the committee received a rare closed-door demonstration of an advanced AI tool amid escalating cyber concerns (Government Executive, May 2026). Continues the committee's 'Advancing Innovation (AI): Harnessing Artificial Intelligence to Defend and Secure the Homeland' line of work."
+  public_route: "VERIFIED: https://homeland.house.gov/contact. Committee: H2-176 Ford House Office Building, Washington DC 20515, 202-226-8417. Minority: https://democrats-homeland.house.gov/."
+  note: Chair verified 2026-09-22 from the House Clerk's MemberData.xml. Note that Garbarino moved up from chairing the Cybersecurity subcommittee to chairing the full committee — the FLI guide lists him in both roles, which is now out of date.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://homeland.house.gov/members
+      checked: 2026-09-22
+    - url: https://homeland.house.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 09dcd2f839
+  migrated_from: input/data/committees-and-organisations.json#seats

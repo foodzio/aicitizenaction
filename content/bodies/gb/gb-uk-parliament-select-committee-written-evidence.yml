@@ -1,0 +1,53 @@
+id: gb-uk-parliament-select-committee-written-evidence
+type: seat
+geo:
+  country: gb
+  label: United Kingdom
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.parliament.uk/get-involved/committees/give-evidence-to-a-select-committee/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ff024227cf3b
+    - id: public-route
+      type: submission
+      value: https://committees.parliament.uk/inquiries/?showadvanced=true&currentlyacceptingevidence=true
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: dcf55b299c7e
+  level: national
+  tags:
+    - audit
+    - law
+    - record
+strings:
+  name: UK Parliament — select committee written evidence system (the key public route)
+  ai_jurisdiction: "Not a body but the mechanism: every Commons, Lords and Joint select committee inquiry runs on written evidence solicited from the public. This is the only route by which an ordinary member of the public can put a document directly into the parliamentary record and have MPs' staff read it."
+  business: "Inquiries VERIFIED as accepting written evidence on 22 Sep 2026 include: 'The Online Safety Act: implementation and impact' (Lords Communications and Digital, deadline 21 Sep 2026); 'Regulatory sandboxes in financial services' (deadline 23 Oct 2026); 'Climate adaptation' (deadline 21 Oct 2026); 'Dunkelflaute and the risks of electricity intermittency' (deadline 12 Oct 2026); 'Clean Power by 2030: Upgrading the grid' (deadline 8 Oct 2026). No inquiry titled on AI is open as at this date."
+  public_route: Browse all open calls at the filtered inquiries URL, open the inquiry page, click the call for evidence, and upload through the secure portal. No invitation, credential or sponsorship is needed; individuals may submit on the same footing as corporations.
+  format_rules: "EXACT RULES from the official guidance: 'Committees value clear and concise submissions, usually no more than 3,000 words.' Structure with numbered paragraphs and headings; plain English with technical terms explained; a single Word, ODT or RTF file (NOT PDF), maximum 25MB; no logos, decorative graphics or repeated headers/footers. If longer than 3,000 words, put a summary at the start. Your evidence must not have been published elsewhere, though you may cite published material. Deadline convention: each call states a date, normally 6–10 weeks after opening, and cut-off is 11:59pm on that day; late submissions are often still accepted at the clerk's discretion if the report is not yet drafted — ask the clerk. Once accepted, evidence becomes the property of the committee, is published online and 'stays public forever' as part of the permanent parliamentary record; you cannot republish it yourself until the committee authorises it. You may request anonymity or confidentiality but the committee decides."
+  key_people: The committee clerk (not the Chair) is the decision-maker on whether a submission is accepted and published. Contact details for each clerk are on the committee's page.
+  note: VERIFIED 2026-09-22 against https://publications.parliament.uk/pa/cm/written-evidence-guidance.htm (the official House of Commons written evidence guidance) and the live open-inquiries filter.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.parliament.uk/get-involved/committees/give-evidence-to-a-select-committee/
+      checked: 2026-09-22
+    - url: https://committees.parliament.uk/inquiries/?showadvanced=true&currentlyacceptingevidence=true
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c79d64166e
+  migrated_from: input/data/committees-and-organisations.json#seats

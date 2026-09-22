@@ -1,0 +1,73 @@
+id: cn-deepseek
+type: company
+geo:
+  country: cn
+  label: China
+facts:
+  routes:
+    - id: security
+      type: email
+      value: security@deepseek.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 30e8400143e6
+    - id: general-service-contact
+      type: email
+      value: service@deepseek.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f17a7a47c103
+    - id: homepage
+      type: homepage
+      value: https://www.deepseek.com/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: e7b3a5a054fd
+    - id: framework
+      type: framework
+      value: https://www.deepseek.com/harness/en/privacy/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: b172ba0baa0e
+  region: China
+  public_input: limited
+  tags:
+    - behaviour
+    - flaw
+    - systemic
+strings:
+  name: DeepSeek
+  remit: No publicly named safety or alignment function. Safe Use Policy governs the hosted service; the company publishes research papers but no safety framework.
+  reality_check: DeepSeek has been the subject of an unusual volume of external security and safety findings — Wiz Research found a publicly exposed ClickHouse database leaking chat history in January 2025, and Cisco's red-teaming reported a 100% attack success rate against R1 on a standard harmful-prompt benchmark. In none of these widely covered cases did the researchers describe a functioning coordinated-disclosure exchange with DeepSeek; Wiz described reaching out and the exposure being closed quickly, but there is no published disclosure process. No bug bounty, no VDP, no safe harbour.
+  notes: security@deepseek.com is genuinely published, which puts DeepSeek ahead of several Western labs on the narrow question of having an address. But there is no policy behind it — no scope, no commitment, no safe harbour. Assume anything you send is unprotected and may not be acknowledged.
+  routes:
+    security:
+      label: Security
+      scope: Published as a mailto link in the footer of deepseek.com. No published policy defines what is in scope.
+      note: Verified by reading the raw page source of deepseek.com/en. There is no accompanying disclosure policy, scope statement, SLA or safe harbour — just the address.
+    general-service-contact:
+      label: General service contact
+      scope: General enquiries.
+      note: Also published in the site footer.
+    homepage:
+      label: Homepage
+    framework:
+      label: Safe Use Policy (no frontier safety framework published)
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.deepseek.com/
+      checked: null
+    - url: https://www.deepseek.com/harness/en/privacy/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 6b6c0d5547
+  migrated_from: input/data/institutions.json

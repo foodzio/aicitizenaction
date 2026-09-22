@@ -1,0 +1,44 @@
+id: us-encode-2
+type: organisation
+geo:
+  country: us
+  label: United States, federal and state.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://encodeai.org/donation/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f7ac89004049
+  perspective: safety-advocacy
+  volunteers: unclear
+  tags:
+    - fund
+    - join
+    - law
+    - tip
+strings:
+  name: Encode (formerly Encode Justice; also Encode AI)
+  the_ask: Pass enforceable AI laws — transparency, safety frameworks, incident reporting, third-party audits and whistleblower protection for frontier AI companies — while keeping AI's benefits.
+  what_they_do: Legislative drafting and advocacy. Claims credit for California SB 53, the New York RAISE Act, Illinois SB 315, the federal TAKE IT DOWN Act, and the first US policy on AI in nuclear weapons launch. Builds coalitions and lobbies directly.
+  newcomer_action: Email info@encodeai.org offering your skill (law, policy research, state-level organising), follow @EncodeAction, and donate.
+  tips: unclear
+  geography: United States, federal and state.
+  scale: "Small: at least 11 staff listed on its team page; describes itself as 'a small advocacy team'."
+  spending: Not disclosed.
+  caution: encodejustice.org now redirects to encodeai.org — the youth-chapter branding of Encode Justice has largely been folded into a professional policy shop. Its current site advertises no chapters, no volunteer programme and no membership, so a newcomer's realistic route is donating or being hired, not joining. Its ask is regulation and transparency, explicitly 'pro-human pro-AI' — not a pause or ban.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://encodeai.org/donation/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 5e34c7ba26
+  migrated_from: input/data/committees-and-organisations.json#orgs

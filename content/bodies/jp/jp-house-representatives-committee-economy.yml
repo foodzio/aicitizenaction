@@ -1,0 +1,64 @@
+id: jp-house-representatives-committee-economy
+type: seat
+geo:
+  country: jp
+  label: Japan
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.shugiin.go.jp/internet/itdb_iinkai.nsf/html/iinkai/iin_j0090.htm
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Japanese only.
+      source_id: 4748e692ccbc
+    - id: public-route
+      type: submission
+      value: https://www.meti.go.jp/feedback/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Japanese only.
+      source_id: 405f0d3c4ed3
+  local_name: 衆議院 経済産業委員会
+  level: national
+  tags:
+    - audit
+    - law
+    - petition
+    - record
+  seats:
+    - role: chair
+      name: KUDŌ Shōzō (工藤彰三)
+      verified_on: 2026-09-17
+strings:
+  name: House of Representatives Committee on Economy, Trade and Industry
+  ai_jurisdiction: Scrutinises METI, which owns AI industrial policy, the AI Guidelines for Business (jointly with MIC), semiconductor and compute policy, and — new in 2026 — a dedicated AI Industry Strategy Division (AI産業戦略課). This is the committee for the industrial/economic side of AI rather than the governance framework side.
+  business: "METI oversight including the AI Industry Strategy Division established in 2026 and METI's role in delivering the AI Basic Plan Phase II. METI minister: AKAZAWA Ryosei."
+  public_route: 参考人 by invitation; 請願 requires a sponsoring member. No open call for written evidence. The productive route to METI policy is METI's own public comment channel, which feeds into e-Gov.
+  format_rules: Petition requires a sponsoring Diet member.
+  realistic: Not usable directly. Go to METI's consultation page instead — that is where an outsider's written input can actually land. Note that meti.go.jp/feedback renders poorly for automated fetching; the reliable aggregator is the e-Gov public comment portal.
+  language_note: Japanese only.
+  note: "Chair and as-of date (令和8年9月17日 = 17 September 2026) VERIFIED from the official Shugiin roster page. Note the Shugiin URL pattern: iin_j0090.htm is Economy/Trade/Industry and iin_j0110.htm is Environment — the numbering does not follow the display order, so do not guess URLs."
+  seat_notes:
+    chair: 委員長 (Chair)
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-17
+  review_by: 2026-12-16
+  sources:
+    - url: https://www.shugiin.go.jp/internet/itdb_iinkai.nsf/html/iinkai/iin_j0090.htm
+      checked: 2026-09-22
+    - url: https://www.meti.go.jp/feedback/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 52ba7eb5c6
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,96 @@
+id: us-center-ai-standards-innovation
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (federal) — a center within NIST, US Department of Commerce
+facts:
+  routes:
+    - id: caisi-events-listening-session
+      type: email
+      value: caisi-events@nist.gov
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 43442f76c6a6
+    - id: nist-information-technology-laboratory
+      type: email
+      value: itlmail@nist.gov
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4bbc423d55e4
+    - id: caisi-general-inquiries-address
+      type: email
+      value: (an address is printed on https://www.nist.gov/caisi but was machine-redacted on fetch)
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 4f0bc8f5c32d
+    - id: federal-register-regulations-gov
+      type: docket
+      value: https://www.regulations.gov/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: b3dd648598a9
+    - id: nist-ai-consortium-letter
+      type: form
+      value: https://www.nist.gov/artificial-intelligence/nist-ai-consortium/submit-letter-interest-join-nist-ai-consortium
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 364328fc34a3
+    - id: homepage
+      type: homepage
+      value: https://www.nist.gov/caisi
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: f5b09a16d2d5
+  region: United States
+  public_input: limited
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Center for AI Standards and Innovation (CAISI)
+  remit: "RENAMED: was the 'U.S. AI Safety Institute' until 4 June 2025, when Commerce Secretary Lutnick renamed and re-scoped it as CAISI. Develops guidelines/best practices to measure and improve AI system security; leads unclassified evaluations of AI capabilities that may pose national-security risk (cybersecurity, biosecurity, chemical weapons); enters VOLUNTARY agreements with private AI developers and evaluators for pre/post-deployment testing; coordinates with DoD, DOE, DHS and the IC; represents US positions in international AI standards fora. Also runs an AI Agent Standards Initiative (announced Feb 2026)."
+  powers_text: research
+  reality_check: "CAISI has NO enforcement power and no complaint route for the public. Its testing relationships with frontier labs are voluntary MOUs, so the lever is not correspondence — it is the Federal Register docket when CAISI/NIST publishes draft guidance or an RFI, and the named workshop mailbox (caisi-events@nist.gov) when a listening session is announced. A cold email to a general NIST inbox is routed to public affairs and effectively does not reach the evaluation staff. The rename also signals a substantive shift: 'safety' language was dropped in favour of security, national-security evaluation and 'AI dominance', so framing input as catastrophic-risk advocacy lands worse than framing it as measurement, standards or adversarial-nation risk."
+  notes: The rename is the single most important fact here. Separately, the AI Safety Institute Consortium (AISIC) was itself renamed the 'NIST AI Consortium' in May 2026 with scope widened to AI measurement, innovation and adoption — see the separate entry.
+  routes:
+    caisi-events-listening-session:
+      label: CAISI events / listening-session submissions
+      scope: Submissions to CAISI workshops and listening sessions (e.g. 'Barriers to Adoption' sessions, Feb-Mar 2026). NIST publishes it in [at] obfuscated form as 'caisi-events [at] nist.gov'.
+      note: VERIFIED on the NIST news page for the CAISI listening sessions. This is the most specific CAISI-facing address NIST publishes.
+    nist-information-technology-laboratory:
+      label: NIST Information Technology Laboratory (AI) general mailbox
+      scope: General NIST AI programme correspondence; published on NIST's AI contact page as 'itlmail [at] nist.gov'.
+      note: VERIFIED. Generic lab mailbox, not a CAISI policy channel.
+    caisi-general-inquiries-address:
+      label: CAISI general-inquiries address on nist.gov/caisi
+      scope: General inquiries.
+      note: UNVERIFIED — the page displays a general-inquiries email but the retrieval tool redacted the literal string. Do not guess it; read it off https://www.nist.gov/caisi directly.
+    federal-register-regulations-gov:
+      label: Federal Register / regulations.gov comment dockets for NIST AI actions
+      scope: Where NIST/CAISI Requests for Information and draft guidelines take formal public comment.
+      note: UNVERIFIED as fetched (regulations.gov serves a JS shell that returned no readable content). The domain is correct and CAISI/NIST notices do cite specific docket IDs; find the docket via the Federal Register notice.
+    nist-ai-consortium-letter:
+      label: NIST AI Consortium letter of interest
+      scope: Organisations (not individuals) seeking to join the consortium via CRADA.
+      note: VERIFIED via NIST news release of May 2026.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.nist.gov/artificial-intelligence/nist-ai-consortium/submit-letter-interest-join-nist-ai-consortium
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 957be4906f
+  migrated_from: input/data/institutions.json

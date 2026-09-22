@@ -1,0 +1,52 @@
+id: cn-china-internet-illegal-harmful-information-reporting
+type: government
+geo:
+  country: cn
+  label: People's Republic of China
+facts:
+  routes:
+    - id: 12377-reporting-centre
+      type: complaint
+      value: https://www.12377.cn/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: zh
+      source_id: 4f3a6580386b
+    - id: homepage
+      type: homepage
+      value: https://www.12377.cn/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c09e4c246eb2
+  local_name: 中央网信办违法和不良信息举报中心
+  region: China
+  public_input: open
+  tags:
+    - harm
+strings:
+  name: China Internet Illegal and Harmful Information Reporting Centre (12377)
+  remit: CAC's public reporting channel for illegal and harmful online information. Under the Labelling Measures for AI-Generated Synthetic Content and the Generative AI Interim Measures, unlabelled or non-compliant AI-generated content falls within its scope. Reports feed CAC enforcement, which can compel takedown and service suspension.
+  powers_text: investigate
+  reality_check: "Honest assessment: this is a domestic content-policing channel, not an AI safety channel. It is Chinese-language only, is oriented to reporting content the state considers illegal or harmful, and typically expects real-name or Chinese-phone-number registration. A foreigner raising a frontier-safety concern here would be using the wrong instrument entirely, and I could not even verify the site's current form. Include it in a directory only with a clear caveat."
+  notes: I was unable to fetch this site during research — flagged as requiring manual verification.
+  routes:
+    12377-reporting-centre:
+      label: 12377 reporting centre
+      scope: content complaints about services operating in China
+      note: UNVERIFIED — fetch was blocked (permission/provenance failure). This is the well-known official CAC reporting centre but I did NOT confirm its current scope, form fields, or whether AI-generated content is an explicit reporting category. Re-verify before publishing.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.12377.cn/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c04600e6cc
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,56 @@
+id: global-international-network-advanced-ai-measurement
+type: government
+geo:
+  country: global
+  label: Multilateral (10 members)
+facts:
+  routes:
+    - id: nist-announcement-page
+      type: consultation
+      value: https://www.nist.gov/news-events/news/2026/02/international-network-advanced-ai-measurement-evaluation-and-science
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: 3d890b31c21b
+    - id: uk-aisi-blog-network
+      type: consultation
+      value: https://www.aisi.gov.uk/blog/international-evaluation-best-practice-and-open-questions-in-ai-measurement
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: 1bc816ddcac7
+  region: Global
+  public_input: none
+  tags:
+    - systemic
+strings:
+  name: International Network for Advanced AI Measurement, Evaluation and Science (NAAIMES) — formerly the International Network of AI Safety Institutes
+  remit: "Intergovernmental network of state AI evaluation bodies. Renamed in December 2025 from 'International Network of AI Safety Institutes' — the word 'safety' was dropped in favour of 'measurement, evaluation and science'. Verified membership as of 2026: Australia, Canada, European Union, France, Japan, Kenya, Republic of Korea, Singapore, United Kingdom, United States. NOTE: India, Italy, Spain, Netherlands, Ireland, Switzerland and China are NOT members. Publishes joint technical outputs (e.g. Feb 2026 consensus areas on automated evaluations). No treaty basis, no legal personality."
+  powers_text: convene
+  reality_check: The network has NO standalone website, NO secretariat email, and NO public-facing channel that I could verify. Coordination runs through whichever member hosts a convening; the US CAISI convened the founding meeting (Nov 2024) and the UK AISI has published network outputs. A member of the public cannot address the network — only individual member institutes. Treat 'the Network' as a publication brand, not a contactable body.
+  notes: The rename is real and confirmed by NIST and UK AISI primary sources. Any directory still calling it the 'International Network of AI Safety Institutes' is out of date. Do not confuse the US 'CAISI' (Center for AI Standards and Innovation) with the Canadian 'CAISI' (Canadian AI Safety Institute) — the acronym collision is genuine.
+  routes:
+    nist-announcement-page:
+      label: NIST announcement page (US member, CAISI)
+      scope: publications only
+      note: VERIFIED fetched. No network contact address or submission channel published.
+    uk-aisi-blog-network:
+      label: UK AISI blog on network outputs
+      scope: publications only
+      note: VERIFIED fetched. Confirms the ten members. No network-level contact route.
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.nist.gov/news-events/news/2026/02/international-network-advanced-ai-measurement-evaluation-and-science
+      checked: 2026-09-22
+    - url: https://www.aisi.gov.uk/blog/international-evaluation-best-practice-and-open-questions-in-ai-measurement
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 4c4d2e5f29
+  migrated_from: input/data/institutions.json

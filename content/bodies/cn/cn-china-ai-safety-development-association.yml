@@ -1,0 +1,78 @@
+id: cn-china-ai-safety-development-association
+type: government
+geo:
+  country: cn
+  label: People's Republic of China
+facts:
+  routes:
+    - id: cnaisda-website-join-us
+      type: form
+      value: https://cnaisi.cn/jrwm
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: 4f37a172bf75
+    - id: cnaisda-homepage
+      type: form
+      value: https://cnaisi.cn/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: 8d9db3c8d18d
+    - id: alternative-domain
+      type: form
+      value: https://ai-development-and-safety-network.cn/institutes
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: fbb3effbc6f8
+    - id: homepage
+      type: homepage
+      value: https://cnaisi.cn/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: f6c12a0bddbe
+  local_name: 中国人工智能发展与安全研究网络
+  region: China
+  public_input: none
+strings:
+  name: China AI Safety and Development Association (CnAISDA)
+  remit: "STATUS DELIBERATELY AMBIGUOUS. Unveiled around the Paris AI Action Summit (Feb 2025) and widely described as China's counterpart to the international AISI network. It is a coordinating network, not an institute: it has no independent staff, no research team and no dedicated budget, and federates existing bodies — Tsinghua University (the intellectual centre), Beijing Academy of Artificial Intelligence (BAAI), CAICT, Shanghai AI Laboratory, the Institute of Automation of the Chinese Academy of Sciences, CCID, and MIIT-linked research groups. Fu Ying described it as 'established with government support'; the precise governmental relationship has never been clarified. Note the Chinese name translates as 'network' (研究网络), not 'association' — the English branding and the Chinese branding do not match."
+  powers_text: convene
+  reality_check: "CnAISDA is real but thin. It exists primarily as a diplomatic interface — something for foreign counterparts to talk to. Its website is English-first, which is itself telling: it is built for foreigners, not for Chinese stakeholders. But I could not extract a single contact address from it. There is no public input process. Practical access for a foreigner is through the individual member institutions or through Concordia AI as intermediary, not through CnAISDA itself."
+  notes: It notably calls for 'early warning thresholds for AI systems that may pose catastrophic or existential risks to humans' — the most explicit catastrophic-risk language from any China-linked body. China is NOT a member of the international network; CnAISDA is the parallel structure. Name inconsistency (Association vs Network) is genuine and unresolved.
+  routes:
+    cnaisda-website-join-us:
+      label: CnAISDA website / 'Join Us' page
+      scope: membership enquiry
+      note: VERIFIED that the page exists and is titled 'China AI Safety & Development Association - Join Us'. The site is JavaScript-rendered and I could NOT read any email, form or address from it. Reported elsewhere to list a Tsinghua phone number and address — UNVERIFIED.
+    cnaisda-homepage:
+      label: CnAISDA homepage
+      scope: general
+      note: VERIFIED exists; content not machine-readable.
+    alternative-domain:
+      label: Alternative domain (redirects)
+      scope: general
+      note: "VERIFIED — this domain 302-redirects to beijing-aisi.ac.cn, indicating shared infrastructure with the Beijing Institute of AI Safety and Governance. Worth noting: the 'network' and Yi Zeng's Beijing institute are technically entangled."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://cnaisi.cn/jrwm
+      checked: 2026-09-22
+    - url: https://cnaisi.cn/
+      checked: 2026-09-22
+    - url: https://ai-development-and-safety-network.cn/institutes
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 9683cb1077
+  migrated_from: input/data/institutions.json

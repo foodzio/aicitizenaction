@@ -1,0 +1,72 @@
+id: us-thinking-machines-lab
+type: company
+geo:
+  country: us
+  label: USA
+facts:
+  routes:
+    - id: security-vulnerability-reports
+      type: email
+      value: security-reports@thinkingmachines.ai
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4e906427fe34
+    - id: model-safety-incidents-routed
+      type: email
+      value: legal@thinkingmachines.ai
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6d209b03e290
+    - id: homepage
+      type: homepage
+      value: https://thinkingmachines.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 5ad74fbd52fc
+    - id: framework
+      type: framework
+      value: https://thinkingmachines.ai/security/disclosure-policy/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ea587484a8cc
+  region: United States
+  public_input: limited
+  tags:
+    - behaviour
+    - flaw
+strings:
+  name: Thinking Machines Lab
+  remit: States it will contribute to AI safety by 'maintaining a high safety bar—preventing misuse of our released models while maximizing users' freedom', sharing best practices, and 'accelerating external research on alignment by sharing code, datasets, and model specs'. No named safety team.
+  reality_check: "Too new for public accounts of responsiveness. The structural signal is clear though: Thinking Machines writes an unusually strong safe-harbour clause for security research and then explicitly excludes model safety from it, routing model-safety incidents to legal@ — which means a model-safety report arrives at a desk whose job is liability, and arrives outside the protections the same page grants to security researchers."
+  notes: "The safe harbour is one of the best-written in this list, but read its boundary: 'When you conduct security research and vulnerability disclosure in good faith and in compliance with this policy, we consider that research to be authorized, and we will: Not pursue or support any legal action against you for accidental, good-faith violations of this policy, including under the Computer Fraud and Abuse Act or the anti-circumvention provisions of the Digital Millennium Copyright Act; Waive any restrictions in our Terms of Service or Acceptable Use Policy...; and If a third party initiates legal action against you..., take reasonable steps to make it known that your actions were authorized.' None of that covers a model-safety finding. Get advice before sending a jailbreak to legal@."
+  routes:
+    security-vulnerability-reports:
+      label: Security vulnerability reports
+      scope: Security vulnerabilities in systems, services and infrastructure. PGP key at https://thinkingmachines.ai/.well-known/pgp-key.txt (fingerprint 4FA9 136F 8F68 DDFD 1E78 6EBE CB0B 7A1E 3028 4CB4).
+      note: "Verified by decoding the Cloudflare-obfuscated addresses in the page source. Explicitly no bug bounty: 'we do not operate a bug bounty program and do not offer monetary rewards or compensation of any kind'."
+    model-safety-incidents-routed:
+      label: Model safety incidents — routed to Legal
+      scope: "The disclosure policy states: 'This policy does not cover model safety. To report an incident related to Inkling, please contact us at [legal@thinkingmachines.ai].'"
+      note: "Significant finding: model safety is carved out of the security process and sent to the legal department. Verified by decoding the page source."
+    homepage:
+      label: Homepage
+    framework:
+      label: No frontier safety framework published; Coordinated Vulnerability Disclosure Policy is the only governance document
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://thinkingmachines.ai/
+      checked: null
+    - url: https://thinkingmachines.ai/security/disclosure-policy/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: d757629a31
+  migrated_from: input/data/institutions.json

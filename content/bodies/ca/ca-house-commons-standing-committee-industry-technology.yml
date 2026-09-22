@@ -1,0 +1,59 @@
+id: ca-house-commons-standing-committee-industry-technology
+type: seat
+geo:
+  country: ca
+  label: Canada
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.ourcommons.ca/Committees/en/INDU/Members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 086f22faa872
+    - id: public-route
+      type: submission
+      value: https://www.ourcommons.ca/Committees/en/INDU
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: dbd347febe46
+  level: national
+  tags:
+    - law
+    - petition
+    - record
+  seats:
+    - role: chair
+      name: Ben Carr, MP (Liberal, Winnipeg South Centre, Manitoba)
+      verified_on: 2026-09-22
+strings:
+  name: House of Commons Standing Committee on Industry and Technology (INDU)
+  ai_jurisdiction: The lead Commons committee for AI. Industry, science, technology, telecommunications, competition and innovation policy. It was the committee that studied Bill C-27 (which contained the Artificial Intelligence and Data Act) clause by clause, and it is now running a dedicated AI study.
+  business: "Four active studies as at 22 Sep 2026, including 'Opportunities, Risks, and Regulation of AI in Canada's Strategic Industries'. The others: Financial Fraud and Scams in Canada; Federal Government's Electric Vehicle Policies; U.S. Tariffs and the Canadian Metallurgical Sector."
+  public_route: "Submit a brief. Canada's brief system is the most open of the five jurisdictions here: 'Any individual or organization may submit a brief to a committee of the House of Commons, even if they are not given the opportunity to appear.' You do not need an invitation and you do not need to be Canadian. Send it to the committee clerk by email or through the online form; contact details are on the committee page."
+  format_rules: "EXACT RULES: a brief should not exceed 10 pages. If longer, you must include a summary of no more than 500 words, which the committee may translate and distribute INSTEAD of the full document — so the 500-word summary is the part that actually gets read. May be submitted in either official language; the clerk coordinates translation, so submit early. Identify the author/organisation clearly on the cover; put your personal contact details in the covering email, NOT on the cover page. Support claims with concise factual information; put specific, summarised recommendations at the end; cite all quoted material in footnotes or a bibliography; visuals in black and white and preferably bilingual. Briefs become part of the committee's public archives, may be posted on the committee website, and submitters are listed in committee reports."
+  key_people: "Vice-Chairs: Raquel Dancho (Conservative, Kildonan—St. Paul) and Gabriel Ste-Marie (Bloc Québécois, Joliette—Manawan). Members: Parm Bains, Karim Bardeesy, Doly Begum, Adam Chambers (CPC), Harb Gill (CPC), Jason Groleau (CPC), Leslyn Lewis (CPC), Michael Ma, Bienvenu-Olivier Ntumba, Dominique O'Rourke."
+  note: VERIFIED 2026-09-22 from the INDU committee page and the official 'Guide for submitting briefs to House of Commons Committees' at ourcommons.ca/procedure/guides/brief-e.html.
+  seat_notes:
+    chair: Chair
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.ourcommons.ca/Committees/en/INDU/Members
+      checked: 2026-09-22
+    - url: https://www.ourcommons.ca/Committees/en/INDU
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 0091d676c7
+  migrated_from: input/data/committees-and-organisations.json#seats

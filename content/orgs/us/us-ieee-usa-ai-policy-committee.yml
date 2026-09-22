@@ -1,0 +1,41 @@
+id: us-ieee-usa-ai-policy-committee
+type: organisation
+geo:
+  country: us
+  label: United States (IEEE-USA); IEEE standards work is global.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://ieeeusa.org/committees/aipc/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 47c1a935c9b3
+  perspective: professional
+  volunteers: yes — via IEEE membership and the volunteer committees page
+  tags:
+    - join
+strings:
+  name: IEEE-USA AI Policy Committee (AIPC)
+  the_ask: "US AI policy should be grounded in engineering reality: governance and regulation, safety, privacy and cybersecurity, IP protection, transparency, and a workforce pipeline matched to need."
+  what_they_do: Assembles IEEE members with AI expertise to write position statements reflecting consensus views of US-based members, which then guide IEEE-USA advocacy with Congress and federal agencies. The wider IEEE Standards Association runs the IEEE 7000 series of ethics-in-design standards and the Global Initiative on Ethics of Autonomous and Intelligent Systems.
+  newcomer_action: If you are an IEEE member, email the committee's programme manager (Erica Wissolik, e.wissolik@ieee.org) to ask how to join or contribute to a position statement; read the existing statements first.
+  tips: no
+  geography: United States (IEEE-USA); IEEE standards work is global.
+  scale: IEEE is the world's largest technical professional organisation; the AIPC itself is a small volunteer committee.
+  spending: Membership-funded.
+  caution: Route in is membership — non-members have essentially no path. Consensus position statements are slow and deliberately moderate; if you want an organisation to say something urgent, this is not the vehicle. The committee page does not spell out the joining process, so email first.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ieeeusa.org/committees/aipc/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: e7e38f36b7
+  migrated_from: input/data/committees-and-organisations.json#orgs

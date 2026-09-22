@@ -1,0 +1,89 @@
+id: gb-ai-security-institute
+type: government
+geo:
+  country: gb
+  label: United Kingdom
+facts:
+  routes:
+    - id: data-protection-privacy-enquiries
+      type: email
+      value: dataprotection@dsit.gov.uk
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ac5ba825f7cc
+    - id: aisi-contact-page
+      type: form
+      value: https://www.aisi.gov.uk/contact
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 74f222948a0b
+    - id: research-collaboration-careers
+      type: form
+      value: https://www.aisi.gov.uk/careers
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 67f6589b57b9
+    - id: public-complaint-or-incident
+      type: complaint
+      value: none
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5fd7f5efb5c7
+    - id: homepage
+      type: homepage
+      value: https://www.aisi.gov.uk/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 9618ba69479e
+  region: United Kingdom
+  public_input: limited
+  tags:
+    - harm
+    - law
+    - systemic
+strings:
+  name: AI Security Institute (AISI)
+  remit: "RENAMED: was the 'AI Safety Institute'; renamed the AI Security Institute in February 2025 (announced by written ministerial statement, HLWS454, 24 February 2025), with the focus narrowed toward security, cyber, chemical/biological and criminal-misuse risks and away from bias and free-speech concerns. It is a DIRECTORATE OF DSIT, not an independent agency. Conducts pre-deployment and post-deployment testing of frontier models by voluntary agreement with developers, builds evaluation infrastructure, publishes a Frontier AI Trends Report, and advises government. It has NO statutory powers: it cannot compel access to a model, cannot fine, cannot require testing, and cannot stop a release."
+  powers_text: research
+  reality_check: "AISI publishes essentially no way for a member of the public to reach it — one data-protection address, maintained by its parent department. It is deliberately a research organisation, not a regulator, and there is nothing to complain to it about. What DOES reach AISI: publishing technical evaluation work it cites, applying to its research grant calls or open roles, and responding to DSIT consultations that shape its remit. The February 2025 rename was substantive, not cosmetic — 'safety' framing now lands less well than security, misuse and national-resilience framing. Because AISI is a DSIT directorate, parliamentary scrutiny of it happens through the Commons Science, Innovation and Technology Committee, which is where public evidence about AISI actually gets read."
+  notes: Frontier/catastrophic risk IS squarely in scope — chem/bio, cyber and autonomy evaluations — making it the UK body most focused on severe risk, but also the one least reachable.
+  routes:
+    data-protection-privacy-enquiries:
+      label: Data protection / privacy enquiries (DSIT DPO, covers AISI)
+      scope: Privacy and data-protection questions only. Published on AISI's privacy policy and monitored by DSIT's Data Protection Officer.
+      note: VERIFIED at https://www.aisi.gov.uk/privacy-policy. This is the ONLY email address AISI publishes anywhere on its site.
+    aisi-contact-page:
+      label: AISI contact page
+      scope: Linked from the site navigation.
+      note: UNVERIFIED — the page exists in AISI's navigation but could not be retrieved (permission/provenance failure on fetch). Its contents could not be confirmed, so do not assume an email is published there.
+    research-collaboration-careers:
+      label: Research collaboration and careers
+      scope: AISI recruits researchers and runs grant programmes; this is the realistic route in for technical people.
+      note: UNVERIFIED as fetched; the careers path is linked from the homepage, which WAS fetched.
+    public-complaint-or-incident:
+      label: Public complaint or incident route
+      scope: n/a
+      note: VERIFIED ABSENCE — AISI is a research body with no complaints function, no regulatory remit and no public reporting channel.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.aisi.gov.uk/contact
+      checked: null
+    - url: https://www.aisi.gov.uk/careers
+      checked: null
+    - url: https://www.aisi.gov.uk/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b30dedb820
+  migrated_from: input/data/institutions.json

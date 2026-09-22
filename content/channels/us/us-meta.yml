@@ -1,0 +1,108 @@
+id: us-meta
+type: company
+geo:
+  country: us
+  label: USA
+facts:
+  routes:
+    - id: llama-policy-violation-reports
+      type: email
+      value: LlamaUseReport@meta.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 54440a4633b8
+    - id: risky-content-model-output
+      type: feedback
+      value: https://developers.facebook.com/llama_output_feedback/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ad35847b0746
+    - id: meta-security-whitehat
+      type: disclosure
+      value: https://facebook.com/whitehat/info/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c841b044803b
+    - id: meta-bug-bounty-genai
+      type: bounty
+      value: https://bugbounty.meta.com/payout-guidelines/meta-genai/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 693c502b4de5
+    - id: model-issues-via-github
+      type: disclosure
+      value: https://github.com/facebookresearch/llama
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d6b32d4258b5
+    - id: homepage
+      type: homepage
+      value: https://ai.meta.com/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 8312da5dd667
+    - id: framework
+      type: framework
+      value: https://ai.meta.com/static-resource/Meta_Advanced-AI-Scaling-Framework-v2
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 5f4dabef0c24
+  region: United States
+  public_input: limited
+  tags:
+    - behaviour
+    - flaw
+    - insider
+strings:
+  name: Meta
+  remit: Internal governance function plus a Chief AI Officer and a Director of Alignment and Risk who receive non-compliance reports under the Advanced AI Scaling Framework; preparedness reports are published at model release.
+  reality_check: Meta publishes more named routes than most, but responsiveness is the documented problem. Cybernews reported researchers complaining on Reddit that 'Meta wasn't even reacting to their reports about allegedly critical bugs', with some 'still waiting for a response months after submitting the report'; Meta received nearly 10,000 reports in 2024 and deemed only around 600 valid. The article notes one researcher who published a 'horrible experience' publicly got a reply within 10 hours and a generous bounty — i.e. public pressure works where the queue does not. AI Frontiers groups Meta with Google and xAI as excluding jailbreaks from vulnerability programs.
+  notes: The llama_output_feedback form is the right door for a harmful-output finding; expect no acknowledgement. The Advanced AI Scaling Framework's whistleblower protocol is employees-only — reports route to 'the internal governance function, the Chief AI Officer, and the Director of Alignment and Risk' — with no external equivalent. No public safe-harbour language for AI safety research was found.
+  routes:
+    llama-policy-violation-reports:
+      label: Llama policy violation reports
+      scope: Reporting violations of the Llama Acceptable Use Policy (i.e. someone else misusing the model).
+      note: Published verbatim in the Llama use policy. Aimed at misuse by third parties, not at model flaws.
+    risky-content-model-output:
+      label: Risky content / model output feedback
+      scope: Reporting risky or harmful content produced by Llama models.
+      note: The closest thing Meta has to a model-behaviour channel. Published in the Llama AUP.
+    meta-security-whitehat:
+      label: Meta security / Whitehat
+      scope: Security bugs and vulnerabilities.
+      note: Published in the Llama AUP as the route for 'security concerns'.
+    meta-bug-bounty-genai:
+      label: Meta Bug Bounty — GenAI payout guidelines
+      scope: GenAI reports assessed by security impact; the page states it illustrates 'how we assess the security impact' of reports.
+      note: Page is JS-rendered; could not read scope text directly. Security-impact framing implies pure model-safety/jailbreak reports do not qualify.
+    model-issues-via-github:
+      label: Model issues via GitHub
+      scope: Technical model issues.
+      note: Listed in the Llama AUP as the route for 'model issues'.
+    homepage:
+      label: Homepage
+    framework:
+      label: Advanced AI Scaling Framework, Version 2 (7 April 2026)
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://developers.facebook.com/llama_output_feedback/
+      checked: 2026-09-22
+    - url: https://facebook.com/whitehat/info/
+      checked: 2026-09-22
+    - url: https://github.com/facebookresearch/llama
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: ae683d0b00
+  migrated_from: input/data/institutions.json

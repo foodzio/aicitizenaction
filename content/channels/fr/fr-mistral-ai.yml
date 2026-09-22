@@ -1,0 +1,85 @@
+id: fr-mistral-ai
+type: company
+geo:
+  country: fr
+  label: France / EU
+facts:
+  routes:
+    - id: content-usage-policy-report
+      type: form
+      value: https://mistral.ai/report/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 53edf1b4d65e
+    - id: hackerone-vulnerability-submission
+      type: disclosure
+      value: https://hackerone.com/58acc269-165e-4d18-a2d8-61f296cdea60/embedded_submissions/new?locale=en
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 15687c0cb3c5
+    - id: press
+      type: email
+      value: press@mistral.ai
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0a2ec741afe0
+    - id: homepage
+      type: homepage
+      value: https://mistral.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 23dac5ecc7e6
+    - id: framework
+      type: framework
+      value: https://legal.mistral.ai/terms/usage-policy
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 33adc1d00206
+  region: European Union
+  public_input: limited
+  tags:
+    - behaviour
+    - flaw
+    - insider
+    - systemic
+strings:
+  name: Mistral AI
+  remit: No publicly named safety or alignment function. Trust Center covers data protection and security compliance; the Usage Policy is enforced through a content-reporting form.
+  reality_check: No public accounts found of anyone reaching a Mistral safety function. No safety@ or disclosure@ address is published anywhere on mistral.ai or legal.mistral.ai — checked the contact page, terms, and usage policy directly. The report form's requirement of a content URL structurally prevents reporting a capability or alignment finding.
+  notes: "For a European frontier developer this is a thin public surface: not found — general contact only, at https://mistral.ai/contact. If you have a model-safety finding, the HackerOne form is the only route with a human triage attached, but it is framed as security. No safe-harbour language and no whistleblower channel found."
+  routes:
+    content-usage-policy-report:
+      label: Content / usage policy report form
+      scope: "21 categories of content violation (hate speech, CSAM, violence, NCII, fraud, IP). Intro: 'Mistral AI is committed to maintaining a safe environment for all. This form allows you to report content you believe violates our terms or applicable laws.'"
+      note: Content moderation, not model safety. Requires you to supply a URL or a shared private chat link to the offending content — so it cannot be used to report a general model flaw.
+    hackerone-vulnerability-submission:
+      label: HackerOne vulnerability submission
+      scope: Security vulnerabilities. Published on the contact page, which notes 'General bugs shall be reported via our standard support channels'.
+      note: No stated AI/model safety scope.
+    press:
+      label: Press
+      scope: Media enquiries only.
+      note: Listed here only because it is one of the few published addresses.
+    homepage:
+      label: Homepage
+    framework:
+      label: No published frontier safety framework or responsible scaling policy found
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://mistral.ai/report/
+      checked: 2026-09-22
+    - url: https://hackerone.com/58acc269-165e-4d18-a2d8-61f296cdea60/embedded_submissions/new?locale=en
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 517b56617f
+  migrated_from: input/data/institutions.json

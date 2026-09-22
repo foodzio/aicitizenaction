@@ -1,0 +1,62 @@
+id: us-senate-committee-energy-natural-resources
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.energy.senate.gov/about/membership
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1f5b432efc79
+    - id: public-route
+      type: submission
+      value: https://www.energy.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5e8dab1f3f2c
+  level: federal
+  chamber: Senate
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Mike Lee
+      party: R
+      region: UT
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Martin Heinrich
+      party: D
+      region: NM
+      verified_on: 2026-09-22
+strings:
+  name: Senate Committee on Energy and Natural Resources
+  ai_jurisdiction: "The power behind AI. Send here: data-center electricity demand and who pays for it, grid interconnection queues, DOE national laboratories as AI compute and evaluation venues, DOE AI programs, nuclear and geothermal siting for AI loads, and ratepayer protection when utilities serve hyperscale data centers. This has become one of the busiest AI-adjacent committees because energy is the binding constraint on AI buildout."
+  business: "VERIFIED: the committee has held hearings on AI data centers and electricity demand (C-SPAN program record 662912). March 2026: Ranking Member Heinrich published an energy-affordability agenda tied to data-center load growth. September 2026: legislation to curb AI data-center utility costs stalled in the Senate (CNBC, 17 Sep 2026). Heinrich is also co-chair of the Senate AI Caucus, so this committee's ranking member is a principal Senate AI actor. Separately, Heinrich, Whitehouse and Van Hollen sent March 2026 letters to AI companies about gas-powered data centers through the Environment and Public Works Committee."
+  public_route: "VERIFIED: https://www.energy.senate.gov/contact and a help page at https://www.energy.senate.gov/help. Committee: 304 Dirksen, Washington DC 20510, 202-224-4971."
+  note: Chair/ranking verified 2026-09-22 against senate.gov committee_memberships_SSEG.htm.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.energy.senate.gov/about/membership
+      checked: 2026-09-22
+    - url: https://www.energy.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 0aee9a545c
+  migrated_from: input/data/committees-and-organisations.json#seats

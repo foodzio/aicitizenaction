@@ -1,0 +1,85 @@
+id: us-midas-project
+type: watchdog
+geo:
+  country: us
+  label: United States (EIN 99-2326977)
+facts:
+  routes:
+    - id: submit-tip-best-designed
+      type: submission
+      value: https://www.themidasproject.com/tips
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e3f2dfa88b63
+    - id: signal-username
+      type: submission
+      value: midasproject.10
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 195d4ecdb8b6
+    - id: general-enquiries
+      type: email
+      value: info@themidasproject.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ffa4ce394921
+    - id: contact-form
+      type: form
+      value: https://www.themidasproject.com/contact
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 008b9e565e56
+    - id: homepage
+      type: homepage
+      value: https://www.themidasproject.com/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 1d333ea7ebb6
+  region: United States
+  public_input: open
+  tags:
+    - flaw
+    - insider
+    - research
+strings:
+  name: The Midas Project
+  remit: "Watchdog non-profit holding AI companies to their own stated commitments. Projects: Watchtower (tracks changes to and violations of corporate AI safety policies), the Seoul Tracker (whether 16 organisations met the Seoul frontier-safety commitments), The OpenAI Files (documented governance, leadership and culture concerns at OpenAI), and Model Republic (industry influence on policymakers)."
+  threat_model: Corporate accountability and commitment-drift — the concern that voluntary safety commitments quietly erode. Agnostic between threat models; it tracks whatever companies promised, which spans misuse, catastrophic risk and governance.
+  reality_check: "Tiny, and it absolutely reads its inbox — the single best target in this list for someone with concrete non-public evidence about an AI company's conduct. Note their own advice: if you are an employee considering disclosure, contact the AI Whistleblower Initiative first for independent legal guidance before approaching any journalist or watchdog."
+  gov_channel: Indirect but potent — its findings get picked up by press and cited in policy debate; The OpenAI Files fed directly into scrutiny of OpenAI's restructuring.
+  routes:
+    submit-tip-best-designed:
+      label: Submit a tip — the best-designed whistleblower-adjacent intake in this list
+      scope: Anyone with specific, non-public, evidence-backed information; they particularly want evidence of gaps between public statements and internal practice
+      note: Accepts texts, emails, documents, photos, reports. Signal preferred for sensitive material.
+    signal-username:
+      label: Signal (encrypted) — username
+      scope: Sensitive tips; no name required
+      note: Verified on the tips page. They warn no app protects a compromised device.
+    general-enquiries:
+      label: General enquiries (explicitly NOT recommended for confidential material)
+      scope: Non-sensitive
+    contact-form:
+      label: Contact form
+      scope: General
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.themidasproject.com/tips
+      checked: 2026-09-22
+    - url: https://www.themidasproject.com/contact
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b7e97742ac
+  migrated_from: input/data/institutions.json

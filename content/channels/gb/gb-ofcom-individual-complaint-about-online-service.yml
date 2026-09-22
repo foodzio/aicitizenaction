@@ -1,0 +1,55 @@
+id: gb-ofcom-individual-complaint-about-online-service
+type: reporting-channel
+geo:
+  country: gb
+  label: UK
+facts:
+  routes:
+    - id: submission-page
+      type: complaint
+      value: https://www.ofcom.org.uk/make-a-complaint/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f276d47e31d4
+    - id: homepage
+      type: homepage
+      value: https://www.ofcom.org.uk/make-a-complaint/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ec706180b476
+  region: United Kingdom
+  public_input: open
+  tags:
+    - harm
+strings:
+  name: Ofcom — individual complaint about an online service
+  remit: Complaints about phone, broadband and postal services; TV, radio and on-demand programmes; wireless interference; something you have seen on an online service, website or app; and premium rate services.
+  reality_check: Explicitly symbolic at the individual level — Ofcom says so. It is a data point in a monitoring dataset. The mechanism with actual teeth is the super-complaint, which individuals cannot use.
+  accepts: Complaints about phone, broadband and postal services; TV, radio and on-demand programmes; wireless interference; something you have seen on an online service, website or app; and premium rate services.
+  does_not_accept: Ofcom cannot investigate individual cases or mandate removal of specific content. It will not resolve your dispute with a platform.
+  how: Contact the service provider first, then report via Ofcom's online complaints portal at ofcom.org.uk/make-a-complaint.
+  format: Online form.
+  timing: Rolling.
+  after: Reports feed Ofcom's monitoring and evidence base for Online Safety Act supervision and enforcement against systemic failures.
+  operator: Ofcom
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Complaints about phone, broadband and postal services; TV, radio and on-demand programmes; wireless interference; something you have seen on an online service, website or app; and premium rate services.
+      note: Contact the service provider first, then report via Ofcom's online complaints portal at ofcom.org.uk/make-a-complaint.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.ofcom.org.uk/make-a-complaint/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 04ce73c273
+  migrated_from: input/data/institutions.json

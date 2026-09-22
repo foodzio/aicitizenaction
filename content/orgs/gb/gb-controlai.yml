@@ -1,0 +1,72 @@
+id: gb-controlai
+type: civil-society
+geo:
+  country: gb
+  label: United Kingdom, with US, Canadian and German campaigns
+facts:
+  routes:
+    - id: take-action-contact-your
+      type: form
+      value: https://controlai.org/take-action
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a0bcf14a4ef9
+    - id: general-enquiries
+      type: email
+      value: hello@controlai.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4c0f3dc28a78
+    - id: newsletter
+      type: form
+      value: https://blog.controlai.org/embed
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9b3e8473479d
+    - id: homepage
+      type: homepage
+      value: https://controlai.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: a6dc9458b2e9
+  region: United Kingdom
+  public_input: open
+  tags:
+    - law
+    - research
+strings:
+  name: ControlAI
+  remit: "Campaigning organisation working for a prohibition on the development of superintelligent AI. Three functions: public education (newsletter with 148,000+ readers), grassroots advocacy (tooling that helps tens of thousands contact their elected representatives), and direct policymaker briefing — claims 400+ lawmakers briefed since November 2024, with 160+ cross-party UK MPs and Peers and 35+ Canadian lawmakers having endorsed its statement."
+  threat_model: Extinction risk from superintelligence, narrowly. Its stated position is that superintelligence could arrive before 2030 with no known containment method. No engagement with near-term harms.
+  reality_check: Small, fast-moving, and it answers its email. Best-in-class if your goal is to get a loss-of-control concern in front of a legislator. It will not engage with bias, privacy or labour concerns.
+  gov_channel: Direct and unusually effective for its size — its core product is legislator briefings, and it has secured named cross-party endorsements in three parliaments.
+  routes:
+    take-action-contact-your:
+      label: Take action — contact your representative
+      scope: Anyone, especially UK, US, Canada and Germany
+      note: The most operationally effective grassroots tool in this space — it has demonstrably produced lawmaker endorsements.
+    general-enquiries:
+      label: General enquiries, briefing requests and funding enquiries
+      scope: Anyone; note the email domain is controlai.com while the website is controlai.org
+      note: Verified on controlai.org. They explicitly invite briefing requests — a legislator's office or an individual can ask for one.
+    newsletter:
+      label: Newsletter
+      scope: Anyone
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://controlai.org/take-action
+      checked: 2026-09-22
+    - url: https://blog.controlai.org/embed
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: ca235e82ec
+  migrated_from: input/data/institutions.json

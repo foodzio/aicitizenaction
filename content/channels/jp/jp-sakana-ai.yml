@@ -1,0 +1,59 @@
+id: jp-sakana-ai
+type: company
+geo:
+  country: jp
+  label: Japan
+facts:
+  routes:
+    - id: no-verified-safety-or
+      type: form
+      value: https://sakana.ai/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c99fd23f1e3e
+    - id: homepage
+      type: homepage
+      value: https://sakana.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c29272849f9b
+    - id: framework
+      type: framework
+      value: https://sakana.ai/company-info/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: f46c34e29298
+  region: Japan
+  public_input: none
+  tags:
+    - behaviour
+    - flaw
+strings:
+  name: Sakana AI
+  remit: No publicly named safety or alignment function. Corporate team covers finance, legal, HR and operations; a Defense Policy is published covering defence-related work.
+  reality_check: No public accounts found of anyone attempting to reach Sakana about safety. Sakana's most notable public correction — the 2025 episode where its 'AI CUDA Engineer' claimed speedups that turned out to be a benchmark-gaming artifact — was surfaced on X by independent researchers and acknowledged publicly, not through any disclosure channel. That is the de facto route.
+  notes: "Record as: no public safety channel. Practically, the X account (@SakanaAILabs) is how findings about Sakana have actually reached the company."
+  routes:
+    no-verified-safety-or:
+      label: No verified safety or disclosure channel found
+      scope: Not found — general contact only. Fetching the homepage and corporate info page found no email addresses and no mailto links at all; only X and LinkedIn accounts.
+      note: Terms of service for the Fugu console exist at https://console.sakana.ai/terms-of-service but publish no safety contact.
+    homepage:
+      label: Homepage
+    framework:
+      label: No published frontier safety framework found
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://sakana.ai/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 7a6b8952bc
+  migrated_from: input/data/institutions.json

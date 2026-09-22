@@ -1,0 +1,44 @@
+id: us-ai-money-watch
+type: organisation
+geo:
+  country: us
+  label: United States.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://aimoneywatch.org/ltf
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ca97f922b110
+  perspective: safety-advocacy
+  volunteers: unclear
+  tags:
+    - fund
+    - join
+    - law
+    - tip
+strings:
+  name: AI Money Watch (a project of Demand Progress)
+  the_ask: Make AI industry political spending visible, so voters can see who is paying for which candidate.
+  what_they_do: A public tracker of AI-related political spending built from FEC independent expenditure filings, updated daily, browsable by candidate, race and funder, with a published methodology.
+  newcomer_action: Look up your own district before you vote or donate, and send the funder page to your local journalist or representative.
+  tips: unclear
+  geography: United States.
+  scale: A project of Demand Progress, a long-running grassroots democracy organisation; the tracker itself is small.
+  spending: Demand Progress accepts donations via ActBlue.
+  caution: Demand Progress's own homepage does not list AI as a focus area — AI Money Watch is a discrete project, so do not assume donating to Demand Progress funds AI work. The tracker's figures ($75.5M raised by Leading the Future, ~$70M cash on hand as of January 2026) come from FEC filings and will differ from press reports of total pledged commitments.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://aimoneywatch.org/ltf
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 131865403f
+  migrated_from: input/data/committees-and-organisations.json#orgs

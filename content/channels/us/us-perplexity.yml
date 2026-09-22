@@ -1,0 +1,80 @@
+id: us-perplexity
+type: company
+geo:
+  country: us
+  label: USA
+facts:
+  routes:
+    - id: vulnerability-disclosure-program
+      type: disclosure
+      value: https://bugcrowd.com/f1d4df64-af62-46e2-b7d3-dbe70b69a34e/external/report
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 615e826d5b8b
+    - id: support-including-what-they
+      type: email
+      value: support@perplexity.ai
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 23cebcb76cf2
+    - id: privacy-data-concerns
+      type: email
+      value: privacy@perplexity.ai
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ebac60d43b81
+    - id: homepage
+      type: homepage
+      value: https://www.perplexity.ai/hub/security
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 282c2506ad4b
+    - id: framework
+      type: framework
+      value: https://www.perplexity.ai/hub/security-vdp
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: b769477478d4
+  region: United States
+  public_input: limited
+  tags:
+    - behaviour
+    - flaw
+strings:
+  name: Perplexity
+  remit: No publicly named safety or alignment function. A security team runs the VDP; support handles what Perplexity calls 'safety issues' at the account level.
+  reality_check: "The Comet browser has been a repeated target of serious external security research — Hacktron's one-click UXSS and Brave's prompt-injection findings — and those were handled through the security program, which does function. But model safety is formally excluded from it, and the fallback is a general support inbox. No safe-harbour language is published on the VDP page: it asks researchers to 'avoid actions that could compromise the privacy of our users' but offers no legal protection in return."
+  notes: If it is a security bug, Bugcrowd works. If it is a model-behaviour or hallucination harm, Perplexity has told you in writing it is out of scope, and support@ is your only option. Note the absence of safe harbour before doing any testing.
+  routes:
+    vulnerability-disclosure-program:
+      label: Vulnerability Disclosure Program (Bugcrowd)
+      scope: "'All public facing endpoints of Perplexity. All user-facing clients and API endpoints are in scope.' Explicitly OUT of scope: 'AI-related issues such as hallucinations and model safety are not in scope of the security program.'"
+      note: One of the bluntest published exclusions of model safety anywhere.
+    support-including-what-they:
+      label: Support — including what they classify as safety issues
+      scope: Account, functional and safety issues, per the VDP page.
+      note: General support queue; not a safety function.
+    privacy-data-concerns:
+      label: Privacy and data concerns
+      scope: Privacy and data.
+    homepage:
+      label: Homepage
+    framework:
+      label: No published safety framework; Vulnerability Disclosure Program is the governing document
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://bugcrowd.com/f1d4df64-af62-46e2-b7d3-dbe70b69a34e/external/report
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: d0dfe8f65b
+  migrated_from: input/data/institutions.json

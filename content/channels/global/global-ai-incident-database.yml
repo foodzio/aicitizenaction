@@ -1,0 +1,86 @@
+id: global-ai-incident-database
+type: watchdog
+geo:
+  country: global
+  label: International (US-registered non-profit)
+facts:
+  routes:
+    - id: submit-incident-open-anyone
+      type: submission
+      value: https://incidentdatabase.ai/apps/submit/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 38b79dfd50a1
+    - id: responsible-ai-collaborative-collaboration
+      type: email
+      value: info@raicollab.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 305c0c08618f
+    - id: contact-page
+      type: form
+      value: https://incidentdatabase.ai/contact/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ab3736cdabf0
+    - id: github-issues-bugs
+      type: submission
+      value: https://github.com/responsible-ai-collaborative/aiid/issues/new
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e7aae82bc1d4
+    - id: homepage
+      type: homepage
+      value: https://incidentdatabase.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 85bee4a5ec3e
+  region: Global
+  public_input: open
+  tags:
+    - behaviour
+    - harm
+    - research
+strings:
+  name: AI Incident Database (Responsible AI Collaborative)
+  remit: Public, open-source, citable index of realised AI harms and near-harms, modelled on aviation and cybersecurity incident databases. Community-submitted incidents are editorially reviewed and indexed with reports, entities and classifications. Recent entries span AI medical transcription misuse, deepfake tooling, chatbots implicated in violence planning, and law-enforcement technology abuse.
+  threat_model: Realised harms of any severity, empirically grounded. Strongest on near-term harms; increasingly captures misuse and agentic failures. Not a theoretical-risk organisation.
+  reality_check: Small, volunteer-heavy, and genuinely reads its submissions — one of the few places in this entire list where an unaffiliated person's report reliably gets human attention and can end up in the permanent public record. If you have a specific realised harm, start here. Editorial review takes time and marginal submissions do get rejected.
+  gov_channel: Indirect but real — AIID entries are cited by OECD AIM, academic literature, journalists and regulators. Getting an incident indexed here makes it citable everywhere else.
+  routes:
+    submit-incident-open-anyone:
+      label: Submit an incident — open to anyone, no account required
+      scope: Anyone, worldwide
+      note: THE canonical public route for reporting a concrete AI harm. Submissions are editorially reviewed before publication.
+    responsible-ai-collaborative-collaboration:
+      label: Responsible AI Collaborative — collaboration enquiries
+      scope: Partnership, research, editorial
+    contact-page:
+      label: Contact page
+      scope: General
+    github-issues-bugs:
+      label: GitHub issues — bugs, taxonomy, code
+      scope: Anyone
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://incidentdatabase.ai/apps/submit/
+      checked: 2026-09-22
+    - url: https://incidentdatabase.ai/contact/
+      checked: 2026-09-22
+    - url: https://github.com/responsible-ai-collaborative/aiid/issues/new
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 6e2cf2696b
+  migrated_from: input/data/institutions.json

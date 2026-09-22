@@ -1,0 +1,45 @@
+id: us-consumer-reports
+type: organisation
+geo:
+  country: us
+  label: United States, federal and state.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://advocacy.consumerreports.org/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c3267e55f920
+  perspective: civil-liberties
+  volunteers: unclear
+  tags:
+    - audit
+    - fund
+    - harm
+    - join
+    - tip
+strings:
+  name: Consumer Reports
+  the_ask: AI products sold to consumers should be tested, transparent and accountable, and states should keep their role in regulating AI.
+  what_they_do: Independent product testing plus a policy arm (CR Advocacy) that files regulatory comments, testifies to Congress (including on AI-enabled fraud and scams), surveys consumers on AI, and backs state algorithmic accountability bills such as Washington SB 5116. It publicly backed the Senate vote upholding states' role over AI regulation and raised concerns about the White House AI Action Plan.
+  newcomer_action: Read the CR Advocacy AI press releases to see which bills it supports, cite its testing in a complaint, and subscribe for advocacy alerts.
+  tips: unclear
+  geography: United States, federal and state.
+  scale: Very large and well-resourced; one of the few AI-engaged organisations with its own independent testing labs.
+  spending: Subscription and donation funded; takes no advertising.
+  caution: Its AI landing page URL could not be confirmed — the domain and its AI positions are verified through CR's own press releases and research posts on advocacy.consumerreports.org, but treat any specific AI sub-page path as UNVERIFIED. Its focus is consumer protection, not catastrophic risk.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://advocacy.consumerreports.org/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 6a8ef723c0
+  migrated_from: input/data/committees-and-organisations.json#orgs

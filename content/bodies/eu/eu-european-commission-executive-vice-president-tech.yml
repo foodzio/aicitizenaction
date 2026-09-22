@@ -1,0 +1,58 @@
+id: eu-european-commission-executive-vice-president-tech
+type: seat
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://commission.europa.eu/about/organisation/college-commissioners_en
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f67d6a95e4c1
+    - id: public-route
+      type: submission
+      value: https://ec.europa.eu/info/law/better-regulation/have-your-say
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3966bfd8a14c
+  level: bloc
+  tags:
+    - audit
+    - law
+  seats:
+    - role: chair
+      name: Henna Virkkunen
+      verified_on: 2026-09-22
+strings:
+  name: European Commission — Executive Vice-President for Tech Sovereignty, Security and Democracy
+  ai_jurisdiction: "The Commissioner-level holder of the digital and AI portfolio: owns the AI Act's implementation through DG CNECT and the AI Office, the Digital Omnibus simplification agenda, the Cloud and AI Development Act, the Apply AI strategy, and AI gigafactory/compute policy. The Commission has the exclusive right of legislative initiative, so this is where AI files begin."
+  business: AI Act implementation following the Digital Omnibus on AI (adopted 16 June 2026, delaying high-risk system standards and banning 'nudifier' applications); Cloud and AI Development Act proposed 3 June 2026.
+  public_route: Respond to open consultations on the 'Have your say' portal; write to the Cabinet; or use the AI Act Service Desk for regulatory questions. Commission consultations are open to anyone worldwide, not only EU residents.
+  format_rules: Consultation responses are normally published on the initiative's feedback page together with the respondent's name and country, and organisations must give their EU Transparency Register number. You can ask for anonymity. Feedback periods for a 'call for evidence' are typically 4 weeks; full public consultations run 12 weeks.
+  key_people: Operational work sits with DG CNECT and the European AI Office within it.
+  note: VERIFIED 2026-09-22 from the European Commission's College of Commissioners page.
+  seat_notes:
+    chair: Executive Vice-President of the European Commission for Tech Sovereignty, Security and Democracy
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://commission.europa.eu/about/organisation/college-commissioners_en
+      checked: 2026-09-22
+    - url: https://ec.europa.eu/info/law/better-regulation/have-your-say
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b7f5ebfaa3
+  migrated_from: input/data/committees-and-organisations.json#seats

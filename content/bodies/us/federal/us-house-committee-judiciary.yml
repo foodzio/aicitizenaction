@@ -1,0 +1,63 @@
+id: us-house-committee-judiciary
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://judiciary.house.gov/about/membership
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3146fbb0b010
+    - id: public-route
+      type: submission
+      value: https://judiciary.house.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e59512cff851
+  level: federal
+  chamber: House
+  tags:
+    - audit
+    - law
+  seats:
+    - role: chair
+      name: Jim Jordan
+      party: R
+      region: OH
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Jamie Raskin
+      party: D
+      region: MD
+      verified_on: 2026-09-22
+strings:
+  name: House Committee on the Judiciary
+  ai_jurisdiction: "Courts, DOJ, FBI, copyright and patent law, antitrust, immigration, and constitutional questions. Send here: AI and copyright, AI liability and Section 230, AI-driven antitrust concerns in compute and model markets, law-enforcement use of AI and facial recognition, government pressure on platforms and AI providers over speech, and AI-enabled crime."
+  business: "VERIFIED: H.R.9125 Sectoral AI Governance Act of 2026 (Jacobs, D-CA) referred to this committee and to Oversight, 3 Jun 2026. Subcommittee hearing on protecting creators in the age of AI and the internet (Raskin opening statement published). July 2026 IP subcommittee hearing on site-blocking and the NO FAKES Act. Jordan has also run an aggressive oversight track on alleged government 'jawboning' of AI and platform companies over content."
+  public_route: "VERIFIED: https://judiciary.house.gov/contact, including a dedicated whistleblower intake at https://judiciary.house.gov/contact/whistleblowers. Committee: 2138 Rayburn House Office Building, Washington DC 20515, 202-225-6906. Minority: https://democrats-judiciary.house.gov/."
+  note: Chair/ranking verified 2026-09-22 from the House Clerk's MemberData.xml.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://judiciary.house.gov/about/membership
+      checked: 2026-09-22
+    - url: https://judiciary.house.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 28b7dc449e
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,43 @@
+id: us-future-society
+type: organisation
+geo:
+  country: us
+  label: US and Europe (Brussels presence); founded 2014.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://thefuturesociety.org/donate/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 549e467d48bf
+  perspective: safety-advocacy
+  volunteers: no
+  tags:
+    - fund
+    - join
+    - law
+strings:
+  name: The Future Society
+  the_ask: Align AI through better governance — workable international rules, EU implementation, and AI security policy, rather than leaving frontier development ungoverned.
+  what_they_do: Policy research and direct engagement with US, European and international decision-makers on international AI governance, European AI governance and AI security; publishes on verification, compute capacity, AI-enabled weapons, risk standards and agent regulation.
+  newcomer_action: Read its resource library and cite it in consultation responses; donate; apply for one of its remote European analyst roles.
+  tips: no
+  geography: US and Europe (Brussels presence); founded 2014.
+  scale: Small-to-mid policy nonprofit; salary bands published ($58.4K–$99.2K) suggest a modest budget.
+  spending: Not disclosed.
+  caution: An insider policy shop. No campaign, no volunteering, no petitions — if you want to *do* something rather than fund or join it professionally, look elsewhere.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://thefuturesociety.org/donate/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 0c72ac0769
+  migrated_from: input/data/committees-and-organisations.json#orgs

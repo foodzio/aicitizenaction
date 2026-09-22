@@ -1,0 +1,58 @@
+id: eu-european-parliament-committee-industry-2
+type: seat
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.europarl.europa.eu/committees/en/itre/home/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 22bae5e29911
+    - id: public-route
+      type: submission
+      value: https://www.europarl.europa.eu/committees/en/itre/home/highlights
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7f106699a594
+  level: bloc
+  tags:
+    - law
+    - petition
+  seats:
+    - role: chair
+      name: Borys Budka (EPP, Poland, Koalicja Obywatelska)
+      verified_on: 2026-09-22
+strings:
+  name: European Parliament — Committee on Industry, Research and Energy (ITRE)
+  ai_jurisdiction: "AI as industrial and research policy: compute and supercomputing capacity, the AI gigafactories and Cloud/AI infrastructure agenda, Horizon Europe and FP10 research funding for AI, semiconductors, energy demand of data centres, and EU technological sovereignty. ITRE is the opinion-giving or associated committee on most AI files that IMCO or LIBE lead, and lead on the infrastructure side."
+  business: Cloud and AI Development Act (2026/0138(COD)) — ITRE is heavily engaged alongside IMCO; AI compute and gigafactory funding; energy consumption of AI data centres.
+  public_route: Correspondence with rapporteurs and shadows; ITRE secretariat at itre-secretariat@europarl.europa.eu; public hearings; PETI petition.
+  format_rules: No formal limits or portal. Position papers conventionally 2–4 pages. Not published by Parliament.
+  key_people: "Vice-Chairs: Tsvetelina Penkova (S&D, BG); Elena Donazzan (ECR, IT); Giorgio Gori (S&D, IT); Yvan Verougstraete (Renew, BE)."
+  note: VERIFIED 2026-09-22 from the official ITRE member list PDF at europarl.europa.eu/committees/en/itre/home/members/pdf. (The HTML members page is bot-blocked; the PDF export is the reliable official source.)
+  seat_notes:
+    chair: Chair
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.europarl.europa.eu/committees/en/itre/home/members
+      checked: 2026-09-22
+    - url: https://www.europarl.europa.eu/committees/en/itre/home/highlights
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 77007a9cbd
+  migrated_from: input/data/committees-and-organisations.json#seats

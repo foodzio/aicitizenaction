@@ -1,0 +1,64 @@
+id: us-senate-committee-commerce-2
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.commerce.senate.gov/about/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e32394c49615
+    - id: public-route
+      type: submission
+      value: https://www.commerce.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 2c9b274a7e91
+  level: federal
+  chamber: Senate
+  tags:
+    - audit
+    - law
+    - petition
+  seats:
+    - role: chair
+      name: Ted Cruz
+      party: R
+      region: TX
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Maria Cantwell
+      party: D
+      region: WA
+      verified_on: 2026-09-22
+strings:
+  name: Senate Committee on Commerce, Science, and Transportation
+  ai_jurisdiction: "The single most important AI door in the Senate. Owns the FTC (consumer protection, unfair/deceptive AI practices), NIST and the Center for AI Standards and Innovation (CAISI), NTIA, NSF, NOAA, the FCC, interstate commerce generally, and commercial data privacy. Send here: general-purpose/frontier AI regulation, AI safety testing and evaluation mandates, federal preemption of state AI laws, AI transparency and disclosure rules, chatbots and minors, deepfakes/NCII, AI standards, commercial data privacy, autonomous vehicles, and AI in telecom. NOT here: copyright, liability/private rights of action, or DOJ (Judiciary); federal agency internal AI use (HSGAC); military AI (Armed Services); AI chip export controls (Banking)."
+  business: "VERIFIED: 5 Aug 2026 markup advanced S.1748 Kids Online Safety Act (Blackburn/Blumenthal), S.4199 Youth AI Privacy Act (Markey), S.4407 CHATBOT Act (Cruz/Schatz/Curtis), S.5171 Children's Artificial Intelligence Toy Safety Act of 2026 (Duckworth/Murkowski), S.737 SCREEN Act. S.2750 SANDBOX Act (Cruz, Sept 2025) — AI regulatory sandbox, referred here; part of Cruz's announced AI Policy Framework. S.3952 Future of Artificial Intelligence Innovation Act of 2026 (Young) pending. S.2938 Artificial Intelligence Risk Evaluation Act of 2025 (Hawley/Blumenthal) referred here 2025. S.146 TAKE IT DOWN Act (Cruz) enacted 2025. Hearing 'Intelligent Networks: Powering Artificial Intelligence and Transforming Communications' (30 Jul 2026); 'Measuring What Matters: Science, Standards, and Strategic Competition' (21 Jul 2026). 16 Sep 2026: committee approved Cruz-Wyden anti-'jawboning' bill 18-10, which would create a public database of government communications with AI providers; Cantwell amendment to strip the AI references failed 15-13. As of Sept 2026 a Cruz/Klobuchar/Thune frontier-AI 'catastrophic risk' bill is still unreleased after an August markup was pulled, with Cruz and Cantwell split over self-testing vs. mandatory federal vetting."
+  public_route: "VERIFIED contact page https://www.commerce.senate.gov/contact — Majority (R) staff: Dirksen 554, 202-224-1251. Minority (D) staff: Hart 428, 202-224-0411. Main committee: 254 Russell, Washington DC 20510. No public web form and no published staff email directory. Non-constituents are not barred, but the committee publishes no intake process for them; a letter or call to the majority or minority staff line is the only published route."
+  note: Chair/ranking verified 2026-09-22 against senate.gov's official committee membership roster (committee_memberships_SSCM.htm). The FLI guide calls this committee 'Commerce, Science, and Technology' — the correct name is Commerce, Science, and Transportation.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.commerce.senate.gov/about/members
+      checked: 2026-09-22
+    - url: https://www.commerce.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 72df6721b2
+  migrated_from: input/data/committees-and-organisations.json#seats

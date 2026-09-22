@@ -1,0 +1,62 @@
+id: ae-g42
+type: company
+geo:
+  country: ae
+  label: United Arab Emirates
+facts:
+  routes:
+    - id: no-verified-safety-channel
+      type: form
+      value: https://www.g42.ai/contact-us
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: f46a0d6d1a6f
+    - id: homepage
+      type: homepage
+      value: https://www.g42.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c13457e6c0b7
+    - id: framework
+      type: framework
+      value: https://www.g42.ai/application/files/9517/3882/2182/G42_Frontier_Safety_Framework_Publication_Version.pdf
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: e66308971070
+  region: Middle East
+  public_input: none
+  tags:
+    - behaviour
+strings:
+  name: G42
+  remit: Publishes a Frontier AI Safety Framework as part of the Seoul/Korea frontier safety commitments; no named external-facing safety office.
+  reality_check: No public accounts of external safety contact. G42 is significant as the main non-Western, non-Chinese signatory with a published framework, and is deeply tied to Microsoft and to UAE state AI strategy, but its framework publishes no intake route.
+  notes: "Record as: framework published, no public safety channel."
+  routes:
+    no-verified-safety-channel:
+      label: No verified safety channel found
+      scope: Not found — general contact only.
+      note: Framework identified via METR's index. No safety-specific email or form located.
+    homepage:
+      label: Homepage
+    framework:
+      label: G42 Frontier AI Safety Framework (6 February 2025)
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.g42.ai/contact-us
+      checked: null
+    - url: https://www.g42.ai/
+      checked: null
+    - url: https://www.g42.ai/application/files/9517/3882/2182/G42_Frontier_Safety_Framework_Publication_Version.pdf
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 7324aee502
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,43 @@
+id: us-public-citizen-2
+type: organisation
+geo:
+  country: us
+  label: United States, federal and state.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.citizen.org/topic/artificial-intelligence/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ad7f4231e3ed
+  perspective: civil-liberties
+  volunteers: yes
+  tags:
+    - audit
+    - harm
+    - join
+strings:
+  name: Public Citizen
+  the_ask: "Treat generative AI as a present danger: block federal deregulation and pre-emption of state AI laws, stop non-consensual AI images, and halt unchecked data centre build-out."
+  what_they_do: Consumer advocacy, litigation and petitions. Live campaigns include a petition against congressional AI deregulation, a petition on non-consensual AI images, and a letter urging a Texas data centre moratorium.
+  newcomer_action: Sign the petition against congressional AI deregulation (act.citizen.org/page/83712/petition/1) — it takes two minutes — and join the updates list.
+  tips: unclear — no dedicated AI whistleblower line found
+  geography: United States, federal and state.
+  scale: Large, long-established (founded 1971) with lobbying, litigation and research arms.
+  spending: Member and donation funded.
+  caution: Frames AI harm as consumer, labour and democratic harm happening now — it is generally dismissive of framing centred on future superintelligence. If you arrived via extinction-risk arguments, expect a different vocabulary.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.citizen.org/topic/artificial-intelligence/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 341301b009
+  migrated_from: input/data/committees-and-organisations.json#orgs

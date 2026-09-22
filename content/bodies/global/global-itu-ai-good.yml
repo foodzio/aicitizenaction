@@ -1,0 +1,87 @@
+id: global-itu-ai-good
+type: multilateral
+geo:
+  country: global
+  label: Global (UN specialised agency, Geneva)
+facts:
+  routes:
+    - id: neural-network-community
+      type: membership
+      value: https://neuralnetwork.aiforgood.itu.int
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 039c933918ee
+    - id: innovation-factory-startup-pitch
+      type: submission
+      value: https://aiforgood.itu.int/pitch/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1ee768c9ba26
+    - id: engage-partnership-enquiries
+      type: form
+      value: https://aiforgood.itu.int/engage/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 69c14e82d5a9
+    - id: speaker-proposals
+      type: form
+      value: https://aiforgood.itu.int/speakers-ai-for-good/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 74db55d55daf
+    - id: homepage
+      type: homepage
+      value: https://aiforgood.itu.int/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c66a6503ff61
+  region: Global
+  public_input: open
+  tags:
+    - systemic
+strings:
+  name: ITU — AI for Good
+  remit: ITU's year-round AI platform, co-convened with Switzerland and 50+ UN agencies, organised around Solutions & Knowledge, Skills & Capacity, and Standards & Policy. Hosts the annual Global Summit in Geneva (which co-located with the inaugural Global Dialogue in July 2026), the Innovation Factory startup pitch programme, and the 'Neural Network' community platform (60k+ members).
+  threat_model: Overwhelmingly opportunity-framed — SDG applications, capacity building, standards. Safety appears as trustworthiness/standards, not as catastrophic risk. It is the least risk-focused body in the multilateral set.
+  reality_check: Genuinely open to join, genuinely low influence per unit of effort. Good for visibility and contacts; poor for escalating a safety concern.
+  gov_channel: Moderate — ITU is a treaty body and runs AI standardisation study groups, but AI for Good itself is a convening platform, not a decision venue. Formal ITU standards work still requires member-state or sector-member status.
+  routes:
+    neural-network-community:
+      label: Neural Network community (free to join)
+      scope: Anyone
+      note: Lowest-barrier entry point into the UN AI ecosystem.
+    innovation-factory-startup-pitch:
+      label: Innovation Factory startup pitch portal
+      scope: Startups with AI-for-SDG solutions
+    engage-partnership-enquiries:
+      label: Engage / partnership enquiries
+      scope: Sponsorship, partnership, participation
+      note: No public email address listed.
+    speaker-proposals:
+      label: Speaker proposals
+      scope: Speaking at summits and webinars
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://neuralnetwork.aiforgood.itu.int
+      checked: 2026-09-22
+    - url: https://aiforgood.itu.int/pitch/
+      checked: 2026-09-22
+    - url: https://aiforgood.itu.int/engage/
+      checked: 2026-09-22
+    - url: https://aiforgood.itu.int/speakers-ai-for-good/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: aba9f64848
+  migrated_from: input/data/institutions.json

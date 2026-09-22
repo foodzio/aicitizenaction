@@ -1,0 +1,43 @@
+id: ar-argentina-ai-governance
+type: government
+geo:
+  country: ar
+  label: Argentina
+facts:
+  routes:
+    - id: ai-bills-before-chamber
+      type: docket
+      value: https://rest.hcdn.gob.ar/web/proyectos/289500/adjuntos/104100
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: es
+      source_id: 11edaf311cab
+  region: Latin America
+  public_input: limited
+  tags:
+    - law
+    - systemic
+strings:
+  name: Argentina — AI governance (Subsecretaría / SIGEN public-sector AI controls)
+  remit: "STATUS AS OF SEPT 2026: NO AI LAW AND NO DEDICATED AI BODY I COULD VERIFY. Argentina has a National AI Plan lineage and various bills before Congress, none passed. The concrete 2026 development I could identify is SIGEN Resolution 197/2026 approving a Guide to AI Controls for the Public Sector — an internal-audit instrument for government AI use, not a market regulator. The Agencia de Acceso a la Información Pública handles data-protection aspects. The Milei administration has positioned Argentina as deregulatory and pro-AI-investment."
+  powers_text: advise
+  reality_check: Essentially no channel. Argentina has no AI authority, no AI law, no consultation process I could verify, and no English-language material. The one 2026 instrument I found governs how the state audits its own AI use. A global directory should list Argentina as 'no identified AI governance contact' rather than inventing one.
+  notes: Lowest-confidence entry in this set. I deliberately list no contact address because I could verify none.
+  routes:
+    ai-bills-before-chamber:
+      label: AI bills before the Chamber of Deputies
+      scope: legislative record
+      note: UNVERIFIED (search result). One of several pending bills; not authoritative.
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://rest.hcdn.gob.ar/web/proyectos/289500/adjuntos/104100
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: d13bea4f11
+  migrated_from: input/data/institutions.json

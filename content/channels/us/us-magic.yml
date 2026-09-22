@@ -1,0 +1,62 @@
+id: us-magic
+type: company
+geo:
+  country: us
+  label: USA
+facts:
+  routes:
+    - id: no-verified-safety-or
+      type: form
+      value: https://magic.dev/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: cc555d2ff45d
+    - id: homepage
+      type: homepage
+      value: https://magic.dev/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: fe1b92ee7d6d
+    - id: framework
+      type: framework
+      value: https://magic.dev/agi-readiness-policy
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 18940b306174
+  region: United States
+  public_input: none
+  tags:
+    - behaviour
+    - flaw
+    - systemic
+strings:
+  name: Magic
+  remit: Published an AGI Readiness Policy — an early, small-lab equivalent of a responsible scaling policy — but has published no named safety function or external channel.
+  reality_check: Included because it appears in METR's index of published frontier safety policies, which is the standard reference list. The policy has not been revised since July 2024 and the company has been publicly quiet since. No evidence of any external safety channel or of anyone using one.
+  notes: "Record as: framework published (and stale), no public safety channel."
+  routes:
+    no-verified-safety-or:
+      label: No verified safety or disclosure channel found
+      scope: Not found — general contact only.
+      note: Framework identified via METR's frontier AI safety policy index; no safety contact published.
+    homepage:
+      label: Homepage
+    framework:
+      label: AGI Readiness Policy, v1.0 (2 July 2024)
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://magic.dev/
+      checked: null
+    - url: https://magic.dev/agi-readiness-policy
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: d2b05b5d0c
+  migrated_from: input/data/institutions.json

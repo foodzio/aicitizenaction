@@ -1,0 +1,43 @@
+id: gb-pauseai-uk
+type: organisation
+geo:
+  country: gb
+  label: United Kingdom, six chapters.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://pauseai.uk/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ee2c9f1c7b83
+  perspective: safety-advocacy
+  volunteers: yes
+  tags:
+    - fund
+    - join
+    - law
+strings:
+  name: PauseAI UK
+  the_ask: The UK should act to avert risks from superhuman AI, including binding frontier AI legislation.
+  what_they_do: Community-led organising through six local chapters (London, Glasgow, Oxford, Leicester, Manchester, West of England); meetups, book launches, public events; submissions to parliamentary inquiries including the Future of the Workforce inquiry; publishes playbooks for starting new local groups.
+  newcomer_action: Fill in the onboarding form, join the WhatsApp community, and turn up to the next event on its Luma calendar — or use the playbook to start a group in your city.
+  tips: unclear — hello@pauseai.uk
+  geography: United Kingdom, six chapters.
+  scale: "Very small: a UK Director (Joseph Miller) and Deputy Director (Matilda da Rui), hiring more, plus volunteers."
+  spending: Not disclosed; donations at pauseai.uk/donate.
+  caution: A distinct UK operation with its own staff, site, jobs and donation route — not simply a page of PauseAI Global. Chapter activity is uneven; the newer chapters are very new.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://pauseai.uk/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 472670a597
+  migrated_from: input/data/committees-and-organisations.json#orgs

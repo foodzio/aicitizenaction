@@ -1,0 +1,41 @@
+id: global-international-federation-journalists
+type: organisation
+geo:
+  country: global
+  label: Global — affiliates in 148+ countries representing about 600,000 journalists.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.ifj.org/actions/working-groups/artificial-intelligence
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f66d8e8224d2
+  perspective: professional
+  volunteers: yes — through affiliated national unions
+  tags:
+    - join
+strings:
+  name: International Federation of Journalists (IFJ)
+  the_ask: AI in the media must serve ethically-produced journalism, comply with the Global Charter of Ethics, and be governed by negotiated standards rather than imposed by employers.
+  what_they_do: Issued IFJ Recommendations on the Use of Artificial Intelligence (June 2024) with global unions, and adopted a Global Framework Agreement on Artificial Intelligence in the Media (May 2026). Coordinates an AI working group across affiliated national unions.
+  newcomer_action: Join or contact your national journalists' union and ask them to apply the IFJ Recommendations in your next collective agreement — the IFJ works through affiliates, not individuals.
+  tips: no
+  geography: Global — affiliates in 148+ countries representing about 600,000 journalists.
+  scale: Large federation, small secretariat.
+  spending: Affiliate-funded.
+  caution: No individual membership — everything runs through your national union. Framework agreements are only as strong as each affiliate's ability to enforce them locally.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.ifj.org/actions/working-groups/artificial-intelligence
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 6e3352c5e3
+  migrated_from: input/data/committees-and-organisations.json#orgs

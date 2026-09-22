@@ -1,0 +1,88 @@
+id: cn-national-information-security-standardization-technical-committee
+type: government
+geo:
+  country: cn
+  label: People's Republic of China
+facts:
+  routes:
+    - id: draft-standards-open-public
+      type: consultation
+      value: https://www.tc260.org.cn/tc260/bzzqyj/yjzj_list.shtml
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: zh
+      source_id: 43bf7d9b86ec
+    - id: standards-implementation-feedback-portal
+      type: form
+      value: https://www.tc260.org.cn/portal/feedback
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: zh
+      source_id: 95a19e0c214d
+    - id: secretariat-telephone-fax
+      type: email
+      value: +86-10-64102730 / +86-10-64102731 (fax 64102997)
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: zh
+      source_id: 5d63f314f2b8
+    - id: ai-safety-governance-framework
+      type: docket
+      value: https://www.tc260.org.cn/upload/2025-09-15/1757911253996041369.pdf
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: zh
+      source_id: c2db7785c91b
+    - id: homepage
+      type: homepage
+      value: https://www.tc260.org.cn/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 1d094d6c3fb2
+  local_name: 全国网络安全标ardization技术委员会 (全国网络安全标准化技术委员会)
+  region: China
+  public_input: open
+  tags:
+    - systemic
+strings:
+  name: National Information Security Standardization Technical Committee (TC260)
+  remit: The standards body that writes China's operative AI safety rules in technical form. Secretariat at the China Electronics Standardization Institute (中国电子技术标准化研究院), under CAC/SAMR guidance. Produced the AI Safety Governance Framework (1.0 Sept 2024, 2.0 Sept 2025), the Ethical Security Guidelines for AI Applications (TC260-005), Practice Guides on labelling AI-generated synthetic content, and in 2026 a draft Practice Guide on general principles for AI application security (TC260-PG-2026NA, 征求意见稿 v1.0, Jan 2026) and a draft development-security guide for agent systems (智能体系统开发安全指南, Sept 2026). Its recommended national standards (GB/T) become de facto mandatory through CAC filing requirements.
+  powers_text: advise
+  reality_check: "This is the most honest answer to 'can outsiders reach China on AI safety': yes, narrowly, through TC260 draft-standard comment windows — and no, not usefully. The windows are real (typically 30–60 days), the notices name a feedback mailbox, and TC260 has in the past received and visibly incorporated industry comments. But the site is exclusively Chinese with no English page at all (verified), the comment list is JS-rendered and hard to monitor, the feedback template asks for work unit and Chinese contact details, and the entire orientation is toward domestic industry and research institutes. There is no evidence of foreign individual submissions being processed. Anyone building a directory should list TC260 as 'real but effectively domestic-only', and should not promise a working email address — the email changes per notice."
+  notes: TC260, not CAC, is where China's AI safety substance is actually drafted. The Framework 2.0 is the single most useful document for understanding China's official risk taxonomy, including its treatment of loss-of-control risk.
+  routes:
+    draft-standards-open-public:
+      label: Draft standards open for public comment (标准征求意见)
+      scope: draft national standards
+      note: VERIFIED — this comment-listing URL is published on the TC260 homepage, which I fetched. The list page itself is JavaScript-rendered so I could not read individual notices; each notice carries its own feedback email, contact person and deadline.
+    standards-implementation-feedback-portal:
+      label: Standards implementation feedback portal
+      scope: feedback on standards already in force
+      note: UNVERIFIED — surfaced in search as '网络安全国家标准实施应用信息反馈'; not fetched.
+    secretariat-telephone-fax:
+      label: Secretariat telephone / fax
+      scope: general
+      note: VERIFIED — published in the TC260 site footer, which I fetched. NO email address is published site-wide; emails appear only inside individual draft-comment notices.
+    ai-safety-governance-framework:
+      label: AI Safety Governance Framework 2.0 (full text)
+      scope: policy document
+      note: UNVERIFIED (search result).
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.tc260.org.cn/tc260/bzzqyj/yjzj_list.shtml
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 79367b0d46
+  migrated_from: input/data/institutions.json

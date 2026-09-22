@@ -1,0 +1,57 @@
+id: gb-all-party-parliamentary-group-artificial-intelligence
+type: seat
+geo:
+  country: gb
+  label: United Kingdom
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://publications.parliament.uk/pa/cm/cmallparty/260629/artificial-intelligence.htm
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: cca39af2f74f
+    - id: public-route
+      type: submission
+      value: https://bicpavilion.com/about_pavilion/appg-artificial-intelligence
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: "230348337606"
+  level: national
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Dr Allison Gardner MP (Labour, Stoke-on-Trent South)
+      verified_on: 2026-09-22
+strings:
+  name: All-Party Parliamentary Group on Artificial Intelligence (APPG AI)
+  ai_jurisdiction: "Cross-party, cross-House informal group. Its registered purpose: 'The APPG explores the social, economic and societal impact and implications of artificial intelligence.' It has no formal powers but it convenes ministers, officials and MPs, runs evidence sessions and publishes reports — and unlike a select committee it is genuinely open to unsolicited outside contact."
+  business: Ongoing evidence/roundtable programme run by the Big Innovation Centre secretariat. APPG registers are republished roughly every 5–6 weeks; the 29 June 2026 register is the most recent verified entry.
+  public_route: Email the secretariat directly — appg@biginnovationcentre.com (Prof. Birgitte Andersen, tel 07944 783648) — or write to the Chair at allison.gardner.mp@parliament.uk / House of Commons, London SW1A 0AA. APPGs accept unsolicited papers, invite outside speakers and have no evidence-window constraint, which makes this the most underused door in Westminster.
+  format_rules: No formal word limit, deadline or publication rule — it is not a parliamentary proceeding. Material is published at the secretariat's discretion. Note that anything you send is not protected by parliamentary privilege.
+  key_people: "Co-Chair: Lord Clement-Jones (Liberal Democrat) — the most active AI legislator in the Lords. Vice-Chairs: Dawn Butler MP (Labour); Lord Ranger of Northwood (Conservative). Public enquiry point: Professor Birgitte Andersen, Big Innovation Centre (the APPG's secretariat)."
+  note: VERIFIED 2026-09-22 from the official Register of All-Party Parliamentary Groups as at 29 June 2026. Dr Gardner also sits on the Commons Science and Technology Committee, which makes her the highest-leverage single UK backbench contact on AI.
+  seat_notes:
+    chair: Chair and Registered Contact
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://publications.parliament.uk/pa/cm/cmallparty/260629/artificial-intelligence.htm
+      checked: 2026-09-22
+    - url: https://bicpavilion.com/about_pavilion/appg-artificial-intelligence
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 3952764d2c
+  migrated_from: input/data/committees-and-organisations.json#seats

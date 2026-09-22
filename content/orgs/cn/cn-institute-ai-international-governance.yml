@@ -1,0 +1,59 @@
+id: cn-institute-ai-international-governance
+type: academic
+geo:
+  country: cn
+  label: China (Beijing)
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: i-aiig@tsinghua.edu.cn
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f8bf4a18df80
+    - id: institute-site
+      type: form
+      value: http://aiig.tsinghua.edu.cn/en/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8f081dcdc66e
+    - id: homepage
+      type: homepage
+      value: http://aiig.tsinghua.edu.cn/en/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: e597e93d6232
+  region: China
+  public_input: limited
+  tags:
+    - law
+    - research
+strings:
+  name: Institute for AI International Governance (I-AIIG), Tsinghua University
+  remit: Tsinghua's AI governance research institute. Conducts research on AI governance frameworks and international cooperation, hosts the International AI Cooperation and Governance Forum, runs talent programmes (including the AI for SDGs Global Youth competition), publishes annual reports and academic work, and coordinates with UN agencies and foreign governments. Tsinghua also hosts the Center for International Security and Strategy (CISS), which does AI-and-security track-II work, and co-launched a UNU Hub on ethical and responsible AI.
+  threat_model: International governance and cooperation framing; increasingly engages frontier risk and AI safety in dialogue with Western counterparts. Chinese AI safety discourse has moved noticeably toward frontier-risk framing, with Chinese scientists (including Andrew Yao and Zhang Ya-Qin) signing international statements.
+  reality_check: A published inbox, but approaching a Chinese state-adjacent academic institute cold from abroad rarely works. The realistic route is via Concordia AI, which has existing relationships across Chinese AI safety institutions, or via the international forums Tsinghua co-hosts.
+  gov_channel: Strong within China — Tsinghua institutes advise Chinese ministries and participate in official international dialogues.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+      note: "Phone: +86 10 62794781. Tsinghua University, Haidian District, Beijing."
+    institute-site:
+      label: Institute site (English)
+      scope: Public
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: http://aiig.tsinghua.edu.cn/en/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: "28952e7167"
+  migrated_from: input/data/institutions.json

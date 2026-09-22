@@ -1,0 +1,61 @@
+id: in-standing-committee-communications-information-technology
+type: seat
+geo:
+  country: in
+  label: India
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://sansad.in/ls/committee/departmentally-related-standing-committees
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: English and Hindi. Submissions accepted in either. No other languages served.
+      source_id: 6fdc6086197f
+    - id: public-route
+      type: submission
+      value: https://sansad.in/ls/committee/departmentally-related-standing-committees
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: English and Hindi. Submissions accepted in either. No other languages served.
+      source_id: 399fd4480e5d
+  local_name: संचार और सूचना प्रौद्योगिकी संबंधी स्थायी समिति
+  level: national
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Nishikant Dubey
+      verified_on: 2026-09-22
+strings:
+  name: Standing Committee on Communications and Information Technology (Department-Related Parliamentary Standing Committee No. 18)
+  ai_jurisdiction: Oversight of MeitY, Ministry of Communications and Ministry of Information & Broadcasting. Covers AI policy, IndiaAI Mission budgets, IT Rules, deepfakes/AI-generated content, data protection, telecom. It examines Demands for Grants and can self-select AI subjects; it has no power to amend rules, only to report.
+  business: "2025-26 committee (31 members: 21 Lok Sabha + 10 Rajya Sabha per current LS practice; PRS lists 28 as 20+8 — the exact count is disputed between sources, see note). Reported in March 2026 on the impact of the emergence of artificial intelligence. Also active on Make in India in electronics (meeting 25 June 2026), fake news/misinformation and telecom. VERIFIED that Dubey chaired as of June 2026 via ANI; committees are normally reconstituted each September, so a 2026-27 reconstitution may have occurred in the days around this date — re-check before citing."
+  public_route: Two routes. (1) When a committee takes up a subject or a Bill it issues a Press Communiqué through PIB and on sansad.in inviting memoranda from 'individuals, organisations, experts and stakeholders', usually 15-21 days, submitted by post or email to the Committee Branch, Lok Sabha Secretariat. (2) Writing directly to the Chairperson or the Committee's Director/Additional Director at any time. There is no standing online submission portal for DRSCs.
+  format_rules: None. No signature or supporter threshold. Acceptance of a memorandum is entirely at the Chairperson's discretion, and there is no obligation to acknowledge or publish it.
+  realistic: Partly usable. An ordinary person can post or email a memorandum and it costs nothing, but there is no tracking, no acknowledgement and no publication of unsolicited submissions. Oral evidence invitations go almost exclusively to industry bodies, ministries and a small set of established think tanks. A non-Indian or an unaffiliated individual is very unlikely to be called. The realistic value is written input that may be cited anonymously in a report.
+  language_note: English and Hindi. Submissions accepted in either. No other languages served.
+  note: Chair verified via ANI reporting (June 2026) and PRS India committee page. The official sansad.in per-committee deep link returns HTTP 500 intermittently; the eParlib composition PDF for 2025-26 is at https://eparlib.sansad.in/bitstream/123456789/3017142/1/18_Communications_and_Information_Technology_25.pdf. Membership counts differ between PRS (28) and Lok Sabha rules (31) — treat as UNVERIFIED on that specific number.
+  seat_notes:
+    chair: Chairperson (BJP, Lok Sabha, Godda constituency)
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://sansad.in/ls/committee/departmentally-related-standing-committees
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: cf43742919
+  migrated_from: input/data/committees-and-organisations.json#seats

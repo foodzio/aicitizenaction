@@ -1,0 +1,66 @@
+id: sg-digital-trust-centre
+type: government
+geo:
+  country: sg
+  label: Singapore
+facts:
+  routes:
+    - id: dtc-at-ntu
+      type: form
+      value: https://www.ntu.edu.sg/dtc
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 4b8999bc0276
+    - id: dtc-singapore-innovation-grant
+      type: consultation
+      value: https://www.imda.gov.sg/proposal-submission/dtc-sg-innovation-grant-call
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 2ace4b92eb19
+    - id: homepage
+      type: homepage
+      value: https://www.ntu.edu.sg/dtc
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ecebc17b9052
+  region: Singapore
+  public_input: limited
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Digital Trust Centre (DTC), Nanyang Technological University
+  remit: Singapore's national R&D centre for trust technologies, hosted at NTU and funded by IMDA and the National Research Foundation. Designated in May 2024 as the technical execution arm of the Singapore AI Safety Institute. Conducts AI testing and evaluation research, including multilingual/multicultural and agentic AI testing, and runs innovation grant calls. University research centre — no regulatory power.
+  powers_text: research
+  reality_check: "As a university centre, DTC is reachable the way academic groups are: named researchers with institutional email, publications, conference presence. That is a real route for technical collaboration and far more tractable than the AISI's own contactless website. It is not a route for policy input or complaints."
+  notes: Listed separately from the Singapore AISI because the split-host model means the AISI brand and the actual research staff sit in different institutions.
+  routes:
+    dtc-at-ntu:
+      label: DTC at NTU
+      scope: research centre
+      note: UNVERIFIED (search result). Not fetched; university contact pages generally do publish staff emails.
+    dtc-singapore-innovation-grant:
+      label: DTC Singapore innovation grant call (IMDA)
+      scope: research funding, likely Singapore-based entities only
+      note: UNVERIFIED (search result).
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.ntu.edu.sg/dtc
+      checked: null
+    - url: https://www.imda.gov.sg/proposal-submission/dtc-sg-innovation-grant-call
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 196ed5d71e
+  migrated_from: input/data/institutions.json

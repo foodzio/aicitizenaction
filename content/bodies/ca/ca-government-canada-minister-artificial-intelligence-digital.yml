@@ -1,0 +1,57 @@
+id: ca-government-canada-minister-artificial-intelligence-digital
+type: seat
+geo:
+  country: ca
+  label: Canada
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.pm.gc.ca/en/cabinet
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 2a5f995eb779
+    - id: public-route
+      type: submission
+      value: https://www.canada.ca/en/innovation-science-economic-development.html
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 14dc99de045c
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: The Hon. Evan Solomon
+      verified_on: 2026-09-22
+strings:
+  name: Government of Canada — Minister of Artificial Intelligence and Digital Innovation
+  ai_jurisdiction: Canada's dedicated AI portfolio. Owns the national AI strategy and the federal government's response to the collapse of AI legislation.
+  business: "AIDA'S STATUS AND WHAT REPLACED IT: the Artificial Intelligence and Data Act was Part 3 of Bill C-27 (Digital Charter Implementation Act, 2022). It died on the Order Paper when Parliament was prorogued in January 2025 and was never reintroduced. Canada therefore has NO general AI statute as at September 2026. What replaced it is not a law but a strategy plus targeted bills: 'AI for All', Canada's national AI strategy, launched by Prime Minister Mark Carney on 4 June 2026, built on three pillars (trust, opportunity, sovereignty), targeting a rise in AI adoption from 12% to 60% by 2034 and 250,000 new AI-related jobs over five years. Alongside it: the Protecting Victims Act (introduced December 2025) to prohibit distribution of non-consensual sexual deepfakes, and new legislation tabled in June 2026 on children's data and privacy. Commitments to modernise digital frameworks cover deepfakes and surveillance pricing."
+  public_route: Write to the minister; respond to Innovation, Science and Economic Development Canada consultations; or, more effectively, put the point into an INDU brief where it enters the parliamentary record.
+  format_rules: Ministerial correspondence is not published and has no set format.
+  note: VERIFIED 2026-09-22 from the Prime Minister of Canada's official news release of 4 June 2026 launching AI for All, which names Evan Solomon in that portfolio. AIDA's death by prorogation is well established; I did not find any successor AI bill, and I am explicitly NOT claiming one exists.
+  seat_notes:
+    chair: Minister of Artificial Intelligence and Digital Innovation (also Minister responsible for the Federal Economic Development Agency for Southern Ontario)
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.pm.gc.ca/en/cabinet
+      checked: 2026-09-22
+    - url: https://www.canada.ca/en/innovation-science-economic-development.html
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 3e0c7e5fce
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,74 @@
+id: eu-national-market-surveillance-authorities-under-ai
+type: government
+geo:
+  country: eu
+  label: Individual EU Member States
+facts:
+  routes:
+    - id: article-85-right-lodge
+      type: complaint
+      value: https://artificialintelligenceact.eu/article/85/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c7f9ee157cbe
+    - id: commission-list-national-single
+      type: form
+      value: https://digital-strategy.ec.europa.eu/en/policies/market-surveillance-authorities-under-ai-act
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e57c0eb16aaa
+    - id: named-national-complaint-portals
+      type: complaint
+      value: varies by Member State; no consolidated EU directory published
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d58a3a3f6a00
+    - id: homepage
+      type: homepage
+      value: https://digital-strategy.ec.europa.eu/en/policies/market-surveillance-authorities-under-ai-act
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: a40ab26cdb42
+  region: European Union
+  public_input: open
+  tags:
+    - harm
+strings:
+  name: National market surveillance authorities under the AI Act (27 Member States)
+  remit: "Supervise and enforce the AI Act's rules for AI SYSTEMS — prohibited practices and high-risk requirements — within their territory, using the powers in Regulation (EU) 2019/1020: request information, demand documentation, require corrective action, order withdrawal or recall from the market, and impose penalties set in national law (up to 7% of global turnover for prohibited practices). They do NOT supervise GPAI models; that is the AI Office's exclusive competence. Member States were required to designate them by 2 August 2025, and many have not: as of June 2026, only 9 Member States had fully designated both market surveillance and notifying authorities, 12 had partial clarity, and 6 had designated none at all."
+  powers_text: fine
+  reality_check: "Article 85 is the AI Act's single genuine citizen-facing right, live since 2 August 2026 — anyone with grounds may complain and the authority must process it. In practice it is badly broken at the point of use: six Member States have designated nobody, a third have only partial designations, Ireland split the function across fifteen bodies, and the Commission has still not published the consolidated contact directory it promised. So the right exists and the address often does not. Where an authority IS designated and is an existing regulator (Italy's ACN, Denmark's digital agency, Finland's Traficom), complaints land in a functioning inbox. Note the scope limit that catches people out: market surveillance authorities cannot act against a GPAI MODEL provider — that is the AI Office's exclusive competence — so a frontier-model complaint filed nationally will be bounced or forwarded."
+  notes: Around 2,000 bodies across the EU carry some market surveillance function, which is why no single directory works. Always verify your own Member State's designation before filing.
+  routes:
+    article-85-right-lodge:
+      label: ARTICLE 85 — right to lodge a complaint with a market surveillance authority
+      scope: "'Any natural or legal person having grounds to consider that there has been an infringement' of the AI Act may complain to the market surveillance authority of their Member State. The authority must handle it under its Regulation (EU) 2019/1020 procedures, alongside any other administrative or judicial remedy. APPLIES FROM 2 AUGUST 2026 (Article 113)."
+      note: VERIFIED — text and applicability date confirmed. Note this citation is to the widely used AI Act Explorer, a non-official but reliable consolidated text; the authoritative text is in the Official Journal.
+    commission-list-national-single:
+      label: Commission list of national Single Points of Contact
+      scope: The Commission page carries a table of designated Single Points of Contact by Member State, with links to some national authorities (e.g. Ireland's AI Office at aioffice.gov.ie).
+      note: VERIFIED — BUT the page itself states 'The Commission is considering the notifications and will publish a list of Single Points of Contact in due time', i.e. the authoritative consolidated directory does NOT yet exist.
+    named-national-complaint-portals:
+      label: Named national complaint portals
+      scope: Designated leads include Cyprus (Commissioner of Communications), Denmark (Danish Agency for Digital Government), Finland (Traficom as SPOC, decentralised model), Hungary (Minister for Enterprise Development), Ireland (15 designated bodies, SPOC is the Minister for Enterprise, Tourism and Employment), Italy (National Cybersecurity Agency, with AgID as notifying authority), Lithuania (Communications Regulatory Authority), Malta (Malta Digital Innovation Authority and the IDPC), Slovenia (Agency for Communication Networks and Services).
+      note: VERIFIED via the AI Act national implementation tracker (updated 17 June 2026). Individual national complaint-form URLs were NOT verified and must be checked per country.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://artificialintelligenceact.eu/article/85/
+      checked: 2026-09-22
+    - url: https://digital-strategy.ec.europa.eu/en/policies/market-surveillance-authorities-under-ai-act
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 844edf4c35
+  migrated_from: input/data/institutions.json

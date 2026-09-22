@@ -1,0 +1,64 @@
+id: it-agenzia-l-italia-digitale-agenzia-cybersicurezza
+type: government
+geo:
+  country: it
+  label: Italy
+facts:
+  routes:
+    - id: agid-artificial-intelligence-page
+      type: form
+      value: https://www.agid.gov.it/en/intervention-areas/artificial-intelligence
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: it, en
+      source_id: 58c0648825e1
+    - id: acn-market-surveillance-complaints
+      type: complaint
+      value: null
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: it
+    - id: homepage
+      type: homepage
+      value: https://www.agid.gov.it/en/intervention-areas/artificial-intelligence
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ef7c65222f9c
+  local_name: Agenzia per l'Italia Digitale; Agenzia per la Cybersicurezza Nazionale
+  region: European Union
+  public_input: limited
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Agenzia per l'Italia Digitale (AgID) and Agenzia per la Cybersicurezza Nazionale (ACN) — Italian national AI authorities
+  remit: Law No. 132 of 23 September 2025 ('Disposizioni e deleghe al Governo in materia di intelligenza artificiale') made Italy the first EU member state with a national AI statute layered on the EU AI Act. It designates AgID as the notifying authority (promotion, notification of conformity-assessment bodies) and ACN as the market-surveillance authority (inspection and sanction powers under the AI Act). Implementing decrees on governance, training, biometrics and liability were being adopted through 2026. Banca d'Italia, CONSOB, IVASS and Garante Privacy retain sectoral competence. ACN is a genuine enforcement authority; AgID is largely administrative.
+  powers_text: fine
+  reality_check: "Italy is an EU member state, so the operative public route for a foreigner is the EU AI Act's own complaint mechanism to the national market-surveillance authority (ACN) — Article 85 gives ANY person the right to lodge a complaint, with no nationality requirement. That right is real and legally binding. The practical barrier is language: ACN and AgID operate in Italian, and I could not verify an English-language complaint form."
+  notes: Italy is NOT a member of the international network. Included because the user asked. Law 132/2025 is significant as the first national AI law inside the EU.
+  routes:
+    agid-artificial-intelligence-page:
+      label: AgID artificial intelligence page
+      scope: general
+      note: UNVERIFIED (search result). AgID maintains a PEC (certified email) and standard contact pages in Italian; I did not verify specific addresses.
+    acn-market-surveillance-complaints:
+      label: ACN market-surveillance complaints
+      scope: AI Act market surveillance
+      note: UNVERIFIED — I could not confirm a dedicated AI complaint form at ACN as of Sept 2026. Do not publish an address without checking.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.agid.gov.it/en/intervention-areas/artificial-intelligence
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 526b1a8438
+  migrated_from: input/data/institutions.json

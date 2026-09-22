@@ -1,0 +1,41 @@
+id: us-american-medical-association
+type: organisation
+geo:
+  country: us
+  label: United States.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.ama-assn.org/practice-management/digital-health/augmented-intelligence-medicine
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: cee0d3f7b29b
+  perspective: professional
+  volunteers: yes — through the House of Delegates and specialty societies, members only
+  tags:
+    - join
+strings:
+  name: American Medical Association (AMA)
+  the_ask: "Health AI must be ethical, equitable and responsible: disclosed to physicians and patients, overseen by clinicians, with clear rules on physician liability, data privacy, and limits on payers' use of automated decision-making."
+  what_they_do: Sets formal AMA policy (searchable in PolicyFinder), publishes the AMA Principles for Augmented Intelligence Development, Deployment and Use, runs the AI Specialty Collaborative and STEPS Forward governance toolkits, surveys physician sentiment, and lobbies Congress on health AI including insurer use of AI in coverage decisions.
+  newcomer_action: "If you are a physician: join the AI Specialty Collaborative through your specialty society, and use the STEPS Forward governance module to push your employer to adopt an AI policy. Bring a resolution through your state delegation if you want AMA policy changed."
+  tips: no
+  geography: United States.
+  scale: Very large, with one of the biggest health lobbying operations in Washington.
+  spending: Membership and publishing funded; a major federal lobbying spender.
+  caution: The AMA deliberately uses 'augmented intelligence' rather than 'artificial intelligence' to signal that AI should assist and not replace physicians — that framing is itself the position. Change happens through the House of Delegates resolution process, which is slow and requires membership and a sponsoring society.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.ama-assn.org/practice-management/digital-health/augmented-intelligence-medicine
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 1a4901e14a
+  migrated_from: input/data/committees-and-organisations.json#orgs

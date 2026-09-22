@@ -1,0 +1,58 @@
+id: il-ministry-innovation
+type: government
+geo:
+  country: il
+  label: Israel
+facts:
+  routes:
+    - id: ministry-innovation
+      type: form
+      value: https://www.gov.il/en/departments/ministry_of_innovation_science_and_technology
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: he, en
+      source_id: 42be09789391
+    - id: israel-s-ai-regulation
+      type: docket
+      value: https://dig.watch/resource/israels-policy-on-artificial-intelligence-regulation-and-ethics
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 15becc295350
+  local_name: משרד החדשנות, המדע והטכנולוגיה
+  region: Middle East
+  public_input: limited
+  tags:
+    - law
+    - systemic
+strings:
+  name: Ministry of Innovation, Science and Technology — Israel AI policy
+  remit: "Israel published its 'Policy on Artificial Intelligence Regulation and Ethics' (Dec 2023), jointly with the Ministry of Justice, adopting a deliberately sectoral, soft-law, pro-innovation approach: no AI act, no central AI regulator, guidance to existing sectoral regulators, and a proposed inter-ministerial AI policy coordination centre. The Privacy Protection Authority handles data-related AI issues. As of Sept 2026 I found no evidence that Israel has established an AI safety institute or binding AI legislation."
+  powers_text: advise
+  reality_check: Weak for outsiders. Israel's approach is explicitly to avoid creating a central AI body, which means there is no address to write to. The policy document was itself produced after a public call for comments (2022), so consultation does happen episodically, but there is no standing channel. gov.il is partially English-language. No frontier-risk institutional stance.
+  notes: Israel signed the Bletchley Declaration. Not a network member. I could not verify any 2025–26 institutional change; treat the 2023 policy as the current baseline.
+  routes:
+    ministry-innovation:
+      label: Ministry of Innovation, Science and Technology
+      scope: general
+      note: UNVERIFIED — plausible gov.il path, NOT fetched or confirmed. Do not publish without checking.
+    israel-s-ai-regulation:
+      label: Israel's AI Regulation and Ethics Policy (summary)
+      scope: reference
+      note: UNVERIFIED (search result). Third-party summary, not an official channel.
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.gov.il/en/departments/ministry_of_innovation_science_and_technology
+      checked: null
+    - url: https://dig.watch/resource/israels-policy-on-artificial-intelligence-regulation-and-ethics
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: bd3a2e2ad4
+  migrated_from: input/data/institutions.json

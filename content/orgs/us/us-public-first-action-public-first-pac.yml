@@ -1,0 +1,44 @@
+id: us-public-first-action-public-first-pac
+type: organisation
+geo:
+  country: us
+  label: United States — federal and state races.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://publicfirstaction.us/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c9c3abc20182
+  perspective: safety-advocacy
+  volunteers: unclear
+  tags:
+    - fund
+    - join
+    - law
+    - tip
+strings:
+  name: Public First Action / Public First PAC
+  the_ask: Elect and pressure federal and state politicians to back AI safeguards for children, workers and the public, stronger semiconductor export controls, and transparency from leading AI labs — and to resist federal pre-emption of state AI laws.
+  what_they_do: A 501(c)(4) plus three affiliated super PACs (Public First PAC, Jobs and Democracy PAC, Defending Our Values PAC). Led by former Reps. Chris Stewart (R-Utah) and Brad Carson (D-Okla.). This is the pro-safeguards electoral counterweight to Leading the Future.
+  newcomer_action: Donate to whichever entity fits your politics, or fill in the questionnaire to make contact; candidates can seek its endorsement.
+  tips: unclear
+  geography: United States — federal and state races.
+  scale: New (2025-26) and small relative to the industry PACs.
+  spending: Reported by Forbes as expecting to raise at least $50 million for the 2026 cycle, against Leading the Future's $100M+ launch — roughly a 1:2 to 1:3 disadvantage before Meta's separate spending is counted. Figure is third-party; treat as UNVERIFIED against its own filings.
+  caution: This is partisan electoral money on both sides of the aisle, not charity — donations are not tax-deductible and will be spent attacking and supporting candidates. Reported to be backed by Anthropic employees and executives, which means an AI company's staff are funding one side of the AI safety fight; weigh that.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://publicfirstaction.us/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 489d1d3fff
+  migrated_from: input/data/committees-and-organisations.json#orgs

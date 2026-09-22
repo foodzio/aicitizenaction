@@ -1,0 +1,78 @@
+id: ch-federal-office-communications-swiss-ai-regulation
+type: government
+geo:
+  country: ch
+  label: Switzerland
+facts:
+  routes:
+    - id: bakom-artificial-intelligence-page
+      type: consultation
+      value: https://www.bakom.admin.ch/en/artificial-intelligence
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: de, fr, it, en
+      source_id: fbeb660d99f4
+    - id: federal-chancellery-ai-regulation
+      type: consultation
+      value: https://www.bk.admin.ch/en/regulation
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: de, fr, it, en
+      source_id: 69c16cfe4511
+    - id: swiss-federal-consultation-procedure
+      type: consultation
+      value: null
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: de, fr, it
+    - id: homepage
+      type: homepage
+      value: https://www.bakom.admin.ch/en/artificial-intelligence
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 9c48a6ec90d3
+  local_name: Bundesamt für Kommunikation (BAKOM) / Office fédéral de la communication (OFCOM)
+  region: Europe (non-EU)
+  public_input: open
+  tags:
+    - law
+    - systemic
+strings:
+  name: Federal Office of Communications (OFCOM / BAKOM) — Swiss AI regulation lead
+  remit: "Switzerland has NO AI safety institute and no comprehensive AI act. In February 2025 the Federal Council chose a sectoral, minimally-invasive approach: ratify the Council of Europe Framework Convention on AI (signed by Switzerland) and make only targeted sectoral legal amendments, with non-binding measures elsewhere. BAKOM/OFCOM leads the legislative drafting, with the Federal Chancellery (Bundeskanzlei) handling federal-administration AI use. Consultation drafts were expected through 2026. Advisory/legislative-preparation, not a regulator of AI."
+  powers_text: advise
+  reality_check: "Switzerland's Vernehmlassung (consultation) procedure is genuinely open: anyone, including foreign organisations, may submit, and all submissions are published in full. That is a real and unusual channel. But there was no verified live AI consultation at the time of checking, and Switzerland is NOT a network member and has no AI safety institute. Swiss federal sites are in German, French and Italian with partial English."
+  notes: Switzerland signed the Council of Europe Framework Convention on AI. Ratification was in progress. No frontier-risk-specific institutional stance identified.
+  routes:
+    bakom-artificial-intelligence-page:
+      label: BAKOM artificial intelligence page
+      scope: general
+      note: UNVERIFIED (search result). Not fetched.
+    federal-chancellery-ai-regulation:
+      label: Federal Chancellery AI regulation page
+      scope: federal administration AI
+      note: UNVERIFIED (search result).
+    swiss-federal-consultation-procedure:
+      label: Swiss federal consultation procedure (Vernehmlassung)
+      scope: draft legislation
+      note: UNVERIFIED URL. The Vernehmlassung process is formally open to ANY interested party including foreign ones — submissions are published. This is the single most foreigner-accessible legislative comment process in this directory, but I did not verify a live AI consultation.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.bakom.admin.ch/en/artificial-intelligence
+      checked: null
+    - url: https://www.bk.admin.ch/en/regulation
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 8f6c45f27c
+  migrated_from: input/data/institutions.json

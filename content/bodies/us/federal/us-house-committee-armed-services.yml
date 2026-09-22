@@ -1,0 +1,62 @@
+id: us-house-committee-armed-services
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://armedservices.house.gov/about/members.htm
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a0569e98eeb5
+    - id: public-route
+      type: submission
+      value: https://armedservices.house.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6bab7ca20141
+  level: federal
+  chamber: House
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Mike Rogers
+      party: R
+      region: AL
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Adam Smith
+      party: D
+      region: WA
+      verified_on: 2026-09-22
+strings:
+  name: House Committee on Armed Services
+  ai_jurisdiction: "DoD and the annual NDAA — the most reliable moving vehicle for AI legislation in the House. Send here: autonomous weapons policy, AI in nuclear command and control, DoD AI acquisition and the Chief Digital and AI Office, DARPA, military AI test and evaluation, DoD compute and data centers, and defense AI workforce."
+  business: "VERIFIED: the FY2026 NDAA carried extensive AI and cyber provisions (CRS In Focus IF13197), and House and Senate AI provisions went to conference. For FY2027, Rep. Bacon delivered an opening statement on the Cyber, Information Technologies and Innovation subcommittee print of the FY27 NDAA (armedservices.house.gov DocumentID 6617). A CITI subcommittee hearing on DoD science, technology and innovation posture was scheduled and then cancelled in April 2026."
+  public_route: "VERIFIED: https://armedservices.house.gov/contact. Committee: 2216 Rayburn House Office Building, Washington DC 20515, 202-225-4151. Minority: https://democrats-armedservices.house.gov/."
+  note: Chair/ranking verified 2026-09-22 from the House Clerk's MemberData.xml.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://armedservices.house.gov/about/members.htm
+      checked: 2026-09-22
+    - url: https://armedservices.house.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 4e8452a1e4
+  migrated_from: input/data/committees-and-organisations.json#seats

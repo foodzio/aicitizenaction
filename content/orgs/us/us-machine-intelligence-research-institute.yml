@@ -1,0 +1,99 @@
+id: us-machine-intelligence-research-institute
+type: civil-society
+geo:
+  country: us
+  label: United States (Berkeley/San Francisco)
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: contact@intelligence.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 11474090b77a
+    - id: media
+      type: email
+      value: media@intelligence.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f75b00b01040
+    - id: donations
+      type: email
+      value: development@intelligence.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 81a27151e559
+    - id: finance
+      type: email
+      value: finance@intelligence.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d885184c3318
+    - id: contact-page
+      type: form
+      value: https://intelligence.org/contact/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e57eb3ff9d3e
+    - id: take-action-page
+      type: form
+      value: https://intelligence.org/act/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a0e7be434dc4
+    - id: homepage
+      type: homepage
+      value: https://intelligence.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: a03a05af20f2
+  region: United States
+  public_input: limited
+  tags:
+    - research
+strings:
+  name: Machine Intelligence Research Institute (MIRI)
+  remit: "Originally the founding technical alignment research organisation; since 2024 pivoted almost entirely to communications and policy advocacy for an international halt on frontier AI development. Its site states: 'Our survival depends on some form of globally coordinated and collectively enforced moratorium on the development of ASI, as soon as we can, for as long as necessary.' Outputs are now books, essays and briefings rather than alignment papers."
+  threat_model: Pure loss-of-control / misalignment extinction risk, and the strongest version of it — MIRI's public position is that technical alignment has failed to keep pace and that a moratorium is the only remaining lever. Zero emphasis on near-term harms.
+  reality_check: "Reads its mail but is highly selective about engagement, and is not interested in concerns outside its narrow thesis. If your concern is anything other than existential risk from superintelligence, this is the wrong door. Note: the user's list includes 'Machine Intelligence Research' separately — that is MIRI's own name, not a distinct organisation."
+  gov_channel: Moderate and growing — MIRI staff brief policymakers and its arguments circulate widely in Washington and Westminster, but it has no formal advisory seat.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+    media:
+      label: Media
+      scope: Press
+    donations:
+      label: Donations
+      scope: Donors
+    finance:
+      label: Finance
+      scope: Administrative
+    contact-page:
+      label: Contact page
+      scope: General
+    take-action-page:
+      label: Take action page
+      scope: Supporters
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://intelligence.org/contact/
+      checked: 2026-09-22
+    - url: https://intelligence.org/act/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 62e31e6847
+  migrated_from: input/data/institutions.json

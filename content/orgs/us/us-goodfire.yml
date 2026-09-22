@@ -1,0 +1,83 @@
+id: us-goodfire
+type: civil-society
+geo:
+  country: us
+  label: United States
+facts:
+  routes:
+    - id: research-access-request
+      type: form
+      value: https://www.goodfire.com/research-access
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 15b9e976443b
+    - id: request-demo
+      type: form
+      value: https://www.goodfire.com/request-demo
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f637f05de19b
+    - id: discord
+      type: form
+      value: https://discord.com/invite/Rk7mZWkr5g
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3f4963fe1bd8
+    - id: careers
+      type: form
+      value: https://www.goodfire.com/careers
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 02470de5327f
+    - id: homepage
+      type: homepage
+      value: https://www.goodfire.com/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 61906caab545
+  region: United States
+  public_input: limited
+  tags:
+    - research
+strings:
+  name: Goodfire
+  remit: For-profit interpretability research lab. Reverse-engineers causal mechanisms in neural networks; commercial product Silico for model understanding, debugging and training-time steering. Publishes interpretability research alongside the commercial offering.
+  threat_model: Interpretability as the enabling technology for oversight; the implicit model is that undiagnosable systems cannot be safely deployed. Commercially oriented toward debugging and control rather than catastrophic-risk mitigation.
+  reality_check: A company, not an advocacy body — note the domain moved from goodfire.ai to goodfire.com. No published email. The research-access programme and Discord are real routes for technical outsiders; there is no channel for raising a concern.
+  gov_channel: None formal.
+  routes:
+    research-access-request:
+      label: Research access request
+      scope: Researchers — a genuine route for academics to get tooling access
+    request-demo:
+      label: Request a demo
+      scope: Commercial
+    discord:
+      label: Discord
+      scope: Anyone
+    careers:
+      label: Careers
+      scope: Applicants
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.goodfire.com/research-access
+      checked: 2026-09-22
+    - url: https://www.goodfire.com/request-demo
+      checked: 2026-09-22
+    - url: https://discord.com/invite/Rk7mZWkr5g
+      checked: 2026-09-22
+    - url: https://www.goodfire.com/careers
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 254ed732cd
+  migrated_from: input/data/institutions.json

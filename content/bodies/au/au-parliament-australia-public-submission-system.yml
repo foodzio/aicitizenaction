@@ -1,0 +1,52 @@
+id: au-parliament-australia-public-submission-system
+type: seat
+geo:
+  country: au
+  label: Australia
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.aph.gov.au/Parliamentary_Business/Committees/Submissions_Open
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3c7e8a9d1c98
+    - id: public-route
+      type: submission
+      value: https://www.aph.gov.au/Parliamentary_Business/Committees/House/Making_a_submission
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7eab8ce016ab
+  level: national
+  tags:
+    - audit
+    - law
+    - record
+strings:
+  name: Parliament of Australia — public submission system (the public route)
+  ai_jurisdiction: The mechanism by which any person reaches any Australian parliamentary committee, including all the AI inquiries above.
+  business: Live index of every Senate, House and Joint inquiry currently accepting submissions is maintained at the Submissions_Open pages.
+  public_route: "EXACT PROCESS, from the Parliament's own guidance: 'Any interested individual or organisation can make a submission to a parliamentary committee. Several people or organisations can make a joint submission. Organisations and people from other countries can make submissions to an inquiry' — though parliamentary privilege 'cannot be enforced outside Australia'. Lodge online via the link on the inquiry home page after creating a free My Parliament account (name and valid email only); or send directly by email or post to the committee secretariat. You can upload multiple documents, e.g. a covering letter, a public submission and a confidential attachment. An acknowledgement is emailed on receipt. If you cannot meet the deadline, a short extension is often possible — contact the secretariat."
+  format_rules: "No word limit in general (individual committees may ask for brevity — the Joint Select Committee on AI asked for 5–6 pages). Upload as Word, PDF or plain text. PROCESS AND PUBLICATION: the secretariat assesses the submission, then the COMMITTEE decides whether to accept it and authorise publication, and may publish only part of it. Once authorised, personal details are removed and it is placed on the website and forms part of the formal record. YOUR OBLIGATIONS: 'After a submission is received by a committee, you cannot publish or disclose it to any other person unless or until the committee has authorised its publication' — this is a real constraint, breach of which can be a contempt. You cannot withdraw or alter a submission without the committee's permission. Confidential submissions may not be shared with anyone. If you submit by an organisation, the organisation is published as the author, not an individual."
+  note: VERIFIED 2026-09-22 by direct fetch of aph.gov.au 'Making a submission to a committee inquiry'. All quoted text is from that page.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.aph.gov.au/Parliamentary_Business/Committees/Submissions_Open
+      checked: 2026-09-22
+    - url: https://www.aph.gov.au/Parliamentary_Business/Committees/House/Making_a_submission
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: a9f83a02db
+  migrated_from: input/data/committees-and-organisations.json#seats

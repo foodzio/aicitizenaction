@@ -1,0 +1,12 @@
+# Used by organisations (their side) and by resource sources (their vantage point).
+# The freshness page reports the balance of perspectives across the Resources registry.
+id: perspectives
+values:
+  - { id: safety-advocacy, label: Safety advocacy }
+  - { id: civil-liberties, label: Civil liberties }
+  - { id: professional, label: Professional body }
+  - { id: industry-lobby, label: Industry lobby }
+  - { id: industry, label: Industry }
+  - { id: academic, label: Academic }
+  - { id: journalism, label: Journalism }
+  - { id: government, label: Government }

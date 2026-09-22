@@ -1,0 +1,59 @@
+id: us-encode
+type: civil-society
+geo:
+  country: us
+  label: United States (with international chapters)
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: info@encodeai.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3e94e63f4e2d
+    - id: get-involved-form-homepage
+      type: form
+      value: https://encodeai.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 22b16c6aaf20
+    - id: homepage
+      type: homepage
+      value: https://encodeai.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 9e55de4d0ecc
+  region: United States
+  public_input: open
+  tags:
+    - law
+    - research
+strings:
+  name: Encode (formerly Encode Justice)
+  remit: Youth-founded AI advocacy organisation (Sneha Revanur). Legislative advocacy and coalition-building. Claimed wins include California SB 53, the New York RAISE Act, Illinois SB 315, defeating federal preemption of state AI laws, and securing AI-and-nuclear-command provisions in defence legislation. Self-describes as 'pro-human, pro-AI'.
+  threat_model: "Unusually broad and deliberately bridging: bioweapons and loss of human control alongside child safety, companion-chatbot harms and erosion of liberty. One of the very few organisations that credibly spans catastrophic risk and near-term harm rather than picking a side."
+  reality_check: Small, young, hungry, and one of the most genuinely responsive organisations on this list — they actively want volunteers and will reply. If you are an individual wanting to convert a concern into legislative action in the US, this is among the best-value doors available.
+  gov_channel: Direct and disproportionately effective for its size — active in state legislatures and Congress; Sneha Revanur sits on FLI's AI Safety Index expert panel.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+    get-involved-form-homepage:
+      label: Get involved form on the homepage — explicitly invites people to find out how to participate
+      scope: Anyone, especially students and young people
+      note: Encode's chapter/volunteer model is its distinguishing feature; UNVERIFIED whether a formal chapter-application page currently exists.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://encodeai.org
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 4ad8a27fec
+  migrated_from: input/data/institutions.json

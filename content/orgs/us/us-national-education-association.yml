@@ -1,0 +1,42 @@
+id: us-national-education-association
+type: organisation
+geo:
+  country: us
+  label: United States.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.nea.org/ai
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1041c51846c1
+  perspective: professional
+  volunteers: yes — members only
+  tags:
+    - join
+    - tip
+strings:
+  name: National Education Association (NEA)
+  the_ask: AI in schools must be equitable, ethical and educator-led — with data privacy safeguards, rigorous vetting of tools for bias and effectiveness, and meaningful educator involvement in every adoption decision.
+  what_they_do: Adopted an AI policy statement and task force report; publishes vetting guides, a classroom AI glossary, accessibility and multilingual-learner guidance, micro-credentials in AI ethics and responsible use; provides sample school board resolutions and template letters to state education departments; runs an Action Center for advocacy.
+  newcomer_action: Take the sample school board resolution to your next board meeting, or send the template letter to your state department of education asking for a chief privacy officer and an AI vetting standard. Start a micro-credential.
+  tips: no
+  geography: United States.
+  scale: The largest labour union in the United States (roughly three million members).
+  spending: Membership funded; substantial state and federal lobbying.
+  caution: Its ask is governance of classroom AI, not restrictions on AI development. Its guidance has drawn political attack over equity provisions, so expect the school board conversation to be contested. Members-only routes.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.nea.org/ai
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 097fe91dc5
+  migrated_from: input/data/committees-and-organisations.json#orgs

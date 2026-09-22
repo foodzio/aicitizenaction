@@ -1,0 +1,13 @@
+# What kind of entity a record describes. The folder a record lives in is fixed by its type.
+id: record-types
+values:
+  - { id: seat, label: Body with AI jurisdiction and named seats, folder: bodies }
+  - { id: government, label: Government body, folder: bodies }
+  - { id: multilateral, label: Multilateral body, folder: bodies }
+  - { id: standards, label: Standards body, folder: bodies }
+  - { id: company, label: AI company, folder: channels }
+  - { id: reporting-channel, label: Public reporting channel, folder: channels }
+  - { id: watchdog, label: Watchdog or incident database, folder: channels }
+  - { id: civil-society, label: Civil society organisation, folder: orgs }
+  - { id: academic, label: Academic institution, folder: orgs }
+  - { id: organisation, label: Campaign, professional or industry organisation, folder: orgs }

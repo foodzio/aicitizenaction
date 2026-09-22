@@ -1,0 +1,60 @@
+id: us-senate-artificial-intelligence-caucus
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.heinrich.senate.gov/artificial-intelligence-caucus
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 93132c156f5d
+    - id: public-route
+      type: submission
+      value: https://www.heinrich.senate.gov/artificial-intelligence-caucus
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ac7acfe1175d
+  level: federal
+  chamber: Senate
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Martin Heinrich
+      party: D
+      region: NM
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Mike Rounds
+      party: R
+      region: SD
+      verified_on: 2026-09-22
+strings:
+  name: Senate Artificial Intelligence Caucus
+  ai_jurisdiction: Bipartisan member-education and coordination body founded in 2019. No referral jurisdiction. Its value is that its two co-chairs sit on the committees that matter — Heinrich is ranking member of Energy and Natural Resources and sits on Intelligence; Rounds chairs Armed Services' Cybersecurity subcommittee and sits on Banking — so the caucus functions as a bridge between the energy, defense and financial AI conversations.
+  business: "VERIFIED: the caucus's official page states it has championed 15 bills that became law, on national AI research coordination, government AI safety standards, deepfake threat assessment and military AI training. Heinrich, Schumer, Rounds and Young were the four authors of the Senate's bipartisan AI policy roadmap. Heinrich, Young, Rounds and Booker reintroduced legislation to expand access to AI research (the CREATE AI / NAIRR line of work) in the 119th Congress. Rounds and Heinrich introduced legislation on AI for pandemic preparedness and response."
+  public_route: "VERIFIED: engage through Sen. Heinrich's office (https://www.heinrich.senate.gov/, 202-224-5521) or Sen. Rounds' office (https://www.rounds.senate.gov/, 202-224-5842). Rounds publishes his caucus memberships at https://www.rounds.senate.gov/issues/caucus-membership. Membership is senators only."
+  note: Co-chairs verified 2026-09-22 on Sen. Heinrich's official Senate site. The 'chair'/'ranking' fields carry the two co-chairs. Founded 2019 by Heinrich and then-Sen. Rob Portman; Rounds replaced Portman.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.heinrich.senate.gov/artificial-intelligence-caucus
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 3f96bfd43f
+  migrated_from: input/data/committees-and-organisations.json#seats

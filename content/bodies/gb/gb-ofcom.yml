@@ -1,0 +1,84 @@
+id: gb-ofcom
+type: government
+geo:
+  country: gb
+  label: United Kingdom
+facts:
+  routes:
+    - id: complain-about-online-services
+      type: complaint
+      value: https://www.ofcom.org.uk/make-a-complaint
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9d98e31b2850
+    - id: general-advice-complaints-line
+      type: complaint
+      value: 0300 123 3333 or 020 7981 3040 (Mon-Fri 9am-5pm); PO Box 1285, Warrington WA1 9GL
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4b93b3c091b7
+    - id: ofcom-consultations
+      type: consultation
+      value: https://www.ofcom.org.uk/consultations-and-statements
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 366afb2253b4
+    - id: licensing-mailboxes
+      type: email
+      value: spectrum.licensing@ofcom.org.uk / broadcast.licensing@ofcom.org.uk
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ba9c48d80382
+    - id: homepage
+      type: homepage
+      value: https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/ai-chatbots-and-online-regulation-what-you-need-to-know
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 4974f302bd35
+  region: United Kingdom
+  public_input: open
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Ofcom (Office of Communications)
+  remit: "Independent regulator for communications and, under the Online Safety Act 2023, for user-to-user and search services. Ofcom has CONFIRMED that AI chatbots fall within the OSA where the service meets the Act's service definitions — a chatbot is out of scope only if it allows interaction with the chatbot alone and no other users, does not search multiple sites or databases when responding, AND cannot generate pornographic content. Powers: can require information, investigate, impose fines up to £18m or 10% of qualifying worldwide revenue, and seek business disruption measures (payment and access restrictions) against non-compliant services. Senior managers can face criminal liability for certain failures."
+  powers_text: fine
+  reality_check: "Ofcom is the UK's most powerful AI-adjacent regulator by a wide margin — it can fine 10% of global turnover and cut a service off from payment providers. Its OSA consultations are the single highest-leverage UK input route on AI: they run for months, every response is read and summarised, and Ofcom publishes detailed statements addressing arguments. Individual complaints matter less as individual remedies (Ofcom does not resolve your personal dispute) and more as evidence of systemic failure that supports an investigation. Ofcom is explicit about its limits: 'We can only take action on online harms covered by the Act, using the powers we have been granted' — so frontier and catastrophic risk is OUT OF SCOPE. This is content-harm regulation applied to generative AI, not model-level safety regulation."
+  notes: Ofcom's chatbot scoping is contested by practitioners — several categories of generative AI service sit ambiguously inside or outside the OSA.
+  routes:
+    complain-about-online-services:
+      label: Complain about online services, websites or apps
+      scope: Public complaints about online services including AI chatbots falling within OSA scope.
+      note: VERIFIED — the route is published on Ofcom's contact page and on its AI chatbots guidance page.
+    general-advice-complaints-line:
+      label: General advice and complaints line
+      scope: General complaints.
+      note: VERIFIED on https://www.ofcom.org.uk/about-ofcom/contact-us/. Welsh 0300 123 2023; BSL video relay and text relay available.
+    ofcom-consultations:
+      label: Ofcom consultations
+      scope: Ofcom consults extensively on OSA codes of practice and guidance; responses are published.
+      note: UNVERIFIED as fetched, though Ofcom's consultation programme is extensively documented. Confirm the current URL from the site navigation.
+    licensing-mailboxes:
+      label: Licensing mailboxes
+      scope: Licensing only — not online safety.
+      note: VERIFIED on the contact page. Ofcom publishes no general online-safety email.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.ofcom.org.uk/make-a-complaint
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 792b96e144
+  migrated_from: input/data/institutions.json

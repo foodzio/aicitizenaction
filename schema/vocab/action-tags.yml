@@ -1,0 +1,17 @@
+# What a user can do with a record. Carried over from the research datasets.
+id: action-tags
+values:
+  - { id: law, label: Influences law }
+  - { id: record, label: Puts a concern on the record }
+  - { id: audit, label: Oversight or audit }
+  - { id: petition, label: Petition }
+  - { id: join, label: Join }
+  - { id: fund, label: Fund }
+  - { id: tip, label: Takes tips }
+  - { id: harm, label: Harm already done }
+  - { id: opposition, label: Opposes regulation }
+  - { id: systemic, label: Systemic risk }
+  - { id: flaw, label: Model flaw }
+  - { id: research, label: Research }
+  - { id: behaviour, label: Model behaviour observed }
+  - { id: insider, label: Insider knowledge }

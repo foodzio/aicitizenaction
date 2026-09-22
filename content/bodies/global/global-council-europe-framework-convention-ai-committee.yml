@@ -1,0 +1,62 @@
+id: global-council-europe-framework-convention-ai-committee
+type: multilateral
+geo:
+  country: global
+  label: Council of Europe + non-member signatories
+facts:
+  routes:
+    - id: council-europe-ai-unit
+      type: form
+      value: https://www.coe.int/en/web/artificial-intelligence/contact-us
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1bdd29f045cc
+    - id: cai-observer-status-international
+      type: membership
+      value: https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 98a3fa1b0df4
+    - id: homepage
+      type: homepage
+      value: https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c43c61b7b055
+  region: European Union
+  public_input: limited
+  tags:
+    - systemic
+strings:
+  name: Council of Europe — Framework Convention on AI (CETS No. 225) and the Committee on AI (CAI)
+  remit: First legally binding international treaty on AI, opened for signature 5 Sept 2024. 19 signatories at last check including Albania, Andorra, Armenia, Bosnia and Herzegovina, Georgia, Iceland, Liechtenstein, Montenegro, North Macedonia, Norway, Moldova, San Marino, Switzerland, Ukraine, the UK, plus non-members Canada, Israel, Japan, the USA and Uruguay, and the European Union. The EU has ratified; the treaty requires five ratifications including three CoE member states to enter into force, so it is NOT yet in force. Obligations cover human rights, democracy and rule of law across the AI lifecycle.
+  threat_model: Human rights, democracy and rule of law — so democratic-process harms, discrimination, and rule-of-law erosion. Systemic/structural rather than catastrophic-risk framing.
+  reality_check: "Open to organised civil society through observer status, closed to individuals. The CAI historically ran genuinely substantive observer participation during drafting — one of the better multilateral records. Slow: entry into force is still pending."
+  gov_channel: Treaty-level — binding on ratifying parties, with implementation reporting through the Conference of the Parties once in force.
+  routes:
+    council-europe-ai-unit:
+      label: Council of Europe AI unit contact
+      scope: General enquiries to the AI programme
+    cai-observer-status-international:
+      label: CAI observer status for international NGOs
+      scope: 68 representatives from civil society, academia and industry participated as observers in the drafting
+      note: Observer status is granted to organisations, not individuals, and is decided by the committee. UNVERIFIED whether new observer applications are currently open.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.coe.int/en/web/artificial-intelligence/contact-us
+      checked: 2026-09-22
+    - url: https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b7c11cd67f
+  migrated_from: input/data/institutions.json

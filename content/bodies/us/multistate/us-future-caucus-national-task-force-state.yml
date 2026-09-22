@@ -1,0 +1,58 @@
+id: us-future-caucus-national-task-force-state
+type: seat
+geo:
+  country: us
+  sub: multistate
+  label: Multistate
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://futurecaucus.org/national-task-force-on-state-ai-policy
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f8c491bad72a
+    - id: public-route
+      type: submission
+      value: https://futurecaucus.org/national-task-force-on-state-ai-policy
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4b45cf502c4a
+  level: state
+  chamber: Cross-state legislator task force
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Rep. Monique Priestley (D-Vermont) and Rep. Doug Fiefia (R-Utah) — CO-CHAIRS
+      party: D / R
+      verified_on: 2026-09-22
+strings:
+  name: Future Caucus National Task Force on State AI Policy
+  ai_jurisdiction: Cross-partisan task force of Gen Z and millennial state legislators developing shared AI governance approaches across states; hosts public hearings and confidential briefings and produces a Bipartisan State AI Policy Memo.
+  business: Not a legislating body. Priestley authored Vermont's AI legislation; Fiefia authored Utah's social-media data-control law. The task force advises on model language that recurs across state bills.
+  status: VERIFIED — launched July 2025, active through 2026; the most useful cross-state map of where AI language originates before it appears in individual state bills.
+  public_route: PARTIAL — the task force states it will 'host public hearings'; these are the practical entry point for members of the public who want to reach multiple state legislators at once. Legislator membership is by application (Gen Z and millennial state lawmakers). The public engages through the organization's contact channels and public hearing announcements.
+  agency_route: N/A — advocacy and convening body, not an enforcement agency.
+  note: "Included per the AI caucus/task force request. Other state-level bodies worth tracking: Washington State AI Task Force (AG's office, final report July 2026); Virginia's AI task force under Executive Order 22 (18 Sep 2026); Maryland's Governor's AI Subcabinet (SB 818, 2024); the Texas Artificial Intelligence Council (7 public members, inside DIR, created by TRAIGA); Utah's Office of Artificial Intelligence Policy and AI Learning Laboratory; and New York's frontier-AI oversight office inside the Department of Financial Services."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://futurecaucus.org/national-task-force-on-state-ai-policy
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: dee908adb8
+  migrated_from: input/data/committees-and-organisations.json#seats

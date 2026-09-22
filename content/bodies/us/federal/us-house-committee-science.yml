@@ -1,0 +1,75 @@
+id: us-house-committee-science
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (federal legislature)
+facts:
+  routes:
+    - id: committee-email-us-contact
+      type: form
+      value: https://science.house.gov/contact
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 60ce67024ba6
+    - id: whistleblower-reports-portal
+      type: form
+      value: https://science.house.gov/contact
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c0e3c734b172
+    - id: committee-office
+      type: evidence
+      value: 2321 Rayburn House Office Building, Washington DC 20515 — 202-225-6371 (fax 202-226-0113)
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 03e59acc03d2
+    - id: homepage
+      type: homepage
+      value: https://science.house.gov/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 4f6db28d51b4
+  region: United States
+  public_input: limited
+  tags:
+    - insider
+    - law
+    - systemic
+strings:
+  name: U.S. House Committee on Science, Space, and Technology
+  remit: House committee of jurisdiction for NIST (and therefore CAISI), DOE Office of Science, NSF and federal AI R&D. Authorises NIST's AI programmes, conducts oversight hearings, and has produced the main House bills to put the US AI institute on a statutory footing. Can subpoena and compel testimony; cannot fine or adjudicate.
+  powers_text: compel
+  reality_check: The whistleblower portal is the genuinely distinctive route here and is taken seriously — committee investigative staff follow up on credible insider accounts about federal programmes. The general email form is a low-yield channel. For legislative influence, the leverage is with the named subcommittee staff on Research and Technology, and with members' personal offices; a constituent request for a meeting outperforms any committee-level correspondence.
+  notes: Because it authorises NIST, this committee — not a safety agency — is where the legal status and funding of CAISI is actually decided.
+  routes:
+    committee-email-us-contact:
+      label: Committee 'Email Us' contact form
+      scope: General correspondence; the page also offers press inquiries, a mailing-list signup and a whistleblower portal.
+      note: VERIFIED — the contact page was fetched and lists these options.
+    whistleblower-reports-portal:
+      label: Whistleblower reports portal
+      scope: For insiders reporting wrongdoing within agencies or programmes in the committee's jurisdiction — including, potentially, federal AI programmes.
+      note: VERIFIED as listed on the contact page; the portal's own deep link was not separately fetched.
+    committee-office:
+      label: Committee office
+      scope: Phone and post.
+      note: VERIFIED on the contact page.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://science.house.gov/contact
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: ad744d053a
+  migrated_from: input/data/institutions.json

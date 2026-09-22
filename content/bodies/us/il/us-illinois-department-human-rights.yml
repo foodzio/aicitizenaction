@@ -1,0 +1,84 @@
+id: us-illinois-department-human-rights
+type: government
+geo:
+  country: us
+  sub: il
+  label: Illinois, USA
+facts:
+  routes:
+    - id: file-charge-discrimination-intake
+      type: complaint
+      value: IDHR.Intake@illinois.gov
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d02ad165ac00
+    - id: fair-housing-charges
+      type: complaint
+      value: IDHR.FairHousing@illinois.gov
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b31ce6751ec8
+    - id: intake-phone
+      type: complaint
+      value: (312) 814-4294
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 26bf1acbb567
+    - id: online-filing-portal
+      type: form
+      value: none published
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a44eaa780a73
+    - id: homepage
+      type: homepage
+      value: https://dhr.illinois.gov/filing-a-charge.html
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c12d0365d470
+  region: United States
+  public_input: open
+  tags:
+    - harm
+strings:
+  name: Illinois Department of Human Rights (IDHR)
+  remit: Enforces the Illinois Human Rights Act as amended by HB 3773 (effective 1 January 2026), which makes it a civil rights violation for an employer to use AI that discriminates on a protected characteristic, or to use zip code as a proxy for a protected class, and requires notice to employees and applicants when AI is used in employment decisions. IDHR investigates charges, makes substantial-evidence determinations, and cases proceed to the Illinois Human Rights Commission or to circuit court. Illinois also has BIPA (private right of action) and an AI Video Interview Act.
+  powers_text: investigate
+  reality_check: "A named, monitored intake email with statutory deadlines behind it — this is a functioning complaint route, not a suggestion box, and a charge triggers an investigation with a determination. But it is individual-remedy machinery: you must be a person who suffered discrimination. It has no application whatsoever to frontier or catastrophic risk. Note the 2-year deadline is unusually generous compared to the federal EEOC's 300 days."
+  notes: Illinois BIPA remains the more potent AI-adjacent lever in that state because it carries a private right of action and statutory damages, litigated in court rather than through IDHR.
+  routes:
+    file-charge-discrimination-intake:
+      label: File a charge of discrimination — intake email
+      scope: Most employment and public-accommodation cases, including AI-in-hiring discrimination. Submit a Complainant Information Sheet (CIS) by email, post or fax.
+      note: VERIFIED at https://dhr.illinois.gov/charge-process/filers.html. IDHR states email is the recommended method.
+    fair-housing-charges:
+      label: Fair housing charges
+      scope: Housing discrimination, including algorithmic tenant screening.
+      note: VERIFIED on the same page.
+    intake-phone:
+      label: Intake phone
+      scope: Charge filing assistance.
+      note: "VERIFIED. Deadlines: most cases within 2 years of the discriminatory act; housing within 1 year."
+    online-filing-portal:
+      label: Online filing portal
+      scope: n/a
+      note: VERIFIED ABSENCE — IDHR has no online charge-filing portal; filing is by form submitted via email, post or fax.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://dhr.illinois.gov/filing-a-charge.html
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 90dd464f6c
+  migrated_from: input/data/institutions.json

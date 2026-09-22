@@ -1,0 +1,61 @@
+id: fr-saferai
+type: watchdog
+geo:
+  country: fr
+  label: France (Paris, 6 Rue d'Armaillé, 75017)
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: contact@safer-ai.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 10f7fb0b44e8
+    - id: company-risk-management-ratings
+      type: submission
+      value: https://ratings.safer-ai.org/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 825782d119b3
+    - id: homepage
+      type: homepage
+      value: https://www.safer-ai.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 4ad5fb52ce5d
+  region: European Union
+  public_input: limited
+  tags:
+    - research
+    - systemic
+strings:
+  name: SaferAI
+  remit: "Non-profit focused on AI risk management. Three arms: research (quantitative risk models — nine cyber risk models completed, expanding to loss of control and CBRN); ratings (independent grading of how well leading AI companies manage risk, across risk identification, severity assessment, safeguards and governance, published at ratings.safer-ai.org); and standards (leads AI risk management standards work in the EU and edits international red-teaming standards)."
+  threat_model: Risk-management adequacy at frontier developers — explicitly covering cyber, loss of control and CBRN. Methodologically the most rigorous of the company-rating projects, borrowing from mature safety-critical industries.
+  reality_check: Small, technically serious and European — which matters, because it has standing in the EU standardisation processes that most US safety organisations do not. Responsive to substantive technical input on risk methodology.
+  gov_channel: Real in Europe — SaferAI staff serve as editors on international standards and participate in EU AI Act standardisation and the GPAI Code of Practice process.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+    company-risk-management-ratings:
+      label: Company risk-management ratings portal
+      scope: Public read; methodology published
+      note: UNVERIFIED whether they accept public submissions of evidence about a company's practices — worth asking via contact@.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ratings.safer-ai.org/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 7fdb66554d
+  migrated_from: input/data/institutions.json

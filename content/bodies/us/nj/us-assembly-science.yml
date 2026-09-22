@@ -1,0 +1,59 @@
+id: us-assembly-science
+type: seat
+geo:
+  country: us
+  sub: nj
+  label: New Jersey
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.njleg.state.nj.us/committees/assembly-committees
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 84c7b359654c
+    - id: public-route
+      type: submission
+      value: https://njleg.gov/committee-registrations
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c83dbe6ba286
+  level: state
+  chamber: General Assembly
+  tags:
+    - audit
+    - law
+  seats:
+    - role: chair
+      name: Chris Tully
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: Assembly Science, Innovation and Technology Committee
+  ai_jurisdiction: The dedicated Assembly committee for AI, deepfakes, chatbots and emerging-technology bills. Released a five-bill AI transparency package on 17 March 2026.
+  business: "March 2026 AI package cleared by this committee: A4728, A4729, A4730, A4731, A4732 — AI transparency across chatbots, real-estate advertising, election information, professional licensing and commercial communications. Additional 2026-2027 bills: A5088, A5316, A4981, A3307, A2616. New Jersey's enacted AI law remains the deepfake statute; there is no comprehensive NJ AI act."
+  status: "VERIFIED — package advanced out of committee 17 Mar 2026; no comprehensive NJ AI statute enacted as of 22 Sep 2026. New Jersey's most consequential AI rule is administrative, not legislative: see agency route."
+  public_route: YES — the NJ Legislature runs an online Committee Registrations system where members of the public register to testify at committee meetings; written statements may also be submitted to the committee aide in advance. Deadlines are set per meeting notice, usually the business day before. NJ agendas are often posted with little notice, so monitoring the committee schedule page is essential.
+  agency_route: "STRONGEST NJ ROUTE — New Jersey Division on Civil Rights (Office of the Attorney General). AG Platkin and DCR issued Guidance on Algorithmic Discrimination (8 Jan 2025) holding that the NJ Law Against Discrimination applies to algorithmic and AI-driven discrimination in employment, housing, lending and places of public accommodation, and created a Civil Rights Innovation Lab. NJ adopted disparate-impact rules under the LAD in December 2025 with specific AI guidance. File a complaint: https://www.njoag.gov/about/divisions-and-offices/division-on-civil-rights-home/"
+  note: Chair verified from the 17 Mar 2026 committee action reported contemporaneously. Tully also serves as vice-chair of Commerce, Economic Development and Agriculture. The NJ DCR complaint route is live NOW and does not require any new statute — an underused channel for AI hiring and housing discrimination.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.njleg.state.nj.us/committees/assembly-committees
+      checked: 2026-09-22
+    - url: https://njleg.gov/committee-registrations
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c74e786fa7
+  migrated_from: input/data/committees-and-organisations.json#seats

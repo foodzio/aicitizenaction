@@ -1,0 +1,56 @@
+id: gb-uk-parliament-find-inquiry-accepting-written
+type: reporting-channel
+geo:
+  country: gb
+  label: UK
+facts:
+  routes:
+    - id: submission-page
+      type: consultation
+      value: https://committees.parliament.uk/inquiries/?SearchTerm=&DateFrom=&DateTo=&SessionId=&SortBy=0&Status=Any&CurrentlyAcceptingEvidence=true
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 92f25c67a3f8
+    - id: homepage
+      type: homepage
+      value: https://committees.parliament.uk/inquiries/?SearchTerm=&DateFrom=&DateTo=&SessionId=&SortBy=0&Status=Any&CurrentlyAcceptingEvidence=true
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 417b6a31a6e2
+  region: United Kingdom
+  public_input: open
+  tags:
+    - law
+    - systemic
+strings:
+  name: UK Parliament — find an inquiry accepting written evidence
+  remit: N/A — this is the discovery tool.
+  reality_check: Essential plumbing. The most common failure mode for outside contributors is writing a submission with no open inquiry to send it to.
+  accepts: N/A — this is the discovery tool.
+  does_not_accept: N/A
+  how: "Filter the inquiries list with 'Currently accepting evidence' set to true. Each result shows 'Written evidence: Accepting' and the deadline. This is the correct first step before drafting anything, because evidence must respond to a live call."
+  format: N/A
+  timing: Live listing; inquiries open and close continuously.
+  after: N/A
+  operator: UK Parliament Committees
+  routes:
+    submission-page:
+      label: Submission page
+      scope: N/A — this is the discovery tool.
+      note: "Filter the inquiries list with 'Currently accepting evidence' set to true. Each result shows 'Written evidence: Accepting' and the deadline. This is the correct first step before drafting anything, because evidence must respond to a live call."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://committees.parliament.uk/inquiries/?SearchTerm=&DateFrom=&DateTo=&SessionId=&SortBy=0&Status=Any&CurrentlyAcceptingEvidence=true
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: f38ef37e23
+  migrated_from: input/data/institutions.json

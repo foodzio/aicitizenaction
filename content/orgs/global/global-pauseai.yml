@@ -1,0 +1,85 @@
+id: global-pauseai
+type: civil-society
+geo:
+  country: global
+  label: International (volunteer network with national and local chapters)
+facts:
+  routes:
+    - id: discord-organisational-hub-anyone
+      type: membership
+      value: https://discord.gg/2XXWXvErfA
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9bcd24bb7418
+    - id: local-communities-directory-find
+      type: membership
+      value: https://pauseai.info/communities
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: da3f84ba5753
+    - id: join-page
+      type: membership
+      value: https://pauseai.info/join
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 135ece1ed1bb
+    - id: contact-form
+      type: form
+      value: https://pauseai.info/contact-us
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 240d04e00a15
+    - id: homepage
+      type: homepage
+      value: https://pauseai.info/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 2aefe1643028
+  region: Global
+  public_input: open
+  tags:
+    - research
+strings:
+  name: PauseAI
+  remit: Volunteer grassroots movement calling for a halt to development of the most powerful general AI systems until safety is assured, and for 'a prohibition on the development of superintelligence, not lifted before there is broad scientific consensus'. Organises protests, lobbying days, letter-writing and local meetups; maintains extensive public explainer material.
+  threat_model: Existential risk from uncontrolled AI as the headline, but notably broader in its public messaging than MIRI or ControlAI — it also cites job displacement, democratic erosion and economic instability as reasons to pause.
+  reality_check: "Maximally open — a volunteer can join the Discord today and be organising within a week. That openness is also its limit: it has little institutional access, and its confrontational framing means mainstream policy bodies keep it at arm's length. Good for mobilisation, poor for a targeted escalation."
+  gov_channel: Weak-to-moderate — organises lobbying days and has met individual legislators, but has no formal channel and is treated as an outside-game actor.
+  routes:
+    discord-organisational-hub-anyone:
+      label: Discord — the organisational hub; anyone can join and start contributing immediately
+      scope: Anyone, worldwide
+      note: This is where the actual organising happens.
+    local-communities-directory-find:
+      label: Local communities directory — find or start a chapter
+      scope: Anyone
+    join-page:
+      label: Join page
+      scope: Anyone
+    contact-form:
+      label: Contact form
+      scope: General
+      note: No public email address is listed.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://discord.gg/2XXWXvErfA
+      checked: 2026-09-22
+    - url: https://pauseai.info/communities
+      checked: 2026-09-22
+    - url: https://pauseai.info/join
+      checked: 2026-09-22
+    - url: https://pauseai.info/contact-us
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 57d1c13269
+  migrated_from: input/data/institutions.json

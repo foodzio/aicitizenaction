@@ -1,0 +1,59 @@
+id: gb-uk-government-minister-artificial-intelligence
+type: seat
+geo:
+  country: gb
+  label: United Kingdom
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.gov.uk/government/ministers
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ba525d741517
+    - id: public-route
+      type: submission
+      value: https://members.parliament.uk/FindYourMP
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a1e9a89a79b6
+  level: national
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Kanishka Narayan MP
+      verified_on: 2026-09-22
+strings:
+  name: UK Government — Minister for Artificial Intelligence (Cabinet Office and Department for Business, Innovation, Science and Trade)
+  ai_jurisdiction: The UK's first Cabinet-level AI minister, holding the AI brief jointly across the Cabinet Office (centre-of-government AI adoption) and DBIST (AI industrial and regulatory policy). This post replaced the AI brief formerly held inside DSIT.
+  business: AI sovereignty policy, on which the Commons Science and Technology Committee wrote to Government seeking clarity (reported 15 September 2026).
+  public_route: Write to the minister via your own MP (ministers answer correspondence forwarded by MPs as a matter of convention, and this is far more effective than writing direct), or table the issue through a written parliamentary question via any MP. Find your MP first.
+  format_rules: No formal limits. Ministerial correspondence via an MP normally receives a substantive departmental reply within 20 working days. Not published.
+  key_people: Chris McDonald MP — Minister of State (Minister for Science, Innovation and Investment), DHSC and DBIST. Baroness Lloyd of Effra CBE — Parliamentary Under-Secretary (Minister for Space, Cyber and Regulatory Reform), DBIST and DCMS. Lisa Nandy MP — Secretary of State for Digital, Culture, Media and Sport. Ian Murray MP — Minister of State (Creative Industries, Media and Online Safety), DCMS, who holds the AI-and-copyright and online-safety end.
+  note: "VERIFIED 2026-09-22 from gov.uk: 'Kanishka Narayan was appointed Minister of State (Minister for Artificial Intelligence) jointly in the Cabinet Office and the Department for Business, Innovation and Science and Trade on 20 July 2026.' IMPORTANT CHANGE: DSIT no longer exists — gov.uk carries the banner 'This organisation is changing. It's being replaced by the Department for Business, Innovation, Science and Trade, the Department for Digital, Culture, Media and Sport and the Cabinet Office.' Any guidance that names 'DSIT ministers' is out of date."
+  seat_notes:
+    chair: Minister of State (Minister for Artificial Intelligence), Cabinet Office and Department for Business, Innovation, Science and Trade — appointed 20 July 2026
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.gov.uk/government/ministers
+      checked: 2026-09-22
+    - url: https://members.parliament.uk/FindYourMP
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 8656d1541b
+  migrated_from: input/data/committees-and-organisations.json#seats

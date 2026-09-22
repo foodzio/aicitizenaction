@@ -1,6 +1,6 @@
 # AI Citizen Action — Content Architecture
 
-*As of 22 September 2026 — last modified 2026-09-22T20:37:19Z (Resources layer added, record format corrected, volunteer lifecycle added). Implementation plan: `docs/implementation-plan.md`.*
+*As of 22 September 2026 — last modified 2026-09-22T23:46:14Z (ISO `gb`, file named by id, `unsourced` rule); earlier 2026-09-22T20:37:19Z (Resources layer added, record format corrected, volunteer lifecycle added). Implementation plan: `docs/implementation-plan.md`.*
 
 A structure for a site maintained by volunteers who each hold one domain or one country, in any number of languages, where nothing goes stale quietly.
 
@@ -26,11 +26,11 @@ The path is the assignment. A volunteer is given a folder, and the folder is the
 ```
 content/
   bodies/                      bodies with power: committees, regulators,
-    us/federal/senate-commerce.yml       agencies, institutes, multilateral, standards
-    us/ca/assembly-privacy.yml
-    uk/commons-science-tech.yml
-    eu/ep-imco.yml
-    in/standing-committee-it.yml
+    us/federal/us-senate-commerce.yml    agencies, institutes, multilateral, standards
+    us/ca/us-assembly-privacy.yml
+    gb/gb-commons-science-tech.yml
+    eu/eu-ep-imco.yml
+    in/in-standing-committee-it.yml
   channels/                    places to report: lab safety channels, bounties,
     us/anthropic.yml                     incident databases, whistleblower and
     global/ai-incident-database.yml      public complaint routes
@@ -80,9 +80,9 @@ scripts/                       migrate, validate, ingest, charter, freshness
 
 Three rules hold this together.
 
-**Geography is the first path segment under each type**, using ISO country codes, with `global` for bodies that belong to nobody. Sub-national layers get a second segment (`us/ca`, `de/by`). This is what lets a country steward be handed `content/**/us/ca/` and nothing else.
+**Geography is the first path segment under each type**, using ISO 3166-1 country codes in lower case (so the United Kingdom is `gb`, not `uk`), plus `eu` for the European Union and `global` for bodies that belong to nobody. Sub-national layers get a second segment (`us/ca`, `de/by`). This is what lets a country steward be handed `content/**/us/ca/` and nothing else.
 
-**One entity, one file, named after its slug.** Never a file holding several bodies — that reintroduces the collision problem the layout exists to prevent.
+**One entity, one file, named after its id** — the file is `<id>.yml`, and the id starts with the country code (`us-senate-commerce`). Never a file holding several bodies — that reintroduces the collision problem the layout exists to prevent.
 
 **`site/` is off limits to content volunteers**, and `content/` is off limits to nobody. The separation is what lets you accept a contributor without also granting them the ability to break the site.
 
@@ -90,17 +90,20 @@ Three rules hold this together.
 
 Inside every record, language-independent facts sit in one block and translatable prose in another. A translator opens a file with no URLs in it and cannot break one.
 
-`content/bodies/us/federal/senate-commerce.yml`
+`content/bodies/us/federal/us-senate-commerce.yml` (illustrative; the migrated record is `us-senate-committee-commerce-2.yml`)
 
 ```yaml
 id: us-senate-commerce
-type: committee
-geo: { country: US, level: federal }
+type: seat                                      # enum from vocab/record-types
+geo: { country: us, sub: federal }
 
 facts:
-  url: https://www.commerce.senate.gov/
-  membership_url: https://www.commerce.senate.gov/about/members
   routes:                                       # every route carries its own state
+    - id: membership
+      type: membership
+      value: https://www.commerce.senate.gov/about/members
+      verified: true
+      verified_on: 2026-09-22
     - id: contact
       type: form                                # enum from vocab/route-types
       value: https://www.commerce.senate.gov/contact
@@ -149,7 +152,7 @@ meta:
 
 **Controlled vocabularies live in `schema/vocab/`.** Topics, powers, route types, perspectives and roles are each one list, with an English label per id. Adding a topic is a maintainer change because every record, the routing and every language depend on the list.
 
-**`sources` is not optional.** A claim without a source someone actually opened is the thing that erodes a directory like this. The schema requires at least one.
+**`sources` is not optional.** A claim without a source someone actually opened is the thing that erodes a directory like this. The schema requires at least one. The only exception is a record where research found no URL at all: it carries `meta.unsourced` with the reason instead, is shown as unsourced, and is never recommended by routing.
 
 ## Ownership without a coordinator
 

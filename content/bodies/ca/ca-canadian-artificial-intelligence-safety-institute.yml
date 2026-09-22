@@ -1,0 +1,77 @@
+id: ca-canadian-artificial-intelligence-safety-institute
+type: government
+geo:
+  country: ca
+  label: Canada
+facts:
+  routes:
+    - id: caisi-general-mailbox
+      type: email
+      value: CAISI-ICSIA@ised-isde.gc.ca
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en, fr
+      source_id: efc9242b5c38
+    - id: ised-caisi-page
+      type: form
+      value: https://ised-isde.canada.ca/site/ised/en/canadian-artificial-intelligence-safety-institute
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en, fr
+      source_id: b23df77fcf93
+    - id: cifar-caisi-research-program
+      type: consultation
+      value: https://cifar.ca/ai/caisi/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 2b13495b0695
+    - id: homepage
+      type: homepage
+      value: https://ised-isde.canada.ca/site/ised/en/canadian-artificial-intelligence-safety-institute
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 3c71014c6f01
+  local_name: Institut canadien de sécurité de l'intelligence artificielle (ICSIA)
+  region: Canada
+  public_input: limited
+  tags:
+    - law
+    - systemic
+strings:
+  name: Canadian Artificial Intelligence Safety Institute (CAISI)
+  remit: Announced Nov 2024, sits within Innovation, Science and Economic Development Canada (ISED). Funds and directs AI safety research (investigator-led and government-directed streams, with CIFAR running a research programme and Amii/Mila/Vector involved); advises government on risks from advanced AI systems; produces guidance for developers and the public. Purely research/advisory — Canada has NO in-force AI statute after AIDA (Bill C-27) died on prorogation in January 2025, so CAISI cannot compel or fine anyone.
+  powers_text: research
+  reality_check: "Genuinely reachable: a published bilingual government mailbox on a federal domain. Canada's federal correspondence norms mean a foreigner writing in English or French will normally get at least an acknowledgement. But with no AI statute in force there is nothing to complain about in a legally operative sense — CAISI is a funder and adviser."
+  notes: Its page references advanced-AI risks including systems that 'may be dangerous or hinder human oversight' and synthetic-content harms, but stops well short of explicit catastrophic/existential framing. Acronym clashes with the US Center for AI Standards and Innovation (also CAISI).
+  routes:
+    caisi-general-mailbox:
+      label: CAISI general mailbox
+      scope: general
+      note: VERIFIED — published directly on the ISED CAISI page and fetched. One of only two clearly published AISI mailboxes worldwide outside the US/UK/EU.
+    ised-caisi-page:
+      label: ISED CAISI page (incl. 'Report a problem' form)
+      scope: general
+      note: VERIFIED fetched. No dedicated consultation docket published here.
+    cifar-caisi-research-program:
+      label: CIFAR CAISI Research Program
+      scope: research funding
+      note: UNVERIFIED (search result). Relevant to researchers seeking to work with CAISI rather than to the general public.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ised-isde.canada.ca/site/ised/en/canadian-artificial-intelligence-safety-institute
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 1e9583b65d
+  migrated_from: input/data/institutions.json

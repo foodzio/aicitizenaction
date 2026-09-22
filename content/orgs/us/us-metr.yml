@@ -1,0 +1,81 @@
+id: us-metr
+type: civil-society
+geo:
+  country: us
+  label: United States (Berkeley)
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: info@metr.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d55ee2bd8736
+    - id: press
+      type: email
+      value: press@metr.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7bb5c0c0a76c
+    - id: careers
+      type: form
+      value: https://metr.org/careers
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5eb9b6821722
+    - id: research-updates
+      type: form
+      value: https://metr.substack.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 68b0f3acfb14
+    - id: homepage
+      type: homepage
+      value: https://metr.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 6a2b9020d0f6
+  region: United States
+  public_input: limited
+  tags:
+    - insider
+    - research
+strings:
+  name: METR (Model Evaluation & Threat Research)
+  remit: Research non-profit that evaluates frontier models for autonomous and dangerous capabilities and publishes the results. Best known for the time-horizon metric (length of task an agent can complete at 50% reliability), pre-deployment evaluations for OpenAI and Anthropic, and work on threats to evaluation integrity — generalised reward hacking and sandbagging. Formerly ARC Evals.
+  threat_model: "Dangerous autonomous capability and loss of control: autonomous replication, rogue deployment inside a lab, automated AI R&D acceleration, sabotage, and the meta-problem that models may deliberately underperform on evaluations."
+  reality_check: Credible and influential well beyond its size, but heavily capacity-constrained and bound by NDAs with the labs it evaluates. A general inbox, no tip line. It will not act as a whistleblowing channel.
+  gov_channel: Strong — METR's evaluations are referenced in frontier-lab safety frameworks and by the US and UK safety/security institutes; its time-horizon results are widely cited in policy.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+    press:
+      label: Press
+      scope: Media
+    careers:
+      label: Careers
+      scope: Researchers and engineers
+      note: METR also runs paid contractor/baseliner work for task development, which is an unusual paid entry route for technical outsiders.
+    research-updates:
+      label: Research updates
+      scope: Anyone
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://metr.org/careers
+      checked: 2026-09-22
+    - url: https://metr.substack.com
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: ab3ca9f121
+  migrated_from: input/data/institutions.json

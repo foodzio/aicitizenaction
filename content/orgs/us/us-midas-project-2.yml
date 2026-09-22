@@ -1,0 +1,43 @@
+id: us-midas-project-2
+type: organisation
+geo:
+  country: us
+  label: United States (company-focused, global reach).
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://www.themidasproject.com/volunteer
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1a6654013285
+  perspective: safety-advocacy
+  volunteers: yes
+  tags:
+    - join
+    - law
+    - tip
+strings:
+  name: The Midas Project
+  the_ask: AI companies should keep the safety and transparency commitments they have publicly made, and be held accountable when they quietly walk them back.
+  what_they_do: "Corporate watchdog work: the Watchtower tracker of silent changes to AI company policies, investigations, scorecards, and the OpenAI Files. Runs modelrepublic.org and openaifiles.org."
+  newcomer_action: Send a tip if you have inside knowledge of an AI company; otherwise sign up as a volunteer, join the Discord and help with research or amplifying campaigns.
+  tips: yes — dedicated tip page at themidasproject.com/tips, aimed at industry insiders
+  geography: United States (company-focused, global reach).
+  scale: "Tiny: founded early 2024 by Tyler Johnston, 'a small core team' plus volunteers. 501(c)(3), EIN 99-2326977."
+  spending: Not disclosed.
+  caution: Adversarial toward specific named companies. If you work at an AI lab, sending a tip may breach your employment agreement — take legal advice first; the organisation is small and cannot indemnify you.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.themidasproject.com/volunteer
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 9f4e2aad7e
+  migrated_from: input/data/committees-and-organisations.json#orgs

@@ -1,0 +1,48 @@
+id: us-mit-ai-alignment
+type: academic
+geo:
+  country: us
+  label: United States (Cambridge, MA)
+facts:
+  routes:
+    - id: programmes-application-information
+      type: form
+      value: https://www.mitalignment.org/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: e060b7d17e38
+    - id: homepage
+      type: homepage
+      value: https://www.mitalignment.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ddb2994c2e49
+  region: United States
+  public_input: limited
+  tags:
+    - research
+strings:
+  name: MIT AI Alignment (MAIA)
+  remit: Student-and-researcher group at MIT running AI alignment education and research programmes — reading groups, technical bootcamps and supported research projects, feeding students into alignment research careers. Closely associated with MIT's Algorithmic Alignment Group.
+  threat_model: Technical alignment and loss of control — interpretability, evaluations, and scalable oversight.
+  reality_check: A student organisation, primarily serving MIT and Harvard affiliates. Not a channel for outside concerns; it is a talent-pipeline programme. UNVERIFIED across the board — I could not fetch the site.
+  gov_channel: None.
+  routes:
+    programmes-application-information:
+      label: Programmes and application information
+      scope: Primarily MIT and Harvard students
+      note: UNVERIFIED — the site returned a 403 to automated fetching at time of checking. Do not assume an email exists; check the site in a browser.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.mitalignment.org/
+      checked: null
+  needs_research:
+    - topics
+  legacy_id: 0d5ba446e5
+  migrated_from: input/data/institutions.json

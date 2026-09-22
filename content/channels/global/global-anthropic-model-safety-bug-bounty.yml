@@ -1,0 +1,55 @@
+id: global-anthropic-model-safety-bug-bounty
+type: reporting-channel
+geo:
+  country: global
+  label: Global
+facts:
+  routes:
+    - id: submission-page
+      type: disclosure
+      value: https://support.claude.com/en/articles/12119250-model-safety-bug-bounty-program
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: afcd1c431875
+    - id: homepage
+      type: homepage
+      value: https://support.claude.com/en/articles/12119250-model-safety-bug-bounty-program
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c0b175e7dec4
+  region: Global
+  public_input: open
+  tags:
+    - flaw
+strings:
+  name: Anthropic Model Safety Bug Bounty
+  remit: Universal jailbreaks that defeat Anthropic's Constitutional Classifiers — generalised techniques that work across many prompts, tested against a supplied set of harmful questions concerning CBRN/biological threat information. Narrow, context-specific exploits do not qualify.
+  reality_check: "Pays real money and is a genuine channel to the safety team, but it is gated: you must be accepted, sign an NDA, and you may not publish the jailbreak, the test questions or classifier details without written consent. You may disclose that you participate. Not a route for someone who wants to speak publicly, and not open-entry."
+  accepts: Universal jailbreaks that defeat Anthropic's Constitutional Classifiers — generalised techniques that work across many prompts, tested against a supplied set of harmful questions concerning CBRN/biological threat information. Narrow, context-specific exploits do not qualify.
+  does_not_accept: Infrastructure vulnerabilities (misconfigurations, CSRF, privilege escalation, SQLi, XSS, directory traversal) — those belong under the Responsible Disclosure Policy. Also excludes single-prompt or narrow jailbreaks.
+  how: Complete a Google Form application and create a HackerOne account first. If accepted you receive a HackerOne invitation and must create a Claude Console account using your @wearehackerone.com alias. An NDA is mandatory. Applications reviewed on a rolling basis.
+  format: HackerOne report with detailed methodology; rewards graded on a sliding scale against internal criteria for response detail and accuracy.
+  timing: Rolling applications; invite-only participation.
+  after: Graded against internal criteria; up to $35,000 per novel universal jailbreak. Accepted participants get free access to a model alias for authorised red-teaming only.
+  operator: Anthropic, run on HackerOne
+  routes:
+    submission-page:
+      label: Submission page
+      scope: Universal jailbreaks that defeat Anthropic's Constitutional Classifiers — generalised techniques that work across many prompts, tested against a supplied set of harmful questions concerning CBRN/biological threat information. Narrow, context-specific exploits do not qualify.
+      note: Complete a Google Form application and create a HackerOne account first. If accepted you receive a HackerOne invitation and must create a Claude Console account using your @wearehackerone.com alias. An NDA is mandatory. Applications reviewed on a rolling basis.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://support.claude.com/en/articles/12119250-model-safety-bug-bounty-program
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: a6abadafd9
+  migrated_from: input/data/institutions.json

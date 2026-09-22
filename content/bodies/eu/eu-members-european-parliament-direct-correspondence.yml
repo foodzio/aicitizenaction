@@ -1,0 +1,50 @@
+id: eu-members-european-parliament-direct-correspondence
+type: seat
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.europarl.europa.eu/meps/en/home
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a2bfe16e3c49
+    - id: public-route
+      type: submission
+      value: https://www.europarl.europa.eu/forms/en/ask-ep
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8627a9bf8035
+  level: bloc
+  tags:
+    - law
+strings:
+  name: Members of the European Parliament — direct correspondence
+  ai_jurisdiction: Every MEP can table amendments, ask written questions of the Commission (which must be answered and are published), sign motions, and speak in committee. On AI, a single MEP's written question can force the Commission to state a position on the record.
+  public_route: "Find MEPs at the MEP directory, which searches by member name and by country. Each MEP's individual page publishes their Brussels and Strasbourg office addresses, phone numbers and email. CRUCIAL POINT FOR OUTSIDERS: MEPs are elected from multi-member constituencies (often the whole country) under proportional representation, so you have many MEPs, not one. There is no constituency-service convention equivalent to the UK's — MEPs routinely accept and act on correspondence from people who are not their voters, including from other Member States and from outside the EU, and they are not obliged to refuse it. In practice the group and the committee portfolio matter far more than geography: write to the MEP who holds the AI file, whatever country they represent. Parliament also runs a general citizens' enquiry service ('Ask EP') for questions about the EU and Parliament's work."
+  format_rules: No limits. Correspondence is not published. Replies are at the MEP's discretion; a specific, short, evidenced request to a policy adviser gets a far higher response rate than a mass-campaign email.
+  key_people: "For AI specifically: Michael McNamara (Renew, IE), Brando Benifei (S&D, IT), Arba Kokalari (EPP, SE), Reinier van Lanschot (Greens/EFA, NL), plus the four committee chairs listed separately."
+  note: "VERIFIED 2026-09-22: the MEP directory and the 'Write to us' / Ask EP form are both live official European Parliament pages. The statement that MEPs generally accept non-constituent correspondence reflects the structure of EU elections (no single-member constituencies) rather than a written rule I could cite."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.europarl.europa.eu/meps/en/home
+      checked: 2026-09-22
+    - url: https://www.europarl.europa.eu/forms/en/ask-ep
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 522a9417dd
+  migrated_from: input/data/committees-and-organisations.json#seats

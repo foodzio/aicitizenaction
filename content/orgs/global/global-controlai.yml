@@ -1,0 +1,43 @@
+id: global-controlai
+type: organisation
+geo:
+  country: global
+  label: UK, US, Canada, Germany. UK not-for-profit company limited by guarantee; US 501(c)(4).
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://act.controlai.org/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 622f9db2dc40
+  perspective: safety-advocacy
+  volunteers: unclear
+  tags:
+    - fund
+    - join
+    - law
+strings:
+  name: ControlAI
+  the_ask: Governments should pass binding law prohibiting the development of superintelligent AI, and coordinate internationally to enforce that prohibition.
+  what_they_do: Lawmaker briefings and a model bill; a mass newsletter (claims 148,000+ subscribers); media work; a constituent-to-legislator contact tool; organised a letter from 70+ cross-party UK MPs and Peers to the Prime Minister asking the government to evaluate its bill.
+  newcomer_action: Use the contact tool at act.controlai.org to email or write to your lawmakers asking them to back a ban on superintelligence development; subscribe to the weekly newsletter; ask to join a local action group.
+  tips: No public tip line; offers briefings to lawmakers and journalists via hello@controlai.com
+  geography: UK, US, Canada, Germany. UK not-for-profit company limited by guarantee; US 501(c)(4).
+  scale: Roughly 20+ staff and advisors listed on its About page. Well-resourced relative to most groups here.
+  spending: Not disclosed. Homepage states it is 'only accepting substantial donations, except in special cases' — i.e. it is not running a small-donor programme.
+  caution: Its own action page says '205+ lawmakers support our campaign'; its homepage breaks that down as 160+ UK and 35+ Canadian lawmakers, plus 400+ lawmakers briefed across four countries. 'Support' means signing a campaign statement, not voting for a bill — no such bill has passed. The ask is a prohibition, not regulation; joining means endorsing a ban. Small donors are effectively not wanted.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://act.controlai.org/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 87343ca3cf
+  migrated_from: input/data/committees-and-organisations.json#orgs

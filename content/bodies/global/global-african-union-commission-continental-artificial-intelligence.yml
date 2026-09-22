@@ -1,0 +1,68 @@
+id: global-african-union-commission-continental-artificial-intelligence
+type: government
+geo:
+  country: global
+  label: African Union (55 member states)
+facts:
+  routes:
+    - id: continental-ai-strategy-document
+      type: docket
+      value: https://au.int/en/documents/20240809/continental-artificial-intelligence-strategy
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en, fr, ar, pt
+      source_id: d87bcd83ef97
+    - id: multistakeholder-consultative-sessions-announcement
+      type: consultation
+      value: https://au.int/en/newsevents/20240419/multistakeholder-consultative-sessions-development-continental-strategy
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 00ff94d31681
+    - id: homepage
+      type: homepage
+      value: https://au.int/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: cfc40c0d4513
+  region: Africa
+  public_input: limited
+  tags:
+    - harm
+    - systemic
+strings:
+  name: African Union Commission — Continental Artificial Intelligence Strategy
+  remit: The Continental AI Strategy was adopted by African ministers in June 2024 and endorsed by the AU Executive Council in July 2024, alongside the African Digital Compact. It is an Africa-owned, development-first framework covering capacity, infrastructure, datasets, governance and regional cooperation, with an implementation horizon to 2030 and a call for member states to establish national AI strategies and regulatory frameworks. The AU Commission (Department of Infrastructure and Energy / the AU Development Agency AUDA-NEPAD) coordinates; there is no continental AI regulator and no enforcement power. Development was preceded by genuine multistakeholder consultative sessions (2024).
+  powers_text: convene
+  reality_check: "The AU ran real open multistakeholder consultations during the strategy's development in 2024, and UNESCO supported the process — so there is precedent for external participation. But there is no standing channel, no AI-specific contact address I could verify, and no implementation body with a public interface. The AU's operating reality is member-state diplomacy. For a global directory, the honest entry is: important for context, not contactable on AI matters."
+  notes: No frontier or catastrophic-risk content — the strategy is explicitly framed around development, sovereignty, and avoiding extractive AI, and African governments have repeatedly argued that frontier-risk framing crowds out their priorities. That tension is itself a finding worth recording.
+  routes:
+    continental-ai-strategy-document:
+      label: Continental AI Strategy document
+      scope: strategy
+      note: UNVERIFIED (search result). AU documents are normally published in all four AU working languages.
+    multistakeholder-consultative-sessions-announcement:
+      label: Multistakeholder consultative sessions announcement
+      scope: past consultation
+      note: UNVERIFIED (search result). Evidence that open consultation sessions were held during drafting; that window has closed.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://au.int/en/documents/20240809/continental-artificial-intelligence-strategy
+      checked: null
+    - url: https://au.int/en/newsevents/20240419/multistakeholder-consultative-sessions-development-continental-strategy
+      checked: null
+    - url: https://au.int/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 12bb9edd31
+  migrated_from: input/data/institutions.json

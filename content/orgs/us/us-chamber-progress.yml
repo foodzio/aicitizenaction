@@ -1,0 +1,43 @@
+id: us-chamber-progress
+type: organisation
+geo:
+  country: us
+  label: United States — federal, state and courts.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://progresschamber.org/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9ab11785918e
+  perspective: industry-lobby
+  volunteers: no
+  tags:
+    - fund
+    - join
+    - opposition
+strings:
+  name: Chamber of Progress
+  the_ask: Keep AI development and AI-generated work legally unencumbered — defend fair use for AI training, oppose broad restrictions on automated decision systems, and pursue a centre-left 'AI opportunity' agenda.
+  what_they_do: Center-left tech industry coalition. Runs the State AI Leadership Project (state-level advocacy), Generate & Create (defending AI training as fair use), the Democratic AI Opportunity Agenda, and the Progress Defense Fund for litigation. Opposed California SB 947.
+  newcomer_action: Nothing to join — it is a corporate coalition. If you are arguing about AI and copyright, its Generate & Create material is the clearest statement of the industry's position.
+  tips: no
+  geography: United States — federal, state and courts.
+  scale: Mid-sized, staffed coalition with a litigation arm.
+  spending: Corporate funders are not disclosed on the homepage.
+  caution: Presents itself as progressive and center-left, which can make it read as civil society rather than industry — it is funded by tech companies and litigates on their side. If you are a writer, artist or musician, its copyright position is directly opposed to yours.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://progresschamber.org/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 71623bcb22
+  migrated_from: input/data/committees-and-organisations.json#orgs

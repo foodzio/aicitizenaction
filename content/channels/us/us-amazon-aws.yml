@@ -1,0 +1,94 @@
+id: us-amazon-aws
+type: company
+geo:
+  country: us
+  label: USA
+facts:
+  routes:
+    - id: aws-security-vulnerabilities
+      type: email
+      value: aws-security@amazon.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d83df105416b
+    - id: aws-abuse-trust-safety
+      type: email
+      value: trustandsafety@support.aws.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1d127418824a
+    - id: aws-vulnerability-disclosure-program
+      type: disclosure
+      value: https://hackerone.com/aws_vdp
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: fcb3242f97ec
+    - id: aws-abuse-form
+      type: form
+      value: https://repost.aws/knowledge-center/report-aws-abuse
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 557fb6a0fe3c
+    - id: homepage
+      type: homepage
+      value: https://aws.amazon.com/ai/responsible-ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 91e5e1517504
+    - id: framework
+      type: framework
+      value: https://cdn.amazon.science/a0/4f/bca5cb32495280835d9370a466b7/amazon-fmsf-9-2026.pdf
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 2e7decea8dcb
+  region: United States
+  public_input: none
+  tags:
+    - behaviour
+    - flaw
+    - insider
+strings:
+  name: Amazon / AWS
+  remit: Responsible AI function governing Nova frontier models and Bedrock Guardrails; the Frontier Model Safety Framework commits that Amazon 'will not deploy frontier AI models developed by Amazon that exceed specified risk thresholds without appropriate safeguards in place'.
+  reality_check: No public accounts found of anyone successfully reaching an Amazon frontier-model safety function from outside. The Frontier Model Safety Framework publishes no contact channel, no external input process and no whistleblower route — verified by fetching the publication page. AWS's security channels are well-run and responsive for infrastructure, but there is no evidence they route AI safety concerns anywhere.
+  notes: "This is a company with a published frontier safety framework and no published way to talk to the people who wrote it. For a model-behaviour issue with Nova or Bedrock, you are left with general AWS support. Record as: no meaningful public safety channel — general contact only."
+  routes:
+    aws-security-vulnerabilities:
+      label: AWS security vulnerabilities
+      scope: Security vulnerabilities in AWS services. AI model safety is not mentioned anywhere in the policy.
+      note: Infra-only in practice.
+    aws-abuse-trust-safety:
+      label: AWS abuse / trust and safety
+      scope: Suspected abuse of AWS resources (EC2, S3 etc.).
+      note: Infrastructure abuse, not model behaviour.
+    aws-vulnerability-disclosure-program:
+      label: AWS Vulnerability Disclosure Program
+      scope: Security only.
+      note: Linked from the AWS vulnerability reporting page.
+    aws-abuse-form:
+      label: AWS abuse form
+      scope: Reporting abusive use of AWS resources.
+    homepage:
+      label: Homepage
+    framework:
+      label: Amazon's Frontier Model Safety Framework (published 9 Feb 2025, updated 17 Sept 2026)
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://hackerone.com/aws_vdp
+      checked: 2026-09-22
+    - url: https://repost.aws/knowledge-center/report-aws-abuse
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 82cf1a7ba9
+  migrated_from: input/data/institutions.json

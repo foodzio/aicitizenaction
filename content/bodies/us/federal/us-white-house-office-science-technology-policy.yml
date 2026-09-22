@@ -1,0 +1,91 @@
+id: us-white-house-office-science-technology-policy
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (federal), Executive Office of the President
+facts:
+  routes:
+    - id: white-house-general-contact
+      type: form
+      value: https://www.whitehouse.gov/contact/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: e24833449a13
+    - id: ostp-requests-information-via
+      type: docket
+      value: https://www.federalregister.gov/agencies/science-and-technology-policy-office
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: d7740b007281
+    - id: nitrd-archive-ai-action
+      type: docket
+      value: https://www.nitrd.gov/coordination-areas/ai/90-fr-9088-responses/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 1263feb73fd9
+    - id: named-ostp-policy-inbox
+      type: email
+      value: none published
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 0b7f856b858f
+    - id: homepage
+      type: homepage
+      value: https://www.whitehouse.gov/ostp/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 0b874234d79c
+  region: United States
+  public_input: limited
+  tags:
+    - law
+    - systemic
+strings:
+  name: White House Office of Science and Technology Policy (OSTP)
+  remit: Advises the President on science and technology; co-ordinates federal AI policy including America's AI Action Plan (July 2025) and implementation of EO 14179 ('Removing Barriers to American Leadership in AI'). Runs the National AI Initiative Office and co-chairs the NSTC machinery. Issues RFIs on AI strategy and the AI R&D Strategic Plan. It has NO regulatory authority — it directs agencies, it does not bind the public.
+  powers_text: advise
+  reality_check: "The general White House contact form is a dead end for policy input — it is a constituent-mail pipeline. The ONLY OSTP route that demonstrably works is responding to a published RFI in the Federal Register: the AI Action Plan RFI attracted over 10,000 comments, they were archived publicly by NITRD, and the resulting plan visibly tracked several industry submissions. Outside an open RFI window, influence runs through agencies OSTP tasks (NIST, DOE, Commerce) or through Congress, not through OSTP's inbox."
+  notes: There is no separate standing 'AI Action Plan office' with its own public contact; implementation is distributed across OSTP, OMB, Commerce/NIST, DOE and DHS.
+  routes:
+    white-house-general-contact:
+      label: White House general contact form
+      scope: The only general public route to OSTP that USA.gov lists; correspondence is handled by the White House correspondence office, not by OSTP staff.
+      note: UNVERIFIED as fetched (whitehouse.gov not retrieved directly); the URL is the one cited by USA.gov's OSTP agency page, which WAS fetched and verified.
+    ostp-requests-information-via:
+      label: OSTP Requests for Information via the Federal Register
+      scope: OSTP's AI Action Plan RFI (90 FR 9088, Feb 2025) drew over 10,000 comments and was the real input channel.
+      note: UNVERIFIED as fetched; the Feb 2025 RFI itself is at https://www.federalregister.gov/documents/2025/02/06/2025-02305/request-for-information-on-the-development-of-an-artificial-intelligence-ai-action-plan (seen in search results, not fetched).
+    nitrd-archive-ai-action:
+      label: NITRD archive of AI Action Plan RFI responses
+      scope: Public archive of the 10,000+ submissions to the AI Action Plan RFI — useful as a model for what a submission looks like.
+      note: UNVERIFIED as fetched; appeared in search results from nitrd.gov.
+    named-ostp-policy-inbox:
+      label: Named OSTP policy inbox
+      scope: n/a
+      note: VERIFIED ABSENCE — USA.gov's OSTP page publishes no phone, no mailing address and no email, only the website and the generic White House contact form.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.whitehouse.gov/contact/
+      checked: null
+    - url: https://www.federalregister.gov/agencies/science-and-technology-policy-office
+      checked: null
+    - url: https://www.nitrd.gov/coordination-areas/ai/90-fr-9088-responses/
+      checked: null
+    - url: https://www.whitehouse.gov/ostp/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: cae069abca
+  migrated_from: input/data/institutions.json

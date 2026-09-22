@@ -1,0 +1,80 @@
+id: us-department-homeland-security
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (federal)
+facts:
+  routes:
+    - id: dhs-report-incidents-page
+      type: complaint
+      value: https://www.dhs.gov/report-incidents
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: a10a12fb3f02
+    - id: dhs-office-civil-rights
+      type: complaint
+      value: https://www.dhs.gov/file-civil-rights-complaint
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: ad4880d35228
+    - id: dhs-ai-use-case
+      type: docket
+      value: https://www.dhs.gov/ai/use-case-inventory
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 1ddfd4dcbab4
+    - id: homepage
+      type: homepage
+      value: https://www.dhs.gov/ai
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 782d2689ef9a
+  region: United States
+  public_input: limited
+  tags:
+    - harm
+    - systemic
+strings:
+  name: U.S. Department of Homeland Security (DHS)
+  remit: Co-ordinates AI risk to critical infrastructure and homeland security; publishes an AI use-case inventory covering its components including CISA; previously convened the AI Safety and Security Board (an advisory body whose membership was reconstituted under the current administration). DHS components with AI remit include CISA, CBP, TSA and USCIS. DHS itself mostly convenes and issues non-binding frameworks for critical-infrastructure owners rather than regulating AI developers.
+  powers_text: convene
+  reality_check: DHS-wide AI channels are advisory and diffuse. The only route with real bite is the CRCL complaint when DHS's own AI has harmed a specific person — those generate a case file. General frontier-risk correspondence to DHS goes nowhere; its AI Safety and Security Board is membership-based and does not take public submissions. For critical-infrastructure AI risk, CISA (below) is the operational address.
+  notes: Verify the current composition and status of the AI Safety and Security Board before relying on it — its membership was reconstituted after Jan 2025.
+  routes:
+    dhs-report-incidents-page:
+      label: DHS report incidents page
+      scope: Routes to component-specific reporting channels (cyber, suspicious activity, civil rights).
+      note: UNVERIFIED as fetched; URL from search results on dhs.gov.
+    dhs-office-civil-rights:
+      label: DHS Office for Civil Rights and Civil Liberties complaint
+      scope: Complaints about DHS's own use of AI (e.g. facial recognition, automated screening) affecting an individual.
+      note: UNVERIFIED as fetched — the DHS contact page references a feedback and complaints route but the literal URL was not confirmed.
+    dhs-ai-use-case:
+      label: DHS AI use-case inventory
+      scope: Public transparency artefact; useful evidence base for a complaint or FOIA, not an input channel.
+      note: UNVERIFIED as fetched; the CISA sub-page appeared in search results.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.dhs.gov/report-incidents
+      checked: null
+    - url: https://www.dhs.gov/file-civil-rights-complaint
+      checked: null
+    - url: https://www.dhs.gov/ai/use-case-inventory
+      checked: null
+    - url: https://www.dhs.gov/ai
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: f736198d43
+  migrated_from: input/data/institutions.json

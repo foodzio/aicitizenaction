@@ -1,0 +1,42 @@
+id: us-sag-aftra
+type: organisation
+geo:
+  country: us
+  label: United States.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://actionnetwork.org/petitions/support-the-no-fakes-act/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b84272f53746
+  perspective: professional
+  volunteers: yes — members through locals and committees
+  tags:
+    - join
+    - tip
+strings:
+  name: SAG-AFTRA
+  the_ask: "Performers must control their own voice and likeness: informed consent and compensation for digital replicas in contracts, and a federal right for all Americans to control their likeness and voice via the NO FAKES Act."
+  what_they_do: Negotiates AI terms into film, TV, commercial, audiobook and video game contracts; lobbies Congress and state legislatures (it backed California's law requiring disclosure of AI-generated performances in advertising); enforces contract terms for members.
+  newcomer_action: Sign the NO FAKES Act petition today (open to the public, not just members); if you are a member, report any unauthorised AI use of your voice or likeness to the union.
+  tips: yes — members can report contract violations to the union
+  geography: United States.
+  scale: Large union (around 160,000 members) with real bargaining power and a proven willingness to strike over AI.
+  spending: Membership and dues funded.
+  caution: Its ask is control and consent over likeness, not limits on AI capability. The NO FAKES Act is contested by some digital rights groups (including EFF) as a broad new IP right that could restrict speech — you are picking a side in that argument by signing.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://actionnetwork.org/petitions/support-the-no-fakes-act/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 53190f6df1
+  migrated_from: input/data/committees-and-organisations.json#orgs

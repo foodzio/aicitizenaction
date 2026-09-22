@@ -1,0 +1,59 @@
+id: nz-petitions-committee
+type: seat
+geo:
+  country: nz
+  label: New Zealand
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.parliament.nz/en/pb/sc/scl/petitions/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 82b22d5b7948
+    - id: public-route
+      type: submission
+      value: https://www.parliament.nz/en/pb/petitions/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 982e7eff8621
+  level: national
+  tags:
+    - law
+    - petition
+    - record
+  seats:
+    - role: chair
+      name: Greg O'Connor, MP (Labour Party, Ōhāriu)
+      verified_on: 2026-09-22
+strings:
+  name: Petitions Committee (54th Parliament)
+  ai_jurisdiction: No AI subject matter of its own, but it is the door through which a member of the public — including a single individual — puts a new issue such as AI regulation onto Parliament's agenda when no inquiry is open. It can refer a petition to a subject committee such as Economic Development, Science and Innovation, refer it to a Minister for response, or nominate it for debate in the House.
+  business: A rolling caseload — 318 petitions listed in the committee's business index as at 22 September 2026, with new petitions presented that same day.
+  public_route: "Anyone may start a petition to the House of Representatives — there is no signature threshold for presenting one, and petitions with a single signature are accepted. The committee's own advice: 'If you would like to start your own petition, it is strongly recommended that you contact Petitions Committee staff before you begin collecting signatures. The staff will help you with guidance to ensure that your petition meets the rules for form and content.' Secretariat: petitions@parliament.govt.nz. In considering a petition the committee can group similar petitions, refer it to a Minister, refer it to another select committee or consider it jointly, request assistance from the Ombudsman, work with the petitioner to collect more evidence, invite the petitioner to speak in person, and nominate it for a House debate."
+  format_rules: "The committee either publishes a report to Parliament on every petition it considers, or asks a subject committee or a Minister to do so; its report can recommend law or policy changes. Note: 'The committee does not always ask for submissions on the petitions it is considering.' Petitions and reports are published."
+  key_people: 4 members in total.
+  note: VERIFIED 2026-09-22 by direct fetch of the Petitions Committee page, which names the chairperson and lists the committee's powers verbatim.
+  seat_notes:
+    chair: Chairperson
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.parliament.nz/en/pb/sc/scl/petitions/
+      checked: 2026-09-22
+    - url: https://www.parliament.nz/en/pb/petitions/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: a92f7cd0c4
+  migrated_from: input/data/committees-and-organisations.json#seats

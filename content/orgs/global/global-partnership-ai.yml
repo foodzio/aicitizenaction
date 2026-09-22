@@ -1,0 +1,60 @@
+id: global-partnership-ai
+type: civil-society
+geo:
+  country: global
+  label: International (US-based non-profit)
+facts:
+  routes:
+    - id: contact-form
+      type: form
+      value: https://partnershiponai.org/contact/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3f15aa723416
+    - id: become-partner-organisation
+      type: membership
+      value: https://partnershiponai.org/partners
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b711cae36e01
+    - id: homepage
+      type: homepage
+      value: https://partnershiponai.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: e47ffa0cbef7
+  region: Global
+  public_input: limited
+  tags:
+    - research
+strings:
+  name: Partnership on AI (PAI)
+  remit: "Multistakeholder convener with 100+ partner organisations spanning Amazon, Google, Meta, Microsoft, OpenAI, Apple alongside ACLU, ARTICLE 19, Future of Privacy Forum, UNICEF, UNDP and universities. Produces guidance documents and frameworks — notably on safe foundation model deployment, synthetic media, and AI and labour — across four programme areas: AI and Human Connection; AI, Labor and the Economy; Safety-Critical AI; and Public Policy."
+  threat_model: Deliberately plural. Its Safety-Critical AI programme touches frontier deployment risk; its labour and human-connection work is squarely near-term/structural. Its distinctive contribution is process norms rather than a risk thesis.
+  reality_check: Consensus-bound. With the largest labs as partners, PAI's outputs are negotiated to the level everyone can accept, which limits how sharp a concern it will carry. Organisational partnership is possible; individual input is not really a thing. Middling responsiveness.
+  gov_channel: Moderate — PAI guidance is cited in policy processes and it participates in multistakeholder forums, but it is a norm-setter, not an advocate.
+  routes:
+    contact-form:
+      label: Contact form
+      scope: General, including partnership enquiries
+      note: No public email address is listed.
+    become-partner-organisation:
+      label: Become a partner organisation
+      scope: Organisations only
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://partnershiponai.org/contact/
+      checked: 2026-09-22
+    - url: https://partnershiponai.org/partners
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 158f6ba38a
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,57 @@
+id: global-perils-ai-safety-s-insularity-why
+type: reporting-channel
+geo:
+  country: global
+  label: N/A (commentary)
+facts:
+  routes:
+    - id: submission-page
+      type: disclosure
+      value: https://www.transformernews.ai/p/the-perils-of-ai-safetys-insularity
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b6bc011117c9
+    - id: homepage
+      type: homepage
+      value: https://www.transformernews.ai/p/the-perils-of-ai-safetys-insularity
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 844ea720b7d6
+  region: Other
+  public_input: open
+  tags:
+    - flaw
+    - harm
+    - systemic
+strings:
+  name: "'The perils of AI safety's insularity' — why outside contributions get ignored"
+  remit: N/A
+  reality_check: "Include this in the playbook as the honest counterweight. It explains structurally why a good submission from an unaffiliated person often lands nowhere: the field's absorption mechanisms are social and network-based, not procedural. The practical implication is that formal mechanisms with published duties — select committee evidence, regulations.gov comments, regulatory complaints, a permanent AIID record — are more reliable for an outsider than trying to be heard inside the field, because they do not depend on already being known."
+  accepts: N/A
+  does_not_accept: N/A
+  how: "N/A — read as diagnosis. Its claims: AI safety has built a parallel research universe outside academia that trades external scrutiny for speed; the network is geographically and financially concentrated (Berkeley/San Francisco, EA-aligned funders); researchers do not meaningfully engage with mainstream ML venues and consequently reinvent existing methods; funding shapes research direction more than consensus does; and there is a reported lower publication bar for optimistic than for critical claims about AI. It cites work arguing 'scheming' research risks repeating failures ape-language researchers made 50 years ago, and Dan Hendrycks calling mechanistic interpretability misguided."
+  format: N/A
+  timing: N/A
+  after: N/A
+  operator: Transformer (news outlet; primary funder Open Philanthropy / Coefficient Giving)
+  routes:
+    submission-page:
+      label: Submission page
+      scope: N/A
+      note: "N/A — read as diagnosis. Its claims: AI safety has built a parallel research universe outside academia that trades external scrutiny for speed; the network is geographically and financially concentrated (Berkeley/San Francisco, EA-aligned funders); researchers do not meaningfully engage with mainstream ML venues and consequently reinvent existing methods; funding shapes research direction more than consensus does; and there is a reported lower publication bar for optimistic than for critical claims about AI. It cites work arguing 'scheming' research risks repeating failures ape-language researchers made 50 years ago, and Dan Hendrycks calling mechanistic interpretability misguided."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.transformernews.ai/p/the-perils-of-ai-safetys-insularity
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b03e1fa6d8
+  migrated_from: input/data/institutions.json

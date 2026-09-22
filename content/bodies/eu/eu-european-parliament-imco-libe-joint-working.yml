@@ -1,0 +1,59 @@
+id: eu-european-parliament-imco-libe-joint-working
+type: seat
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.europarl.europa.eu/committees/en/working-group-the-implementation-and-enf/product-details/20241209CDT13901
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 058ce7eefc76
+    - id: public-route
+      type: submission
+      value: https://www.europarl.europa.eu/committees/en/libe/working-groups/ai-act
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: cb2be0556e2e
+  level: bloc
+  tags:
+    - audit
+    - law
+    - petition
+  seats:
+    - role: chair
+      name: Brando Benifei (S&D, Italy) and Michael McNamara (Renew, Ireland)
+      verified_on: 2026-09-22
+strings:
+  name: European Parliament — IMCO-LIBE Joint Working Group on the Implementation and Enforcement of the Artificial Intelligence Act
+  ai_jurisdiction: "EXACT REMIT, quoted from the Parliament's own page: 'By a decision of IMCO and LIBE Coordinators, a joint Working Group on the implementation and enforcement of the Artificial Intelligence Act (AI Act) was established with the purpose of monitoring and scrutinizing the implementation and enforcement of the AI Act.' In practice it is Parliament's standing oversight body over the Commission's AI Office: it presses on AI Office staffing and transparency, the role of civil society in implementation, delegated and implementing acts, guidelines, standards, national competent authorities, regulatory sandboxes and real-world testing."
+  business: "Rolling scrutiny sessions, including joint exchanges with national parliaments on 'The AI Act: State of Implementation of National Sandboxes and Real-World Testing'. First meeting 24 October 2024 (Strasbourg), second 4 December 2024 (Brussels), continuing since."
+  public_route: This body does not run calls for evidence. Reach it by writing to either co-chair — Benifei and McNamara both publish office emails on their MEP pages — with a short, specific, evidenced point about AI Act implementation. Because the Working Group's job is to find enforcement gaps, credible evidence of a gap is exactly what it wants and there is almost no competition for its attention.
+  format_rules: No formal rules. Keep to 1–2 pages naming the specific AI Act article, the specific failure, and the specific ask. Not published.
+  key_people: Benifei was co-rapporteur of the AI Act itself; McNamara is also rapporteur on the Digital Omnibus on AI. Between them these two MEPs are the most important individual AI seats in the entire European Parliament. The Working Group's member list is published as a downloadable document on its page.
+  note: VERIFIED 2026-09-22 by direct fetch of the European Parliament's own Working Group page, which names both co-chairs verbatim. A parallel IMCO subject-file page exists at europarl.europa.eu/committees/en/product/product-details/20241113CDT13823.
+  seat_notes:
+    chair: Co-Chairs — Benifei for IMCO, McNamara for LIBE
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.europarl.europa.eu/committees/en/working-group-the-implementation-and-enf/product-details/20241209CDT13901
+      checked: 2026-09-22
+    - url: https://www.europarl.europa.eu/committees/en/libe/working-groups/ai-act
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 5229f72c91
+  migrated_from: input/data/committees-and-organisations.json#seats

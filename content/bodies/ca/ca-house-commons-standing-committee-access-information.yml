@@ -1,0 +1,59 @@
+id: ca-house-commons-standing-committee-access-information
+type: seat
+geo:
+  country: ca
+  label: Canada
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.ourcommons.ca/Committees/en/ETHI/Members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7d3dc5860d62
+    - id: public-route
+      type: submission
+      value: https://www.ourcommons.ca/Committees/en/ETHI
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a1bfec0449ba
+  level: national
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: John Brassard, MP (Conservative, Barrie South—Innisfil, Ontario)
+      verified_on: 2026-09-22
+strings:
+  name: House of Commons Standing Committee on Access to Information, Privacy and Ethics (ETHI)
+  ai_jurisdiction: Privacy, data protection and ethics oversight — the committee that handles algorithmic and automated decision-making from a rights and privacy angle, facial recognition, and government use of AI tools. The natural home for AI-and-privacy work now that AIDA is dead and the privacy half of Bill C-27 has been reintroduced separately.
+  business: Statutory Review of the Lobbying Act; a study on the connection between the Minister of Finance and National Revenue and Alto; Main Estimates 2026-27. No AI-titled study was active as at this check.
+  public_route: Same brief system as INDU — any individual or organisation may submit, unsolicited, at any time.
+  format_rules: Max 10 pages, or a 500-word summary if longer; either official language; published on the committee website and listed in reports.
+  key_people: "Vice-Chairs: Linda Lapointe (Liberal, Rivière-des-Mille-Îles) and Luc Thériault (Bloc Québécois, Montcalm)."
+  note: VERIFIED 2026-09-22 from the ETHI committee page. Note the chair is an opposition (Conservative) MP — ETHI is one of the committees chaired by the Official Opposition under Canadian practice.
+  seat_notes:
+    chair: Chair
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.ourcommons.ca/Committees/en/ETHI/Members
+      checked: 2026-09-22
+    - url: https://www.ourcommons.ca/Committees/en/ETHI
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 65cc41bde3
+  migrated_from: input/data/committees-and-organisations.json#seats

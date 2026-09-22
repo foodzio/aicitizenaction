@@ -1,0 +1,70 @@
+id: us-center-ai-policy
+type: civil-society
+geo:
+  country: us
+  label: United States (Washington, DC)
+facts:
+  routes:
+    - id: jason-green-lowe
+      type: email
+      value: jason@aipolicy.us
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: "336286282055"
+    - id: ivan-grassroots-policy-advocacy
+      type: email
+      value: ivan@aipolicy.us
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 03e14e3930c7
+    - id: contact-page
+      type: form
+      value: https://www.centeraipolicy.org/contact
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f64130d4e185
+    - id: homepage
+      type: homepage
+      value: https://www.centeraipolicy.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 05a6afd687e2
+  region: United States
+  public_input: limited
+  tags:
+    - law
+    - research
+strings:
+  name: Center for AI Policy (CAIP)
+  remit: Was a nonpartisan advocacy group working with Congress from June 2023 to May 2025 on catastrophic AI risk — drafting model legislation, endorsing bills, hosting events and connecting policymakers with AI experts.
+  threat_model: Catastrophic risk from advanced AI, with an emphasis on giving government visibility, expertise and response authority.
+  reality_check: LARGELY SHUT DOWN. Its own site states it 'has run out of funding and has ceased most of our active operations'. Two narrow services persist — the legislative review service and the grassroots advocacy training network — both reachable at the named personal addresses above. Do not treat CAIP as a live advocacy channel; it is now effectively two people offering two specific services.
+  gov_channel: Formerly strong congressional engagement; now residual.
+  routes:
+    jason-green-lowe:
+      label: Jason Green-Lowe, Executive Director — legislative review service and revival/funding enquiries
+      scope: Confidential expert feedback on pending or draft AI legislation — still offered
+      note: One of two functions that survived the shutdown. Genuinely useful if you are drafting or reviewing a bill.
+    ivan-grassroots-policy-advocacy:
+      label: Ivan — Grassroots Policy Advocacy Network
+      scope: Training for young AI safety policy advocates — still operating
+    contact-page:
+      label: Contact page
+      scope: General
+      note: Note aipolicy.us now redirects to centeraipolicy.org.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.centeraipolicy.org/contact
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 2999fb7507
+  migrated_from: input/data/institutions.json

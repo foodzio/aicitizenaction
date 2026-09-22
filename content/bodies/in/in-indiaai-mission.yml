@@ -1,0 +1,60 @@
+id: in-indiaai-mission
+type: seat
+geo:
+  country: in
+  label: India
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://indiaai.gov.in/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: English.
+      source_id: 105834a3852e
+    - id: public-route
+      type: submission
+      value: https://indiaai.gov.in/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: English.
+      source_id: 7be5cab9bcab
+  local_name: इंडियाAI मिशन
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Saurabh Vijay
+      verified_on: 2026-06-05
+strings:
+  name: IndiaAI Mission (IndiaAI Independent Business Division)
+  ai_jurisdiction: Executing agency for India's national AI programme (approx. INR 10,372 crore). Seven pillars including Compute Capacity, Foundation Models, Datasets (AIKosh), Application Development, Future Skills, Startup Financing, and Safe & Trusted AI. Runs the compute tenders, GPU allocation, model-development grants, and the Safe & Trusted AI research portfolio.
+  business: "Structured as an Independent Business Division (IBD) of Digital India Corporation, a Section 8 company under MeitY — not a statutory body, which matters: its decisions are corporate/administrative, not subject to parliamentary rule-making scrutiny. As of July 2026, 13 projects approved under the Safe & Trusted AI pillar addressing deepfakes and bias. Nationwide AI skilling programme (target 1 million youth) launched January 2026."
+  public_route: "No formal comment mechanism. Practical routes: (a) respond to its Expressions of Interest and calls for proposals published at indiaai.gov.in — these are open to academia, startups and non-profits and are the only route with a defined process; (b) general contact form/email on indiaai.gov.in; (c) reach it indirectly through a MeitY consultation."
+  format_rules: Calls for proposals impose eligibility thresholds — typically Indian-registered legal entity, sometimes minimum turnover or institutional affiliation. Individuals generally cannot apply.
+  realistic: Not usable as a policy-influence route by an ordinary person. This is a delivery body, not a deliberative one. It consults industry and academia through invited roundtables. An individual's realistic option is to apply to a funding call if eligible, or to raise IndiaAI issues through the MeitY consultation route or the Standing Committee instead.
+  language_note: English.
+  note: CEO appointment VERIFIED via ANI, 5 June 2026. The DIC/IBD corporate structure is VERIFIED from MeitY recruitment advertisements issued under 'India AI Division, Digital India Corporation'. I did not find a published board or governing-council membership list — treat the internal governance above the CEO/COO level as UNVERIFIED.
+  seat_notes:
+    chair: "Chief Executive Officer, IndiaAI Mission (IAS 1998, Maharashtra cadre; concurrently CEO, UIDAI). Chief Operating Officer: Sudeep Shrivastava, Joint Secretary, MeitY."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-06-05
+  review_by: 2026-09-03
+  sources:
+    - url: https://indiaai.gov.in/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: d25384965d
+  migrated_from: input/data/committees-and-organisations.json#seats

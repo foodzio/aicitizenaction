@@ -1,0 +1,62 @@
+id: in-ministry-electronics-information-technology
+type: seat
+geo:
+  country: in
+  label: India
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.meity.gov.in/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: English (Hindi notionally accepted; in practice all drafts and responses are in English).
+      source_id: 9bb0de0d2e3d
+    - id: public-route
+      type: submission
+      value: https://www.meity.gov.in/documents/public-consultation
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: English (Hindi notionally accepted; in practice all drafts and responses are in English).
+      source_id: 689e8511fab6
+  local_name: इलेक्ट्रॉनिकी और सूचना प्रौद्योगिकी मंत्रालय
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Ashwini Vaishnaw
+      verified_on: 2026-09-22
+strings:
+  name: Ministry of Electronics and Information Technology (MeitY)
+  ai_jurisdiction: The primary AI policy ministry. Owns the IndiaAI Mission, the India AI Governance Guidelines (Nov 2025), the IT Act and IT Rules including the 2026 AI-labelling/deepfake amendments, the DPDP Act rules, and the India AI Impact Summit. Any future Indian AI statute will originate here.
+  business: Implementation of the India AI Governance Guidelines (released Nov 2025, foregrounded at the Feb 2026 Summit, 'seven sutras' framework). Operating the AIGEG/TPEC structure constituted 16 April 2026. Draft IT (Intermediary Guidelines and Digital Media Ethics Code) Second Amendment Rules 2026 on AI-generated content labelling — consultation ran 30 March to 29 April 2026 (extended from 14 April); notified thereafter. Reported to be studying a graded, risk-based AI law rather than a single AI Act.
+  public_route: "MeitY does not use a single standing portal. Its actual mechanism is: it publishes a draft plus a one-page 'inviting comments' notice as a PDF under meity.gov.in/documents or /ministry/whats-new, and names a consultation-specific email address. Comments go to that address as .docx or .pdf. Some consultations are additionally mirrored on MyGov (mygov.in) as a 'Discussion' or 'Consultation' with a comment box. Worked example: the Draft IT Amendment Rules 2026 consultation took comments at itrules.consultation@meity.gov.in, rule-by-rule, in MS Word or PDF, deadline extended to 29 April 2026."
+  format_rules: None. Any person or organisation may email comments. India's Pre-Legislative Consultation Policy 2014 notionally requires 30 days, but MeitY has repeatedly used shorter windows and civil society (IFF, SFLC.in) has formally objected.
+  realistic: "Genuinely usable, and one of the easier routes in this list — a single email with a PDF attached is the whole procedure. Two honest caveats: MeitY frequently states that submissions are 'held in fiduciary capacity' and will not be published, so you cannot see what others said or whether you were read; and windows are often short and announced with little notice. Set an alert on meity.gov.in/whats-new rather than expecting to be notified. Note that meity.gov.in is JavaScript-rendered, so its consultation listing does not load for simple scrapers or link-preview tools."
+  language_note: English (Hindi notionally accepted; in practice all drafts and responses are in English).
+  note: Consultation mechanism and the itrules.consultation@meity.gov.in address VERIFIED from the MeitY notice PDF at https://www.meity.gov.in/static/uploads/2026/04/964ca48ac7d0c92e3bba5d32d9a59fcb.pdf and corroborated by SFLC.in. As of 2026-09-22 I could not confirm an open consultation window; the most recent verified one closed 29 April 2026. The /documents/public-consultation landing URL is given as the standing entry point but renders client-side.
+  seat_notes:
+    chair: "Union Minister for Electronics and Information Technology (also Railways and Information & Broadcasting). Minister of State: Jitin Prasada. Secretary, MeitY: S. Krishnan."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.meity.gov.in/
+      checked: 2026-09-22
+    - url: https://www.meity.gov.in/documents/public-consultation
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 89c9d4d8ed
+  migrated_from: input/data/committees-and-organisations.json#seats

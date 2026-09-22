@@ -1,0 +1,63 @@
+id: us-subcommittee-defense
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://appropriations.house.gov/about/membership/subcommittee-rosters
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f48859ee0f32
+    - id: public-route
+      type: submission
+      value: https://appropriations.house.gov/subcommittees
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a7388025b400
+  level: federal
+  chamber: House
+  parent: House Committee on Appropriations
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Ken Calvert
+      party: R
+      region: CA
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Betty McCollum
+      party: D
+      region: MN
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Defense
+  ai_jurisdiction: Funds DoD AI programs, the Chief Digital and AI Office, DARPA and defense compute. The money counterpart to HASC's CITI subcommittee.
+  business: UNVERIFIED for AI-specific FY27 actions at the time of writing; AI programs are funded within RDT&E accounts in this subcommittee's bill.
+  public_route: Full-committee contact https://appropriations.house.gov/contact, 202-225-2771.
+  note: Leadership verified 2026-09-22 from the House Clerk's MemberData.xml (subcommittee code AP02).
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://appropriations.house.gov/about/membership/subcommittee-rosters
+      checked: 2026-09-22
+    - url: https://appropriations.house.gov/subcommittees
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 7f3011f5c8
+  migrated_from: input/data/committees-and-organisations.json#seats

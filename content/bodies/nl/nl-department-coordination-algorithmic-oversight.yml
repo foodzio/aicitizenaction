@@ -1,0 +1,75 @@
+id: nl-department-coordination-algorithmic-oversight
+type: government
+geo:
+  country: nl
+  label: Netherlands
+facts:
+  routes:
+    - id: dca-mailbox
+      type: email
+      value: dca@autoriteitpersoonsgegevens.nl
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: nl, en
+      source_id: 26487ce9f620
+    - id: ap-algorithms-ai-oversight
+      type: form
+      value: https://www.autoriteitpersoonsgegevens.nl/en/themes/algorithms-ai/coordination-of-algorithmic-and-ai-supervision
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: 5dfd391d0519
+    - id: ap-general-complaints
+      type: complaint
+      value: null
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: nl, en
+    - id: homepage
+      type: homepage
+      value: https://www.autoriteitpersoonsgegevens.nl/en/themes/algorithms-ai/coordination-of-algorithmic-and-ai-supervision
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: adfb59f27abf
+  local_name: Directie Coördinatie Algoritmes (DCA), Autoriteit Persoonsgegevens
+  region: European Union
+  public_input: limited
+  tags:
+    - harm
+strings:
+  name: Department for the Coordination of Algorithmic Oversight (DCA), Autoriteit Persoonsgegevens
+  remit: Unit inside the Dutch DPA (AP) set up in 2023 to coordinate algorithmic and AI oversight across Dutch regulators, identify and publish high-level algorithmic and AI risks (it issues a recurring AI & Algorithmic Risks Report Netherlands), and prepare AI Act supervision. Under the Dutch AI Act designation settled in 2026, the AP and the RDI (Rijksinspectie Digitale Infrastructuur) take the key supervisory roles — AP for prohibited practices and fundamental-rights-relevant systems, RDI as overall market-surveillance coordinator. AP itself has full GDPR fining power; the DCA as a unit is coordinating/analytical.
+  powers_text: investigate
+  reality_check: Strong. A named, published mailbox that explicitly invites feedback from 'organisations and other parties', on a fully English-language regulator site, at a body with real GDPR enforcement muscle. The DCA also publishes recurring risk reports that cite external input. This is one of the few entries where a foreigner writing in English has a plausible chance of being read.
+  notes: Netherlands is NOT a member of the international network. The RDI (Rijksinspectie Digitale Infrastructuur) is the co-designated authority; I did not verify RDI contact details and have not listed a URL for it.
+  routes:
+    dca-mailbox:
+      label: DCA mailbox
+      scope: algorithmic oversight coordination
+      note: VERIFIED — published on the AP's English DCA page, which renders it with an anti-spam insertion ('dca@remove-this-text.autoriteitpersoonsgegevens.nl'). The operative address is as given. Page states the DCA 'welcomes feedback from organisations and other parties'.
+    ap-algorithms-ai-oversight:
+      label: AP algorithms & AI oversight coordination hub (English)
+      scope: general
+      note: VERIFIED fetched. Full English-language site.
+    ap-general-complaints:
+      label: AP general complaints (GDPR)
+      scope: data protection
+      note: UNVERIFIED — the AP operates a complaints route but I did not fetch its URL. Note that GDPR complaints require a nexus to the Netherlands/EU.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.autoriteitpersoonsgegevens.nl/en/themes/algorithms-ai/coordination-of-algorithmic-and-ai-supervision
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 9d5cda3339
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,60 @@
+id: us-house-bipartisan-task-force-artificial-intelligence
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://obernolte.house.gov/AITFReport
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3c1271cc48a5
+    - id: public-route
+      type: submission
+      value: https://obernolte.house.gov/AITFReport
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 335b3ca2dd7b
+  level: federal
+  chamber: House
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Jay Obernolte
+      party: R
+      region: CA
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Ted Lieu
+      party: D
+      region: CA
+      verified_on: 2026-09-22
+strings:
+  name: House Bipartisan Task Force on Artificial Intelligence
+  ai_jurisdiction: A leadership-appointed, time-limited body — not a committee — created by Speaker Mike Johnson and Democratic Leader Hakeem Jeffries in February 2024 and co-chaired by Jay Obernolte (R-CA) and Ted Lieu (D-CA). It produced a comprehensive final report in December 2024 that remains the House's closest thing to a shared AI framework, organized by sector rather than by committee.
+  business: "VERIFIED: final report delivered December 2024 (118th Congress). NOT VERIFIED AS RECONSTITUTED IN THE 119th CONGRESS — no official announcement of a re-established task force was found as of 22 Sep 2026, and the 16 Sep 2026 bipartisan letter from Beyer, Obernolte, Lieu and seven others urging House leaders to act on AI is itself evidence that members are pressing leadership for renewed structured action. The live successor vehicle is the bipartisan 'Great American AI Act' discussion draft released 4 Jun 2026 by Trahan, Obernolte and Houchin."
+  public_route: "The task force has no standing office. Reach the former co-chairs: Obernolte at https://obernolte.house.gov/ (202-225-5861) and Lieu at https://lieu.house.gov/ (202-225-3976). For substantive AI policy input right now, the open channel is GAAIA@mail.house.gov, the public feedback address for the Great American AI Act draft."
+  note: Co-chairs and report verified 2026-09-22 from obernolte.house.gov, lieu.house.gov and democraticleader.house.gov. Status as a currently constituted 119th Congress body is UNVERIFIED and appears to be dormant — this is a correction to any guide that lists it as active.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://obernolte.house.gov/AITFReport
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 8682f1851e
+  migrated_from: input/data/committees-and-organisations.json#seats

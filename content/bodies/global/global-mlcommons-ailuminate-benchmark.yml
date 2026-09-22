@@ -1,0 +1,99 @@
+id: global-mlcommons-ailuminate-benchmark
+type: standards
+geo:
+  country: global
+  label: International (engineering consortium)
+facts:
+  routes:
+    - id: ai-risk-reliability-working
+      type: membership
+      value: https://mlcommons.org/working-groups/ai-risk-reliability/ai-risk-reliability/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3abd09ec0853
+    - id: get-involved
+      type: membership
+      value: https://mlcommons.org/get-involved/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 288496cff3ad
+    - id: github-code
+      type: submission
+      value: https://github.com/mlcommons
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7777b148100b
+    - id: mlcommons-discord
+      type: form
+      value: https://discord.com/invite/rRbEjveNy5
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b1079723d67d
+    - id: public-benchmark-results
+      type: form
+      value: https://ailuminate.mlcommons.org/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e587fc986cdc
+    - id: homepage
+      type: homepage
+      value: https://mlcommons.org/ailuminate/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 1087969abc7b
+  region: Global
+  public_input: open
+  tags:
+    - flaw
+    - systemic
+strings:
+  name: MLCommons — AILuminate benchmark (AI Risk & Reliability working group)
+  remit: AILuminate is a standardised AI risk assessment benchmark for chat and vision-language models across 12 hazard categories, built with industry, academia and civil society; at last check 59,624 test prompts, 477 test images and 109 models benchmarked, with expanding agentic, multimodal and jailbreak/security suites. Produces public grades per model.
+  threat_model: "Product-level hazard and reliability: violent crime facilitation, CSAM, hate, self-harm, privacy, IP, defamation, specialised advice. Near-term deployment harms and misuse — NOT loss of control."
+  reality_check: One of the more genuinely participatory technical bodies. If you can demonstrate a hazard category the benchmark misses, the working group is a place where that can actually change an artefact that companies are graded on. Requires technical credibility and sustained attendance.
+  gov_channel: Moderate — AILuminate is cited in policy discussion of evaluation standards and MLCommons engages with NIST and the safety-institute network, but it has no formal mandate.
+  routes:
+    ai-risk-reliability-working:
+      label: AI Risk & Reliability working group — open to participants
+      scope: Researchers and practitioners; working-group participation is the substantive route
+      note: MLCommons working groups run open calls and mailing lists; this is a genuine build-it-with-us channel.
+    get-involved:
+      label: Get involved
+      scope: Anyone
+    github-code:
+      label: GitHub — code, taxonomy and prompt-set contributions/issues
+      scope: Anyone
+    mlcommons-discord:
+      label: MLCommons Discord
+      scope: Anyone
+    public-benchmark-results:
+      label: Public benchmark results
+      scope: Read-only
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://mlcommons.org/working-groups/ai-risk-reliability/ai-risk-reliability/
+      checked: 2026-09-22
+    - url: https://mlcommons.org/get-involved/
+      checked: 2026-09-22
+    - url: https://github.com/mlcommons
+      checked: 2026-09-22
+    - url: https://discord.com/invite/rRbEjveNy5
+      checked: 2026-09-22
+    - url: https://ailuminate.mlcommons.org/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: fbeffbadb6
+  migrated_from: input/data/institutions.json

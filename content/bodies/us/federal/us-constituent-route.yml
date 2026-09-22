@@ -1,0 +1,60 @@
+id: us-constituent-route
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.house.gov/representatives/find-your-representative
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e6c8fc55e0ad
+    - id: public-route
+      type: submission
+      value: https://www.congress.gov/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6a7515d33cfc
+  level: federal
+  chamber: Joint
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: n/a
+      verified_on: 2026-09-22
+    - role: ranking
+      name: n/a
+      verified_on: 2026-09-22
+strings:
+  name: "Constituent route: chair and ranking member district and state offices"
+  ai_jurisdiction: "Not a committee. This entry answers the brief's recurring question of whether a chair's own office beats the committee. Rule of thumb, verified against the contact structures above: for almost every committee in this list, a constituent should go to the member's own district or state office first, and a non-constituent should go to the committee or to an organization that has standing with it."
+  business: Not applicable.
+  public_route: Find your representative at https://www.house.gov/representatives/find-your-representative and your senators at https://www.senate.gov/senators/senators-contact.htm. Congressional offices systematically deprioritize mail from non-constituents; most Senate and House web forms require an in-state or in-district address and will reject others. Committee staff, by contrast, are policy staff who read substantive material regardless of its origin but have no casework obligation to anyone.
+  note: "Guidance entry, included because the per-committee 'chair's own office vs committee' question has a consistent answer. Specific cases where the committee beats the member's office: House and Senate Appropriations during the spring public-witness window (open to all, formal record); House Judiciary, House Oversight, House Financial Services, Senate HSGAC/PSI and Senate Intelligence whistleblower intakes (open to all, for factual allegations); and GAAIA@mail.house.gov for the Great American AI Act draft (open to all)."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.house.gov/representatives/find-your-representative
+      checked: 2026-09-22
+    - url: https://www.congress.gov/members
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: d42a7ff9d7
+  migrated_from: input/data/committees-and-organisations.json#seats

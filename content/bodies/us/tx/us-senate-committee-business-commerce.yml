@@ -1,0 +1,60 @@
+id: us-senate-committee-business-commerce
+type: seat
+geo:
+  country: us
+  sub: tx
+  label: Texas
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://senate.texas.gov/cmte.php?c=510
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 623d3da08e11
+    - id: public-route
+      type: submission
+      value: https://capitol.texas.gov/Committees/MeetingsByCmte.aspx?Chamber=S&CmteCode=C510
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a2899e640d7d
+  level: state
+  chamber: Senate
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Charles Schwertner
+      party: R
+      verified_on: 2026-09-22
+strings:
+  name: Senate Committee on Business and Commerce
+  ai_jurisdiction: Senate committee of referral for TRAIGA (HB 149) and holder of the 2026 interim charge to evaluate 'the regulation and use of artificial intelligence systems' under SB 1964 and HB 149, plus data-center growth and grid impacts.
+  business: HB 149 (TRAIGA) — Senate sponsor route; SB 1964 (state agency AI). 2026 interim charges from Lt. Gov. Patrick direct this committee to review AI regulation and data centers ahead of the 90th Legislature (Jan 2027).
+  status: VERIFIED — TRAIGA in force since 1 Jan 2026; interim review under way through 2026 (committee took up AI and jobs in a hearing week of 21 Sep 2026).
+  public_route: "YES — the Texas Senate takes public testimony at interim and session hearings. Unlike the House there is no general online comment portal for Senate committees: register to testify with the committee clerk (Annika Vandayar, (512) 463-0365, Sam Houston Building Room 370) and submit written testimony to the clerk in advance, per the notice posted on Texas Legislature Online. Interim hearings are the most accessible moment because the record is open and the committee is actively taking input for 2027 bills."
+  agency_route: Texas Attorney General AI complaint portal — https://consumerprotection.texasattorneygeneral.gov/consumercomplaintportal/s/ ; Texas AI Council and AI sandbox at the Department of Information Resources (dir.texas.gov).
+  note: "Vice Chair: Phil King. Other 2026 interim AI charges sit with House State Affairs (data centers), House Public Health, House Public Education, House Judiciary & Civil Jurisprudence, and Senate Economic Development (AI workforce impact)."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://senate.texas.gov/cmte.php?c=510
+      checked: 2026-09-22
+    - url: https://capitol.texas.gov/Committees/MeetingsByCmte.aspx?Chamber=S&CmteCode=C510
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 8e40e25c01
+  migrated_from: input/data/committees-and-organisations.json#seats

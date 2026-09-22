@@ -1,0 +1,63 @@
+id: us-subcommittee-energy
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.energy.senate.gov/about/membership
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: fc0e3e5eae17
+    - id: public-route
+      type: submission
+      value: https://www.energy.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 322ca0cf0c51
+  level: federal
+  chamber: Senate
+  parent: Senate Committee on Energy and Natural Resources
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: David McCormick
+      party: R
+      region: PA
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Ruben Gallego
+      party: D
+      region: AZ
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Energy
+  ai_jurisdiction: DOE programs, the national laboratories, grid reliability and electricity markets — the subcommittee-level venue for data-center load growth, transmission, and DOE's role in AI compute and model evaluation.
+  business: UNVERIFIED for a named 2026 subcommittee AI hearing; AI-and-energy work has largely been at full committee.
+  public_route: Full-committee contact page https://www.energy.senate.gov/contact.
+  note: Leadership verified 2026-09-22 from senate.gov SSEG subcommittee roster. Note S.2938 would site an advanced-AI risk evaluation program at DOE, which would put frontier-model testing into this subcommittee's orbit.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.energy.senate.gov/about/membership
+      checked: 2026-09-22
+    - url: https://www.energy.senate.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c30de59f64
+  migrated_from: input/data/committees-and-organisations.json#seats

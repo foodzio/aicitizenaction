@@ -1,0 +1,79 @@
+id: us-senate-committee-judiciary-subcommittee-privacy
+type: government
+geo:
+  country: us
+  sub: federal
+  label: United States (federal legislature)
+facts:
+  routes:
+    - id: full-committee-hearings-activity
+      type: evidence
+      value: https://www.judiciary.senate.gov/committee-activity/hearings
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: ebf0742c9b97
+    - id: subcommittee-listing
+      type: evidence
+      value: https://www.judiciary.senate.gov/about/subcommittees
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: ad1c7d3bdc65
+    - id: subcommittee-email
+      type: email
+      value: none published
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 501272f3df68
+    - id: homepage
+      type: homepage
+      value: https://www.judiciary.senate.gov/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 2a071d1f5134
+  region: United States
+  public_input: limited
+  tags:
+    - harm
+    - law
+    - systemic
+strings:
+  name: U.S. Senate Committee on the Judiciary — Subcommittee on Privacy, Technology, and the Law
+  remit: Oversight of privacy, technology and civil-liberties aspects of AI. Held the 2023 'Oversight of A.I.' hearing series and the bipartisan framework work on AI regulation, and has since run hearings on AI-generated deepfakes and chatbot harms to minors. Can subpoena and compel testimony; legislates on liability, transparency and privacy. No adjudicative power over individuals' complaints.
+  powers_text: compel
+  reality_check: This subcommittee produced the most substantive US Senate AI oversight to date, but it has essentially no public front door — the /contact URL is dead. Access is entirely through member offices (the chair's and ranking member's personal staff) and through being invited as a witness. Practitioners get on witness lists by publishing work the staff already cite, then being introduced by a member's office; cold outreach to the committee does not work. Its framing is civil liberties, deepfakes and child safety rather than catastrophic risk.
+  notes: Verify the subcommittee's current name and leadership for the sitting Congress before relying on prior-Congress references.
+  routes:
+    full-committee-hearings-activity:
+      label: Full committee hearings and activity page
+      scope: Hearing notices give the witness list and, where offered, the deadline for statements for the record.
+      note: "UNVERIFIED as fetched. Note: https://www.judiciary.senate.gov/contact returned 404 — the committee does not maintain a contact page at the expected URL."
+    subcommittee-listing:
+      label: Subcommittee listing
+      scope: Confirms current subcommittee name, chair and ranking member — check this before citing, as subcommittee names and gavels change each Congress.
+      note: UNVERIFIED as fetched; appeared in search results on judiciary.senate.gov.
+    subcommittee-email:
+      label: Subcommittee email
+      scope: n/a
+      note: UNVERIFIED ABSENCE — no subcommittee-level public contact address was found, and the committee's own /contact path 404s.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.judiciary.senate.gov/committee-activity/hearings
+      checked: null
+    - url: https://www.judiciary.senate.gov/about/subcommittees
+      checked: null
+    - url: https://www.judiciary.senate.gov/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 139ff3db76
+  migrated_from: input/data/institutions.json

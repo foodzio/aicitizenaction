@@ -1,0 +1,63 @@
+id: us-house-committee-appropriations
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://appropriations.house.gov/about/membership
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1293b4456156
+    - id: public-route
+      type: submission
+      value: https://appropriations.house.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 98a8bc058195
+  level: federal
+  chamber: House
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Tom Cole
+      party: R
+      region: OK
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Rosa L. DeLauro
+      party: D
+      region: CT
+      verified_on: 2026-09-22
+strings:
+  name: House Committee on Appropriations
+  ai_jurisdiction: Funds every AI-relevant agency and attaches policy riders that often matter more than authorizing law. Also, with its Senate counterpart, the only committee that formally solicits written testimony from the general public each year.
+  business: "VERIFIED: FY2027 public written testimony window run across subcommittees in spring 2026, with per-subcommittee deadlines (CJS 8 May 2026; Interior 24 Apr 2026; Agriculture 1 May 2026). FY27 member-request guidance published at https://appropriations.house.gov/fy27-information/fy27-member-requests-guidance."
+  public_route: "VERIFIED: https://appropriations.house.gov/contact and https://appropriations.house.gov/about/offices/contact. Committee: H-305 The Capitol, Washington DC 20515, 202-225-2771. Subcommittee rosters at https://appropriations.house.gov/about/membership/subcommittee-rosters."
+  note: Chair/ranking verified 2026-09-22 from the House Clerk's MemberData.xml.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://appropriations.house.gov/about/membership
+      checked: 2026-09-22
+    - url: https://appropriations.house.gov/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: fe469d279d
+  migrated_from: input/data/committees-and-organisations.json#seats

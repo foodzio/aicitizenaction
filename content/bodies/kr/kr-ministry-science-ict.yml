@@ -1,0 +1,63 @@
+id: kr-ministry-science-ict
+type: seat
+geo:
+  country: kr
+  label: South Korea
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.msit.go.kr/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Korean only. 국민참여입법센터 has no English interface and drafts are published only in Korean.
+      source_id: e43d8e62742d
+    - id: public-route
+      type: submission
+      value: https://opinion.lawmaking.go.kr/gcom/ogLmPp
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Korean only. 국민참여입법센터 has no English interface and drafts are published only in Korean.
+      source_id: 10cda0dfda3b
+  local_name: 과학기술정보통신부 (과기정통부)
+  level: national
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: BAE Kyung-hoon (배경훈)
+      verified_on: 2026-09-22
+strings:
+  name: Ministry of Science and ICT (MSIT)
+  ai_jurisdiction: "The competent authority under the AI Framework Act. Powers include: investigating suspected violations and conducting on-site inspections (Art. 40), issuing corrective orders and service suspension orders, confirming on request whether a system is 'high-impact AI', and drafting the Presidential Decree and notices. Also owns national AI R&D, compute and the AI Safety Institute."
+  business: "Implementing the AI Framework Act, in force 22 January 2026. Released the draft regulatory package for public comment on 8 September 2025: Enforcement Decree, Safety Assurance Notice (using a 10^26 FLOP training-compute threshold plus risk criteria), Business Responsibilities Notice for high-impact AI operators, AI Safety Guidelines, and the High-Impact AI Determination Guideline. MSIT has indicated a one-year grace period before administrative fines are imposed — i.e. to roughly January 2027. The minister's elevation to Deputy Prime Minister rank is itself significant: AI policy now sits at DPM level."
+  public_route: Ministry rule-making goes through 입법예고 / 행정예고 (legislative and administrative pre-announcement) posted on the Government Legislation Centre's citizen participation portal, 국민참여입법센터. Anyone may submit an opinion online against a specific posted draft. MSIT also runs 공청회 (public hearings) and 간담회 (roundtables) on major AI notices, generally invitation-based.
+  format_rules: "No threshold. Statutory pre-announcement periods: normally 40 days for 입법예고 of decrees, 20 days for 행정예고 of notices — shorter in urgent cases, which MSIT has used."
+  realistic: "Formally open to anyone including foreign companies and individuals — Korea does not restrict pre-announcement comments by nationality, and international law firms routinely file on behalf of clients. But it is Korean-language end to end and the portal's submission function generally expects Korean identity verification. The honest assessment: usable by a Korean speaker or through Korean counsel; not usable unaided by a non-speaker. The 10^26 FLOP threshold and the high-impact criteria were both meaningfully shaped by comments in the 2025 window, so this route does have demonstrated influence."
+  language_note: Korean only. 국민참여입법센터 has no English interface and drafts are published only in Korean.
+  note: Minister VERIFIED same-day (22 September 2026) from Korean press coverage of him speaking as 부총리 겸 과학기술정보통신부 장관. Act effective date (22 Jan 2026), the September 2025 regulatory package contents, the 10^26 FLOP threshold and the one-year fine grace period VERIFIED from Baker Botts and Cooley analyses. I could not verify whether the enforcement decree has since been finalised in its consulted form — treat the final text as UNVERIFIED.
+  seat_notes:
+    chair: Deputy Prime Minister and Minister of Science and ICT (부총리 겸 과학기술정보통신부 장관)
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.msit.go.kr/
+      checked: 2026-09-22
+    - url: https://opinion.lawmaking.go.kr/gcom/ogLmPp
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 6759c56438
+  migrated_from: input/data/committees-and-organisations.json#seats

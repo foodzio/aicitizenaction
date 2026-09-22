@@ -1,0 +1,62 @@
+id: global-huderia
+type: multilateral
+geo:
+  country: global
+  label: Council of Europe
+facts:
+  routes:
+    - id: coe-ai-programme-contact
+      type: form
+      value: https://www.coe.int/en/web/artificial-intelligence/contact-us
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e30d5c567ba7
+    - id: huderia-academy
+      type: membership
+      value: https://www.coe.int/en/web/artificial-intelligence/huderia-academy
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 09564692a971
+    - id: homepage
+      type: homepage
+      value: https://www.coe.int/en/web/artificial-intelligence/huderia-risk-and-impact-assessment-of-ai-systems
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c53ae3aa986c
+  region: European Union
+  public_input: limited
+  tags:
+    - systemic
+strings:
+  name: HUDERIA (Council of Europe risk and impact assessment methodology)
+  remit: "Human Rights, Democracy and Rule of Law Impact Assessment for AI systems, developed with the Alan Turing Institute. Two parts: the HUDERIA Methodology, approved by the Committee of Ministers on 26 February 2025, and the HUDERIA Model: COBRA (supporting tools for systematic analysis), approved 25 February 2026. Non-binding guidance that parties may adapt. Supported by HUDERIA Academy tracks including Health and Local Authorities; piloted with businesses in Ukraine."
+  threat_model: Human-rights, democratic and rule-of-law harms from deployed AI systems — a structured near-term/structural harms instrument.
+  reality_check: A usable tool rather than a channel. The practical value for an outsider is to run a HUDERIA/COBRA assessment on a system you are worried about and submit the result to a regulator — it is a recognised format that European authorities will accept.
+  gov_channel: Feeds implementation of the Framework Convention by ratifying states and is being piloted with national authorities.
+  routes:
+    coe-ai-programme-contact:
+      label: CoE AI programme contact
+      scope: Enquiries including HUDERIA
+      note: No HUDERIA-specific email is published.
+    huderia-academy:
+      label: HUDERIA Academy (training programmes)
+      scope: Practitioners and public authorities
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.coe.int/en/web/artificial-intelligence/contact-us
+      checked: 2026-09-22
+    - url: https://www.coe.int/en/web/artificial-intelligence/huderia-academy
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 6cd33a6599
+  migrated_from: input/data/institutions.json

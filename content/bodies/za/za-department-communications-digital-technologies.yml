@@ -1,0 +1,88 @@
+id: za-department-communications-digital-technologies
+type: government
+geo:
+  country: za
+  label: South Africa
+facts:
+  routes:
+    - id: ai-policy-comment-submissions
+      type: email
+      value: aipolicy@dcdt.gov.za
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: 0311b0a60594
+    - id: draft-national-ai-policy
+      type: docket
+      value: https://www.gov.za/sites/default/files/gcis_document/202604/54477gen3880.pdf
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: 749a2123a13f
+    - id: dcdt-national-ai-policy
+      type: consultation
+      value: https://www.dcdt.gov.za/sa-national-ai-policy-framework.html
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 1e766ba1ea0d
+    - id: postal-submissions
+      type: complaint
+      value: "The Director-General, DCDT, Attn: Mr M. Mashologu (DDG: Digital Society and Economy), Block A, iParioli Office Park, 1166 Park Street, Hatfield, Pretoria / Private Bag X860, Pretoria 0001"
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: 6c04642dd68c
+    - id: homepage
+      type: homepage
+      value: https://www.dcdt.gov.za/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 97f442e01ab7
+  region: Africa
+  public_input: open
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Department of Communications and Digital Technologies (DCDT)
+  remit: Owns South Africa's AI policy process. Published the Draft South Africa National Artificial Intelligence (AI) Policy in Government Gazette No. 54477 on 10 April 2026 for a 60-day public comment period closing 10 June 2026 at 16:00. Policy-making body; enforcement of AI-adjacent harms sits with the Information Regulator (POPIA, which has fining power) and sectoral regulators. South Africa chaired the G20 in 2025 and used it to push African AI capacity issues.
+  powers_text: advise
+  reality_check: "The best-documented open comment process in this entire directory: a gazetted notice, a named official, a working email, a postal address, a 60-day window, all in English, with no stated nationality restriction. That is genuinely usable by a foreigner. The catch is timing — the window closed in June 2026, and the email may be dormant. South African gazette notices do not normally restrict submissions by nationality."
+  notes: "I checked specifically: the draft policy contains NO mention of frontier AI, existential risk, or catastrophic risk. The framing is developmental — capacity, skills, inclusion, infrastructure. This is typical of African AI policy and worth stating plainly in any global directory."
+  routes:
+    ai-policy-comment-submissions:
+      label: AI policy comment submissions
+      scope: draft National AI Policy comments
+      note: VERIFIED — read directly from the Government Gazette PDF. Submissions required the subject line 'Draft South Africa National Artificial Intelligence (AI) Policy'. The window closed 10 June 2026, so this address may no longer be monitored.
+    draft-national-ai-policy:
+      label: Draft National AI Policy, Gazette No. 54477
+      scope: draft policy
+      note: VERIFIED fetched.
+    dcdt-national-ai-policy:
+      label: DCDT National AI Policy Framework page
+      scope: general
+      note: UNVERIFIED — fetch blocked by TLS/robots failure on dcdt.gov.za.
+    postal-submissions:
+      label: Postal submissions
+      scope: draft policy comments
+      note: VERIFIED — read directly from the Gazette PDF.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.gov.za/sites/default/files/gcis_document/202604/54477gen3880.pdf
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 42e59e0ac3
+  migrated_from: input/data/institutions.json

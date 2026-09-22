@@ -1,0 +1,62 @@
+id: gb-house-lords-communications-digital-committee
+type: government
+geo:
+  country: gb
+  label: United Kingdom (House of Lords select committee)
+facts:
+  routes:
+    - id: written-evidence-open-inquiry
+      type: evidence
+      value: https://committees.parliament.uk/committee/170/communications-and-digital-committee/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a7a4a9ef9e6d
+    - id: committee-staff
+      type: email
+      value: holcommunications@parliament.uk
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1d272fb5ef62
+    - id: homepage
+      type: homepage
+      value: https://committees.parliament.uk/committee/170/communications-and-digital-committee/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 45cf5a3aa4e1
+  region: United Kingdom
+  public_input: open
+  tags:
+    - harm
+    - systemic
+strings:
+  name: House of Lords Communications and Digital Committee
+  remit: "Considers the media, digital and creative industries. Has run the most substantial Lords work on AI, including its 'AI and copyright' inquiry (opened 3 November 2025; report published 6 March 2026; Government response published 15 May 2026) and earlier large language models and generative AI work. Currently running 'The Online Safety Act: implementation and impact' (opened 27 July 2026, written evidence deadline 21 September 2026). Takes evidence, reports, and obliges a Government response; no enforcement power."
+  powers_text: investigate
+  reality_check: "Lords committees are, in practitioners' experience, MORE receptive to outside expertise than Commons committees: members are often subject-matter experts with no constituency workload, inquiries run longer, and the evidence base is read more carefully. The AI and copyright inquiry extracted a formal Government response within ten weeks of reporting. The same rules apply — submit to a live inquiry within its window, address the terms of reference, and contact the clerk. Scope is media, digital markets, copyright and online safety, not frontier risk; for severe-risk arguments the Commons SIT Committee scrutinising AISI is the better venue."
+  notes: Other Lords committees with adjacent AI remit include the Science and Technology Committee (ID 193) and the Constitution Committee on algorithmic decision-making in government; check which has a live inquiry before choosing.
+  routes:
+    written-evidence-open-inquiry:
+      label: Written evidence to an open inquiry
+      scope: Anyone may submit to an open inquiry via that inquiry's page; submissions are published. The OSA implementation inquiry's written evidence deadline was 21 September 2026.
+      note: VERIFIED — committee page fetched, showing current inquiries and deadlines.
+    committee-staff:
+      label: Committee staff
+      scope: Correspondence with the committee team and clerk.
+      note: "VERIFIED on the committee page. Postal: Communications and Digital Committee, House of Lords, London SW1A 0PW."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://committees.parliament.uk/committee/170/communications-and-digital-committee/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 03ce98422c
+  migrated_from: input/data/institutions.json

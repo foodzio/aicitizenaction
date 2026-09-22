@@ -1,0 +1,81 @@
+id: us-electronic-privacy-information-center
+type: civil-society
+geo:
+  country: us
+  label: United States (Washington, DC)
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: info@epic.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 411be050d0a9
+    - id: press
+      type: email
+      value: press@epic.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8bff45bce366
+    - id: calli-schroeder
+      type: email
+      value: schroeder@epic.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 2de2cadec222
+    - id: contact-page
+      type: form
+      value: https://epic.org/about/contact/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 214eb7305b43
+    - id: homepage
+      type: homepage
+      value: https://epic.org/issues/ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 8ab2be2eb211
+  region: United States
+  public_input: limited
+  tags:
+    - harm
+    - law
+    - research
+strings:
+  name: Electronic Privacy Information Center (EPIC)
+  remit: Public-interest research centre focused on privacy and algorithmic accountability. AI work spans law enforcement AI, chatbot harms, commercial AI in healthcare/education/hiring/housing, government AI use, risk assessments, and screening-and-scoring systems. Files FTC complaints, FOIA litigation, regulatory comments and amicus briefs, and drafts state AI legislation.
+  threat_model: Near-term privacy, due-process and discrimination harms from deployed automated systems. Regulatory-complaint oriented. Not a catastrophic-risk organisation.
+  reality_check: Genuinely responsive, and a named senior counsel for AI is published — unusual and valuable. If you have documentation of a company's unfair or deceptive AI practice affecting US consumers, EPIC is one of the few organisations that can convert it into a regulatory filing.
+  gov_channel: Strong — EPIC's FTC complaints have repeatedly triggered investigations, and it is a regular witness and commenter in federal and state proceedings.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+    press:
+      label: Press
+      scope: Media
+    calli-schroeder:
+      label: Calli Schroeder, Senior Counsel and AI/Human Rights lead
+      scope: Direct subject-matter contact — the highest-yield route for an AI concern
+      note: Named directly on EPIC's AI issue page.
+    contact-page:
+      label: "Contact page (phone: 202.483.1140; 1519 New Hampshire Ave NW, Washington DC 20036)"
+      scope: General
+      note: EPIC has no dedicated public complaint portal; it originates FTC complaints itself from evidence it gathers.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://epic.org/about/contact/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: b93d6584d1
+  migrated_from: input/data/institutions.json

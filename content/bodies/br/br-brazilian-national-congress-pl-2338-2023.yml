@@ -1,0 +1,67 @@
+id: br-brazilian-national-congress-pl-2338-2023
+type: government
+geo:
+  country: br
+  label: Brazil
+facts:
+  routes:
+    - id: pl-2338-2023-dossier
+      type: docket
+      value: https://www25.senado.leg.br/web/atividade/materias/-/materia/157233
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: pt
+      source_id: 8ddeac99f088
+    - id: chamber-deputies-special-committee
+      type: docket
+      value: https://www2.camara.leg.br/atividade-legislativa/comissoes/comissoes-temporarias/especiais/57a-legislatura/comissao-especial-sobre-inteligencia-artificial-pl-2338-23
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: pt
+      source_id: 7bfb501bc400
+    - id: homepage
+      type: homepage
+      value: https://www25.senado.leg.br/web/atividade/materias/-/materia/157233
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: bfe1968def18
+  local_name: Projeto de Lei nº 2.338, de 2023
+  region: Latin America
+  public_input: open
+  tags:
+    - law
+    - systemic
+strings:
+  name: Brazilian National Congress — PL 2338/2023 (Marco Legal da Inteligência Artificial)
+  remit: "STATUS AS OF SEPT 2026: NOT YET LAW. Approved by the Federal Senate in December 2024, then sent to the Chamber of Deputies where a Comissão Especial sobre Inteligência Artificial was constituted. The final vote slipped repeatedly — pushed to December 2025, then to 2026, amid political deadlock and sustained criticism of the text. The Senate-approved version is risk-tiered on an EU-AI-Act model, prohibits certain uses, creates obligations for 'high-risk' and general-purpose systems, and contemplates fines reaching BRL 50 million per infraction. Until enacted it confers no powers on anyone."
+  powers_text: advise
+  reality_check: Do not describe Brazil as having an AI law. It has a Senate-passed bill stuck in the Chamber with repeatedly missed deadlines. The legislative dockets are public and Brazilian committees do hear external witnesses, but this is a Portuguese-language domestic legislative process; foreign input arrives through industry associations, not individuals.
+  notes: The bill's treatment of systemic risk from general-purpose models is the closest Latin America comes to frontier-risk regulation.
+  routes:
+    pl-2338-2023-dossier:
+      label: PL 2338/2023 dossier, Federal Senate
+      scope: legislative record
+      note: UNVERIFIED (search result). The Senate operates an 'e-Cidadania' public opinion tool on bills, open to registered users.
+    chamber-deputies-special-committee:
+      label: Chamber of Deputies Special Committee on AI
+      scope: legislative record, hearings
+      note: UNVERIFIED (search result). Committee hearings have taken evidence from industry and civil society.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www25.senado.leg.br/web/atividade/materias/-/materia/157233
+      checked: null
+    - url: https://www2.camara.leg.br/atividade-legislativa/comissoes/comissoes-temporarias/especiais/57a-legislatura/comissao-especial-sobre-inteligencia-artificial-pl-2338-23
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: "418515e844"
+  migrated_from: input/data/institutions.json

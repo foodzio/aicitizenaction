@@ -1,0 +1,80 @@
+id: kr-ai-safety-institute
+type: government
+geo:
+  country: kr
+  label: Republic of Korea
+facts:
+  routes:
+    - id: korea-aisi-english-site
+      type: form
+      value: https://www.aisi.re.kr/eng
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: d877ee74ade1
+    - id: korea-aisi-collaboration-page
+      type: form
+      value: https://www.aisi.re.kr/eng/contents/33
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: c41089e1e398
+    - id: korean-language-site
+      type: form
+      value: https://aisi.re.kr/kor
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: ko
+      source_id: 7e2d95108f36
+    - id: homepage
+      type: homepage
+      value: https://www.aisi.re.kr/eng
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 7d6a68c4f0a3
+  local_name: 인공지능안전연구소
+  region: South Korea
+  public_input: limited
+  tags:
+    - systemic
+strings:
+  name: AI Safety Institute (Korea AISI)
+  remit: "Launched Nov 2024. Hosted within ETRI (한국전자통신연구원, Electronics and Telecommunications Research Institute) under the Ministry of Science and ICT (과학기술정보통신부, MSIT). Three divisions: AI safety policy, AI safety evaluation, AI safety research. Supports MSIT in implementing the AI Framework Act but is itself a research institute — it does not issue orders or fines."
+  powers_text: research
+  reality_check: Poor. Korea AISI has an English site that advertises international collaboration but publishes no contact email, no form, and no submission route — verified by fetching both the English homepage and the dedicated Collaboration page. The only published contact is a street address in Pangyo. For a foreigner this is effectively unreachable except via a named researcher or through ETRI/MSIT.
+  notes: I could not verify any 2025–26 rename. Some sources render the English name as 'Korea AI Safety Institute'; the site itself says simply 'AI Safety Institute (AISI)'.
+  routes:
+    korea-aisi-english-site:
+      label: Korea AISI English site
+      scope: general
+      note: VERIFIED fetched. NO email address or inquiry form is published on the English homepage.
+    korea-aisi-collaboration-page:
+      label: Korea AISI 'Collaboration' page
+      scope: institutional partnerships
+      note: VERIFIED fetched — describes itself as a 'global collaboration gateway' but publishes NO email, form or eligibility criteria. Dead end in practice.
+    korean-language-site:
+      label: Korean-language site
+      scope: general
+      note: "VERIFIED fetched. Postal address: A-4F, 22 Daewangpangyo-ro 712beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do 13488."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.aisi.re.kr/eng
+      checked: 2026-09-22
+    - url: https://www.aisi.re.kr/eng/contents/33
+      checked: 2026-09-22
+    - url: https://aisi.re.kr/kor
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 303bd34319
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,61 @@
+id: us-subcommittee-intellectual-property
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.judiciary.senate.gov/about/subcommittees
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5737f445ab28
+    - id: public-route
+      type: submission
+      value: https://www.judiciary.senate.gov/about/subcommittees
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: dbdf441c43bf
+  level: federal
+  chamber: Senate
+  parent: Senate Committee on the Judiciary
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Thom Tillis
+      party: R
+      region: NC
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Adam Schiff
+      party: D
+      region: CA
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Intellectual Property
+  ai_jurisdiction: AI training data and copyright, licensing of creative works for model training, patentability of AI-assisted inventions, digital replicas and voice/likeness rights. If you are an author, musician, performer, visual artist or publisher whose work was used in training data, this is your door in the Senate.
+  business: "VERIFIED: S.1367 NO FAKES Act of 2026 (Coons, with Tillis, Blackburn and Klobuchar) is the central vehicle — referred to Senate Judiciary 9 Apr 2025 and since placed on the Senate Legislative Calendar (Calendar No. 446), making it one of the few AI bills past committee in the Senate."
+  public_route: Full-committee routes plus the members' own offices (Tillis 202-224-6342; Schiff 202-224-3841).
+  note: Verified 2026-09-22 from senate.gov SSJU subcommittee roster.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.judiciary.senate.gov/about/subcommittees
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c73d8e5355
+  migrated_from: input/data/committees-and-organisations.json#seats

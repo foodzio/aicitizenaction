@@ -1,0 +1,62 @@
+id: jp-house-representatives-committee-cabinet
+type: seat
+geo:
+  country: jp
+  label: Japan
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.shugiin.go.jp/internet/itdb_iinkai.nsf/html/iinkai/iin_j0010.htm
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: Japanese only. Proceedings, rosters and all submission procedures are Japanese-language. No English service.
+      source_id: 406012d58e52
+    - id: public-route
+      type: submission
+      value: https://www.shugiin.go.jp/internet/itdb_iinkai.nsf/html/iinkai/iin_j0010.htm
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: Japanese only. Proceedings, rosters and all submission procedures are Japanese-language. No English service.
+      source_id: 9e51d0d0e381
+  local_name: 衆議院 内閣委員会
+  level: national
+  tags:
+    - audit
+    - law
+    - petition
+    - record
+  seats:
+    - role: chair
+      name: UNVERIFIED — see note
+      verified_on: 2026-09-22
+strings:
+  name: House of Representatives Committee on Cabinet
+  ai_jurisdiction: The lead Diet committee for AI. Handles legislation under the Cabinet Office, which owns the AI Act (人工知能関連技術の研究開発及び活用の推進に関する法律), the AI Strategy Headquarters, science and technology policy, digital policy and personal information protection. Japan's AI Act was scrutinised here.
+  business: Implementation oversight of the AI Act (in force since 2025) and the AI Basic Plan Phase II adopted by Cabinet decision on 14 July 2026. The AI Act is a promotion statute with no penalties, so committee scrutiny is about plan implementation and budget rather than enforcement.
+  public_route: There is effectively no direct public-submission route to a Japanese Diet committee. Committees hear 参考人 (sankōnin, expert witnesses) and hold 公聴会 (kōchōkai, public hearings) on major bills, but witnesses are selected by the committee's 理事会 (board of directors) on party nomination. The Diet petition system (請願) requires a sitting Diet member to formally introduce your petition — you cannot file one yourself.
+  format_rules: "No signature threshold, but the Diet petition route has a hard procedural gate: a Diet member must sponsor and introduce the petition (紹介議員). Without a sponsoring member it does not exist."
+  realistic: "Not realistically usable by an outsider, and not usable at all by a non-Japanese speaker acting alone. Be blunt about this: the Japanese Diet has no equivalent of a select-committee call for written evidence. The practical route into Japanese AI policy is the executive branch's public comment system (e-Gov), not the legislature. If you must reach the committee, the realistic path is through a member's office or an affiliated industry/academic association."
+  language_note: Japanese only. Proceedings, rosters and all submission procedures are Japanese-language. No English service.
+  note: "The committee's existence, jurisdiction and membership URL are VERIFIED. The CHAIR IS NOT VERIFIED as of today: the live Shugiin roster page was still showing an as-of date of 24 April 2026 with Yamashita Takashi as chair, which is stale given the 17 September 2026 cabinet. Re-check the roster page directly — it carries a 現在 (as-of) date in the top-right which is the field to read. Do not cite Yamashita as current chair."
+  seat_notes:
+    chair: 委員長 (Chair). The official roster dated 24 April 2026 lists YAMASHITA Takashi (山下貴司, LDP), but Yamashita became Minister of Justice in the cabinet inaugurated 17 September 2026 and cannot simultaneously chair the committee.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www.shugiin.go.jp/internet/itdb_iinkai.nsf/html/iinkai/iin_j0010.htm
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 0275fcb606
+  migrated_from: input/data/committees-and-organisations.json#seats

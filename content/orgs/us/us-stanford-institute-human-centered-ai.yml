@@ -1,0 +1,86 @@
+id: us-stanford-institute-human-centered-ai
+type: academic
+geo:
+  country: us
+  label: United States (Stanford, California)
+facts:
+  routes:
+    - id: contact-form
+      type: form
+      value: https://hai.stanford.edu/contact-us
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f1b695679832
+    - id: get-involved
+      type: form
+      value: https://hai.stanford.edu/about/get-involved
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 56c9b9bf4a8c
+    - id: ai-index-accepts-data
+      type: submission
+      value: https://hai.stanford.edu/ai-index
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 30c7c777224d
+    - id: policy-publications
+      type: form
+      value: https://hai.stanford.edu/policy/publications
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ee8df060f40e
+    - id: homepage
+      type: homepage
+      value: https://hai.stanford.edu/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 25f5e5ac7e7d
+  region: United States
+  public_input: limited
+  tags:
+    - law
+    - research
+strings:
+  name: Stanford Institute for Human-Centered AI (HAI)
+  remit: University institute spanning research, policy and education. Publishes the AI Index (the most-cited annual measurement of AI progress, with the Global Vibrancy Tool), policy briefs, and runs policymaker education including Congressional Boot Camps for members and staff. Houses CRFM (see separate entry) and a large fellowship and seed-grant programme.
+  threat_model: "Human-centred and broad: augmentation over replacement, healthcare, equity, governance capacity. The AI Index is deliberately descriptive rather than risk-framed. Not an alignment institute."
+  reality_check: Large, prestigious, form-only. Unsolicited outside input is very unlikely to get traction; the productive route is to reach an individual faculty affiliate directly through their Stanford page.
+  gov_channel: Strong — the Congressional Boot Camp is a rare structured channel into US legislative staff, and HAI scholars testify regularly.
+  routes:
+    contact-form:
+      label: Contact form
+      scope: General enquiries
+      note: No public email addresses are listed; only a form.
+    get-involved:
+      label: Get involved
+      scope: Affiliates, fellows, partners
+    ai-index-accepts-data:
+      label: AI Index — accepts data and methodology input between editions
+      scope: Researchers with relevant datasets
+      note: "UNVERIFIED: a formal open call for AI Index contributions was not confirmed; contact via the form."
+    policy-publications:
+      label: Policy publications
+      scope: Public
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://hai.stanford.edu/contact-us
+      checked: 2026-09-22
+    - url: https://hai.stanford.edu/about/get-involved
+      checked: 2026-09-22
+    - url: https://hai.stanford.edu/ai-index
+      checked: 2026-09-22
+    - url: https://hai.stanford.edu/policy/publications
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: a14b1f865a
+  migrated_from: input/data/institutions.json

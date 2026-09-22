@@ -1,0 +1,60 @@
+id: us-senate-committee-general-laws-technology
+type: seat
+geo:
+  country: us
+  sub: va
+  label: Virginia
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://lis.virginia.gov/session-details/20261/committee-information/S12/committee-details
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9dc3c40c4530
+    - id: public-route
+      type: submission
+      value: https://apps.senate.virginia.gov/Senator/CommitteeMeetings.php
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8c6318ad98ac
+  level: state
+  chamber: Senate
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Jeremy S. McPike
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: Senate Committee on General Laws and Technology
+  ai_jurisdiction: Senate committee of reference for AI, technology, data and general-laws bills. Meets in Senate Room B (Room 306), 30 minutes after adjournment on Wednesdays.
+  business: "HB 2094 (2025, vetoed). 2026: SB 586 (Salim, health-carrier AI disclosure) continued to 2027; SB 796 (children's chatbot restrictions); SB 394 (Pekarsky, AI guidance for schools) advancing."
+  status: VERIFIED — no comprehensive Virginia AI law; most 2026 AI bills carried over to the 2027 session.
+  public_route: YES — no advance registration is required to speak in person at Senate committee meetings; the chair may invite audience members to testify. Remote public testimony for Senate STANDING committees is available through the Senate's committee-meetings page; Senate SUBCOMMITTEES do not offer remote testimony. Written statements may be filed with the committee clerk (Eric Bingham).
+  agency_route: Virginia Attorney General consumer complaint — https://www.oag.state.va.us/consumer-protection/index.php/file-a-complaint ; Governor's AI task force under Executive Order 22 (18 Sep 2026).
+  note: "Chair and roster verified from the official 2026 Senate Committee Chart (https://apps.senate.virginia.gov/Portal/Resources/Comcal.pdf). Members listed: Head, French, Locke, Jordan, Craig, Reeves, VanValkenburg, Williams Graves, Pillion, Roem, Marsden, Rouse, Carroll Foy, Pekarsky."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://lis.virginia.gov/session-details/20261/committee-information/S12/committee-details
+      checked: 2026-09-22
+    - url: https://apps.senate.virginia.gov/Senator/CommitteeMeetings.php
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: a156016f7f
+  migrated_from: input/data/committees-and-organisations.json#seats

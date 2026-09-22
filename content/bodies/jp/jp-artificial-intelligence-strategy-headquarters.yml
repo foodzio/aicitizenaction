@@ -1,0 +1,62 @@
+id: jp-artificial-intelligence-strategy-headquarters
+type: seat
+geo:
+  country: jp
+  label: Japan
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www8.cao.go.jp/cstp/ai/ai_hq/ai_hq.html
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Japanese only for the Headquarters pages and for e-Gov submissions.
+      source_id: b1974f64d89e
+    - id: public-route
+      type: submission
+      value: https://public-comment.e-gov.go.jp/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Japanese only for the Headquarters pages and for e-Gov submissions.
+      source_id: cd884642a941
+  local_name: 人工知能戦略本部
+  level: national
+  tags:
+    - law
+    - record
+  seats:
+    - role: chair
+      name: TAKAICHI Sanae (高市早苗)
+      verified_on: 2026-09-22
+strings:
+  name: Artificial Intelligence Strategy Headquarters
+  ai_jurisdiction: The statutory apex AI body, established under the AI Act (人工知能関連技術の研究開発及び活用の推進に関する法律). Drafts and administers the AI Basic Plan (人工知能基本計画), coordinates all ministries on AI, and is the control tower for Japanese AI policy. Because it is statutory rather than advisory, it displaced the earlier non-statutory AI Strategy Council.
+  business: Adopted the first AI Basic Plan (人工知能基本計画, 'Trustworthy AI / Japan's Revival') by Cabinet decision on 23 December 2025. Adopted the AI Basic Plan Phase II (第Ⅱ期, 'Japan AX — stronger, richer') by Cabinet decision on 14 July 2026. A public comment on the Phase II draft (素案) opened 19 June 2026. Secretariat sits in the Cabinet Office.
+  public_route: The Headquarters itself does not take direct submissions. It exposes itself to the public exclusively through the e-Gov public comment system when it puts a draft Basic Plan or implementing order out — that is the single, real handle. Meeting agendas, distributed materials and summary minutes (議事要旨) are published on the Cabinet Office page after each meeting, which makes it unusually transparent to read even though it is closed to input.
+  format_rules: None. Comment periods are, as a matter of the Administrative Procedure Act, in principle 30 days or more from the notice date.
+  realistic: "Read-only for most people, but genuinely open at the plan-drafting moments. The 19 June 2026 Phase II draft consultation is the pattern to watch: when a Basic Plan is revised, a real 30-day window opens on e-Gov and anyone may submit. Outside those windows there is nothing to engage with. Note the Cabinet Office explicitly states it weighs comments on substance, not volume, so organised mass-identical submissions are discounted by design."
+  language_note: Japanese only for the Headquarters pages and for e-Gov submissions.
+  note: Structure, leadership formula, statutory basis and both Basic Plan cabinet decision dates VERIFIED from the Cabinet Office pages www8.cao.go.jp/cstp/ai/ai_hq/ai_hq.html and www8.cao.go.jp/cstp/ai/index.html. The Minister of State for AI Strategy as at the 17 September 2026 reshuffle is FURUKAWA Toshiharu (see separate entry); the Cabinet Office HQ page was still naming the previous holder, ONODA Kimi, indicating the page lags the reshuffle.
+  seat_notes:
+    chair: "本部長 (Director-General) — ex officio as Prime Minister. Deputy Directors: KIHARA Minoru (Chief Cabinet Secretary) and the Minister of State for AI Strategy. Members: all other Ministers of State."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://www8.cao.go.jp/cstp/ai/ai_hq/ai_hq.html
+      checked: 2026-09-22
+    - url: https://public-comment.e-gov.go.jp/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: ab656e6b3a
+  migrated_from: input/data/committees-and-organisations.json#seats

@@ -1,0 +1,67 @@
+id: ae-artificial-intelligence-office
+type: government
+geo:
+  country: ae
+  label: United Arab Emirates
+facts:
+  routes:
+    - id: ai-office-contact-page
+      type: form
+      value: https://ai.gov.ae/contact-us/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en, ar
+      source_id: c58e8e7cedae
+    - id: ai-office-homepage
+      type: form
+      value: https://ai.gov.ae/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en, ar
+      source_id: 924db1a619df
+    - id: homepage
+      type: homepage
+      value: https://ai.gov.ae/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ef8ff34059bb
+  local_name: مكتب الذكاء الاصطناعي
+  region: Middle East
+  public_input: limited
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Artificial Intelligence Office, UAE / Office of the Minister of State for Artificial Intelligence, Digital Economy and Remote Work Applications
+  remit: The world's first dedicated AI ministerial portfolio (Omar Sultan Al Olama, appointed 2017). Sets national AI strategy (UAE National Strategy for AI 2031), runs capability programmes and the AI Charter, and coordinates government AI adoption. Promotional and coordinating rather than regulatory — the UAE has no comprehensive AI statute, and AI-adjacent enforcement sits with sectoral regulators and the data-protection framework. A separate Abu Dhabi AI and Advanced Technology Council (AIATC) handles Abu Dhabi-level investment and strategy; do not conflate the two.
+  powers_text: advise
+  reality_check: The UAE presents an internationally-facing, English-language front and actively courts foreign AI talent and investment, so it is more approachable in tone than most. But there is no consultation process, no complaint route, and no frontier-risk mandate — the posture is adoption and investment. I could not fetch the site to confirm any contact address; anything published about UAE contact details should be manually re-verified.
+  notes: No stated position on frontier or catastrophic risk. The UAE signed the Bletchley Declaration but is not a member of the international network.
+  routes:
+    ai-office-contact-page:
+      label: AI Office contact page
+      scope: general
+      note: UNVERIFIED — the page exists per search results but returned HTTP 403 on fetch. I did NOT see any email address. Do not publish one.
+    ai-office-homepage:
+      label: AI Office homepage
+      scope: general
+      note: UNVERIFIED — 403 on fetch attempt. Site is known to be English/Arabic bilingual.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ai.gov.ae/contact-us/
+      checked: null
+    - url: https://ai.gov.ae/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 2e476fdea2
+  migrated_from: input/data/institutions.json

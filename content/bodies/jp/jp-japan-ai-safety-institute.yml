@@ -1,0 +1,77 @@
+id: jp-japan-ai-safety-institute
+type: government
+geo:
+  country: jp
+  label: Japan
+facts:
+  routes:
+    - id: japan-aisi-general-inquiries
+      type: email
+      value: aisi-info@ipa.go.jp
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: ja (en tolerated)
+      source_id: 0d3f254d387c
+    - id: japan-aisi-website
+      type: form
+      value: https://aisi.go.jp/about/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: ja, machine-translated en
+      source_id: cdd791ee86bb
+    - id: ipa-parent-agency-contact
+      type: form
+      value: https://www.ipa.go.jp/contact.html
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: ja
+      source_id: 4c3502566511
+    - id: homepage
+      type: homepage
+      value: https://aisi.go.jp/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 3f4853728dc5
+  local_name: AIセーフティ・インスティテュート
+  region: Japan
+  public_input: limited
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Japan AI Safety Institute (Japan AISI / J-AISI)
+  remit: Established 14 Feb 2024 by Cabinet decision (referencing the 2024 Integrated Innovation Strategy). Secretariat hosted at the Information-technology Promotion Agency (IPA), a METI-affiliated incorporated administrative agency. Develops AI safety evaluation methods, standards, red-teaming guides and testing environments; coordinates internationally. Explicitly NON-regulatory — it cannot compel, licence or fine. Japan's AI Promotion Act (Act on Promotion of R&D and Utilization of AI-Related Technologies, in full effect Nov 2025) contains no monetary penalties at all; enforcement is reputational/administrative guidance.
+  powers_text: research
+  reality_check: "A real, monitored mailbox at a real agency, which is more than most peers offer. But Japan AISI runs no public consultation or comment docket: its outputs (evaluation guides, red-teaming methodology, data-quality guidebook) are published finished. Realistically a foreigner can write and may get a courteous reply or none; there is no process that obliges anyone to read it."
+  notes: Director Akiko Murakami (non-full-time). Advisors include Arisa Ema and Hiroaki Kitano. Site makes no explicit mention of frontier or catastrophic risk — framing is generic 'AI safety'.
+  routes:
+    japan-aisi-general-inquiries:
+      label: Japan AISI general inquiries
+      scope: general
+      note: VERIFIED — published on aisi.go.jp homepage and About page, fetched twice. Best single reachable address of any non-Western AISI.
+    japan-aisi-website:
+      label: Japan AISI website (About)
+      scope: general
+      note: VERIFIED fetched. English is served via a Google Translate link, not a native English site.
+    ipa-parent-agency-contact:
+      label: IPA parent-agency contact page
+      scope: parent agency
+      note: UNVERIFIED — surfaced in search, not fetched.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://aisi.go.jp/about/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: df63f281c8
+  migrated_from: input/data/institutions.json

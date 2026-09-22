@@ -1,0 +1,67 @@
+id: jp-information-technology-promotion-agency
+type: government
+geo:
+  country: jp
+  label: Japan
+facts:
+  routes:
+    - id: japan-aisi-mailbox-hosted
+      type: email
+      value: aisi-info@ipa.go.jp
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: ja
+      source_id: 6a87a4c8b619
+    - id: ipa-general-contact
+      type: form
+      value: https://www.ipa.go.jp/contact.html
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: ja
+      source_id: 999a781521bf
+    - id: homepage
+      type: homepage
+      value: https://aisi.go.jp/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 57f06f594c1a
+  local_name: 独立行政法人情報処理推進機構
+  region: Japan
+  public_input: limited
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Information-technology Promotion Agency, Japan (IPA) — Japan AISI secretariat
+  remit: Incorporated administrative agency under METI that hosts the Japan AISI secretariat and operates the AISI working groups (including the business-verification WG). IPA itself handles IT security, standards and skills certification. It has no AI enforcement power; Japan's AI Promotion Act imposes no monetary penalties. Listed separately because IPA, not a ministry, is the entity whose mailbox actually answers for Japan AISI.
+  powers_text: research
+  reality_check: "Useful mainly as a structural clarification: Japan AISI has no independent legal personality, so correspondence goes to IPA. Japanese government mailboxes generally do respond to Japanese-language correspondence and are less reliable in English."
+  notes: Established 14 February 2024 by Cabinet decision.
+  routes:
+    japan-aisi-mailbox-hosted:
+      label: Japan AISI mailbox hosted at IPA
+      scope: AI safety institute matters
+      note: VERIFIED — the @ipa.go.jp domain confirms IPA hosts the secretariat.
+    ipa-general-contact:
+      label: IPA general contact
+      scope: general agency
+      note: UNVERIFIED (search result). Japanese-language.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.ipa.go.jp/contact.html
+      checked: null
+    - url: https://aisi.go.jp/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: b116fef3cc
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,52 @@
+id: au-department-industry
+type: seat
+geo:
+  country: au
+  label: Australia
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.industry.gov.au/science-technology-and-innovation/technology/artificial-intelligence
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 38de41fd75e6
+    - id: public-route
+      type: submission
+      value: https://www.industry.gov.au/publications/australian-government-response-senate-select-committee-adopting-artificial-intelligence-ai-report
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: fdff00b2db94
+  level: national
+  tags:
+    - law
+    - record
+strings:
+  name: Department of Industry, Science and Resources — AI policy function, National AI Centre and AI Expert Group
+  ai_jurisdiction: "The Commonwealth department that owns AI policy: the safe and responsible AI consultation and the Government's interim response, the proposed mandatory guardrails for high-risk AI, the AI Adopt Program, and coordination of Australia's international AI engagement including GPAI. The National Artificial Intelligence Centre, hosted at CSIRO's Data61, 'coordinates Australia's AI expertise and capabilities to address barriers for small and medium enterprises'. A temporary AI Expert Group advised on testing, transparency and accountability for high-risk AI."
+  business: Government response to the Senate Select Committee on Adopting AI report is published at industry.gov.au/publications. AI Adopt Program; work on high-risk AI guardrails.
+  public_route: Respond to DISR consultations when open (the department has run a 'safe and responsible AI' consultation with a published interim response). More reliably, put the same material into a submission to the Joint Select Committee on AI, where it enters the parliamentary record and cannot be quietly filed.
+  format_rules: Departmental consultations set their own rules and usually publish submissions.
+  key_people: An 'Australian AI Safety Institute' is named in the Joint Select Committee's terms of reference agreed by both Houses on 20 August 2026, which places it on the parliamentary record.
+  note: PARTIALLY VERIFIED 2026-09-22. The National AI Centre at CSIRO Data61, the AI Expert Group and the AI Adopt Program are confirmed from industry.gov.au. The 'Australian AI Safety Institute' is confirmed only as a named body in the Joint Select Committee's terms of reference — I could NOT verify its own official page, leadership or standing, so treat it as UNVERIFIED. No named departmental AI branch head or portfolio minister is asserted.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.industry.gov.au/science-technology-and-innovation/technology/artificial-intelligence
+      checked: null
+    - url: https://www.industry.gov.au/publications/australian-government-response-senate-select-committee-adopting-artificial-intelligence-ai-report
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 8e6d55b470
+  migrated_from: input/data/committees-and-organisations.json#seats

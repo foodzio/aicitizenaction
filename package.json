@@ -1,0 +1,21 @@
+{
+  "name": "aicitizenaction",
+  "version": "0.1.5",
+  "private": true,
+  "type": "module",
+  "description": "Routes an alarmed non-expert to the one institution that can act on their AI concern, and hands them a draft.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "migrate": "node scripts/migrate-input.mjs",
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test \"tests/**/*.test.mjs\"",
+    "check": "npm run validate && npm test"
+  },
+  "dependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "yaml": "2.9.1"
+  }
+}

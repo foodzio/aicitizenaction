@@ -1,0 +1,67 @@
+id: us-new-york-state-attorney-general-raise
+type: government
+geo:
+  country: us
+  sub: ny
+  label: New York State, USA
+facts:
+  routes:
+    - id: ny-attorney-general-complaint
+      type: complaint
+      value: https://ag.ny.gov/complaint-forms
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 4adba7a040ce
+    - id: raise-act-incident-reporting
+      type: form
+      value: not yet published
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 9ae6d9dc1247
+    - id: homepage
+      type: homepage
+      value: https://ag.ny.gov/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ceb42b162f30
+  region: United States
+  public_input: limited
+  tags:
+    - harm
+    - insider
+    - law
+    - systemic
+strings:
+  name: New York State Attorney General — RAISE Act (Responsible AI Safety and Education Act) enforcement
+  remit: Enforces the RAISE Act, signed by Governor Hochul (late 2025) and substantially amended/overhauled in April 2026; it takes effect 1 January 2027. Requires large frontier developers to write, publish and follow a safety protocol addressing unreasonable risk of critical harm, to report safety incidents, and bars deploying a model posing unreasonable risk of critical harm. Enforcement is exclusively by the NY Attorney General through civil penalties; there is no private right of action.
+  powers_text: fine
+  reality_check: Not yet a live route. The law is on the books but does not bite until 1 Jan 2027, and unlike California there is no published AI-specific reporting channel and no equivalent of the SB 53 whistleblower category. Until the effective date, the real lever in New York is the legislature and the AG's rulemaking/guidance process, not a complaint form. Note also that the April 2026 overhaul materially changed the original 2025 text — any analysis based on the bill as first passed is out of date.
+  notes: RAISE sits directly in the path of the December 2025 federal preemption Executive Order and the DOJ AI Litigation Task Force; its survivability is contested.
+  routes:
+    ny-attorney-general-complaint:
+      label: NY Attorney General complaint forms
+      scope: The AG's general complaint intake; as of now there is no RAISE-Act-specific category equivalent to California's.
+      note: UNVERIFIED as fetched — the NY AG site was not directly retrieved. Do not assume a RAISE-specific route exists yet.
+    raise-act-incident-reporting:
+      label: RAISE Act incident reporting channel
+      scope: n/a
+      note: UNVERIFIED ABSENCE — the Act does not take effect until 1 January 2027 and no dedicated public reporting portal was located. Expect one to appear closer to the effective date.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://ag.ny.gov/complaint-forms
+      checked: null
+    - url: https://ag.ny.gov/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 2db7002164
+  migrated_from: input/data/institutions.json

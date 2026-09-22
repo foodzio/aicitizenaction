@@ -1,0 +1,60 @@
+id: us-house-technology
+type: seat
+geo:
+  country: us
+  sub: wa
+  label: Washington
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://leg.wa.gov/about-the-legislature/committees/house-of-representatives/tedv
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1370a7f64adc
+    - id: public-route
+      type: submission
+      value: https://app.leg.wa.gov/csi/house
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: bd484d00e9e1
+  level: state
+  chamber: House
+  tags:
+    - audit
+    - law
+    - record
+  seats:
+    - role: chair
+      name: Cindy Ryu
+      party: D
+      verified_on: 2026-09-22
+strings:
+  name: House Technology, Economic Development & Veterans Committee (TEDV)
+  ai_jurisdiction: Explicitly holds artificial intelligence, cybersecurity, broadband and telecommunications jurisdiction. All three major 2026 AI bills were heard here on 15 Jan 2026.
+  business: "HB 2225 (AI companion chatbots, prime sponsor Rep. Lisa Callan, by request of Gov. Ferguson) — House 69-28, Senate 43-5, concurrence 74-21, SIGNED 24 March 2026 as Chapter 168, Laws of 2026, effective 1 January 2027; companion SB 5984. Also 2026: HB 1170 (deepfake detection/disclosure for providers with >1M users, E2SHB reported to Senate Ways & Means Feb 2026); HB 2157 (high-risk AI discrimination, Rep. Cindy Ryu)."
+  status: VERIFIED — HB 2225 enacted (C 168 L 26). HB 1170 and HB 2157 did not reach enactment in 2026; expect reintroduction in the 2027 session.
+  public_route: "YES — Washington's Committee Sign-In (CSI) system is the best-designed remote testimony portal in the country and is wide open. For any scheduled hearing, any member of the public can (a) sign in PRO / CON / OTHER on a bill in under a minute with no account and no travel — these positions are tallied and reported to the committee; (b) submit written testimony that becomes part of the legislative record; or (c) register to testify remotely by video or in person. Deadline convention: written testimony and position sign-in generally close one hour before the hearing; remote-testimony registration typically closes 24 hours before. Meetings are hybrid by default."
+  agency_route: Washington Attorney General — Consumer Protection Division (https://www.atg.wa.gov/file-complaint); the AG's Office also hosts the statutory Washington State AI Task Force.
+  note: "Vice Chair: Shelley Kloba (D-1). Ranking Minority Member: Stephanie Barnard (R-8). Composition 10 D / 3 R. How-to-testify guide: https://leg.wa.gov/bills-meetings-and-session/session/how-to-testify-at-a-committee-meeting/"
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://leg.wa.gov/about-the-legislature/committees/house-of-representatives/tedv
+      checked: 2026-09-22
+    - url: https://app.leg.wa.gov/csi/house
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 4cf86c5f03
+  migrated_from: input/data/committees-and-organisations.json#seats

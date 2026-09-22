@@ -1,0 +1,44 @@
+id: us-electronic-frontier-foundation-2
+type: organisation
+geo:
+  country: us
+  label: United States primarily, with international policy work.
+facts:
+  routes:
+    - id: action
+      type: action
+      value: https://act.eff.org/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c55624b3c37a
+  perspective: civil-liberties
+  volunteers: yes
+  tags:
+    - audit
+    - harm
+    - join
+    - tip
+strings:
+  name: Electronic Frontier Foundation (EFF)
+  the_ask: Regulate how AI is used — surveillance, algorithmic decisions, age-gating, encryption and competition — rather than restricting the technology itself; keep AI tools available and competitive.
+  what_they_do: "Litigation, legislative advocacy and technical analysis across eight AI topics: algorithmic decision-making, AI and fair use, AI and surveillance, deepfakes/NCII, age-gating, privacy, encryption and competition. Runs an action centre with alerts to Congress and state legislatures."
+  newcomer_action: Take a live action at act.eff.org, and if you have a legal problem involving AI or surveillance, submit it through the legal assistance page.
+  tips: yes — legal assistance intake at eff.org/pages/legal-assistance; EFF reviews referrals but takes few cases
+  geography: United States primarily, with international policy work.
+  scale: "Large: decades-old, with staff lawyers, technologists and activists."
+  spending: Member-funded nonprofit; accepts donations and has a membership scheme.
+  caution: EFF is explicitly sceptical of broad AI regulation and of some safety-motivated proposals, and defends fair use for AI training. If your ask is 'slow AI down', EFF is not your ally on that point even though it is a genuine civil liberties organisation. It cannot take most cases referred to it.
+  routes:
+    action:
+      label: Action page
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://act.eff.org/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 6bfd60fe51
+  migrated_from: input/data/committees-and-organisations.json#orgs

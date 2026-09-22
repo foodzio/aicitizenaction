@@ -1,0 +1,100 @@
+id: global-global-dialogue-ai-governance
+type: multilateral
+geo:
+  country: global
+  label: Global (UN)
+facts:
+  routes:
+    - id: written-inputs-ai-dialogue
+      type: submission
+      value: https://www.un.org/global-dialogue-ai-governance/en/inputs
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 68b4c6fdb474
+    - id: insights-from-written-submissions
+      type: consultation
+      value: https://www.un.org/global-dialogue-ai-governance/en/insights-written-submissions
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8641393075f6
+    - id: attendee-registration
+      type: form
+      value: https://www.un.org/global-dialogue-ai-governance/en/registration
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6da02ff89695
+    - id: speaker-registration
+      type: form
+      value: https://www.un.org/global-dialogue-ai-governance/en/speaker-registration
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: dd39c5880aca
+    - id: digital-cooperation-fund-route
+      type: form
+      value: https://www.digitalcooperationfund.org/dialogue
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: fd6fccd1cc80
+    - id: homepage
+      type: homepage
+      value: https://www.un.org/global-dialogue-ai-governance/en
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: d26501cde149
+  region: Global
+  public_input: open
+  tags:
+    - systemic
+strings:
+  name: Global Dialogue on AI Governance (UN)
+  remit: "Intergovernmental-plus-multistakeholder forum established alongside the Scientific Panel by the Aug 2025 UNGA resolution. Inaugural session held Geneva 6–7 July 2026 (alongside the ITU AI for Good Summit); Co-Chairs' Summary covered four clusters: AI opportunities/implications, bridging AI divides, safe and trustworthy systems, human rights. Joint Secretariat is ITU + ODET + UNESCO. Second session: New York, 3–4 May 2027."
+  threat_model: "Broad and development-weighted: AI divides and Global South capacity are at least as prominent as safety. Safe/trustworthy AI is one of four clusters, not the organising frame."
+  reality_check: "The single most genuinely open multilateral channel in this whole list. Written submissions are accepted from anyone, are published, and were visibly synthesised for the Geneva session. Low cost, low barrier, and it puts a concern on the permanent record. Weak point: dilution — hundreds of submissions, and no guarantee any one is read by a decision-maker."
+  gov_channel: Direct — it is the intergovernmental venue itself, reporting into the UNGA.
+  routes:
+    written-inputs-ai-dialogue:
+      label: Written inputs to the AI Dialogue (published submissions archive)
+      scope: Any stakeholder — governments, civil society, academia, industry
+      note: Submissions are published via an external portal at https://aiwritteninputs.vercel.app/. The 2026 window has closed; expect a fresh call ahead of the May 2027 New York session.
+    insights-from-written-submissions:
+      label: Insights from written submissions (synthesis of what was submitted)
+      scope: Shows submissions were actually read and synthesised
+      note: Useful evidence the channel is real, not decorative.
+    attendee-registration:
+      label: Attendee registration
+      scope: Session participation
+    speaker-registration:
+      label: Speaker registration
+      scope: Proposing yourself as a speaker
+    digital-cooperation-fund-route:
+      label: Digital Cooperation Fund — route to the Joint Secretariat
+      scope: Organisational contact and travel-support enquiries
+      note: Travel support for Geneva 2026 has closed.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.un.org/global-dialogue-ai-governance/en/inputs
+      checked: 2026-09-22
+    - url: https://www.un.org/global-dialogue-ai-governance/en/insights-written-submissions
+      checked: 2026-09-22
+    - url: https://www.un.org/global-dialogue-ai-governance/en/registration
+      checked: 2026-09-22
+    - url: https://www.un.org/global-dialogue-ai-governance/en/speaker-registration
+      checked: 2026-09-22
+    - url: https://www.digitalcooperationfund.org/dialogue
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: ee37337008
+  migrated_from: input/data/institutions.json

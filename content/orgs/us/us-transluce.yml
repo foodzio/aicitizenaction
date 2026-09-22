@@ -1,0 +1,95 @@
+id: us-transluce
+type: civil-society
+geo:
+  country: us
+  label: United States
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: info@transluce.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: bcc4f929fd61
+    - id: behaviour-reports-public-catalogue
+      type: submission
+      value: https://behaviors.transluce.org
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8d394f2806ce
+    - id: docent-platform-open-source
+      type: submission
+      value: https://transluce.org/docent
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 718f23dd4bb4
+    - id: github
+      type: submission
+      value: https://github.com/TransluceAI/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ee69d26ea261
+    - id: jobs
+      type: form
+      value: https://jobs.gem.com/transluce
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a94faa870453
+    - id: homepage
+      type: homepage
+      value: https://transluce.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 9efec3d0c155
+  region: United States
+  public_input: limited
+  tags:
+    - behaviour
+    - research
+strings:
+  name: Transluce
+  remit: Non-profit research lab building, in its words, 'the public tech stack for scalable oversight of AI'. Outputs include Docent (a platform for understanding model behaviours at scale), public behaviour reports (e.g. evaluating model responses in mental-health crisis scenarios), and research on activation oracles and surfacing behaviours third parties should monitor.
+  threat_model: Oversight capability gap — the concern that no one outside the labs has tooling to audit model behaviour. Spans near-term behavioural harms (crisis response, deception in deployment) and scalable-oversight/alignment concerns. Deliberately public-interest rather than x-risk framed.
+  reality_check: Small, open-source-first, and explicitly building infrastructure for outsiders to audit models — one of the better-aligned targets if your concern is a specific observed model behaviour you can document. Responsive relative to its size.
+  gov_channel: Indirect — its public behaviour reports have driven press coverage and company responses.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+    behaviour-reports-public-catalogue:
+      label: Behaviour reports — public catalogue of surfaced model behaviours
+      scope: Public read; UNVERIFIED whether outside submissions are accepted
+      note: Worth checking for a submission route — the framing is explicitly about what third parties should monitor.
+    docent-platform-open-source:
+      label: Docent platform and open-source tooling
+      scope: Researchers
+    github:
+      label: GitHub
+      scope: Anyone
+    jobs:
+      label: Jobs
+      scope: Applicants
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://behaviors.transluce.org
+      checked: 2026-09-22
+    - url: https://transluce.org/docent
+      checked: 2026-09-22
+    - url: https://github.com/TransluceAI/
+      checked: 2026-09-22
+    - url: https://jobs.gem.com/transluce
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 9c9b91f2af
+  migrated_from: input/data/institutions.json

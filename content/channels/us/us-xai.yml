@@ -1,0 +1,75 @@
+id: us-xai
+type: company
+geo:
+  country: us
+  label: USA
+facts:
+  routes:
+    - id: safety-reports
+      type: email
+      value: safety@x.ai
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 57c4be431cae
+    - id: hackerone-bug-bounty
+      type: bounty
+      value: https://hackerone.com/x
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: 2e7d4bb90acb
+    - id: homepage
+      type: homepage
+      value: https://x.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 5a4b718f0383
+    - id: framework
+      type: framework
+      value: https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 213d9f3c60b5
+  region: United States
+  public_input: limited
+  tags:
+    - behaviour
+    - flaw
+    - insider
+strings:
+  name: xAI (SpaceXAI)
+  remit: A safety team (unnamed publicly; the site says it 'is actively hiring researchers and engineers') producing model cards and safety evaluations under the Frontier AI Framework. No named safety office or officer is published.
+  reality_check: "Worst documented record of the major labs. AI Frontiers (2026) reports a researcher who emailed the safety address in October 2025 with evidence of 'clear, step-by-step guidance on building a massively destructive chemical weapon' and 'did not receive anything other than an automated response'. Separately, GitGuardian documented a disclosure in April/May 2025: no security.txt, an expired HackerOne link on x.com, and when they finally reached safety@x.ai the reply 12 hours later was 'For us to analyze and also for you to receive proper credit, if applicable, would you please submit this to xAI's Bug Bounty Program on HackerOne?' — the leak was quietly fixed with no update to the reporters, 'completely out of bounds of the disclosure process'. GitGuardian's verdict: 'For a company the size of X, replacing an Incident Response Team...with a bug bounty platform should not be an option and should be considered bad practice.' xAI's own framework lists only internal escalation routes and vaguely references 'xAI's appropriate reporting channels' without naming any. There is also a pending lawsuit over the firing of a Grok safety whistleblower."
+  notes: safety@x.ai is published and real, but expect an autoresponder and a push to HackerOne. If the finding is serious, document your attempt and consider a coordinated third-party route (CERT/CC, ai-reports.org) in parallel. No published safe-harbour language, no published whistleblower channel.
+  routes:
+    safety-reports:
+      label: Safety reports
+      scope: Published on x.ai/safety for 'reporting harmful outputs, jailbreaks, or other safety issues'.
+      note: On paper this is exactly the address a citizen wants. In practice see reality check.
+    hackerone-bug-bounty:
+      label: HackerOne bug bounty
+      scope: Security vulnerabilities.
+      note: Linked from x.ai/safety. xAI has a documented habit of redirecting safety emails into this bounty queue.
+    homepage:
+      label: Homepage
+    framework:
+      label: xAI Frontier Artificial Intelligence Framework (effective 30 June 2026)
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://hackerone.com/x
+      checked: null
+    - url: https://x.ai/
+      checked: null
+    - url: https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: ee7be3ca28
+  migrated_from: input/data/institutions.json

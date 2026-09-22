@@ -1,0 +1,60 @@
+id: gb-conjecture
+type: civil-society
+geo:
+  country: gb
+  label: United Kingdom (London)
+facts:
+  routes:
+    - id: contact-form
+      type: form
+      value: https://www.conjecture.dev/contact
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6f0c25699f95
+    - id: careers
+      type: form
+      value: https://www.conjecture.dev/career
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 5d1a799fd9d1
+    - id: homepage
+      type: homepage
+      value: https://www.conjecture.dev/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c486681b3003
+  region: United Kingdom
+  public_input: limited
+  tags:
+    - research
+strings:
+  name: Conjecture
+  remit: For-profit AI company founded from the alignment community. Public agenda is Cognitive Emulation — building AI systems that follow bounded, auditable, human-like reasoning processes rather than opaque end-to-end learned policies. In practice the public site now emphasises task-specific training, modular AI components and workflow automation products.
+  threat_model: Loss of control via unbounded, uninterpretable general systems; the CoEm bet is that architecture-level boundedness is safer than post-hoc alignment. Its leadership has also been prominent in public advocacy against frontier scaling.
+  reality_check: Has become markedly more product-focused and less publicly research-transparent than in 2022–23. A commercial entity with a contact form. Low responsiveness to unsolicited outside input.
+  gov_channel: Indirect — its co-founder has been an active public voice in UK and EU AI policy debate, but the company holds no formal advisory role.
+  routes:
+    contact-form:
+      label: Contact form
+      scope: General
+      note: No public email address is listed.
+    careers:
+      label: Careers
+      scope: Applicants
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.conjecture.dev/contact
+      checked: 2026-09-22
+    - url: https://www.conjecture.dev/career
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 93b907203b
+  migrated_from: input/data/institutions.json

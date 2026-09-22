@@ -1,0 +1,62 @@
+id: gb-house-commons-science
+type: government
+geo:
+  country: gb
+  label: United Kingdom (parliamentary select committee)
+facts:
+  routes:
+    - id: written-evidence-open-inquiry
+      type: evidence
+      value: https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3c39c3503e20
+    - id: committee-staff
+      type: email
+      value: commonssitc@parliament.uk
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 86d8bae2ddc9
+    - id: homepage
+      type: homepage
+      value: https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 0cb39690268c
+  region: United Kingdom
+  public_input: open
+  tags:
+    - law
+    - systemic
+strings:
+  name: House of Commons Science, Innovation and Technology Committee
+  remit: Scrutinises DSIT — and therefore the AI Security Institute — its policy, administration and spending. Conducts inquiries, takes oral and written evidence, summons ministers and officials, and publishes reports to which the Government must respond within 60 days. It cannot legislate, fine or compel a private party in practice, but it can compel the attendance of officials and extract documents, and its reports set the terms of UK AI debate. Recent and current inquiries have included Low-energy computing (opened 16 April 2026), Neuroscience and digital childhoods (24 March 2026), Digital centre of government (3 February 2025), and Science diplomacy (3 April 2025).
+  powers_text: investigate
+  reality_check: "THIS IS THE UK'S BEST PUBLIC ROUTE and the clearest example of the contrast the question draws. Written evidence to an open select committee inquiry is read by the committee's specialist advisers and clerks, published under your name, indexed, quoted in the report, and cited afterwards by others — unlike a ministerial inbox, which produces a templated reply. Practitioner guidance (UCL Public Policy and others) converges on: keep it short and structured with numbered recommendations, answer the committee's published terms of reference point by point, submit before the deadline, and — the step most people skip — contact the clerk beforehand to check scope and signal availability to give oral evidence. The clerk, not the chair and not a minister, is the person who matters. Building a relationship with the clerk leads to future opportunities, including being called as a witness."
+  notes: Correct current name is 'Science, Innovation and Technology Committee' (committee ID 135). Do not confuse it with the House of Lords Science and Technology Committee (ID 193), which is a separate body.
+  routes:
+    written-evidence-open-inquiry:
+      label: Written evidence to an open inquiry
+      scope: Each open inquiry carries its own 'Submit evidence' link and deadline on the committee's inquiry page. Anyone may submit; accepted submissions are PUBLISHED on the committee website and become part of the formal record.
+      note: VERIFIED — the committee page was fetched and lists its current inquiries. Note https://committees.parliament.uk/submit-written-evidence/ returns 404; submission is always via the specific inquiry's page.
+    committee-staff:
+      label: Committee staff
+      scope: Correspondence with the committee team, including asking the clerk whether a submission is in scope.
+      note: "VERIFIED on the committee page. Postal: Science and Technology Committee, House of Commons, London SW1A 0AA."
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 52535e21b4
+  migrated_from: input/data/institutions.json

@@ -1,0 +1,71 @@
+id: us-eleutherai
+type: civil-society
+geo:
+  country: us
+  label: United States (non-profit research institute, distributed/online-first)
+facts:
+  routes:
+    - id: general-enquiries
+      type: email
+      value: contact@eleuther.ai
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d225160e2bfd
+    - id: discord-actual-organisation-research
+      type: membership
+      value: https://discord.gg/zBGx3azzUn
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7283e46ee29b
+    - id: github
+      type: submission
+      value: https://github.com/EleutherAI
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ee72758b5d9d
+    - id: homepage
+      type: homepage
+      value: https://www.eleuther.ai/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 124746422a0a
+  region: United States
+  public_input: open
+  tags:
+    - harm
+    - research
+strings:
+  name: EleutherAI
+  remit: Grassroots-origin open research lab. Trains and releases open-source LLMs (GPT-NeoX, Pythia), maintains the LM Evaluation Harness used across the field, and researches interpretability (interpreting across training time), eliciting latent knowledge, alignment, and non-text modalities. Runs almost entirely in public on Discord.
+  threat_model: "Mixed and openness-centric: the core thesis is that open models and public interpretability tooling are necessary for anyone outside the large labs to audit AI. Touches alignment (ELK, interpretability) but is not an x-risk organisation; it is frequently in tension with the pause/restriction wing."
+  reality_check: "The most genuinely open organisation in this entire list. An unaffiliated person with technical skill can join the Discord today and be contributing to alignment-relevant research within weeks. Caveat: it is a research community, not a complaints channel, and its open-release stance means it is not a natural home for a restrict-frontier-models concern."
+  gov_channel: Modest — EleutherAI has filed comments in US policy processes (notably on open models) and its researchers are cited on open-weight policy, but it has no advisory seat.
+  routes:
+    general-enquiries:
+      label: General enquiries
+      scope: Anyone
+    discord-actual-organisation-research:
+      label: Discord — the actual organisation; research happens in public channels
+      scope: Anyone, no credentials required
+      note: By far the most open research community in AI. Newcomers routinely join projects and end up as paper co-authors.
+    github:
+      label: GitHub
+      scope: Anyone
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://discord.gg/zBGx3azzUn
+      checked: 2026-09-22
+    - url: https://github.com/EleutherAI
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 0ee0bac31b
+  migrated_from: input/data/institutions.json

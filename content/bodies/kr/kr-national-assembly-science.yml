@@ -1,0 +1,64 @@
+id: kr-national-assembly-science
+type: seat
+geo:
+  country: kr
+  label: South Korea
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://science.na.go.kr/science/guide/info0201.do
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Korean only. The committee site (science.na.go.kr) and the bill pre-announcement system are Korean-language. The National Assembly has an English site but it does not carry participation functions.
+      source_id: 0e719f8046d3
+    - id: public-route
+      type: submission
+      value: https://pal.assembly.go.kr/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Korean only. The committee site (science.na.go.kr) and the bill pre-announcement system are Korean-language. The National Assembly has an English site but it does not carry participation functions.
+      source_id: 4cf914597814
+  local_name: 국회 과학기술정보방송통신위원회 (과방위)
+  level: national
+  tags:
+    - audit
+    - law
+    - petition
+    - record
+  seats:
+    - role: chair
+      name: SONG Gi-heon (송기헌)
+      verified_on: 2026-06-30
+strings:
+  name: National Assembly Science, ICT, Broadcasting and Communications Committee
+  ai_jurisdiction: The lead standing committee for AI. Oversees the Ministry of Science and ICT (과학기술정보통신부), the Korea Communications Commission (방송통신위원회) and the Nuclear Safety and Security Commission (원자력안전위원회). It produced and passed the AI Framework Act (consolidating 19 separate bills) and handles all amendments to it, plus semiconductors, R&D budget and broadcasting.
+  business: "Song took the chair on 30 June 2026, naming AI, semiconductors and broadcasting fairness as his stated priorities. Oversight of AI Framework Act implementation since its 22 January 2026 entry into force, and of MSIT's enforcement decree and notices. Note the political context: the People Power Party members reportedly submitted en-bloc resignation letters around the handover, so committee composition may be unstable."
+  public_route: Two routes. (1) 입법예고 (legislative pre-announcement) on National Assembly bills — bills referred to committee are posted for public comment on the Assembly's bill information system, typically 10 days, and anyone may submit written opinions online. (2) 공청회 (public hearings) with invited witnesses, by committee selection. The separate 국민동의청원 petition route (below) also lands bills in this committee.
+  format_rules: No threshold for a written 입법예고 opinion. Requires the standard Korean identity verification for the Assembly's online systems.
+  realistic: "The 입법예고 route is formally open and genuinely used, but it has two practical gates that exclude most outsiders: everything is in Korean, and the Assembly's online systems generally require Korean identity verification (본인인증) which in practice needs a Korean mobile number or a joint certificate — foreign residents with an ARC can often do this, foreign non-residents usually cannot. The 10-day window is also short. For a non-Korean-speaker this is effectively closed without a Korean intermediary."
+  language_note: Korean only. The committee site (science.na.go.kr) and the bill pre-announcement system are Korean-language. The National Assembly has an English site but it does not carry participation functions.
+  note: Chair and date VERIFIED via Korean press reporting of the 30 June 2026 Democratic Party decision and vote (Song selected over Lee Eon-ju). Jurisdiction over MSIT/KCC/NSSC VERIFIED from Korean Wikipedia. The official committee site science.na.go.kr blocks automated access via robots.txt, so the member list was not directly retrieved — individual member names are UNVERIFIED. The site is served on port 444 in some links (science.na.go.kr:444); the standard URL above should resolve for a human browser.
+  seat_notes:
+    chair: 위원장 (Chair), Democratic Party of Korea, three-term member. Elected for the second half of the 22nd National Assembly.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-06-30
+  review_by: 2026-09-28
+  sources:
+    - url: https://science.na.go.kr/science/guide/info0201.do
+      checked: 2026-09-22
+    - url: https://pal.assembly.go.kr/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: be44854da4
+  migrated_from: input/data/committees-and-organisations.json#seats

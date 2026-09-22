@@ -1,0 +1,52 @@
+id: eu-european-commission-european-ai-office
+type: seat
+geo:
+  country: eu
+  label: European Union
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://digital-strategy.ec.europa.eu/en/policies/ai-office
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 51a5ed4b436a
+    - id: public-route
+      type: submission
+      value: https://digital-strategy.ec.europa.eu/en/consultations
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 518fbbb543fa
+  level: bloc
+  tags:
+    - audit
+    - law
+strings:
+  name: European Commission — European AI Office (within DG CNECT)
+  ai_jurisdiction: "The EU's central AI regulator and the enforcement body for the AI Act's rules on general-purpose AI models. Three functions: (1) AI Act implementation and enforcement, including 'developing tools, methodologies and benchmarks for evaluating capabilities' of GPAI models and investigating possible violations; (2) fostering trustworthy AI, including sandboxes and real-world testing; (3) international AI governance coordination. Over 125 staff across 6 units plus 2 adviser posts."
+  business: GPAI model oversight, AI Act guidelines (including on high-risk classification and transparency obligations), the Code of Practice process, and implementation of the changes made by the Digital Omnibus on AI.
+  public_route: "Four concrete routes: (1) general enquiries to CNECT-AIOFFICE@ec.europa.eu; (2) the AI Act Service Desk for regulatory questions; (3) the Expression of Interest form for collaboration, which is how outside experts get onto drafting and consultation groups; (4) respond to AI Office consultations on draft guidelines, which are announced on the Shaping Europe's Digital Future consultations page. The Advisory Forum is the formal civil-society seat."
+  format_rules: "Consultations on draft AI Act guidelines are typically 4–8 weeks and run through structured online questionnaires. Responses may be published. Recent examples VERIFIED on the consultations page: 'Targeted consultation on the draft guidelines for the classification of high-risk artificial intelligence systems' (19 May – 23 July 2026); 'Consultation on the draft guidelines on transparency obligations under the AI Act' (8 May – 3 June 2026); 'European Commission survey: AI in healthcare and pharmaceuticals' (2 – 26 June 2026). All three have closed; the page is the live index to whatever is open now."
+  key_people: "Governance bodies that carry outside voices into the AI Office: the AI Board (Member State representatives); the Scientific Panel of independent experts; the Advisory Forum, which is explicitly designed for balanced stakeholder representation including civil society; the AI Pact for business; and the Apply AI Alliance."
+  note: "VERIFIED 2026-09-22 from the Commission's own AI Office page and consultations index. The head of the AI Office is NOT named on the official page and I am not guessing at it. NOTE: the three AI consultations I could verify have all closed — as at 22 Sep 2026 I found no open AI consultation, but the index page is dynamic and should be checked directly."
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://digital-strategy.ec.europa.eu/en/policies/ai-office
+      checked: 2026-09-22
+    - url: https://digital-strategy.ec.europa.eu/en/consultations
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 2637541a8f
+  migrated_from: input/data/committees-and-organisations.json#seats

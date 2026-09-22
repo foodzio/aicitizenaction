@@ -1,0 +1,62 @@
+id: us-alignment-research-center
+type: civil-society
+geo:
+  country: us
+  label: United States (Berkeley)
+facts:
+  routes:
+    - id: hiring
+      type: form
+      value: https://www.alignment.org/hiring/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b74e7023b775
+    - id: blog-theory-write-ups
+      type: submission
+      value: https://www.alignment.org/blog/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e0c110f9b2f9
+    - id: homepage
+      type: homepage
+      value: https://www.alignment.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ebc9adb53e3a
+  region: United States
+  public_input: none
+  tags:
+    - law
+    - research
+strings:
+  name: Alignment Research Center (ARC)
+  remit: Small theory-focused non-profit. Current agenda is a theoretical foundation for mechanistic explanations of neural network behaviour — heuristic arguments, low-probability estimation, and algorithms that analyse weights directly rather than by sampling, aimed at predicting out-of-distribution behaviour and detecting anomalies. Its evaluations arm spun out to become METR.
+  threat_model: Worst-case intent alignment and deceptive alignment — specifically the problem of catching behaviours that never appear during training or testing. The most theoretical agenda in the field.
+  reality_check: Effectively closed and by far the most inward-facing organisation on this list — no email, no contact form, tiny team, deeply technical agenda. The only way in is a serious mathematical contribution to its stated open problems. Do not route a concern here.
+  gov_channel: None. ARC does no policy work.
+  routes:
+    hiring:
+      label: Hiring
+      scope: Researchers
+      note: No contact email is published anywhere on the site.
+    blog-theory-write-ups:
+      label: Blog / theory write-ups — engagement happens in public research discussion
+      scope: Researchers
+      note: ARC has historically run prize competitions for progress on its open problems; UNVERIFIED whether one is currently live.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.alignment.org/hiring/
+      checked: 2026-09-22
+    - url: https://www.alignment.org/blog/
+      checked: 2026-09-22
+  needs_research:
+    - topics
+  legacy_id: 5b82ead2a4
+  migrated_from: input/data/institutions.json

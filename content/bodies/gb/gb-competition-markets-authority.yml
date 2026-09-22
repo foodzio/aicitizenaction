@@ -1,0 +1,87 @@
+id: gb-competition-markets-authority
+type: government
+geo:
+  country: gb
+  label: United Kingdom
+facts:
+  routes:
+    - id: report-competition-or-market
+      type: complaint
+      value: https://www.gov.uk/guidance/tell-the-cma-about-a-competition-or-market-problem
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a8a451ebf8ab
+    - id: general-enquiries
+      type: email
+      value: general.enquiries@cma.gov.uk
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c691ada04602
+    - id: freedom-information-requests
+      type: email
+      value: foiarequests@cma.gov.uk
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: faf856f85598
+    - id: cma-consultations-market-study
+      type: consultation
+      value: https://www.gov.uk/government/organisations/competition-and-markets-authority
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: bfa38209d65f
+    - id: homepage
+      type: homepage
+      value: https://www.gov.uk/government/organisations/competition-and-markets-authority
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 3d54f043e54e
+  region: United Kingdom
+  public_input: open
+  tags:
+    - harm
+    - law
+    - systemic
+strings:
+  name: Competition and Markets Authority (CMA)
+  remit: Competition and consumer protection regulator. Relevant to AI through foundation-model market studies, merger review of AI partnerships and acqui-hires, and the digital markets competition regime (Strategic Market Status designations under the DMCC Act, which allow the CMA to impose conduct requirements and pro-competition interventions on designated firms). Can compel information, conduct market investigations, block or unwind mergers, impose conduct requirements, and fine up to 10% of global turnover — and under the DMCC regime the CMA can now enforce consumer law directly with fines rather than going to court.
+  powers_text: fine
+  reality_check: "The CMA's foundation-model market study was unusually open: it published a call for evidence, set up a dedicated study mailbox, met respondents, and quoted submissions in its update reports. That per-study mailbox — not general.enquiries@cma.gov.uk — is where input lands. The general enquiries address is a correspondence unit. The CMA's AI framing is market power and consumer harm, with an explicit concern about concentration in compute and model supply; it has occasionally touched on safety as a competition concern (whether incumbents can be disciplined) but does not regulate model risk. FOI to the CMA is underused and productive."
+  notes: The DMCC regime materially expanded CMA powers; SMS designations are the mechanism to watch for AI-market intervention.
+  routes:
+    report-competition-or-market:
+      label: Report a competition or market problem
+      scope: Anyone can report suspected anti-competitive conduct, including in AI markets (compute access, model distribution, exclusive partnerships).
+      note: VERIFIED — linked from the CMA's GOV.UK organisation page.
+    general-enquiries:
+      label: General enquiries
+      scope: General correspondence.
+      note: "VERIFIED on https://www.gov.uk/government/organisations/competition-and-markets-authority. Phone 020 3738 6000. Address: The Cabot, 25 Cabot Square, London E14 4QZ."
+    freedom-information-requests:
+      label: Freedom of Information requests
+      scope: FOI — a genuinely useful route for extracting CMA analysis of AI markets.
+      note: VERIFIED on the same page.
+    cma-consultations-market-study:
+      label: CMA consultations and market study calls for evidence
+      scope: The CMA's foundation-model work proceeded via published calls for evidence with named response deadlines and email addresses per study.
+      note: VERIFIED as the hub; individual study pages carry their own dedicated response mailbox.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.gov.uk/guidance/tell-the-cma-about-a-competition-or-market-problem
+      checked: 2026-09-22
+    - url: https://www.gov.uk/government/organisations/competition-and-markets-authority
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: ef2c2dda2b
+  migrated_from: input/data/institutions.json

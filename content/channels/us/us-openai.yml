@@ -1,0 +1,148 @@
+id: us-openai
+type: company
+geo:
+  country: us
+  label: USA
+facts:
+  routes:
+    - id: coordinated-vulnerability-disclosure-policy
+      type: disclosure
+      value: https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1aedc14b9469
+    - id: openai-bug-bounty
+      type: bounty
+      value: https://bugcrowd.com/openai
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: afab3013403b
+    - id: openai-safety-bug-bounty
+      type: bounty
+      value: https://bugcrowd.com/engagements/openai-safety
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      source_id: aecc1c096002
+    - id: report-content
+      type: form
+      value: https://openai.com/form/report-content/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: efe0c7c75168
+    - id: researcher-access-program
+      type: program
+      value: https://openai.com/form/researcher-access-program/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b00592fd887c
+    - id: red-teaming-network
+      type: program
+      value: https://openai.com/index/red-teaming-network/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 98d99781c863
+    - id: model-behavior-feedback-form
+      type: feedback
+      value: https://openai.com/form/model-behavior-feedback/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4db1a40e523f
+    - id: model-spec-feedback-form
+      type: feedback
+      value: https://openai.com/form/model-spec-feedback/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b01088987243
+    - id: homepage
+      type: homepage
+      value: https://openai.com/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 9bb60af6ec90
+    - id: framework
+      type: framework
+      value: https://model-spec.openai.com/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 26739653b9f2
+  region: United States
+  public_input: limited
+  tags:
+    - behaviour
+    - flaw
+    - insider
+    - systemic
+strings:
+  name: OpenAI
+  remit: Safety Systems, Preparedness and Alignment teams, with a Safety and Security Committee at board level; Preparedness runs capability thresholds and the Model Spec defines intended model behaviour.
+  reality_check: "Mixed and worsening for unpaid routes. Two named public feedback channels — the model behavior feedback form and the Model Spec feedback form — are both now closed or deprecated, so a citizen's only open door is the content-report form. OpenAI's September 2026 model misalignment reporting framework is explicitly internal: 'Any OpenAI employee may flag a misalignment example for investigation' — it creates no external intake. Researchers in the Trusted Access for Cyber / Daybreak program publicly complained in August 2026 (TechCrunch, 19 Aug 2026) that access was revoked with messages saying their identity 'could not be verified', disproportionately affecting researchers outside the US and Europe. The Safety Bug Bounty is reported to be NDA-bound, so findings cannot be published."
+  notes: If you have a model-behaviour concern and are not a paid bounty participant, the Report Content form is the only reliable open channel and it is framed around content policy, not alignment. OpenAI's security page says the bug bounty 'provides safe harbor for good-faith testing' but no verbatim safe-harbour clause is published on the policy page itself. No public whistleblower channel for outsiders.
+  routes:
+    coordinated-vulnerability-disclosure-policy:
+      label: Coordinated Vulnerability Disclosure Policy
+      scope: "States: 'We invite you to report vulnerabilities, bugs, safety and abuse issues, or security flaws you discover in our systems.'"
+      note: Broad invitation on its face, but the operative programs are on Bugcrowd and split security from safety.
+    openai-bug-bounty:
+      label: OpenAI Bug Bounty (Bugcrowd)
+      scope: Infrastructure/product security. $200 to $20,000.
+      note: URL cited on OpenAI's own policy page; Bugcrowd page is JS-rendered and could not be read directly.
+    openai-safety-bug-bounty:
+      label: OpenAI Safety Bug Bounty (Bugcrowd)
+      scope: Model safety / CBRN jailbreaks. Separate engagement from the main bounty.
+      note: Linked from OpenAI's coordinated disclosure policy. AI Frontiers reports all prompts, completions, findings and communications under it are NDA-covered — you cannot publish what you find.
+    report-content:
+      label: Report Content
+      scope: "Publicly open form for policy violations and illegal content: violence and self-harm, sexual exploitation, child exploitation, bullying, fraud, privacy, IP."
+      note: The only genuinely open, no-account-needed public channel. It is a content/abuse route, not an alignment route.
+    researcher-access-program:
+      label: Researcher Access Program
+      scope: Open and active. Up to $1,000 of API credits for 'researchers using our products to study areas related to the responsible deployment of AI and mitigating associated risks'. Reviewed quarterly.
+      note: Explicitly welcomes 'early stage researchers' and those with 'limited financial and institutional resources'. Low-friction way in.
+    red-teaming-network:
+      label: Red Teaming Network
+      scope: External domain experts stress-testing models.
+      note: CLOSED. Page states 'Applications are now closed' (deadline was 1 December 2023); says it may reopen. Do not count on it.
+    model-behavior-feedback-form:
+      label: Model behavior feedback form
+      scope: "DEPRECATED. Page now reads: 'We've deprecated this web form in favor of other channels.'"
+      note: Redirects you to in-product thumbs-down, the API dashboard, or support. A named safety channel that was closed.
+    model-spec-feedback-form:
+      label: Model Spec feedback form
+      scope: CLOSED. 'This feedback form is now closed.'
+      note: The public-comment process on the Model Spec no longer exists; updates are now published to a GitHub page instead.
+    homepage:
+      label: Homepage
+    framework:
+      label: Preparedness Framework v2.0 (15 April 2025); Frontier Governance Framework (May 2026); Model Spec (updated continuously)
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+      checked: 2026-09-22
+    - url: https://openai.com/form/report-content/
+      checked: 2026-09-22
+    - url: https://openai.com/form/researcher-access-program/
+      checked: 2026-09-22
+    - url: https://openai.com/index/red-teaming-network/
+      checked: 2026-09-22
+    - url: https://openai.com/form/model-behavior-feedback/
+      checked: 2026-09-22
+    - url: https://openai.com/form/model-spec-feedback/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: d59b26f957
+  migrated_from: input/data/institutions.json

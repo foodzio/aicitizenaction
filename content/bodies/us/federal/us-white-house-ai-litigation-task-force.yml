@@ -1,0 +1,44 @@
+id: us-white-house-ai-litigation-task-force
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: Federal preemption context
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://www.techpolicy.press/where-state-ai-legislation-stands-half-way-into-2026/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: b573dcdaccb9
+  level: state
+  chamber: Federal executive
+  tags:
+    - audit
+    - law
+    - record
+strings:
+  name: White House AI Litigation Task Force / Department of Commerce BEAD conditions
+  ai_jurisdiction: Not a state committee — included because it materially changes the status of every state AI law listed above and is the reason several 2026 state bills were tabled.
+  business: December 2025 Executive Order establishing an AI Litigation Task Force to challenge state AI laws deemed not 'minimally burdensome', and directing Commerce to explore withholding BEAD broadband funding from states enacting 'onerous' AI laws. The order signaled carve-outs for child safety and AI compute/data-center infrastructure.
+  status: "VERIFIED — as of 1 July 2026 states had still enacted 109 AI laws and 28 data-center laws in 2026, versus 121 and 27 at the same point in 2025. Roughly 61% of Republican-controlled and 69% of Democratic-controlled states enacted AI legislation, so the chilling effect was real but not partisan. Concrete litigation consequences: x.AI's challenge restrained Colorado AG enforcement; xAI sued Minnesota over its nudification ban and lost its bid to pause it."
+  public_route: "N/A at the federal level for these actions, but this is precisely why state-level testimony matters more right now: Virginia legislators explicitly cited the federal order when tabling AI bills to 2027, and child-safety framing is the carve-out that is still moving. Framing state testimony around child safety and around data-center/ratepayer impacts is currently the path of least resistance."
+  agency_route: N/A
+  note: "Context entry. The practical implication for a member of the public: the 2027 sessions (Virginia, Texas, and the carry-over dockets in Virginia and New Jersey) are where the deferred AI bills return, and the testimony windows open January–March 2027."
+  routes:
+    membership:
+      label: Live membership list
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.techpolicy.press/where-state-ai-legislation-stands-half-way-into-2026/
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 8b434c6094
+  migrated_from: input/data/committees-and-organisations.json#seats

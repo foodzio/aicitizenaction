@@ -1,0 +1,54 @@
+id: mx-agencia-transformacion-digital-y-telecomunicaciones
+type: government
+geo:
+  country: mx
+  label: Mexico
+facts:
+  routes:
+    - id: atdt-agency-page
+      type: form
+      value: https://www.gob.mx/atdt/sobre-la-agencia
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: es
+      source_id: 0672f1257420
+    - id: homepage
+      type: homepage
+      value: https://www.gob.mx/atdt
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: ba915c6d95a2
+  local_name: Agencia de Transformación Digital y Telecomunicaciones
+  region: Latin America
+  public_input: limited
+  tags:
+    - law
+strings:
+  name: Agencia de Transformación Digital y Telecomunicaciones (ATDT)
+  remit: "STATUS AS OF SEPT 2026: NO GENERAL AI LAW. The ATDT, created under the Sheinbaum administration, is the federal digital-transformation and telecommunications agency and the likely institutional home for AI coordination. Multiple general AI bills (iniciativas de Ley General de IA) were in legislative process without passage; regulation has instead advanced sector by sector. Mexico's prior AI-relevant oversight body, INAI, was abolished in 2025 as part of the autonomous-bodies reform, with its functions absorbed into the executive — a significant reduction in independent oversight capacity."
+  powers_text: advise
+  reality_check: Weak and unsettled. Mexico has no AI law, no AI safety body, and recently dismantled the independent transparency/data authority that would have been the natural AI-oversight anchor. I could not fetch the agency site. Spanish only. Any directory entry should be explicitly provisional.
+  notes: The abolition of INAI in 2025 is the key structural fact and should be noted rather than listing INAI as a live AI contact — a mistake in several existing directories.
+  routes:
+    atdt-agency-page:
+      label: ATDT agency page
+      scope: general
+      note: UNVERIFIED — URL from search results; fetch returned HTTP 403. No contact address confirmed.
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.gob.mx/atdt/sobre-la-agencia
+      checked: null
+    - url: https://www.gob.mx/atdt
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c2834bd4dc
+  migrated_from: input/data/institutions.json

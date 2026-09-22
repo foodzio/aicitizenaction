@@ -1,0 +1,61 @@
+id: us-subcommittee-energy-2
+type: seat
+geo:
+  country: us
+  sub: federal
+  label: United States
+facts:
+  routes:
+    - id: membership
+      type: membership
+      value: https://energycommerce.house.gov/committees/subcommittee/energy
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d1fda10b9cf1
+    - id: public-route
+      type: submission
+      value: https://energycommerce.house.gov/committees/subcommittee/energy
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f0ca18ace33a
+  level: federal
+  chamber: House
+  parent: House Committee on Energy and Commerce
+  tags:
+    - law
+  seats:
+    - role: chair
+      name: Robert E. Latta
+      party: R
+      region: OH
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Kathy Castor
+      party: D
+      region: FL
+      verified_on: 2026-09-22
+strings:
+  name: Subcommittee on Energy
+  ai_jurisdiction: "The House door for AI's power problem: data-center load growth, FERC and grid reliability, interconnection, ratepayer cost allocation when utilities serve hyperscalers, and generation siting for AI."
+  business: "VERIFIED: hearing 'AI and the Grid: Meeting Growing Power Demand While Protecting Ratepayers' (democrats-energycommerce.house.gov/committee-activity/hearings/hearing-ai-and-grid-meeting-growing-power-demand-while-protecting)."
+  public_route: "Full-committee contact: https://energycommerce.house.gov/contact-us, 202-225-3641."
+  note: Leadership verified 2026-09-22 from the House Clerk's MemberData.xml.
+  routes:
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-12-21
+  sources:
+    - url: https://energycommerce.house.gov/committees/subcommittee/energy
+      checked: 2026-09-22
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: c30de59f64
+  migrated_from: input/data/committees-and-organisations.json#seats

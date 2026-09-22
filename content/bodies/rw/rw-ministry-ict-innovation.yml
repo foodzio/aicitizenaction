@@ -1,0 +1,67 @@
+id: rw-ministry-ict-innovation
+type: government
+geo:
+  country: rw
+  label: Rwanda
+facts:
+  routes:
+    - id: minict-ai-policy-page
+      type: consultation
+      value: https://www.minict.gov.rw/ai-policy
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 8292f3a7ba41
+    - id: ai-policy-details
+      type: docket
+      value: https://www.minict.gov.rw/ai-policy/ai-policy-details
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 8fba72aae909
+    - id: homepage
+      type: homepage
+      value: https://www.minict.gov.rw/ai-policy
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 73ac0d5bb4d9
+  local_name: Minisiteri y'Ikoranabuhanga mu Itumanaho n'Udushya
+  region: Africa
+  public_input: limited
+  tags:
+    - harm
+    - systemic
+strings:
+  name: Ministry of ICT and Innovation (MINICT)
+  remit: Owns Rwanda's National AI Policy, approved by Cabinet in April 2023 — one of the first in Africa, developed with The Future Society and GIZ. Policy/strategy body coordinating AI adoption, skills, data infrastructure and an AI ethics framework; implementation runs through the Rwanda Information Society Authority and the National Cyber Security Authority. Rwanda has hosted the Global AI Summit on Africa and is active in continental AI diplomacy. No AI-specific enforcement powers; data protection sits under Rwanda's 2021 DPP law with the NCSA.
+  powers_text: advise
+  reality_check: "Rwanda is English-language and unusually outward-facing — its AI policy was co-developed with international NGOs, which is direct evidence that foreign input is not merely tolerated but solicited at the institutional level. But that is partnership-based access, not a public channel: I verified no email, no comment process, no complaint route. The policy is developmental, with no frontier-risk content."
+  notes: Not a network member. Rwanda's significance is as a convening hub for African AI governance rather than as a regulator.
+  routes:
+    minict-ai-policy-page:
+      label: MINICT AI policy page
+      scope: policy
+      note: UNVERIFIED (search result). Not fetched.
+    ai-policy-details:
+      label: AI policy details
+      scope: policy
+      note: UNVERIFIED (search result).
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.minict.gov.rw/ai-policy
+      checked: null
+    - url: https://www.minict.gov.rw/ai-policy/ai-policy-details
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: d90c2db67b
+  migrated_from: input/data/institutions.json

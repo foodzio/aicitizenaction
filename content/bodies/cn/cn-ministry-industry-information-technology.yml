@@ -1,0 +1,82 @@
+id: cn-ministry-industry-information-technology
+type: government
+geo:
+  country: cn
+  label: People's Republic of China
+facts:
+  routes:
+    - id: miit-public-comment-section
+      type: consultation
+      value: https://www.miit.gov.cn/gzcy/yjzj/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: zh
+      source_id: 6719aef9cc56
+    - id: miit-ai-standardization-technical
+      type: docket
+      value: https://miittc1.caict.ac.cn/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: zh
+      source_id: 45d2b3cac986
+    - id: miit-standards-information-service
+      type: docket
+      value: https://std.miit.gov.cn/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: zh
+      source_id: a150d18d38a0
+    - id: homepage
+      type: homepage
+      value: https://www.miit.gov.cn/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 52aa82b9ef64
+  local_name: 中华人民共和国工业和信息化部
+  region: China
+  public_input: open
+  tags:
+    - systemic
+strings:
+  name: Ministry of Industry and Information Technology (MIIT)
+  remit: "Industrial regulator for AI as a technology sector: compute infrastructure, telecoms, AI standardisation, humanoid robotics, and the 'AI+' industrial programmes. Issued the 'AI+ Information and Communications' Innovation Development Implementation Opinions (2026–2028) in 2026. Runs a standing public-comment section (公开征求意见) on draft standards and guidelines. Has licensing and administrative-penalty powers over telecoms and industrial operators."
+  powers_text: compel
+  reality_check: MIIT's comment windows are genuine and structurally open — the notices name a contact person and a feedback email. But they are Chinese-language, typically 30 days, aimed at domestic industry and research institutes, and use a downloadable Word feedback form (意见反馈表) with fields for work unit, name, and phone. A foreign individual can technically email a completed form; there is no acknowledgement mechanism and no evidence foreign submissions are considered.
+  notes: MIIT's AI work is developmental/industrial rather than safety-focused. It is not a frontier-risk body.
+  routes:
+    miit-public-comment-section:
+      label: MIIT public comment section (意见征集)
+      scope: draft standards and guidelines
+      note: PARTIALLY VERIFIED — individual comment notices under this path were confirmed via search (e.g. the 2026 humanoid-robotics standards-system draft at /gzcy/yjzj/art/2026/...), but the section index itself returned a redirect loop on fetch. Each notice carries its own feedback email and deadline inside the notice text.
+    miit-ai-standardization-technical:
+      label: MIIT AI Standardization Technical Committee
+      scope: AI standards
+      note: UNVERIFIED (search result). Hosted by CAICT.
+    miit-standards-information-service:
+      label: MIIT standards information service platform
+      scope: standards
+      note: UNVERIFIED (search result).
+    homepage:
+      label: Homepage
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  sources:
+    - url: https://www.miit.gov.cn/gzcy/yjzj/
+      checked: null
+    - url: https://miittc1.caict.ac.cn/
+      checked: null
+    - url: https://std.miit.gov.cn/
+      checked: null
+    - url: https://www.miit.gov.cn/
+      checked: null
+  needs_research:
+    - powers
+    - topics
+    - not_topics
+  legacy_id: 57fe710633
+  migrated_from: input/data/institutions.json
