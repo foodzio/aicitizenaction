@@ -1,6 +1,6 @@
 # AI Citizen Action — Implementation Plan
 
-*Created 2026-09-22T20:37:19Z. Last modified 2026-09-22T23:37:38Z — revised after critique: validation moved first, routing research made its own phase, branch protection and link check corrected, analytics decision moved earlier. See section 7.*
+*Created 2026-09-22T20:37:19Z. Last modified 2026-09-22T23:51:33Z (implementation deviation: own link checker instead of lychee). Previously 2026-09-22T23:37:38Z — revised after critique: validation moved first, routing research made its own phase, branch protection and link check corrected, analytics decision moved earlier. See section 7.*
 
 How to get from the research and spec in this repo to a live, volunteer-maintained, multilingual site with a Resources collection.
 
@@ -38,7 +38,7 @@ Each is a recommendation; change any of them before the phase that depends on it
 | --- | --- | --- |
 | Site generator | **Astro**, static output only | Phase 3 |
 | Content format | YAML, one file per record, validated by JSON Schema (`ajv`) | Phase 1 |
-| CI | GitHub Actions; link check with `lychee`, tuned for government sites (retries; blocked responses count as unknown, not broken) | Phase 2 |
+| CI | GitHub Actions; link check with `scripts/check-links.mjs` (replaced `lychee` during implementation: the two-consecutive-failures rule, unknown-vs-broken classification and owner routing need state lychee does not keep), tuned for government sites | Phase 2 |
 | Branch protection | One approval, with owner bypass, while there is one maintainer; the ingest bot exempt for *Resource intake*. Two approvals (one from a path owner) once there are two or more maintainers | Phase 2 |
 | Tests | `node:test`, like stockspanic | Phase 1 onward |
 | Hosting | Static build in `dist/`, served on Railway with `serve dist -l $PORT` per the owner's Railway convention. Always ask before deploying | Phase 7 |

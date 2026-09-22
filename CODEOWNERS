@@ -1,0 +1,21 @@
+# Who reviews what. The last matching line wins. See docs/content-architecture.md
+# ("Ownership without a coordinator") and docs/github-setup.md.
+#
+# Until stewards arrive, the maintainer owns everything.
+*                                 @sinscrit
+#
+# This repository belongs to a personal account, and GitHub teams exist only in
+# organisations. When the repository moves to an organisation, replace the line above
+# with team lines like these, so handing over a country is a team-membership change:
+#
+# /content/                       @aicitizenaction/maintainers
+# /content/bodies/us/ca/          @aicitizenaction/geo-us-ca @aicitizenaction/domain-legislatures
+# /content/bodies/eu/             @aicitizenaction/geo-eu    @aicitizenaction/domain-legislatures
+# /content/channels/              @aicitizenaction/domain-incidents
+# /content/orgs/                  @aicitizenaction/domain-campaigns
+# /content/resources/             @aicitizenaction/editors
+# /content/resources/sources/     @aicitizenaction/editors @aicitizenaction/maintainers
+# /i18n/fr/                       @aicitizenaction/lang-fr
+# /volunteers/                    @aicitizenaction/maintainers
+# /schema/  /site/  /scripts/     @aicitizenaction/maintainers
+# /CODEOWNERS  /.github/          @aicitizenaction/maintainers

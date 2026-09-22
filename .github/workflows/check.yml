@@ -1,0 +1,36 @@
+# Runs before anything merges: validation, tests, and a link check of the URLs in changed files.
+name: Check
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Validate content and run tests
+        run: npm run check
+      - name: Build the site
+        if: hashFiles('astro.config.mjs') != ''
+        run: npm run build
+      - name: Link check on changed content
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          files=$(git diff --name-only --diff-filter=AM "origin/${BASE_REF}...HEAD" -- 'content/**/*.yml')
+          if [ -n "$files" ]; then
+            node scripts/check-links.mjs --summary "$GITHUB_STEP_SUMMARY" --files $files
+          else
+            echo "No content files changed." >> "$GITHUB_STEP_SUMMARY"
+          fi

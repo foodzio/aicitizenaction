@@ -1,0 +1,29 @@
+name: Suggest a resource
+description: An article, video, podcast or report that belongs in the Resources collection, or an open consultation or hearing.
+labels: [resource-suggestion]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Link
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is it?
+      options: [Article, Video, Podcast, Report, Newsletter, An open consultation or hearing (a window to act), Other]
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does it matter, and who could act on it?
+      description: One or two sentences. If it concerns a particular committee, regulator or country, name it.
+    validations:
+      required: true
+  - type: input
+    id: closes
+    attributes:
+      label: If it is a window to act, when does it close?
+      placeholder: YYYY-MM-DD

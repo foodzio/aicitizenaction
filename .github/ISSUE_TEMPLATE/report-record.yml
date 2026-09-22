@@ -1,0 +1,33 @@
+name: Something wrong with a record
+description: A dead link, a person who has left a post, or a fact that is out of date. Takes a minute.
+labels: [record-report]
+body:
+  - type: markdown
+    attributes:
+      value: Thank you. Reports like this are the most useful contribution anyone makes to this project.
+  - type: input
+    id: record
+    attributes:
+      label: Which record?
+      description: The page address on the site, or the record id (for example `us-senate-committee-commerce-2`).
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong?
+      options:
+        - A link does not work
+        - A named person is no longer in the role
+        - A fact is out of date or wrong
+        - The body cannot actually do what the record says
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: What did you see?
+      description: If you know the correct information, include where you found it — a link to the institution's own page is best.
+    validations:
+      required: true

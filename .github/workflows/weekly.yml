@@ -1,0 +1,38 @@
+# Weekly: link check of the whole tree, with the two-consecutive-failures rule.
+# A confirmed failure opens one issue, naming the owners of the record from CODEOWNERS.
+name: Weekly
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Restore previous link-check state
+        uses: actions/cache/restore@v4
+        with:
+          path: .linkcheck
+          key: linkcheck-state-${{ github.run_id }}
+          restore-keys: linkcheck-state-
+      - run: mkdir -p .linkcheck
+      - name: Check every URL
+        run: node scripts/check-links.mjs --state .linkcheck/state.json --out .linkcheck/out.json --summary "$GITHUB_STEP_SUMMARY"
+      - name: Save link-check state
+        uses: actions/cache/save@v4
+        with:
+          path: .linkcheck
+          key: linkcheck-state-${{ github.run_id }}
+      - name: Open issues for confirmed failures
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/file-link-issues.mjs .linkcheck/out.json

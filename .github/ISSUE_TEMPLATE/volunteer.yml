@@ -1,0 +1,28 @@
+name: Volunteer for an area
+description: Look after a country, a subject, a language, or the Resources collection.
+labels: [volunteer]
+body:
+  - type: markdown
+    attributes:
+      value: A handle is enough — you never need to give your real name. See CONTRIBUTING.md for what each role involves.
+  - type: dropdown
+    id: role
+    attributes:
+      label: What would you like to look after?
+      options: [A country or region, A subject across all countries, A language (translation), The Resources collection (editor)]
+    validations:
+      required: true
+  - type: input
+    id: area
+    attributes:
+      label: Which one?
+      placeholder: e.g. Ireland · incident reporting channels · Portuguese
+    validations:
+      required: true
+  - type: textarea
+    id: conflicts
+    attributes:
+      label: Conflicts of interest
+      description: Do you work for, or have ties to, any organisation listed on the site? Declaring it is expected and does not disqualify you; you just will not review that organisation's record.
+    validations:
+      required: true

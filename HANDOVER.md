@@ -30,7 +30,7 @@ Tracked in git and committed with every step.
 | A — Validate with five users | blocked | Needs owner answers to brief Q1–4 and five real participants. A testable path prototype can still be built (see phase 3b) |
 | 1 — Schemas and migration | **done** | 423 records, all counts preserved, 22 tests pass |
 | 1b — Routing research | not started | Next after phase 2 scaffolding; drafted values must be marked `routing_review: drafted` |
-| 2 — CI checks, CODEOWNERS | not started | |
+| 2 — CI checks, CODEOWNERS | **done** (local) | Workflows written, not run on GitHub (nothing pushed). GitHub settings documented in `docs/github-setup.md`, not applied |
 | 3a — Reference site | not started | Open decision 6 (completion counting) was meant to be decided first — see judgement calls |
 | 3b — Door, path, draft | not started | Blocked on phase A findings and 1b routing for the real thing |
 | 4 — Resources | not started | |
@@ -47,9 +47,23 @@ Tracked in git and committed with every step.
 4. **Duplicates reported, not merged** — 40 suspected pairs in `docs/migration-report.md`, as the plan requires human confirmation. The site will show both until merged.
 5. **`meta.unsourced`** allowed for the 2 records where research found no URL at all, instead of inventing a source. Validator warns; routing must never recommend them.
 6. **Enum checks live in `scripts/validate.mjs`**, reading `schema/vocab/`, not duplicated inside the JSON Schemas. One source of truth per list; the Decap CMS (phase 5b) will need enums generated into its config.
+8. **Own link checker instead of lychee** (`scripts/check-links.mjs`): the plan's two-consecutive-failures rule, unknown-vs-broken classification and owner routing need state. TLS-chain and HTTP/2 client errors count as unknown.
+9. **CODEOWNERS names `@sinscrit`**, not teams: the repo belongs to a personal account and GitHub teams need an organisation. Team lines are left commented.
+10. **Intake bot auto-merge is conditional on a secret `INTAKE_TOKEN`** that is not created: personal repos cannot exempt the Actions bot from reviews. Decision for the owner (`docs/github-setup.md` §3).
+11. **Nothing pushed, no GitHub settings changed** — outward-facing; left for the owner.
 7. **Seat prose kept under original field names** (`ai_jurisdiction`, `business`, …) rather than renamed to `remit`, to avoid changing meaning during migration.
 
 ## Implementation log (newest first)
+
+### 2026-09-22T23:51:33Z — Phase 2: checks that let strangers contribute — done locally
+
+- `scripts/check-links.mjs`: collects every URL in content, HEAD→GET, retries with backoff, classifies ok / moved / unknown / broken, two-consecutive-failures state, `--files` PR mode fails on broken only, exclusion list `scripts/linkcheck-exclude.yml` (empty).
+- `scripts/file-link-issues.mjs` + `scripts/lib/codeowners.mjs`: one issue per confirmed failure, owners from CODEOWNERS, skips if already open.
+- `.github/workflows/check.yml` (validate, test, build when Astro exists, link-check changed files), `weekly.yml` (full check with cached state, issues). Not yet run on GitHub.
+- `CODEOWNERS`, issue forms (report a record, suggest a resource, volunteer), PR checklist with the editorial rules.
+- `docs/github-setup.md`: push, branch protection (1 approval, owner bypass), intake-bot options, labels, Discussions — **not applied**.
+- Trial run over 784 unique URLs: 11 × 404 and 1 unresolvable domain (leads, listed in `docs/link-check-trial.md`), 111 unknown (100 × 403 from parliament and government sites, 11 timeouts) — none would open an issue; 12 TLS-chain/HTTP2 client errors reclassified as unknown after the trial. 26 cross-host redirects listed for review.
+- Tests: `check-links.test.mjs` (local HTTP server: 404/403/429/500/challenge/HEAD-refusal/redirect; consecutive rule; PR mode), `codeowners.test.mjs`. 27 tests pass.
 
 ### 2026-09-22T23:46Z — Phase 1: schemas and migration — done
 
@@ -97,7 +111,7 @@ re-aimed at the alarmed non-expert rather than someone with evidence.
 ## How to resume
 
 1. `npm install && npm run check` — must show 0 errors and all tests passing.
-2. Next step: **phase 2** (CI workflows, lychee config, CODEOWNERS, issue templates), then **phase 1b** routing research drafts, then **phase 3a** site.
+2. Next step: **phase 3a** (Astro site, reference layer), then **phase 1b** routing research drafts, **phase 4** Resources, **phase 5a** volunteer tooling, **phase 6** i18n.
 3. Never edit `input/`. Never deploy without asking the owner.
 
 Reference prototypes (published, private):
@@ -106,4 +120,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-22T23:46:14Z
+Last modified: 2026-09-22T23:51:33Z
