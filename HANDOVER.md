@@ -70,6 +70,12 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-23T01:19:58Z — End-to-end scenarios (owner: "no need for review at the moment")
+
+- Owner instruction: skip human reviews for now; write test scenarios, have a subagent run them, then build the site.
+- `docs/test-scenarios.md`: 41 browser scenarios in 7 groups (door, path/law, other outcomes, directory/records, Resources, language, hygiene).
+- Site built (897 pages); a QA subagent is running the scenarios against `npx serve dist -l 4321` via Playwright MCP, results to /tmp/claude-503/scenario-results.md. **Next:** fix failures, rebuild, record results in `docs/test-results.md`.
+
 ### 2026-09-23T00:19:54Z — Phase 1b: routing drafts applied
 
 - Applied `/tmp/claude-503/drafts-*.json` with `scripts/apply-routing-drafts.mjs`: 222 of 250 bodies; 415 topics, 31 excluded topics, 407 powers; 0 values dropped by the quote check. 28 bodies got nothing (portals, methods, bodies not yet constituted, policy-only ministries) — they keep `meta.needs_research`.
@@ -209,4 +215,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T00:20:17Z
+Last modified: 2026-09-23T01:19:58Z
