@@ -36,17 +36,20 @@ jobs:
         run: node scripts/ingest-resources.mjs --summary intake.md --out intake.json
       - name: Validate
         run: npm run validate
-      - name: Commit and open or update the pull request
+      - name: Commit, push, and open or update the pull request
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if [ -z "$(git status --porcelain content/resources/media)" ]; then echo "Nothing new."; exit 0; fi
           git config user.name "resource-intake[bot]"
           git config user.email "resource-intake@users.noreply.github.com"
-          git add content/resources/media
-          git commit -m "Resource intake $(date -u +%Y-%m-%dT%H:%MZ)"
+          if [ -n "$(git status --porcelain content/resources/media)" ]; then
+            git add content/resources/media
+            git commit -m "Resource intake $(date -u +%Y-%m-%dT%H:%MZ)"
+          fi
+          # Nothing to review if the intake branch has nothing main lacks.
+          if [ "$(git rev-list --count origin/main..HEAD)" = "0" ]; then echo "Nothing new."; exit 0; fi
           git push -u origin resource-intake --force-with-lease
-          if gh pr view resource-intake --json number >/dev/null 2>&1; then
+          if [ "$(gh pr list --head resource-intake --state open --json number --jq length)" != "0" ]; then
             gh pr comment resource-intake --body-file intake.md
           else
             gh pr create --head resource-intake --base main --title "Resource intake" --body-file intake.md
