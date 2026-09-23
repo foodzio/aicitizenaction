@@ -1,0 +1,15 @@
+id: mit-technology-review-ai-us-spent-billions-border-surveillance
+facts:
+  source: mit-technology-review-ai
+  url: https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/
+  url_hash: 8eaa00e06d87
+  kind: article
+  language: en
+  published_at: 2026-09-21
+  author: James O'Donnell, Eileen Guo
+strings:
+  title: The US spent billions on border surveillance. Why can’t it catch people before they die?
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

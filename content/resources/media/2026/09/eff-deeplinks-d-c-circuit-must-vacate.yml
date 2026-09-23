@@ -1,0 +1,15 @@
+id: eff-deeplinks-d-c-circuit-must-vacate
+facts:
+  source: eff-deeplinks
+  url: https://www.eff.org/deeplinks/2026/09/dc-circuit-must-vacate-drone-flight-restriction-criminalized-recording-immigration
+  url_hash: bd7f3b1aba4e
+  kind: article
+  language: en
+  published_at: 2026-09-21
+  author: Sophia Cope
+strings:
+  title: D.C. Circuit Must Vacate a Drone Flight Restriction That Criminalized Recording Immigration Agents
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

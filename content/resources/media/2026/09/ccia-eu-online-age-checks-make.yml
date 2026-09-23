@@ -1,0 +1,25 @@
+id: ccia-eu-online-age-checks-make
+facts:
+  source: ccia
+  url: https://ccianet.org/news/2026/09/eu-online-age-checks-make-privacy-trade-offs-unavoidable-ccia-europe-warns/
+  url_hash: 9b27a8a63448
+  kind: article
+  language: en
+  published_at: 2026-09-17
+  author: Kasper Peters
+  topics:
+    - children
+    - privacy
+  bodies:
+    - eu-european-parliament-committee-internal-market-consumer-2
+  action:
+    outcome: law
+    where: eu
+strings:
+  title: EU Online Age Checks Make Privacy Trade-Offs Unavoidable, CCIA Europe Warns
+  prompt: An industry association argues that EU age checks force a trade-off between protecting children and protecting privacy. Which EU committee weighs that trade-off — and where do you stand?
+meta:
+  status: published
+  added_by: ingest
+  added_on: 2026-09-23
+  reviewed_by: "draft: selected and prompted by Claude, awaiting an editor"

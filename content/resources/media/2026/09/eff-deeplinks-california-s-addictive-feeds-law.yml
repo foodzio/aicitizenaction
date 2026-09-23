@@ -1,0 +1,15 @@
+id: eff-deeplinks-california-s-addictive-feeds-law
+facts:
+  source: eff-deeplinks
+  url: https://www.eff.org/deeplinks/2026/09/californias-addictive-feeds-law-violates-teens-first-amendment-rights
+  url_hash: c7f83d764292
+  kind: article
+  language: en
+  published_at: 2026-09-17
+  author: Aaron Mackey
+strings:
+  title: California’s “Addictive Feeds” Law Violates Teens’ First Amendment Rights
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

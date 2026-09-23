@@ -1,0 +1,22 @@
+# Feed fetched and confirmed as RSS on 2026-09-23. auto_publish stays false until a trial period passes with no rejections.
+id: ccia
+geo:
+  country: us
+facts:
+  kind: article
+  site_url: https://ccianet.org/
+  feed_url: https://ccianet.org/feed/
+  language: en
+  perspective: industry-lobby
+  auto_publish: false
+  enabled: true
+strings:
+  name: Computer & Communications Industry Association (CCIA)
+  about: Technology industry trade association; its policy positions, in its own words.
+meta:
+  verified_on: 2026-09-23
+  review_by: 2027-03-22
+  added_by: "@sinscrit"
+  sources:
+    - url: https://ccianet.org/feed/
+      checked: 2026-09-23

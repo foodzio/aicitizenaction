@@ -114,7 +114,10 @@ export function validateAll({ now = today() } = {}) {
       }
       if (r._section === 'resources/media') {
         if (f.source && !known.sources.has(f.source)) err(p, `source: unknown source "${f.source}"`);
+        const ym = (f.published_at ?? '').slice(0, 7).replace('-', '/');
+        if (ym && !p.startsWith(`content/resources/media/${ym}/`)) err(p, `media items live in content/resources/media/${ym}/ (by published_at)`);
       }
+
       if (r._section === 'resources/sources') inVocab(p, 'perspectives', f.perspective, 'perspective');
       if (r._section === 'resources/windows' && f.opens_on && f.closes_on && f.closes_on < f.opens_on) err(p, 'closes_on is before opens_on');
       if (['resources/explainers', 'resources/windows'].includes(r._section)) {

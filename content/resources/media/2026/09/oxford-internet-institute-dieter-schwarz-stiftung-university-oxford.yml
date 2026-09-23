@@ -1,0 +1,15 @@
+id: oxford-internet-institute-dieter-schwarz-stiftung-university-oxford
+facts:
+  source: oxford-internet-institute
+  url: https://www.oii.ox.ac.uk/dieter-schwarz-stiftung-and-the-university-of-oxford-renew-partnership/
+  url_hash: 6194b6ef8c3e
+  kind: article
+  language: en
+  published_at: 2026-09-18
+  author: Sara Spinks
+strings:
+  title: Dieter Schwarz Stiftung and the University of Oxford renew partnership
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

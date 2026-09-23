@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aicitizenaction/schema/media.schema.json",
+  "title": "Media item",
+  "description": "Someone else's article, video, podcast or report: title, link, publisher, date, language, our prompt. Never the body, a transcript, an embed or a hotlinked image. Lives in content/resources/media/<yyyy>/<mm>/<id>.yml.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "facts", "strings", "meta"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "facts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "url", "kind", "language", "published_at"],
+      "properties": {
+        "source": { "$ref": "common.schema.json#/$defs/id" },
+        "url": { "$ref": "common.schema.json#/$defs/url" },
+        "url_hash": { "type": "string", "pattern": "^[0-9a-f]{12}$" },
+        "kind": { "enum": ["article", "video", "podcast", "report", "newsletter"] },
+        "language": { "type": "string", "pattern": "^[a-z]{2,3}$" },
+        "published_at": { "$ref": "common.schema.json#/$defs/date" },
+        "author": { "type": "string" },
+        "topics": { "$ref": "common.schema.json#/$defs/vocabList" },
+        "bodies": { "$ref": "common.schema.json#/$defs/vocabList" },
+        "channels": { "$ref": "common.schema.json#/$defs/vocabList" },
+        "orgs": { "$ref": "common.schema.json#/$defs/vocabList" },
+        "action": { "$ref": "#/$defs/action" }
+      }
+    },
+    "strings": {
+      "type": "object",
+      "required": ["title"],
+      "additionalProperties": false,
+      "properties": {
+        "title": { "type": "string", "maxLength": 300, "description": "As published, in its original language; not translated" },
+        "prompt": { "type": "string", "description": "Our neutral question that turns the story into a decision" }
+      }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "added_by", "added_on"],
+      "properties": {
+        "status": { "enum": ["pending", "published", "rejected"] },
+        "featured": { "type": "boolean" },
+        "added_by": { "type": "string" },
+        "added_on": { "$ref": "common.schema.json#/$defs/date" },
+        "reviewed_by": { "type": "string" }
+      }
+    }
+  },
+  "$defs": {
+    "action": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["outcome"],
+      "properties": {
+        "outcome": { "enum": ["law", "harm", "fix", "record", "join"] },
+        "where": { "type": "string", "pattern": "^[a-z]{2}(/[a-z0-9-]+)?$" }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+id: mit-technology-review-ai-could-ai-really-kill-us
+facts:
+  source: mit-technology-review-ai
+  url: https://www.technologyreview.com/2026/09/18/1144435/could-ai-really-kill-us-all-your-questions-answered/
+  url_hash: fc4c7ba9411e
+  kind: article
+  language: en
+  published_at: 2026-09-18
+  author: Will Douglas Heaven, Grace Huckins
+  topics:
+    - frontier-ai
+  action:
+    outcome: record
+strings:
+  title: Could AI really kill us all? Your questions, answered.
+  prompt: Experts disagree sharply about the most extreme AI risks. Whatever you conclude, an open consultation is a place where your view is published and read.
+meta:
+  status: published
+  added_by: ingest
+  added_on: 2026-09-23
+  reviewed_by: "draft: selected and prompted by Claude, awaiting an editor"

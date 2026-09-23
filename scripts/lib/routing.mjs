@@ -10,9 +10,21 @@ const CONTACT_TYPES = ['submission', 'consultation', 'evidence', 'form', 'email'
   'reporting', 'whistleblowing', 'docket', 'petition', 'bounty', 'feedback', 'action', 'program'];
 const INPUT_RANK = { open: 0, limited: 1, none: 2 };
 
+// Some routes record a confirmed absence in `value` ("none published", "not accepted"),
+// and a few hold fragments. Only a URL, an email address, or a phone number / postal address
+// can be offered to a user as a way to reach someone.
+const ABSENCE = /^(none|n\/a|no |not |varies|\(an address)|not (yet |separately )?published|none (published|identified)/i;
+export function isUsableValue(v) {
+  const s = String(v ?? '').trim();
+  if (!s || ABSENCE.test(s)) return false;
+  if (/^https?:\/\/\S+$/i.test(s)) return true;
+  if (/^[^\s@/]+@[^\s@]+\.[a-z]{2,}$/i.test(s)) return true;
+  return /\d{3}/.test(s) && /[\s-]/.test(s);             // phone number or postal address
+}
+
 /** The route a user should use to reach this record, or null. Verified routes first. */
 export function contactRoute(record) {
-  const routes = (record.facts?.routes ?? []).filter(r => r.value && CONTACT_TYPES.includes(r.type));
+  const routes = (record.facts?.routes ?? []).filter(r => isUsableValue(r.value) && CONTACT_TYPES.includes(r.type));
   const rank = r => (r.verified === true ? 0 : r.verified === null ? 1 : 2) * 100 + CONTACT_TYPES.indexOf(r.type);
   return routes.sort((a, b) => rank(a) - rank(b))[0] ?? null;
 }

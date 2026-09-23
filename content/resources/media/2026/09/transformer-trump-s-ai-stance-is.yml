@@ -1,0 +1,15 @@
+id: transformer-trump-s-ai-stance-is
+facts:
+  source: transformer
+  url: https://www.transformernews.ai/p/trump-ai-stance-is-politically-toxic
+  url_hash: ed1d1da19527
+  kind: newsletter
+  language: en
+  published_at: 2026-09-18
+  author: Shakeel Hashim
+strings:
+  title: Trump’s AI stance is politically toxic
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

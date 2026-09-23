@@ -72,3 +72,12 @@ test('diversify interleaves groups in rank order', () => {
   const r = (id, p) => ({ id, facts: { perspective: p } });
   assert.deepEqual(diversify([r(1, 'a'), r(2, 'a'), r(3, 'b')], 'perspective').map(x => x.id), [1, 3, 2]);
 });
+
+test('a recorded absence is never offered as an address', async () => {
+  const { isUsableValue } = await import('../scripts/lib/routing.mjs');
+  for (const v of ['none published', 'not published on the committee\'s public pages', 'not accepted', 'varies by Member State', 'midasproject.10', '/cms/pub/x.htm', ''])
+    assert.equal(isUsableValue(v), false, v);
+  for (const v of ['https://x.org/a', 'usersafety@anthropic.com', '1-877-FTC-HELP (1-877-382-4357)', '2321 Rayburn House Office Building, Washington DC 20515'])
+    assert.equal(isUsableValue(v), true, v);
+  for (const o of oc.outcomes) for (const c of ['us', 'gb', 'eu', '']) for (const x of route(o, { country: c }, records, opts).recipients) assert.ok(isUsableValue(contactRoute(x).value), x.id);
+});

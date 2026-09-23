@@ -1,0 +1,15 @@
+id: transformer-how-respond-ai-disaster
+facts:
+  source: transformer
+  url: https://www.transformernews.ai/p/how-to-respond-to-an-ai-disaster
+  url_hash: 3770318276a8
+  kind: newsletter
+  language: en
+  published_at: 2026-09-22
+  author: Duncan Weldon
+strings:
+  title: How to respond to an AI disaster
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

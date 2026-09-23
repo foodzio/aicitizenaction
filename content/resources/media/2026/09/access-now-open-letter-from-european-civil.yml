@@ -1,0 +1,15 @@
+id: access-now-open-letter-from-european-civil
+facts:
+  source: access-now
+  url: https://www.accessnow.org/press-release/encryption-and-privacy-threats-in-canadas-bill-c-22/
+  url_hash: 55754e099c0f
+  kind: article
+  language: en
+  published_at: 2026-09-14
+  author: Marcel Kolaja
+strings:
+  title: Open letter from European civil society organisations on encryption and privacy threats in Canada’s Bill C-22
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

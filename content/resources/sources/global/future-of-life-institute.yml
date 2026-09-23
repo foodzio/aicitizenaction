@@ -1,0 +1,22 @@
+# Feed fetched and confirmed as RSS on 2026-09-23. auto_publish stays false until a trial period passes with no rejections.
+id: future-of-life-institute
+geo:
+  country: global
+facts:
+  kind: article
+  site_url: https://futureoflife.org/
+  feed_url: https://futureoflife.org/feed/
+  language: en
+  perspective: safety-advocacy
+  auto_publish: false
+  enabled: true
+strings:
+  name: Future of Life Institute
+  about: Non-profit campaigning on risks from advanced AI.
+meta:
+  verified_on: 2026-09-23
+  review_by: 2027-03-22
+  added_by: "@sinscrit"
+  sources:
+    - url: https://futureoflife.org/feed/
+      checked: 2026-09-23

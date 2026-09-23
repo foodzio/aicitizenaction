@@ -1,0 +1,14 @@
+id: algorithmwatch-statement-2
+facts:
+  source: algorithmwatch
+  url: https://algorithmwatch.org/de/statement-innenausschuss-biometrische-massenerkennungssysteme/
+  url_hash: 63127652cdd4
+  kind: article
+  language: en
+  published_at: 2026-09-18
+strings:
+  title: "Statement: AlgorithmWatch im Innenausschuss zu KI-basierter Überwachung: Biometrische Massenerkennungssysteme müssen verboten werden!"
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

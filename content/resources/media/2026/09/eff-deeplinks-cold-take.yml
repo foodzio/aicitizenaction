@@ -1,0 +1,15 @@
+id: eff-deeplinks-cold-take
+facts:
+  source: eff-deeplinks
+  url: https://www.eff.org/deeplinks/2026/09/cold-take-amazons-new-encryption-method-still-doesnt-deliver-real-privacy
+  url_hash: 3a5aa1eedd6d
+  kind: article
+  language: en
+  published_at: 2026-09-11
+  author: Erica Portnoy
+strings:
+  title: "Cold TAKE: Amazon's New Encryption Method Still Doesn't Deliver Real Privacy"
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

@@ -1,0 +1,15 @@
+id: lawfare-bootstrapping-frontier-ai-governance-by
+facts:
+  source: lawfare
+  url: https://www.lawfaremedia.org/article/bootstrapping-frontier-ai-governance-by-mutualizing-risk
+  url_hash: 7cd408bd684e
+  kind: article
+  language: en
+  published_at: 2026-09-22
+  author: Cristian Trout, Rune Kvist, Rajiv Dattani
+strings:
+  title: Bootstrapping Frontier AI Governance by Mutualizing Risk
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

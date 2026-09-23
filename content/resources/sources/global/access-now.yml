@@ -1,0 +1,22 @@
+# Feed fetched and confirmed as RSS on 2026-09-23. auto_publish stays false until a trial period passes with no rejections.
+id: access-now
+geo:
+  country: global
+facts:
+  kind: article
+  site_url: https://www.accessnow.org/
+  feed_url: https://www.accessnow.org/feed/
+  language: en
+  perspective: civil-liberties
+  auto_publish: false
+  enabled: true
+strings:
+  name: Access Now
+  about: Digital rights organisation working internationally.
+meta:
+  verified_on: 2026-09-23
+  review_by: 2027-03-22
+  added_by: "@sinscrit"
+  sources:
+    - url: https://www.accessnow.org/feed/
+      checked: 2026-09-23

@@ -63,3 +63,21 @@ test('the data is published: /api/*.json match the content', () => {
   }
   assert.ok(JSON.parse(page('version.json')).version);
 });
+
+test('Resources: only published items get pages; the door has no Resources link', async () => {
+  const { loadContent } = await import('../scripts/lib/content.mjs');
+  const media = loadContent('resources/media');
+  for (const m of media) {
+    const built = existsSync(join(out, 'en/resources/media', m.id, 'index.html'));
+    assert.equal(built, m.meta.status === 'published', `${m.id} (${m.meta.status})`);
+  }
+  const door = page('en/index.html').split('<main')[0] + page('en/index.html').split('<main')[1];
+  assert.ok(!door.includes('/en/resources/'), 'door links to Resources');
+});
+
+test('Resources: every published item and explainer page leads into the path', () => {
+  const idx = page('en/resources/index.html');
+  for (const m of [...idx.matchAll(/href="\/en\/resources\/(media|explainers)\/([^/"]+)\/"/g)]) {
+    assert.match(page(`en/resources/${m[1]}/${m[2]}/index.html`), /href="\/en\/(start\/[a-z]+\/[^"]*|)"[^>]*class="btn"|class="btn" href="\/en\/(start\/|)/);
+  }
+});

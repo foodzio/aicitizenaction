@@ -1,0 +1,14 @@
+id: google-deepmind-blog-introducing-gemini-3-8-live
+facts:
+  source: google-deepmind-blog
+  url: https://deepmind.google/blog/introducing-gemini-3-8-live-and-3-8-live-extended-thinking/
+  url_hash: 6aae488b1bb6
+  kind: article
+  language: en
+  published_at: 2026-09-15
+strings:
+  title: Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

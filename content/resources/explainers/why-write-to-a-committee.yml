@@ -1,0 +1,29 @@
+id: why-write-to-a-committee
+facts:
+  topics: [frontier-ai]
+  bodies: [us-senate-committee-commerce-2]
+  action:
+    outcome: law
+  reading_minutes: 3
+strings:
+  title: Why write to a committee, not only to your own representative
+  summary: Legislatures divide their work by committee. A message to the committee that hears AI bills reaches the people who decide what gets heard.
+  body: |
+    Most tools that help you contact a legislature ask for your postcode and send your message to whoever represents you. That is the right instrument when you want to be counted on a vote. It is often the wrong one for AI, because your own representative usually has no say over which AI bills are heard at all.
+
+    Legislatures divide their work by committee. Within the committees that hold AI, a few seats decide what moves: the chair, the ranking or minority member, and — in the European Parliament and Brazil — the rapporteur who drafts the text. The chair decides which bills get hearings and markups.
+
+    Committees also have boundaries. In the US Senate, for example, the Commerce, Science, and Transportation Committee holds frontier AI regulation, the FTC, NIST and its Center for AI Standards and Innovation — but copyright and liability sit with Judiciary, federal agencies' own use of AI with Homeland Security and Governmental Affairs, and military AI with Armed Services. Sending a good message to a committee without jurisdiction is the most common way a well-meant effort goes nowhere.
+
+    Many committees accept messages from anyone, not only from constituents. Staff log positions and pass summaries to the chair. A short message in your own words is more likely to be read than a long one, and far more likely than an identical form letter.
+
+    The guided path on this site works out which committee holds your concern, shows who holds its seats and when we last checked, and helps you write something short in your own words.
+meta:
+  verified_on: 2026-09-23
+  review_by: 2027-09-23
+  status: draft
+  sources:
+    - url: https://www.commerce.senate.gov/about/members
+      checked: 2026-09-22
+    - url: https://www.commerce.senate.gov/
+      checked: 2026-09-22

@@ -1,0 +1,36 @@
+---
+// One media item: title in its original language, publisher and perspective, our neutral
+// prompt, and a way to act. The article itself stays on the publisher's site.
+import Base from '../../../../../layouts/Base.astro';
+import { ui, languages } from '../../../../../lib/data.mjs';
+import { resources, handoff, related, topicLabel, perspectiveLabel } from '../../../../../lib/resources.mjs';
+
+export function getStaticPaths() {
+  const { media } = resources();
+  return languages().flatMap(l => media.map(m => ({ params: { lang: l.code, id: m.id } })));
+}
+const { lang, id } = Astro.params;
+const t = ui(lang);
+const { media, sourceById } = resources();
+const m = media.find(x => x.id === id);
+const s = sourceById.get(m.facts.source);
+const rel = related(lang, m.facts);
+const draft = String(m.meta.reviewed_by ?? '').startsWith('draft');
+---
+<Base lang={lang} title={m.strings.title} current="resources" draft={draft}>
+  <article class="narrow">
+    <p class="meta-line"><a href={`/${lang}/resources/`}>{t('resources.title')}</a></p>
+    <h1 lang={m.facts.language}>{m.strings.title}</h1>
+    <dl class="facts">
+      <dt>{t('resources.read_at')}</dt><dd>{s?.strings.name}</dd>
+      <dt>{t('resources.perspective')}</dt><dd>{perspectiveLabel(s?.facts.perspective)}</dd>
+      <dt>{t('resources.kind')}</dt><dd>{t(`resources.kinds.${m.facts.kind}`)} · {m.facts.published_at}</dd>
+      {m.facts.topics?.length > 0 && <><dt>{t('resources.topic')}</dt><dd>{m.facts.topics.map(topicLabel).join(', ')}</dd></>}
+    </dl>
+    <p><a class="btn secondary" href={m.facts.url} rel="noopener">{t('resources.read_at')} {s?.strings.name} ↗</a></p>
+    <h2>{t('resources.act')}</h2>
+    <p class="lede">{m.strings.prompt ?? t('resources.default_prompt')}</p>
+    <p><a class="btn" href={handoff(lang, m.facts.action)}>{t('resources.newcomer_link')} →</a></p>
+    {rel.length > 0 && (<><h3>{t('resources.related')}</h3><ul>{rel.map(r => <li><a href={r.url}>{r.name}</a></li>)}</ul></>)}
+  </article>
+</Base>

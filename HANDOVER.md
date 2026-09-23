@@ -33,7 +33,7 @@ Tracked in git and committed with every step.
 | 2 — CI checks, CODEOWNERS | **done** (local) | Workflows written, not run on GitHub (nothing pushed). GitHub settings documented in `docs/github-setup.md`, not applied |
 | 3a — Reference site | **done** | Directory, record pages, about, data API, version endpoint. Measurement hook built in, sends nothing (decision 6 still open) |
 | 3b — Door, path, draft | **built as a testable first version** | Door, 4-step path with URL state, draft with own words, insider stop, honest floor. Usable for phase A testing; revise after phase A and 1b |
-| 4 — Resources | not started | |
+| 4 — Resources | **done** | 15 sources, 99 ingested items (8 published as drafts, 91 pending), 2 windows, 2 explainers, pages, intake workflow (not run on GitHub) |
 | 5a — Volunteer system (git) | not started | |
 | 5b — Web CMS | deferred | Until the first non-git volunteer |
 | 6 — Second language | not started | |
@@ -58,9 +58,23 @@ Tracked in git and committed with every step.
 15. **Open decision 6 handled as a hook, not a choice**: `site/lib/measure.js` fires `aica:measure` events (path_step, recipient_chosen, draft_copied, draft_downloaded, path_done) and sends nothing. The owner picks the counting method; it attaches to the event.
 16. **Phases 3a and 3b built together**: the path is needed for phase A testing, and the door is the only acceptable home page (the brief forbids landing newcomers on the reference).
 17. **"How it works", insider stop and interface copy written by me** (drafts, flagged on the page with a notice).
+19. **Eight media items published by me as an editor draft** (`meta.reviewed_by: "draft: …"`), spread across six perspectives, each with a neutral prompt and an action — so the collection can be seen and tested. An editor should review, re-prompt or reject them. The other 91 ingested items are `pending` (hidden).
+20. **Two windows and two explainers written by me from verified research records** (Colorado AG ADMT/chatbot rules, closes 2026-10-26; FDA-2026-N-7874, closes 2026-10-19). Explainers are `status: draft`.
+21. **Recorded absences are not addresses**: ~25 routes hold "none published" etc. in `value` (with `verified: true` meaning a verified absence). Research data left unchanged; `isUsableValue()` in routing keeps them out of the path.
+22. **Resources link hidden on the door** (the plan: the front door never links to Resources); visible in the nav everywhere else.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-23T00:08:13Z — Phase 4: Resources
+
+- `schema/vocab/topics.yml` (draft, 23 topics — to be finalised in 1b); schemas `source`, `media`, `explainer`, `window`.
+- `content/resources/sources/`: 15 sources, every feed fetched and confirmed as RSS/Atom on 2026-09-23, homepages checked: journalism 3, civil liberties 4, safety advocacy 2, industry 2, industry lobby 1, government 1, academic 2. All `auto_publish: false`.
+- `scripts/ingest-resources.mjs`: RSS/Atom parser (adapted from stockspanic), metadata only, URL-hash dedupe (ignores query strings), per-item language guess, per-feed failure isolation, balance summary. First run: 99 items, 0 failures.
+- `.github/workflows/ingest.yml`: twice daily, rolling `resource-intake` branch + PR, auto-merge only with `INTAKE_TOKEN` and all items auto-publish.
+- Pages: `/en/resources/` (open windows, explainers, media with topic/type/language filters; closed windows hidden client-side too), item pages with prompt + path handoff, windows archive.
+- Validator: media must live in `media/<yyyy>/<mm>/` by `published_at`. Routing: `isUsableValue()`.
+- Tests: `resources.test.mjs` (parser, ingest end-to-end against a local feed server incl. failing feed and dedupe, validation rules), site tests (only published items built, door has no Resources link, every item leads into the path). 51 pass.
 
 ### 2026-09-23T00:00:46Z — Phases 3a + 3b: the site
 
@@ -135,7 +149,7 @@ re-aimed at the alarmed non-expert rather than someone with evidence.
 ## How to resume
 
 1. `npm install && npm run check` — must show 0 errors and all tests passing.
-2. Next step: **phase 4** Resources, then **phase 5a** volunteer tooling, **phase 6** i18n, **phase 1b** routing research drafts.
+2. Next step: **phase 5a** volunteer tooling (CONTRIBUTING, charter, freshness page incl. perspective balance, inactivity job), then **phase 6** i18n, **phase 1b** routing research drafts.
 3. Never edit `input/`. Never deploy without asking the owner.
 
 Reference prototypes (published, private):
@@ -144,4 +158,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T00:00:46Z
+Last modified: 2026-09-23T00:08:13Z

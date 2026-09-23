@@ -1,0 +1,15 @@
+id: nist-news-nist-developed-quantum-sensors-improve
+facts:
+  source: nist-news
+  url: https://www.nist.gov/news-events/news/2026/09/nist-developed-quantum-sensors-improve-nuclear-monitoring
+  url_hash: 60f024e81c4b
+  kind: article
+  language: en
+  published_at: 2026-09-10
+  author: Sarah Henderson
+strings:
+  title: NIST-Developed Quantum Sensors Improve Nuclear Monitoring
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

@@ -1,0 +1,15 @@
+id: eff-deeplinks-eu-kids-act-won-t
+facts:
+  source: eff-deeplinks
+  url: https://www.eff.org/deeplinks/2026/09/eu-kids-act-wont-keep-internet-accountable-and-trustworthy
+  url_hash: d57a89878814
+  kind: article
+  language: en
+  published_at: 2026-09-21
+  author: Christoph Schmon
+strings:
+  title: EU Kids Act Won't Keep the Internet Accountable and Trustworthy
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

@@ -1,0 +1,15 @@
+id: mit-technology-review-ai-roundtables
+facts:
+  source: mit-technology-review-ai
+  url: https://www.technologyreview.com/2026/09/22/1144890/roundtables-the-deadly-failures-of-the-virtual-border-wall/
+  url_hash: 319f546beaea
+  kind: article
+  language: en
+  published_at: 2026-09-22
+  author: MIT Technology Review
+strings:
+  title: "Roundtables: The Deadly Failures of The Virtual Border Wall"
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

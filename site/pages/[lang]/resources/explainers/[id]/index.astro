@@ -1,0 +1,27 @@
+---
+import Base from '../../../../../layouts/Base.astro';
+import { ui, languages } from '../../../../../lib/data.mjs';
+import { resources, handoff, related } from '../../../../../lib/resources.mjs';
+
+export function getStaticPaths() {
+  const { explainers } = resources();
+  return languages().flatMap(l => explainers.map(e => ({ params: { lang: l.code, id: e.id } })));
+}
+const { lang, id } = Astro.params;
+const t = ui(lang);
+const e = resources().explainers.find(x => x.id === id);
+const rel = related(lang, e.facts);
+---
+<Base lang={lang} title={e.strings.title} current="resources" draft={e.meta.status === 'draft'}>
+  <article class="narrow">
+    <p class="meta-line"><a href={`/${lang}/resources/`}>{t('resources.title')}</a>{e.facts.reading_minutes && ` · ${e.facts.reading_minutes} ${t('resources.minutes')}`}</p>
+    <h1>{e.strings.title}</h1>
+    <p class="lede">{e.strings.summary}</p>
+    {e.strings.body.trim().split(/\n\n+/).map(p => <p>{p}</p>)}
+    <p><a class="btn" href={handoff(lang, e.facts.action)}>{t('resources.newcomer_link')} →</a></p>
+    {rel.length > 0 && (<><h3>{t('resources.related')}</h3><ul>{rel.map(r => <li><a href={r.url}>{r.name}</a></li>)}</ul></>)}
+    <h3>{t('resources.sources')}</h3>
+    <ul>{e.meta.sources.map(s => <li><a href={s.url} rel="noopener">{s.url}</a> <span class="meta-line">· {s.checked}</span></li>)}</ul>
+    <p class="meta-line">{t('record.last_checked')} {e.meta.verified_on}</p>
+  </article>
+</Base>

@@ -1,0 +1,15 @@
+id: nist-news-nist-awards-more-than-1
+facts:
+  source: nist-news
+  url: https://www.nist.gov/news-events/news/2026/09/nist-awards-more-17-million-support-cybersecurity-workforce-development
+  url_hash: f0ed36e6cfc8
+  kind: article
+  language: en
+  published_at: 2026-09-18
+  author: Sarah Henderson
+strings:
+  title: NIST Awards More Than $1.7 Million to Support Cybersecurity Workforce Development Across 8 States
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

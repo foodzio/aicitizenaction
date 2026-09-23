@@ -8,7 +8,7 @@ const { lang } = Astro.params;
 const t = ui(lang);
 const oc = data().guide('outcomes');
 ---
-<Base lang={lang} current="start" draft={oc.meta.status === 'draft'} description={t('site.tagline')}>
+<Base lang={lang} current="start" hideResources draft={oc.meta.status === 'draft'} description={t('site.tagline')}>
   <div class="narrow">
     <h1>{t('door.title')}</h1>
     <p class="lede">{t('door.lede')}</p>

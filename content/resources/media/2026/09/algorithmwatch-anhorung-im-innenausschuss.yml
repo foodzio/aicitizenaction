@@ -1,0 +1,15 @@
+id: algorithmwatch-anhorung-im-innenausschuss
+facts:
+  source: algorithmwatch
+  url: https://algorithmwatch.org/de/stellungnahme-ermittlungsbefugnisse-innenausschuss/
+  url_hash: 5c9473917962
+  kind: article
+  language: de
+  published_at: 2026-09-17
+  author: Pia Sombetzki
+strings:
+  title: "Anhörung im Innenausschuss: Stellungnahme zur geplanten Ausweitung digitaler Ermittlungsbefugnisse"
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

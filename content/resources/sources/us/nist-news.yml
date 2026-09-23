@@ -1,0 +1,22 @@
+# Feed fetched and confirmed as RSS on 2026-09-23. auto_publish stays false until a trial period passes with no rejections.
+id: nist-news
+geo:
+  country: us
+facts:
+  kind: article
+  site_url: https://www.nist.gov/news-events/news
+  feed_url: https://www.nist.gov/news-events/news/rss.xml
+  language: en
+  perspective: government
+  auto_publish: false
+  enabled: true
+strings:
+  name: NIST — News
+  about: US National Institute of Standards and Technology, home of the Center for AI Standards and Innovation.
+meta:
+  verified_on: 2026-09-23
+  review_by: 2027-03-22
+  added_by: "@sinscrit"
+  sources:
+    - url: https://www.nist.gov/news-events/news/rss.xml
+      checked: 2026-09-23

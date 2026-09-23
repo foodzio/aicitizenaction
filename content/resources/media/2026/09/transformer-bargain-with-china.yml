@@ -1,0 +1,15 @@
+id: transformer-bargain-with-china
+facts:
+  source: transformer
+  url: https://www.transformernews.ai/p/bargaining-with-china-us-needs-to-regulate-ai
+  url_hash: c9d43ca6f121
+  kind: newsletter
+  language: en
+  published_at: 2026-09-15
+  author: Paper Tiger by Julian Gewirtz
+strings:
+  title: To bargain with China, the US needs to regulate AI
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

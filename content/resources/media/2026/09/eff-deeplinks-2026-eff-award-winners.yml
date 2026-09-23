@@ -1,0 +1,15 @@
+id: eff-deeplinks-2026-eff-award-winners
+facts:
+  source: eff-deeplinks
+  url: https://www.eff.org/deeplinks/2026/09/2026-eff-award-winners-access-now-7amleh-arab-center-advancement-social-media
+  url_hash: f2ad39180442
+  kind: article
+  language: en
+  published_at: 2026-09-09
+  author: Josh Richman
+strings:
+  title: "2026 EFF Award Winners: Access Now, 7amleh – The Arab Center for the Advancement of Social Media, DeFlock, and New Media Rights"
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

@@ -1,0 +1,15 @@
+id: ai-now-institute-ai-now-s-co-executive
+facts:
+  source: ai-now-institute
+  url: https://ainowinstitute.org/news/announcement/ai-nows-co-executive-director-amba-kak-testifies-before-monopoly-busters-caucus
+  url_hash: ce784fdf8d07
+  kind: report
+  language: en
+  published_at: 2026-09-17
+  author: AI Now Institute
+strings:
+  title: AI Now’s Co-Executive Director Amba Kak Testifies Before Monopoly Busters Caucus
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

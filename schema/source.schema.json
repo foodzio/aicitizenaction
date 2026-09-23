@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aicitizenaction/schema/source.schema.json",
+  "title": "Resource source",
+  "description": "A publisher or channel the Resources collection watches. Neutrality is decided here: every source declares a perspective, and only maintainers add sources. Lives in content/resources/sources/<geo>/<id>.yml.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "geo", "facts", "strings", "meta"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "geo": { "$ref": "common.schema.json#/$defs/geo" },
+    "facts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "site_url", "language", "perspective", "auto_publish", "enabled"],
+      "properties": {
+        "kind": { "enum": ["article", "video", "podcast", "report", "newsletter"] },
+        "site_url": { "$ref": "common.schema.json#/$defs/url" },
+        "feed_url": { "$ref": "common.schema.json#/$defs/url" },
+        "language": { "type": "string", "pattern": "^[a-z]{2,3}$" },
+        "perspective": { "$ref": "common.schema.json#/$defs/vocabId" },
+        "auto_publish": { "type": "boolean", "description": "true only after a trial period with no rejections" },
+        "enabled": { "type": "boolean" },
+        "topics_hint": { "$ref": "common.schema.json#/$defs/vocabList" }
+      }
+    },
+    "strings": { "type": "object", "required": ["name"], "properties": { "name": { "type": "string" }, "about": { "type": "string" } } },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["verified_on", "review_by", "added_by"],
+      "properties": {
+        "verified_on": { "$ref": "common.schema.json#/$defs/date" },
+        "review_by": { "$ref": "common.schema.json#/$defs/date" },
+        "added_by": { "type": "string" },
+        "sources": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/source" } }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+id: openai-news-higgsfield-ai-ships-new-video
+facts:
+  source: openai-news
+  url: https://openai.com/index/higgsfield-from-prompt-to-production-with-astra
+  url_hash: 8fe4474fdbb9
+  kind: article
+  language: en
+  published_at: 2026-09-21
+strings:
+  title: Higgsfield AI ships new video features in a day with GPT-6 Astra
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

@@ -1,0 +1,28 @@
+# Dates and URLs from the research record us-colorado-attorney-general-automated-decision-making,
+# verified 2026-09-22 against https://coag.gov/ai/.
+id: us-co-admt-chatbot-rules-comment
+facts:
+  url: https://coag.gov/ai/automated-decision-making-technology-act-and-chatbot-safety-act-form/
+  opens_on: 2026-08-11
+  closes_on: 2026-10-26
+  jurisdiction:
+    country: us
+    sub: co
+  language: en
+  topics: [discrimination, children, consumer-protection]
+  bodies: [us-colorado-attorney-general-automated-decision-making]
+  action:
+    outcome: record
+    where: us/co
+strings:
+  title: Colorado's rules for automated decisions and chatbots — public comment
+  summary: Colorado's Attorney General is writing the rules that define a "consequential decision" made by an automated system, the safety duties of chatbots, and protections for minors. Anyone can comment until 26 October 2026 (11:59pm Mountain Time, or the last day of the formal hearing if it is extended). Comments are published in a public repository.
+  how: Submit through the Attorney General's online form. The office states that comments must go through the form; no email address is given.
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-10-06
+  sources:
+    - url: https://coag.gov/ai/
+      checked: 2026-09-22
+    - url: https://comments.coag.gov/s/colorado-automated-decision-making
+      checked: 2026-09-22

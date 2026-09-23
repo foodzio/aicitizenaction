@@ -1,0 +1,15 @@
+id: eff-deeplinks-eff-lawmakers
+facts:
+  source: eff-deeplinks
+  url: https://www.eff.org/deeplinks/2026/09/eff-lawmakers-ground-ai-cybersecurity-rules-best-practices
+  url_hash: 81f5047420b0
+  kind: article
+  language: en
+  published_at: 2026-09-18
+  author: Jacob Hoffman-Andrews
+strings:
+  title: "EFF to Lawmakers: Ground AI Cybersecurity Rules in Best Practices"
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

@@ -1,0 +1,15 @@
+id: ccia-ccia-asks-supreme-court-hear
+facts:
+  source: ccia
+  url: https://ccianet.org/news/2026/09/ccia-asks-supreme-court-to-hear-patent-case-that-involves-process-to-review-weak-patents-used-by-patent-trolls/
+  url_hash: 22cb0a3c0b26
+  kind: article
+  language: en
+  published_at: 2026-09-16
+  author: Craig Jones
+strings:
+  title: CCIA Asks Supreme Court to Hear Patent Case that Involves Process to Review Weak Patents Used by Patent Trolls
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

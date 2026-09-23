@@ -1,0 +1,15 @@
+id: ai-now-institute-will-ai-really-kill-everyone
+facts:
+  source: ai-now-institute
+  url: https://ainowinstitute.org/news/press/will-ai-really-kill-everyone-how-exactly
+  url_hash: 702bc8716258
+  kind: report
+  language: en
+  published_at: 2026-09-17
+  author: AI Now Institute
+strings:
+  title: Will AI really kill everyone? How, exactly?
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

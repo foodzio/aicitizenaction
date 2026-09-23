@@ -132,3 +132,34 @@ strings:
       orgs: Organisations
   about:
     title: How it works
+  resources:
+    title: Resources
+    lede: What is being reported, argued and decided about AI — each item with a question that turns it into something you can act on.
+    newcomer: Arrived here worried? Start with one question instead.
+    newcomer_link: Start here
+    windows: Open now — chances to act before they close
+    windows_none: No open windows at the moment.
+    windows_archive: Closed windows
+    closes: Closes
+    closed: Closed
+    opens: Opened
+    explainers: How it works, briefly
+    media: Collected from other publishers
+    media_note: Titles and links only. We never copy articles or embed videos. Each publisher's perspective is shown, and the balance across perspectives is published.
+    read_at: Read it at
+    perspective: Perspective
+    kind: Type
+    topic: Subject
+    language: Language
+    all: All
+    act: Act on this
+    default_prompt: Who could act on this? Start with one question.
+    related: Who can act on this
+    minutes: min read
+    sources: Sources
+    kinds:
+      article: Article
+      video: Video
+      podcast: Podcast
+      report: Report
+      newsletter: Newsletter

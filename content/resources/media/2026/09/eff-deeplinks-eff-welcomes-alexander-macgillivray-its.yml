@@ -1,0 +1,15 @@
+id: eff-deeplinks-eff-welcomes-alexander-macgillivray-its
+facts:
+  source: eff-deeplinks
+  url: https://www.eff.org/deeplinks/2026/09/eff-welcomes-alexander-macgillivray-its-board-directors
+  url_hash: 7a27fd3d25bb
+  kind: article
+  language: en
+  published_at: 2026-09-16
+  author: Josh Richman
+strings:
+  title: EFF Welcomes Alexander Macgillivray to its Board of Directors
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

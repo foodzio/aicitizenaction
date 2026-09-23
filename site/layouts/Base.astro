@@ -5,7 +5,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { ROOT } from '../../scripts/lib/content.mjs';
 
-const { lang = 'en', title, description = '', current = '', draft = false, noindex = false } = Astro.props;
+const { lang = 'en', title, description = '', current = '', draft = false, noindex = false, hideResources = false } = Astro.props;
 const t = ui(lang);
 const langs = languages();
 const thisLang = langs.find(l => l.code === lang);
@@ -31,7 +31,7 @@ const path = Astro.url.pathname.replace(/^\/[a-z]{2,3}\//, '/');
         <a class="brand" href={`/${lang}/`}>{t('site.name')}</a>
         <nav class="main" aria-label="Main">
           <a href={`/${lang}/`} aria-current={current === 'start' ? 'page' : undefined}>{t('site.nav_start')}</a>
-          <a href={`/${lang}/resources/`} aria-current={current === 'resources' ? 'page' : undefined}>{t('site.nav_resources')}</a>
+          {!hideResources && <a href={`/${lang}/resources/`} aria-current={current === 'resources' ? 'page' : undefined}>{t('site.nav_resources')}</a>}
           <a href={`/${lang}/directory/`} aria-current={current === 'directory' ? 'page' : undefined}>{t('site.nav_directory')}</a>
           <a href={`/${lang}/about/`} aria-current={current === 'about' ? 'page' : undefined}>{t('site.nav_about')}</a>
         </nav>

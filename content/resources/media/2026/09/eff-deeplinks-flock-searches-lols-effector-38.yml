@@ -1,0 +1,15 @@
+id: eff-deeplinks-flock-searches-lols-effector-38
+facts:
+  source: eff-deeplinks
+  url: https://www.eff.org/deeplinks/2026/09/flock-searches-lols-effector-3816
+  url_hash: 9c2c9ffc6f85
+  kind: article
+  language: en
+  published_at: 2026-09-16
+  author: Hudson Hongo
+strings:
+  title: 👮 Flock Searches for the LOLs | EFFector 38.16
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

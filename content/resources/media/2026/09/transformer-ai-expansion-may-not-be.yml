@@ -1,0 +1,14 @@
+id: transformer-ai-expansion-may-not-be
+facts:
+  source: transformer
+  url: https://www.transformernews.ai/p/ai-expansion-could-create-lots-of-smaller-environmental-problems
+  url_hash: 87418e1a98a9
+  kind: newsletter
+  language: en
+  published_at: 2026-09-17
+strings:
+  title: AI expansion may not be one big environmental problem. But it’ll be lots of smaller ones.
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

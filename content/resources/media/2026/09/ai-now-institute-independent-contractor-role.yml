@@ -1,0 +1,15 @@
+id: ai-now-institute-independent-contractor-role
+facts:
+  source: ai-now-institute
+  url: https://ainowinstitute.org/news/ai-now-is-hiring-a-local-policy-researcher-land-use-expert
+  url_hash: fbe628c8bc39
+  kind: report
+  language: en
+  published_at: 2026-09-16
+  author: AI Now Institute
+strings:
+  title: "Independent Contractor Role: AI Now seeks a Local Policy Researcher/Land Use Expert"
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

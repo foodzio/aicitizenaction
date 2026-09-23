@@ -1,0 +1,15 @@
+id: ai-now-institute-could-ai-really-wipe-out
+facts:
+  source: ai-now-institute
+  url: https://ainowinstitute.org/news/press/could-ai-really-wipe-out-humanity-six-experts-spell-out-the-risks
+  url_hash: e0372666cf0e
+  kind: report
+  language: en
+  published_at: 2026-09-15
+  author: AI Now Institute
+strings:
+  title: Could AI really wipe out humanity – six experts spell out the risks
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

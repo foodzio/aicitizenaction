@@ -1,0 +1,29 @@
+# Subjects a concern can be about. Used by resources now, and by routing (topics / not_topics)
+# once phase 1b fills them in. DRAFT: drawn from the committees' ai_jurisdiction text in the
+# research; to be finalised in phase 1b before routing relies on it.
+id: topics
+status: draft
+values:
+  - { id: frontier-ai, label: Frontier and general-purpose AI }
+  - { id: safety-testing, label: Safety testing and evaluation }
+  - { id: preemption, label: Which level of government sets the rules }
+  - { id: consumer-protection, label: Consumer protection }
+  - { id: privacy, label: Privacy and data }
+  - { id: children, label: Children and young people }
+  - { id: deepfakes, label: Deepfakes and synthetic media }
+  - { id: copyright, label: Copyright }
+  - { id: liability, label: Liability and who is responsible }
+  - { id: government-use, label: Government use of AI }
+  - { id: military-ai, label: Military AI }
+  - { id: export-controls, label: Chips and export controls }
+  - { id: work, label: Jobs and work }
+  - { id: discrimination, label: Discrimination and fairness }
+  - { id: elections, label: Elections and democracy }
+  - { id: health, label: Health }
+  - { id: whistleblowing, label: Whistleblowing and insiders }
+  - { id: transparency, label: Transparency and disclosure }
+  - { id: standards, label: Standards }
+  - { id: competition, label: Competition and market power }
+  - { id: security, label: Cybersecurity and critical infrastructure }
+  - { id: surveillance, label: Surveillance and policing }
+  - { id: international, label: International coordination }

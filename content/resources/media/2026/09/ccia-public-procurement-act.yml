@@ -1,0 +1,15 @@
+id: ccia-public-procurement-act
+facts:
+  source: ccia
+  url: https://ccianet.org/news/2026/09/public-procurement-act-ccia-europe-reacts-to-proposed-eu-rules/
+  url_hash: b1f8fe31181f
+  kind: article
+  language: en
+  published_at: 2026-09-10
+  author: Kasper Peters
+strings:
+  title: "Public Procurement Act: CCIA Europe Reacts to Proposed EU Rules"
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

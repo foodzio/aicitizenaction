@@ -1,0 +1,24 @@
+id: eff-deeplinks-eff-statement-california-governor-s
+facts:
+  source: eff-deeplinks
+  url: https://www.eff.org/deeplinks/2026/09/eff-statement-california-governors-executive-order-ai
+  url_hash: d96004b71171
+  kind: article
+  language: en
+  published_at: 2026-09-18
+  author: Rindala Alajaji
+  topics:
+    - government-use
+  bodies:
+    - us-assembly-committee-privacy-consumer-protection
+  action:
+    outcome: law
+    where: us/ca
+strings:
+  title: EFF Statement on California Governor's Executive Order on AI
+  prompt: California has set AI policy by executive order. Which part of the state legislature could scrutinise it, write it into law, or change it?
+meta:
+  status: published
+  added_by: ingest
+  added_on: 2026-09-23
+  reviewed_by: "draft: selected and prompted by Claude, awaiting an editor"

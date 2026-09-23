@@ -1,0 +1,15 @@
+id: ccia-ccia-joins-supreme-court-amicus
+facts:
+  source: ccia
+  url: https://ccianet.org/news/2026/09/ccia-joins-supreme-court-amicus-brief-in-apple-v-epic/
+  url_hash: c6378efd480a
+  kind: article
+  language: en
+  published_at: 2026-09-21
+  author: Craig Jones
+strings:
+  title: CCIA Joins Supreme Court Amicus Brief in Apple v. Epic
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

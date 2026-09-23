@@ -1,0 +1,14 @@
+id: openai-news-parallel-cut-research-time-cost
+facts:
+  source: openai-news
+  url: https://openai.com/index/parallel-cuts-time-and-cost-with-astra
+  url_hash: 3fcefd9c665f
+  kind: article
+  language: en
+  published_at: 2026-09-22
+strings:
+  title: Parallel cut research time and cost in half with GPT‑6 Astra
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

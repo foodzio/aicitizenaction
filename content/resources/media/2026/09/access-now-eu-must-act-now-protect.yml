@@ -1,0 +1,15 @@
+id: access-now-eu-must-act-now-protect
+facts:
+  source: access-now
+  url: https://www.accessnow.org/press-release/the-eu-must-act-now-canadas-overreaching-bill-c-22/
+  url_hash: 5bfeb245fb99
+  kind: article
+  language: en
+  published_at: 2026-09-14
+  author: Amina Khan
+strings:
+  title: The EU must act now to protect privacy and encryption from Canada’s overreaching Bill C-22
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

@@ -1,0 +1,15 @@
+id: lawfare-ai-overviews-limits-search-safe
+facts:
+  source: lawfare
+  url: https://www.lawfaremedia.org/article/ai-overviews-and-the-limits-of-the-search-safe-harbor
+  url_hash: 1a44f2cea4e6
+  kind: article
+  language: en
+  published_at: 2026-09-22
+  author: Ignacio Cofone
+strings:
+  title: AI Overviews and the Limits of the Search Safe Harbor
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

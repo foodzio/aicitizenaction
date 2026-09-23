@@ -1,0 +1,15 @@
+id: access-now-ignore-human-rights-risks
+facts:
+  source: access-now
+  url: https://www.accessnow.org/press-release/telenor-under-investigation-for-crimes-against-humanity-in-myanmar/
+  url_hash: b5d20e04c592
+  kind: article
+  language: en
+  published_at: 2026-09-17
+  author: Amina Khan
+strings:
+  title: "Ignore human rights risks, face the consequences: Telenor under investigation for crimes against humanity in Myanmar"
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

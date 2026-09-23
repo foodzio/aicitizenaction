@@ -1,0 +1,23 @@
+id: openai-news-our-framework-reporting-model-misalignment
+facts:
+  source: openai-news
+  url: https://openai.com/index/model-misalignment-reporting-framework
+  url_hash: f3899afd4d6a
+  kind: article
+  language: en
+  published_at: 2026-09-16
+  topics:
+    - safety-testing
+    - transparency
+  channels:
+    - us-openai
+  action:
+    outcome: fix
+strings:
+  title: Our framework for reporting model misalignment
+  prompt: A developer sets out how it wants worrying model behaviour reported. If you have seen a model do something that concerned you, which channel reaches someone who can act on it?
+meta:
+  status: published
+  added_by: ingest
+  added_on: 2026-09-23
+  reviewed_by: "draft: selected and prompted by Claude, awaiting an editor"

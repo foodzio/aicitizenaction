@@ -1,0 +1,15 @@
+id: eff-deeplinks-how-meta-settlement-silences-youth
+facts:
+  source: eff-deeplinks
+  url: https://www.eff.org/deeplinks/2026/09/meta-settlement-yet-another-example-online-youth-organizing-under-threat
+  url_hash: de3a8795b794
+  kind: article
+  language: en
+  published_at: 2026-09-16
+  author: Paige Collings
+strings:
+  title: How the Meta Settlement Silences Youth Activism
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

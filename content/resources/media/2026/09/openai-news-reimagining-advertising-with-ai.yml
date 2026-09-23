@@ -1,0 +1,14 @@
+id: openai-news-reimagining-advertising-with-ai
+facts:
+  source: openai-news
+  url: https://openai.com/index/reimagining-advertising-with-ai
+  url_hash: 6ac27c68838b
+  kind: article
+  language: en
+  published_at: 2026-09-16
+strings:
+  title: Reimagining advertising with AI
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

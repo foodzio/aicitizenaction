@@ -1,0 +1,22 @@
+# Feed fetched and confirmed as RSS on 2026-09-23. auto_publish stays false until a trial period passes with no rejections.
+id: ai-safety-newsletter
+geo:
+  country: global
+facts:
+  kind: newsletter
+  site_url: https://newsletter.safe.ai/
+  feed_url: https://newsletter.safe.ai/feed
+  language: en
+  perspective: safety-advocacy
+  auto_publish: false
+  enabled: true
+strings:
+  name: AI Safety Newsletter (Center for AI Safety)
+  about: Newsletter from the Center for AI Safety.
+meta:
+  verified_on: 2026-09-23
+  review_by: 2027-03-22
+  added_by: "@sinscrit"
+  sources:
+    - url: https://newsletter.safe.ai/feed
+      checked: 2026-09-23

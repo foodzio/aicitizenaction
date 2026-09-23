@@ -1,0 +1,15 @@
+id: cset-china-s-rocket-achievements-threaten
+facts:
+  source: cset
+  url: https://cset.georgetown.edu/article/chinas-rocket-achievements-threaten-us-space-superiority/
+  url_hash: 4e6c83e44e35
+  kind: report
+  language: en
+  published_at: 2026-09-14
+  author: Jason Ly
+strings:
+  title: China’s rocket achievements threaten US space superiority
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

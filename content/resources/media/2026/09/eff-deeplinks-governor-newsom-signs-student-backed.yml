@@ -1,0 +1,15 @@
+id: eff-deeplinks-governor-newsom-signs-student-backed
+facts:
+  source: eff-deeplinks
+  url: https://www.eff.org/deeplinks/2026/09/governor-newsom-signs-student-backed-digital-literacy-bills-alongside-misguided
+  url_hash: 4b7a157c5d09
+  kind: article
+  language: en
+  published_at: 2026-09-11
+  author: Chao Liu
+strings:
+  title: Governor Newsom Signs Student-Backed Digital Literacy Bills Alongside Misguided Bans
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

@@ -1,0 +1,22 @@
+# Feed fetched and confirmed as RSS on 2026-09-23. auto_publish stays false until a trial period passes with no rejections.
+id: cset
+geo:
+  country: us
+facts:
+  kind: report
+  site_url: https://cset.georgetown.edu/
+  feed_url: https://cset.georgetown.edu/feed/
+  language: en
+  perspective: academic
+  auto_publish: false
+  enabled: true
+strings:
+  name: Center for Security and Emerging Technology (Georgetown)
+  about: University research centre on security and emerging technology.
+meta:
+  verified_on: 2026-09-23
+  review_by: 2027-03-22
+  added_by: "@sinscrit"
+  sources:
+    - url: https://cset.georgetown.edu/feed/
+      checked: 2026-09-23

@@ -1,0 +1,15 @@
+id: eff-deeplinks-secure-messaging-ai-remain-conflict
+facts:
+  source: eff-deeplinks
+  url: https://www.eff.org/deeplinks/2026/09/secure-messaging-and-ai-remain-conflict-despite-promise-tees
+  url_hash: 0ed705f5b130
+  kind: article
+  language: en
+  published_at: 2026-09-18
+  author: Erica Portnoy
+strings:
+  title: Secure Messaging and AI Remain In Conflict Despite the Promise of TEEs
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

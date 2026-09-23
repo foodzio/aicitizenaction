@@ -1,0 +1,22 @@
+id: ai-safety-newsletter-aisn-81
+facts:
+  source: ai-safety-newsletter
+  url: https://newsletter.safe.ai/p/aisn-81-anthropic-researchers-resignation
+  url_hash: b31a8486293d
+  kind: newsletter
+  language: en
+  published_at: 2026-09-15
+  author: Laura Hiscott
+  topics:
+    - frontier-ai
+    - whistleblowing
+  action:
+    outcome: law
+strings:
+  title: "AISN #81: Anthropic Researcher’s Resignation Propels AI Risk into the Public Eye"
+  prompt: Attention to AI risk rises and falls with stories like this one. Where does a concern about frontier AI actually get recorded by people who make the rules?
+meta:
+  status: published
+  added_by: ingest
+  added_on: 2026-09-23
+  reviewed_by: "draft: selected and prompted by Claude, awaiting an editor"

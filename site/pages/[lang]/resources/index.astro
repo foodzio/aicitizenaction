@@ -1,9 +1,82 @@
 ---
-// Placeholder until phase 4 builds the Resources collection.
+// The Resources collection: open windows first, then explainers, then media from other
+// publishers. No counters, no urgency bars, no "breaking" labels (docs/content-architecture.md).
 import Base from '../../../layouts/Base.astro';
-import { ui, languages } from '../../../lib/data.mjs';
+import { ui, languages, placeName } from '../../../lib/data.mjs';
+import { resources, isOpen, topicLabel, perspectiveLabel } from '../../../lib/resources.mjs';
+
 export const getStaticPaths = () => languages().map(l => ({ params: { lang: l.code } }));
 const { lang } = Astro.params;
 const t = ui(lang);
+const { media, explainers, windows, sourceById } = resources();
+const open = windows.filter(w => isOpen(w));
+const topics = [...new Set(media.flatMap(m => m.facts.topics ?? []))].sort();
+const kinds = [...new Set(media.map(m => m.facts.kind))];
+const langsIn = [...new Set(media.map(m => m.facts.language))];
+const langName = c => { try { return new Intl.DisplayNames([lang, 'en'], { type: 'language' }).of(c); } catch { return c; } };
+const anyDraft = [...media, ...explainers].some(x => x.meta.status === 'draft' || String(x.meta.reviewed_by ?? '').startsWith('draft'));
 ---
-<Base lang={lang} title={t('site.nav_resources')} current="resources"><h1>{t('site.nav_resources')}</h1></Base>
+<Base lang={lang} title={t('resources.title')} current="resources" draft={anyDraft}>
+  <h1>{t('resources.title')}</h1>
+  <p class="lede">{t('resources.lede')}</p>
+  <p class="shape">{t('resources.newcomer')} <a href={`/${lang}/`}>{t('resources.newcomer_link')} →</a></p>
+
+  <section aria-labelledby="windows">
+    <h2 id="windows">{t('resources.windows')}</h2>
+    {open.length ? (
+      <ul class="routes">
+        {open.map(w => (
+          <li data-closes={w.facts.closes_on}>
+            <a href={`/${lang}/resources/windows/${w.id}/`}><strong>{w.strings.title}</strong></a>
+            <div class="meta-line">{placeName(w.facts.jurisdiction, lang)} · {t('resources.closes')} {w.facts.closes_on}</div>
+          </li>
+        ))}
+      </ul>
+    ) : <p class="muted">{t('resources.windows_none')}</p>}
+    <p><a href={`/${lang}/resources/windows/`}>{t('resources.windows_archive')}</a></p>
+  </section>
+
+  <section aria-labelledby="explainers">
+    <h2 id="explainers">{t('resources.explainers')}</h2>
+    <ul class="results">
+      {explainers.map(e => (
+        <li><a href={`/${lang}/resources/explainers/${e.id}/`}>{e.strings.title}</a><br /><span class="meta-line">{e.strings.summary}</span></li>
+      ))}
+    </ul>
+  </section>
+
+  <section aria-labelledby="media">
+    <h2 id="media">{t('resources.media')}</h2>
+    <p class="hint">{t('resources.media_note')}</p>
+    <form class="filters" onsubmit="return false">
+      <div><label for="f-topic">{t('resources.topic')}</label>
+        <select id="f-topic"><option value="">{t('resources.all')}</option>{topics.map(x => <option value={x}>{topicLabel(x)}</option>)}</select></div>
+      <div><label for="f-kind">{t('resources.kind')}</label>
+        <select id="f-kind"><option value="">{t('resources.all')}</option>{kinds.map(x => <option value={x}>{t(`resources.kinds.${x}`)}</option>)}</select></div>
+      <div><label for="f-lang">{t('resources.language')}</label>
+        <select id="f-lang"><option value="">{t('resources.all')}</option>{langsIn.map(x => <option value={x}>{langName(x)}</option>)}</select></div>
+    </form>
+    <ul class="results" id="media-list">
+      {media.map(m => {
+        const s = sourceById.get(m.facts.source);
+        return (
+          <li data-topics={(m.facts.topics ?? []).join(' ')} data-kind={m.facts.kind} data-lang={m.facts.language}>
+            <a href={`/${lang}/resources/media/${m.id}/`} lang={m.facts.language}>{m.strings.title}</a><br />
+            <span class="meta-line">{s?.strings.name} · {perspectiveLabel(s?.facts.perspective)} · {t(`resources.kinds.${m.facts.kind}`)} · {m.facts.published_at}</span>
+          </li>
+        );
+      })}
+    </ul>
+  </section>
+</Base>
+<script>
+  // Windows past their closing date disappear even if the site has not been rebuilt yet.
+  const now = new Date().toISOString().slice(0, 10);
+  document.querySelectorAll('[data-closes]').forEach(li => { if (li.dataset.closes < now) li.hidden = true; });
+  const topic = document.getElementById('f-topic'), kind = document.getElementById('f-kind'), lang = document.getElementById('f-lang');
+  const items = [...document.querySelectorAll('#media-list li')];
+  const apply = () => items.forEach(li => {
+    li.hidden = !((!topic.value || li.dataset.topics.split(' ').includes(topic.value)) && (!kind.value || li.dataset.kind === kind.value) && (!lang.value || li.dataset.lang === lang.value));
+  });
+  [topic, kind, lang].forEach(x => x.addEventListener('input', apply));
+</script>

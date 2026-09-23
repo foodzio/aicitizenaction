@@ -1,0 +1,22 @@
+id: ai-now-institute-how-existential-fears-are-shaping
+facts:
+  source: ai-now-institute
+  url: https://ainowinstitute.org/news/press/how-existential-fears-are-shaping-the-debate-over-ai
+  url_hash: cc37682f27c3
+  kind: report
+  language: en
+  published_at: 2026-09-17
+  author: AI Now Institute
+  topics:
+    - frontier-ai
+    - consumer-protection
+  action:
+    outcome: harm
+strings:
+  title: How Existential Fears Are Shaping the Debate Over AI
+  prompt: Some argue that debate about extreme scenarios crowds out harms happening now. If a present-day harm is what worries you, which regulator can investigate it?
+meta:
+  status: published
+  added_by: ingest
+  added_on: 2026-09-23
+  reviewed_by: "draft: selected and prompted by Claude, awaiting an editor"

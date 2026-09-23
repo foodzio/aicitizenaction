@@ -1,0 +1,14 @@
+id: algorithmwatch-statement
+facts:
+  source: algorithmwatch
+  url: https://algorithmwatch.org/de/statement-kontrolle-unternehmen/
+  url_hash: a77b09ec2df0
+  kind: article
+  language: de
+  published_at: 2026-09-22
+strings:
+  title: "Statement: “Wir verlieren nicht die Kontrolle über eine Technologie, sondern über die Unternehmen, die sie entwickeln”"
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

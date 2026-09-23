@@ -1,0 +1,15 @@
+id: lawfare-scaling-laws
+facts:
+  source: lawfare
+  url: https://www.lawfaremedia.org/article/scaling-laws--live-from-columbia-law-with-chlo%C3%A9-bakalar--what-can-constitutions-teach-us-about-governing-ai
+  url_hash: 8a6e852bed14
+  kind: article
+  language: en
+  published_at: 2026-09-22
+  author: Kevin Frazier, Chloé Bakalar
+strings:
+  title: "Scaling Laws: Live from Columbia Law with Chloé Bakalar: What Can Constitutions Teach Us About Governing AI?"
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

@@ -1,0 +1,15 @@
+id: mit-technology-review-ai-building-materials-foundation-ai
+facts:
+  source: mit-technology-review-ai
+  url: https://www.technologyreview.com/2026/09/16/1144014/building-the-materials-foundation-for-ai/
+  url_hash: 59f80a0835b7
+  kind: article
+  language: en
+  published_at: 2026-09-16
+  author: MIT Technology Review Insights
+strings:
+  title: Building the materials foundation for AI
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

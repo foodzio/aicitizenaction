@@ -1,0 +1,15 @@
+id: cset-inside-beijing-s-chipmaking-offensive
+facts:
+  source: cset
+  url: https://cset.georgetown.edu/article/inside-beijings-chipmaking-offensive-one-year-on/
+  url_hash: f0052a95aa21
+  kind: report
+  language: en
+  published_at: 2026-09-15
+  author: Emily Tavenner
+strings:
+  title: Inside Beijing’s Chipmaking Offensive, One Year On
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

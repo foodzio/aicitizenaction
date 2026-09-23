@@ -1,0 +1,15 @@
+id: access-now-from-surveillance-governance
+facts:
+  source: access-now
+  url: https://www.accessnow.org/event/unga81-ai-governance/
+  url_hash: e3c450be5129
+  kind: article
+  language: en
+  published_at: 2026-09-21
+  author: Access Now
+strings:
+  title: "From surveillance to governance: recentering human rights in the UN AI agenda"
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

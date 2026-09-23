@@ -1,0 +1,26 @@
+# Docket and deadline from the research record us-food-drug-administration-center-devices-radiological,
+# verified 2026-09-22 via the FDA announcement.
+id: us-fda-2026-n-7874-ai-devices
+facts:
+  url: https://www.regulations.gov/docket/FDA-2026-N-7874
+  opens_on: 2026-08-18
+  closes_on: 2026-10-19
+  jurisdiction:
+    country: us
+    sub: federal
+  language: en
+  topics: [health, safety-testing, frontier-ai]
+  bodies: [us-food-drug-administration-center-devices-radiological]
+  action:
+    outcome: record
+    where: us
+strings:
+  title: How the FDA should evaluate AI in medical devices — public docket FDA-2026-N-7874
+  summary: The US Food and Drug Administration is asking how it should assess AI-enabled medical devices, including a risk framework, premarket evaluation, monitoring after approval, and foundation models and AI agents. It explicitly invites comments from the public as well as manufacturers and clinicians. Comments are due 19 October 2026 and are published on the docket.
+  how: Comment on the docket at regulations.gov. The FDA's general phone line and question form are for questions about regulatory status and will not carry a policy argument.
+meta:
+  verified_on: 2026-09-22
+  review_by: 2026-10-06
+  sources:
+    - url: https://www.regulations.gov/docket/FDA-2026-N-7874
+      checked: 2026-09-22

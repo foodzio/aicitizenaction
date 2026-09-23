@@ -1,0 +1,21 @@
+id: cset-week-ai-freakout-went-mainstream
+facts:
+  source: cset
+  url: https://cset.georgetown.edu/article/the-week-the-ai-freakout-went-mainstream/
+  url_hash: 46837b31b38f
+  kind: report
+  language: en
+  published_at: 2026-09-12
+  author: Jason Ly
+  topics:
+    - frontier-ai
+  action:
+    outcome: law
+strings:
+  title: The week the AI freakout went mainstream
+  prompt: If recent coverage left you uneasy, one small, useful step is to tell the people who write AI rules what you think, in your own words.
+meta:
+  status: published
+  added_by: ingest
+  added_on: 2026-09-23
+  reviewed_by: "draft: selected and prompted by Claude, awaiting an editor"

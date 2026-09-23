@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aicitizenaction/schema/explainer.schema.json",
+  "title": "Explainer",
+  "description": "Our own short article about how institutions work. States positions only as the positions of whoever holds them. Must point at an action. Lives in content/resources/explainers/<id>.yml.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "facts", "strings", "meta"],
+  "properties": {
+    "id": { "$ref": "common.schema.json#/$defs/id" },
+    "facts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "topics": { "$ref": "common.schema.json#/$defs/vocabList" },
+        "bodies": { "$ref": "common.schema.json#/$defs/vocabList" },
+        "channels": { "$ref": "common.schema.json#/$defs/vocabList" },
+        "orgs": { "$ref": "common.schema.json#/$defs/vocabList" },
+        "action": { "$ref": "media.schema.json#/$defs/action" },
+        "reading_minutes": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "strings": {
+      "type": "object",
+      "required": ["title", "summary", "body"],
+      "properties": { "title": { "type": "string" }, "summary": { "type": "string" }, "body": { "type": "string" } }
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["verified_on", "review_by", "sources", "status"],
+      "properties": {
+        "verified_on": { "$ref": "common.schema.json#/$defs/date" },
+        "review_by": { "$ref": "common.schema.json#/$defs/date" },
+        "sources": { "type": "array", "minItems": 1, "items": { "$ref": "common.schema.json#/$defs/source" } },
+        "status": { "enum": ["draft", "reviewed"] },
+        "owners": { "type": "array", "items": { "type": "string", "pattern": "^@[A-Za-z0-9_./-]+$" } }
+      }
+    }
+  }
+}

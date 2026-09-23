@@ -1,0 +1,43 @@
+---
+import Base from '../../../../../layouts/Base.astro';
+import { ui, languages, placeName } from '../../../../../lib/data.mjs';
+import { resources, handoff, related, isOpen } from '../../../../../lib/resources.mjs';
+
+export function getStaticPaths() {
+  const { windows } = resources();
+  return languages().flatMap(l => windows.map(w => ({ params: { lang: l.code, id: w.id } })));
+}
+const { lang, id } = Astro.params;
+const t = ui(lang);
+const w = resources().windows.find(x => x.id === id);
+const open = isOpen(w);
+const rel = related(lang, w.facts);
+---
+<Base lang={lang} title={w.strings.title} current="resources">
+  <article class="narrow" data-closes={w.facts.closes_on}>
+    <p class="meta-line"><a href={`/${lang}/resources/windows/`}>{t('resources.windows_archive')}</a></p>
+    <h1>{w.strings.title}</h1>
+    <dl class="facts">
+      <dt>{t('record.place')}</dt><dd>{placeName(w.facts.jurisdiction, lang)}</dd>
+      <dt>{t('resources.opens')}</dt><dd>{w.facts.opens_on}</dd>
+      <dt>{open ? t('resources.closes') : t('resources.closed')}</dt><dd>{w.facts.closes_on}</dd>
+    </dl>
+    <p class="notice closed-note" hidden={open}>{t('resources.closed')} {w.facts.closes_on}.</p>
+    <p class="lede">{w.strings.summary}</p>
+    {w.strings.how && <p>{w.strings.how}</p>}
+    <div class="row open-only" hidden={!open}>
+      <a class="btn" href={handoff(lang, w.facts.action)}>{t('resources.newcomer_link')} →</a>
+      <a class="btn secondary" href={w.facts.url} rel="noopener">{t('resources.act')} ↗</a>
+    </div>
+    {rel.length > 0 && (<><h3>{t('resources.related')}</h3><ul>{rel.map(r => <li><a href={r.url}>{r.name}</a></li>)}</ul></>)}
+    <h3>{t('resources.sources')}</h3>
+    <ul>{w.meta.sources.map(s => <li><a href={s.url} rel="noopener">{s.url}</a> <span class="meta-line">· {s.checked}</span></li>)}</ul>
+  </article>
+</Base>
+<script>
+  const a = document.querySelector('[data-closes]');
+  if (a && a.dataset.closes < new Date().toISOString().slice(0, 10)) {
+    a.querySelector('.closed-note').hidden = false;
+    a.querySelector('.open-only').hidden = true;
+  }
+</script>

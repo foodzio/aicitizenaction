@@ -1,0 +1,15 @@
+id: ccia-ccia-files-joint-amicus-brief
+facts:
+  source: ccia
+  url: https://ccianet.org/news/2026/09/ccia-files-joint-amicus-brief-on-social-media-algorithms-in-free-speech-case/
+  url_hash: ce3c82f0143e
+  kind: article
+  language: en
+  published_at: 2026-09-15
+  author: Craig Jones
+strings:
+  title: CCIA Files Joint Amicus Brief on Social Media, Algorithms in Free Speech Case
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

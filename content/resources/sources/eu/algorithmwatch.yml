@@ -1,0 +1,22 @@
+# Feed fetched and confirmed as RSS on 2026-09-23. auto_publish stays false until a trial period passes with no rejections.
+id: algorithmwatch
+geo:
+  country: eu
+facts:
+  kind: article
+  site_url: https://algorithmwatch.org/en/
+  feed_url: https://algorithmwatch.org/en/feed/
+  language: en
+  perspective: civil-liberties
+  auto_publish: false
+  enabled: true
+strings:
+  name: AlgorithmWatch
+  about: European non-profit researching automated decision-making.
+meta:
+  verified_on: 2026-09-23
+  review_by: 2027-03-22
+  added_by: "@sinscrit"
+  sources:
+    - url: https://algorithmwatch.org/en/feed/
+      checked: 2026-09-23

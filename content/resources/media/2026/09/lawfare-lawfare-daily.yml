@@ -1,0 +1,15 @@
+id: lawfare-lawfare-daily
+facts:
+  source: lawfare
+  url: https://www.lawfaremedia.org/article/lawfare-daily--two-appeals-concerning-alien-enemies-act-removals-in-apparent-defiance-of-a-court-order
+  url_hash: 274b1bc1b2d8
+  kind: article
+  language: en
+  published_at: 2026-09-22
+  author: Roger Parloff, Lee Gelernt, Jen Patja
+strings:
+  title: "Lawfare Daily: Two Appeals Concerning Alien Enemies Act Removals in Apparent Defiance of a Court Order"
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

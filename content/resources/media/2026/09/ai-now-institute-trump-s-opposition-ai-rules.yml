@@ -1,0 +1,15 @@
+id: ai-now-institute-trump-s-opposition-ai-rules
+facts:
+  source: ai-now-institute
+  url: https://ainowinstitute.org/news/press/trumps-opposition-to-ai-rules-undercuts-industrys-calls-for-a-slowdown
+  url_hash: c45c13c92c66
+  kind: report
+  language: en
+  published_at: 2026-09-15
+  author: AI Now Institute
+strings:
+  title: Trump’s opposition to AI rules undercuts industry’s calls for a slowdown
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

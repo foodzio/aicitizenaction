@@ -1,0 +1,22 @@
+# Feed fetched and confirmed as RSS on 2026-09-23. auto_publish stays false until a trial period passes with no rejections.
+id: transformer
+geo:
+  country: global
+facts:
+  kind: newsletter
+  site_url: https://www.transformernews.ai/
+  feed_url: https://www.transformernews.ai/feed
+  language: en
+  perspective: journalism
+  auto_publish: false
+  enabled: true
+strings:
+  name: Transformer
+  about: Newsletter reporting on AI policy and the AI industry.
+meta:
+  verified_on: 2026-09-23
+  review_by: 2027-03-22
+  added_by: "@sinscrit"
+  sources:
+    - url: https://www.transformernews.ai/feed
+      checked: 2026-09-23

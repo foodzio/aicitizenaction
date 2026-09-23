@@ -1,0 +1,15 @@
+id: ai-now-institute-why-this-ai-doomsday-warning
+facts:
+  source: ai-now-institute
+  url: https://ainowinstitute.org/news/press/why-this-ai-doomsday-warning-from-former-anthropic-researcher-broke-through
+  url_hash: d18fc9415c8c
+  kind: report
+  language: en
+  published_at: 2026-09-15
+  author: AI Now Institute
+strings:
+  title: Why this AI doomsday warning from former Anthropic researcher broke through
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

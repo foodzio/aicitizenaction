@@ -1,0 +1,15 @@
+id: eff-deeplinks-high-crime-lmao
+facts:
+  source: eff-deeplinks
+  url: https://www.eff.org/deeplinks/2026/09/high-crime-lmao-how-cops-are-treating-mass-surveillance-joke
+  url_hash: 96e255b0f82c
+  kind: article
+  language: en
+  published_at: 2026-09-14
+  author: Rindala Alajaji
+strings:
+  title: "The High Crime of “LMAO”: How Cops Are Treating Flock's Mass Surveillance As a Joke"
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

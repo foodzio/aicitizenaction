@@ -1,0 +1,60 @@
+# Twice daily: collect new Resources items into one rolling "Resource intake" pull request.
+# Items from auto_publish sources arrive published; everything else arrives pending for an editor.
+# Auto-merge happens only when every new item is from an auto_publish source AND the owner has
+# created the INTAKE_TOKEN secret (docs/github-setup.md §3). Otherwise the PR waits for review.
+name: Resource intake
+on:
+  schedule:
+    - cron: '17 5,17 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+concurrency: resource-intake
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Continue on the open intake branch if there is one
+        run: |
+          git fetch origin resource-intake || true
+          if git rev-parse --verify origin/resource-intake >/dev/null 2>&1; then
+            git checkout -B resource-intake origin/resource-intake
+            git merge --no-edit origin/main || true
+          else
+            git checkout -B resource-intake
+          fi
+      - name: Collect new items
+        run: node scripts/ingest-resources.mjs --summary intake.md --out intake.json
+      - name: Validate
+        run: npm run validate
+      - name: Commit and open or update the pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -z "$(git status --porcelain content/resources/media)" ]; then echo "Nothing new."; exit 0; fi
+          git config user.name "resource-intake[bot]"
+          git config user.email "resource-intake@users.noreply.github.com"
+          git add content/resources/media
+          git commit -m "Resource intake $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push -u origin resource-intake --force-with-lease
+          if gh pr view resource-intake --json number >/dev/null 2>&1; then
+            gh pr comment resource-intake --body-file intake.md
+          else
+            gh pr create --head resource-intake --base main --title "Resource intake" --body-file intake.md
+          fi
+      - name: Auto-merge when every item is from an auto-publish source
+        env:
+          GH_TOKEN: ${{ secrets.INTAKE_TOKEN }}
+        if: env.GH_TOKEN != ''
+        run: |
+          pending=$(node -e "const r=require('./intake.json');console.log(r.added.filter(a=>a.status!=='published').length)")
+          if [ "$pending" = "0" ]; then gh pr merge resource-intake --squash --auto; fi

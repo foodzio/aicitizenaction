@@ -1,0 +1,15 @@
+id: ai-now-institute-why-decade-doomsday-warnings-failed
+facts:
+  source: ai-now-institute
+  url: https://ainowinstitute.org/news/press/why-a-decade-of-doomsday-warnings-failed-to-slow-the-ai-race
+  url_hash: 1d1134220e9e
+  kind: report
+  language: en
+  published_at: 2026-09-15
+  author: AI Now Institute
+strings:
+  title: Why a decade of doomsday warnings failed to slow the AI race
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

@@ -1,0 +1,27 @@
+id: what-happens-to-a-consultation-response
+facts:
+  topics: [transparency]
+  bodies: [us-food-drug-administration-center-devices-radiological, us-colorado-attorney-general-automated-decision-making]
+  action:
+    outcome: record
+  reading_minutes: 3
+strings:
+  title: What happens to a consultation response
+  summary: When a regulator opens a consultation, the responses are usually published, read by the officials writing the rules, and sometimes answered one by one.
+  body: |
+    A consultation (sometimes called a call for evidence, a request for comment or a docket) is a regulator or committee asking in public what people think before it decides. It has an opening date and a closing date, and after the close it stops listening.
+
+    Responses are usually published under the author's name. In the United States, federal agencies post comments on regulations.gov; the FDA's docket on AI-enabled medical devices (FDA-2026-N-7874) is one example, and the agency routinely publishes an analysis of the comments it received. State regulators do the same: Colorado's Attorney General posts every comment on its automated-decision-making rules in a public repository.
+
+    Officials read responses when they write the final rules and reports, and they quote from them. Volume matters less than people expect. A response that says who you are, why the issue affects you, and what you want changed — in two or three short paragraphs — is useful to the person writing the rule. A long, technical response is not required, and a copied form letter is usually counted once.
+
+    Open consultations are listed on this site as "windows", with their closing dates. When a window closes it moves to the archive automatically.
+meta:
+  verified_on: 2026-09-23
+  review_by: 2027-09-23
+  status: draft
+  sources:
+    - url: https://www.regulations.gov/docket/FDA-2026-N-7874
+      checked: 2026-09-22
+    - url: https://comments.coag.gov/s/colorado-automated-decision-making
+      checked: 2026-09-22

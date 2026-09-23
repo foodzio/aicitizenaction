@@ -1,0 +1,15 @@
+id: ai-now-institute-hugging-face-hack-shows-humans
+facts:
+  source: ai-now-institute
+  url: https://ainowinstitute.org/news/press/hugging-face-hack-shows-humans-can-keep-ai-in-check
+  url_hash: 08c518232c89
+  kind: report
+  language: en
+  published_at: 2026-09-18
+  author: AI Now Institute
+strings:
+  title: Hugging Face Hack Shows Humans Can Keep AI In Check
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23
