@@ -10,7 +10,7 @@ strings:
     nav_resources: Resources
     nav_directory: Directory
     nav_about: How it works
-    footer_note: No account, no mailing list, no tracking. Every address says whether a person has opened it and when.
+    footer_note: No account, no mailing list, no tracking.
     footer_version: Version
     footer_freshness: How current is this?
     language: Language

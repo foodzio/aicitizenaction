@@ -70,6 +70,10 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-23T22:39:35Z — Footer sentence removed (owner)
+
+- Owner asked to remove "Every address says whether a person has opened it and when." Footer now reads "No account, no mailing list, no tracking." (en + fr). The verification labels themselves (Verified / Unverified / Unchecked) are unchanged and still explained on each badge and on How it works. Not yet redeployed.
+
 ### 2026-09-23T22:38:58Z — Draft notice removed (owner)
 
 - Owner asked to remove "This page's wording is a first draft and has not been reviewed yet." Removed from `site/layouts/Base.astro` and the UI strings (en; fr dropped by i18n-sync). Pages still carry `meta.status: draft` / `reviewed_by: draft…` in content, so drafts remain identifiable in the data; only the on-page notice is gone. The machine-translation notice on unapproved languages is unchanged. Not yet redeployed.
@@ -264,4 +268,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T22:38:58Z
+Last modified: 2026-09-23T22:39:35Z

@@ -31,8 +31,8 @@ strings:
       src: 9c870aa6
       machine: true
     footer_note:
-      value: Pas de compte, pas de liste de diffusion, pas de pistage. Chaque adresse indique si une personne l'a consultée, et quand.
-      src: 7b097b22
+      value: Pas de compte, pas de liste de diffusion, pas de pistage.
+      src: 5c1bc1bd
       machine: true
     footer_version:
       value: Version
