@@ -1,0 +1,109 @@
+/* AICitizenAction design system tokens — copied from input/aicitizenaction-design-system.zip (tokens.css).
+   The kit's dark theme is also applied automatically when the visitor prefers dark, unless a page sets data-theme="light". */
+:root, [data-theme="light"] {
+  --surface: #f9f6f0;
+  --surface-cool: #f2f4f2;
+  --surface-warm: #faf5ef;
+  --surface-reassure: #e8eeea;
+  --line: #dfe2df;
+  --line-cool: #d0dcdf;
+  --line-warm: #e6d8d1;
+  --divider: #8fadb2;
+  --ink: #052236;
+  --ink-muted: #4a6170;
+  --teal: #2a6d82;
+  --on-teal: #ffffff;
+  --teal-deep: #145064;
+  --teal-soft: #d6e5e6;
+  --teal-mist: #c1d7dc;
+  --sage-soft: #bdd4d1;
+  --coral: #df5f3b;
+  --coral-soft: #f7d8ca;
+  --coral-ink: #ae4020;
+  --focus: #2a6d82;
+  --focus-ring: 0 0 0 2px #f9f6f0, 0 0 0 4px #2a6d82;
+}
+
+[data-theme="dark"] {
+  --surface: #0e1b23;
+  --surface-cool: #13242e;
+  --surface-warm: #1c1f22;
+  --surface-reassure: #172a31;
+  --line: #24363f;
+  --line-cool: #2d4550;
+  --line-warm: #44342c;
+  --divider: #5a7b85;
+  --ink: #eef3f1;
+  --ink-muted: #a8bcc5;
+  --teal: #7cc0d3;
+  --on-teal: #0e1b23;
+  --teal-deep: #a6d9e5;
+  --teal-soft: #1d3d48;
+  --teal-mist: #1a3640;
+  --sage-soft: #22423f;
+  --coral: #f28a66;
+  --coral-soft: #43261b;
+  --coral-ink: #f5a386;
+  --focus: #7cc0d3;
+  --focus-ring: 0 0 0 2px #0e1b23, 0 0 0 4px #7cc0d3;
+}
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 48px;
+  --space-14: 56px;
+  --radius-card: 6px;
+  --radius-pill: 24px;
+  --radius-full: 9999px;
+  --disc-lg: 76px;
+  --disc-step: 26px;
+  --header-height: 78px;
+  --content-max: 1068px;
+  --font-sans: "Figtree", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+}
+
+.display { font-family: var(--font-sans); font-size: 64px; line-height: 72px; font-weight: 800; letter-spacing: -0.02em; }
+
+.lead { font-family: var(--font-sans); font-size: 30px; line-height: 44px; font-weight: 400; }
+
+.card-title { font-family: var(--font-sans); font-size: 22px; line-height: 28px; font-weight: 600; }
+
+.body { font-family: var(--font-sans); font-size: 16px; line-height: 24px; font-weight: 400; }
+
+.nav { font-family: var(--font-sans); font-size: 15px; line-height: 20px; font-weight: 500; }
+
+.note { font-family: var(--font-sans); font-size: 15px; line-height: 22px; font-weight: 500; }
+
+.step-number { font-family: var(--font-sans); font-size: 13px; line-height: 16px; font-weight: 700; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --surface: #0e1b23;
+  --surface-cool: #13242e;
+  --surface-warm: #1c1f22;
+  --surface-reassure: #172a31;
+  --line: #24363f;
+  --line-cool: #2d4550;
+  --line-warm: #44342c;
+  --divider: #5a7b85;
+  --ink: #eef3f1;
+  --ink-muted: #a8bcc5;
+  --teal: #7cc0d3;
+  --on-teal: #0e1b23;
+  --teal-deep: #a6d9e5;
+  --teal-soft: #1d3d48;
+  --teal-mist: #1a3640;
+  --sage-soft: #22423f;
+  --coral: #f28a66;
+  --coral-soft: #43261b;
+  --coral-ink: #f5a386;
+  --focus: #7cc0d3;
+  --focus-ring: 0 0 0 2px #0e1b23, 0 0 0 4px #7cc0d3;
+  }
+}

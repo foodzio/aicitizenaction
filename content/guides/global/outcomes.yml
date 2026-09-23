@@ -7,28 +7,40 @@ type: outcomes
 geo:
   country: global
 facts:
+  # icon/tone: the design system's IconDisc (document, people, robot, megaphone, lock; teal, mist,
+  # sage, coral). Coral is for routes rooted in people; order keeps the two coral cards apart.
   outcomes:
     - id: law
+      icon: document
+      tone: teal
       match: { sections: [bodies], types: [seat, government], tags_any: [law] }
       prefer_types: [seat]
       # When no body in the user's country or bloc matches, offer international bodies.
       floor_match: { sections: [bodies], types: [multilateral] }
       template: law
     - id: harm
+      icon: shield-search
+      tone: coral
       match: { sections: [bodies, channels], types: [government, reporting-channel, watchdog], tags_any: [harm] }
       floor_match: { sections: [bodies, channels], types: [multilateral, watchdog] }
       template: harm
     - id: fix
+      icon: robot
+      tone: mist
       match: { sections: [channels], types: [company, reporting-channel, watchdog], tags_any: [behaviour, flaw] }
       ignore_geo: true
       # Step 1 asks which company's product it was, instead of where the user lives.
       ask: company
       template: fix
     - id: record
+      icon: megaphone
+      tone: teal
       match: { sections: [bodies], route_types_any: [consultation, docket, evidence, submission] }
       floor_match: { sections: [bodies], types: [multilateral] }
       template: record
     - id: join
+      icon: people
+      tone: coral
       match: { sections: [orgs], tags_any: [join] }
       # The site has no ask of its own: show one organisation per perspective in turn.
       diversify_by: perspective
@@ -36,6 +48,8 @@ facts:
       exclude_perspectives: [industry-lobby]
       template: join
     - id: insider
+      icon: lock
+      tone: sage
       stop: true
   eu_members: [at, be, bg, hr, cy, cz, dk, ee, fi, fr, de, gr, hu, ie, it, lv, lt, lu, mt, nl, pl, pt, ro, sk, si, es, se]
   max_recipients: 3

@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Icon from '../components/Icon.astro';
 import { ui, languages, REPO } from '../lib/data.mjs';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -22,19 +23,27 @@ const path = Astro.url.pathname.replace(/^\/[a-z]{2,3}\//, '/');
     {description && <meta name="description" content={description} />}
     {hide && <meta name="robots" content="noindex" />}
     <meta name="color-scheme" content="light dark" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/brand/aicitizenaction-mark.png" type="image/png" />
+    {!hide && <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />}
+    {!hide && langs.filter(l => l.public).map(l => <link rel="alternate" hreflang={l.code} href={new URL(`/${l.code}${path}`, Astro.site)} />)}
   </head>
   <body>
     <a class="skip" href="#main">{t('site.skip')}</a>
-    <header class="site">
+    <header class="aca-header">
       <div class="wrap">
-        <a class="brand" href={`/${lang}/`}>{t('site.name')}</a>
-        <nav class="main" aria-label="Main">
-          <a href={`/${lang}/`} aria-current={current === 'start' ? 'page' : undefined}>{t('site.nav_start')}</a>
-          {!hideResources && <a href={`/${lang}/resources/`} aria-current={current === 'resources' ? 'page' : undefined}>{t('site.nav_resources')}</a>}
-          <a href={`/${lang}/directory/`} aria-current={current === 'directory' ? 'page' : undefined}>{t('site.nav_directory')}</a>
-          <a href={`/${lang}/about/`} aria-current={current === 'about' ? 'page' : undefined}>{t('site.nav_about')}</a>
+        <a class="aca-header-logo" href={`/${lang}/`} aria-label={t('site.name')}>
+          <img src="/brand/aicitizenaction-lockup.png" alt="" width="274" height="40" />
+          <span class="aca-header-name" aria-hidden="true">AICitizen<em>Action</em>.org</span>
+        </a>
+        <div class="aca-header-bar">
+        <nav class="aca-header-nav" aria-label="Main">
+          <a class:list={['aca-nav-link', current === 'start' && 'is-active']} href={`/${lang}/`} aria-current={current === 'start' ? 'page' : undefined}>{t('site.nav_start')}</a>
+          {!hideResources && <a class:list={['aca-nav-link', current === 'resources' && 'is-active']} href={`/${lang}/resources/`} aria-current={current === 'resources' ? 'page' : undefined}>{t('site.nav_resources')}</a>}
+          <a class:list={['aca-nav-link', current === 'directory' && 'is-active']} href={`/${lang}/directory/`} aria-current={current === 'directory' ? 'page' : undefined}>{t('site.nav_directory')}</a>
+          <a class:list={['aca-nav-link', current === 'about' && 'is-active']} href={`/${lang}/about/`} aria-current={current === 'about' ? 'page' : undefined}>{t('site.nav_about')}</a>
         </nav>
+        <a class="aca-header-utility" href={`/${lang}/about/#privacy`}><Icon name="lock" size={18} />{t('site.nav_privacy')}</a>
+        </div>
       </div>
     </header>
     <main id="main">

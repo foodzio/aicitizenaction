@@ -25,7 +25,7 @@ const S = new Proxy({}, { get: (_, k) => k === 'flow' ? g.strings.flow.map((_, i
     <h2>{S.help_title}</h2>
     <p>{S.help_body}</p>
     <p><a href={`${REPO}/issues/new?template=volunteer.yml`} rel="noopener">{S.help_volunteer}</a> · <a href={`${REPO}/blob/main/CONTRIBUTING.md`} rel="noopener">{S.help_contributing}</a></p>
-    <h2>{S.count_title}</h2>
+    <h2 id="privacy">{S.count_title}</h2>
     <p>{S.count_body}</p>
     <p><a href="/api/counts">{S.count_link}</a></p>
     <h2>{S.data_title}</h2>

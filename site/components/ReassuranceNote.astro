@@ -1,0 +1,10 @@
+---
+// A pill stating a privacy or safety promise that is literally true of the product.
+import Icon from './Icon.astro';
+const { lead } = Astro.props;
+---
+<p class="aca-reassure" role="note">
+  <Icon name="shield-check" size={30} class="aca-reassure-icon" />
+  <span class="aca-reassure-rule" aria-hidden="true"></span>
+  <span class="aca-reassure-text">{lead && <strong>{lead}</strong>}{lead && ' '}<slot /></span>
+</p>

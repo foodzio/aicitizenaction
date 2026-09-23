@@ -1,0 +1,21 @@
+---
+// Numbered teal discs joined by hairlines, then short facts separated by middle dots.
+// With `current`, later discs turn teal-soft and the current one is announced.
+const { steps = 3, current, facts = [], labels = [] } = Astro.props;
+const n = Array.from({ length: steps }, (_, i) => i + 1);
+---
+<div class="aca-steps">
+  <span class="aca-step-discs" aria-hidden={current ? undefined : 'true'}>
+    {n.map(i => (
+      <>
+        {i > 1 && <span class="aca-step-line" />}
+        <span class:list={['aca-step-disc', current && i > current && 'is-future']} data-p={i} aria-current={current === i ? 'step' : undefined} title={labels[i - 1]}>{i}</span>
+      </>
+    ))}
+  </span>
+  {facts.length > 0 && (
+    <span class="aca-step-facts">
+      {facts.map((f, i) => (<>{i > 0 && <span class="aca-step-dot" aria-hidden="true">·</span>}<span>{f}</span></>))}
+    </span>
+  )}
+</div>

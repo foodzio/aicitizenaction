@@ -3,8 +3,8 @@
 strings:
   site:
     name:
-      value: AI Citizen Action
-      src: b9db2dc0
+      value: AICitizenAction.org
+      src: 93b81129
       machine: true
     tagline:
       value: Une action bien ciblée sur l'IA, en une seule fois.
@@ -15,8 +15,8 @@ strings:
       src: ac576a66
       machine: true
     nav_start:
-      value: Commencer
-      src: e4bb9f1e
+      value: Agir
+      src: 49ca842c
       machine: true
     nav_resources:
       value: Ressources
@@ -28,7 +28,11 @@ strings:
       machine: true
     nav_about:
       value: Comment ça marche
-      src: 9c870aa6
+      src: c1879525
+      machine: true
+    nav_privacy:
+      value: Votre vie privée
+      src: cad972db
       machine: true
     footer_note:
       value: Pas de compte, pas de liste de diffusion, pas de pistage.
@@ -67,9 +71,13 @@ strings:
       value: Trois étapes · environ quinze minutes · vous repartez avec un message prêt à envoyer
       src: 89790a09
       machine: true
-    trust:
-      value: Personne ne vous inscrira à quoi que ce soit, et rien de ce que vous tapez ne quitte votre appareil.
-      src: 97068d44
+    trust_lead:
+      value: Personne ne vous inscrira à quoi que ce soit,
+      src: "23709362"
+      machine: true
+    trust_rest:
+      value: et rien de ce que vous tapez ne quitte votre appareil.
+      src: a51c4d1e
       machine: true
     browse:
       value: Vous connaissez déjà le paysage ? Parcourez l'annuaire complet

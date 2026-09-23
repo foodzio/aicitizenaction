@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
+  site: 'https://aicitizenaction.org',
   srcDir: './site',
   publicDir: './site/public',
   outDir: process.env.AICA_OUT ?? './dist',

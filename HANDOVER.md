@@ -70,6 +70,15 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-23T23:32:05Z — Design system applied; domain AICitizenAction.org
+
+- Owner supplied `input/aicitizenaction-design-system.zip` and confirmed the domain **AICitizenAction.org**.
+- Tokens copied to `site/styles/tokens.css` (light + the kit's dark theme, also applied for `prefers-color-scheme: dark`). `site/styles/global.css` rewritten on the tokens and the kit's component styles; old palette removed.
+- Components as Astro: `Icon` (the kit's eight glyphs), `IconDisc`, `ActionCard`, `StepMeta`, `ReassuranceNote`; header follows `SiteHeader` (lockup, nav, "Your Privacy" → How it works #privacy). Door rebuilt: display question, lead, StepMeta, 2-column ActionCard grid (icon/tone per outcome in outcomes.yml; coral cards never touch), ReassuranceNote. Path progress uses step discs with a spoken "Step N of 4" label.
+- Adaptations, with reasons: Figtree **self-hosted** via `@fontsource/figtree` instead of the kit's Google Fonts import (no third-party requests); the logo PNG has the light surface baked in, so dark mode shows a text wordmark instead; on narrow screens the nav is one sideways-scrolling row; the harm card uses `shield-search` so two cards don't share the `people` glyph; the "Unverified" badge uses coral-ink on the warm surface (coral-ink on coral-soft failed contrast).
+- Site name is now "AICitizenAction.org"; Astro `site` = https://aicitizenaction.org, with canonical and hreflang links on public pages. Nav labels in title case per the kit ("Take Action", "How It Works"); French equivalents added.
+- Checks: browser screenshots (phone, desktop, dark), axe light + dark on 7 pages: 0 violations after the badge fix. 71 tests pass (new design-system site test). Not yet redeployed. The custom domain is not yet attached on Railway (needs DNS at the registrar).
+
 ### 2026-09-23T22:41:12Z — French published (owner approved)
 
 - `i18n/fr/status.yml`: `ui_approved: true`, reviewer "owner (published as machine translation)", approved 2026-09-24. Effect: French pages are indexed, every page's footer offers "English · Français" for the same page, and the machine-translation notice no longer shows.
@@ -274,4 +283,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T22:41:12Z
+Last modified: 2026-09-23T23:32:05Z

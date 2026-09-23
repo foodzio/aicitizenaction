@@ -38,7 +38,9 @@ test('the path states its length before it begins', () => {
 test('no page loads anything from a third party (no tracking, no consent wall)', () => {
   for (const f of walkHtml(out)) {
     const html = readFileSync(f, 'utf8');
-    const external = [...html.matchAll(/<(?:script|link|img|iframe)[^>]+(?:src|href)="(https?:\/\/[^"]+)"/g)].map(m => m[1]);
+    // canonical / alternate links name the page's public address; browsers never fetch them.
+    const external = [...html.matchAll(/<(?:script|link|img|iframe)[^>]+(?:src|href)="(https?:\/\/[^"]+)"[^>]*>/g)]
+      .filter(m => !/rel="(canonical|alternate)"/.test(m[0])).map(m => m[1]);
     assert.deepEqual(external, [], f);
   }
 });
@@ -116,4 +118,17 @@ test('regression (QA): a 404 page exists; the French salutation is grammatical; 
     const j = JSON.parse(page(f).match(/id="payload">([\s\S]*?)<\/script>/)[1]);
     for (const place of Object.values(j.byPlace)) for (const r of place.recipients) assert.ok(!/Not applicable/i.test(r.recipient), `${f}: ${r.recipient}`);
   }
+});
+
+test('design system: tokens, self-hosted Figtree, logo, and the door uses its components', () => {
+  const door = page('en/index.html');
+  for (const cls of ['class="display"', 'aca-steps', 'aca-card', 'aca-disc', 'aca-reassure', 'aca-header']) assert.ok(door.includes(cls), cls);
+  assert.ok(existsSync(join(out, 'brand/aicitizenaction-lockup.png')));
+  const css = readdirSync(join(out, '_astro')).filter(f => f.endsWith('.css')).map(f => readFileSync(join(out, '_astro', f), 'utf8')).join('\n');
+  assert.match(css, /--teal:\s*#2a6d82/);
+  assert.match(css, /font-family:\s*Figtree/);
+  assert.ok(!/fonts\.googleapis|fonts\.gstatic/.test(css), 'fonts must be served from the site');
+  assert.ok(readdirSync(join(out, '_astro')).some(f => f.endsWith('.woff2')), 'Figtree woff2 files are bundled');
+  const harm = door.indexOf('/en/start/harm/'), join_ = door.indexOf('/en/start/join/');
+  assert.ok(harm > 0 && join_ > 0);
 });

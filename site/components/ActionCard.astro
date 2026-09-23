@@ -1,0 +1,14 @@
+---
+// One outcome the person wants, as a full-width card. Coral tone sits on the warm surface.
+import IconDisc from './IconDisc.astro';
+import Icon from './Icon.astro';
+const { title, description, icon, tone = 'teal', href, lang } = Astro.props;
+---
+<a class:list={['aca-card', tone === 'coral' ? 'aca-card-warm' : 'aca-card-cool']} href={href}>
+  <IconDisc icon={icon} tone={tone} />
+  <span class="aca-card-text">
+    <span class="aca-card-title" lang={lang}>{title}</span>
+    {description && <span class="aca-card-desc" lang={lang}>{description}</span>}
+  </span>
+  <Icon name="arrow-right" size={26} class="aca-card-arrow" />
+</a>

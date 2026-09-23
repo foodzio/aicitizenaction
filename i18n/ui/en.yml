@@ -3,13 +3,14 @@
 # No URLs or email addresses here: links are built in code.
 strings:
   site:
-    name: AI Citizen Action
+    name: AICitizenAction.org
     tagline: One well-aimed action about AI, in one sitting.
     skip: Skip to content
-    nav_start: Start
+    nav_start: Take Action
     nav_resources: Resources
     nav_directory: Directory
-    nav_about: How it works
+    nav_about: How It Works
+    nav_privacy: Your Privacy
     footer_note: No account, no mailing list, no tracking.
     footer_version: Version
     footer_freshness: How current is this?
@@ -20,7 +21,8 @@ strings:
     title: What do you want to happen?
     lede: You don't need to be an expert. Your view counts because you live with the results — not because you can evaluate the technology.
     shape: Three steps · about fifteen minutes · you leave with a message ready to send
-    trust: Nobody will sign you up to anything, and nothing you type leaves your device.
+    trust_lead: Nobody will sign you up to anything,
+    trust_rest: and nothing you type leaves your device.
     browse: Already know the landscape? Browse the full directory
   path:
     step: Step

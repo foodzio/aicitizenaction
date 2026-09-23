@@ -1,6 +1,6 @@
 {
   "name": "aicitizenaction",
-  "version": "0.1.29",
+  "version": "0.1.30",
   "private": true,
   "type": "module",
   "description": "Routes an alarmed non-expert to the one institution that can act on their AI concern, and hands them a draft.",
@@ -19,6 +19,7 @@
     "serve": "npm run build && node server.mjs"
   },
   "dependencies": {
+    "@fontsource/figtree": "5.3.0",
     "ajv": "8.20.0",
     "ajv-formats": "3.0.1",
     "astro": "7.3.4",

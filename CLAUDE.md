@@ -36,6 +36,7 @@ Update this table as the repo grows — it is the map, so a stale map is a bug.
 | `input/data/` | Normalized datasets: institutions, committees and organisations, source index |
 | `input/data/raw/` | Unnormalized output from the ten research agents. Expensive to recreate — do not delete |
 | `input/src/` | Page sources for the two published prototype pages (Artifact format — no doctype/head/body) |
+| `input/aicitizenaction-design-system.zip` | The AICitizenAction design system (tokens, components, logo). Applied to the site; source of `site/styles/tokens.css`, `site/components/`, `site/public/brand/` |
 | `input/screenshots/` | Render checks, desktop and mobile |
 | `tmp/` | Scratch output (gitignored; Playwright MCP writes here) |
 | `.claude/` | Claude Code settings, skills, agents for this project |
@@ -52,7 +53,7 @@ Update this table as the repo grows — it is the map, so a stale map is a bug.
 | `tests/` | `node:test` suites; `helpers.mjs` builds throwaway content trees via `AICA_CONTENT` / `AICA_I18N` |
 | `package.json` | Node scripts and dependencies |
 | `astro.config.mjs` | Astro static site config: `srcDir: site/`, output `dist/` (override with `AICA_OUT`) |
-| `site/` | Site source — developers only. `pages/[lang]/` (door `index`, `start/[outcome]` path, `directory`, `[section]/[id]` records, `about`, `resources`, `freshness`, `contributors`), `pages/api/[section].json.js`, `pages/version.json.js`, `layouts/Base.astro`, `lib/data.mjs` (build-time data, UI strings, cards, precomputed routing), `lib/measure.js` (completion events, sends nothing), `styles/global.css` |
+| `site/` | Site source — developers only. `pages/[lang]/` (door `index`, `start/[outcome]` path, `directory`, `[section]/[id]` records, `about`, `resources`, `freshness`, `contributors`), `pages/api/[section].json.js`, `pages/version.json.js`, `layouts/Base.astro` (design-system SiteHeader), `components/` (Icon, IconDisc, ActionCard, StepMeta, ReassuranceNote), `styles/tokens.css` (design tokens), `public/brand/` (logo), `lib/data.mjs` (build-time data, UI strings, cards, precomputed routing), `lib/measure.js` (completion events, sends nothing), `styles/global.css` |
 | `i18n/ui/en.yml` | English source of every interface string; translations go in `i18n/ui/<lang>.yml` |
 | `i18n/fr/` | French pilot: `status.yml` (gate — `ui_approved: true` since 2026-09-24: public, indexed, in the switcher; set `false` to hide a language), `content/guides/…` translated guides. `i18n/ui/fr.yml` holds the UI. Machine translation, published by the owner |
 | `content/resources/` | Resources: `sources/<geo>/` (15 verified feeds, each with a perspective), `media/<yyyy>/<mm>/` (ingested items; only `published` are shown), `explainers/`, `windows/` (dated, expire on `closes_on`) |
@@ -214,4 +215,4 @@ List every `HANDOVER.md` in this repo and what it covers, so the map stays true:
 | `HANDOVER.md` | Repo-wide work for `aicitizenaction` |
 | _(add rows as subprojects appear)_ | |
 
-Last modified: 2026-09-23T22:41:12Z
+Last modified: 2026-09-23T23:32:05Z
