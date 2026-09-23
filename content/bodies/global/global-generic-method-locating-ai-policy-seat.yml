@@ -4,6 +4,7 @@ geo:
   country: global
   label: Any other country
 facts:
+  recommend: false
   routes:
     - id: membership
       type: membership

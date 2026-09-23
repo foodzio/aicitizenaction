@@ -40,7 +40,10 @@ export function matches(record, match) {
   return true;
 }
 
-export const recommendable = record => !record.meta?.unsourced && !!contactRoute(record);
+export const recommendable = record => record.facts?.recommend !== false && !record.meta?.unsourced && !!contactRoute(record);
+
+/** A seat-holder name that is a real person, not a placeholder like "Not applicable". */
+export const isNamedPerson = name => !!name && !/^(not applicable|none|n\/a|vacant|not verified|unknown)/i.test(String(name).trim());
 
 // Until phase 1b adds powers and topics, prefer full committees with a named chair over
 // subcommittees, caucuses, task forces and participation systems. The brief's first insight:
@@ -49,7 +52,7 @@ export function seatWeight(r) {
   if (r.type !== 'seat') return 2;
   const name = r.strings?.name ?? '';
   if (/caucus|task force|route|system|method|portal|platform/i.test(name)) return 3;
-  const chair = (r.facts?.seats ?? []).some(s => s.role === 'chair');
+  const chair = (r.facts?.seats ?? []).some(s => s.role === 'chair' && isNamedPerson(s.name));
   if (/\bsubcommittee\b/i.test(name)) return chair ? 1 : 2;
   if (/\bcommittee\b|commission|\bcomit|委員会|위원회/i.test(name)) return chair ? 0 : 1;
   return chair ? 1 : 2;
@@ -120,7 +123,10 @@ export function route(outcome, where, records, { euMembers = [], max = 3 } = {})
     const bloc = pool.filter(r => r.geo.country === 'eu');
     if (bloc.length) return take(bloc, 'bloc', true);
   }
-  return take(pool.filter(r => r.geo.country === 'global'), 'global', true);
+  const floorPool = outcome.floor_match
+    ? records.filter(r => matches(r, outcome.floor_match) && recommendable(r)).sort(rank(outcome))
+    : pool;
+  return take(floorPool.filter(r => r.geo.country === 'global'), 'global', true);
 }
 
 /** Round-robin across values of facts[field], keeping rank order within each value. */

@@ -108,3 +108,15 @@ test('apply-routing-drafts keeps only values backed by an exact quote from the r
   assert.deepEqual(r.kept.powers, []);
   assert.equal(r.dropped.length, 3);
 });
+
+test('regression (QA B7): "somewhere else" offers international bodies, never a method record or a placeholder chair', async () => {
+  const { isNamedPerson } = await import('../scripts/lib/routing.mjs');
+  for (const id of ['law', 'record', 'harm']) {
+    const r = route(outcome(id), { country: 'zz' }, records, opts);
+    assert.equal(r.scope, 'global');
+    assert.ok(r.recipients.length > 0);
+    for (const x of r.recipients) assert.notEqual(x.facts.recommend, false, x.id);
+  }
+  assert.equal(isNamedPerson('Not applicable'), false);
+  assert.equal(isNamedPerson('Ted Cruz'), true);
+});

@@ -55,6 +55,7 @@ strings:
     write: Write to them
     floor_bloc: No body in your country has this power yet. The European Union's institutions do, and they accept messages from people in any member state.
     floor_global: We haven't found a body in your country with this power. These international bodies accept messages from anyone. You could also ask your own parliament's technology committee — the method is in the directory.
+    method_link: How to find the right committee in any parliament
     none: We couldn't find anyone who can act on this yet. That is a gap in our research, not in your concern — please tell us.
     own_words_title: Why does this matter to you?
     own_words_missing: "[Your own words — why this matters to you]"
@@ -137,6 +138,9 @@ strings:
       orgs: Organisations
   about:
     title: How it works
+  notfound:
+    title: This page isn't here
+    body: It may have moved, or an item may not be published yet. You can start from one question, or search the directory.
   freshness:
     title: How current is this?
     lede: Every record has a date by which it must be checked again. This page shows how much of the directory is within its date, where the project is thin, and how balanced the Resources collection is.

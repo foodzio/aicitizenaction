@@ -204,6 +204,10 @@ strings:
       value: Nous n'avons pas trouvé d'organisme de votre pays ayant ce pouvoir. Ces organismes internationaux acceptent les messages de tout le monde. Vous pouvez aussi écrire à la commission du numérique de votre parlement — la méthode est dans l'annuaire.
       src: f28a30b9
       machine: true
+    method_link:
+      value: Comment trouver la bonne commission dans n'importe quel parlement
+      src: dd1a46ac
+      machine: true
     none:
       value: Nous n'avons encore trouvé personne qui puisse agir à ce sujet. C'est une lacune de nos recherches, pas de votre préoccupation — dites-le-nous.
       src: acafb5bb
@@ -513,6 +517,15 @@ strings:
     title:
       value: Comment ça marche
       src: 9c870aa6
+      machine: true
+  notfound:
+    title:
+      value: Cette page n'existe pas
+      src: 1e42d37c
+      machine: true
+    body:
+      value: Elle a peut-être été déplacée, ou un élément n'est pas encore publié. Vous pouvez commencer par une seule question, ou chercher dans l'annuaire.
+      src: c50c9be5
       machine: true
   freshness:
     title:

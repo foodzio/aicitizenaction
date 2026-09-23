@@ -1,0 +1,14 @@
+---
+// Served for any unknown path (serve and most static hosts pick up 404.html).
+import Base from '../layouts/Base.astro';
+import { ui } from '../lib/data.mjs';
+const t = ui('en');
+---
+<Base lang="en" title={t('notfound.title')} noindex>
+  <div class="narrow">
+    <h1>{t('notfound.title')}</h1>
+    <p class="lede">{t('notfound.body')}</p>
+    <p><a class="btn" href="/en/">{t('resources.newcomer_link')} →</a></p>
+    <p><a href="/en/directory/">{t('door.browse')}</a></p>
+  </div>
+</Base>

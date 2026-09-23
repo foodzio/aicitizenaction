@@ -4,7 +4,7 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadDirectory, loadContent, loadVocab, vocabLabel, readYaml, walk, I18N, ROOT } from '../../scripts/lib/content.mjs';
 import { stringsOf, resolveString } from '../../scripts/lib/i18n.mjs';
-import { route, places, contactRoute, membershipRoute, fillTemplate } from '../../scripts/lib/routing.mjs';
+import { route, places, contactRoute, membershipRoute, fillTemplate, isNamedPerson } from '../../scripts/lib/routing.mjs';
 
 export const REPO = 'https://github.com/sinscrit/aicitizenaction';
 export const SECTIONS = ['bodies', 'channels', 'orgs'];
@@ -107,7 +107,7 @@ const plain = s => String(s).replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').t
 export function card(r, lang) {
   const s = recordStrings(r, lang);
   const text = k => s[k]?.text ?? '';
-  const chair = (r.facts.seats ?? []).find(x => x.role === 'chair');
+  const chair = (r.facts.seats ?? []).find(x => x.role === 'chair' && isNamedPerson(x.name));
   const contact = contactRoute(r);
   const member = membershipRoute(r);
   const { vocab } = data();
@@ -130,7 +130,7 @@ export function card(r, lang) {
       isUrl: /^https?:\/\//.test(contact.value)
     },
     membership: member?.value ?? null,
-    seats: (r.facts.seats ?? []).map(x => ({ role: x.role, name: x.name, party: x.party ?? '', region: x.region ?? '', verifiedOn: x.verified_on })),
+    seats: (r.facts.seats ?? []).filter(x => isNamedPerson(x.name)).map(x => ({ role: x.role, name: x.name, party: x.party ?? '', region: x.region ?? '', verifiedOn: x.verified_on })),
     checked: r.meta.verified_on,
     overdue: isOverdue(r),
     recipient: chair ? `${plain(chair.name)}, Chair, ${plain(text('name'))}` : plain(text('name')),

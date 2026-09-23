@@ -3,45 +3,136 @@
   "$id": "https://aicitizenaction/schema/channel.schema.json",
   "title": "Channel",
   "description": "A place to report: an AI company's safety channels, a public reporting channel, or a watchdog or incident database. Lives in content/channels/.",
-  "allOf": [{ "$ref": "record.schema.json" }],
+  "allOf": [
+    {
+      "$ref": "record.schema.json"
+    }
+  ],
   "properties": {
-    "type": { "enum": ["company", "reporting-channel", "watchdog"] },
+    "type": {
+      "enum": [
+        "company",
+        "reporting-channel",
+        "watchdog"
+      ]
+    },
     "facts": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["routes"],
+      "required": [
+        "routes"
+      ],
       "properties": {
-        "routes": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/route" } },
-        "local_name": { "type": "string" },
-        "level": { "$ref": "common.schema.json#/$defs/vocabId" },
-        "chamber": { "type": "string" },
-        "parent": { "type": "string" },
-        "region": { "type": "string" },
-        "public_input": { "enum": ["open", "limited", "none"] },
-        "language": { "type": "string", "description": "Language(s) the body's participation routes work in" },
-        "tags": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/vocabId" } },
+        "routes": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/route"
+          }
+        },
+        "local_name": {
+          "type": "string"
+        },
+        "level": {
+          "$ref": "common.schema.json#/$defs/vocabId"
+        },
+        "chamber": {
+          "type": "string"
+        },
+        "parent": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "public_input": {
+          "enum": [
+            "open",
+            "limited",
+            "none"
+          ]
+        },
+        "language": {
+          "type": "string",
+          "description": "Language(s) the body's participation routes work in"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "$ref": "common.schema.json#/$defs/vocabId"
+          }
+        },
         "seats": {
           "type": "array",
           "items": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["role", "name", "verified_on"],
+            "required": [
+              "role",
+              "name",
+              "verified_on"
+            ],
             "properties": {
-              "role": { "enum": ["chair", "ranking", "rapporteur", "minister", "head", "member", "other"] },
-              "name": { "type": "string", "minLength": 1 },
-              "party": { "type": "string" },
-              "region": { "type": "string" },
-              "verified_on": { "$ref": "common.schema.json#/$defs/date" }
+              "role": {
+                "enum": [
+                  "chair",
+                  "ranking",
+                  "rapporteur",
+                  "minister",
+                  "head",
+                  "member",
+                  "other"
+                ]
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "party": {
+                "type": "string"
+              },
+              "region": {
+                "type": "string"
+              },
+              "verified_on": {
+                "$ref": "common.schema.json#/$defs/date"
+              }
             }
           }
         },
-        "accepts_foreign": { "type": "boolean" },
-        "effort_minutes": { "type": "integer", "minimum": 1 },
-        "powers": { "$ref": "common.schema.json#/$defs/vocabList" },
-        "topics": { "$ref": "common.schema.json#/$defs/vocabList" },
-        "not_topics": { "$ref": "common.schema.json#/$defs/vocabList" },
-        "routing_evidence": { "type": "object", "description": "Phase 1b: for each routing value, the source sentence it was taken from", "additionalProperties": { "type": "string" } },
-        "routing_review": { "enum": ["drafted", "reviewed"], "description": "drafted: machine or first-pass draft, not yet used by routing. reviewed: a second person checked it" }
+        "accepts_foreign": {
+          "type": "boolean"
+        },
+        "effort_minutes": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "powers": {
+          "$ref": "common.schema.json#/$defs/vocabList"
+        },
+        "topics": {
+          "$ref": "common.schema.json#/$defs/vocabList"
+        },
+        "not_topics": {
+          "$ref": "common.schema.json#/$defs/vocabList"
+        },
+        "routing_evidence": {
+          "type": "object",
+          "description": "Phase 1b: for each routing value, the source sentence it was taken from",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "routing_review": {
+          "enum": [
+            "drafted",
+            "reviewed"
+          ],
+          "description": "drafted: machine or first-pass draft, not yet used by routing. reviewed: a second person checked it"
+        },
+        "recommend": {
+          "type": "boolean",
+          "description": "false: never offered as a recipient on the path (a method, portal or guidance record); still listed in the directory"
+        }
       }
     }
   }

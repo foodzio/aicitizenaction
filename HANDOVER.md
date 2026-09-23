@@ -70,6 +70,12 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-23T01:58:15Z — QA run 1 and fixes
+
+- Run 1 (QA subagent, 37 scenarios): 30 PASS, 6 PASS-WITH-NOTE, 1 FAIL. Full table in `docs/test-results.md`.
+- Fixed: share link on step 4 now points at the path (step 2 for the same place/company); in-page Back uses history; "Somewhere else" offers international bodies via `floor_match` in outcomes.yml (law, record, harm) and links to the any-parliament method; new `facts.recommend: false` (set on the generic-method record) keeps guidance records out of recipient lists; placeholder chairs ("Not applicable") no longer used in salutations or ranking (`isNamedPerson`); Colorado window breadcrumb; French salutation ("À l'attention de : … / Madame, Monsieur,"); site 404 page; long small-print lines capped.
+- Regression tests added (routing + site). 65 pass. Run 2 (re-test of affected scenarios) in progress → /tmp/claude-503/scenario-retest.md.
+
 ### 2026-09-23T01:19:58Z — End-to-end scenarios (owner: "no need for review at the moment")
 
 - Owner instruction: skip human reviews for now; write test scenarios, have a subagent run them, then build the site.
@@ -215,4 +221,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T01:19:58Z
+Last modified: 2026-09-23T01:58:15Z

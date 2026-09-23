@@ -3,7 +3,7 @@
 // Routing is precomputed at build time for every place; the browser only switches views.
 // Every state has a URL (?where=us&sub=ca&to=<id>&step=3), so a link can open mid-path.
 import Base from '../../../../layouts/Base.astro';
-import { data, ui, languages, outcomePayload, placeOptions, guideText } from '../../../../lib/data.mjs';
+import { data, ui, languages, outcomePayload, placeOptions, guideText, recordUrl } from '../../../../lib/data.mjs';
 
 export function getStaticPaths() {
   const oc = data().guide('outcomes').facts.outcomes;
@@ -25,12 +25,13 @@ const places = placeOptions(lang);
 const keys = ['path.step', 'path.of', 'path.floor_bloc', 'path.floor_global', 'path.none', 'path.can_do', 'path.leverage',
   'path.how_reach', 'path.people', 'path.checked', 'path.membership', 'path.details', 'path.choose', 'path.chosen',
   'path.copied', 'path.copy', 'verify.true', 'verify.false', 'verify.null', 'verify.true_hint', 'verify.false_hint',
-  'verify.null_hint', 'verify.language', 'verify.overdue', 'path.own_words_missing'];
+  'verify.null_hint', 'verify.language', 'verify.overdue', 'path.own_words_missing', 'path.method_link'];
 const payload = outcome.stop ? null : {
   lang,
   outcome: { id: outcome.id, ignoreGeo: !!outcome.ignore_geo && outcome.ask !== 'company', ask: outcome.ask ?? null },
   byPlace: outcomePayload(outcome, lang),
   template: gt(`templates.${outcome.template}`),
+  methodUrl: (m => m ? recordUrl(lang, m) : null)(data().records.find(r => r.facts.recommend === false && r.geo.country === 'global')),
   t: Object.fromEntries(keys.map(k => [k, t(k)]))
 };
 const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4')];
@@ -203,6 +204,10 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
       const floor = $('#floor');
       floor.hidden = !(r.floor || !r.recipients.length);
       floor.textContent = !r.recipients.length ? T['path.none'] : r.scope === 'bloc' ? T['path.floor_bloc'] : T['path.floor_global'];
+      if (r.scope === 'global' && P.methodUrl) {
+        const a = document.createElement('a'); a.href = P.methodUrl; a.textContent = T['path.method_link'];
+        floor.append(' ', a);
+      }
       const c = chosen();
       $('#to-draft').disabled = !c;
       $('#primary').innerHTML = c ? cardHtml(c, true) : '';
@@ -222,7 +227,9 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
       $('#send-to').innerHTML = c ? `<div class="card">${contactHtml(c.contact)}</div>` : '';
     }
 
+    let depth = 0;                                   // steps pushed onto history by this page
     function syncUrl(push) {
+      if (push) depth++;
       const p = new URLSearchParams();
       if (state.where) p.set('where', state.where);
       if (state.sub) p.set('sub', state.sub);
@@ -244,8 +251,14 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
       });
       if (step === 2) renderRecipients();
       if (step === 3) renderDraft();
-      if (step === 4) $('#share').value = location.href;
       syncUrl(push);
+      if (step === 4) {
+        const s = new URL(location.href);
+        s.searchParams.delete('to');
+        s.searchParams.set('step', s.searchParams.get('where') || s.searchParams.get('company') ? '2' : '1');
+        if (s.searchParams.get('step') === '1') s.searchParams.delete('step');
+        $('#share').value = s.href;
+      }
       measure('path_step', { outcome: P.outcome.id, step });
       const h = sections.find(s => !s.hidden)?.querySelector('h2');
       if (h && push) { h.setAttribute('tabindex', '-1'); h.focus(); }
@@ -260,7 +273,7 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
     document.addEventListener('click', e => {
       const go = e.target.closest('[data-go]');
       if (go) { show(Number(go.dataset.go)); if (go.dataset.go === '4') measure('path_done', { outcome: P.outcome.id }); }
-      if (e.target.closest('[data-back]')) show(Math.max(firstStep, state.step - 1));
+      if (e.target.closest('[data-back]')) { if (depth > 0) history.back(); else show(Math.max(firstStep, state.step - 1)); }
       const pick = e.target.closest('[data-pick]');
       if (pick) { state.to = pick.dataset.pick; state.draftEdited = false; renderRecipients(); syncUrl(false); measure('recipient_chosen', { recipient: state.to }); }
     });
@@ -281,7 +294,11 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
       URL.revokeObjectURL(a.href);
       done('draft_downloaded');
     });
-    window.addEventListener('popstate', e => { if (e.state) { Object.assign(state, e.state); show(state.step, false); } });
+    window.addEventListener('popstate', e => {
+      depth = Math.max(0, depth - 1);
+      if (e.state) { Object.assign(state, e.state); show(state.step, false); }
+      else show(firstStep, false);
+    });
     show(state.step, false);
   }
 </script>

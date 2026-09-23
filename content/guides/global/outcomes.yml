@@ -11,9 +11,12 @@ facts:
     - id: law
       match: { sections: [bodies], types: [seat, government], tags_any: [law] }
       prefer_types: [seat]
+      # When no body in the user's country or bloc matches, offer international bodies.
+      floor_match: { sections: [bodies], types: [multilateral] }
       template: law
     - id: harm
       match: { sections: [bodies, channels], types: [government, reporting-channel, watchdog], tags_any: [harm] }
+      floor_match: { sections: [bodies, channels], types: [multilateral, watchdog] }
       template: harm
     - id: fix
       match: { sections: [channels], types: [company, reporting-channel, watchdog], tags_any: [behaviour, flaw] }
@@ -23,6 +26,7 @@ facts:
       template: fix
     - id: record
       match: { sections: [bodies], route_types_any: [consultation, docket, evidence, submission] }
+      floor_match: { sections: [bodies], types: [multilateral] }
       template: record
     - id: join
       match: { sections: [orgs], tags_any: [join] }

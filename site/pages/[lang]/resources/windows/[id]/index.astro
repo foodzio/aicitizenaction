@@ -15,7 +15,7 @@ const rel = related(lang, w.facts);
 ---
 <Base lang={lang} title={w.strings.title} current="resources">
   <article class="narrow" data-closes={w.facts.closes_on}>
-    <p class="meta-line"><a href={`/${lang}/resources/windows/`}>{t('resources.windows_archive')}</a></p>
+    <p class="meta-line"><a href={`/${lang}/resources/`}>{t('resources.title')}</a> · <a href={`/${lang}/resources/windows/`}>{open ? t('resources.windows') : t('resources.windows_archive')}</a></p>
     <h1>{w.strings.title}</h1>
     <dl class="facts">
       <dt>{t('record.place')}</dt><dd>{placeName(w.facts.jurisdiction, lang)}</dd>

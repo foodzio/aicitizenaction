@@ -99,3 +99,13 @@ test('the "fix" outcome asks which company, and offers independent channels alon
   assert.ok(recips.filter(r => r.isCompany).length >= 10);
   assert.ok(recips.some(r => !r.isCompany), 'an independent channel is available');
 });
+
+test('regression (QA): a 404 page exists; the French salutation is grammatical; drafts never greet "Not applicable"', () => {
+  assert.match(page('404.html'), /This page isn't here|This page isn&#39;t here/);
+  const fr = JSON.parse(page('fr/start/law/index.html').match(/id="payload">([\s\S]*?)<\/script>/)[1]);
+  assert.match(fr.template, /^À l'attention de : \{recipient\}\n\nMadame, Monsieur,/);
+  for (const f of ['en/start/law/index.html', 'en/start/record/index.html', 'en/start/harm/index.html']) {
+    const j = JSON.parse(page(f).match(/id="payload">([\s\S]*?)<\/script>/)[1]);
+    for (const place of Object.values(j.byPlace)) for (const r of place.recipients) assert.ok(!/Not applicable/i.test(r.recipient), `${f}: ${r.recipient}`);
+  }
+});

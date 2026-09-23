@@ -15,7 +15,9 @@ strings:
   templates:
     law:
       value: |
-        Madame, Monsieur {recipient},
+        À l'attention de : {recipient}
+
+        Madame, Monsieur,
 
         Je vous écris en tant que citoyen·ne au sujet de l'intelligence artificielle.
 
@@ -30,7 +32,9 @@ strings:
       machine: true
     harm:
       value: |
-        Madame, Monsieur {recipient},
+        À l'attention de : {recipient}
+
+        Madame, Monsieur,
 
         Je vous écris pour signaler un préjudice impliquant un système d'intelligence artificielle.
 

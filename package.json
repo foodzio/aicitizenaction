@@ -1,6 +1,6 @@
 {
   "name": "aicitizenaction",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "private": true,
   "type": "module",
   "description": "Routes an alarmed non-expert to the one institution that can act on their AI concern, and hands them a draft.",
