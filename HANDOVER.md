@@ -177,7 +177,7 @@ Tracked in git and committed with every step.
 ### 2026-09-22T20:37Z–23:37Z — architecture fixed, plan written and revised
 
 See `docs/implementation-plan.md` section 7 for the revision log. Read-only access to the
-stockspanic project (`../stockspanic`) was
+stockspanic project (`../stockspanic` (a sibling project on the owner's machine, not in this repository)) was
 authorized by the owner; nothing there was changed and its `.env` was not read.
 
 ### 2026-09-22 — research and UX brief (before this plan)
@@ -204,17 +204,18 @@ re-aimed at the alarmed non-expert rather than someone with evidence.
 - **`powers_text` in the research often overstates** compel/investigate powers (agents' finding). Don't display it as fact without review; the record page shows it under "Its powers" today.
 - **Local-only artefacts:** `tmp/` (link-check state, screenshots) is gitignored. The first weekly run starts the two-consecutive-failures state afresh.
 
-## Open decisions (owner)
+## Owner decisions
 
-1. **Brief Q1–4** — current defaults: location asked on step 1; cross-border drafts allowed; "join" is one of six equal answers; industry lobbying reference-only. Confirm or change `content/guides/global/outcomes.yml`, then run phase A.
-2. **Brief Q5** — answered by the architecture (geography stewards, 90-day cycle). Confirm.
-3. **Completion counting** — the hook exists (`site/lib/measure.js`, sends nothing). Choose a method (e.g. a cookieless counter) or none.
-4. **Second language** — French is a gated pilot; confirm or pick another.
-5. **GitHub** — push; move to an organisation (enables teams + intake-bot bypass) or add `INTAKE_TOKEN`; branch protection; Discussions (`docs/github-setup.md`).
-6. **Public repo?** Needed for report/volunteer links to work for readers.
-7. **Deploy** — Railway via `nixpacks.toml` + `serve` is ready; not deployed. Domain undecided.
-8. **Tooling in use, not formally confirmed:** Astro, YAML + JSON Schema, GitHub Actions, own link checker (replaced lychee), axe-core for accessibility checks.
-9. **Visitor discussion on Resources** — out of scope unless chosen.
+**Decided 2026-09-23 (owner):**
+- **GitHub organisation:** yes, move the repository to an organisation. *Pending: which organisation* (owner belongs to `foodzio` and `SGCLE`; a new one can only be created in the GitHub web UI).
+- **Public repository:** yes. *Pending: pre-publication scan follow-ups below.*
+- **Hosting:** Railway (`nixpacks.toml` + `serve dist`). Deploying still needs an explicit go-ahead each time (owner's standing rule).
+- **Visitor discussion on Resources:** no.
+- **Tooling:** confirmed — Astro, YAML + JSON Schema, GitHub Actions, own link checker, axe-core.
+
+**Recommended, not yet decided:** brief Q1–4 as built (location second; cross-border only as fallback; "join" one of six, after direct actions; lobbying reference-only); Q5 geography stewards / 90 days; completion measured by anonymous event counts with no cookies and no identifiers (a small counting endpoint — not built); French as gated pilot until a reviewer exists; branch protection 1 approval + owner bypass.
+
+**Pre-publication scan (2026-09-23T15:37:42Z):** no API keys, passwords or private keys in files or history. Fixed: a Feishu form redirect `auth_token` removed from `docs/link-check-trial.md`; absolute local paths replaced in `AGENTS.md`, `CLAUDE.md`, `docs/implementation-plan.md`, `HANDOVER.md`. Remaining, for the owner: (a) earlier commits still contain the token and the local paths — publishing as-is exposes them unless history is rewritten before the first push (the remote is empty, so nobody else is affected); (b) commits carry the author email `sinscrit@gmail.com`; (c) `.projstuff` holds the local project path and `.claude/settings.local.json` holds local permissions — both are used by local tooling.
 
 ## How to resume
 
@@ -228,4 +229,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T02:01:40Z
+Last modified: 2026-09-23T15:37:42Z

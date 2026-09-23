@@ -9,7 +9,7 @@ How to get from the research and spec in this repo to a live, volunteer-maintain
 - `docs/ux-brief.md` — the citizen-facing product: door, path, draft, reference.
 - `docs/content-architecture.md` — content as data, translation, freshness, volunteers, and the Resources layer.
 
-**Reference project for Resources:** `stockspanic` (Markets Panic), at `../stockspanic`. Its resources desk (`server/discussion-sources.json`, `server/discussion-ingest.mjs`, `content/discussions/`) and research hub (`content/research/`) are the model.
+**Reference project for Resources:** `stockspanic` (Markets Panic), at `../stockspanic` (a sibling project on the owner's machine, not in this repository). Its resources desk (`server/discussion-sources.json`, `server/discussion-ingest.mjs`, `content/discussions/`) and research hub (`content/research/`) are the model.
 
 ---
 
