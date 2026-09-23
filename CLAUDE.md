@@ -102,7 +102,7 @@ _(Document the real commands here as soon as they exist — install, build, test
 lint, typecheck, dev server, and how to run the app locally. An agent should be
 able to work in this repo using only what is written in this section.)_
 
-- Requires Node 20+ (developed on Node 26).
+- Requires Node 22.12+ (Astro 7; developed on Node 26). `package.json` engines pins this for Railway.
 - Install: `npm install`
 - Regenerate content from `input/`: `npm run migrate` (overwrites `content/bodies|channels|orgs` and `docs/migration-report.md`; only needed if the migration itself changes — after that, `content/` is the source of truth and is edited directly)
 - Validate content: `npm run validate` (`--json` for machine output; exit 1 on errors, overdue records are warnings)
