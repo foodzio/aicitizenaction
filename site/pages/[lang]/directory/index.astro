@@ -1,0 +1,82 @@
+---
+// The reference layer: every record, searchable. Never the front door (docs/ux-brief.md).
+import Base from '../../../layouts/Base.astro';
+import { data, ui, languages, placeName, recordStrings, recordUrl, SECTIONS } from '../../../lib/data.mjs';
+import { vocabLabel } from '../../../../scripts/lib/content.mjs';
+
+export const getStaticPaths = () => languages().map(l => ({ params: { lang: l.code } }));
+const { lang } = Astro.params;
+const t = ui(lang);
+const { records, vocab } = data();
+const rows = records.map(r => {
+  const s = recordStrings(r, lang);
+  const blurb = s.ai_jurisdiction?.text || s.remit?.text || s.the_ask?.text || s.what_they_do?.text || '';
+  return {
+    id: r.id, section: r._section, name: s.name.text, url: recordUrl(lang, r),
+    type: vocabLabel(vocab, 'record-types', r.type), country: r.geo.country, place: placeName(r.geo, lang),
+    verified: r.facts.routes.some(x => x.verified === true),
+    search: `${s.name.text} ${s.local_name?.text ?? ''} ${r.facts.local_name ?? ''} ${blurb}`.toLowerCase()
+  };
+}).sort((a, b) => a.name.localeCompare(b.name, lang));
+const countries = [...new Set(rows.map(r => r.country))].map(c => ({ c, name: placeName({ country: c }, lang) })).sort((a, b) => a.name.localeCompare(b.name, lang));
+---
+<Base lang={lang} title={t('directory.title')} current="directory">
+  <h1>{t('directory.title')}</h1>
+  <p class="lede">{t('directory.lede')}</p>
+  <form class="filters" role="search" onsubmit="return false">
+    <div>
+      <label for="q">{t('directory.search')}</label>
+      <input type="search" id="q" autocomplete="off" />
+    </div>
+    <div>
+      <label for="section">{t('record.type')}</label>
+      <select id="section">
+        <option value="">{t('directory.all_sections')}</option>
+        {SECTIONS.map(s => <option value={s}>{t(`directory.sections.${s}`)}</option>)}
+      </select>
+    </div>
+    <div>
+      <label for="country">{t('record.place')}</label>
+      <select id="country">
+        <option value="">{t('directory.all_places')}</option>
+        {countries.map(c => <option value={c.c}>{c.name}</option>)}
+      </select>
+    </div>
+    <label class="check"><input type="checkbox" id="verified" /> {t('directory.only_verified')}</label>
+  </form>
+  <p class="muted" aria-live="polite"><span id="count">{rows.length}</span> {t('directory.results')}</p>
+  <ul class="results" id="results">
+    {rows.map(r => (
+      <li data-section={r.section} data-country={r.country} data-verified={String(r.verified)} data-search={r.search}>
+        <a href={r.url}>{r.name}</a><br />
+        <span class="meta-line">{r.type} · {r.place}</span>
+      </li>
+    ))}
+  </ul>
+</Base>
+<script>
+  const q = document.getElementById('q'), section = document.getElementById('section'),
+    country = document.getElementById('country'), verified = document.getElementById('verified'),
+    items = [...document.querySelectorAll('#results li')], count = document.getElementById('count');
+  const params = new URLSearchParams(location.search);
+  q.value = params.get('q') ?? ''; section.value = params.get('section') ?? ''; country.value = params.get('country') ?? '';
+  verified.checked = params.get('verified') === '1';
+  function apply() {
+    const terms = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+    let n = 0;
+    for (const li of items) {
+      const ok = (!section.value || li.dataset.section === section.value)
+        && (!country.value || li.dataset.country === country.value)
+        && (!verified.checked || li.dataset.verified === 'true')
+        && terms.every(w => li.dataset.search.includes(w));
+      li.hidden = !ok; if (ok) n++;
+    }
+    count.textContent = n;
+    const p = new URLSearchParams();
+    if (q.value) p.set('q', q.value); if (section.value) p.set('section', section.value);
+    if (country.value) p.set('country', country.value); if (verified.checked) p.set('verified', '1');
+    history.replaceState(null, '', `${location.pathname}${p.toString() ? '?' + p : ''}`);
+  }
+  [q, section, country, verified].forEach(x => x.addEventListener('input', apply));
+  apply();
+</script>

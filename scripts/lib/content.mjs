@@ -1,11 +1,23 @@
 // Shared loaders for content/, i18n/ and schema/vocab/. Used by validate, the site build,
 // charter, freshness and tests, so every tool reads the tree the same way.
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
-import { join, relative, sep } from 'node:path';
+import { join, relative, sep, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import YAML from 'yaml';
 
-export const ROOT = fileURLToPath(new URL('../../', import.meta.url));
+// The repo root: the nearest folder above this file whose package.json is this project's.
+// Walking up (rather than a fixed '../../') keeps it right when the site build bundles this file.
+function findRoot() {
+  if (process.env.AICA_ROOT) return process.env.AICA_ROOT;
+  let dir = dirname(fileURLToPath(import.meta.url));
+  while (dir !== dirname(dir)) {
+    const pkg = join(dir, 'package.json');
+    if (existsSync(pkg) && JSON.parse(readFileSync(pkg, 'utf8')).name === 'aicitizenaction') return dir;
+    dir = dirname(dir);
+  }
+  return process.cwd();
+}
+export const ROOT = findRoot();
 // AICA_CONTENT / AICA_I18N point the tools at another tree (used by tests).
 export const CONTENT = process.env.AICA_CONTENT ?? join(ROOT, 'content');
 export const VOCAB = join(ROOT, 'schema', 'vocab');

@@ -1,0 +1,9 @@
+---
+// Placeholder until phase 4 builds the Resources collection.
+import Base from '../../../layouts/Base.astro';
+import { ui, languages } from '../../../lib/data.mjs';
+export const getStaticPaths = () => languages().map(l => ({ params: { lang: l.code } }));
+const { lang } = Astro.params;
+const t = ui(lang);
+---
+<Base lang={lang} title={t('site.nav_resources')} current="resources"><h1>{t('site.nav_resources')}</h1></Base>

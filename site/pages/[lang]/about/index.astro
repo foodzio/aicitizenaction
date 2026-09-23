@@ -1,0 +1,31 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { data, ui, languages, REPO, SECTIONS } from '../../../lib/data.mjs';
+
+export const getStaticPaths = () => languages().map(l => ({ params: { lang: l.code } }));
+const { lang } = Astro.params;
+const t = ui(lang);
+const g = data().guide('about');
+const S = g.strings;
+---
+<Base lang={lang} title={S.title} current="about" draft={g.meta.status === 'draft'}>
+  <div class="narrow">
+    <h1>{S.title}</h1>
+    <p class="lede">{S.lede}</p>
+    <h2>{S.flow_title}</h2>
+    <ol class="flow">{S.flow.map(f => <li><strong>{f.title}</strong><br />{f.body}</li>)}</ol>
+    <h2>{S.verify_title}</h2>
+    <p>{S.verify_body}</p>
+    <ul>
+      {['true', 'false', 'null'].map(v => <li><span class={`badge v-${v}`}>{t(`verify.${v}`)}</span> — {t(`verify.${v}_hint`)}</li>)}
+    </ul>
+    <h2>{S.neutral_title}</h2>
+    <p>{S.neutral_body}</p>
+    <h2>{S.help_title}</h2>
+    <p>{S.help_body}</p>
+    <p><a href={`${REPO}/issues/new?template=volunteer.yml`} rel="noopener">{S.help_volunteer}</a> · <a href={`${REPO}/blob/main/CONTRIBUTING.md`} rel="noopener">{S.help_contributing}</a></p>
+    <h2>{S.data_title}</h2>
+    <p>{S.data_body}</p>
+    <ul>{SECTIONS.map(s => <li><a href={`/api/${s}.json`}>/api/{s}.json</a> — {t(`directory.sections.${s}`)}</li>)}</ul>
+  </div>
+</Base>

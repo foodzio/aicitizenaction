@@ -1,0 +1,134 @@
+# Interface strings — English source. Translations live in i18n/ui/<lang>.yml as
+# { value, src } pairs, where src is the hash of the English below (scripts/i18n-sync.mjs).
+# No URLs or email addresses here: links are built in code.
+strings:
+  site:
+    name: AI Citizen Action
+    tagline: One well-aimed action about AI, in one sitting.
+    skip: Skip to content
+    nav_start: Start
+    nav_resources: Resources
+    nav_directory: Directory
+    nav_about: How it works
+    footer_note: No account, no mailing list, no tracking. Every address says whether a person has opened it and when.
+    footer_version: Version
+    language: Language
+    draft_notice: This page's wording is a first draft and has not been reviewed yet.
+    translation_fallback: Not yet translated — shown in English.
+    translation_machine: Machine translation, not yet reviewed.
+  door:
+    title: What do you want to happen?
+    lede: You don't need to be an expert. Your view counts because you live with the results — not because you can evaluate the technology.
+    shape: Three steps · about fifteen minutes · you leave with a message ready to send
+    trust: Nobody will sign you up to anything, and nothing you type leaves your device.
+    browse: Already know the landscape? Browse the full directory
+  path:
+    step: Step
+    of: of
+    step1: Where you are
+    step2: Who can act
+    step3: Your message
+    step4: Done
+    where_question: Where do you live?
+    where_hint: This decides which institutions can act for you. You can change it later.
+    where_state: Which state? (optional)
+    where_skip: I'd rather not say
+    where_any: Somewhere else
+    show: Show who can act
+    back: Back
+    no_js: This guided path needs JavaScript. You can still use the full directory.
+    why_title: The best place to send this
+    alternatives: Or choose one of these instead
+    choose: Choose this one
+    chosen: Chosen
+    can_do: What they can do
+    leverage: Honest leverage
+    how_reach: How to reach them
+    people: Who holds the seats
+    checked: Checked
+    membership: Official, up-to-date list of members
+    details: Full record
+    write: Write to them
+    floor_bloc: No body in your country has this power yet. The European Union's institutions do, and they accept messages from people in any member state.
+    floor_global: We haven't found a body in your country with this power. These international bodies accept messages from anyone. You could also ask your own parliament's technology committee — the method is in the directory.
+    none: We couldn't find anyone who can act on this yet. That is a gap in our research, not in your concern — please tell us.
+    own_words_title: Why does this matter to you?
+    draft_title: Your message
+    draft_hint: Edit anything. It's yours.
+    send_to: Send it to
+    copy: Copy message
+    copied: Copied
+    download: Download as a text file
+    next_title: What happens next
+    next_default: Staff read messages and log positions. A short personal message is more likely to be read than a long one. If you hear nothing in four weeks, a polite follow-up is normal.
+    done_title: That's it — you've done it.
+    done_body: Sending one well-aimed message is a complete action. You don't need to do anything else today.
+    done_next: One next step, if you want one
+    done_share: Tell one person how you did it — send them this page.
+    start_over: Start again
+  verify:
+    "true": Verified
+    "true_hint": Someone opened this page and saw the route on it
+    "false": Unverified
+    "false_hint": Cited by another source, but we couldn't open the page. Treat it as a lead to confirm, not an address to rely on
+    "null": Unchecked
+    "null_hint": Listed as published; not independently checked
+    language: Works in
+    overdue: Due for a re-check since
+    unsourced: No source yet — do not rely on this record
+  record:
+    type: Type
+    place: Place
+    local_name: Local name
+    routes: Ways to reach them
+    seats: Named seats
+    sources: Sources
+    report: Something wrong here?
+    last_checked: Last checked
+    review_by: Next check due
+    fields:
+      remit: What it does
+      ai_jurisdiction: Its AI responsibilities
+      powers_text: Its powers
+      reality_check: Honest assessment
+      realistic: Honest assessment
+      threat_model: Concerns it covers
+      notes: Notes
+      gov_channel: Government channel
+      accepts: What it accepts
+      does_not_accept: What it does not accept
+      how: How to file
+      format: Format
+      timing: Timing
+      after: What happens after
+      operator: Operated by
+      business: Current business
+      status: Status
+      public_route: Public route
+      format_rules: Format rules
+      agency_route: Agency route
+      key_people: Key people
+      language_note: Languages
+      note: Research note
+      the_ask: What they ask for — in their own terms
+      what_they_do: What they do
+      newcomer_action: What a newcomer can do
+      tips: Tips
+      geography: Where they work
+      scale: Size
+      spending: Spending
+      caution: Worth knowing
+  directory:
+    title: Directory
+    lede: Every institution, committee, reporting channel and organisation in our research, with how to reach them and when each fact was last checked.
+    search: Search by name or subject
+    all_sections: Everything
+    all_places: All places
+    only_verified: Only records with a verified route
+    results: results
+    sections:
+      bodies: Bodies with power
+      channels: Places to report
+      orgs: Organisations
+  about:
+    title: How it works

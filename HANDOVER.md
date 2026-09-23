@@ -31,8 +31,8 @@ Tracked in git and committed with every step.
 | 1 — Schemas and migration | **done** | 423 records, all counts preserved, 22 tests pass |
 | 1b — Routing research | not started | Next after phase 2 scaffolding; drafted values must be marked `routing_review: drafted` |
 | 2 — CI checks, CODEOWNERS | **done** (local) | Workflows written, not run on GitHub (nothing pushed). GitHub settings documented in `docs/github-setup.md`, not applied |
-| 3a — Reference site | not started | Open decision 6 (completion counting) was meant to be decided first — see judgement calls |
-| 3b — Door, path, draft | not started | Blocked on phase A findings and 1b routing for the real thing |
+| 3a — Reference site | **done** | Directory, record pages, about, data API, version endpoint. Measurement hook built in, sends nothing (decision 6 still open) |
+| 3b — Door, path, draft | **built as a testable first version** | Door, 4-step path with URL state, draft with own words, insider stop, honest floor. Usable for phase A testing; revise after phase A and 1b |
 | 4 — Resources | not started | |
 | 5a — Volunteer system (git) | not started | |
 | 5b — Web CMS | deferred | Until the first non-git volunteer |
@@ -55,8 +55,21 @@ Tracked in git and committed with every step.
 12. **First-version routing without phase 1b** (`scripts/lib/routing.mjs`, `content/guides/global/outcomes.yml`): outcomes match on record type + concern tags + route types; ranking prefers full committees with a named chair, then the researchers' own ordering (`meta.research_order`, new field). Phase 1b topics/powers will replace the heuristics.
 13. **Open decision 4 given a reversible default**: industry-lobby organisations are excluded from the newcomer "join" outcome (`exclude_perspectives` in outcomes.yml), following the brief's lean; they remain in the reference. "Join" shows one organisation per perspective.
 14. **Outcome labels and draft templates written by me**, marked `meta.status: draft` for owner review.
+15. **Open decision 6 handled as a hook, not a choice**: `site/lib/measure.js` fires `aica:measure` events (path_step, recipient_chosen, draft_copied, draft_downloaded, path_done) and sends nothing. The owner picks the counting method; it attaches to the event.
+16. **Phases 3a and 3b built together**: the path is needed for phase A testing, and the door is the only acceptable home page (the brief forbids landing newcomers on the reference).
+17. **"How it works", insider stop and interface copy written by me** (drafts, flagged on the page with a notice).
+18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-23T00:00:46Z — Phases 3a + 3b: the site
+
+- Astro 7 static site (`astro.config.mjs`, `site/`), `serve` + `nixpacks.toml` for Railway (not deployed).
+- Pages: door (`/en/`), path (`/en/start/<outcome>/`, steps with `?where=&sub=&to=&step=`), directory with search/filters (`/en/directory/`), 423 record pages (`/en/<section>/<id>/`), how it works (`/en/about/`), Resources placeholder, `/api/{bodies,channels,orgs}.json`, `/version.json`.
+- Routing precomputed per place at build time (`site/lib/data.mjs#outcomePayload`); the browser only switches views. Draft assembled in the browser from templates + the user's own words; copy / download; nothing leaves the device.
+- `i18n/ui/en.yml` holds all interface strings (ready for phase 6). `scripts/lib/content.mjs` root discovery made bundle-safe.
+- Browser check (Chrome for Testing via /browser-init, 390 px): door, US law step 2 (Senate Commerce first, chair + dates + membership link), UK draft step, record page; no console errors, no horizontal overflow. Fixed during the check: a false footer claim ("every address was opened by a person" — untrue for 396 routes), research tags ("VERIFIED —") leaking into cards, bracketed research asides in the salutation.
+- `tests/site.test.mjs` builds the site and checks brief principles (door ≤6 choices, no institution names or numbers, "don't need to be an expert", no third-party requests, insider routes nowhere, every record has a page, API counts). 43 tests pass.
 
 ### 2026-09-22T23:54:23Z — Routing for the path (start of phases 3a/3b)
 
@@ -122,7 +135,7 @@ re-aimed at the alarmed non-expert rather than someone with evidence.
 ## How to resume
 
 1. `npm install && npm run check` — must show 0 errors and all tests passing.
-2. Next step: **phase 3a** (Astro site, reference layer), then **phase 1b** routing research drafts, **phase 4** Resources, **phase 5a** volunteer tooling, **phase 6** i18n.
+2. Next step: **phase 4** Resources, then **phase 5a** volunteer tooling, **phase 6** i18n, **phase 1b** routing research drafts.
 3. Never edit `input/`. Never deploy without asking the owner.
 
 Reference prototypes (published, private):
@@ -131,4 +144,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-22T23:54:23Z
+Last modified: 2026-09-23T00:00:46Z

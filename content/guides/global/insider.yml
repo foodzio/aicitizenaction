@@ -1,0 +1,18 @@
+# The one case where the site declines to route (docs/ux-brief.md, edge cases).
+id: insider
+type: page
+geo:
+  country: global
+strings:
+  title: Please stop here, and get legal advice first
+  body: |
+    If you know something that is not public — from your job, a contract, or a colleague — the way you disclose it matters as much as what you disclose. Whistleblower protections depend on who you tell, in what order, and how. Contacting the wrong body first, including any of the organisations listed on this site, can remove protections you would otherwise have.
+
+    Before you contact anyone, speak to a lawyer who advises whistleblowers in your country. Many offer a first conversation free of charge. Do not send documents to anyone until you have.
+
+    This site will not route you further. That is deliberate: it is the one situation where a quick, well-meant action can do lasting harm to you.
+  back: Go back to the start
+meta:
+  verified_on: 2026-09-23
+  review_by: 2027-03-23
+  status: draft

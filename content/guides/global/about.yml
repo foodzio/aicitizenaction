@@ -1,0 +1,33 @@
+# "How it works": the one diagram of how a concern travels, what the verification labels mean,
+# and how to help. Written without owner review.
+id: about
+type: page
+geo:
+  country: global
+strings:
+  title: How it works
+  lede: Most people have no picture of how a concern reaches someone who can act on it. Without one, every instruction sounds arbitrary. Here is the picture.
+  flow_title: How a concern travels
+  flow:
+    - title: You write to the body that holds the power
+      body: Not your own representative by default — the committee, regulator or company channel whose job covers your concern. That is what the path works out for you.
+    - title: Staff read it and log it
+      body: Committee and regulator staff record positions from the public, count them, and pass summaries to the chair or the case team. Personal messages are read; identical form letters are counted and set aside.
+    - title: It shapes what gets heard
+      body: The chair of a committee decides which bills get hearings and markups. Regulators decide which complaints become investigations. Your message is one of the inputs to those decisions.
+    - title: Sometimes it is quoted
+      body: In consultations and calls for evidence, submissions are often published under the author's name, and staff quote from them when writing their report.
+  verify_title: What the labels mean
+  verify_body: Every address on this site carries one of three labels. We never mark something verified unless a person opened the page and saw the route on it.
+  help_title: How to help
+  help_body: The most useful thing anyone can do is tell us when something is wrong — every record has a "Something wrong here?" link. Volunteers look after one country, one subject, one language, or the Resources collection. A handle is enough; you never need to give your real name.
+  help_volunteer: Volunteer for an area
+  help_contributing: How contributing works
+  data_title: The data
+  data_body: Everything on this site is published as open data, so others can build on it without scraping.
+  neutral_title: Whose side are we on?
+  neutral_body: No one's. This site has no political ask of its own. Organisations' positions are recorded as theirs, in their own terms, including when they are unpopular. Every comparable tool belongs to a campaign; not having one is our main reason to be trusted.
+meta:
+  verified_on: 2026-09-23
+  review_by: 2027-09-23
+  status: draft

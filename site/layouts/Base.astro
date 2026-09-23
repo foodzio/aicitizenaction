@@ -1,0 +1,60 @@
+---
+import '../styles/global.css';
+import { ui, languages, REPO } from '../lib/data.mjs';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { ROOT } from '../../scripts/lib/content.mjs';
+
+const { lang = 'en', title, description = '', current = '', draft = false, noindex = false } = Astro.props;
+const t = ui(lang);
+const langs = languages();
+const thisLang = langs.find(l => l.code === lang);
+const hide = noindex || !thisLang?.public;
+const version = JSON.parse(readFileSync(join(ROOT, 'version.json'), 'utf8')).version;
+const path = Astro.url.pathname.replace(/^\/[a-z]{2,3}\//, '/');
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title ? `${title} · ${t('site.name')}` : t('site.name')}</title>
+    {description && <meta name="description" content={description} />}
+    {hide && <meta name="robots" content="noindex" />}
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip" href="#main">{t('site.skip')}</a>
+    <header class="site">
+      <div class="wrap">
+        <a class="brand" href={`/${lang}/`}>{t('site.name')}</a>
+        <nav class="main" aria-label="Main">
+          <a href={`/${lang}/`} aria-current={current === 'start' ? 'page' : undefined}>{t('site.nav_start')}</a>
+          <a href={`/${lang}/resources/`} aria-current={current === 'resources' ? 'page' : undefined}>{t('site.nav_resources')}</a>
+          <a href={`/${lang}/directory/`} aria-current={current === 'directory' ? 'page' : undefined}>{t('site.nav_directory')}</a>
+          <a href={`/${lang}/about/`} aria-current={current === 'about' ? 'page' : undefined}>{t('site.nav_about')}</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <div class="wrap">
+        {draft && <p class="notice">{t('site.draft_notice')}</p>}
+        <slot />
+      </div>
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        <p>{t('site.footer_note')}</p>
+        <p>
+          {langs.filter(l => l.public || l.code === lang).length > 1 && (
+            <span>{t('site.language')}: {langs.filter(l => l.public || l.code === lang).map((l, i) => (
+              <>{i > 0 && ' · '}<a href={`/${l.code}${path}`} lang={l.code} aria-current={l.code === lang ? 'true' : undefined}>{l.name}</a></>
+            ))} · </span>
+          )}
+          {t('site.footer_version')} {version} · <a href={REPO}>Source and data</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

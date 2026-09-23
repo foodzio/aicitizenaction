@@ -1,0 +1,29 @@
+---
+// The door: one question, six plain answers, no institution names, no counts (docs/ux-brief.md).
+import Base from '../../layouts/Base.astro';
+import { data, ui, languages } from '../../lib/data.mjs';
+
+export const getStaticPaths = () => languages().map(l => ({ params: { lang: l.code } }));
+const { lang } = Astro.params;
+const t = ui(lang);
+const oc = data().guide('outcomes');
+---
+<Base lang={lang} current="start" draft={oc.meta.status === 'draft'} description={t('site.tagline')}>
+  <div class="narrow">
+    <h1>{t('door.title')}</h1>
+    <p class="lede">{t('door.lede')}</p>
+    <p class="shape">{t('door.shape')}</p>
+    <ul class="outcomes">
+      {oc.facts.outcomes.map(o => (
+        <li>
+          <a href={`/${lang}/start/${o.id}/`}>
+            <strong>{oc.strings.outcomes[o.id].label}</strong>
+            <span>{oc.strings.outcomes[o.id].hint}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p class="muted">{t('door.trust')}</p>
+    <p><a href={`/${lang}/directory/`}>{t('door.browse')}</a></p>
+  </div>
+</Base>

@@ -1,0 +1,259 @@
+---
+// The path: narrow → why this one → draft → done (docs/ux-brief.md, "The primary flow").
+// Routing is precomputed at build time for every place; the browser only switches views.
+// Every state has a URL (?where=us&sub=ca&to=<id>&step=3), so a link can open mid-path.
+import Base from '../../../../layouts/Base.astro';
+import { data, ui, languages, outcomePayload, placeOptions } from '../../../../lib/data.mjs';
+
+export function getStaticPaths() {
+  const oc = data().guide('outcomes').facts.outcomes;
+  return languages().flatMap(l => oc.map(o => ({ params: { lang: l.code, outcome: o.id } })));
+}
+const { lang, outcome: outcomeId } = Astro.params;
+const t = ui(lang);
+const { guide } = data();
+const oc = guide('outcomes');
+const outcome = oc.facts.outcomes.find(o => o.id === outcomeId);
+const label = oc.strings.outcomes[outcomeId].label;
+const insider = guide('insider');
+const tpl = guide('draft-templates');
+const places = placeOptions(lang);
+
+const keys = ['path.step', 'path.of', 'path.floor_bloc', 'path.floor_global', 'path.none', 'path.can_do', 'path.leverage',
+  'path.how_reach', 'path.people', 'path.checked', 'path.membership', 'path.details', 'path.choose', 'path.chosen',
+  'path.copied', 'path.copy', 'verify.true', 'verify.false', 'verify.null', 'verify.true_hint', 'verify.false_hint',
+  'verify.null_hint', 'verify.language', 'verify.overdue'];
+const payload = outcome.stop ? null : {
+  lang,
+  outcome: { id: outcome.id, ignoreGeo: !!outcome.ignore_geo },
+  byPlace: outcomePayload(outcome, lang),
+  template: tpl.strings.templates[outcome.template],
+  t: Object.fromEntries(keys.map(k => [k, t(k)]))
+};
+const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4')];
+---
+<Base lang={lang} title={label} current="start" draft={oc.meta.status === 'draft' || tpl.meta.status === 'draft'}>
+  <div class="narrow">
+    <p><a href={`/${lang}/`}>← {t('path.back')}</a></p>
+    <h1>{label}</h1>
+
+    {outcome.stop ? (
+      <section>
+        <h2>{insider.strings.title}</h2>
+        {insider.strings.body.trim().split(/\n\n+/).map(p => <p>{p}</p>)}
+        <p><a class="btn secondary" href={`/${lang}/`}>{insider.strings.back}</a></p>
+      </section>
+    ) : (
+      <div id="path">
+        <ol class="progress" aria-label="Progress">
+          {steps.map((s, i) => <li data-p={i + 1}>{t('path.step')} {i + 1} · {s}</li>)}
+        </ol>
+        <noscript><p class="notice">{t('path.no_js')} <a href={`/${lang}/directory/`}>{t('site.nav_directory')}</a></p></noscript>
+
+        <section data-step="1" hidden>
+          <h2>{t('path.where_question')}</h2>
+          <p class="hint">{t('path.where_hint')}</p>
+          <label for="where">{t('path.where_question')}</label>
+          <select id="where">
+            <option value="">{t('path.where_skip')}</option>
+            {places.countries.map(c => <option value={c.code}>{c.name}</option>)}
+            <option value="zz">{t('path.where_any')}</option>
+          </select>
+          <div id="sub-wrap" hidden>
+            <label for="sub">{t('path.where_state')}</label>
+            <select id="sub">
+              <option value="">—</option>
+              {places.states.map(s => <option value={s.code}>{s.name}</option>)}
+            </select>
+          </div>
+          <div class="row"><button class="btn" type="button" data-go="2">{t('path.show')}</button></div>
+        </section>
+
+        <section data-step="2" hidden>
+          <h2>{t('path.why_title')}</h2>
+          <p class="notice" id="floor" hidden></p>
+          <div id="primary"></div>
+          <div id="alts-wrap" hidden>
+            <h3>{t('path.alternatives')}</h3>
+            <div class="alt" id="alts"></div>
+          </div>
+          <div class="row">
+            <button class="btn" type="button" data-go="3" id="to-draft">{t('path.write')}</button>
+            <button class="btn secondary" type="button" data-back>{t('path.back')}</button>
+          </div>
+        </section>
+
+        <section data-step="3" hidden>
+          <h2><label for="own" style="margin:0;font-weight:inherit">{t('path.own_words_title')}</label></h2>
+          <p class="hint">{tpl.strings.own_words_why}</p>
+          <textarea id="own" rows="4" placeholder={tpl.strings.own_words_placeholder}></textarea>
+
+          <h2><label for="draft" style="margin:0;font-weight:inherit">{t('path.draft_title')}</label></h2>
+          <p class="hint">{t('path.draft_hint')}</p>
+          <textarea id="draft" class="draft"></textarea>
+
+          <h3>{t('path.send_to')}</h3>
+          <div id="send-to"></div>
+          <div class="row">
+            <button class="btn" type="button" id="copy">{t('path.copy')}</button>
+            <button class="btn secondary" type="button" id="download">{t('path.download')}</button>
+          </div>
+          <h3>{t('path.next_title')}</h3>
+          <p>{t('path.next_default')}</p>
+          <div class="row">
+            <button class="btn" type="button" data-go="4">{t('path.done_title').split('—')[0].trim()} →</button>
+            <button class="btn secondary" type="button" data-back>{t('path.back')}</button>
+          </div>
+        </section>
+
+        <section data-step="4" hidden>
+          <h2>{t('path.done_title')}</h2>
+          <p>{t('path.done_body')}</p>
+          <h3>{t('path.done_next')}</h3>
+          <p>{t('path.done_share')}</p>
+          <p><input type="text" id="share" readonly aria-label={t('path.done_share')} /></p>
+          <p><a href={`/${lang}/`}>{t('path.start_over')}</a></p>
+        </section>
+
+        <script type="application/json" id="payload" set:html={JSON.stringify(payload)} />
+      </div>
+    )}
+  </div>
+</Base>
+
+<script>
+  import { measure } from '../../../../lib/measure.js';
+
+  const el = document.getElementById('payload');
+  if (el) {
+    const P = JSON.parse(el.textContent);
+    const T = P.t;
+    const $ = s => document.querySelector(s);
+    const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const sections = [...document.querySelectorAll('[data-step]')];
+    const firstStep = P.outcome.ignoreGeo ? 2 : 1;
+    const state = { where: '', sub: '', to: '', step: firstStep, own: '', draftEdited: false };
+
+    const q = new URLSearchParams(location.search);
+    state.where = q.get('where') ?? '';
+    state.sub = q.get('sub') ?? '';
+    state.to = q.get('to') ?? '';
+    state.step = Math.max(firstStep, Math.min(4, Number(q.get('step')) || firstStep));
+    $('#where').value = state.where;
+    $('#sub').value = state.sub;
+
+    const result = () => {
+      if (P.outcome.ignoreGeo) return P.byPlace[''];
+      const key = state.sub && state.where === 'us' ? `us/${state.sub}` : state.where;
+      return P.byPlace[key] ?? P.byPlace[state.where] ?? (state.where ? P.byPlace.zz : P.byPlace['']) ?? P.byPlace[''];
+    };
+    const chosen = () => { const r = result(); return r.recipients.find(x => x.id === state.to) ?? r.recipients[0]; };
+
+    function badge(v, on) {
+      const k = String(v);
+      return `<span class="badge v-${k}" title="${esc(T['verify.' + k + '_hint'])}">${esc(T['verify.' + k])}${on ? ` · ${esc(on)}` : ''}</span>`;
+    }
+    function contactHtml(c) {
+      if (!c) return '';
+      const href = c.isUrl ? c.value : /@/.test(c.value) ? `mailto:${c.value}` : '';
+      const val = href ? `<a href="${esc(href)}" rel="noopener">${esc(c.value)}</a>` : esc(c.value);
+      return `<div>${esc(c.label || c.type)}</div><div>${val}</div><div class="meta-line">${badge(c.verified, c.verifiedOn)}${c.language ? ` · ${esc(T['verify.language'])}: ${esc(c.language)}` : ''}</div>`;
+    }
+    function cardHtml(r, primary) {
+      const seats = r.seats.length ? `<dt>${esc(T['path.people'])}</dt><dd>${r.seats.map(s => `${esc(s.name)} (${esc(s.role)}${s.party ? ', ' + esc(s.party) : ''}${s.region ? ', ' + esc(s.region) : ''}) <span class="meta-line">· ${esc(T['path.checked'])} ${esc(s.verifiedOn)}</span>`).join('<br>')}${r.membership ? `<br><a href="${esc(r.membership)}" rel="noopener">${esc(T['path.membership'])}</a>` : ''}</dd>` : '';
+      return `<article class="card${primary ? ' primary' : ''}">
+        <h3>${esc(r.name)}</h3>
+        <p class="meta-line">${esc(r.type)} · ${esc(r.place)} · ${esc(T['path.checked'])} ${esc(r.checked)}${r.overdue ? ` · ${esc(T['verify.overdue'])} ${esc(r.checked)}` : ''}</p>
+        <dl>
+          ${r.canDo ? `<div><dt>${esc(T['path.can_do'])}</dt><dd>${esc(r.canDo)}</dd></div>` : ''}
+          ${r.leverage ? `<div><dt>${esc(T['path.leverage'])}</dt><dd>${esc(r.leverage)}</dd></div>` : ''}
+          <div><dt>${esc(T['path.how_reach'])}</dt><dd>${r.how ? esc(r.how) + '<br>' : ''}${contactHtml(r.contact)}</dd></div>
+          ${seats ? `<div>${seats}</div>` : ''}
+        </dl>
+        <p class="meta-line"><a href="${esc(r.url)}">${esc(T['path.details'])}</a></p>
+      </article>`;
+    }
+
+    function renderRecipients() {
+      const r = result();
+      const floor = $('#floor');
+      floor.hidden = !(r.floor || !r.recipients.length);
+      floor.textContent = !r.recipients.length ? T['path.none'] : r.scope === 'bloc' ? T['path.floor_bloc'] : T['path.floor_global'];
+      const c = chosen();
+      $('#to-draft').disabled = !c;
+      $('#primary').innerHTML = c ? cardHtml(c, true) : '';
+      const alts = r.recipients.filter(x => x !== c);
+      $('#alts-wrap').hidden = !alts.length;
+      $('#alts').innerHTML = alts.map(x => `<button type="button" data-pick="${esc(x.id)}" aria-pressed="false"><strong>${esc(x.name)}</strong><br><span class="meta-line">${esc(x.type)} · ${esc(x.place)}</span></button>`).join('');
+    }
+
+    function fill() {
+      const c = chosen();
+      const own = state.own.trim() || '[Your own words — why this matters to you]';
+      return P.template.replace(/\{recipient\}/g, c?.recipient ?? '').replace(/\{own_words\}/g, own);
+    }
+    function renderDraft() {
+      if (!state.draftEdited) $('#draft').value = fill();
+      const c = chosen();
+      $('#send-to').innerHTML = c ? `<div class="card">${contactHtml(c.contact)}</div>` : '';
+    }
+
+    function syncUrl(push) {
+      const p = new URLSearchParams();
+      if (state.where) p.set('where', state.where);
+      if (state.sub) p.set('sub', state.sub);
+      if (state.to) p.set('to', state.to);
+      if (state.step !== firstStep) p.set('step', state.step);
+      const url = `${location.pathname}${p.toString() ? '?' + p : ''}`;
+      history[push ? 'pushState' : 'replaceState']({ ...state }, '', url);
+    }
+
+    function show(step, push = true) {
+      state.step = step;
+      sections.forEach(s => { s.hidden = Number(s.dataset.step) !== step; });
+      document.querySelectorAll('.progress li').forEach(li => {
+        const n = Number(li.dataset.p);
+        li.toggleAttribute('aria-current', n === step);
+        if (n === step) li.setAttribute('aria-current', 'step');
+        li.classList.toggle('done', n < step);
+      });
+      if (step === 2) renderRecipients();
+      if (step === 3) renderDraft();
+      if (step === 4) $('#share').value = location.href;
+      syncUrl(push);
+      measure('path_step', { outcome: P.outcome.id, step });
+      const h = sections.find(s => !s.hidden)?.querySelector('h2');
+      if (h && push) { h.setAttribute('tabindex', '-1'); h.focus(); }
+    }
+
+    $('#where').addEventListener('change', e => { state.where = e.target.value; state.to = ''; $('#sub-wrap').hidden = state.where !== 'us'; if (state.where !== 'us') state.sub = ''; });
+    $('#sub').addEventListener('change', e => { state.sub = e.target.value; state.to = ''; });
+    $('#sub-wrap').hidden = state.where !== 'us';
+    document.addEventListener('click', e => {
+      const go = e.target.closest('[data-go]');
+      if (go) { show(Number(go.dataset.go)); if (go.dataset.go === '4') measure('path_done', { outcome: P.outcome.id }); }
+      if (e.target.closest('[data-back]')) show(Math.max(firstStep, state.step - 1));
+      const pick = e.target.closest('[data-pick]');
+      if (pick) { state.to = pick.dataset.pick; state.draftEdited = false; renderRecipients(); syncUrl(false); measure('recipient_chosen', { recipient: state.to }); }
+    });
+    $('#own').addEventListener('input', e => { state.own = e.target.value; renderDraft(); });
+    $('#draft').addEventListener('input', () => { state.draftEdited = true; });
+    const done = kind => measure(kind, { outcome: P.outcome.id, place: state.sub ? `${state.where}/${state.sub}` : state.where, recipient: chosen()?.id, own_words: state.own.trim().length > 0 });
+    $('#copy').addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText($('#draft').value); } catch { $('#draft').select(); document.execCommand('copy'); }
+      $('#copy').textContent = T['path.copied'];
+      setTimeout(() => { $('#copy').textContent = T['path.copy']; }, 2000);
+      done('draft_copied');
+    });
+    $('#download').addEventListener('click', () => {
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([$('#draft').value], { type: 'text/plain;charset=utf-8' }));
+      a.download = 'message.txt';
+      a.click();
+      URL.revokeObjectURL(a.href);
+      done('draft_downloaded');
+    });
+    window.addEventListener('popstate', e => { if (e.state) { Object.assign(state, e.state); show(state.step, false); } });
+    show(state.step, false);
+  }
+</script>

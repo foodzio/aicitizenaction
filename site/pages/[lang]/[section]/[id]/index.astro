@@ -1,0 +1,85 @@
+---
+// One record: every date beside the fact it applies to, the membership list first-class,
+// three-state verification labelled, route language shown before the click.
+import Base from '../../../../layouts/Base.astro';
+import { data, ui, languages, placeName, recordStrings, reportUrl, isOverdue, SECTIONS } from '../../../../lib/data.mjs';
+import { vocabLabel } from '../../../../../scripts/lib/content.mjs';
+
+export function getStaticPaths() {
+  const { records } = data();
+  return languages().flatMap(l => records.map(r => ({ params: { lang: l.code, section: r._section, id: r.id } })));
+}
+const { lang, section, id } = Astro.params;
+const t = ui(lang);
+const { byId, vocab } = data();
+const r = byId.get(id);
+const s = recordStrings(r, lang);
+const text = k => s[k]?.text;
+const fieldOrder = ['remit', 'ai_jurisdiction', 'the_ask', 'what_they_do', 'powers_text', 'reality_check', 'realistic',
+  'newcomer_action', 'caution', 'business', 'status', 'public_route', 'how', 'format', 'timing', 'after', 'accepts',
+  'does_not_accept', 'format_rules', 'agency_route', 'key_people', 'threat_model', 'gov_channel', 'operator', 'tips',
+  'geography', 'scale', 'spending', 'language_note', 'notes', 'note'];
+const fields = fieldOrder.filter(k => text(k));
+const membership = r.facts.routes.find(x => x.type === 'membership' && x.value);
+const routes = r.facts.routes.filter(x => x !== membership);
+const fallback = Object.values(s).some(x => x.state === 'fallback' || x.state === 'stale') && lang !== 'en';
+const href = v => /^https?:\/\//.test(v) ? v : /@/.test(v) ? `mailto:${v}` : null;
+---
+<Base lang={lang} title={text('name')} current="directory">
+  <article>
+    <div class="record-head">
+      <p class="meta-line"><a href={`/${lang}/directory/?section=${section}`}>{t(`directory.sections.${section}`)}</a></p>
+      <h1>{text('name')}</h1>
+      <dl class="facts">
+        <dt>{t('record.type')}</dt><dd>{vocabLabel(vocab, 'record-types', r.type)}</dd>
+        <dt>{t('record.place')}</dt><dd>{placeName(r.geo, lang)}{r.geo.label && r.geo.label !== placeName(r.geo, lang) ? ` — ${r.geo.label}` : ''}</dd>
+        {r.facts.local_name && <><dt>{t('record.local_name')}</dt><dd>{r.facts.local_name}</dd></>}
+        <dt>{t('record.last_checked')}</dt><dd>{r.meta.verified_on}</dd>
+        <dt>{t('record.review_by')}</dt><dd>{r.meta.review_by}</dd>
+      </dl>
+      {isOverdue(r) && <p class="notice">{t('verify.overdue')} {r.meta.review_by}.</p>}
+      {r.meta.unsourced && <p class="notice">{t('verify.unsourced')}</p>}
+      {fallback && <p class="notice">{t('site.translation_fallback')}</p>}
+    </div>
+
+    {r.facts.seats?.length > 0 && (
+      <section>
+        <h2>{t('record.seats')}</h2>
+        <ul class="seats">
+          {r.facts.seats.map(x => (
+            <li><strong>{x.name}</strong> — {x.role}{x.party && `, ${x.party}`}{x.region && `, ${x.region}`} <span class="meta-line">· {t('path.checked')} {x.verified_on}</span></li>
+          ))}
+        </ul>
+        {membership && <p><a href={membership.value} rel="noopener">{t('path.membership')}</a> <span class={`badge v-${membership.verified}`}>{t(`verify.${membership.verified}`)}</span></p>}
+      </section>
+    )}
+
+    <section>
+      <h2>{t('record.routes')}</h2>
+      <ul class="routes">
+        {(r.facts.seats?.length ? routes : r.facts.routes).map(x => (
+          <li>
+            <div><strong>{text(`routes.${x.id}.label`) || vocabLabel(vocab, 'route-types', x.type)}</strong> <span class="meta-line">· {vocabLabel(vocab, 'route-types', x.type)}</span></div>
+            {x.language && <div class="meta-line">{t('verify.language')}: {x.language}</div>}
+            <div>{x.value ? (href(x.value) ? <a href={href(x.value)} rel="noopener">{x.value}</a> : x.value) : <em class="muted">—</em>}</div>
+            <div class="meta-line"><span class={`badge v-${x.verified}`} title={t(`verify.${x.verified}_hint`)}>{t(`verify.${x.verified}`)}{x.verified_on && ` · ${x.verified_on}`}</span></div>
+            {text(`routes.${x.id}.scope`) && <p class="meta-line">{text(`routes.${x.id}.scope`)}</p>}
+            {text(`routes.${x.id}.note`) && <p class="meta-line">{text(`routes.${x.id}.note`)}</p>}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="prose">
+      {fields.map(k => (<><h2>{t(`record.fields.${k}`)}</h2>{text(k).split(/\n\n+/).map(p => <p>{p}</p>)}</>))}
+    </section>
+
+    {r.meta.sources?.length > 0 && (
+      <section>
+        <h2>{t('record.sources')}</h2>
+        <ul>{r.meta.sources.map(x => <li><a href={x.url} rel="noopener">{x.url}</a>{x.checked && <span class="meta-line"> · {x.checked}</span>}</li>)}</ul>
+      </section>
+    )}
+    <p><a href={reportUrl(r)} rel="noopener">{t('record.report')}</a></p>
+  </article>
+</Base>
