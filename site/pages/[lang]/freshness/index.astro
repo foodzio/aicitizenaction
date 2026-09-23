@@ -23,9 +23,9 @@ const place = c => placeName({ country: c }, lang);
   {[['by_section', f.bySection, k => t(`directory.sections.${k}`)], ['by_country', f.byCountry, place]].map(([key, obj, label]) => (
     <section>
       <h2>{t(`freshness.${key}`)}</h2>
-      <div style="overflow-x:auto">
+      <div style="overflow-x:auto" tabindex="0" role="region" aria-label={t(`freshness.${key}`)}>
         <table class="table">
-          <thead><tr><th scope="col"></th><th scope="col">{t('freshness.records')}</th><th scope="col">{t('freshness.current')}</th><th scope="col">{t('freshness.overdue')}</th><th scope="col">{t('freshness.unsourced')}</th><th scope="col">%</th></tr></thead>
+          <thead><tr><th scope="col"><span class="sr-only">{key === 'by_section' ? t('record.type') : t('record.place')}</span></th><th scope="col">{t('freshness.records')}</th><th scope="col">{t('freshness.current')}</th><th scope="col">{t('freshness.overdue')}</th><th scope="col">{t('freshness.unsourced')}</th><th scope="col">%</th></tr></thead>
           <tbody>{sorted(obj).map(([k, v]) => <tr><th scope="row">{label(k)}</th><td>{v.total}</td><td>{v.current}</td><td>{v.overdue}</td><td>{v.unsourced}</td><td>{v.percent}%</td></tr>)}</tbody>
         </table>
       </div>

@@ -1,6 +1,6 @@
 {
   "name": "aicitizenaction",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "private": true,
   "type": "module",
   "description": "Routes an alarmed non-expert to the one institution that can act on their AI concern, and hands them a draft.",
@@ -23,5 +23,8 @@
     "astro": "7.3.4",
     "serve": "14.2.6",
     "yaml": "2.9.1"
+  },
+  "devDependencies": {
+    "axe-core": "4.13.0"
   }
 }

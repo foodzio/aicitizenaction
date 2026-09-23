@@ -1,0 +1,22 @@
+# What a body can actually do. Used by routing (phase 1b) and shown to users on screen 2, where
+# overstating a power is the error that destroys the most trust. DRAFT list, to be confirmed with
+# the first round of human review.
+id: powers
+status: draft
+values:
+  - { id: legislate, label: Writes or amends laws, description: Drafts, amends or votes on legislation }
+  - { id: set-agenda, label: Decides what gets heard, description: Chooses which bills or matters get hearings and votes (committee chairs) }
+  - { id: hold-hearings, label: Holds hearings, description: Takes public evidence and questions witnesses }
+  - { id: compel, label: Can compel, description: Can compel testimony or documents (subpoena or equivalent) }
+  - { id: fund, label: Controls funding, description: Appropriates or allocates public money }
+  - { id: oversee, label: Oversees government, description: Scrutinises how government bodies use AI or run programmes }
+  - { id: make-rules, label: Makes binding rules, description: Issues regulations or binding guidance }
+  - { id: investigate, label: Investigates, description: Opens investigations into companies or incidents }
+  - { id: enforce, label: Enforces, description: Brings enforcement action, orders changes or stops conduct }
+  - { id: fine, label: Can fine, description: Imposes financial penalties }
+  - { id: handle-complaints, label: Handles complaints, description: Receives and acts on complaints from the public }
+  - { id: set-standards, label: Sets standards, description: Develops technical standards or evaluation methods }
+  - { id: test-models, label: Tests AI systems, description: Evaluates or red-teams AI models }
+  - { id: advise, label: Advises only, description: Advises government or others; cannot require anything }
+  - { id: convene, label: Convenes, description: Brings parties together; cannot require anything }
+  - { id: publish, label: Publishes reports, description: Publishes reports or recommendations }

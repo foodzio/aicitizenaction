@@ -81,3 +81,30 @@ test('a recorded absence is never offered as an address', async () => {
     assert.equal(isUsableValue(v), true, v);
   for (const o of oc.outcomes) for (const c of ['us', 'gb', 'eu', '']) for (const x of route(o, { country: c }, records, opts).recipients) assert.ok(isUsableValue(contactRoute(x).value), x.id);
 });
+
+test('topics change routing only for reviewed records; a reviewed "not here" removes the record', async () => {
+  const { topicFit } = await import('../scripts/lib/routing.mjs');
+  const drafted = { facts: { routing_review: 'drafted', topics: ['copyright'], not_topics: ['privacy'] } };
+  const done = { facts: { routing_review: 'reviewed', topics: ['copyright'], not_topics: ['privacy'] } };
+  assert.equal(topicFit(drafted, 'copyright'), 1);
+  assert.equal(topicFit(drafted, 'privacy'), 1);
+  assert.equal(topicFit(done, 'copyright'), 0);
+  assert.equal(topicFit(done, 'privacy'), 2);
+  assert.equal(topicFit(done, undefined), 1);
+});
+
+test('apply-routing-drafts keeps only values backed by an exact quote from the record', async () => {
+  const { checkDraft } = await import('../scripts/apply-routing-drafts.mjs');
+  const { loadVocab } = await import('../scripts/lib/content.mjs');
+  const rec = { strings: { ai_jurisdiction: 'Owns the FTC. NOT here: copyright (Judiciary).' } };
+  const r = checkDraft(rec, {
+    topics: ['consumer-protection', 'made-up', 'elections'],
+    not_topics: ['copyright'],
+    powers: ['fine'],
+    evidence: { 'topics:consumer-protection': 'Owns the FTC.', 'topics:made-up': 'Owns', 'topics:elections': 'Handles elections', 'not_topics:copyright': 'NOT here: copyright', 'powers:fine': '' }
+  }, loadVocab());
+  assert.deepEqual(r.kept.topics, ['consumer-protection']);
+  assert.deepEqual(r.kept.not_topics, ['copyright']);
+  assert.deepEqual(r.kept.powers, []);
+  assert.equal(r.dropped.length, 3);
+});

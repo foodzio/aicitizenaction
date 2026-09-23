@@ -29,7 +29,7 @@ Tracked in git and committed with every step.
 | 0 — Architecture fixed | done | |
 | A — Validate with five users | blocked | Needs owner answers to brief Q1–4 and five real participants. A testable path prototype can still be built (see phase 3b) |
 | 1 — Schemas and migration | **done** | 423 records, all counts preserved, 22 tests pass |
-| 1b — Routing research | not started | Next after phase 2 scaffolding; drafted values must be marked `routing_review: drafted` |
+| 1b — Routing research | **in progress** | `powers` vocab, `apply-routing-drafts.mjs` (verbatim-quote check), topic-aware routing for reviewed records done; five agents drafting topics/not_topics/powers for 250 bodies into /tmp/claude-503/drafts-*.json (not yet applied) |
 | 2 — CI checks, CODEOWNERS | **done** (local) | Workflows written, not run on GitHub (nothing pushed). GitHub settings documented in `docs/github-setup.md`, not applied |
 | 3a — Reference site | **done** | Directory, record pages, about, data API, version endpoint. Measurement hook built in, sends nothing (decision 6 still open) |
 | 3b — Door, path, draft | **built as a testable first version** | Door, 4-step path with URL state, draft with own words, insider stop, honest floor. Usable for phase A testing; revise after phase A and 1b |
@@ -37,7 +37,7 @@ Tracked in git and committed with every step.
 | 5a — Volunteer system (git) | **done** (local) | CONTRIBUTING, worked example, charters, freshness report + public page, inactivity check-ins, volunteer profiles, contributors page. Discussions not enabled (owner) |
 | 5b — Web CMS | deferred | Until the first non-git volunteer |
 | 6 — Second language | **done (pilot)** | French: 173 UI strings + 45 guide strings, all machine drafts; gated (noindex, not in switcher) until a steward sets `ui_approved: true`. Tier 2 (French/EU records) not started |
-| 7 — Launch | not started | Deploys need the owner's approval |
+| 7 — Launch | **in progress** | Accessibility pass done (0 axe violations, light + dark, `docs/accessibility.md`). Deploy needs the owner |
 
 ## Judgement calls made without the owner (reverse any of them)
 
@@ -68,6 +68,13 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-23T00:17:45Z — Phase 1b groundwork + phase 7 accessibility
+
+- `schema/vocab/powers.yml` (16 powers, draft). `scripts/apply-routing-drafts.mjs`: vocab check + every value needs an exact quote from the record, else dropped; never overwrites `reviewed`; writes `docs/routing-drafts-report.md`.
+- Routing: `reviewed()`, `topicFit()`; `route()` accepts `where.topic` — a reviewed "not here" removes a record, a reviewed topic ranks it first; drafted values have no effect. Tests added.
+- Accessibility: axe-core dev dependency; 9 pages scanned light and dark; freshness table fixes (hidden header text, focusable scroll region, `.sr-only`). `docs/accessibility.md`.
+- In flight: five background agents drafting routing fields from each record's own text, brief at /tmp/claude-503/routing-brief.md (outputs /tmp/claude-503/drafts-{seat-0,seat-1,seat-2,body-0,body-1}.json). If interrupted: re-run them from the brief, or skip — nothing depends on them yet.
 
 ### 2026-09-23T00:14:54Z — Phase 6: second language (French pilot)
 
@@ -180,4 +187,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T00:14:54Z
+Last modified: 2026-09-23T00:17:45Z

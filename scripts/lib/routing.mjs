@@ -72,9 +72,24 @@ function rank(outcome) {
   };
 }
 
+/** Routing fields count only once a person has reviewed them (phase 1b). */
+export const reviewed = r => r.facts?.routing_review === 'reviewed';
+
+/**
+ * Topic fit for a reviewed record: 0 covers the topic, 1 unknown/not reviewed, 2 explicitly not here.
+ * Unreviewed drafts never change the result.
+ */
+export function topicFit(r, topic) {
+  if (!topic || !reviewed(r)) return 1;
+  if ((r.facts.not_topics ?? []).includes(topic)) return 2;
+  if ((r.facts.topics ?? []).includes(topic)) return 0;
+  return 1;
+}
+
 /**
  * @param {object} outcome   one entry of outcomes.facts.outcomes
- * @param {{country?: string, sub?: string}} where   the user's place; country may be empty
+ * @param {{country?: string, sub?: string, topic?: string}} where   the user's place (country may be empty)
+ *        and, optionally, what the concern is about — used only for reviewed records
  * @param {object[]} records all directory records
  * @param {{euMembers?: string[], max?: number}} opts
  * @returns {{ recipients: object[], scope: 'country'|'sub'|'bloc'|'global'|'any', floor: boolean, total: number }}
@@ -82,9 +97,11 @@ function rank(outcome) {
 export function route(outcome, where, records, { euMembers = [], max = 3 } = {}) {
   if (outcome.stop) return { recipients: [], scope: 'any', floor: false, total: 0 };
   const excluded = new Set(outcome.exclude_perspectives ?? []);
+  const topic = where?.topic;
   const pool = records
     .filter(r => matches(r, outcome.match ?? {}) && recommendable(r) && !excluded.has(r.facts?.perspective))
-    .sort(rank(outcome));
+    .filter(r => topicFit(r, topic) < 2)                    // a reviewed "NOT here" removes the record
+    .sort((a, b) => topicFit(a, topic) - topicFit(b, topic) || rank(outcome)(a, b));
   const take = (list, scope, floor = false) => ({
     recipients: (outcome.diversify_by ? diversify(list, outcome.diversify_by) : list).slice(0, max), scope, floor, total: list.length
   });
