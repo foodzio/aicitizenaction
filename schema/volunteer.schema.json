@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aicitizenaction/schema/volunteer.schema.json",
+  "title": "Volunteer",
+  "description": "Optional. Only what the project needs: which paths and languages someone looks after, and declared conflicts of interest. A handle is enough; real names are never required. Lives in volunteers/<handle>.yml.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["handle"],
+  "properties": {
+    "handle": { "type": "string", "pattern": "^[A-Za-z0-9-]{1,39}$" },
+    "roles": { "type": "array", "items": { "enum": ["geography", "domain", "language", "editor", "maintainer"] } },
+    "paths": { "type": "array", "items": { "type": "string", "pattern": "^(content|i18n)/" } },
+    "languages": { "type": "array", "items": { "type": "string", "pattern": "^[a-z]{2,3}$" } },
+    "conflicts": {
+      "type": "array",
+      "description": "Records the volunteer has ties to; they do not review these",
+      "items": { "type": "object", "additionalProperties": false, "required": ["record", "nature"], "properties": { "record": { "type": "string" }, "nature": { "type": "string" } } }
+    },
+    "credit": { "type": "boolean", "description": "true to be listed on the public contributors page" },
+    "since": { "type": "string", "format": "date" },
+    "status": { "enum": ["active", "alumni"] }
+  }
+}

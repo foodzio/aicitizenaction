@@ -1,5 +1,7 @@
-# Weekly: link check of the whole tree, with the two-consecutive-failures rule.
-# A confirmed failure opens one issue, naming the owners of the record from CODEOWNERS.
+# Weekly: link check of the whole tree (two-consecutive-failures rule; confirmed failures open
+# one issue each, naming the record's owners), the freshness report, and steward check-ins.
+# The freshness report goes to the run summary, and to GitHub Discussions when the owner has set
+# the repository variable DISCUSSION_CATEGORY_ID (docs/github-setup.md §4).
 name: Weekly
 on:
   schedule:
@@ -36,3 +38,18 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: node scripts/file-link-issues.mjs .linkcheck/out.json
+      - name: Freshness report
+        run: node scripts/freshness.mjs --link-state .linkcheck/state.json --summary "$GITHUB_STEP_SUMMARY" > freshness.md
+      - name: Post the report to Discussions
+        if: vars.DISCUSSION_CATEGORY_ID != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CATEGORY: ${{ vars.DISCUSSION_CATEGORY_ID }}
+        run: |
+          repo_id=$(gh api graphql -f query='query($o:String!,$n:String!){repository(owner:$o,name:$n){id}}' -f o="${GITHUB_REPOSITORY%/*}" -f n="${GITHUB_REPOSITORY#*/}" --jq .data.repository.id)
+          gh api graphql -f query='mutation($r:ID!,$c:ID!,$t:String!,$b:String!){createDiscussion(input:{repositoryId:$r,categoryId:$c,title:$t,body:$b}){discussion{url}}}' \
+            -f r="$repo_id" -f c="$CATEGORY" -f t="Freshness report $(date -u +%Y-%m-%d)" -f b="$(cat freshness.md)"
+      - name: Steward check-ins
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/inactivity.mjs

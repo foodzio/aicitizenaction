@@ -1,0 +1,46 @@
+---
+// A public freshness page: it tells readers how much to trust what they read, and shows
+// stewards where the project is thin (docs/content-architecture.md).
+import Base from '../../../layouts/Base.astro';
+import { ui, languages, placeName } from '../../../lib/data.mjs';
+import { freshness } from '../../../../scripts/lib/freshness.mjs';
+import { perspectiveLabel } from '../../../lib/resources.mjs';
+
+export const getStaticPaths = () => languages().map(l => ({ params: { lang: l.code } }));
+const { lang } = Astro.params;
+const t = ui(lang);
+const f = freshness();
+const sorted = obj => Object.entries(obj).sort((a, b) => a[1].percent - b[1].percent || b[1].total - a[1].total);
+const place = c => placeName({ country: c }, lang);
+---
+<Base lang={lang} title={t('freshness.title')}>
+  <div class="narrow">
+    <h1>{t('freshness.title')}</h1>
+    <p class="lede">{t('freshness.lede')}</p>
+    <p><strong>{f.overall.percent}%</strong> {t('freshness.overall')} ({f.overall.current} / {f.overall.total}). {f.seats.overdue} / {f.seats.total} {t('freshness.seats')}.</p>
+    <p class="meta-line">{f.now}</p>
+  </div>
+  {[['by_section', f.bySection, k => t(`directory.sections.${k}`)], ['by_country', f.byCountry, place]].map(([key, obj, label]) => (
+    <section>
+      <h2>{t(`freshness.${key}`)}</h2>
+      <div style="overflow-x:auto">
+        <table class="table">
+          <thead><tr><th scope="col"></th><th scope="col">{t('freshness.records')}</th><th scope="col">{t('freshness.current')}</th><th scope="col">{t('freshness.overdue')}</th><th scope="col">{t('freshness.unsourced')}</th><th scope="col">%</th></tr></thead>
+          <tbody>{sorted(obj).map(([k, v]) => <tr><th scope="row">{label(k)}</th><td>{v.total}</td><td>{v.current}</td><td>{v.overdue}</td><td>{v.unsourced}</td><td>{v.percent}%</td></tr>)}</tbody>
+        </table>
+      </div>
+    </section>
+  ))}
+  <section class="narrow">
+    <h2>{t('freshness.balance')}</h2>
+    <h3>{t('freshness.sources')}</h3>
+    <ul>{Object.entries(f.balance.sources).sort((a, b) => b[1] - a[1]).map(([k, v]) => <li>{perspectiveLabel(k)}: {v}</li>)}</ul>
+    <h3>{t('freshness.published')}</h3>
+    <ul>{Object.entries(f.balance.published).sort((a, b) => b[1] - a[1]).map(([k, v]) => <li>{perspectiveLabel(k)}: {v}</li>)}</ul>
+    <p class="muted">{f.balance.pending} {t('freshness.pending')}</p>
+    <h2>{t('freshness.translations')}</h2>
+    {Object.keys(f.translations.languages).length
+      ? <ul>{Object.entries(f.translations.languages).map(([l, v]) => <li>{l}: {v.percent}%</li>)}</ul>
+      : <p class="muted">{t('freshness.no_translations')}</p>}
+  </section>
+</Base>

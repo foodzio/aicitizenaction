@@ -169,6 +169,17 @@ export function validateAll({ now = today() } = {}) {
     for (const [k, v] of Object.entries(t.strings ?? {})) if (typeof v?.value === 'string' && URL_OR_EMAIL.test(v.value)) err(rel(path), `${k}: UI strings must not contain URLs or email addresses`);
   }
 
+  // Volunteers: optional profiles; paths must exist, conflicts must name real records.
+  const volunteerSchema = ajv.getSchema('https://aicitizenaction/schema/volunteer.schema.json');
+  for (const path of walk(join(ROOT, 'volunteers'))) {
+    const v = readYaml(path) ?? {};
+    const p = rel(path);
+    if (!volunteerSchema(v)) for (const e of volunteerSchema.errors) err(p, `schema: ${e.instancePath || '/'} ${e.message}`);
+    if (v.handle && basename(p) !== `${v.handle}.yml`) err(p, `file name must be "${v.handle}.yml"`);
+    for (const vp of v.paths ?? []) if (!existsSync(join(ROOT, vp))) err(p, `path ${vp} does not exist`);
+    for (const c of v.conflicts ?? []) if (!ids.has(c.record)) err(p, `conflict names unknown record "${c.record}"`);
+  }
+
   return { errors, warnings, count: records.length };
 }
 

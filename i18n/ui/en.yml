@@ -12,6 +12,7 @@ strings:
     nav_about: How it works
     footer_note: No account, no mailing list, no tracking. Every address says whether a person has opened it and when.
     footer_version: Version
+    footer_freshness: How current is this?
     language: Language
     draft_notice: This page's wording is a first draft and has not been reviewed yet.
     translation_fallback: Not yet translated — shown in English.
@@ -132,6 +133,29 @@ strings:
       orgs: Organisations
   about:
     title: How it works
+  freshness:
+    title: How current is this?
+    lede: Every record has a date by which it must be checked again. This page shows how much of the directory is within its date, where the project is thin, and how balanced the Resources collection is.
+    overall: of directory records are within their review date
+    seats: named seat-holders are past their 90-day check
+    by_section: By section
+    by_country: By place — least current first
+    records: Records
+    current: Current
+    overdue: Overdue
+    unsourced: Unsourced
+    balance: Resources — balance of perspectives
+    sources: Sources we watch
+    published: Items published
+    pending: items waiting for an editor
+    translations: Translations
+    no_translations: No translations yet.
+  contributors:
+    title: Contributors
+    lede: The people who keep this site accurate. Only those who asked to be listed appear here.
+    none: No one has asked to be listed yet.
+    footer: Contributors
+    volunteer: Volunteer for an area
   resources:
     title: Resources
     lede: What is being reported, argued and decided about AI — each item with a question that turns it into something you can act on.

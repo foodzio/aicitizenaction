@@ -144,3 +144,9 @@ textarea.draft { min-height: 20rem; font-family: var(--sans); }
 
 [hidden] { display: none !important; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Tables (freshness) */
+.table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+.table th, .table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.table thead th { color: var(--muted); font-weight: 600; font-size: 0.85rem; }
+.table td { font-variant-numeric: tabular-nums; }

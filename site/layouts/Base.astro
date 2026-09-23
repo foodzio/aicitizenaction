@@ -52,7 +52,7 @@ const path = Astro.url.pathname.replace(/^\/[a-z]{2,3}\//, '/');
               <>{i > 0 && ' · '}<a href={`/${l.code}${path}`} lang={l.code} aria-current={l.code === lang ? 'true' : undefined}>{l.name}</a></>
             ))} · </span>
           )}
-          {t('site.footer_version')} {version} · <a href={REPO}>Source and data</a>
+          <a href={`/${lang}/freshness/`}>{t('site.footer_freshness')}</a> · <a href={`/${lang}/contributors/`}>{t('contributors.footer')}</a> · {t('site.footer_version')} {version} · <a href={REPO}>Source and data</a>
         </p>
       </div>
     </footer>

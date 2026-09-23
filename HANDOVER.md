@@ -34,7 +34,7 @@ Tracked in git and committed with every step.
 | 3a — Reference site | **done** | Directory, record pages, about, data API, version endpoint. Measurement hook built in, sends nothing (decision 6 still open) |
 | 3b — Door, path, draft | **built as a testable first version** | Door, 4-step path with URL state, draft with own words, insider stop, honest floor. Usable for phase A testing; revise after phase A and 1b |
 | 4 — Resources | **done** | 15 sources, 99 ingested items (8 published as drafts, 91 pending), 2 windows, 2 explainers, pages, intake workflow (not run on GitHub) |
-| 5a — Volunteer system (git) | not started | |
+| 5a — Volunteer system (git) | **done** (local) | CONTRIBUTING, worked example, charters, freshness report + public page, inactivity check-ins, volunteer profiles, contributors page. Discussions not enabled (owner) |
 | 5b — Web CMS | deferred | Until the first non-git volunteer |
 | 6 — Second language | not started | |
 | 7 — Launch | not started | Deploys need the owner's approval |
@@ -62,9 +62,22 @@ Tracked in git and committed with every step.
 20. **Two windows and two explainers written by me from verified research records** (Colorado AG ADMT/chatbot rules, closes 2026-10-26; FDA-2026-N-7874, closes 2026-10-19). Explainers are `status: draft`.
 21. **Recorded absences are not addresses**: ~25 routes hold "none published" etc. in `value` (with `verified: true` meaning a verified absence). Research data left unchanged; `isUsableValue()` in routing keeps them out of the path.
 22. **Resources link hidden on the door** (the plan: the front door never links to Resources); visible in the nav everywhere else.
+23. **The maintainer (catch-all CODEOWNERS owner) is never sent inactivity check-ins.** Team/alumni membership changes stay manual — the script only opens issues.
+24. **Freshness report posts to Discussions only if the owner sets repo variable `DISCUSSION_CATEGORY_ID`**; otherwise it goes to the workflow summary.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-23T00:11:19Z — Phase 5a: volunteer system (git path)
+
+- `CONTRIBUTING.md` (ways in without an account, editorial rejection rules, first change, roles, cycles, tools); `docs/stewards/worked-example.md`.
+- `scripts/lib/freshness.mjs` + `scripts/freshness.mjs`: current/overdue/unsourced per section and country, seat-holders past 90 days, open windows, translation coverage, Resources perspective balance. Today: 99% current (2 overdue, 2 unsourced), 2 of 177 seat-holders past 90 days.
+- `scripts/charter.mjs`: a steward's queue from CODEOWNERS or a path, with one small first task.
+- `scripts/inactivity.mjs`: 60 days quiet + overdue → polite issue; 30 days no reply → maintainer handover issue. Pure `decide()` tested.
+- `schema/volunteer.schema.json`, `volunteers/README.md`; validator checks profiles (paths exist, conflicts are real ids).
+- Site: `/en/freshness/` (public), `/en/contributors/` (opt-in, empty), footer links.
+- Weekly workflow: + freshness report (summary, optional Discussions post) + check-ins.
+- `tests/volunteers.test.mjs`. 55 pass.
 
 ### 2026-09-23T00:08:13Z — Phase 4: Resources
 
@@ -149,7 +162,7 @@ re-aimed at the alarmed non-expert rather than someone with evidence.
 ## How to resume
 
 1. `npm install && npm run check` — must show 0 errors and all tests passing.
-2. Next step: **phase 5a** volunteer tooling (CONTRIBUTING, charter, freshness page incl. perspective balance, inactivity job), then **phase 6** i18n, **phase 1b** routing research drafts.
+2. Next step: **phase 6** i18n (sync script, fr UI draft behind noindex gate, fallback), then **phase 1b** routing research drafts, then phase 7 readiness (accessibility pass).
 3. Never edit `input/`. Never deploy without asking the owner.
 
 Reference prototypes (published, private):
@@ -158,4 +171,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T00:08:13Z
+Last modified: 2026-09-23T00:11:19Z
