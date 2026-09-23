@@ -178,14 +178,24 @@ re-aimed at the alarmed non-expert rather than someone with evidence.
 - **Data decay notes from research:** UK DSIT abolished July 2026; International Network of AI Safety Institutes renamed Dec 2025; Indian and Japanese committee chairs reconstituted annually.
 - **Prototype pages in `input/src/` are Artifact-format** (no doctype/head/body).
 - **Product trade-off:** helping each person write their own message produces authentic participation but less concentrated force than campaign tools. Deliberate; revisit.
+- **Nothing has run on GitHub.** The repo is empty on the remote; `check.yml`, `weekly.yml` and `ingest.yml` are untested there. Expect first-run fixes (permissions, cache keys).
+- **Report and volunteer links point at a private repo** — they only work for the public once the repo is public.
+- **Site rebuilds are needed for time-based content** (windows closing, overdue badges). Client-side scripts hide closed windows meanwhile; a scheduled rebuild/deploy would keep it exact.
+- **Routing heuristics** (`seatWeight`, `research_order`) stand in until drafted topics/powers are reviewed; once some are, add a "what is it about?" question to step 1 (routing already supports `where.topic`).
+- **`powers_text` in the research often overstates** compel/investigate powers (agents' finding). Don't display it as fact without review; the record page shows it under "Its powers" today.
+- **Local-only artefacts:** `tmp/` (link-check state, screenshots) is gitignored. The first weekly run starts the two-consecutive-failures state afresh.
 
 ## Open decisions (owner)
 
-1. Brief Q1–4 (location first?, cross-border drafts?, prominence of "join", lobbying layer for newcomers) — block phase A and 3b.
-2. Brief Q5 answered by the architecture (geography stewards, 90 days) — confirm.
-3. How draft completion is counted without a consent wall — meant to block phase 3a.
-4. Second language; GitHub organisation/team names; domain; visitor discussion (out of scope unless chosen).
-5. Tooling recommendations not yet confirmed: Astro, YAML + JSON Schema (now in use), GitHub Actions + lychee, Railway static hosting via `serve`.
+1. **Brief Q1–4** — current defaults: location asked on step 1; cross-border drafts allowed; "join" is one of six equal answers; industry lobbying reference-only. Confirm or change `content/guides/global/outcomes.yml`, then run phase A.
+2. **Brief Q5** — answered by the architecture (geography stewards, 90-day cycle). Confirm.
+3. **Completion counting** — the hook exists (`site/lib/measure.js`, sends nothing). Choose a method (e.g. a cookieless counter) or none.
+4. **Second language** — French is a gated pilot; confirm or pick another.
+5. **GitHub** — push; move to an organisation (enables teams + intake-bot bypass) or add `INTAKE_TOKEN`; branch protection; Discussions (`docs/github-setup.md`).
+6. **Public repo?** Needed for report/volunteer links to work for readers.
+7. **Deploy** — Railway via `nixpacks.toml` + `serve` is ready; not deployed. Domain undecided.
+8. **Tooling in use, not formally confirmed:** Astro, YAML + JSON Schema, GitHub Actions, own link checker (replaced lychee), axe-core for accessibility checks.
+9. **Visitor discussion on Resources** — out of scope unless chosen.
 
 ## How to resume
 
@@ -199,4 +209,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T00:19:54Z
+Last modified: 2026-09-23T00:20:17Z
