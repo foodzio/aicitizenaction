@@ -1,0 +1,14 @@
+id: openai-news-two-years-openai-academy
+facts:
+  source: openai-news
+  url: https://openai.com/index/two-years-of-openai-academy
+  url_hash: 52e46e8371e1
+  kind: article
+  language: en
+  published_at: 2026-09-23
+strings:
+  title: Two years of OpenAI Academy
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

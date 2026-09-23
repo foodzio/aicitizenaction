@@ -1,0 +1,15 @@
+id: transformer-gpt-6-astra-might-be
+facts:
+  source: transformer
+  url: https://www.transformernews.ai/p/openai-gpt-6-astra-might-be-too-powerful-to-understand-or-control
+  url_hash: 9797219adfc5
+  kind: newsletter
+  language: en
+  published_at: 2026-09-04
+  author: Celia Ford
+strings:
+  title: GPT-6 Astra might be too powerful to understand or control
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

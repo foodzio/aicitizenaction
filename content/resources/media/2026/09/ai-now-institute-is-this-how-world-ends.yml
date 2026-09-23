@@ -1,0 +1,15 @@
+id: ai-now-institute-is-this-how-world-ends
+facts:
+  source: ai-now-institute
+  url: https://ainowinstitute.org/news/is-this-how-the-world-ends-extinction-scenarios-are-taking-over-the-ai-debate
+  url_hash: 9e80a56ae02d
+  kind: report
+  language: en
+  published_at: 2026-09-21
+  author: AI Now Institute
+strings:
+  title: Is this how the world ends? Extinction scenarios are taking over the AI debate.
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23
