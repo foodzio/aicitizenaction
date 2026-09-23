@@ -1,8 +1,8 @@
 # GitHub setup
 
-*Created 2026-09-22T23:49:58Z. Steps that change repository settings on GitHub. None of them has been applied — each needs the owner.*
+*Created 2026-09-22T23:49:58Z. Updated 2026-09-23T15:53:13Z: steps 1, 2 and 4 applied; the repository now lives at foodzio/aicitizenaction.*
 
-The repository is `sinscrit/aicitizenaction` (private, personal account). Nothing has been pushed yet.
+**Status:** public at `foodzio/aicitizenaction` (organisation `foodzio`), default branch `main`. Team `foodzio/aicitizenaction-maintainers` (admin) owns everything in CODEOWNERS. Branch protection on `main`: 1 approving review, code-owner review, required check `check`, admins may bypass. Labels created, Discussions enabled, Actions allowed to open pull requests.
 
 ## 1. Push
 
@@ -16,7 +16,7 @@ git push -u origin research-and-ux-brief
 The plan (phase 2) starts with **one** approval while there is one maintainer, and moves to two (one from a path owner) once there are two or more maintainers. Two required approvals with a single maintainer would lock the owner out.
 
 ```bash
-gh api -X PUT repos/sinscrit/aicitizenaction/branches/main/protection --input - <<'JSON'
+gh api -X PUT repos/foodzio/aicitizenaction/branches/main/protection --input - <<'JSON'
 {
   "required_status_checks": { "strict": true, "contexts": ["check"] },
   "enforce_admins": false,
@@ -45,7 +45,7 @@ The intake workflow auto-merges only if `INTAKE_TOKEN` is present; otherwise it 
 ## 4. Discussions and labels
 
 ```bash
-gh repo edit sinscrit/aicitizenaction --enable-discussions
+gh repo edit foodzio/aicitizenaction --enable-discussions
 gh label create record-report --color FBCA04
 gh label create resource-suggestion --color 0E8A16
 gh label create volunteer --color 5319E7

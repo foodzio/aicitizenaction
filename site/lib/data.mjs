@@ -6,7 +6,7 @@ import { loadDirectory, loadContent, loadVocab, vocabLabel, readYaml, walk, I18N
 import { stringsOf, resolveString } from '../../scripts/lib/i18n.mjs';
 import { route, places, contactRoute, membershipRoute, fillTemplate, isNamedPerson } from '../../scripts/lib/routing.mjs';
 
-export const REPO = 'https://github.com/sinscrit/aicitizenaction';
+export const REPO = 'https://github.com/foodzio/aicitizenaction';
 export const SECTIONS = ['bodies', 'channels', 'orgs'];
 
 let cache;

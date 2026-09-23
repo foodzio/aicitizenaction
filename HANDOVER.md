@@ -70,6 +70,13 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-23T15:53:13Z — Moved to the foodzio organisation
+
+- Owner chose `foodzio`. Repository transferred: **github.com/foodzio/aicitizenaction** (public). Local remote and all references updated (site report links, UA strings, .projstuff, docs).
+- Team `foodzio/aicitizenaction-maintainers` created (admin on the repo; member: sinscrit). CODEOWNERS now names the team; commented steward lines use `@foodzio/aicitizenaction-<area>` teams.
+- Branch protection on `main` applied as planned: 1 approval, code-owner review, required status `check`, admins may bypass (`enforce_admins: false`).
+- Next: Railway deploy (owner approved).
+
 ### 2026-09-23T15:50:43Z — Workflows running on GitHub
 
 - **Check**: green on GitHub (validate, 70 tests, build). Actions moved to checkout@v5 / setup-node@v5 (Node 20 deprecation warning).
@@ -81,7 +88,7 @@ Tracked in git and committed with every step.
 ### 2026-09-23T15:44:22Z — Published; anonymous counting built
 
 - Owner: move to an organisation, make public, use Railway, no discussion, tooling confirmed; "if the rules don't require it, don't ask".
-- History rewritten before the first push (token + local paths removed; local backup branch `backup/pre-publication`, not pushed). `main` = the work; pushed `main` and `research-and-ux-brief`; **repo is public** at github.com/sinscrit/aicitizenaction, default branch `main`. Labels created, Discussions enabled.
+- History rewritten before the first push (token + local paths removed; local backup branch `backup/pre-publication`, not pushed). `main` = the work; pushed `main` and `research-and-ux-brief`; **repo is public** at github.com/foodzio/aicitizenaction, default branch `main`. Labels created, Discussions enabled.
 - **Organisation transfer pending**: needs the owner to pick `foodzio`, `SGCLE`, or create a new organisation in the GitHub web UI (API cannot create one).
 - Completion counting (owner: no cookies needed — correct): `server.mjs` + `site/lib/measure.js`. Page sends only `{e, o}` (event, outcome) via sendBeacon with `credentials: omit`; server keeps daily totals only, stores no IP/UA/text, sets no cookie; `/api/counts` publishes totals, completion and own-words rates. "What we count" section on How it works (en + fr). `npm run start` now runs `server.mjs` (serve-handler for `dist/`, clean URLs, no directory listing). Browser-verified; `tests/server.test.mjs`. 70 tests pass.
 - Branch protection not applied yet — waits for the organisation transfer (settings move with the repo, but team rules need the org).
@@ -223,8 +230,8 @@ re-aimed at the alarmed non-expert rather than someone with evidence.
 ## Owner decisions
 
 **Decided 2026-09-23 (owner):**
-- **GitHub organisation:** yes, move the repository to an organisation. *Pending: which organisation* (owner belongs to `foodzio` and `SGCLE`; a new one can only be created in the GitHub web UI).
-- **Public repository:** yes. *Pending: pre-publication scan follow-ups below.*
+- **GitHub organisation:** `foodzio` — done.
+- **Public repository:** yes — done.
 - **Hosting:** Railway (`nixpacks.toml` + `serve dist`). Deploying still needs an explicit go-ahead each time (owner's standing rule).
 - **Visitor discussion on Resources:** no.
 - **Tooling:** confirmed — Astro, YAML + JSON Schema, GitHub Actions, own link checker, axe-core.
@@ -245,4 +252,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T15:50:43Z
+Last modified: 2026-09-23T15:53:13Z

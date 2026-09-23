@@ -21,7 +21,7 @@ const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] :
 const SINCE_DAYS = Number(opt('--since', 21));
 const LIMIT = Number(opt('--limit', 20));
 const DRY = args.includes('--dry-run');
-const UA = 'Mozilla/5.0 (compatible; aicitizenaction-ingest/1.0; +https://github.com/sinscrit/aicitizenaction)';
+const UA = 'Mozilla/5.0 (compatible; aicitizenaction-ingest/1.0; +https://github.com/foodzio/aicitizenaction)';
 
 const decodeEntities = v => String(v ?? '')
   .replace(/&(?:amp|#38);/gi, '&').replace(/&(?:lt|#60);/gi, '<').replace(/&(?:gt|#62);/gi, '>')

@@ -27,7 +27,7 @@ const filesIdx = args.indexOf('--files');
 const FILES = filesIdx >= 0 ? args.slice(filesIdx + 1).filter(a => !a.startsWith('--')) : null;
 const CONCURRENCY = Number(opt('--concurrency', 8));
 const TIMEOUT = Number(opt('--timeout', 15000));
-const UA = 'Mozilla/5.0 (compatible; aicitizenaction-linkcheck/1.0; +https://github.com/sinscrit/aicitizenaction)';
+const UA = 'Mozilla/5.0 (compatible; aicitizenaction-linkcheck/1.0; +https://github.com/foodzio/aicitizenaction)';
 const UNKNOWN_STATUS = new Set([401, 403, 405, 406, 429, 451, 999]);
 
 /** url → [{ path, where }] for every http(s) URL in the given files. */
