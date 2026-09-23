@@ -40,7 +40,6 @@ const path = Astro.url.pathname.replace(/^\/[a-z]{2,3}\//, '/');
     <main id="main">
       <div class="wrap">
         {lang !== 'en' && !thisLang?.public && <p class="notice" lang={lang}>{t('site.translation_machine')}</p>}
-        {draft && <p class="notice">{t('site.draft_notice')}</p>}
         <slot />
       </div>
     </main>

@@ -46,10 +46,6 @@ strings:
       value: Langue
       src: a4fe6526
       machine: true
-    draft_notice:
-      value: Le texte de cette page est un premier jet et n'a pas encore été relu.
-      src: 0d197ba1
-      machine: true
     translation_fallback:
       value: Pas encore traduit — affiché en anglais.
       src: "6e975466"

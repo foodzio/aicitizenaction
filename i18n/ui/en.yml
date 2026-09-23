@@ -14,7 +14,6 @@ strings:
     footer_version: Version
     footer_freshness: How current is this?
     language: Language
-    draft_notice: This page's wording is a first draft and has not been reviewed yet.
     translation_fallback: Not yet translated — shown in English.
     translation_machine: Machine translation, not yet reviewed.
   door:
