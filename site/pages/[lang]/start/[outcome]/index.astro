@@ -28,7 +28,7 @@ const keys = ['path.step', 'path.of', 'path.floor_bloc', 'path.floor_global', 'p
   'verify.null_hint', 'verify.language', 'verify.overdue', 'path.own_words_missing'];
 const payload = outcome.stop ? null : {
   lang,
-  outcome: { id: outcome.id, ignoreGeo: !!outcome.ignore_geo },
+  outcome: { id: outcome.id, ignoreGeo: !!outcome.ignore_geo && outcome.ask !== 'company', ask: outcome.ask ?? null },
   byPlace: outcomePayload(outcome, lang),
   template: gt(`templates.${outcome.template}`),
   t: Object.fromEntries(keys.map(k => [k, t(k)]))
@@ -53,6 +53,18 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
         </ol>
         <noscript><p class="notice">{t('path.no_js')} <a href={`/${lang}/directory/`}>{t('site.nav_directory')}</a></p></noscript>
 
+        {outcome.ask === 'company' ? (
+        <section data-step="1" hidden>
+          <h2>{t('path.which_company')}</h2>
+          <p class="hint">{t('path.which_company_hint')}</p>
+          <label for="company">{t('path.which_company')}</label>
+          <select id="company">
+            <option value="">{t('path.company_unsure')}</option>
+            {payload.byPlace[''].recipients.filter(r => r.isCompany).sort((a, b) => a.name.localeCompare(b.name)).map(r => <option value={r.id}>{r.name}</option>)}
+          </select>
+          <div class="row"><button class="btn" type="button" data-go="2">{t('path.show')}</button></div>
+        </section>
+        ) : (
         <section data-step="1" hidden>
           <h2>{t('path.where_question')}</h2>
           <p class="hint">{t('path.where_hint')}</p>
@@ -71,6 +83,7 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
           </div>
           <div class="row"><button class="btn" type="button" data-go="2">{t('path.show')}</button></div>
         </section>
+        )}
 
         <section data-step="2" hidden>
           <h2>{t('path.why_title')}</h2>
@@ -135,17 +148,25 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
     const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
     const sections = [...document.querySelectorAll('[data-step]')];
     const firstStep = P.outcome.ignoreGeo ? 2 : 1;
-    const state = { where: '', sub: '', to: '', step: firstStep, own: '', draftEdited: false };
+    const state = { where: '', sub: '', company: '', to: '', step: firstStep, own: '', draftEdited: false };
 
     const q = new URLSearchParams(location.search);
     state.where = q.get('where') ?? '';
     state.sub = q.get('sub') ?? '';
     state.to = q.get('to') ?? '';
+    state.company = q.get('company') ?? '';
     state.step = Math.max(firstStep, Math.min(4, Number(q.get('step')) || firstStep));
-    $('#where').value = state.where;
-    $('#sub').value = state.sub;
+    if ($('#where')) { $('#where').value = state.where; $('#sub').value = state.sub; }
+    if ($('#company')) $('#company').value = state.company;
 
     const result = () => {
+      if (P.outcome.ask === 'company') {
+        // The chosen company first, then independent channels (incident databases, watchdogs).
+        const all = P.byPlace[''].recipients;
+        const company = all.find(x => x.id === state.company);
+        const independent = all.filter(x => !x.isCompany).slice(0, 2);
+        return { ...P.byPlace[''], recipients: company ? [company, ...independent] : independent };
+      }
       if (P.outcome.ignoreGeo) return P.byPlace[''];
       const key = state.sub && state.where === 'us' ? `us/${state.sub}` : state.where;
       return P.byPlace[key] ?? P.byPlace[state.where] ?? (state.where ? P.byPlace.zz : P.byPlace['']) ?? P.byPlace[''];
@@ -205,6 +226,7 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
       const p = new URLSearchParams();
       if (state.where) p.set('where', state.where);
       if (state.sub) p.set('sub', state.sub);
+      if (state.company) p.set('company', state.company);
       if (state.to) p.set('to', state.to);
       if (state.step !== firstStep) p.set('step', state.step);
       const url = `${location.pathname}${p.toString() ? '?' + p : ''}`;
@@ -229,9 +251,12 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
       if (h && push) { h.setAttribute('tabindex', '-1'); h.focus(); }
     }
 
-    $('#where').addEventListener('change', e => { state.where = e.target.value; state.to = ''; $('#sub-wrap').hidden = state.where !== 'us'; if (state.where !== 'us') state.sub = ''; });
-    $('#sub').addEventListener('change', e => { state.sub = e.target.value; state.to = ''; });
-    $('#sub-wrap').hidden = state.where !== 'us';
+    if ($('#where')) {
+      $('#where').addEventListener('change', e => { state.where = e.target.value; state.to = ''; $('#sub-wrap').hidden = state.where !== 'us'; if (state.where !== 'us') state.sub = ''; });
+      $('#sub').addEventListener('change', e => { state.sub = e.target.value; state.to = ''; });
+      $('#sub-wrap').hidden = state.where !== 'us';
+    }
+    if ($('#company')) $('#company').addEventListener('change', e => { state.company = e.target.value; state.to = ''; });
     document.addEventListener('click', e => {
       const go = e.target.closest('[data-go]');
       if (go) { show(Number(go.dataset.go)); if (go.dataset.go === '4') measure('path_done', { outcome: P.outcome.id }); }

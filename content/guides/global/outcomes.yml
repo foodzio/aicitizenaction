@@ -18,6 +18,8 @@ facts:
     - id: fix
       match: { sections: [channels], types: [company, reporting-channel, watchdog], tags_any: [behaviour, flaw] }
       ignore_geo: true
+      # Step 1 asks which company's product it was, instead of where the user lives.
+      ask: company
       template: fix
     - id: record
       match: { sections: [bodies], route_types_any: [consultation, docket, evidence, submission] }

@@ -66,6 +66,7 @@ Update this table as the repo grows — it is the map, so a stale map is a bug.
 | `.github/workflows/` | `check.yml` (validate, test, build, link-check changed files on PRs), `weekly.yml` (full link check + issues, freshness report, steward check-ins), `ingest.yml` (twice-daily Resource intake PR) |
 | `.github/ISSUE_TEMPLATE/`, `.github/pull_request_template.md` | Report a record, suggest a resource, volunteer; PR editorial checklist |
 | `docs/github-setup.md` | GitHub settings not yet applied (push, branch protection, intake-bot decision, labels, Discussions) |
+| `docs/phase-a-test-kit.md` | Script and templates for the five-person user test (phase A) |
 | `docs/accessibility.md` | How to run the axe-core check and the latest results |
 | `docs/link-check-trial.md` | First full link-check run: 404s and cross-host redirects for stewards to re-verify |
 
@@ -207,4 +208,4 @@ List every `HANDOVER.md` in this repo and what it covers, so the map stays true:
 | `HANDOVER.md` | Repo-wide work for `aicitizenaction` |
 | _(add rows as subprojects appear)_ | |
 
-Last modified: 2026-09-23T00:17:45Z
+Last modified: 2026-09-23T00:18:56Z

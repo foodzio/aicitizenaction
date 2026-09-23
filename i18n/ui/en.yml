@@ -31,6 +31,9 @@ strings:
     step3: Your message
     step4: Done
     where_question: Where do you live?
+    which_company: Which company's product was it?
+    which_company_hint: Reports go straight to the company's own safety or feedback channel. Independent incident databases are offered alongside.
+    company_unsure: I'm not sure, or it isn't listed
     where_hint: This decides which institutions can act for you. You can change it later.
     where_state: Which state? (optional)
     where_skip: I'd rather not say

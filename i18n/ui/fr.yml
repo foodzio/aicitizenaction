@@ -108,6 +108,18 @@ strings:
       value: Où habitez-vous ?
       src: 8a38c81b
       machine: true
+    which_company:
+      value: De quelle entreprise était le produit ?
+      src: 378f86c6
+      machine: true
+    which_company_hint:
+      value: Les signalements vont directement au canal de sécurité ou de retour de l'entreprise. Des bases de données d'incidents indépendantes sont proposées à côté.
+      src: d6fdee47
+      machine: true
+    company_unsure:
+      value: Je ne sais pas, ou elle n'est pas dans la liste
+      src: 1a7e9f24
+      machine: true
     where_hint:
       value: Cela détermine quelles institutions peuvent agir pour vous. Vous pourrez le changer plus tard.
       src: 13b0a6d0

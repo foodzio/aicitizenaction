@@ -90,3 +90,12 @@ test('an unapproved language builds with noindex, a machine-translation notice, 
   assert.ok(!page('en/index.html').includes('href="/fr/'), 'English pages link to an unapproved language');
   assert.ok(!page('en/index.html').includes('noindex'));
 });
+
+test('the "fix" outcome asks which company, and offers independent channels alongside', () => {
+  const html = page('en/start/fix/index.html');
+  assert.match(html, /id="company"/);
+  const json = JSON.parse(html.match(/<script type="application\/json" id="payload">([\s\S]*?)<\/script>/)[1]);
+  const recips = json.byPlace[''].recipients;
+  assert.ok(recips.filter(r => r.isCompany).length >= 10);
+  assert.ok(recips.some(r => !r.isCompany), 'an independent channel is available');
+});

@@ -69,6 +69,11 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-23T00:18:56Z — Path improvement + phase A kit
+
+- "An AI company fixes something I saw" now asks **which company's product it was** (`ask: company` in outcomes.yml) instead of showing the same three companies to everyone; the chosen company's channel comes first, two independent channels (incident database, watchdog) alongside. URL state `?company=`. Browser-checked. Site test added.
+- `docs/phase-a-test-kit.md`: moderator script, measures, decision thresholds, findings template for the five-person test.
+
 ### 2026-09-23T00:17:45Z — Phase 1b groundwork + phase 7 accessibility
 
 - `schema/vocab/powers.yml` (16 powers, draft). `scripts/apply-routing-drafts.mjs`: vocab check + every value needs an exact quote from the record, else dropped; never overwrites `reviewed`; writes `docs/routing-drafts-report.md`.
@@ -187,4 +192,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T00:17:45Z
+Last modified: 2026-09-23T00:18:56Z

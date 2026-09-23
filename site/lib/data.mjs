@@ -147,6 +147,11 @@ export function outcomePayload(outcome, lang) {
     const r = route(outcome, where, records, opts);
     return { scope: r.scope, floor: r.floor, total: r.total, recipients: r.recipients.map(x => card(x, lang)) };
   };
+  if (outcome.ask === 'company') {
+    const all = route(outcome, {}, records, { ...opts, max: 200 }).recipients;
+    const cards = all.map(x => ({ ...card(x, lang), isCompany: x.type === 'company' }));
+    return { '': { scope: 'any', floor: false, total: cards.length, recipients: cards } };
+  }
   const byPlace = { '': result({}) };
   if (!outcome.ignore_geo && !outcome.stop) {
     for (const [c, subs] of places(records)) {
