@@ -1,0 +1,15 @@
+id: cset-will-china-deploy-humanoid-robots
+facts:
+  source: cset
+  url: https://cset.georgetown.edu/article/will-china-deploy-humanoid-robots-to-fight/
+  url_hash: 6950d71eb8ea
+  kind: report
+  language: en
+  published_at: 2026-09-08
+  author: Jason Ly
+strings:
+  title: Will China deploy humanoid robots to fight?
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

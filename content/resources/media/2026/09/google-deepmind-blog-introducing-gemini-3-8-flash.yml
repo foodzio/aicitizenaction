@@ -1,0 +1,14 @@
+id: google-deepmind-blog-introducing-gemini-3-8-flash
+facts:
+  source: google-deepmind-blog
+  url: https://deepmind.google/blog/introducing-gemini-3-8-flash-and-38-flash-cyber/
+  url_hash: 355be2cf6d2d
+  kind: article
+  language: en
+  published_at: 2026-09-02
+strings:
+  title: Introducing Gemini 3.8 Flash and 3.8 Flash Cyber
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

@@ -1,0 +1,14 @@
+id: google-deepmind-blog-proactive-cyber-defense-governments-enterprises
+facts:
+  source: google-deepmind-blog
+  url: https://deepmind.google/blog/proactive-cyber-defense-for-governments-and-enterprises/
+  url_hash: bf94848b24bf
+  kind: article
+  language: en
+  published_at: 2026-09-02
+strings:
+  title: Proactive cyber defense for governments and enterprises
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

@@ -1,0 +1,15 @@
+id: lawfare-international-law-cuban-missile-crisis
+facts:
+  source: lawfare
+  url: https://www.lawfaremedia.org/article/international-law-in-the-cuban-missile-crisis
+  url_hash: cec9cabc5c12
+  kind: article
+  language: en
+  published_at: 2026-09-23
+  author: Mykhailo Soldatenko
+strings:
+  title: International Law in the Cuban Missile Crisis
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

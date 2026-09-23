@@ -1,0 +1,15 @@
+id: ai-now-institute-what-s-really-motivating-these
+facts:
+  source: ai-now-institute
+  url: https://ainowinstitute.org/news/whats-really-motivating-these-ai-apocalypse-stories
+  url_hash: ec8c42724abe
+  kind: report
+  language: en
+  published_at: 2026-09-19
+  author: AI Now Institute
+strings:
+  title: What’s really motivating these AI apocalypse stories?
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

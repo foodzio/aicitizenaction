@@ -1,0 +1,14 @@
+id: google-deepmind-blog-alphagenome-atlas
+facts:
+  source: google-deepmind-blog
+  url: https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/
+  url_hash: 825546b9e9e1
+  kind: article
+  language: en
+  published_at: 2026-09-08
+strings:
+  title: "AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome"
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23

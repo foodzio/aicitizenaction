@@ -1,0 +1,15 @@
+id: transformer-what-s-neuralese-why-is
+facts:
+  source: transformer
+  url: https://www.transformernews.ai/p/what-is-neuralese-openai-astra-chain-of-thought-recurrent-depth
+  url_hash: 1c481cb5c560
+  kind: newsletter
+  language: en
+  published_at: 2026-09-03
+  author: Shakeel Hashim
+strings:
+  title: What’s neuralese and why is everyone so concerned about it?
+meta:
+  status: pending
+  added_by: ingest
+  added_on: 2026-09-23
