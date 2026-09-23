@@ -70,17 +70,24 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-23T02:01:40Z — QA run 2, final fixes, site built
+
+- Run 2 (13 affected scenarios): 9 PASS, 4 PASS-WITH-NOTE, 0 FAIL. Results appended to `docs/test-results.md`.
+- Follow-ups: `templates.international` (EN + FR) used when the path falls back to international bodies; salutations trimmed at " / "; windows page title; the generic-method record's name made readable (content edit of our own record title); scenario B1 text updated.
+- Final build: 898 pages in `dist/` (en + gated fr + 404). 65 tests pass, validation 0 errors. Not deployed.
+- Known, accepted: French pages show English record prose until translated; the first international body offered (UN Global Dialogue) says in its own text that its 2026 window closed — routing can't read prose; will improve once routing drafts are reviewed.
+
 ### 2026-09-23T01:58:15Z — QA run 1 and fixes
 
 - Run 1 (QA subagent, 37 scenarios): 30 PASS, 6 PASS-WITH-NOTE, 1 FAIL. Full table in `docs/test-results.md`.
 - Fixed: share link on step 4 now points at the path (step 2 for the same place/company); in-page Back uses history; "Somewhere else" offers international bodies via `floor_match` in outcomes.yml (law, record, harm) and links to the any-parliament method; new `facts.recommend: false` (set on the generic-method record) keeps guidance records out of recipient lists; placeholder chairs ("Not applicable") no longer used in salutations or ranking (`isNamedPerson`); Colorado window breadcrumb; French salutation ("À l'attention de : … / Madame, Monsieur,"); site 404 page; long small-print lines capped.
-- Regression tests added (routing + site). 65 pass. Run 2 (re-test of affected scenarios) in progress → /tmp/claude-503/scenario-retest.md.
+- Regression tests added (routing + site). 65 pass.
 
 ### 2026-09-23T01:19:58Z — End-to-end scenarios (owner: "no need for review at the moment")
 
 - Owner instruction: skip human reviews for now; write test scenarios, have a subagent run them, then build the site.
 - `docs/test-scenarios.md`: 41 browser scenarios in 7 groups (door, path/law, other outcomes, directory/records, Resources, language, hygiene).
-- Site built (897 pages); a QA subagent is running the scenarios against `npx serve dist -l 4321` via Playwright MCP, results to /tmp/claude-503/scenario-results.md. **Next:** fix failures, rebuild, record results in `docs/test-results.md`.
+- Site built; QA subagent ran the scenarios (see the QA run entries above).
 
 ### 2026-09-23T00:19:54Z — Phase 1b: routing drafts applied
 
@@ -221,4 +228,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T01:58:15Z
+Last modified: 2026-09-23T02:01:40Z

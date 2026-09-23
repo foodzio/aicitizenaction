@@ -31,6 +31,7 @@ const payload = outcome.stop ? null : {
   outcome: { id: outcome.id, ignoreGeo: !!outcome.ignore_geo && outcome.ask !== 'company', ask: outcome.ask ?? null },
   byPlace: outcomePayload(outcome, lang),
   template: gt(`templates.${outcome.template}`),
+  floorTemplate: gt('templates.international'),
   methodUrl: (m => m ? recordUrl(lang, m) : null)(data().records.find(r => r.facts.recommend === false && r.geo.country === 'global')),
   t: Object.fromEntries(keys.map(k => [k, t(k)]))
 };
@@ -219,7 +220,8 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
     function fill() {
       const c = chosen();
       const own = state.own.trim() || T['path.own_words_missing'];
-      return P.template.replace(/\{recipient\}/g, c?.recipient ?? '').replace(/\{own_words\}/g, own);
+      const tpl = result().scope === 'global' && P.floorTemplate && !P.floorTemplate.startsWith('templates.') ? P.floorTemplate : P.template;
+      return tpl.replace(/\{recipient\}/g, c?.recipient ?? '').replace(/\{own_words\}/g, own);
     }
     function renderDraft() {
       if (!state.draftEdited) $('#draft').value = fill();

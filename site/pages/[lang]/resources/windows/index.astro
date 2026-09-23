@@ -10,7 +10,7 @@ const { windows } = resources();
 const open = windows.filter(w => isOpen(w));
 const closed = windows.filter(w => !isOpen(w)).reverse();
 ---
-<Base lang={lang} title={t('resources.windows_archive')} current="resources">
+<Base lang={lang} title={t('resources.windows')} current="resources">
   <h1>{t('resources.windows')}</h1>
   <ul class="routes">
     {open.map(w => <li><a href={`/${lang}/resources/windows/${w.id}/`}><strong>{w.strings.title}</strong></a><div class="meta-line">{placeName(w.facts.jurisdiction, lang)} · {t('resources.closes')} {w.facts.closes_on}</div></li>)}

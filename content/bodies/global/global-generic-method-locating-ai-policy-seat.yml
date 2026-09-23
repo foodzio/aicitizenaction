@@ -34,7 +34,7 @@ facts:
       name: Not applicable
       verified_on: 2026-09-22
 strings:
-  name: GENERIC METHOD — locating the AI policy seat and the public route in an arbitrary jurisdiction
+  name: How to find the AI committee and the public route in any parliament
   ai_jurisdiction: Applies to any parliamentary or presidential system not covered above.
   business: |-
     STEP 1 — FIND THE COMMITTEE. Go to the parliament's official domain (almost always a .gov/.gob/.gouv/.parl/.leg national domain; find it via the Inter-Parliamentary Union's Parline database at data.ipu.org, which lists every national parliament with its official site). Look for the page named 'Committees' / 'Commissions' / 'Ausschüsse' / 'Comisiones' / '委員会' / '위원회'. AI almost never has its own standing committee. It sits in one of four places, and you should check in this order: (a) the committee shadowing the ICT/digital/communications ministry — the single most common home; (b) the committee shadowing science, technology, innovation or research; (c) the committee shadowing economy/industry/trade, where AI is framed as industrial policy; (d) the justice, home affairs or constitutional committee, where AI is framed as rights, surveillance or liability. In bicameral systems check both chambers — they often differ, and the upper house is frequently more accessible. Also search the site for 'special committee', 'select committee', 'ad hoc', 'temporary' or 'inquiry' plus 'artificial intelligence': many jurisdictions create a one-off AI committee that outranks the standing one, as Brazil and the EU did. CROSS-CHECK against the OECD.AI policy observatory (oecd.ai/en/dashboards) and the IPU's AI tracker, both of which index national AI bodies and are more current than Wikipedia.

@@ -79,6 +79,23 @@ strings:
         [Votre ville]
       src: ea7e7f68
       machine: true
+    international:
+      value: |
+        À l'attention de : {recipient}
+
+        Madame, Monsieur,
+
+        Je vous écris en tant que citoyen·ne au sujet de l'intelligence artificielle. Je n'ai trouvé aucun organisme dans mon pays qui puisse agir à ce sujet, c'est pourquoi je m'adresse à vous.
+
+        {own_words}
+
+        Je vous serais reconnaissant·e de me dire si cela relève de vos travaux, et comment des personnes comme moi peuvent y participer.
+
+        Veuillez agréer mes salutations distinguées,
+        [Votre nom]
+        [Votre pays]
+      src: 9aba2d81
+      machine: true
     join:
       value: |
         Bonjour,

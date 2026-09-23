@@ -27,7 +27,7 @@ Base URL: `http://localhost:4321`
 - Type "My son's school uses an AI tutor and nobody checked it." in the own-words box: the message updates to include that sentence; the salutation contains no bracketed text like "(committee id".
 - "Send it to" shows an address or link with a verification badge.
 - Click "Copy message": button briefly says "Copied". `window.aicaEvents` contains a `draft_copied` event with `own_words: true`.
-- Click the done button: step 4 "That's it — you've done it." with a share field containing the current URL.
+- Click the done button: step 4 "That's it — you've done it." with a share field containing the path URL for the same place at step 2 (e.g. `/en/start/law/?where=us&step=2`), so a friend starts where it matters.
 
 **B2 — US state.** Step 1: United States, then state "California". Step 2 shows a California body first (e.g. Assembly Committee on Privacy and Consumer Protection). URL has `sub=ca`.
 

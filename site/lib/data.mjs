@@ -101,7 +101,7 @@ export function isOverdue(r, now = new Date().toISOString().slice(0, 10)) {
 }
 
 // Salutations drop research asides in brackets: "(committee id 135; formerly …)".
-const plain = s => String(s).replace(/\s*\([^)]*\)/g, '').replace(/\s+/g, ' ').trim();
+const plain = s => String(s).replace(/\s*\([^)]*\)/g, '').split(' / ')[0].replace(/\s+/g, ' ').trim();
 
 /** The compact card the path shows for a recipient. */
 export function card(r, lang) {

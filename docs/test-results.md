@@ -1,6 +1,6 @@
 # Test results
 
-*Browser scenario runs from `docs/test-scenarios.md`, executed by a QA subagent through Playwright MCP against the local build. Latest update 2026-09-23T01:58:15Z.*
+*Browser scenario runs from `docs/test-scenarios.md`, executed by a QA subagent through Playwright MCP against the local build. Latest update 2026-09-23T02:01:40Z.*
 
 ## Run 1 — 2026-09-23
 
@@ -67,3 +67,42 @@
 4. **B5**: in-page Back adds a history entry instead of going back, so browser Back afterwards goes forward a step.
 5. **G7**: some Resources small-print lines run to ~130–140 characters at 1280px.
 6. **E6**: there is no site-branded 404 page; serve's default is shown.
+
+## Run 2 — re-test of affected scenarios, 2026-09-23
+
+9 PASS · 4 PASS-WITH-NOTE · 0 FAIL (13 scenarios). Follow-up fixes after run 2: international letter template when no national body exists; salutation trimmed at " / "; windows page title matches its heading; method record renamed from "GENERIC METHOD — …" to "How to find the AI committee and the public route in any parliament"; B1 scenario text updated to the new share behaviour. Verified in the browser after the fix.
+
+Known and accepted: record prose and route labels inside French pages fall back to English until translated; the first international body offered (UN Global Dialogue) notes in its own text that its 2026 window has closed — routing cannot read that from prose yet.
+
+## Scenario re-test after fixes: docs/test-scenarios.md
+
+*Run 2026-09-23 (about 01:58 to 02:00 UTC; file written 2026-09-23T02:00:12Z) against http://localhost:4321 (footer shows version 0.1.16) in Chrome for Testing via Playwright MCP on CDP 9352. Viewport 390×844 unless stated. Every page was loaded fresh with `page.goto`. Console and pageerror listeners were attached for every run. Screenshots are in `tmp/qa/retest-*.png`.*
+
+**Totals: 13 scenarios re-run. 9 PASS, 4 PASS-WITH-NOTE, 0 FAIL.**
+
+| ID | Result | Evidence |
+| --- | --- | --- |
+| B1 | PASS | `/en/` → "A law or rule about AI" goes to `/en/start/law/`. Step 1 is "Where do you live?" and aria-current is on "Step 1 · Where you are". United States gives `?where=us&step=2`. The primary card is Senate Committee on Commerce, Science, and Transportation, showing "Ted Cruz (chair, R, TX) · Checked 2026-09-22", "Verified · 2026-09-22" and "Official, up-to-date list of members". There are two alternatives, Judiciary and HSGAC. Step 3 has "Why does this matter to you?" above "Your message". Typing updates the draft. Salutation is "Dear Ted Cruz, Chair, Senate Committee on Commerce, Science, and Transportation," with no bracketed id. "Send it to" shows a route with Verified. After Copy, a "Copied" button is present and `draft_copied` has `own_words:true`. **Fixed:** step 4 is at `?where=us&step=4` and the share field is `http://localhost:4321/en/start/law/?where=us&step=2`. The scenario text still says "the current URL", so it should be updated to match the new intended behaviour. `retest-B1-step2.png`, `retest-B1-step4.png` |
+| B3 | PASS | Clicking "Senate Committee on the Judiciary" gives `?where=us&to=us-senate-committee-judiciary&step=2`, and the primary card is now Judiciary. Step 3 salutation: "Dear Chuck Grassley, Chair, Senate Committee on the Judiciary,". |
+| B5 | PASS | **Fixed.** The fresh sequence was step 1 → 2 → 3. In-page "Back" goes to `?where=us&step=2` (visible h2 "The best place to send this"). Browser Back straight after goes to `/en/start/law/` (step 1, "Where do you live?"), not forward to step 3. Browser Back from step 4 returns to step 3. |
+| B6 | PASS | Sweden gives `?where=se&step=2`. Notice: "No body in your country has this power yet. The European Union's institutions do, and they accept messages from people in any member state." Primary is EP IMCO; alternatives are EP LIBE and ITRE. |
+| B7 | PASS-WITH-NOTE | **Fixed.** "Somewhere else" (`where=zz`): the notice says "…These international bodies accept messages from anyone. You could also ask your own parliament's technology committee…" and includes the link "How to find the right committee in any parliament" → `/en/bodies/global-generic-method-locating-ai-policy-seat/` (HTTP 200). Primary is "Global Dialogue on AI Governance (UN)"; alternatives are "ITU — AI for Good" and "UNESCO — Recommendation on the Ethics of AI / Global AI Ethics and Governance Observatory". "GENERIC METHOD" is nowhere in the step 2 body text. Salutations: "Dear Global Dialogue on AI Governance,", "Dear ITU — AI for Good,", "Dear UNESCO — Recommendation on the Ethics of AI / Global AI Ethics and Governance Observatory,". None contains "Not applicable". Notes are listed under Other observations. `retest-B7.png` |
+| B8 | PASS | Opening `?where=us&step=3` with nothing typed leaves the own-words box empty. The draft contains "[Your own words — why this matters to you]". Copy records `draft_copied` with `own_words:false`. |
+| C2 | PASS | `/en/start/fix/`: step 1 is "Which company's product was it?" with a `#company` select of 31 options, including Anthropic, OpenAI and Google. OpenAI gives `?company=us-openai&step=2` with primary OpenAI and alternatives AI Incident Database and The Midas Project. "I'm not sure, or it isn't listed" gives `?step=2` with primary AI Incident Database and alternative The Midas Project only. |
+| E1 | PASS | "Arrived here worried? Start with one question instead. Start here →" links to `/en/`. Open windows: FDA docket (Closes 2026-10-19) and Colorado (Closes 2026-10-26). Two explainers. Exactly 8 media links, each showing publisher · perspective · type · date. `retest-E1.png` |
+| E4 | PASS | **Fixed.** The Colorado window breadcrumb reads "Resources · Open now — chances to act before they close" (link to `/en/resources/windows/`). The page shows Opened 2026-08-11, Closes 2026-10-26, a summary, "Start here →" to `/en/start/record/?where=us&sub=co&step=2`, "Act on this ↗" to the coag.gov form, and dated sources. The "Closed 2026-10-26." note is in the DOM but `hidden`. The FDA window breadcrumb is the same. `retest-E4.png` |
+| E6 | PASS | **Fixed.** `/en/resources/media/algorithmwatch-statement/` returns HTTP 404 with the site's own page: title "This page isn't here · AI Citizen Action", h "This page isn't here", "It may have moved, or an item may not be published yet…", "Start here →" (/en/), "Browse the full directory", and the full site header and footer, styled. `retest-E6.png` |
+| F2 | PASS-WITH-NOTE | **Fixed.** `/fr/start/law/?where=fr&step=3` returns 200 with `lang=fr`. The interface is French. The draft starts "À l'attention de : Anna Cavazzini, Chair, European Parliament — Committee on the Internal Market and Consumer Protection", then a blank line, then "Madame, Monsieur,", and ends "Veuillez agréer mes salutations distinguées,". English inside record content ("Chair, European Parliament — …", route label "Public submission route") is the accepted fallback. `retest-F2.png` |
+| G5 | PASS | Listeners were on for every page visited in this run: the door, law steps 1–4 (us, se, zz, with alternatives), fix (OpenAI, not sure), the method body page, resources, both windows, the windows index, the FR path, and the record page at 1280. Result: 0 console errors, 0 warnings, 0 pageerrors. The only console error is the intended 404 document on E6 ("Failed to load resource… 404" for the pending-item URL). The `favicon.ico` 404 in the session log came from the previous run; pages declare `/favicon.svg`. |
+| G7 | PASS-WITH-NOTE | At 1280×800 the door, `/en/bodies/us-senate-committee-commerce-2/` and `/en/resources/` all have scrollWidth = clientWidth (1265) and no element overflows. Measured rendered line widths: door prose is at most 36.8rem, record prose at most 38rem, and **Resources small print is now at most 38rem** (meta-lines 35.7–38rem, lede 37rem). One exception: the FDA window title (a `strong` in the open-windows list) is one line of 43.8rem (~81 chars). That is minor because it is a title, not running text. Viewport reset to 390×844 afterwards. `retest-G7-door.png`, `retest-G7-record.png`, `retest-G7-resources.png` |
+
+### Failures
+
+None. Every re-tested scenario passes under its written criteria. Scenario B1's wording ("share field containing the current URL") should be updated to the new intended behaviour (the same place at step 2).
+
+### Other observations (not failures)
+1. **B7, closed window as primary:** the recommended primary recipient for "Somewhere else" is the UN Global Dialogue, but its "How to reach them" text says "The 2026 window has closed; expect a fresh call ahead of the May 2027 New York session." A user is steered first to a channel that isn't open now.
+2. **B7, draft wording:** the law template tells these international bodies "I understand that you consider legislation in this area", which is inaccurate for UN, ITU and UNESCO forums. The UNESCO salutation uses the full record title ("Dear UNESCO — Recommendation on the Ethics of AI / Global AI Ethics and Governance Observatory,"), which is awkward.
+3. **B7, method page title:** the linked method page (`/en/bodies/global-generic-method-locating-ai-policy-seat/`) still has the h1 "GENERIC METHOD — locating the AI policy seat and the public route in an arbitrary jurisdiction", in raw internal wording. The link text itself is fine.
+4. **Windows index:** `/en/resources/windows/` has `<title>` "Closed windows · AI Citizen Action", but its h1 is "Open now — chances to act before they close" and it lists the open windows first. The title and h1 don't match (the breadcrumb target of E4).
+5. **G7:** the FDA window title line on Resources is 43.8rem at 1280px, slightly past the ~38rem cap.

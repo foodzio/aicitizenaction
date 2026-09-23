@@ -62,6 +62,18 @@ strings:
 
       [Your name]
       [Your town]
+    international: |
+      Dear {recipient},
+
+      I am writing as a member of the public about artificial intelligence. I could not find a body in my own country that can act on this, so I am writing to you.
+
+      {own_words}
+
+      I would be grateful to know whether this falls within your work, and how people like me can take part.
+
+      Yours sincerely,
+      [Your name]
+      [Your country]
     join: |
       Hello,
 
