@@ -70,6 +70,14 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-23T15:50:43Z — Workflows running on GitHub
+
+- **Check**: green on GitHub (validate, 70 tests, build). Actions moved to checkout@v5 / setup-node@v5 (Node 20 deprecation warning).
+- **Weekly**: green (full link check with fresh state; freshness report; check-ins). First confirmed failures can appear from the second weekly run.
+- **Resource intake**: needed the repository setting "Allow GitHub Actions to create and approve pull requests" — enabled via API (required by the plan's intake process; GitHub offers create and approve only as one switch). PR step restructured to open a PR whenever `resource-intake` is ahead of `main`. **PR #1 "Resource intake" is open** with the new items (all `pending`).
+- Known GitHub behaviour: PRs opened by the Actions token do not trigger other workflows, so `Check` does not run automatically on intake PRs. Options once in an organisation: a GitHub App token for the intake job, or run `Check` manually on the PR.
+- Mistake made and fixed: a `git branch -f` after committing briefly dropped the counting commit from the branch; recovered from the reflog (15d5bd7) before anything was pushed.
+
 ### 2026-09-23T15:44:22Z — Published; anonymous counting built
 
 - Owner: move to an organisation, make public, use Railway, no discussion, tooling confirmed; "if the rules don't require it, don't ask".
@@ -237,4 +245,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T15:44:22Z
+Last modified: 2026-09-23T15:50:43Z
