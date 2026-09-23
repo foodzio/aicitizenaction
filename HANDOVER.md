@@ -70,6 +70,14 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-23T16:00:58Z — Deployed to Railway (owner approved)
+
+- **Live: https://web-production-ce384.up.railway.app** (v0.1.25). Railway workspace `iconducteur` (where 50 of the owner's 51 projects live), project `aicitizenaction`, service `web`, GitHub source `foodzio/aicitizenaction@main`, volume at `/data`, `COUNTS_FILE=/data/counts.json`, Railway-generated domain.
+- First build failed: Railway used Node 20, Astro 7 needs 22.12+ → `package.json` engines `>=22.12`. Redeployed with `railway redeploy --from-source`: SUCCESS.
+- Smoke-tested live: door 200, path/directory/resources/API/fr 200, 404 page, `/api/count` 204 / 400 for bad input, no cookies; browser: US law step 2 shows Senate Commerce, no third-party requests, no console errors. **One test "door" count was added to the live totals by this smoke test.**
+- **Pushes do not auto-deploy yet**: the Railway GitHub app needs access to the `foodzio` organisation (GitHub → foodzio → Settings → GitHub Apps → Railway → repository access). Until then: `railway redeploy --from-source -y` (owner rule: ask before deploying).
+- Time-based content (closing windows, overdue badges) only updates on rebuild; once auto-deploy works, merges rebuild it. A scheduled rebuild would keep it exact between merges.
+
 ### 2026-09-23T15:53:13Z — Moved to the foodzio organisation
 
 - Owner chose `foodzio`. Repository transferred: **github.com/foodzio/aicitizenaction** (public). Local remote and all references updated (site report links, UA strings, .projstuff, docs).
@@ -232,7 +240,7 @@ re-aimed at the alarmed non-expert rather than someone with evidence.
 **Decided 2026-09-23 (owner):**
 - **GitHub organisation:** `foodzio` — done.
 - **Public repository:** yes — done.
-- **Hosting:** Railway (`nixpacks.toml` + `serve dist`). Deploying still needs an explicit go-ahead each time (owner's standing rule).
+- **Hosting:** Railway — deployed. Deploying still needs an explicit go-ahead each time (owner's standing rule).
 - **Visitor discussion on Resources:** no.
 - **Tooling:** confirmed — Astro, YAML + JSON Schema, GitHub Actions, own link checker, axe-core.
 
@@ -252,4 +260,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T15:53:13Z
+Last modified: 2026-09-23T16:00:58Z

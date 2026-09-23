@@ -118,6 +118,8 @@ able to work in this repo using only what is written in this section.)_
 - Build the site: `npm run build` (→ `dist/`, ~4 s, ~900 pages in en + fr)
 - Develop: `npm run dev` (Astro dev server — local only, never in production)
 - Serve the build locally: `PORT=4321 COUNTS_FILE=tmp/counts.json node server.mjs` (or `npx serve dist -l 4321` without counting)
+- **Live:** https://web-production-ce384.up.railway.app — Railway workspace `iconducteur`, project `aicitizenaction`, service `web`, environment `production`, source `foodzio/aicitizenaction@main`, volume `web-volume` at `/data`, `COUNTS_FILE=/data/counts.json`.
+- Redeploy the latest commit: `railway redeploy --from-source -y` (pushes do not auto-deploy until the Railway GitHub app has access to the `foodzio` organisation). **Ask the owner before any deploy.**
 - Production start (Railway): `npm run start` = `node server.mjs` on `$PORT`; set `COUNTS_FILE=/data/counts.json` with a volume at `/data`. **Ask the owner before any deploy.**
 
 ---
@@ -212,4 +214,4 @@ List every `HANDOVER.md` in this repo and what it covers, so the map stays true:
 | `HANDOVER.md` | Repo-wide work for `aicitizenaction` |
 | _(add rows as subprojects appear)_ | |
 
-Last modified: 2026-09-23T15:44:22Z
+Last modified: 2026-09-23T16:00:58Z
