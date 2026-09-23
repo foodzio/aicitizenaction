@@ -58,6 +58,7 @@ Update this table as the repo grows — it is the map, so a stale map is a bug.
 | `content/resources/` | Resources: `sources/<geo>/` (15 verified feeds, each with a perspective), `media/<yyyy>/<mm>/` (ingested items; only `published` are shown), `explainers/`, `windows/` (dated, expire on `closes_on`) |
 | `site/lib/resources.mjs` | Build-time Resources data, path handoff links |
 | `content/guides/global/` | Our own guidance: `outcomes.yml` (door answers + routing rules), `draft-templates.yml`, `insider.yml`, `about.yml` |
+| `server.mjs` | Production server: serves `dist/` with serve-handler (the code behind `serve`) plus `POST /api/count` and `GET /api/counts` — anonymous daily totals, no cookies, no IPs. `COUNTS_FILE` sets where totals are kept |
 | `nixpacks.toml` | Railway build/start per the owner's convention (`serve dist`) |
 | `CONTRIBUTING.md` | Contributor guide: ways in, editorial rules, first change, roles, review cycles |
 | `docs/stewards/worked-example.md` | A new steward's first hour: one record re-checked, annotated |
@@ -116,8 +117,8 @@ able to work in this repo using only what is written in this section.)_
 - Point tools at another tree: `AICA_CONTENT=/path/content AICA_I18N=/path/i18n npm run validate`
 - Build the site: `npm run build` (→ `dist/`, ~4 s, ~900 pages in en + fr)
 - Develop: `npm run dev` (Astro dev server — local only, never in production)
-- Serve the build locally: `npx serve dist -l 4321`
-- Production start (Railway): `npm run start` = `serve dist -l $PORT`. **Ask the owner before any deploy.**
+- Serve the build locally: `PORT=4321 COUNTS_FILE=tmp/counts.json node server.mjs` (or `npx serve dist -l 4321` without counting)
+- Production start (Railway): `npm run start` = `node server.mjs` on `$PORT`; set `COUNTS_FILE=/data/counts.json` with a volume at `/data`. **Ask the owner before any deploy.**
 
 ---
 
@@ -211,4 +212,4 @@ List every `HANDOVER.md` in this repo and what it covers, so the map stays true:
 | `HANDOVER.md` | Repo-wide work for `aicitizenaction` |
 | _(add rows as subprojects appear)_ | |
 
-Last modified: 2026-09-23T01:58:15Z
+Last modified: 2026-09-23T15:44:22Z

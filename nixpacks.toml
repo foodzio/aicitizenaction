@@ -1,4 +1,6 @@
-# Railway build (owner convention: static build served with `serve`, never a dev server).
+# Railway build (owner convention: static build, never a dev server). `npm run start` runs
+# server.mjs: the `serve` handler for dist/ plus the anonymous counting endpoint.
+# Set COUNTS_FILE=/data/counts.json and mount a Railway volume at /data so totals survive deploys.
 [phases.build]
 cmds = ["npm run build"]
 

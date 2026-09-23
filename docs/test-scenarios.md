@@ -106,3 +106,7 @@ Base URL: `http://localhost:4321`
 **G6 — Keyboard.** On `/en/start/law/`: Tab reaches the skip link first; the country select, the button and later the textareas are reachable and show a visible focus ring; moving to a new step puts focus on its heading.
 
 **G7 — Desktop layout.** At 1280×800, the door, a record page and the Resources page have no overflow and readable line lengths.
+
+## H. Anonymous counting (run against `node server.mjs`, not `serve`)
+
+**H1 — Totals only.** Open `/en/`, then `/en/start/law/?where=us&step=3`, type own words, click "Copy message". `/api/counts` shows `door|none`, `step_3|law`, `draft_copied|law`, `own_words|law` and one `time_*` bucket. `document.cookie` is empty; `localStorage` and `sessionStorage` are empty; the words typed appear nowhere in the network request body (only `{"e":…,"o":…}`).

@@ -70,6 +70,14 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-23T15:44:22Z — Published; anonymous counting built
+
+- Owner: move to an organisation, make public, use Railway, no discussion, tooling confirmed; "if the rules don't require it, don't ask".
+- History rewritten before the first push (token + local paths removed; local backup branch `backup/pre-publication`, not pushed). `main` = the work; pushed `main` and `research-and-ux-brief`; **repo is public** at github.com/sinscrit/aicitizenaction, default branch `main`. Labels created, Discussions enabled.
+- **Organisation transfer pending**: needs the owner to pick `foodzio`, `SGCLE`, or create a new organisation in the GitHub web UI (API cannot create one).
+- Completion counting (owner: no cookies needed — correct): `server.mjs` + `site/lib/measure.js`. Page sends only `{e, o}` (event, outcome) via sendBeacon with `credentials: omit`; server keeps daily totals only, stores no IP/UA/text, sets no cookie; `/api/counts` publishes totals, completion and own-words rates. "What we count" section on How it works (en + fr). `npm run start` now runs `server.mjs` (serve-handler for `dist/`, clean URLs, no directory listing). Browser-verified; `tests/server.test.mjs`. 70 tests pass.
+- Branch protection not applied yet — waits for the organisation transfer (settings move with the repo, but team rules need the org).
+
 ### 2026-09-23T02:01:40Z — QA run 2, final fixes, site built
 
 - Run 2 (13 affected scenarios): 9 PASS, 4 PASS-WITH-NOTE, 0 FAIL. Results appended to `docs/test-results.md`.
@@ -229,4 +237,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T15:37:42Z
+Last modified: 2026-09-23T15:44:22Z

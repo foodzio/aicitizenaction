@@ -1,6 +1,6 @@
 {
   "name": "aicitizenaction",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "private": true,
   "type": "module",
   "description": "Routes an alarmed non-expert to the one institution that can act on their AI concern, and hands them a draft.",
@@ -15,13 +15,15 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "start": "serve dist -l $PORT"
+    "start": "node server.mjs",
+    "serve": "npm run build && node server.mjs"
   },
   "dependencies": {
     "ajv": "8.20.0",
     "ajv-formats": "3.0.1",
     "astro": "7.3.4",
     "serve": "14.2.6",
+    "serve-handler": "6.1.7",
     "yaml": "2.9.1"
   },
   "devDependencies": {

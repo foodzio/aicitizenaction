@@ -45,3 +45,6 @@ tmp/*
 # One per project/study/subproject, at the root of its own folder.
 !HANDOVER.md
 !**/HANDOVER.md
+
+# Anonymous event totals written by server.mjs (on Railway: a volume at /data)
+data/

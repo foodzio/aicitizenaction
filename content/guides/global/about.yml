@@ -23,6 +23,9 @@ strings:
   help_body: The most useful thing anyone can do is tell us when something is wrong — every record has a "Something wrong here?" link. Volunteers look after one country, one subject, one language, or the Resources collection. A handle is enough; you never need to give your real name.
   help_volunteer: Volunteer for an area
   help_contributing: How contributing works
+  count_title: What we count
+  count_body: We count how many people arrive, how far they get, and how many leave with a message — per day and per kind of concern, as plain totals. That is how we know whether the site works. We use no cookies, store nothing on your device, keep no IP addresses, and never send anything you type. The totals are public.
+  count_link: See the totals
   data_title: The data
   data_body: Everything on this site is published as open data, so others can build on it without scraping.
   neutral_title: Whose side are we on?

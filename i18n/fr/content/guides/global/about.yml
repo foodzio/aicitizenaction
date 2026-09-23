@@ -73,6 +73,18 @@ strings:
     value: Comment contribuer
     src: fc6e44a5
     machine: true
+  count_title:
+    value: Ce que nous comptons
+    src: dd5f5ee1
+    machine: true
+  count_body:
+    value: Nous comptons combien de personnes arrivent, jusqu'où elles vont et combien repartent avec un message — par jour et par type de préoccupation, sous forme de simples totaux. C'est ainsi que nous savons si le site fonctionne. Nous n'utilisons aucun cookie, ne stockons rien sur votre appareil, ne conservons aucune adresse IP et n'envoyons jamais ce que vous tapez. Les totaux sont publics.
+    src: acc396d3
+    machine: true
+  count_link:
+    value: Voir les totaux
+    src: 4fb0e806
+    machine: true
   data_title:
     value: Les données
     src: cdc0e951
