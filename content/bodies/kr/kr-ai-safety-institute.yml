@@ -41,6 +41,14 @@ facts:
   public_input: limited
   tags:
     - systemic
+  topics:
+    - safety-testing
+  powers:
+    - advise
+  routing_evidence:
+    topics:safety-testing: "Three divisions: AI safety policy, AI safety evaluation, AI safety research."
+    powers:advise: Supports MSIT in implementing the AI Framework Act
+  routing_review: drafted
 strings:
   name: AI Safety Institute (Korea AISI)
   remit: "Launched Nov 2024. Hosted within ETRI (한국전자통신연구원, Electronics and Telecommunications Research Institute) under the Ministry of Science and ICT (과학기술정보통신부, MSIT). Three divisions: AI safety policy, AI safety evaluation, AI safety research. Supports MSIT in implementing the AI Framework Act but is itself a research institute — it does not issue orders or fines."
@@ -73,8 +81,6 @@ meta:
     - url: https://aisi.re.kr/kor
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 303bd34319
   research_order: 32

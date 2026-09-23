@@ -31,6 +31,16 @@ facts:
       name: Naquetta Ricks
       party: D
       verified_on: 2026-09-22
+  topics:
+    - work
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:work: technology and labor bills
+    powers:legislate: House committee of reference for AI, ADMT, technology and labor bills
+    powers:hold-hearings: in-person or remote video testimony plus written testimony
+  routing_review: drafted
 strings:
   name: House Committee on Business Affairs & Labor
   ai_jurisdiction: House committee of reference for AI, ADMT, technology and labor bills; the House-side counterpart that heard the AI replacement legislation.
@@ -53,8 +63,6 @@ meta:
     - url: https://www.leg.state.co.us/CLICS/WitnessR.nsf/register.xsp
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: ac6ae3a211
   research_order: 57

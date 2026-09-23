@@ -28,6 +28,11 @@ facts:
     - role: chair
       name: Bogdan Rzońca (ECR, Poland, Prawo i Sprawiedliwość)
       verified_on: 2026-09-22
+  powers:
+    - handle-complaints
+  routing_evidence:
+    powers:handle-complaints: It may be a complaint, a request, or an observation on the application of EU law
+  routing_review: drafted
 strings:
   name: European Parliament — Committee on Petitions (PETI)
   ai_jurisdiction: PETI has no AI portfolio of its own, but it is the ONLY formal channel through which a private individual can compel the European Parliament to consider a matter. An admissible AI petition — for example on AI Act non-enforcement in a Member State, biometric surveillance, or algorithmic discrimination — is put to the committee, can trigger questions to the Commission, a committee debate, a fact-finding visit, or a referral to LIBE or IMCO.
@@ -52,7 +57,6 @@ meta:
     - url: https://www.europarl.europa.eu/petitions/en/home
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: caca6aa23e

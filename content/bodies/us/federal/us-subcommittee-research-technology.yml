@@ -37,6 +37,26 @@ facts:
       party: D
       region: MI
       verified_on: 2026-09-22
+  topics:
+    - standards
+    - safety-testing
+    - work
+    - transparency
+    - frontier-ai
+    - preemption
+  powers:
+    - oversee
+    - hold-hearings
+  routing_evidence:
+    topics:standards: AI standards, model evaluation methodology
+    topics:safety-testing: model evaluation methodology, AI safety and security research
+    topics:work: AI education and workforce
+    topics:transparency: AI flaw and incident reporting
+    topics:frontier-ai: frontier-developer critical-safety-incident reporting
+    topics:preemption: preemption of most state frontier-AI regulation
+    powers:oversee: oversight of the federal AI Action Plan
+    powers:hold-hearings: hearing 'Advancing America's AI Action Plan', 14 Jan 2026
+  routing_review: drafted
 strings:
   name: Subcommittee on Research and Technology
   ai_jurisdiction: "NIST, CAISI, NSF and OSTP at subcommittee level — the most AI-specific authorizing subcommittee in the House. Send here: AI standards, model evaluation methodology, AI safety and security research, AI flaw and incident reporting, AI education and workforce, and oversight of the federal AI Action Plan."
@@ -55,8 +75,6 @@ meta:
     - url: https://science.house.gov/subcommittee-research-technology
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 31193826f9
   research_order: 28

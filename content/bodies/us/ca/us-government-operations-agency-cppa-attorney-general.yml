@@ -26,6 +26,28 @@ facts:
     - audit
     - law
     - record
+  topics:
+    - frontier-ai
+    - safety-testing
+    - discrimination
+    - work
+    - consumer-protection
+  powers:
+    - enforce
+    - make-rules
+    - handle-complaints
+    - convene
+  routing_evidence:
+    topics:frontier-ai: onsite audits of frontier labs
+    topics:safety-testing: independent verification of safety frameworks
+    topics:discrimination: California Civil Rights Department for employment AI discrimination
+    topics:work: California Civil Rights Department for employment AI discrimination
+    topics:consumer-protection: AG consumer/civil-rights complaints
+    powers:enforce: Implementation and enforcement of SB 53, SB 813 and AB 1405
+    powers:make-rules: CPPA rulemaking is subject to full APA public comment
+    powers:handle-complaints: https://oag.ca.gov/report (AG consumer/civil-rights complaints)
+    powers:convene: directs GovOps, with Cal OES, to convene national experts
+  routing_review: drafted
 strings:
   name: Government Operations Agency / CPPA / Attorney General (executive AI oversight)
   ai_jurisdiction: Implementation and enforcement of SB 53, SB 813 and AB 1405; ADMT regulation; FEHA automated-decision rules.
@@ -48,8 +70,6 @@ meta:
     - url: https://cppa.ca.gov/regulations/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: a4230c31b5
   research_order: 53

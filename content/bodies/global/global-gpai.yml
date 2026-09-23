@@ -30,6 +30,16 @@ facts:
   public_input: limited
   tags:
     - systemic
+  topics:
+    - work
+    - privacy
+  not_topics:
+    - frontier-ai
+  routing_evidence:
+    topics:work: future of work
+    topics:privacy: data governance
+    not_topics:frontier-ai: Not frontier-safety focused.
+  routing_review: drafted
 strings:
   name: GPAI (Global Partnership on AI)
   remit: Originally an independent multistakeholder partnership (2020); since July 2024 operates as an 'Integrated Partnership on AI with the OECD, under the GPAI brand'. Retains an Expert Community and Centres of Expertise; Council meetings continue (including in New Delhi). Work covers responsible AI, data governance, future of work, and innovation.
@@ -56,8 +66,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
-    - not_topics
   legacy_id: 2e44f2b1e8
   research_order: 82
   migrated_from: input/data/institutions.json

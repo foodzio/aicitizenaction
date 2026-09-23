@@ -36,6 +36,11 @@ facts:
       party: D
       region: NY
       verified_on: 2026-09-22
+  topics:
+    - government-use
+  routing_evidence:
+    topics:government-use: the venue for DHS's own use of AI
+  routing_review: drafted
 strings:
   name: Subcommittee on Emergency Management and Technology
   ai_jurisdiction: DHS Science and Technology Directorate, FEMA, and department-wide technology adoption — the venue for DHS's own use of AI, AI in emergency response, and DHS AI research programs.
@@ -55,7 +60,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: 32cae180c0
   research_order: 34

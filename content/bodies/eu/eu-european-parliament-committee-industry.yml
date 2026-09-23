@@ -31,6 +31,21 @@ facts:
   tags:
     - law
     - systemic
+  topics:
+    - export-controls
+  not_topics:
+    - frontier-ai
+  powers:
+    - legislate
+    - advise
+    - hold-hearings
+  routing_evidence:
+    topics:export-controls: If your concern is compute governance, chip supply or data-centre siting in the EU, ITRE is the committee
+    not_topics:frontier-ai: if it is model risk, it is not.
+    powers:legislate: Co-legislative power on files within its own competence.
+    powers:advise: Opinion-giving committee on AI files
+    powers:hold-hearings: Agendas, opinions, draft reports and public hearings.
+  routing_review: drafted
 strings:
   name: European Parliament Committee on Industry, Research and Energy (ITRE)
   remit: Opinion-giving committee on AI files, with lead responsibility for industrial policy, research (Horizon Europe), telecommunications and energy — including the compute and data-centre dimension of AI, the AI Continent Action Plan, AI gigafactories and EuroHPC. On the AI Act it gave an opinion rather than leading. Co-legislative power on files within its own competence.
@@ -54,10 +69,6 @@ meta:
   sources:
     - url: https://www.europarl.europa.eu/committees/en/itre/home/highlights
       checked: null
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: 66bf7bd099
   research_order: 182
   migrated_from: input/data/institutions.json

@@ -31,6 +31,22 @@ facts:
     - role: chair
       name: Nishikant Dubey
       verified_on: 2026-09-22
+  topics:
+    - deepfakes
+    - privacy
+  powers:
+    - oversee
+    - publish
+    - hold-hearings
+    - set-agenda
+  routing_evidence:
+    topics:deepfakes: deepfakes/AI-generated content
+    topics:privacy: data protection
+    powers:oversee: Oversight of MeitY, Ministry of Communications and Ministry of Information & Broadcasting.
+    powers:publish: Reported in March 2026 on the impact of the emergence of artificial intelligence.
+    powers:hold-hearings: Oral evidence invitations go almost exclusively to industry bodies, ministries and a small set of established think tanks.
+    powers:set-agenda: can self-select AI subjects
+  routing_review: drafted
 strings:
   name: Standing Committee on Communications and Information Technology (Department-Related Parliamentary Standing Committee No. 18)
   ai_jurisdiction: Oversight of MeitY, Ministry of Communications and Ministry of Information & Broadcasting. Covers AI policy, IndiaAI Mission budgets, IT Rules, deepfakes/AI-generated content, data protection, telecom. It examines Demands for Grants and can self-select AI subjects; it has no power to amend rules, only to report.
@@ -54,8 +70,6 @@ meta:
     - url: https://sansad.in/ls/committee/departmentally-related-standing-committees
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: cf43742919
   research_order: 119

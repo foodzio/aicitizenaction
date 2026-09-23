@@ -31,6 +31,11 @@ facts:
     - role: chair
       name: HAMAGUCHI Makoto (浜口誠)
       verified_on: 2026-09-11
+  powers:
+    - oversee
+  routing_evidence:
+    powers:oversee: Upper-house METI oversight
+  routing_review: drafted
 strings:
   name: House of Councillors Committee on Economy, Trade and Industry
   ai_jurisdiction: "Upper-house METI oversight: AI industrial policy, compute and semiconductor strategy, AI Guidelines for Business."
@@ -54,7 +59,6 @@ meta:
     - url: https://www.sangiin.go.jp/japanese/joho1/kousei/konkokkai/current/list/l0071.htm
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: ad416d61b9

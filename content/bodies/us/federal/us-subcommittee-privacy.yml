@@ -38,6 +38,20 @@ facts:
       party: D
       region: MN
       verified_on: 2026-09-22
+  topics:
+    - surveillance
+    - transparency
+    - whistleblowing
+    - privacy
+  powers:
+    - hold-hearings
+  routing_evidence:
+    topics:surveillance: government and corporate surveillance, biometric and facial recognition
+    topics:transparency: AI transparency and audit obligations framed as a legal duty
+    topics:whistleblowing: whistleblower accounts from inside AI labs
+    topics:privacy: 2026 work centers on a federal privacy framework and AI data use
+    powers:hold-hearings: this subcommittee ran the 'Oversight of AI' hearing series
+  routing_review: drafted
 strings:
   name: Subcommittee on Privacy, Technology, and the Law
   ai_jurisdiction: "The named AI-oversight subcommittee of Senate Judiciary and the venue that produced the 2023-2024 'Oversight of AI' hearing series. Send here: AI and civil liberties, government and corporate surveillance, biometric and facial recognition, AI transparency and audit obligations framed as a legal duty, and whistleblower accounts from inside AI labs. Distinct from Commerce's consumer subcommittee: this one frames AI as a rights-and-rule-of-law problem rather than a marketplace problem."
@@ -56,8 +70,6 @@ meta:
     - url: https://www.judiciary.senate.gov/about/subcommittees
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 57b6e5d90a
   research_order: 4

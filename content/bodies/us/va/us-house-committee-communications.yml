@@ -31,6 +31,18 @@ facts:
       name: C. E. (Cliff) Hayes, Jr.
       party: D
       verified_on: 2026-09-22
+  topics:
+    - children
+    - elections
+    - health
+  powers:
+    - legislate
+  routing_evidence:
+    topics:children: Del. Maldonado's children's-chatbot bill
+    topics:elections: HB 982 (campaign-ad AI disclosure
+    topics:health: HB 668 (AI therapy)
+    powers:legislate: Primary House committee for AI, technology and innovation bills
+  routing_review: drafted
 strings:
   name: House Committee on Communications, Technology and Innovation
   ai_jurisdiction: Primary House committee for AI, technology and innovation bills, with a Technology and Innovation Subcommittee. 28 members (20 D / 8 R); meets 10:00 a.m. Mondays, House Committee Room C-206.
@@ -53,8 +65,6 @@ meta:
     - url: https://hodspeak.house.virginia.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 2afef396c4
   research_order: 71

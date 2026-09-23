@@ -39,6 +39,18 @@ facts:
   tags:
     - law
     - systemic
+  topics:
+    - frontier-ai
+    - safety-testing
+  powers:
+    - test-models
+    - fund
+  routing_evidence:
+    topics:frontier-ai: classified evaluations of frontier models for nuclear and radiological uplift
+    topics:safety-testing: classified evaluations of frontier models for nuclear and radiological uplift
+    powers:test-models: its AI risk role is evaluation, classified red-teaming and compute provision
+    powers:fund: made awards through 2026
+  routing_review: drafted
 strings:
   name: U.S. Department of Energy (DOE) and the National Laboratories
   remit: Runs the Genesis Mission (EO-established AI-for-science programme; DOE published 26 Genesis Mission national science and technology challenges and made awards through 2026) and operates the national laboratories (LLNL, Los Alamos, Sandia, Argonne, Oak Ridge). DOE/NNSA labs hold the classified expertise for nuclear and radiological risk and partner with CAISI on classified evaluations of frontier models for nuclear and radiological uplift. DOE has no general AI regulatory power over the public; its AI risk role is evaluation, classified red-teaming and compute provision.
@@ -71,8 +83,6 @@ meta:
     - url: https://www.energy.gov/
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: fd463ecf3d
   research_order: 150

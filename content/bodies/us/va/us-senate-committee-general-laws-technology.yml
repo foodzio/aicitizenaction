@@ -31,6 +31,16 @@ facts:
       name: Jeremy S. McPike
       party: D
       verified_on: 2026-09-22
+  topics:
+    - children
+    - health
+  powers:
+    - legislate
+  routing_evidence:
+    topics:children: SB 796 (children's chatbot restrictions)
+    topics:health: SB 586 (Salim, health-carrier AI disclosure)
+    powers:legislate: Senate committee of reference for AI, technology, data and general-laws bills
+  routing_review: drafted
 strings:
   name: Senate Committee on General Laws and Technology
   ai_jurisdiction: Senate committee of reference for AI, technology, data and general-laws bills. Meets in Senate Room B (Room 306), 30 minutes after adjournment on Wednesdays.
@@ -53,8 +63,6 @@ meta:
     - url: https://apps.senate.virginia.gov/Senator/CommitteeMeetings.php
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: a156016f7f
   research_order: 72

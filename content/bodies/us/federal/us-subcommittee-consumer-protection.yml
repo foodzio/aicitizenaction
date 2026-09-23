@@ -37,6 +37,20 @@ facts:
       party: D
       region: CO
       verified_on: 2026-09-22
+  topics:
+    - consumer-protection
+    - children
+    - privacy
+  not_topics:
+    - export-controls
+    - safety-testing
+  routing_evidence:
+    topics:consumer-protection: "AI harms to individual consumers: deceptive AI claims"
+    topics:children: AI chatbots and companion apps marketed to minors
+    topics:privacy: commercial surveillance and data privacy as inputs to AI training
+    not_topics:export-controls: Not the venue for compute, export controls or model-level safety testing
+    not_topics:safety-testing: Not the venue for compute, export controls or model-level safety testing
+  routing_review: drafted
 strings:
   name: Subcommittee on Consumer Protection, Technology, and Data Privacy
   ai_jurisdiction: "The FTC-facing consumer door. AI harms to individual consumers: deceptive AI claims, algorithmic pricing, AI chatbots and companion apps marketed to minors, dark patterns, commercial surveillance and data privacy as inputs to AI training, kids' online safety. This is where a parent, a consumer, or a state AG concern about a specific AI product lands. Not the venue for compute, export controls or model-level safety testing."
@@ -56,8 +70,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
-    - not_topics
   legacy_id: 8080d57e38
   research_order: 1
   migrated_from: input/data/committees-and-organisations.json#seats

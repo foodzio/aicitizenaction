@@ -31,6 +31,14 @@ facts:
   public_input: limited
   tags:
     - systemic
+  topics:
+    - safety-testing
+  powers:
+    - convene
+  routing_evidence:
+    topics:safety-testing: building an AI evaluation ecosystem
+    powers:convene: Membership gets you into working groups where draft guidance is actually shaped
+  routing_review: drafted
 strings:
   name: NIST AI Consortium
   remit: "RENAMED: was the 'Artificial Intelligence Safety Institute Consortium (AISIC)'; renamed the 'NIST AI Consortium' in May 2026 with scope expanded from safety to 'AI measurement, innovation and adoption', building an AI evaluation ecosystem and promoting US-developed AI. Members join by Cooperative Research and Development Agreement (CRADA); existing members had to sign an amendment to continue."
@@ -57,8 +65,6 @@ meta:
     - url: https://www.federalregister.gov/d/2026-10779
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 5a377cb5e3
   research_order: 147

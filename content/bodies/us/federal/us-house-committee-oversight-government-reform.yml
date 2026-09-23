@@ -37,6 +37,22 @@ facts:
       party: D
       region: CA
       verified_on: 2026-09-22
+  topics:
+    - government-use
+    - whistleblowing
+  powers:
+    - oversee
+    - hold-hearings
+    - investigate
+    - legislate
+  routing_evidence:
+    topics:government-use: how the federal government itself uses AI
+    topics:whistleblowing: The committee also runs whistleblower intake
+    powers:oversee: how the federal government itself uses AI
+    powers:hold-hearings: Subcommittee hearings including 'Examining the Federal Government's Use of Artificial Intelligence'
+    powers:investigate: Also the House's broadest general-investigative committee
+    powers:legislate: H.R.9125 Sectoral AI Governance Act of 2026 (Jacobs) referred here jointly with Judiciary
+  routing_review: drafted
 strings:
   name: House Committee on Oversight and Government Reform
   ai_jurisdiction: "The House counterpart to Senate HSGAC: how the federal government itself uses AI. Send here: agency AI use cases and inventories, federal AI procurement, OMB AI guidance, GSA, federal IT modernization, the federal AI workforce, and the civil-liberties consequences of government AI. Also the House's broadest general-investigative committee, so evidence-backed allegations about AI companies or federal AI contracts can land here."
@@ -57,8 +73,6 @@ meta:
     - url: https://oversight.house.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 83668c7bdb
   research_order: 37

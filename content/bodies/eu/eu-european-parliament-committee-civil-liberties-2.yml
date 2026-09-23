@@ -29,6 +29,22 @@ facts:
     - role: chair
       name: Javier Zarzalejos (EPP, Spain, Partido Popular)
       verified_on: 2026-09-22
+  topics:
+    - surveillance
+    - privacy
+    - deepfakes
+  powers:
+    - legislate
+    - hold-hearings
+    - oversee
+  routing_evidence:
+    topics:surveillance: biometric identification, emotion recognition, predictive policing, AI in migration and law enforcement
+    topics:privacy: the interaction with GDPR
+    topics:deepfakes: added a ban on non-consensual intimate ('nudifier') image generation
+    powers:legislate: Co-lead committee on the AI Act.
+    powers:hold-hearings: LIBE also holds public hearings where civil-society organisations are routinely invited.
+    powers:oversee: AI Act implementation and enforcement scrutiny through the joint IMCO-LIBE Working Group
+  routing_review: drafted
 strings:
   name: European Parliament — Committee on Civil Liberties, Justice and Home Affairs (LIBE)
   ai_jurisdiction: "Co-lead committee on the AI Act. LIBE owns the fundamental-rights half: prohibited practices (Article 5), biometric identification, emotion recognition, predictive policing, AI in migration and law enforcement, and the interaction with GDPR. Joint-lead with IMCO on the Digital Omnibus on AI and co-owner of the AI Act Working Group."
@@ -53,8 +69,6 @@ meta:
     - url: https://www.europarl.europa.eu/committees/en/libe/home/highlights
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 1c1af03e89
   research_order: 92

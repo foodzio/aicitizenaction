@@ -28,6 +28,18 @@ facts:
     - role: chair
       name: John Brassard, MP (Conservative, Barrie South—Innisfil, Ontario)
       verified_on: 2026-09-22
+  topics:
+    - privacy
+    - surveillance
+    - government-use
+  powers:
+    - oversee
+  routing_evidence:
+    topics:privacy: Privacy, data protection and ethics oversight
+    topics:surveillance: facial recognition
+    topics:government-use: government use of AI tools
+    powers:oversee: the committee that handles algorithmic and automated decision-making from a rights and privacy angle, facial recognition, and government use of AI tools
+  routing_review: drafted
 strings:
   name: House of Commons Standing Committee on Access to Information, Privacy and Ethics (ETHI)
   ai_jurisdiction: Privacy, data protection and ethics oversight — the committee that handles algorithmic and automated decision-making from a rights and privacy angle, facial recognition, and government use of AI tools. The natural home for AI-and-privacy work now that AIDA is dead and the privacy half of Bill C-27 has been reintroduced separately.
@@ -52,8 +64,6 @@ meta:
     - url: https://www.ourcommons.ca/Committees/en/ETHI
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 65cc41bde3
   research_order: 103

@@ -30,6 +30,11 @@ facts:
     - role: chair
       name: Ashwini Vaishnaw
       verified_on: 2026-04-16
+  topics:
+    - work
+  routing_evidence:
+    topics:work: labour-market impacts of AI
+  routing_review: drafted
 strings:
   name: AI Governance and Economic Group (AIGEG)
   ai_jurisdiction: India's central institutional mechanism for AI governance policy development and inter-ministerial coordination. Mandate covers cross-sectoral AI governance, policy alignment across government, and labour-market impacts of AI. This is the seat where an Indian AI law would be shaped before it reaches Cabinet.
@@ -56,7 +61,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: 5ee0436108
   research_order: 122

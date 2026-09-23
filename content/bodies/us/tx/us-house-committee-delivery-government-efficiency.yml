@@ -31,6 +31,16 @@ facts:
       name: Giovanni Capriglione
       party: R
       verified_on: 2026-09-22
+  topics:
+    - government-use
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:government-use: jurisdiction over state technology, AI governance and government efficiency
+    powers:legislate: House committee that heard and reported TRAIGA (HB 149)
+    powers:hold-hearings: House committee that heard and reported TRAIGA (HB 149)
+  routing_review: drafted
 strings:
   name: House Committee on Delivery of Government Efficiency
   ai_jurisdiction: House committee that heard and reported TRAIGA (HB 149) in the 89th Legislature; jurisdiction over state technology, AI governance and government efficiency.
@@ -53,8 +63,6 @@ meta:
     - url: https://comments.house.texas.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 65d52c5b99
   research_order: 58

@@ -25,6 +25,18 @@ facts:
   tags:
     - audit
     - law
+  topics:
+    - privacy
+    - frontier-ai
+    - safety-testing
+  powers:
+    - legislate
+  routing_evidence:
+    topics:privacy: Primary House committee for AI, data privacy, algorithmic systems and social-media bills
+    topics:frontier-ai: independent third-party safety audits of frontier developers
+    topics:safety-testing: independent third-party safety audits of frontier developers
+    powers:legislate: Primary House committee for AI, data privacy, algorithmic systems and social-media bills
+  routing_review: drafted
 strings:
   name: House Committee on Cybersecurity, Data Analytics, & IT (with its Artificial Intelligence Subcommittee, HCDA-HAIE)
   ai_jurisdiction: "Primary House committee for AI, data privacy, algorithmic systems and social-media bills. Has three standing subcommittees: Artificial Intelligence (HAIE), Data Privacy and Analytics (HDPA), and Social Media and Content Moderation (HSMC)."
@@ -47,8 +59,6 @@ meta:
     - url: https://ilga.gov/uploads/tutorials/WitnessSlips/Submit%20Witness%20Slips.pdf
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: e9fd449eac
   research_order: 60

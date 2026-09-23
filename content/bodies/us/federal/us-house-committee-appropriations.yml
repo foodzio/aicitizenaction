@@ -36,6 +36,13 @@ facts:
       party: D
       region: CT
       verified_on: 2026-09-22
+  powers:
+    - fund
+    - hold-hearings
+  routing_evidence:
+    powers:fund: Funds every AI-relevant agency
+    powers:hold-hearings: formally solicits written testimony from the general public each year
+  routing_review: drafted
 strings:
   name: House Committee on Appropriations
   ai_jurisdiction: Funds every AI-relevant agency and attaches policy riders that often matter more than authorizing law. Also, with its Senate counterpart, the only committee that formally solicits written testimony from the general public each year.
@@ -56,7 +63,6 @@ meta:
     - url: https://appropriations.house.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: fe469d279d

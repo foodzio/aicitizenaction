@@ -30,6 +30,11 @@ facts:
     - role: chair
       name: UNVERIFIED
       verified_on: 2026-09-22
+  powers:
+    - make-rules
+  routing_evidence:
+    powers:make-rules: Article 34 empowers it to impose additional safety and reliability requirements on high-impact AI deployers beyond the Act's baseline
+  routing_review: drafted
 strings:
   name: National AI Committee
   ai_jurisdiction: Presidentially-chaired apex AI body referenced in the AI Framework Act. Article 34 empowers it to impose additional safety and reliability requirements on high-impact AI deployers beyond the Act's baseline — a genuinely substantive power, not merely advisory. Functions as the national AI control tower above MSIT.
@@ -55,7 +60,6 @@ meta:
     - url: https://opinion.lawmaking.go.kr/gcom/ogLmPp
       checked: null
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 070d364c4a

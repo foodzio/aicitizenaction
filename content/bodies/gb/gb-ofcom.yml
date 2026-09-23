@@ -45,6 +45,22 @@ facts:
   tags:
     - harm
     - systemic
+  not_topics:
+    - frontier-ai
+  powers:
+    - compel
+    - investigate
+    - fine
+    - enforce
+    - handle-complaints
+  routing_evidence:
+    not_topics:frontier-ai: so frontier and catastrophic risk is OUT OF SCOPE
+    powers:compel: "Powers: can require information, investigate, impose fines up to £18m or 10% of qualifying worldwide revenue"
+    powers:investigate: "Powers: can require information, investigate, impose fines up to £18m or 10% of qualifying worldwide revenue"
+    powers:fine: "Powers: can require information, investigate, impose fines up to £18m or 10% of qualifying worldwide revenue"
+    powers:enforce: seek business disruption measures (payment and access restrictions) against non-compliant services
+    powers:handle-complaints: Public complaints about online services including AI chatbots falling within OSA scope.
+  routing_review: drafted
 strings:
   name: Ofcom (Office of Communications)
   remit: "Independent regulator for communications and, under the Online Safety Act 2023, for user-to-user and search services. Ofcom has CONFIRMED that AI chatbots fall within the OSA where the service meets the Act's service definitions — a chatbot is out of scope only if it allows interaction with the chatbot alone and no other users, does not search multiple sites or databases when responding, AND cannot generate pornographic content. Powers: can require information, investigate, impose fines up to £18m or 10% of qualifying worldwide revenue, and seek business disruption measures (payment and access restrictions) against non-compliant services. Senior managers can face criminal liability for certain failures."
@@ -77,9 +93,7 @@ meta:
     - url: https://www.ofcom.org.uk/make-a-complaint
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
-    - not_topics
   legacy_id: 792b96e144
   research_order: 169
   migrated_from: input/data/institutions.json

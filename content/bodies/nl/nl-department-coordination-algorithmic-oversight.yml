@@ -40,6 +40,13 @@ facts:
   public_input: limited
   tags:
     - harm
+  powers:
+    - publish
+    - convene
+  routing_evidence:
+    powers:publish: it issues a recurring AI & Algorithmic Risks Report Netherlands
+    powers:convene: coordinate algorithmic and AI oversight across Dutch regulators
+  routing_review: drafted
 strings:
   name: Department for the Coordination of Algorithmic Oversight (DCA), Autoriteit Persoonsgegevens
   remit: Unit inside the Dutch DPA (AP) set up in 2023 to coordinate algorithmic and AI oversight across Dutch regulators, identify and publish high-level algorithmic and AI risks (it issues a recurring AI & Algorithmic Risks Report Netherlands), and prepare AI Act supervision. Under the Dutch AI Act designation settled in 2026, the AP and the RDI (Rijksinspectie Digitale Infrastructuur) take the key supervisory roles — AP for prohibited practices and fundamental-rights-relevant systems, RDI as overall market-surveillance coordinator. AP itself has full GDPR fining power; the DCA as a unit is coordinating/analytical.
@@ -68,7 +75,6 @@ meta:
     - url: https://www.autoriteitpersoonsgegevens.nl/en/themes/algorithms-ai/coordination-of-algorithmic-and-ai-supervision
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 9d5cda3339

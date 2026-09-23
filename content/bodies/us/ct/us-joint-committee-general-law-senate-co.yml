@@ -31,6 +31,26 @@ facts:
       name: James J. Maroney
       party: D
       verified_on: 2026-09-22
+  topics:
+    - consumer-protection
+    - privacy
+    - work
+    - frontier-ai
+    - children
+    - transparency
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:consumer-protection: Connecticut's lead committee on AI, consumer protection and data privacy
+    topics:privacy: Connecticut's lead committee on AI, consumer protection and data privacy
+    topics:work: Covers employment AI disclosure
+    topics:frontier-ai: frontier-developer obligations
+    topics:children: youth online safety
+    topics:transparency: Covers employment AI disclosure
+    powers:legislate: SB 5, the Connecticut Artificial Intelligence Responsibility and Transparency Act (CART Act) — PUBLIC ACT 26-15
+    powers:hold-hearings: For every public hearing, any member of the public may submit written testimony
+  routing_review: drafted
 strings:
   name: Joint Committee on General Law — Senate co-chair
   ai_jurisdiction: Connecticut's lead committee on AI, consumer protection and data privacy. Sen. Maroney has driven CT's AI agenda from this chair since 2023.
@@ -53,8 +73,6 @@ meta:
     - url: https://cga.ct.gov/aspx/CGATestimonySub/CGAtestimonysubmission.aspx?comm_code=gl
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 206ca005f5
   research_order: 65

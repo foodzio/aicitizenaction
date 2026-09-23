@@ -30,6 +30,13 @@ facts:
     - role: chair
       name: Luisa Canziani (President) and Aguinaldo Ribeiro (Relator)
       verified_on: 2026-09-22
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    powers:legislate: the relator's substitutive text is what the Chamber votes on
+    powers:hold-hearings: 31 meetings held, 180 guests heard, 163 proposals voted.
+  routing_review: drafted
 strings:
   name: Special Committee on Artificial Intelligence (on PL 2338/2023)
   ai_jurisdiction: The decisive seat for Brazilian AI regulation right now. A temporary special committee of the Chamber of Deputies, 57th Legislature, created to analyse PL 2338/2023 (the Marco Legal da IA) after the Senate passed it. Under Brazil's rapporteur system, the relator's substitutive text is what the Chamber votes on — the relator, not the committee president, is the controlling seat.
@@ -55,7 +62,6 @@ meta:
     - url: https://edemocracia.camara.leg.br/
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 230eafcb09

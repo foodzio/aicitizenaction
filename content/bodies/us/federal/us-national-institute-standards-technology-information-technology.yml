@@ -38,6 +38,18 @@ facts:
   public_input: open
   tags:
     - systemic
+  topics:
+    - standards
+    - safety-testing
+  powers:
+    - set-standards
+    - publish
+  routing_evidence:
+    topics:standards: Non-regulatory standards agency.
+    topics:safety-testing: measurement science, benchmarks and evaluation methods
+    powers:set-standards: Publishes the AI Risk Management Framework (AI RMF 1.0) and its profiles
+    powers:publish: Publishes the AI Risk Management Framework (AI RMF 1.0) and its profiles
+  routing_review: drafted
 strings:
   name: National Institute of Standards and Technology (NIST) — Information Technology Laboratory and AI programmes
   remit: Non-regulatory standards agency. Publishes the AI Risk Management Framework (AI RMF 1.0) and its profiles (including Generative AI and critical-infrastructure profiles), measurement science, benchmarks and evaluation methods. Hosts CAISI and the NIST AI Consortium. In Dec 2025 NIST also launched centers for AI in manufacturing and critical infrastructure. Its outputs are voluntary but are widely incorporated by reference into procurement, insurance and state law.
@@ -66,8 +78,6 @@ meta:
     - url: https://www.nist.gov/artificial-intelligence
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 9e3e7b36f0
   research_order: 146

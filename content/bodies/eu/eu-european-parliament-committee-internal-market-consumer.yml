@@ -46,6 +46,18 @@ facts:
     - harm
     - law
     - systemic
+  topics:
+    - consumer-protection
+  powers:
+    - legislate
+    - hold-hearings
+    - oversee
+  routing_evidence:
+    topics:consumer-protection: product safety, consumer protection and digital markets
+    powers:legislate: Can amend and vote on legislation, hold hearings, commission studies and question the Commission.
+    powers:hold-hearings: Can amend and vote on legislation, hold hearings, commission studies and question the Commission.
+    powers:oversee: Can amend and vote on legislation, hold hearings, commission studies and question the Commission.
+  routing_review: drafted
 strings:
   name: European Parliament Committee on the Internal Market and Consumer Protection (IMCO)
   remit: One of the two lead committees (jointly with LIBE) that steered the AI Act through Parliament, and lead committee on the Digital Omnibus on AI. Remit covers single market rules, product safety, consumer protection and digital markets. Can amend and vote on legislation, hold hearings, commission studies and question the Commission. Legislative power is real — Parliament is a co-legislator — but individual committees cannot investigate or fine.
@@ -78,8 +90,6 @@ meta:
     - url: https://www.europarl.europa.eu/committees/en/imco/home/highlights
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: adc3b89c20
   research_order: 180

@@ -36,6 +36,11 @@ facts:
       party: D
       region: FL
       verified_on: 2026-09-22
+  powers:
+    - hold-hearings
+  routing_evidence:
+    powers:hold-hearings: "hearing 'AI and the Grid: Meeting Growing Power Demand While Protecting Ratepayers'"
+  routing_review: drafted
 strings:
   name: Subcommittee on Energy
   ai_jurisdiction: "The House door for AI's power problem: data-center load growth, FERC and grid reliability, interconnection, ratepayer cost allocation when utilities serve hyperscalers, and generation siting for AI."
@@ -54,7 +59,6 @@ meta:
     - url: https://energycommerce.house.gov/committees/subcommittee/energy
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: c30de59f64

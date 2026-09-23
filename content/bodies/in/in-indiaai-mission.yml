@@ -30,6 +30,16 @@ facts:
     - role: chair
       name: Saurabh Vijay
       verified_on: 2026-06-05
+  topics:
+    - deepfakes
+    - discrimination
+  powers:
+    - fund
+  routing_evidence:
+    topics:deepfakes: 13 projects approved under the Safe & Trusted AI pillar addressing deepfakes and bias
+    topics:discrimination: 13 projects approved under the Safe & Trusted AI pillar addressing deepfakes and bias
+    powers:fund: Runs the compute tenders, GPU allocation, model-development grants
+  routing_review: drafted
 strings:
   name: IndiaAI Mission (IndiaAI Independent Business Division)
   ai_jurisdiction: Executing agency for India's national AI programme (approx. INR 10,372 crore). Seven pillars including Compute Capacity, Foundation Models, Datasets (AIKosh), Application Development, Future Skills, Startup Financing, and Safe & Trusted AI. Runs the compute tenders, GPU allocation, model-development grants, and the Safe & Trusted AI research portfolio.
@@ -53,8 +63,6 @@ meta:
     - url: https://indiaai.gov.in/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: d25384965d
   research_order: 121

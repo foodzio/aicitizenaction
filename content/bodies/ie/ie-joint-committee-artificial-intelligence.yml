@@ -27,6 +27,13 @@ facts:
     - role: chair
       name: Naoise Ó Cearúil, TD (Fianna Fáil)
       verified_on: 2026-09-22
+  powers:
+    - hold-hearings
+    - publish
+  routing_evidence:
+    powers:hold-hearings: taking evidence from Technology Ireland/IBEC and Enterprise Ireland among others
+    powers:publish: "'was established to examine and make recommendations on Ireland's approach"
+  routing_review: drafted
 strings:
   name: Joint Committee on Artificial Intelligence (Houses of the Oireachtas)
   ai_jurisdiction: "A DEDICATED standing AI committee — the only one of its kind among the jurisdictions in this survey. Its stated remit, quoted from the Oireachtas: it 'was established to examine and make recommendations on Ireland's approach to the development, deployment, regulation, and ethical considerations of artificial intelligence (AI), and on the means of ensuring that the approach supports economic growth, innovation, public trust, and societal benefit while safeguarding rights and mitigating risks.' Established 12 May 2025, drawn from the 34th Dáil and 27th Seanad."
@@ -51,7 +58,6 @@ meta:
     - url: https://www.oireachtas.ie/en/committees/making-a-submission/
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 15fabd9070

@@ -35,6 +35,14 @@ facts:
       party: D
       region: CT
       verified_on: 2026-09-22
+  topics:
+    - government-use
+  powers:
+    - legislate
+  routing_evidence:
+    topics:government-use: Intelligence Community AI adoption
+    powers:legislate: The FY2027 Intelligence Authorization Act was reported out of committee 20 Jul 2026
+  routing_review: drafted
 strings:
   name: House Permanent Select Committee on Intelligence
   ai_jurisdiction: "Intelligence Community AI adoption and AI as an intelligence subject. Send here: IC use of frontier models, open-source intelligence and AI, adversary AI capability assessments, AI-enabled influence operations, and counterintelligence risk to US AI developers. Mostly classified; the public-facing output is the annual Intelligence Authorization Act and occasional public warnings."
@@ -55,8 +63,6 @@ meta:
     - url: https://intelligence.house.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: b1026c6bd5
   research_order: 41

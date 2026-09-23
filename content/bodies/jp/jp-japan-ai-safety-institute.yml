@@ -42,6 +42,20 @@ facts:
   tags:
     - harm
     - systemic
+  topics:
+    - safety-testing
+    - standards
+    - international
+  powers:
+    - set-standards
+    - publish
+  routing_evidence:
+    topics:safety-testing: Develops AI safety evaluation methods, standards, red-teaming guides and testing environments
+    topics:standards: Develops AI safety evaluation methods, standards, red-teaming guides and testing environments
+    topics:international: coordinates internationally
+    powers:set-standards: Develops AI safety evaluation methods, standards, red-teaming guides and testing environments
+    powers:publish: its outputs (evaluation guides, red-teaming methodology, data-quality guidebook) are published finished
+  routing_review: drafted
 strings:
   name: Japan AI Safety Institute (Japan AISI / J-AISI)
   remit: Established 14 Feb 2024 by Cabinet decision (referencing the 2024 Integrated Innovation Strategy). Secretariat hosted at the Information-technology Promotion Agency (IPA), a METI-affiliated incorporated administrative agency. Develops AI safety evaluation methods, standards, red-teaming guides and testing environments; coordinates internationally. Explicitly NON-regulatory — it cannot compel, licence or fine. Japan's AI Promotion Act (Act on Promotion of R&D and Utilization of AI-Related Technologies, in full effect Nov 2025) contains no monetary penalties at all; enforcement is reputational/administrative guidance.
@@ -70,8 +84,6 @@ meta:
     - url: https://aisi.go.jp/about/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: df63f281c8
   research_order: 31

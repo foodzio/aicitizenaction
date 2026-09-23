@@ -27,6 +27,16 @@ facts:
     - role: chair
       name: Anna Cavazzini (Greens/EFA, Germany, Bündnis 90/Die Grünen)
       verified_on: 2026-09-22
+  topics:
+    - consumer-protection
+  powers:
+    - legislate
+    - oversee
+  routing_evidence:
+    topics:consumer-protection: obligations on providers and deployers, and consumer protection
+    powers:legislate: It was joint-lead with LIBE on the Digital Omnibus on AI and is lead on the Cloud and AI Development Act.
+    powers:oversee: Ongoing scrutiny of AI Act implementation via the joint Working Group.
+  routing_review: drafted
 strings:
   name: European Parliament — Committee on the Internal Market and Consumer Protection (IMCO)
   ai_jurisdiction: "Co-lead committee on the AI Act and its successors. IMCO owns the AI Act as a product-safety and internal-market instrument: placing AI systems on the market, conformity assessment, high-risk classification, obligations on providers and deployers, and consumer protection. It was joint-lead with LIBE on the Digital Omnibus on AI and is lead on the Cloud and AI Development Act."
@@ -51,8 +61,6 @@ meta:
     - url: https://www.europarl.europa.eu/committees/en/imco/home/highlights
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 3abd917800
   research_order: 91

@@ -37,6 +37,20 @@ facts:
       party: D
       region: CA
       verified_on: 2026-09-22
+  topics:
+    - military-ai
+    - safety-testing
+    - security
+  powers:
+    - oversee
+    - legislate
+  routing_evidence:
+    topics:military-ai: DoD AI adoption and CDAO oversight
+    topics:safety-testing: AI test and evaluation inside DoD
+    topics:security: military cyber operations
+    powers:oversee: DoD AI adoption and CDAO oversight
+    powers:legislate: CITI subcommittee print of the FY27 NDAA
+  routing_review: drafted
 strings:
   name: Subcommittee on Cyber, Information Technologies, and Innovation
   ai_jurisdiction: "The dedicated AI-and-emerging-technology subcommittee of HASC. Send here: DoD AI adoption and CDAO oversight, military cyber operations, defense software acquisition reform, AI test and evaluation inside DoD, and commercial AI companies' defense contracts."
@@ -55,8 +69,6 @@ meta:
     - url: https://armedservices.house.gov/subcommittees
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 5d472494c5
   research_order: 36

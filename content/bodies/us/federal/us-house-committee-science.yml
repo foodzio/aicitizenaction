@@ -40,6 +40,24 @@ facts:
     - insider
     - law
     - systemic
+  topics:
+    - standards
+    - whistleblowing
+  powers:
+    - legislate
+    - hold-hearings
+    - oversee
+    - compel
+    - fund
+  routing_evidence:
+    topics:standards: House committee of jurisdiction for NIST (and therefore CAISI)
+    topics:whistleblowing: For insiders reporting wrongdoing within agencies or programmes in the committee's jurisdiction
+    powers:legislate: has produced the main House bills to put the US AI institute on a statutory footing
+    powers:hold-hearings: conducts oversight hearings
+    powers:oversee: conducts oversight hearings
+    powers:compel: Can subpoena and compel testimony
+    powers:fund: where the legal status and funding of CAISI is actually decided
+  routing_review: drafted
 strings:
   name: U.S. House Committee on Science, Space, and Technology
   remit: House committee of jurisdiction for NIST (and therefore CAISI), DOE Office of Science, NSF and federal AI R&D. Authorises NIST's AI programmes, conducts oversight hearings, and has produced the main House bills to put the US AI institute on a statutory footing. Can subpoena and compel testimony; cannot fine or adjudicate.
@@ -68,8 +86,6 @@ meta:
     - url: https://science.house.gov/contact
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: ad744d053a
   research_order: 157

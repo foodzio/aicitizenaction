@@ -30,6 +30,22 @@ facts:
       name: Cristina Castro
       party: D
       verified_on: 2026-09-22
+  topics:
+    - frontier-ai
+    - transparency
+    - privacy
+    - surveillance
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:frontier-ai: mandatory third-party frontier-model audits
+    topics:transparency: SB 317 (customer-service chatbot disclosure
+    topics:privacy: SB 340 (consumer data
+    topics:surveillance: SB 415 (facial recognition in schools
+    powers:legislate: package reported out of committee 13 May 2026
+    powers:hold-hearings: SB 315 and the companion Senate AI bills were heard on this track in May 2026
+  routing_review: drafted
 strings:
   name: Senate Executive Committee (with its AI and Social Media Subcommittee, SEXC-AISM)
   ai_jurisdiction: Senate committee of reference for the 2026 AI package; the AI and Social Media subcommittee sits under Executive. SB 315 and the companion Senate AI bills were heard on this track in May 2026.
@@ -52,8 +68,6 @@ meta:
     - url: https://ilga.gov/uploads/tutorials/WitnessSlips/Submit%20Witness%20Slips.pdf
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: a801018c9d
   research_order: 61

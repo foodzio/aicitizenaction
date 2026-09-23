@@ -41,6 +41,20 @@ facts:
   tags:
     - law
     - systemic
+  topics:
+    - safety-testing
+    - international
+    - frontier-ai
+  powers:
+    - advise
+    - test-models
+  routing_evidence:
+    topics:safety-testing: Technical AI safety science, evaluation capability, international engagement.
+    topics:international: Technical AI safety science, evaluation capability, international engagement.
+    topics:frontier-ai: means frontier-risk work here is research-only
+    powers:advise: the institute is advisory/research — it cannot compel or fine
+    powers:test-models: Technical AI safety science, evaluation capability
+  routing_review: drafted
 strings:
   name: Australian AI Safety Institute (AAISI)
   remit: Announced 2025 and established November 2025 within the Department of Industry, Science and Resources (DISR), alongside the National AI Plan. Technical AI safety science, evaluation capability, international engagement. Australia abandoned its proposed mandatory guardrails legislation in favour of a non-regulatory, existing-regulator approach, so the institute is advisory/research — it cannot compel or fine.
@@ -73,8 +87,6 @@ meta:
     - url: https://www.industry.gov.au/science-technology-and-innovation/technology/artificial-intelligence/ai-safety-science
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: da9bc334d6
   research_order: 38

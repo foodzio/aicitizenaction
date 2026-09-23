@@ -50,6 +50,22 @@ facts:
   tags:
     - harm
     - systemic
+  topics:
+    - deepfakes
+    - transparency
+    - frontier-ai
+  powers:
+    - make-rules
+    - enforce
+    - fine
+  routing_evidence:
+    topics:deepfakes: Deep Synthesis Provisions (2023)
+    topics:transparency: Labelling Measures for AI-Generated Synthetic Content
+    topics:frontier-ai: Interim Measures for Generative AI Services (2023)
+    powers:make-rules: CAC does run real public-comment windows on draft measures (征求意见稿)
+    powers:enforce: Can order rectification, suspend or terminate services, remove apps from stores, refer for criminal prosecution, and fine.
+    powers:fine: Can order rectification, suspend or terminate services, remove apps from stores, refer for criminal prosecution, and fine.
+  routing_review: drafted
 strings:
   name: Cyberspace Administration of China (CAC)
   remit: China's principal AI content regulator and by far the most powerful body in this directory. Administers the Algorithmic Recommendation Provisions (2022), Deep Synthesis Provisions (2023), Interim Measures for Generative AI Services (2023) and the Labelling Measures for AI-Generated Synthetic Content (in force 1 Sept 2025). Runs the algorithm and generative-AI filing (备案) regimes. Can order rectification, suspend or terminate services, remove apps from stores, refer for criminal prosecution, and fine. Co-published the AI Safety Governance Framework 2.0 (人工智能安全治理框架2.0) on 15 September 2025 at National Cybersecurity Publicity Week, with the National Internet Emergency Center coordinating and TC260 handling the technical file.
@@ -84,8 +100,6 @@ meta:
     - url: https://www.cac.gov.cn/2025-09/15/c_1759653448369123.htm
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 3e5a27a254
   research_order: 45

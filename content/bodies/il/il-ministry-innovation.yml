@@ -27,6 +27,11 @@ facts:
   tags:
     - law
     - systemic
+  powers:
+    - advise
+  routing_evidence:
+    powers:advise: guidance to existing sectoral regulators
+  routing_review: drafted
 strings:
   name: Ministry of Innovation, Science and Technology — Israel AI policy
   remit: "Israel published its 'Policy on Artificial Intelligence Regulation and Ethics' (Dec 2023), jointly with the Ministry of Justice, adopting a deliberately sectoral, soft-law, pro-innovation approach: no AI act, no central AI regulator, guidance to existing sectoral regulators, and a proposed inter-ministerial AI policy coordination centre. The Privacy Protection Authority handles data-related AI issues. As of Sept 2026 I found no evidence that Israel has established an AI safety institute or binding AI legislation."
@@ -51,7 +56,6 @@ meta:
     - url: https://dig.watch/resource/israels-policy-on-artificial-intelligence-regulation-and-ethics
       checked: null
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: bd3a2e2ad4

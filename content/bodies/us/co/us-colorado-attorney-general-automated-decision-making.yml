@@ -40,6 +40,20 @@ facts:
     - flaw
     - harm
     - systemic
+  topics:
+    - discrimination
+    - children
+    - transparency
+  powers:
+    - enforce
+    - make-rules
+  routing_evidence:
+    topics:discrimination: Scope is algorithmic discrimination and chatbot harms
+    topics:children: protection of minors from harmful content
+    topics:transparency: requiring disclosure of AI interaction
+    powers:enforce: The Attorney General has exclusive enforcement authority and rulemaking power
+    powers:make-rules: The Attorney General has exclusive enforcement authority and rulemaking power
+  routing_review: drafted
 strings:
   name: Colorado Attorney General — Automated Decision-Making Technology Act and Chatbot Safety Act rulemaking
   remit: "RESTRUCTURED: the original Colorado AI Act (SB 24-205) was repealed and reenacted by SB 26-189 in 2026 after its predecessor's enforcement was blocked in federal court; the replacement regime is the Automated Decision-Making Technology (ADMT) Act, with provisions taking effect 1 January 2027, alongside a separate Chatbot Safety Act (passed May 2026) requiring disclosure of AI interaction, protection of minors from harmful content and safety protocols. The Attorney General has exclusive enforcement authority and rulemaking power; no private right of action."
@@ -70,8 +84,6 @@ meta:
     - url: https://comments.coag.gov/s/colorado-automated-decision-making
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 2a852f711d
   research_order: 164

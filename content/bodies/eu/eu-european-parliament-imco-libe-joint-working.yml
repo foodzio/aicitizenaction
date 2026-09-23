@@ -28,6 +28,14 @@ facts:
     - role: chair
       name: Brando Benifei (S&D, Italy) and Michael McNamara (Renew, Ireland)
       verified_on: 2026-09-22
+  topics:
+    - standards
+  powers:
+    - oversee
+  routing_evidence:
+    topics:standards: delegated and implementing acts, guidelines, standards, national competent authorities
+    powers:oversee: monitoring and scrutinizing the implementation and enforcement of the AI Act
+  routing_review: drafted
 strings:
   name: European Parliament — IMCO-LIBE Joint Working Group on the Implementation and Enforcement of the Artificial Intelligence Act
   ai_jurisdiction: "EXACT REMIT, quoted from the Parliament's own page: 'By a decision of IMCO and LIBE Coordinators, a joint Working Group on the implementation and enforcement of the Artificial Intelligence Act (AI Act) was established with the purpose of monitoring and scrutinizing the implementation and enforcement of the AI Act.' In practice it is Parliament's standing oversight body over the Commission's AI Office: it presses on AI Office staffing and transparency, the role of civil society in implementation, delegated and implementing acts, guidelines, standards, national competent authorities, regulatory sandboxes and real-world testing."
@@ -52,8 +60,6 @@ meta:
     - url: https://www.europarl.europa.eu/committees/en/libe/working-groups/ai-act
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 5229f72c91
   research_order: 95

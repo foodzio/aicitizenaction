@@ -31,6 +31,20 @@ facts:
       name: Tim O'Driscoll (R) and Erin Koegel (DFL) — CO-CHAIRS
       party: R / DFL
       verified_on: 2026-09-22
+  topics:
+    - consumer-protection
+    - privacy
+    - deepfakes
+    - liability
+  powers:
+    - legislate
+  routing_evidence:
+    topics:consumer-protection: consumer-protection bills
+    topics:privacy: data-privacy
+    topics:deepfakes: deepfake/'nudification'
+    topics:liability: AI chatbot technology requirements with a private cause of action for harm
+    powers:legislate: House committee of reference for AI chatbot, data-privacy, deepfake/'nudification' and consumer-protection bills
+  routing_review: drafted
 strings:
   name: House Commerce Finance and Policy Committee
   ai_jurisdiction: House committee of reference for AI chatbot, data-privacy, deepfake/'nudification' and consumer-protection bills. Meets Tue/Wed/Thu 8:15 a.m., Capitol 120.
@@ -53,8 +67,6 @@ meta:
     - url: https://www.leg.mn.gov/leg/faq/faq?id=117
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 42d7bcd8ef
   research_order: 79

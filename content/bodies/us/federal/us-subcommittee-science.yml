@@ -37,6 +37,18 @@ facts:
       party: D
       region: WI
       verified_on: 2026-09-22
+  topics:
+    - standards
+    - safety-testing
+    - work
+  powers:
+    - hold-hearings
+  routing_evidence:
+    topics:standards: AI standards development
+    topics:safety-testing: AI evaluation science and benchmarks
+    topics:work: AI workforce and education
+    powers:hold-hearings: 3 Mar 2026 subcommittee hearing chaired by Sen. Budd
+  routing_review: drafted
 strings:
   name: Subcommittee on Science, Manufacturing, and Competitiveness
   ai_jurisdiction: "NIST, CAISI, NSF and the standards/measurement side of AI. Send here: AI evaluation science and benchmarks, AI standards development, the National AI Research Resource, AI workforce and education, AI in manufacturing, and US-vs-China AI competitiveness framing. If your concern is 'who measures whether a model is safe', this is the authorizing subcommittee (the money is in Appropriations CJS)."
@@ -55,8 +67,6 @@ meta:
     - url: https://www.commerce.senate.gov/about/commerce-subcommittees/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: de207f4cb6
   research_order: 2

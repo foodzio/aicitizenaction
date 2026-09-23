@@ -40,6 +40,16 @@ facts:
   public_input: open
   tags:
     - systemic
+  topics:
+    - standards
+    - safety-testing
+  powers:
+    - set-standards
+  routing_evidence:
+    topics:standards: MODA's AI powers are coordinating and standard-setting, not punitive
+    topics:safety-testing: tasked with building risk classification frameworks and evaluation tools
+    powers:set-standards: MODA's AI powers are coordinating and standard-setting, not punitive
+  routing_review: drafted
 strings:
   name: Ministry of Digital Affairs (MODA)
   remit: Taiwan's AI Basic Act (人工智慧基本法) is IN FORCE as of 2026 — a framework statute setting principles (sustainability, human autonomy, privacy, security, transparency, fairness, accountability) and directing agencies rather than imposing direct obligations on developers. MODA is the lead implementing agency, tasked with building risk classification frameworks and evaluation tools; the National Science and Technology Council also has a role. The Act is principles-based with sectoral implementation, so MODA's AI powers are coordinating and standard-setting, not punitive; MODA does hold separate regulatory powers over telecoms and digital services.
@@ -68,8 +78,6 @@ meta:
     - url: https://moda.gov.tw/en/major-policies/ai/governance/19248
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 1036ce9394
   research_order: 58

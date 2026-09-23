@@ -31,6 +31,20 @@ facts:
       name: Cindy Ryu
       party: D
       verified_on: 2026-09-22
+  topics:
+    - security
+    - deepfakes
+    - discrimination
+  powers:
+    - hold-hearings
+    - legislate
+  routing_evidence:
+    topics:security: cybersecurity
+    topics:deepfakes: HB 1170 (deepfake detection/disclosure
+    topics:discrimination: HB 2157 (high-risk AI discrimination
+    powers:hold-hearings: All three major 2026 AI bills were heard here on 15 Jan 2026
+    powers:legislate: All three major 2026 AI bills were heard here on 15 Jan 2026
+  routing_review: drafted
 strings:
   name: House Technology, Economic Development & Veterans Committee (TEDV)
   ai_jurisdiction: Explicitly holds artificial intelligence, cybersecurity, broadband and telecommunications jurisdiction. All three major 2026 AI bills were heard here on 15 Jan 2026.
@@ -53,8 +67,6 @@ meta:
     - url: https://app.leg.wa.gov/csi/house
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 4cf86c5f03
   research_order: 62

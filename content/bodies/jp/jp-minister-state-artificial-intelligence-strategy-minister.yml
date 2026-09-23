@@ -30,6 +30,11 @@ facts:
     - role: chair
       name: FURUKAWA Toshiharu
       verified_on: 2026-09-22
+  topics:
+    - security
+  routing_evidence:
+    topics:security: plus cybersecurity, intellectual property, space and ocean policy
+  routing_review: drafted
 strings:
   name: Minister of State for Artificial Intelligence Strategy / Minister for Digital Transformation
   ai_jurisdiction: The named political owner of the AI brief. Concurrently Minister for Digital Transformation and Minister of State for Science and Technology Policy, plus cybersecurity, intellectual property, space and ocean policy. Deputy Director of the AI Strategy Headquarters.
@@ -56,7 +61,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: 7a787f465b
   research_order: 130

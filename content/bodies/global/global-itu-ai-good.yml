@@ -44,6 +44,16 @@ facts:
   public_input: open
   tags:
     - systemic
+  topics:
+    - standards
+    - international
+  powers:
+    - convene
+  routing_evidence:
+    topics:standards: Standards & Policy
+    topics:international: co-convened with Switzerland and 50+ UN agencies
+    powers:convene: AI for Good itself is a convening platform, not a decision venue
+  routing_review: drafted
 strings:
   name: ITU — AI for Good
   remit: ITU's year-round AI platform, co-convened with Switzerland and 50+ UN agencies, organised around Solutions & Knowledge, Skills & Capacity, and Standards & Policy. Hosts the annual Global Summit in Geneva (which co-located with the inaugural Global Dialogue in July 2026), the Innovation Factory startup pitch programme, and the 'Neural Network' community platform (60k+ members).
@@ -80,8 +90,6 @@ meta:
     - url: https://aiforgood.itu.int/speakers-ai-for-good/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: aba9f64848
   research_order: 77

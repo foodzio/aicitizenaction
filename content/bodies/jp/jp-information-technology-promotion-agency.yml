@@ -34,6 +34,13 @@ facts:
   tags:
     - harm
     - systemic
+  topics:
+    - security
+    - standards
+  routing_evidence:
+    topics:security: IPA itself handles IT security, standards and skills certification.
+    topics:standards: IPA itself handles IT security, standards and skills certification.
+  routing_review: drafted
 strings:
   name: Information-technology Promotion Agency, Japan (IPA) — Japan AISI secretariat
   remit: Incorporated administrative agency under METI that hosts the Japan AISI secretariat and operates the AISI working groups (including the business-verification WG). IPA itself handles IT security, standards and skills certification. It has no AI enforcement power; Japan's AI Promotion Act imposes no monetary penalties. Listed separately because IPA, not a ministry, is the entity whose mailbox actually answers for Japan AISI.
@@ -61,7 +68,6 @@ meta:
       checked: null
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: b116fef3cc
   research_order: 68

@@ -36,6 +36,13 @@ facts:
       party: D
       region: NV
       verified_on: 2026-09-22
+  topics:
+    - security
+    - military-ai
+  routing_evidence:
+    topics:security: AI-enabled offensive and defensive cyber operations
+    topics:military-ai: AI model security and adversarial attacks on defense systems
+  routing_review: drafted
 strings:
   name: Subcommittee on Cybersecurity
   ai_jurisdiction: AI-enabled offensive and defensive cyber operations, CYBERCOM, AI model security and adversarial attacks on defense systems, and the security of AI supply chains inside DoD.
@@ -57,7 +64,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: de1991db8a
   research_order: 13

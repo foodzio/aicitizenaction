@@ -18,6 +18,14 @@ facts:
   tags:
     - law
     - systemic
+  topics:
+    - government-use
+  powers:
+    - advise
+  routing_evidence:
+    topics:government-use: an internal-audit instrument for government AI use, not a market regulator
+    powers:advise: advise
+  routing_review: drafted
 strings:
   name: Argentina — AI governance (Subsecretaría / SIGEN public-sector AI controls)
   remit: "STATUS AS OF SEPT 2026: NO AI LAW AND NO DEDICATED AI BODY I COULD VERIFY. Argentina has a National AI Plan lineage and various bills before Congress, none passed. The concrete 2026 development I could identify is SIGEN Resolution 197/2026 approving a Guide to AI Controls for the Public Sector — an internal-audit instrument for government AI use, not a market regulator. The Agencia de Acceso a la Información Pública handles data-protection aspects. The Milei administration has positioned Argentina as deregulatory and pro-AI-investment."
@@ -36,8 +44,6 @@ meta:
     - url: https://rest.hcdn.gob.ar/web/proyectos/289500/adjuntos/104100
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: d13bea4f11
   research_order: 66

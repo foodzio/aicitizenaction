@@ -29,6 +29,14 @@ facts:
     - role: chair
       name: Ashwini Vaishnaw
       verified_on: 2026-09-22
+  topics:
+    - international
+  powers:
+    - convene
+  routing_evidence:
+    topics:international: Host of the fourth in the series of global AI summits (after Bletchley, Seoul, Paris).
+    powers:convene: dedicated category sessions for international organisations, industry, startups, academia AND civil society
+  routing_review: drafted
 strings:
   name: India AI Impact Summit 2026
   ai_jurisdiction: Host of the fourth in the series of global AI summits (after Bletchley, Seoul, Paris). Held 19-20 February 2026 at Bharat Mandapam, New Delhi. Organised by MeitY/IndiaAI under a 'Sutras and Chakras' framework. Set the agenda for Global South AI positioning; the India AI Governance Guidelines were foregrounded there.
@@ -54,8 +62,6 @@ meta:
     - url: https://impact.indiaai.gov.in/stakeholder-consultation
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 03624ba117
   research_order: 123

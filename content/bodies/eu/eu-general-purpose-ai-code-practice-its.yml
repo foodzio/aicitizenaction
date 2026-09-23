@@ -37,6 +37,22 @@ facts:
   public_input: limited
   tags:
     - systemic
+  topics:
+    - frontier-ai
+    - copyright
+    - transparency
+    - safety-testing
+    - security
+  powers:
+    - convene
+  routing_evidence:
+    topics:frontier-ai: the Safety and Security chapter applying only to providers of models with SYSTEMIC RISK
+    topics:copyright: Transparency, Copyright, and Safety and Security
+    topics:transparency: Transparency, Copyright, and Safety and Security
+    topics:safety-testing: systemic-risk assessment, model evaluations, incident reporting to the AI Office
+    topics:security: cybersecurity of model weights
+    powers:convene: A Signatory Taskforce, convened by the AI Office, holds ongoing meetings with signatories on implementation.
+  routing_review: drafted
 strings:
   name: General-Purpose AI Code of Practice and its Signatory Taskforce
   remit: Co-regulatory instrument under Article 56 of the AI Act, published by the Commission in its final form in July 2025 and assessed as adequate by the AI Board and the Commission. Signing is voluntary, but signature is the presumptive route to demonstrating compliance with GPAI obligations, which have applied since 2 August 2025; non-signatories must demonstrate compliance by other means and face greater scrutiny. It has three chapters — Transparency, Copyright, and Safety and Security — with the Safety and Security chapter applying only to providers of models with SYSTEMIC RISK. A Signatory Taskforce, convened by the AI Office, holds ongoing meetings with signatories on implementation. The Code was drafted through an open multi-stakeholder process involving roughly a thousand participants.
@@ -67,8 +83,6 @@ meta:
     - url: https://digital-strategy.ec.europa.eu/en/policies/signatory-taskforce-gpai-code-practice
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: f9e79e5a27
   research_order: 188

@@ -27,3 +27,6 @@ values:
   - { id: security, label: Cybersecurity and critical infrastructure }
   - { id: surveillance, label: Surveillance and policing }
   - { id: international, label: International coordination }
+  - { id: online-safety, label: Online safety and harmful content }
+  - { id: environment, label: Energy, water and the environmental cost of AI }
+  - { id: finance, label: AI in finance and markets }

@@ -36,6 +36,22 @@ facts:
       party: D
       region: GA
       verified_on: 2026-09-22
+  topics:
+    - copyright
+    - deepfakes
+    - liability
+    - transparency
+    - government-use
+  powers:
+    - hold-hearings
+  routing_evidence:
+    topics:copyright: AI training data and copyright (fair use, licensing, transparency of training corpora)
+    topics:deepfakes: digital replicas and the right of publicity
+    topics:liability: Section 230 and platform liability
+    topics:transparency: transparency of training corpora
+    topics:government-use: courts' use of AI
+    powers:hold-hearings: July 2026 hearing at which witnesses urged action
+  routing_review: drafted
 strings:
   name: Subcommittee on Courts, Intellectual Property, Artificial Intelligence, and the Internet
   ai_jurisdiction: "The only subcommittee in Congress with 'Artificial Intelligence' in its formal name on the Judiciary side. Send here: AI training data and copyright (fair use, licensing, transparency of training corpora), digital replicas and the right of publicity, AI and patents/inventorship, Copyright Office and USPTO policy, Section 230 and platform liability, and courts' use of AI. If you are a creator, rightsholder or platform, this is the House door."
@@ -54,8 +70,6 @@ meta:
     - url: https://judiciary.house.gov/subcommittees/committee-judiciary-119th-congress/courts-intellectual-property-artificial
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 339342d0f3
   research_order: 31

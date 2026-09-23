@@ -36,6 +36,24 @@ facts:
       party: D
       region: MI
       verified_on: 2026-09-22
+  topics:
+    - government-use
+    - security
+    - surveillance
+    - whistleblowing
+  powers:
+    - oversee
+    - compel
+    - legislate
+  routing_evidence:
+    topics:government-use: How the federal government itself buys, builds and uses AI
+    topics:security: AI threats to critical infrastructure on the DHS side
+    topics:surveillance: government use of AI for surveillance or content moderation
+    topics:whistleblowing: The committee also runs a whistleblower/tips intake
+    powers:oversee: the committee's 2026 AI-adjacent activity is mostly bill referrals and oversight letters
+    powers:compel: The chair holds unilateral subpoena authority in this committee
+    powers:legislate: was reported by this committee in the 118th Congress as S.4495
+  routing_review: drafted
 strings:
   name: Senate Committee on Homeland Security and Governmental Affairs
   ai_jurisdiction: "How the federal government itself buys, builds and uses AI, plus DHS and CISA. Send here: federal AI procurement rules and contract terms, agency Chief AI Officers, AI risk management inside agencies, AI in federal benefits and enforcement decisions, government use of AI for surveillance or content moderation, GSA and OMB AI policy, federal AI workforce, and AI threats to critical infrastructure on the DHS side. NOT the place for rules on private-sector AI products."
@@ -56,8 +74,6 @@ meta:
     - url: https://www.hsgac.senate.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: d766cddd7b
   research_order: 7

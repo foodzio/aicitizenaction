@@ -31,6 +31,16 @@ facts:
       name: Evan J. Vickers
       party: R
       verified_on: 2026-09-22
+  topics:
+    - consumer-protection
+    - health
+  powers:
+    - legislate
+  routing_evidence:
+    topics:consumer-protection: Senate standing committee for AI consumer-protection
+    topics:health: SB 150 (AI medical advice
+    powers:legislate: Senate standing committee for AI consumer-protection and technology-commerce bills
+  routing_review: drafted
 strings:
   name: Senate Business and Labor Committee
   ai_jurisdiction: Senate standing committee for AI consumer-protection and technology-commerce bills, including SB 226 and the 2026 AI package.
@@ -51,8 +61,6 @@ meta:
     - url: https://le.utah.gov/committee/committee.jsp?year=2026&com=SSTBUS
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 944532a9c8
   research_order: 74

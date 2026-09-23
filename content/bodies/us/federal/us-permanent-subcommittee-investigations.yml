@@ -37,6 +37,18 @@ facts:
       party: D
       region: CT
       verified_on: 2026-09-22
+  topics:
+    - whistleblowing
+    - government-use
+  powers:
+    - investigate
+    - compel
+  routing_evidence:
+    topics:whistleblowing: PSI accepts information from the public and from whistleblowers
+    topics:government-use: federal AI contracting abuse
+    powers:investigate: The Senate's standing investigative body, with subpoena power
+    powers:compel: The Senate's standing investigative body, with subpoena power
+  routing_review: drafted
 strings:
   name: Permanent Subcommittee on Investigations
   ai_jurisdiction: The Senate's standing investigative body, with subpoena power. Not an AI-jurisdiction subcommittee by name, but the correct destination for evidence-backed allegations about an AI company's conduct, federal AI contracting abuse, or AI-enabled fraud schemes. If you have documents rather than an opinion, this is the door.
@@ -57,8 +69,6 @@ meta:
     - url: https://www.hsgac.senate.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 0e3db80c3c
   research_order: 8

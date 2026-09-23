@@ -30,6 +30,18 @@ facts:
       name: Chris Tully
       party: D
       verified_on: 2026-09-22
+  topics:
+    - deepfakes
+    - transparency
+    - elections
+  powers:
+    - legislate
+  routing_evidence:
+    topics:deepfakes: The dedicated Assembly committee for AI, deepfakes, chatbots
+    topics:transparency: Released a five-bill AI transparency package
+    topics:elections: election information
+    powers:legislate: package advanced out of committee 17 Mar 2026
+  routing_review: drafted
 strings:
   name: Assembly Science, Innovation and Technology Committee
   ai_jurisdiction: The dedicated Assembly committee for AI, deepfakes, chatbots and emerging-technology bills. Released a five-bill AI transparency package on 17 March 2026.
@@ -52,8 +64,6 @@ meta:
     - url: https://njleg.gov/committee-registrations
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: c74e786fa7
   research_order: 77

@@ -27,6 +27,11 @@ facts:
     - role: chair
       name: Michael McNamara (Renew Europe, Ireland)
       verified_on: 2026-09-22
+  powers:
+    - legislate
+  routing_evidence:
+    powers:legislate: The rapporteur plus roughly six shadows — under ten people — effectively write EU law on a given file.
+  routing_review: drafted
 strings:
   name: European Parliament — the rapporteur and shadow rapporteur system (the highest-leverage seats in EU legislating)
   ai_jurisdiction: "Applies to every AI legislative file. WHAT A RAPPORTEUR IS: when the Commission sends a legislative proposal to Parliament, one committee is designated lead. Within that committee the political groups bid for the file using an auction system based on group size, and the winning group appoints ONE MEP as rapporteur. That single MEP drafts Parliament's report — the consolidated set of amendments that becomes Parliament's official position — decides which of the thousands of tabled amendments are folded into compromise texts, chairs the technical meetings, and then personally leads Parliament's delegation in the closed trilogue negotiations with the Council and Commission where the final law is actually written. WHAT A SHADOW RAPPORTEUR IS: every other political group appoints one shadow to follow the same file. Shadows negotiate the compromise amendments with the rapporteur; a compromise that the EPP, S&D and Renew shadows sign will pass, and one they refuse will not. The rapporteur plus roughly six shadows — under ten people — effectively write EU law on a given file. This is why the rapporteur seat is worth more than a committee chair: the chair runs the meeting, the rapporteur writes the text."
@@ -49,7 +54,6 @@ meta:
     - url: https://oeil.europarl.europa.eu/oeil/en/home
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: f0d594ae6e

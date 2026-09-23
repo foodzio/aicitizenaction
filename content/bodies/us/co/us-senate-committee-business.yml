@@ -31,6 +31,18 @@ facts:
       name: Jessie Danielson
       party: D
       verified_on: 2026-09-22
+  topics:
+    - consumer-protection
+    - transparency
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:consumer-protection: automated decision-making technology, consumer protection and technology bills
+    topics:transparency: disclosure/transparency plus consumer rights over ADMT
+    powers:legislate: Senate committee of reference for AI, automated decision-making technology, consumer protection and technology bills
+    powers:hold-hearings: Any member of the public may testify in person OR remotely by video at a committee hearing
+  routing_review: drafted
 strings:
   name: Senate Committee on Business, Labor, & Technology
   ai_jurisdiction: Senate committee of reference for AI, automated decision-making technology, consumer protection and technology bills. SB 26-189 was referred here.
@@ -53,8 +65,6 @@ meta:
     - url: https://www.leg.state.co.us/CLICS/WitnessR.nsf/register.xsp
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 4d5e56339a
   research_order: 56

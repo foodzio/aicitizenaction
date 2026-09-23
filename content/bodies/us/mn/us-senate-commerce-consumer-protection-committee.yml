@@ -31,6 +31,18 @@ facts:
       name: Matt D. Klein
       party: DFL
       verified_on: 2026-09-22
+  topics:
+    - consumer-protection
+    - privacy
+    - children
+  powers:
+    - legislate
+  routing_evidence:
+    topics:consumer-protection: Senate committee of reference for AI consumer-facing bills
+    topics:privacy: chatbot restrictions and data privacy
+    topics:children: a proposed ban on minors' access to companion chatbots
+    powers:legislate: Senate committee of reference for AI consumer-facing bills
+  routing_review: drafted
 strings:
   name: Senate Commerce and Consumer Protection Committee
   ai_jurisdiction: Senate committee of reference for AI consumer-facing bills, chatbot restrictions and data privacy. Meets Tue/Thu 12:30–2:30 p.m., Room G-15 Capitol.
@@ -53,8 +65,6 @@ meta:
     - url: https://www.leg.mn.gov/leg/faq/faq?id=117
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: dd4c599b4e
   research_order: 80

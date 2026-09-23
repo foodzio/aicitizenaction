@@ -37,6 +37,14 @@ facts:
   public_input: limited
   tags:
     - systemic
+  not_topics:
+    - frontier-ai
+  powers:
+    - advise
+  routing_evidence:
+    not_topics:frontier-ai: rather than frontier risk — the Scientific Panel is the severe-risk body
+    powers:advise: Purely advisory.
+  routing_review: drafted
 strings:
   name: AI Act Advisory Forum
   remit: "CONSTITUTED. Established under Article 67 of the AI Act; 174 members selected from over 700 applications, representing civil society, academia, industry, SMEs and start-ups, serving two-year renewable terms; members were named in 2026. Five bodies hold permanent seats: the EU Agency for Fundamental Rights (FRA), ENISA, CEN, CENELEC and ETSI. It provides technical expertise and balanced stakeholder input to the Commission and the AI Board, works through plenary meetings and thematic subgroups, and prepares opinions and recommendations on request. Purely advisory."
@@ -65,9 +73,7 @@ meta:
     - url: https://ec.europa.eu/transparency/expert-groups-register/screen/expert-groups/consult?lang=en&groupID=4009
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
-    - not_topics
   legacy_id: 1cd4570ad8
   research_order: 178
   migrated_from: input/data/institutions.json

@@ -36,6 +36,13 @@ facts:
       party: D
       region: CA
       verified_on: 2026-09-22
+  topics:
+    - copyright
+    - deepfakes
+  routing_evidence:
+    topics:copyright: AI training data and copyright
+    topics:deepfakes: digital replicas and voice/likeness rights
+  routing_review: drafted
 strings:
   name: Subcommittee on Intellectual Property
   ai_jurisdiction: AI training data and copyright, licensing of creative works for model training, patentability of AI-assisted inventions, digital replicas and voice/likeness rights. If you are an author, musician, performer, visual artist or publisher whose work was used in training data, this is your door in the Senate.
@@ -55,7 +62,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: c73d8e5355
   research_order: 5

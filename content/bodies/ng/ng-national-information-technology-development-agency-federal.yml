@@ -34,6 +34,16 @@ facts:
     - harm
     - law
     - systemic
+  topics:
+    - standards
+  powers:
+    - set-standards
+    - enforce
+  routing_evidence:
+    topics:standards: NITDA is a statutory IT regulator with real powers (registration, standards, sanctions under the NITDA Act)
+    powers:set-standards: NITDA is a statutory IT regulator with real powers (registration, standards, sanctions under the NITDA Act)
+    powers:enforce: NITDA has genuine enforcement powers, unlike most bodies in this list
+  routing_review: drafted
 strings:
   name: National Information Technology Development Agency (NITDA) and the Federal Ministry of Communications, Innovation and Digital Economy
   remit: NITDA is a statutory IT regulator with real powers (registration, standards, sanctions under the NITDA Act) and hosts the National Centre for AI and Robotics (NCAIR). The Federal Ministry owns the National Artificial Intelligence Strategy (NAIS), which was itself produced through an unusually open process — a crowdsourced drafting workshop involving Nigerian researchers in the diaspora. A National AI Bill was reported as moving toward approval in 2026, which would create statutory AI powers. The Nigeria Data Protection Commission separately regulates AI's personal-data dimension with fining power.
@@ -60,8 +70,6 @@ meta:
     - url: https://ncair.nitda.gov.ng/
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 7121eb4ca5
   research_order: 60

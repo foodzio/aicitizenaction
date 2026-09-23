@@ -42,6 +42,20 @@ facts:
   tags:
     - law
     - systemic
+  topics:
+    - frontier-ai
+    - deepfakes
+  powers:
+    - fund
+    - advise
+    - publish
+  routing_evidence:
+    topics:frontier-ai: advises government on risks from advanced AI systems
+    topics:deepfakes: synthetic-content harms
+    powers:fund: Funds and directs AI safety research
+    powers:advise: advises government on risks from advanced AI systems
+    powers:publish: produces guidance for developers and the public
+  routing_review: drafted
 strings:
   name: Canadian Artificial Intelligence Safety Institute (CAISI)
   remit: Announced Nov 2024, sits within Innovation, Science and Economic Development Canada (ISED). Funds and directs AI safety research (investigator-led and government-directed streams, with CIFAR running a research programme and Amii/Mila/Vector involved); advises government on risks from advanced AI systems; produces guidance for developers and the public. Purely research/advisory — Canada has NO in-force AI statute after AIDA (Bill C-27) died on prorogation in January 2025, so CAISI cannot compel or fine anyone.
@@ -70,8 +84,6 @@ meta:
     - url: https://ised-isde.canada.ca/site/ised/en/canadian-artificial-intelligence-safety-institute
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 1e9583b65d
   research_order: 34

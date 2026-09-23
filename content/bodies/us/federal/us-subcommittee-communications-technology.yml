@@ -37,6 +37,22 @@ facts:
       party: D
       region: CA
       verified_on: 2026-09-22
+  topics:
+    - deepfakes
+    - liability
+    - frontier-ai
+  powers:
+    - hold-hearings
+    - oversee
+    - legislate
+  routing_evidence:
+    topics:deepfakes: robocalls and AI voice cloning in telecom
+    topics:liability: Section 230 in its communications-law aspect
+    topics:frontier-ai: NTIA's role in AI policy and open model weights
+    powers:hold-hearings: subcommittee hearing on network infrastructure demands for AI
+    powers:oversee: NTIA oversight hearing
+    powers:legislate: a markup of six bills on communications networks and satellite regulation
+  routing_review: drafted
 strings:
   name: Subcommittee on Communications and Technology
   ai_jurisdiction: "FCC and NTIA jurisdiction. Send here: spectrum and network capacity for AI, broadband and data-center connectivity, AI in media and content distribution, robocalls and AI voice cloning in telecom, Section 230 in its communications-law aspect, and NTIA's role in AI policy and open model weights."
@@ -55,8 +71,6 @@ meta:
     - url: https://energycommerce.house.gov/committees/subcommittee/communications-technology
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: e5ac601720
   research_order: 25

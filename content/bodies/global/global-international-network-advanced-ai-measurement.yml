@@ -25,6 +25,18 @@ facts:
   public_input: none
   tags:
     - systemic
+  topics:
+    - safety-testing
+    - international
+  powers:
+    - convene
+    - publish
+  routing_evidence:
+    topics:safety-testing: Intergovernmental network of state AI evaluation bodies
+    topics:international: Intergovernmental network of state AI evaluation bodies
+    powers:convene: Coordination runs through whichever member hosts a convening
+    powers:publish: Publishes joint technical outputs (e.g. Feb 2026 consensus areas on automated evaluations).
+  routing_review: drafted
 strings:
   name: International Network for Advanced AI Measurement, Evaluation and Science (NAAIMES) — formerly the International Network of AI Safety Institutes
   remit: "Intergovernmental network of state AI evaluation bodies. Renamed in December 2025 from 'International Network of AI Safety Institutes' — the word 'safety' was dropped in favour of 'measurement, evaluation and science'. Verified membership as of 2026: Australia, Canada, European Union, France, Japan, Kenya, Republic of Korea, Singapore, United Kingdom, United States. NOTE: India, Italy, Spain, Netherlands, Ireland, Switzerland and China are NOT members. Publishes joint technical outputs (e.g. Feb 2026 consensus areas on automated evaluations). No treaty basis, no legal personality."
@@ -49,8 +61,6 @@ meta:
     - url: https://www.aisi.gov.uk/blog/international-evaluation-best-practice-and-open-questions-in-ai-measurement
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 4c4d2e5f29
   research_order: 30

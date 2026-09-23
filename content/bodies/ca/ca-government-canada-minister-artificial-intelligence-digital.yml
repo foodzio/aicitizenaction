@@ -27,6 +27,15 @@ facts:
     - role: chair
       name: The Hon. Evan Solomon
       verified_on: 2026-09-22
+  topics:
+    - deepfakes
+    - children
+    - privacy
+  routing_evidence:
+    topics:deepfakes: the Protecting Victims Act (introduced December 2025) to prohibit distribution of non-consensual sexual deepfakes
+    topics:children: new legislation tabled in June 2026 on children's data and privacy
+    topics:privacy: new legislation tabled in June 2026 on children's data and privacy
+  routing_review: drafted
 strings:
   name: Government of Canada — Minister of Artificial Intelligence and Digital Innovation
   ai_jurisdiction: Canada's dedicated AI portfolio. Owns the national AI strategy and the federal government's response to the collapse of AI legislation.
@@ -51,7 +60,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: 3e0c7e5fce
   research_order: 105

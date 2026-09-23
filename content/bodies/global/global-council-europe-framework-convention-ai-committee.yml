@@ -30,6 +30,15 @@ facts:
   public_input: limited
   tags:
     - systemic
+  topics:
+    - international
+    - discrimination
+    - elections
+  routing_evidence:
+    topics:international: First legally binding international treaty on AI
+    topics:discrimination: democratic-process harms, discrimination, and rule-of-law erosion
+    topics:elections: democratic-process harms, discrimination, and rule-of-law erosion
+  routing_review: drafted
 strings:
   name: Council of Europe — Framework Convention on AI (CETS No. 225) and the Committee on AI (CAI)
   remit: First legally binding international treaty on AI, opened for signature 5 Sept 2024. 19 signatories at last check including Albania, Andorra, Armenia, Bosnia and Herzegovina, Georgia, Iceland, Liechtenstein, Montenegro, North Macedonia, Norway, Moldova, San Marino, Switzerland, Ukraine, the UK, plus non-members Canada, Israel, Japan, the USA and Uruguay, and the European Union. The EU has ratified; the treaty requires five ratifications including three CoE member states to enter into force, so it is NOT yet in force. Obligations cover human rights, democracy and rule of law across the AI lifecycle.
@@ -56,7 +65,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: b7c11cd67f
   research_order: 83

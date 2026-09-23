@@ -31,6 +31,26 @@ facts:
       name: Rebecca Bauer-Kahan
       party: D
       verified_on: 2026-09-22
+  topics:
+    - frontier-ai
+    - privacy
+    - transparency
+    - children
+    - health
+    - deepfakes
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:frontier-ai: SB 53 (Transparency in Frontier Artificial Intelligence Act, Wiener)
+    topics:privacy: chatbot, data-privacy and AI-transparency bills
+    topics:transparency: chatbot, data-privacy and AI-transparency bills
+    topics:children: AB 2246 (minors/design code, signed 10 Sep 2026)
+    topics:health: joint hearing track with the Select Committee on Biotechnology and Medical Technology on AI in health
+    topics:deepfakes: SB 1050 (synthetic performer disclosure, signed 16 Sep 2026)
+    powers:legislate: Primary Assembly committee of first referral for AI, algorithmic decision-making, chatbot, data-privacy and AI-transparency bills
+    powers:hold-hearings: In-person testimony at the hearing is open
+  routing_review: drafted
 strings:
   name: Assembly Committee on Privacy and Consumer Protection
   ai_jurisdiction: Primary Assembly committee of first referral for AI, algorithmic decision-making, chatbot, data-privacy and AI-transparency bills (e.g. SB 53, AB 1064, AB 1018, companion-chatbot bills). Also runs a joint hearing track with the Select Committee on Biotechnology and Medical Technology on AI in health.
@@ -53,8 +73,6 @@ meta:
     - url: https://calegislation.lc.ca.gov/Advocates/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: b9d26105a5
   research_order: 51

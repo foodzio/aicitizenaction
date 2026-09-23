@@ -31,6 +31,18 @@ facts:
       name: Michael O. Moore
       party: D
       verified_on: 2026-09-22
+  topics:
+    - health
+    - privacy
+    - security
+  powers:
+    - legislate
+  routing_evidence:
+    topics:health: handles AI in healthcare decision-making
+    topics:privacy: data privacy
+    topics:security: cybersecurity and internet bills
+    powers:legislate: reported favorably 16 Oct 2025, recommended for passage
+  routing_review: drafted
 strings:
   name: Joint Committee on Advanced Information Technology, the Internet and Cybersecurity — Senate chair
   ai_jurisdiction: The named AI/technology policy committee of the General Court; handles AI in healthcare decision-making, data privacy, cybersecurity and internet bills.
@@ -53,8 +65,6 @@ meta:
     - url: https://malegislature.gov/assets/documents/how-to-submit-testimony-v1.1.pdf
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 6d958d9285
   research_order: 67

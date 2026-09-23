@@ -31,6 +31,24 @@ facts:
     - role: chair
       name: BAE Kyung-hoon (배경훈)
       verified_on: 2026-09-22
+  topics:
+    - frontier-ai
+    - safety-testing
+  powers:
+    - investigate
+    - enforce
+    - make-rules
+    - fine
+    - hold-hearings
+  routing_evidence:
+    topics:frontier-ai: Safety Assurance Notice (using a 10^26 FLOP training-compute threshold plus risk criteria)
+    topics:safety-testing: AI Safety Guidelines, and the High-Impact AI Determination Guideline
+    powers:investigate: investigating suspected violations and conducting on-site inspections (Art. 40)
+    powers:enforce: issuing corrective orders and service suspension orders
+    powers:make-rules: drafting the Presidential Decree and notices
+    powers:fine: MSIT has indicated a one-year grace period before administrative fines are imposed
+    powers:hold-hearings: MSIT also runs 공청회 (public hearings)
+  routing_review: drafted
 strings:
   name: Ministry of Science and ICT (MSIT)
   ai_jurisdiction: "The competent authority under the AI Framework Act. Powers include: investigating suspected violations and conducting on-site inspections (Art. 40), issuing corrective orders and service suspension orders, confirming on request whether a system is 'high-impact AI', and drafting the Presidential Decree and notices. Also owns national AI R&D, compute and the AI Safety Institute."
@@ -56,8 +74,6 @@ meta:
     - url: https://opinion.lawmaking.go.kr/gcom/ogLmPp
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 6759c56438
   research_order: 134

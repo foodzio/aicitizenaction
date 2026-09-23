@@ -23,6 +23,13 @@ facts:
   tags:
     - law
     - record
+  powers:
+    - hold-hearings
+    - publish
+  routing_evidence:
+    powers:hold-hearings: committees may hear submitters 'face to face, by phone, or by video conference'
+    powers:publish: both that report and the committee's report to the House are published
+  routing_review: drafted
 strings:
   name: New Zealand House of Representatives — select committee submission system (the public route)
   ai_jurisdiction: The mechanism for reaching any New Zealand select committee, including on any future AI bill.
@@ -44,7 +51,6 @@ meta:
     - url: https://www.parliament.nz/en/pb/sc/how-to-make-a-submission/
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 859984bdbd

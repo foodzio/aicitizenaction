@@ -37,6 +37,25 @@ facts:
   public_input: limited
   tags:
     - systemic
+  topics:
+    - discrimination
+    - privacy
+    - work
+    - international
+  not_topics:
+    - frontier-ai
+  powers:
+    - convene
+    - advise
+  routing_evidence:
+    topics:discrimination: "Near-term harms and human-rights framing: discrimination, gender bias, privacy, environmental sustainability, labour"
+    topics:privacy: "Near-term harms and human-rights framing: discrimination, gender bias, privacy, environmental sustainability, labour"
+    topics:work: "Near-term harms and human-rights framing: discrimination, gender bias, privacy, environmental sustainability, labour"
+    topics:international: Co-convenor of the UN Global Dialogue Joint Secretariat.
+    not_topics:frontier-ai: Explicitly NOT a loss-of-control or frontier-misuse body
+    powers:convene: a Global Forum on the Ethics of AI
+    powers:advise: the Recommendation is implemented via national RAM exercises with ministries
+  routing_review: drafted
 strings:
   name: UNESCO — Recommendation on the Ethics of AI / Global AI Ethics and Governance Observatory
   remit: "Adopted Nov 2021, the first global standard-setting instrument on AI ethics: four core values, ten principles, eleven policy action areas. Implementation tools include the Readiness Assessment Methodology (RAM) and Ethical Impact Assessment, a Global Forum on the Ethics of AI, and the Observatory, which maintains a public directory of civil society organisations working on AI ethics. Co-convenor of the UN Global Dialogue Joint Secretariat."
@@ -67,10 +86,6 @@ meta:
       checked: 2026-09-22
     - url: https://www.unesco.org/en/digital-education/artificial-intelligence/consultation
       checked: 2026-09-22
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: af6b381755
   research_order: 76
   migrated_from: input/data/institutions.json

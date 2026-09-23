@@ -28,6 +28,16 @@ facts:
     - role: chair
       name: Dr Parmjeet Parmar, MP (ACT Party, List)
       verified_on: 2026-09-22
+  topics:
+    - consumer-protection
+    - copyright
+  powers:
+    - hold-hearings
+  routing_evidence:
+    topics:consumer-protection: consumer protection and trading standards
+    topics:copyright: AI-and-copyright inside 'intellectual property'
+    powers:hold-hearings: Make a submission when the committee calls for them on a bill or inquiry
+  routing_review: drafted
 strings:
   name: Economic Development, Science and Innovation Committee (54th Parliament)
   ai_jurisdiction: "The New Zealand select committee whose subject area covers AI. Its stated remit: 'business development, tourism, Crown minerals, commerce, consumer protection and trading standards, research, science, innovation, intellectual property, broadcasting, communications, and information technology.' AI sits inside 'research, science, innovation' and 'information technology', and AI-and-copyright inside 'intellectual property'. This is New Zealand's default destination for an AI bill, petition or briefing."
@@ -52,8 +62,6 @@ meta:
     - url: https://www.parliament.nz/en/pb/sc/how-to-make-a-submission/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: cbec976991
   research_order: 111

@@ -43,6 +43,20 @@ facts:
     - flaw
     - harm
     - systemic
+  topics:
+    - privacy
+    - government-use
+  powers:
+    - fine
+    - make-rules
+    - convene
+  routing_evidence:
+    topics:privacy: it is the competent authority for the Personal Data Protection Law (PDPL)
+    topics:government-use: generative-AI guidelines for government and public use
+    powers:fine: which carries criminal penalties for certain disclosure offences and administrative fines
+    powers:make-rules: and data-governance regulations
+    powers:convene: hosts the Global AI Summit
+  routing_review: drafted
 strings:
   name: Saudi Data and Artificial Intelligence Authority (SDAIA)
   remit: "The national authority for data and AI, established 2019, reporting to the Prime Minister. Unusually for this list it is BOTH a promoter and a real regulator: it is the competent authority for the Personal Data Protection Law (PDPL), which carries criminal penalties for certain disclosure offences and administrative fines, and it issues AI Ethics Principles (2023, updated 2025), generative-AI guidelines for government and public use, and data-governance regulations. It also runs the National Center for AI (NCAI) and hosts the Global AI Summit. AI-specific rules remain principles-based rather than binding statute."
@@ -75,8 +89,6 @@ meta:
     - url: https://sdaia.gov.sa/en/SDAIA/about/Pages/RegulationsAndPolicies.aspx
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: d337d3ce38
   research_order: 56

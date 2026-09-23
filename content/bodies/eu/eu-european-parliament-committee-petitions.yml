@@ -32,6 +32,15 @@ facts:
     - harm
     - law
     - systemic
+  powers:
+    - handle-complaints
+    - hold-hearings
+    - oversee
+  routing_evidence:
+    powers:handle-complaints: Handles petitions submitted under the Treaty right of petition
+    powers:hold-hearings: can hold hearings
+    powers:oversee: it can force the Commission to answer in writing on a specific implementation failure
+  routing_review: drafted
 strings:
   name: European Parliament Committee on Petitions (PETI)
   remit: Handles petitions submitted under the Treaty right of petition — a fundamental right of every EU citizen and resident. Examines admissibility, may ask the Commission for information or a legal opinion, can hold hearings, conduct fact-finding visits, and report to plenary. Through petitions it 'conducts an ongoing reality check on the way in which European legislation is implemented'. It cannot legislate or fine, but it can force the Commission to answer in writing on a specific implementation failure.
@@ -56,7 +65,6 @@ meta:
     - url: https://www.europarl.europa.eu/petitions/en/home
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 843035c892

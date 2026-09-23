@@ -18,6 +18,11 @@ facts:
   tags:
     - law
     - systemic
+  powers:
+    - advise
+  routing_evidence:
+    powers:advise: Until passage, the ministry is a policy body only.
+  routing_review: drafted
 strings:
   name: Chile — Artificial Intelligence Bill (Boletín 16821-19) and Ministry of Science, Technology, Knowledge and Innovation
   remit: "STATUS AS OF SEPT 2026: STILL A BILL. Chile's comprehensive AI bill, sent by the executive in May 2024 and modelled on the EU AI Act's risk tiers (unacceptable / high / limited / no evident risk), was still in Senate committee proceedings as of February 2026. It would designate an existing or new supervisory authority with sanctioning powers. Chile also has an updated National AI Policy (2024) and leads the Latin American AI Index (ILIA) with Brazil and Uruguay. Until passage, the ministry is a policy body only."
@@ -33,7 +38,6 @@ meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: "50936950e0"

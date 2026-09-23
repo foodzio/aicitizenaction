@@ -31,6 +31,17 @@ facts:
   tags:
     - law
     - systemic
+  powers:
+    - oversee
+    - hold-hearings
+    - compel
+    - publish
+  routing_evidence:
+    powers:oversee: Scrutinises DSIT — and therefore the AI Security Institute — its policy, administration and spending.
+    powers:hold-hearings: takes oral and written evidence
+    powers:compel: it can compel the attendance of officials and extract documents
+    powers:publish: publishes reports to which the Government must respond within 60 days
+  routing_review: drafted
 strings:
   name: House of Commons Science, Innovation and Technology Committee
   remit: Scrutinises DSIT — and therefore the AI Security Institute — its policy, administration and spending. Conducts inquiries, takes oral and written evidence, summons ministers and officials, and publishes reports to which the Government must respond within 60 days. It cannot legislate, fine or compel a private party in practice, but it can compel the attendance of officials and extract documents, and its reports set the terms of UK AI debate. Recent and current inquiries have included Low-energy computing (opened 16 April 2026), Neuroscience and digital childhoods (24 March 2026), Digital centre of government (3 February 2025), and Science diplomacy (3 April 2025).
@@ -55,7 +66,6 @@ meta:
     - url: https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 52535e21b4

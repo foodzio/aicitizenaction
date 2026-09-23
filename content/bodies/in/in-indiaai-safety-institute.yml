@@ -41,6 +41,11 @@ facts:
   tags:
     - harm
     - systemic
+  powers:
+    - fund
+  routing_evidence:
+    powers:fund: contracting research to partner institutions via Calls for Partnerships
+  routing_review: drafted
 strings:
   name: IndiaAI Safety Institute
   remit: Announced 30 January 2025 under the IndiaAI Mission (an Independent Business Division of MeitY, the Ministry of Electronics and Information Technology), within the Mission's 'Safe & Trusted AI' pillar. Operates on a hub-and-spoke model contracting research to partner institutions via Calls for Partnerships (2025 rounds, deadline extended to 9 July 2025). No statutory basis, no enforcement power. India has no AI Act; the Nov 2025 India AI Governance Guidelines are non-binding and propose an AI Governance Group (AIGG) and a Technology & Policy Expert Committee (TPEC) whose operational status I could NOT verify as of Sept 2026.
@@ -69,7 +74,6 @@ meta:
     - url: https://indiaai.gov.in/
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 6caaf7ec3f

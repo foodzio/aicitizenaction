@@ -1,0 +1,142 @@
+# Routing drafts — report
+
+*Generated 2026-09-23T00:19:31.801Z by `scripts/apply-routing-drafts.mjs`. First-pass drafts from each record's own text, made by language-model agents and machine-checked: every value has a verbatim quote from the record. Routing ignores all of them until a person sets `routing_review: reviewed`.*
+
+- Records with a draft: 222 of 250
+- Values applied: 415 topics, 31 excluded topics, 407 powers
+- Values dropped by the checks: 0
+- Records already reviewed (left alone): 0
+
+## How to review a record
+
+1. Open the record. Read each value in `facts.topics`, `facts.not_topics` and `facts.powers` next to its quote in `facts.routing_evidence`.
+2. Remove anything the quote does not support. Add anything missing, with a quote. Be strict about powers — overstating one is the worst error this site can make.
+3. Set `facts.routing_review: reviewed` and your handle in the pull request. A second person approves.
+
+## Dropped values and reviewer notes
+
+- `content/bodies/au/au-department-industry.yml` — reviewer note: The department 'owns AI policy' but the text states no binding power; 'advise' rests on the (temporary) AI Expert Group only. Proposed mandatory guardrails are not yet rules, so make-rules was not given.
+- `content/bodies/au/au-joint-select-committee-artificial-intelligence.yml` — reviewer note: Very broad terms of reference; consumer-protection rests only on 'fraud and scams'. Oversee inferred from the ToR item on Commonwealth adoption of AI; committee is time-limited (report due 30 Nov 2026).
+- `content/bodies/au/au-senate-select-committee-adopting-artificial-intelligence.yml` — reviewer note: CEASED committee: no current powers given. 'Generative AI' mapped to frontier-ai (general-purpose) — reviewer should confirm.
+- `content/bodies/au/au-senate-standing-committees-environment-communications-inquiry.yml` — reviewer note: Remit is AI data centres, environment, water and energy — no matching topic id exists in the vocabulary, so topics left empty.
+- `content/bodies/br/br-autoridade-nacional-protecao-dados-2.yml` — reviewer note: make-rules inferred from ANPD consulting on draft regulations for its regulatory agenda; the text never literally says it issues binding regulations. Its future SIA lead role is a pending-bill proposal, not current law.
+- `content/bodies/br/br-federal-senate-temporary-internal-commission-artificial.yml` — reviewer note: CTIA is concluded; powers describe the Senate plenary's residual final-vote role, which is contingent on the Chamber amending PL 2338.
+- `content/bodies/br/br-special-committee-artificial-intelligence.yml` — reviewer note: Remit is general AI regulation (PL 2338) with no subject-specific topics named, so topics left empty.
+- `content/bodies/ca/ca-government-canada-minister-artificial-intelligence-digital.yml` — reviewer note: Topics come from the government's targeted bills listed 'alongside' the AI strategy; the text does not say this minister sponsors them. No powers stated.
+- `content/bodies/ca/ca-house-commons-standing-committee-industry-technology.yml` — reviewer note: hold-hearings not given: witnesses are only implied ('not given the opportunity to appear').
+- `content/bodies/eu/eu-european-commission-european-ai-office.yml` — reviewer note: This record's text does not mention fines or binding guidelines, so fine/make-rules were not given (another record for the AI Office may).
+- `content/bodies/eu/eu-european-parliament-committee-industry-2.yml` — reviewer note: export-controls rests only on 'semiconductors' (chips) — nothing on export controls as such. fund not given: ITRE covers research funding policy but the text does not say it allocates money.
+- `content/bodies/eu/eu-european-parliament-committee-legal-affairs.yml` — reviewer note: legislate quote overstates a single committee's role (Parliament as a whole co-legislates); reviewer may prefer a softer basis.
+- `content/bodies/eu/eu-european-parliament-committee-petitions-2.yml` — reviewer note: No AI portfolio; biometric surveillance and algorithmic discrimination appear only as example petitions, so no topics assigned. 'compel' in the text refers to citizens compelling Parliament to consider a matter, not a PETI power.
+- `content/bodies/eu/eu-european-parliament-rapporteur-shadow-rapporteur-system.yml` — reviewer note: A procedural system rather than a body.
+- `content/bodies/gb/gb-all-party-parliamentary-group-artificial-intelligence.yml` — reviewer note: Text says it 'runs evidence sessions' but 'has no formal powers'; hold-hearings withheld as it is not a parliamentary proceeding.
+- `content/bodies/gb/gb-house-lords-communications-digital-committee-2.yml` — reviewer note: Online Safety Act inquiry covers AI-generated content, but no specific topic (e.g. children/deepfakes) is stated for the committee itself.
+- `content/bodies/gb/gb-uk-government-minister-artificial-intelligence.yml` — reviewer note: No powers stated in the text for the minister.
+- `content/bodies/ie/ie-committee-public-petitions-ombudsmen.yml` — reviewer note: No AI remit; AI topics appear only as example petitions. Petitions mapped to handle-complaints — reviewer should confirm that mapping.
+- `content/bodies/ie/ie-joint-committee-artificial-intelligence.yml` — reviewer note: Remit is all of AI policy with no specific subjects named; 'AI and the Environment' module has no matching topic id.
+- `content/bodies/in/in-ai-governance-economic-group.yml` — reviewer note: Closed inter-ministerial policy body; 'coordination' and 'policy development' do not map cleanly to a power id, so powers left empty.
+- `content/bodies/in/in-india-ai-impact-summit-2026.yml` — reviewer note: Event concluded 20 February 2026; convene describes what it did, not an ongoing capacity.
+- `content/bodies/in/in-ministry-electronics-information-technology.yml` — reviewer note: make-rules evidence is thin as a quote ('notified thereafter', referring to the draft IT Amendment Rules 2026); legislate withheld since a future AI statute 'will originate here' is prospective.
+- `content/bodies/in/in-standing-committee-communications-information-technology.yml` — reviewer note: set-agenda based on 'can self-select AI subjects' — reviewer should confirm; text explicitly says it 'has no power to amend rules, only to report'.
+- `content/bodies/jp/jp-ai-strategy-council.yml` — reviewer note: Largely dormant and superseded by the AI Strategy Headquarters.
+- `content/bodies/jp/jp-house-councillors-committee-economy.yml` — reviewer note: Remit is AI industrial policy and compute/semiconductor strategy, which has no matching topic id; left topics empty.
+- `content/bodies/jp/jp-house-representatives-committee-cabinet.yml` — reviewer note: Witness selection by the 理事会 is not the same as deciding what is heard, so set-agenda was not used.
+- `content/bodies/jp/jp-minister-state-artificial-intelligence-strategy-minister.yml` — reviewer note: The text names no specific powers for the minister; rule-making is attributed to the Digital Agency and Cabinet Office, so no powers were listed.
+- `content/bodies/kr/kr-ai-safety-institute-2.yml` — reviewer note: test-models rests on 'evaluate AI risk'; the text does not say it red-teams specific models.
+- `content/bodies/kr/kr-ministry-science-ict.yml` — reviewer note: fine: fines are in a grace period until roughly January 2027, so the power exists but is not yet used.
+- `content/bodies/kr/kr-national-ai-committee.yml` — reviewer note: The body's name and identity are marked UNVERIFIED in the record itself.
+- `content/bodies/kr/kr-national-assembly-science.yml` — reviewer note: It is the lead AI committee, but its remit is framed broadly ('AI Framework Act') with no specific topic ids; 'R&D budget' was not treated as a funding power.
+- `content/bodies/nz/nz-education-workforce-committee.yml` — reviewer note: 'workplace surveillance' is mentioned, but it was not mapped to surveillance (surveillance and policing).
+- `content/bodies/nz/nz-new-zealand-house-representatives-select-committee.yml` — reviewer note: This is a generic mechanism entry, not a single body.
+- `content/bodies/nz/nz-petitions-committee.yml` — reviewer note: Petitions are not complaints, so handle-complaints was left out, although the committee does act on public petitions.
+- `content/bodies/us/ca/us-government-operations-agency-cppa-attorney-general.yml` — reviewer note: This record merges GovOps, the CPPA and the AG, so the powers belong to different agencies. CPPA/ADMT suggests privacy, but the word never appears.
+- `content/bodies/us/ca/us-senate-committee-judiciary-2.yml` — reviewer note: Digital replicas were mapped to deepfakes, and civil rights to discrimination.
+- `content/bodies/us/federal/us-congressional-artificial-intelligence-caucus-2.yml` — reviewer note: The text says it has no bills referred and cannot hold hearings, so only convene was used.
+- `content/bodies/us/federal/us-house-bipartisan-task-force-artificial-intelligence.yml` — reviewer note: The record says the body appears dormant in the 119th Congress.
+- `content/bodies/us/federal/us-house-committee-armed-services.yml` — reviewer note: The only hearing mentioned was cancelled, so hold-hearings was left out.
+- `content/bodies/us/federal/us-house-committee-judiciary.yml` — reviewer note: The oversight track is about government 'jawboning' of platforms, so it counts as oversight of government.
+- `content/bodies/us/federal/us-house-permanent-select-committee-intelligence.yml` — reviewer note: Classified whistleblowing is sent to the ICIG channel rather than the committee, so whistleblowing was not listed.
+- `content/bodies/us/federal/us-senate-committee-energy-natural-resources.yml` — reviewer note: Energy, data-center power and ratepayers have no topic id.
+- `content/bodies/us/federal/us-senate-committee-foreign-relations.yml` — reviewer note: The committee also gets 'the diplomacy and the sanctions framing' of export controls, so the export-controls exclusion covers only the statutory authority.
+- `content/bodies/us/federal/us-senate-committee-health.yml` — reviewer note: children rests only on K-12 education.
+- `content/bodies/us/federal/us-senate-committee-homeland-security-governmental-affairs.yml` — reviewer note: 'NOT the place for rules on private-sector AI products' is an explicit exclusion, but it maps to no single topic id, so it was not recorded as a not_topic.
+- `content/bodies/us/federal/us-senate-committee-judiciary.yml` — reviewer note: surveillance rests on 'DOJ and FBI use of AI', which is policing.
+- `content/bodies/us/federal/us-subcommittee-communications-technology.yml` — reviewer note: frontier-ai rests only on "open model weights"; liability on Section 230.
+- `content/bodies/us/federal/us-subcommittee-consumer-protection.yml` — reviewer note: No powers: the KOSA markup is attributed to the full committee, not this subcommittee.
+- `content/bodies/us/federal/us-subcommittee-crime-counterterrorism.yml` — reviewer note: AI LEAD Act was introduced by senators, not reported by the subcommittee, so legislate omitted.
+- `content/bodies/us/federal/us-subcommittee-cyber.yml` — reviewer note: legislate rests on the subcommittee print of the NDAA.
+- `content/bodies/us/federal/us-subcommittee-cybersecurity-infrastructure-protection.yml` — reviewer note: "CISA's authorities and budget" is authorizing jurisdiction; fund/oversee not claimed.
+- `content/bodies/us/federal/us-subcommittee-digital-assets-2.yml` — reviewer note: Financial-services AI has no dedicated topic id; whistleblowing rests on a committee-wide whistleblower route.
+- `content/bodies/us/federal/us-subcommittee-energy-2.yml` — reviewer note: Data-center power / grid is not in the topic vocab; security (critical infrastructure) not claimed.
+- `content/bodies/us/federal/us-subcommittee-energy-water-development-related-agencies.yml` — reviewer note: frontier-model evaluation at DOE is only proposed (S.2938), so safety-testing not claimed.
+- `content/bodies/us/federal/us-subcommittee-intellectual-property.yml` — reviewer note: NO FAKES referral is to full Judiciary; no subcommittee power stated.
+- `content/bodies/us/federal/us-subcommittee-investigations-oversight.yml` — reviewer note: Name says Investigations but text only supports oversight of agencies, not investigation of companies.
+- `content/bodies/us/federal/us-subcommittee-privacy.yml` — reviewer note: Text says chatbot-harm work "partly migrated" to Crime subcommittee; not treated as an explicit exclusion.
+- `content/bodies/us/federal/us-subcommittee-research-technology.yml` — reviewer note: frontier-ai and preemption come from the chair's discussion draft, not a subcommittee action.
+- `content/bodies/us/federal/us-white-house-ai-litigation-task-force.yml` — reviewer note: Litigating against state laws has no matching power id; powers left empty.
+- `content/bodies/us/il/us-house-committee-cybersecurity.yml` — reviewer note: Text does not say SB 315 passed through this committee; frontier-ai/safety-testing rest on the record listing it.
+- `content/bodies/us/md/us-senate-education.yml` — reviewer note: children rests on "AI in education" (AI Ready Schools Act).
+- `content/bodies/us/multistate/us-future-caucus-national-task-force-state.yml` — reviewer note: hosts "public hearings" but is not a legislating body; hold-hearings deliberately not claimed.
+- `content/bodies/us/nj/us-senate-commerce-committee.yml` — reviewer note: Text implies the chair controls whether S4474 gets a hearing, but does not say so; set-agenda not claimed.
+- `content/bodies/us/ut/us-house-business.yml` — reviewer note: deepfakes rests on a 2026 session bill listing; text does not say HB 276 was heard by this committee.
+- `content/bodies/us/va/us-house-committee-communications.yml` — reviewer note: Topics come from the list of 2026 AI bills continued to 2027; text does not tie each bill to this committee explicitly.
+- `content/bodies/ar/ar-argentina-ai-governance.yml` — reviewer note: Record describes a country with no AI body; the only instrument audits the state's own AI use. powers_text says advise; oversee was considered but not supported for a named body.
+- `content/bodies/au/au-australian-ai-safety-institute.yml` — reviewer note: test-models rests only on "evaluation capability"; no concrete model testing is described.
+- `content/bodies/br/br-brazilian-national-congress-pl-2338-2023.yml` — reviewer note: powers_text says advise and the text says the bill "confers no powers on anyone" until enacted; legislate/hold-hearings describe Congress itself, not the bill.
+- `content/bodies/ca/ca-canadian-artificial-intelligence-safety-institute.yml` — reviewer note: deepfakes rests on a single mention of "synthetic-content harms" on its page.
+- `content/bodies/ch/ch-federal-office-communications-swiss-ai-regulation.yml` — reviewer note: legislate is drafting only (an executive office, not a legislature); not_topics government-use relies on the text assigning federal-administration AI use to the Chancellery.
+- `content/bodies/cl/cl-chile-artificial-intelligence-bill-ministry-science.yml` — reviewer note: No topic in the vocabulary is specifically named; the bill is a general risk-tier AI law.
+- `content/bodies/cn/cn-china-internet-illegal-harmful-information-reporting.yml` — reviewer note: powers_text says investigate, but the text says reports feed CAC enforcement; investigate/enforce belong to CAC, not the reporting centre, so omitted.
+- `content/bodies/cn/cn-cyberspace-administration-china.yml` — reviewer note: powers_text says compel, but no text describes compelling testimony or documents, so compel omitted. frontier-ai rests on generative-AI measures.
+- `content/bodies/cn/cn-ministry-industry-information-technology.yml` — reviewer note: powers_text says compel; not supported by text. "administrative-penalty powers" may include fines but fine was not stated explicitly; enforce applies to telecoms/industrial operators generally, not AI specifically.
+- `content/bodies/es/es-agencia-espanola-supervision-inteligencia-artificial.yml` — reviewer note: No vocabulary topic is specifically named; remit is general EU AI Act market surveillance. compel rests on "demand documentation and access to models".
+- `content/bodies/eu/eu-ai-act-scientific-panel-independent-experts.yml` — reviewer note: The Article 90 qualified alert is stronger than advice (it triggers AI Office powers) but no vocabulary power fits; investigate/compel belong to the AI Office.
+- `content/bodies/eu/eu-european-ombudsman.yml` — reviewer note: investigate here covers EU institutions only, not companies ("CANNOT ... act against private companies"); no vocabulary topic fits maladministration.
+- `content/bodies/eu/eu-european-parliament-committee-industry.yml` — reviewer note: export-controls rests on "chip supply"; no export-control content as such.
+- `content/bodies/eu/eu-european-parliament-committee-petitions.yml` — reviewer note: powers_text says investigate; text mentions fact-finding visits but no investigation of companies or incidents, so omitted.
+- `content/bodies/eu/eu-general-purpose-ai-code-practice-its.yml` — reviewer note: An instrument plus a taskforce rather than a body; convene is the only power and it is the AI Office that convenes.
+- `content/bodies/eu/eu-national-market-surveillance-authorities-under-ai.yml` — reviewer note: No vocabulary topic is specifically named (prohibited practices and high-risk requirements generally).
+- `content/bodies/gb/gb-competition-markets-authority.yml` — reviewer note: not_topics frontier-ai rests on "does not regulate model risk".
+- `content/bodies/gb/gb-department-science.yml` — reviewer note: powers_text says advise, but DSIT is the lead policy department; legislate rests on "can sponsor legislation" (a department, not a legislature).
+- `content/bodies/gb/gb-house-commons-science.yml` — reviewer note: No topic set: remit is scrutiny of DSIT/AISI generally; listed inquiries (e.g. digital childhoods) are not AI-specific. compel is limited to officials, not private parties.
+- `content/bodies/gb/gb-ofcom.yml` — reviewer note: Online safety / content harm has no matching topic id; topics left empty. Consider adding an online-safety topic.
+- `content/bodies/gb/gb-uk-parliament-government-petitions-service.yml` — reviewer note: set-agenda considered (Petitions Committee considers 100k petitions for debate) but the text does not say it decides what is heard.
+- `content/bodies/global/global-council-europe-framework-convention-ai-committee.yml` — reviewer note: No powers assigned: the treaty is not in force and the CAI is described only as running observer participation during drafting.
+- `content/bodies/global/global-g7-hiroshima-ai-process-reporting-framework.yml` — reviewer note: A reporting framework rather than a body; publish reflects that company self-reports are published.
+- `content/bodies/global/global-gpai.yml` — reviewer note: privacy rests on "data governance"; no powers stated.
+- `content/bodies/global/global-india-ai-impact-summit-2026.yml` — reviewer note: A past summit event, not a standing body; no powers.
+- `content/bodies/global/global-international-ai-safety-report.yml` — reviewer note: Explicitly "does not make policy recommendations", so advise omitted.
+- `content/bodies/global/global-international-network-advanced-ai-measurement.yml` — reviewer note: Not contactable by the public; the network acts only through member institutes.
+- `content/bodies/global/global-iso-iec-jtc-1-sc-42.yml` — reviewer note: Threat model lists bias and transparency as trustworthiness properties; not tagged as topics because they are facets of standards work. "Not oriented to catastrophic or loss-of-control risk" has no exact topic id, so no not_topics.
+- `content/bodies/global/global-itu-ai-good.yml` — reviewer note: ITU runs standardisation study groups, but the text separates that from AI for Good itself, so set-standards was not given.
+- `content/bodies/global/global-mlcommons-ailuminate-benchmark.yml` — reviewer note: Hazard categories (privacy, IP, CSAM) are benchmark categories, not topics the body acts on; not tagged.
+- `content/bodies/global/global-ohchr-b-tech-project.yml` — reviewer note: not_topics frontier-ai rests on "frontier misalignment ... will not land"; a reviewer should confirm this reads as an exclusion.
+- `content/bodies/id/id-ministry-communications-digital-affairs.yml` — reviewer note: powers_text says "compel" but the text shows no subpoena-type power; only takedown/blocking (enforce). No AI topic is named.
+- `content/bodies/il/il-ministry-innovation.yml` — reviewer note: Privacy Protection Authority is said to handle data issues, but not phrased as an exclusion, so no not_topics.
+- `content/bodies/in/in-indiaai-safety-institute.yml` — reviewer note: "Safe & Trusted AI" pillar does not say the institute tests models, so no safety-testing topic. fund rests on partnership calls that contract research out.
+- `content/bodies/it/it-agenzia-l-italia-digitale-agenzia-cybersicurezza.yml` — reviewer note: Text says ACN has "inspection and sanction powers"; investigate and fine left out because neither word is used. Powers belong to ACN, not AgID.
+- `content/bodies/jp/jp-information-technology-promotion-agency.yml` — reviewer note: No power in the vocab is clearly supported; "handles ... standards" is too vague for set-standards.
+- `content/bodies/jp/jp-japan-ai-safety-institute.yml` — reviewer note: test-models not given: text describes methods and guides, not the institute red-teaming models itself.
+- `content/bodies/kr/kr-ministry-science-ict-ai-framework-act.yml` — reviewer note: health/work/government-use come from the list of high-impact domains MSIT designates. make-rules: text says MSIT "imposes" duties, though the duties may come from the Act itself.
+- `content/bodies/kr/kr-ministry-science-ict-korea-ai-basic.yml` — reviewer note: Information portal only; advise rests on it providing guidance.
+- `content/bodies/ng/ng-national-information-technology-development-agency-federal.yml` — reviewer note: powers_text says "compel" but no subpoena power is described. Standards are IT standards generally, not AI-specific.
+- `content/bodies/nl/nl-department-coordination-algorithmic-oversight.yml` — reviewer note: powers_text says "investigate" but the text calls the DCA unit "coordinating/analytical"; GDPR fining power belongs to the parent AP, not the DCA.
+- `content/bodies/nl/nl-rijksinspectie-digitale-infrastructuur.yml` — reviewer note: All powers are phrased as future ("will hold"); no working complaint channel verified. "penalty powers" not taken as fine.
+- `content/bodies/sa/sa-saudi-data-artificial-intelligence-authority.yml` — reviewer note: Fines are under the data protection law, not AI rules ("AI-specific rules remain principles-based").
+- `content/bodies/sg/sg-infocomm-media-development-authority.yml` — reviewer note: Fining power is for data protection; AI instruments are voluntary frameworks.
+- `content/bodies/tw/tw-ministry-digital-affairs.yml` — reviewer note: The Act lists principles (privacy, security, transparency, fairness); not tagged as topics because MODA is not said to act on them.
+- `content/bodies/us/ca/us-california-attorney-general-catastrophic-risks-artificial.yml` — reviewer note: fine: the AG "can seek" civil penalties, so they are likely imposed by a court, not by the AG directly.
+- `content/bodies/us/ca/us-california-governor-s-office-emergency-services.yml` — reviewer note: powers_text says "investigate" but the text says "Cal OES does not fine or investigate developers itself".
+- `content/bodies/us/ca/us-california-privacy-protection-agency.yml` — reviewer note: hold-hearings: these are administrative (adjudicative) hearings, not public evidence sessions like a legislature.
+- `content/bodies/us/co/us-colorado-attorney-general-automated-decision-making.yml` — reviewer note: Text says "NOT catastrophic risk" but does not say frontier, so no not_topics:frontier-ai. powers_text "fine" not stated in the text.
+- `content/bodies/us/federal/us-cybersecurity-infrastructure-security-agency.yml` — reviewer note: compel and make-rules are narrow: subpoenas only for vulnerability identification, and binding directives only for federal agencies.
+- `content/bodies/us/federal/us-department-homeland-security.yml` — reviewer note: not_topics frontier-ai rests on "goes nowhere" rather than an explicit out-of-scope statement; reviewer should confirm.
+- `content/bodies/us/federal/us-federal-trade-commission.yml` — reviewer note: make-rules is inferred from the FTC taking comment on its proposed rules; the text never says the FTC issues binding rules outright.
+- `content/bodies/us/federal/us-food-drug-administration-center-devices-radiological.yml` — reviewer note: frontier-ai only within the medical-device context. The MedWatch route behind handle-complaints is unverified.
+- `content/bodies/us/federal/us-house-committee-science.yml` — reviewer note: fund: the committee authorises NIST; the text says CAISI funding is "decided" there but does not mention appropriations.
+- `content/bodies/us/federal/us-nist-ai-risk-management-framework-ai.yml` — reviewer note: This record is a framework, not an institution. Topics are the risk areas the framework covers.
+- `content/bodies/us/federal/us-senate-committee-commerce.yml` — reviewer note: Jurisdiction over the FTC suggests consumer protection, but the text does not say so, so it was not tagged.
+- `content/bodies/us/federal/us-senate-committee-judiciary-subcommittee-privacy.yml` — reviewer note: oversee not given: its "oversight" is of AI generally, not of how government uses AI.
+- `content/bodies/us/federal/us-white-house-office-science-technology-policy.yml` — reviewer note: Also "directs agencies", which has no matching vocab power.
+- `content/bodies/us/ny/us-new-york-state-attorney-general-raise.yml` — reviewer note: The law takes effect 1 Jan 2027 and there is no dedicated complaint route yet. make-rules rests on a passing mention of "rulemaking/guidance".
+- `content/bodies/us/tx/us-texas-attorney-general-texas-responsible-artificial.yml` — reviewer note: privacy is inferred from biometric identifiers. Sexually explicit AI content was not tagged as deepfakes.

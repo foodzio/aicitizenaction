@@ -48,6 +48,19 @@ facts:
   public_input: limited
   tags:
     - harm
+  powers:
+    - investigate
+    - compel
+    - enforce
+    - fine
+    - handle-complaints
+  routing_evidence:
+    powers:investigate: Under the AI Act it can investigate, demand documentation and access to models, order withdrawal of non-compliant systems, and impose administrative fines.
+    powers:compel: Under the AI Act it can investigate, demand documentation and access to models, order withdrawal of non-compliant systems, and impose administrative fines.
+    powers:enforce: Under the AI Act it can investigate, demand documentation and access to models, order withdrawal of non-compliant systems, and impose administrative fines.
+    powers:fine: Under the AI Act it can investigate, demand documentation and access to models, order withdrawal of non-compliant systems, and impose administrative fines.
+    powers:handle-complaints: the right to complain to a market-surveillance authority
+  routing_review: drafted
 strings:
   name: Agencia Española de Supervisión de la Inteligencia Artificial (AESIA)
   remit: Created by Royal Decree 729/2023, headquartered in A Coruña — the first dedicated national AI supervisory agency in the EU. Designated as Spain's market-surveillance authority for most of the EU AI Act, attached to the Ministry for Digital Transformation and the Civil Service. Under the AI Act it can investigate, demand documentation and access to models, order withdrawal of non-compliant systems, and impose administrative fines. Spain's draft national AI law (anteproyecto, 2025) would set the domestic penalty schedule.
@@ -80,7 +93,6 @@ meta:
     - url: https://aesia.digital.gob.es/en/es
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 9d69a70eb4

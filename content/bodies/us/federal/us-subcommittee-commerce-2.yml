@@ -38,6 +38,20 @@ facts:
       party: D
       region: IL
       verified_on: 2026-09-22
+  topics:
+    - consumer-protection
+    - privacy
+    - preemption
+    - transparency
+  powers:
+    - hold-hearings
+  routing_evidence:
+    topics:consumer-protection: FTC jurisdiction, consumer protection, product safety
+    topics:privacy: data privacy and security
+    topics:preemption: federal preemption of state AI laws
+    topics:transparency: AI transparency and disclosure to consumers
+    powers:hold-hearings: "'AI Regulation and the Future of US Leadership' (21 May 2025)"
+  routing_review: drafted
 strings:
   name: Subcommittee on Commerce, Manufacturing, and Trade
   ai_jurisdiction: "The House's front-line AI regulation subcommittee. FTC jurisdiction, consumer protection, product safety, data privacy and security, and manufacturing/trade. Send here: general AI regulatory frameworks, federal preemption of state AI laws, AI transparency and disclosure to consumers, deceptive AI, AI in products and toys, and AI in manufacturing."
@@ -56,8 +70,6 @@ meta:
     - url: https://energycommerce.house.gov/committees/subcommittee/Commerce
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 372a12e059
   research_order: 24

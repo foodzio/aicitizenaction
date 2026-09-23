@@ -30,6 +30,11 @@ facts:
     - role: chair
       name: UNVERIFIED
       verified_on: 2026-09-22
+  powers:
+    - advise
+  routing_evidence:
+    powers:advise: The non-statutory expert advisory council
+  routing_review: drafted
 strings:
   name: AI Strategy Council
   ai_jurisdiction: The non-statutory expert advisory council established in 2023 that produced Japan's interim AI policy positions and laid the groundwork for the AI Act. Now largely superseded.
@@ -53,7 +58,6 @@ meta:
     - url: https://www8.cao.go.jp/cstp/ai/ai_senryaku/ai_senryaku.html
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: e727ce0874

@@ -32,6 +32,14 @@ facts:
   tags:
     - harm
     - law
+  topics:
+    - frontier-ai
+  powers:
+    - handle-complaints
+  routing_evidence:
+    topics:frontier-ai: critical safety incident reports from frontier AI developers
+    powers:handle-complaints: SB 53 ALSO requires Cal OES to establish a mechanism for THE PUBLIC to report critical safety incidents.
+  routing_review: drafted
 strings:
   name: California Governor's Office of Emergency Services (Cal OES) — Transparency in Frontier AI Act reporting, via the California Cybersecurity Integration Center
   remit: Statutory recipient under SB 53 of critical safety incident reports from frontier AI developers (within 15 days of discovery; 24 hours where there is imminent risk of death or serious physical injury) and of periodic catastrophic-risk assessment summaries. SB 53 ALSO requires Cal OES to establish a mechanism for THE PUBLIC to report critical safety incidents. Cal OES does not fine or investigate developers itself; it receives, aggregates and refers, and reports to the legislature.
@@ -56,8 +64,6 @@ meta:
     - url: https://app.kaseware.us/public/#CALOES/e8921920-9735-4798-b24d-9c28c306f6e8
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: a081ba0a1a
   research_order: 161

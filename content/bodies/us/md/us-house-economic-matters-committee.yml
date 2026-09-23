@@ -31,6 +31,14 @@ facts:
       name: Kriselda Valderrama
       party: D
       verified_on: 2026-09-22
+  topics:
+    - consumer-protection
+  powers:
+    - legislate
+  routing_evidence:
+    topics:consumer-protection: House committee of reference for AI consumer-protection, surveillance-pricing
+    powers:legislate: House committee of reference for AI consumer-protection, surveillance-pricing
+  routing_review: drafted
 strings:
   name: House Economic Matters Committee
   ai_jurisdiction: House committee of reference for AI consumer-protection, surveillance-pricing, business-regulation and technology-commerce bills. 19 members appointed by the Speaker.
@@ -53,8 +61,6 @@ meta:
     - url: https://mgaleg.maryland.gov/pubs-current/current-ecm-faqs.pdf
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: a3010577d3
   research_order: 76

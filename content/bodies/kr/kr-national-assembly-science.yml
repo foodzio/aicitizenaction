@@ -32,6 +32,15 @@ facts:
     - role: chair
       name: SONG Gi-heon (송기헌)
       verified_on: 2026-06-30
+  powers:
+    - legislate
+    - oversee
+    - hold-hearings
+  routing_evidence:
+    powers:legislate: It produced and passed the AI Framework Act
+    powers:oversee: Oversees the Ministry of Science and ICT
+    powers:hold-hearings: 공청회 (public hearings) with invited witnesses
+  routing_review: drafted
 strings:
   name: National Assembly Science, ICT, Broadcasting and Communications Committee
   ai_jurisdiction: The lead standing committee for AI. Oversees the Ministry of Science and ICT (과학기술정보통신부), the Korea Communications Commission (방송통신위원회) and the Nuclear Safety and Security Commission (원자력안전위원회). It produced and passed the AI Framework Act (consolidating 19 separate bills) and handles all amendments to it, plus semiconductors, R&D budget and broadcasting.
@@ -57,7 +66,6 @@ meta:
     - url: https://pal.assembly.go.kr/
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: be44854da4

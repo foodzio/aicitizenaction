@@ -36,6 +36,16 @@ facts:
       party: D
       region: IL
       verified_on: 2026-09-22
+  topics:
+    - children
+    - deepfakes
+  powers:
+    - hold-hearings
+  routing_evidence:
+    topics:children: the de facto venue for AI chatbot harms to children and vulnerable users
+    topics:deepfakes: AI-enabled fraud and impersonation, AI-generated CSAM
+    powers:hold-hearings: hearing 'Examining the Harm of AI Chatbots' (S.Hrg. 119-256, 16 Sep 2025)
+  routing_review: drafted
 strings:
   name: Subcommittee on Crime and Counterterrorism
   ai_jurisdiction: Criminal misuse of AI and, in the 119th Congress, the de facto venue for AI chatbot harms to children and vulnerable users. Also AI-enabled fraud and impersonation, AI-generated CSAM, and AI in terrorism and bioweapon uplift framed as a criminal matter.
@@ -54,8 +64,6 @@ meta:
     - url: https://www.judiciary.senate.gov/about/subcommittees
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: f64e074899
   research_order: 6

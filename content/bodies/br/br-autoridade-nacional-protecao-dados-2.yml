@@ -30,6 +30,20 @@ facts:
     - role: chair
       name: UNVERIFIED
       verified_on: 2026-09-22
+  topics:
+    - privacy
+  powers:
+    - enforce
+    - handle-complaints
+    - make-rules
+    - publish
+  routing_evidence:
+    topics:privacy: data protection enforcement under the LGPD where AI processes personal data
+    powers:enforce: data protection enforcement under the LGPD where AI processes personal data
+    powers:handle-complaints: There is also a complaints channel (petição de titular) for individual LGPD violations, which is a genuine individual remedy.
+    powers:make-rules: CONSULTA PÚBLICA — formal public consultation on a draft regulation, with a published response.
+    powers:publish: The ANPD publishes contributions and its responses.
+  routing_review: drafted
 strings:
   name: Autoridade Nacional de Proteção de Dados (National Data Protection Authority)
   ai_jurisdiction: "Currently: data protection enforcement under the LGPD where AI processes personal data, plus a Regulatory Sandbox for AI project. Prospectively: the leading candidate to coordinate the Sistema Nacional de Governança da IA (SIA). ANPD filed formal proposed amendments to the substitutive text of PL 2338 — it is an active participant in shaping its own future mandate, not a passive recipient."
@@ -55,8 +69,6 @@ meta:
     - url: https://www.gov.br/participamaisbrasil/consultas-publicas
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 6d53c7d2bc
   research_order: 140

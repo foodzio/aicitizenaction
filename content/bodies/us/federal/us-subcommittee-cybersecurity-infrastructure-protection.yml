@@ -37,6 +37,11 @@ facts:
       party: D
       region: IL
       verified_on: 2026-09-22
+  topics:
+    - security
+  routing_evidence:
+    topics:security: AI-enabled offensive cyber operations against US critical infrastructure
+  routing_review: drafted
 strings:
   name: Subcommittee on Cybersecurity and Infrastructure Protection
   ai_jurisdiction: CISA's authorities and budget; AI-enabled offensive cyber operations against US critical infrastructure; securing AI systems and model supply chains; automated vulnerability discovery; and the cyber-information-sharing framework as applied to AI incidents.
@@ -56,7 +61,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: f0ac9c6055
   research_order: 33

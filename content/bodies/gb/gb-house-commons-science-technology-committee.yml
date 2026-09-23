@@ -27,6 +27,16 @@ facts:
     - role: chair
       name: Dame Chi Onwurah MP (Labour, Newcastle upon Tyne Central and West)
       verified_on: 2026-09-22
+  topics:
+    - government-use
+  powers:
+    - oversee
+    - publish
+  routing_evidence:
+    topics:government-use: It scrutinises AI research, compute, AI in government
+    powers:oversee: It scrutinises AI research, compute, AI in government
+    powers:publish: Science diplomacy (reported 7 Jul 2026)
+  routing_review: drafted
 strings:
   name: House of Commons Science and Technology Committee (committee id 135; formerly the Science, Innovation and Technology Committee)
   ai_jurisdiction: "Commons departmental select committee for science, research and technology policy. Following the abolition of DSIT in July 2026 its title reverted to 'Science and Technology Committee'. It scrutinises AI research, compute, AI in government, and has written to Government on UK AI sovereignty (letter reported 15 September 2026). Its live inquiries touch AI obliquely rather than head-on: 'Low-energy computing' (opened 16 April 2026) and 'Neuroscience and digital childhoods' (opened 24 March 2026)."
@@ -51,8 +61,6 @@ meta:
     - url: https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 86ee135bc7
   research_order: 83

@@ -26,6 +26,18 @@ facts:
   public_input: none
   tags:
     - systemic
+  topics:
+    - safety-testing
+    - frontier-ai
+    - security
+  powers:
+    - test-models
+  routing_evidence:
+    topics:safety-testing: Research, evaluation and foresight only.
+    topics:frontier-ai: The roadmap commits INESIA to evaluate how high-impact models 'could generate negative real effects
+    topics:security: offensive cyber
+    powers:test-models: The roadmap commits INESIA to evaluate how high-impact models 'could generate negative real effects
+  routing_review: drafted
 strings:
   name: Institut national pour l'évaluation et la sécurité de l'intelligence artificielle (INESIA)
   remit: "Announced 31 Jan 2025 ahead of the Paris AI Action Summit. NOT a new legal entity — it is a coordination structure federating four existing bodies: ANSSI (cyber agency), Inria (public research), LNE (national metrology/testing laboratory) and PEReN (digital-platform regulation expertise centre). Coordinated under SGDSN (Secretariat-General for Defence and National Security), which also handles French participation in the international network. Its published 2026–2027 roadmap is explicit that it 'is not empowered to regulate' and instead supports the authorities implementing the EU AI Act. Research, evaluation and foresight only."
@@ -48,8 +60,6 @@ meta:
     - url: https://www.sgdsn.gouv.fr/files/files/Nos_missions/Feuille%20de%20route%20INESIA%202026-2027.pdf
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 5486ff855b
   research_order: 36

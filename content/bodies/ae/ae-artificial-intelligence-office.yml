@@ -34,6 +34,14 @@ facts:
   tags:
     - harm
     - systemic
+  topics:
+    - government-use
+  powers:
+    - advise
+  routing_evidence:
+    topics:government-use: coordinates government AI adoption
+    powers:advise: Promotional and coordinating rather than regulatory
+  routing_review: drafted
 strings:
   name: Artificial Intelligence Office, UAE / Office of the Minister of State for Artificial Intelligence, Digital Economy and Remote Work Applications
   remit: The world's first dedicated AI ministerial portfolio (Omar Sultan Al Olama, appointed 2017). Sets national AI strategy (UAE National Strategy for AI 2031), runs capability programmes and the AI Charter, and coordinates government AI adoption. Promotional and coordinating rather than regulatory — the UAE has no comprehensive AI statute, and AI-adjacent enforcement sits with sectoral regulators and the data-protection framework. A separate Abu Dhabi AI and Advanced Technology Council (AIATC) handles Abu Dhabi-level investment and strategy; do not conflate the two.
@@ -60,8 +68,6 @@ meta:
     - url: https://ai.gov.ae/
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 2e476fdea2
   research_order: 55

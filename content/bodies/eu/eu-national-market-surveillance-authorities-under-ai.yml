@@ -37,6 +37,20 @@ facts:
   public_input: open
   tags:
     - harm
+  not_topics:
+    - frontier-ai
+  powers:
+    - compel
+    - enforce
+    - fine
+    - handle-complaints
+  routing_evidence:
+    not_topics:frontier-ai: They do NOT supervise GPAI models; that is the AI Office's exclusive competence.
+    powers:compel: request information, demand documentation
+    powers:enforce: require corrective action, order withdrawal or recall from the market
+    powers:fine: impose penalties set in national law
+    powers:handle-complaints: anyone with grounds may complain and the authority must process it
+  routing_review: drafted
 strings:
   name: National market surveillance authorities under the AI Act (27 Member States)
   remit: "Supervise and enforce the AI Act's rules for AI SYSTEMS — prohibited practices and high-risk requirements — within their territory, using the powers in Regulation (EU) 2019/1020: request information, demand documentation, require corrective action, order withdrawal or recall from the market, and impose penalties set in national law (up to 7% of global turnover for prohibited practices). They do NOT supervise GPAI models; that is the AI Office's exclusive competence. Member States were required to designate them by 2 August 2025, and many have not: as of June 2026, only 9 Member States had fully designated both market surveillance and notifying authorities, 12 had partial clarity, and 6 had designated none at all."
@@ -67,9 +81,7 @@ meta:
     - url: https://digital-strategy.ec.europa.eu/en/policies/market-surveillance-authorities-under-ai-act
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
-    - not_topics
   legacy_id: 844edf4c35
   research_order: 179
   migrated_from: input/data/institutions.json

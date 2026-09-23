@@ -37,6 +37,16 @@ facts:
       party: D
       region: NY
       verified_on: 2026-09-22
+  topics:
+    - safety-testing
+  powers:
+    - fund
+    - hold-hearings
+  routing_evidence:
+    topics:safety-testing: Every argument about whether the US government can evaluate frontier AI models
+    powers:fund: THE House subcommittee that funds NIST and the Center for AI Standards and Innovation (CAISI)
+    powers:hold-hearings: FY2027 outside witness written testimony accepted
+  routing_review: drafted
 strings:
   name: Subcommittee on Commerce, Justice, Science, and Related Agencies
   ai_jurisdiction: THE House subcommittee that funds NIST and the Center for AI Standards and Innovation (CAISI), plus NSF, NASA, NOAA, DOJ and the FTC. Every argument about whether the US government can evaluate frontier AI models, and whether the FTC can police AI, reduces to a line in this subcommittee's bill.
@@ -57,8 +67,6 @@ meta:
     - url: https://appropriations.house.gov/subcommittees/commerce-justice-science-and-related-agencies-0
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: b0ce50fd4a
   research_order: 43

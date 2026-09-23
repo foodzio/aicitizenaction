@@ -43,6 +43,20 @@ facts:
     - harm
     - law
     - systemic
+  topics:
+    - privacy
+  powers:
+    - investigate
+    - enforce
+    - fine
+    - handle-complaints
+  routing_evidence:
+    topics:privacy: Brazil's data protection authority, an autonomous federal agency.
+    powers:investigate: Can investigate, issue preventive suspension orders, and fine
+    powers:enforce: Can investigate, issue preventive suspension orders, and fine
+    powers:fine: Can investigate, issue preventive suspension orders, and fine
+    powers:handle-complaints: ANPD complaints normally run through the federal Fala.BR / peticionamento eletrônico system
+  routing_review: drafted
 strings:
   name: Autoridade Nacional de Proteção de Dados (ANPD)
   remit: Brazil's data protection authority, an autonomous federal agency. Already regulates AI indirectly through LGPD Article 20 (right to review of automated decisions) and has issued preventive measures against AI training on personal data (notably the 2024 order suspending Meta's use of Brazilian personal data for AI training — real, exercised power). Under PL 2338/2023 as approved by the Senate in December 2024, ANPD would coordinate the proposed Sistema Nacional de Regulação e Governança de IA (SIA). Can investigate, issue preventive suspension orders, and fine (LGPD fines up to 2% of Brazilian turnover, capped at BRL 50 million per infraction).
@@ -71,8 +85,6 @@ meta:
     - url: https://www.gov.br/participamaisbrasil/tomada-de-subsidios-inteligencia-artificial-e-revisao-de-decisoes-automatizadas
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 34faeb1926
   research_order: 53

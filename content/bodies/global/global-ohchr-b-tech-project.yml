@@ -37,6 +37,23 @@ facts:
   public_input: limited
   tags:
     - systemic
+  topics:
+    - discrimination
+    - privacy
+    - work
+  not_topics:
+    - frontier-ai
+  powers:
+    - publish
+    - convene
+  routing_evidence:
+    topics:discrimination: "Near-term and structural human-rights harms: discrimination, privacy, freedom of expression, labour"
+    topics:privacy: "Near-term and structural human-rights harms: discrimination, privacy, freedom of expression, labour"
+    topics:work: "Near-term and structural human-rights harms: discrimination, privacy, freedom of expression, labour"
+    not_topics:frontier-ai: If it is frontier misalignment, it will not land.
+    powers:publish: Its generative AI workstream has produced a foundational paper on responsible development/deployment of generative AI
+    powers:convene: Engages states, companies, investors and civil society on human-rights due diligence.
+  routing_review: drafted
 strings:
   name: OHCHR B-Tech Project (UN Human Rights Office)
   remit: Launched 2019 to apply the UN Guiding Principles on Business and Human Rights to the tech sector. Its generative AI workstream has produced a foundational paper on responsible development/deployment of generative AI, a Taxonomy of Generative AI Human Rights Harms, and headline recommendations (2025). Engages states, companies, investors and civil society on human-rights due diligence.
@@ -67,10 +84,6 @@ meta:
       checked: 2026-09-22
     - url: https://www.ohchr.org/en/b-tech
       checked: 2026-09-22
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: 5d95b741aa
   research_order: 78
   migrated_from: input/data/institutions.json

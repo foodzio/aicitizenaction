@@ -31,6 +31,18 @@ facts:
       name: Charles Schwertner
       party: R
       verified_on: 2026-09-22
+  topics:
+    - government-use
+    - work
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:government-use: SB 1964 (state agency AI)
+    topics:work: committee took up AI and jobs in a hearing week of 21 Sep 2026
+    powers:legislate: Senate committee of referral for TRAIGA (HB 149)
+    powers:hold-hearings: committee took up AI and jobs in a hearing week of 21 Sep 2026
+  routing_review: drafted
 strings:
   name: Senate Committee on Business and Commerce
   ai_jurisdiction: Senate committee of referral for TRAIGA (HB 149) and holder of the 2026 interim charge to evaluate 'the regulation and use of artificial intelligence systems' under SB 1964 and HB 149, plus data-center growth and grid impacts.
@@ -53,8 +65,6 @@ meta:
     - url: https://capitol.texas.gov/Committees/MeetingsByCmte.aspx?Chamber=S&CmteCode=C510
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 8e40e25c01
   research_order: 59

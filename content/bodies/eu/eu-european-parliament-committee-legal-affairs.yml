@@ -27,6 +27,18 @@ facts:
     - role: chair
       name: Ilhan Kyuchyuk (Renew Europe, Bulgaria, Movement for Rights and Freedoms)
       verified_on: 2026-09-22
+  topics:
+    - copyright
+    - liability
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:copyright: copyright and text-and-data-mining exceptions for model training
+    topics:liability: liability for AI-caused harm
+    powers:legislate: JURI is the committee that decides whether AI training on copyrighted works is lawful in the EU.
+    powers:hold-hearings: public hearings
+  routing_review: drafted
 strings:
   name: European Parliament — Committee on Legal Affairs (JURI)
   ai_jurisdiction: "AI and law: copyright and text-and-data-mining exceptions for model training, liability for AI-caused harm (the AI Liability Directive, which the Commission withdrew), legal personality questions, and the civil-law consequences of generative AI. JURI is the committee that decides whether AI training on copyrighted works is lawful in the EU."
@@ -51,8 +63,6 @@ meta:
     - url: https://www.europarl.europa.eu/committees/en/juri/home/highlights
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: b43344ba63
   research_order: 94

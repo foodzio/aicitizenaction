@@ -30,6 +30,13 @@ facts:
     - role: chair
       name: Eduardo Gomes (Relator, concluded)
       verified_on: 2026-09-22
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    powers:legislate: the Senate regains jurisdiction only if the Chamber amends the text, in which case it returns for a final Senate vote
+    powers:hold-hearings: "'Audiências Interativas' allow live questions to hearing witnesses"
+  routing_review: drafted
 strings:
   name: Federal Senate — Temporary Internal Commission on Artificial Intelligence (concluded) and Senate Plenary
   ai_jurisdiction: Originating chamber for PL 2338/2023. The CTIA analysed the bill and produced the favourable opinion that the Senate plenary adopted. Its work is done; the Senate regains jurisdiction only if the Chamber amends the text, in which case it returns for a final Senate vote.
@@ -55,7 +62,6 @@ meta:
     - url: https://www12.senado.leg.br/ecidadania/
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 726035f8eb

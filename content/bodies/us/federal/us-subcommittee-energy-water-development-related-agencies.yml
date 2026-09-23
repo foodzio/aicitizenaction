@@ -36,6 +36,11 @@ facts:
       party: D
       region: OH
       verified_on: 2026-09-22
+  powers:
+    - fund
+  routing_evidence:
+    powers:fund: Funds the Department of Energy and the national laboratories
+  routing_review: drafted
 strings:
   name: Subcommittee on Energy and Water Development and Related Agencies
   ai_jurisdiction: "Funds the Department of Energy and the national laboratories — increasingly the government's largest AI compute holder and a proposed venue for frontier-model risk evaluation. Send here: DOE AI program funding, lab compute, and the energy-side of AI buildout."
@@ -56,7 +61,6 @@ meta:
     - url: https://appropriations.house.gov/subcommittees
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 5c4dc237bb

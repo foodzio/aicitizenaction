@@ -52,6 +52,18 @@ facts:
   tags:
     - flaw
     - systemic
+  topics:
+    - safety-testing
+  powers:
+    - test-models
+    - set-standards
+    - publish
+  routing_evidence:
+    topics:safety-testing: AILuminate is a standardised AI risk assessment benchmark for chat and vision-language models across 12 hazard categories
+    powers:test-models: 109 models benchmarked
+    powers:set-standards: AILuminate is a standardised AI risk assessment benchmark
+    powers:publish: Produces public grades per model.
+  routing_review: drafted
 strings:
   name: MLCommons — AILuminate benchmark (AI Risk & Reliability working group)
   remit: AILuminate is a standardised AI risk assessment benchmark for chat and vision-language models across 12 hazard categories, built with industry, academia and civil society; at last check 59,624 test prompts, 477 test images and 109 models benchmarked, with expanding agentic, multimodal and jailbreak/security suites. Produces public grades per model.
@@ -92,8 +104,6 @@ meta:
     - url: https://ailuminate.mlcommons.org/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: fbeffbadb6
   research_order: 91

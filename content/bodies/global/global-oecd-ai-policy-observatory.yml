@@ -30,6 +30,18 @@ facts:
   public_input: limited
   tags:
     - systemic
+  topics:
+    - international
+    - work
+    - transparency
+  powers:
+    - advise
+  routing_evidence:
+    topics:international: OECD AI Principles are the reference text for the G7
+    topics:work: labour market effects
+    topics:transparency: HAIP transparency reporting
+    powers:advise: OECD work feeds directly into member-state policy
+  routing_review: drafted
 strings:
   name: OECD.AI Policy Observatory (OECD AI Policy Observatory)
   remit: Hub for the OECD AI Principles, national AI policy database, AI Incidents & Hazards Monitor, HAIP transparency reporting, and the GPAI expert community. Underpinned by the Working Party on AI Governance (AIGO) under the Digital Policy Committee.
@@ -56,8 +68,6 @@ meta:
     - url: https://oecd.ai/en/wonk
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: b01236b09a
   research_order: 79

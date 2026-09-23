@@ -28,6 +28,18 @@ facts:
     - role: chair
       name: Katie Nimon, MP (National Party, Napier)
       verified_on: 2026-09-22
+  topics:
+    - work
+  powers:
+    - hold-hearings
+    - oversee
+    - publish
+  routing_evidence:
+    topics:work: This is where AI's labour-market effects land in New Zealand
+    powers:hold-hearings: oral submissions available including remotely
+    powers:oversee: Bills, estimates and annual reviews referred by the House
+    powers:publish: It has produced MPs' reporting on AI and business returns.
+  routing_review: drafted
 strings:
   name: Education and Workforce Committee (54th Parliament)
   ai_jurisdiction: "Remit: 'education, training, employment, immigration, industrial relations, health and safety, and accident compensation.' This is where AI's labour-market effects land in New Zealand — automation and job displacement, AI in workplaces and workplace surveillance, and AI in education and training. It has produced MPs' reporting on AI and business returns."
@@ -52,8 +64,6 @@ meta:
     - url: https://www.parliament.nz/en/pb/sc/how-to-make-a-submission/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 1f9cd57032
   research_order: 112

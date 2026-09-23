@@ -31,6 +31,14 @@ facts:
       name: Sharon Shewmake
       party: D
       verified_on: 2026-09-22
+  topics:
+    - deepfakes
+  powers:
+    - legislate
+  routing_evidence:
+    topics:deepfakes: E2SHB 1170 (deepfakes)
+    powers:legislate: Senate committee of referral for AI and telecommunications bills
+  routing_review: drafted
 strings:
   name: Senate Environment, Energy & Technology Committee (ENET)
   ai_jurisdiction: Senate committee of referral for AI and telecommunications bills, including HB 2225 on its Senate passage.
@@ -53,8 +61,6 @@ meta:
     - url: https://app.leg.wa.gov/csi/Senate
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: d5e27ec144
   research_order: 63

@@ -39,6 +39,25 @@ facts:
   tags:
     - harm
     - systemic
+  topics:
+    - security
+    - government-use
+  not_topics:
+    - frontier-ai
+  powers:
+    - convene
+    - advise
+    - publish
+    - handle-complaints
+  routing_evidence:
+    topics:security: Co-ordinates AI risk to critical infrastructure and homeland security
+    topics:government-use: Complaints about DHS's own use of AI (e.g. facial recognition, automated screening) affecting an individual.
+    not_topics:frontier-ai: General frontier-risk correspondence to DHS goes nowhere
+    powers:convene: DHS itself mostly convenes
+    powers:advise: issues non-binding frameworks for critical-infrastructure owners
+    powers:publish: publishes an AI use-case inventory
+    powers:handle-complaints: The only route with real bite is the CRCL complaint when DHS's own AI has harmed a specific person
+  routing_review: drafted
 strings:
   name: U.S. Department of Homeland Security (DHS)
   remit: Co-ordinates AI risk to critical infrastructure and homeland security; publishes an AI use-case inventory covering its components including CISA; previously convened the AI Safety and Security Board (an advisory body whose membership was reconstituted under the current administration). DHS components with AI remit include CISA, CBP, TSA and USCIS. DHS itself mostly convenes and issues non-binding frameworks for critical-infrastructure owners rather than regulating AI developers.
@@ -72,10 +91,6 @@ meta:
       checked: null
     - url: https://www.dhs.gov/ai
       checked: null
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: f736198d43
   research_order: 151
   migrated_from: input/data/institutions.json

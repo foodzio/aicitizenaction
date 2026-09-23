@@ -30,6 +30,26 @@ facts:
       name: Thomas J. Umberg
       party: D
       verified_on: 2026-09-22
+  topics:
+    - frontier-ai
+    - liability
+    - privacy
+    - discrimination
+    - deepfakes
+    - work
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:frontier-ai: Senate committee of first referral for frontier-AI safety
+    topics:liability: frontier-AI safety, liability, digital replica, civil-rights and privacy AI bills
+    topics:privacy: frontier-AI safety, liability, digital replica, civil-rights and privacy AI bills
+    topics:discrimination: frontier-AI safety, liability, digital replica, civil-rights and privacy AI bills
+    topics:deepfakes: SB 1111 (digital replicas, pending)
+    topics:work: SB 947 (automated employment decisions, pending
+    powers:legislate: Senate committee of first referral for frontier-AI safety, liability, digital replica, civil-rights and privacy AI bills
+    powers:hold-hearings: "Deadline: 12:00 p.m. the Tuesday before the hearing unless otherwise stated."
+  routing_review: drafted
 strings:
   name: Senate Committee on Judiciary
   ai_jurisdiction: Senate committee of first referral for frontier-AI safety, liability, digital replica, civil-rights and privacy AI bills. SB 53's Senate policy vehicle.
@@ -52,8 +72,6 @@ meta:
     - url: https://calegislation.lc.ca.gov/Advocates/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: af08c1eb3a
   research_order: 52

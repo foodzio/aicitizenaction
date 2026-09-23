@@ -24,6 +24,29 @@ facts:
   public_input: open
   tags:
     - harm
+  topics:
+    - discrimination
+    - government-use
+    - privacy
+    - consumer-protection
+    - transparency
+  not_topics:
+    - frontier-ai
+  powers:
+    - enforce
+    - fine
+    - handle-complaints
+  routing_evidence:
+    topics:discrimination: unlawful discrimination
+    topics:government-use: requires government agencies deploying consumer-facing AI to disclose it
+    topics:privacy: unlawful capture of biometric identifiers
+    topics:consumer-protection: File an AI complaint online (Texas AG consumer protection portal)
+    topics:transparency: requires government agencies deploying consumer-facing AI to disclose it
+    not_topics:frontier-ai: explicitly not frontier or catastrophic risk
+    powers:enforce: The AG has exclusive enforcement
+    powers:fine: civil penalties and injunctive relief
+    powers:handle-complaints: Anyone may file an AI-specific complaint under TRAIGA.
+  routing_review: drafted
 strings:
   name: Texas Attorney General — Texas Responsible Artificial Intelligence Governance Act (TRAIGA)
   remit: Enforces TRAIGA, effective 1 January 2026. Prohibits AI developed or deployed to manipulate human behaviour to incite harm, social scoring by government, unlawful capture of biometric identifiers, AI intended to infringe constitutional rights, unlawful discrimination, and certain sexually explicit AI content; requires government agencies deploying consumer-facing AI to disclose it. The AG has exclusive enforcement, with a 60-day cure period, civil penalties and injunctive relief; there is no private right of action. TRAIGA also creates a regulatory sandbox and an AI Council.
@@ -43,10 +66,6 @@ meta:
   sources:
     - url: https://consumerprotection.texasattorneygeneral.gov/consumercomplaintportal/s/
       checked: 2026-09-22
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: 9b0bf65712
   research_order: 165
   migrated_from: input/data/institutions.json

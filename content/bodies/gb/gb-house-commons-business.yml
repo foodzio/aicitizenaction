@@ -27,6 +27,16 @@ facts:
     - role: chair
       name: Rt Hon Liam Byrne MP (Labour, Birmingham Hodge Hill and Solihull North)
       verified_on: 2026-09-22
+  topics:
+    - work
+  powers:
+    - hold-hearings
+    - publish
+  routing_evidence:
+    topics:work: AI's effect on employment, skills, business adoption and industrial strategy sits here.
+    powers:hold-hearings: the committee is in the report/oral-evidence phase
+    powers:publish: the committee is in the report/oral-evidence phase
+  routing_review: drafted
 strings:
   name: House of Commons Business, Innovation, Science and Trade Committee (committee id 365; formerly the Business and Trade Committee)
   ai_jurisdiction: Departmental select committee for the new Department for Business, Innovation, Science and Trade (DBIST), which absorbed much of the abolished DSIT. It ran the inquiry 'Artificial Intelligence, business and the future of the workforce' — the most substantial Commons AI inquiry of this Parliament. AI's effect on employment, skills, business adoption and industrial strategy sits here.
@@ -51,8 +61,6 @@ meta:
     - url: https://committees.parliament.uk/work/9674/artificial-intelligence-business-and-the-future-of-the-workforce/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 27d60f4712
   research_order: 84

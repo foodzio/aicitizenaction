@@ -44,6 +44,23 @@ facts:
   public_input: open
   tags:
     - systemic
+  topics:
+    - standards
+    - transparency
+    - privacy
+    - discrimination
+  not_topics:
+    - frontier-ai
+  powers:
+    - set-standards
+  routing_evidence:
+    topics:standards: IEEE 7000-series standards on ethical system design
+    topics:transparency: 7001 transparency
+    topics:privacy: 7002 data privacy
+    topics:discrimination: transparency, bias, privacy, wellbeing, accountability
+    not_topics:frontier-ai: Near-term and design-stage, not frontier catastrophic risk.
+    powers:set-standards: IEEE 7000-series standards on ethical system design
+  routing_review: drafted
 strings:
   name: IEEE Standards Association — 7000 series and CertifAIEd
   remit: IEEE 7000-series standards on ethical system design (IEEE 7000 process standard, 7001 transparency, 7002 data privacy, 7010 wellbeing, etc.), the Ethically Aligned Design framework from the Global Initiative on Ethics of Autonomous and Intelligent Systems, and CertifAIEd, an ethics certification/assessment programme for AI systems with trained assessors.
@@ -78,10 +95,6 @@ meta:
       checked: 2026-09-22
     - url: https://forms1.ieee.org/CertifAIEd.html
       checked: 2026-09-22
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: 2ec26e107f
   research_order: 88
   migrated_from: input/data/institutions.json

@@ -31,6 +31,11 @@ facts:
   tags:
     - law
     - systemic
+  powers:
+    - hold-hearings
+  routing_evidence:
+    powers:hold-hearings: The Committee can also take evidence and hold sessions on petition topics.
+  routing_review: drafted
 strings:
   name: UK Parliament and Government Petitions Service
   remit: Statutory-adjacent petitions platform run jointly by the House of Commons Petitions Committee and the Government. A petition reaching 10,000 signatures receives a written Government response; one reaching 100,000 signatures is considered for a Westminster Hall debate by the Petitions Committee. Petitions are open to British citizens and UK residents. The Committee can also take evidence and hold sessions on petition topics.
@@ -57,7 +62,6 @@ meta:
     - url: https://petition.parliament.uk/
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 6eb5a7944c

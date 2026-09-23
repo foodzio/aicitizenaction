@@ -40,6 +40,20 @@ facts:
   public_input: open
   tags:
     - systemic
+  topics:
+    - privacy
+    - international
+    - safety-testing
+  powers:
+    - fine
+    - set-standards
+  routing_evidence:
+    topics:privacy: as PDPA administrator, with fining power
+    topics:international: international AI-safety engagement
+    topics:safety-testing: AI Verify (an open-source AI governance testing toolkit)
+    powers:fine: as PDPA administrator, with fining power
+    powers:set-standards: AI Verify (an open-source AI governance testing toolkit)
+  routing_review: drafted
 strings:
   name: Infocomm Media Development Authority (IMDA)
   remit: Statutory board and the policy owner for the Singapore AI Safety Institute, responsible for baseline AI policy and international AI-safety engagement. Produced the Model AI Governance Framework for Generative AI (2024), AI Verify (an open-source AI governance testing toolkit) and the AI Verify Foundation. IMDA holds genuine statutory regulatory powers over telecoms, media and data (as PDPA administrator, with fining power), though its AI governance instruments are voluntary frameworks rather than binding AI rules.
@@ -72,8 +86,6 @@ meta:
     - url: https://www.imda.gov.sg/resources/press-releases-factsheets-and-speeches/factsheets/2024/digital-trust-centre
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 91bbbabcee
   research_order: 70

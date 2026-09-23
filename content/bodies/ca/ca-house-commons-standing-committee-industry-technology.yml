@@ -28,6 +28,16 @@ facts:
     - role: chair
       name: Ben Carr, MP (Liberal, Winnipeg South Centre, Manitoba)
       verified_on: 2026-09-22
+  topics:
+    - competition
+  powers:
+    - legislate
+    - publish
+  routing_evidence:
+    topics:competition: Industry, science, technology, telecommunications, competition and innovation policy.
+    powers:legislate: It was the committee that studied Bill C-27 (which contained the Artificial Intelligence and Data Act) clause by clause
+    powers:publish: submitters are listed in committee reports
+  routing_review: drafted
 strings:
   name: House of Commons Standing Committee on Industry and Technology (INDU)
   ai_jurisdiction: The lead Commons committee for AI. Industry, science, technology, telecommunications, competition and innovation policy. It was the committee that studied Bill C-27 (which contained the Artificial Intelligence and Data Act) clause by clause, and it is now running a dedicated AI study.
@@ -52,8 +62,6 @@ meta:
     - url: https://www.ourcommons.ca/Committees/en/INDU
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 0091d676c7
   research_order: 102

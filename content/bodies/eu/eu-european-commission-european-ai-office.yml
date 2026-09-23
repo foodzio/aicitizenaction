@@ -23,6 +23,24 @@ facts:
   tags:
     - audit
     - law
+  topics:
+    - frontier-ai
+    - safety-testing
+    - international
+    - transparency
+  powers:
+    - enforce
+    - investigate
+    - set-standards
+  routing_evidence:
+    topics:frontier-ai: the enforcement body for the AI Act's rules on general-purpose AI models
+    topics:safety-testing: "'developing tools, methodologies and benchmarks for evaluating capabilities' of GPAI models"
+    topics:international: international AI governance coordination
+    topics:transparency: AI Act guidelines (including on high-risk classification and transparency obligations)
+    powers:enforce: the enforcement body for the AI Act's rules on general-purpose AI models
+    powers:investigate: investigating possible violations
+    powers:set-standards: "'developing tools, methodologies and benchmarks for evaluating capabilities' of GPAI models"
+  routing_review: drafted
 strings:
   name: European Commission — European AI Office (within DG CNECT)
   ai_jurisdiction: "The EU's central AI regulator and the enforcement body for the AI Act's rules on general-purpose AI models. Three functions: (1) AI Act implementation and enforcement, including 'developing tools, methodologies and benchmarks for evaluating capabilities' of GPAI models and investigating possible violations; (2) fostering trustworthy AI, including sandboxes and real-world testing; (3) international AI governance coordination. Over 125 staff across 6 units plus 2 adviser posts."
@@ -45,8 +63,6 @@ meta:
     - url: https://digital-strategy.ec.europa.eu/en/consultations
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 2637541a8f
   research_order: 99

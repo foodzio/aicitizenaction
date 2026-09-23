@@ -23,6 +23,11 @@ facts:
   tags:
     - law
     - record
+  topics:
+    - frontier-ai
+  routing_evidence:
+    topics:frontier-ai: with particular attention to generative AI
+  routing_review: drafted
 strings:
   name: Senate Select Committee on Adopting Artificial Intelligence (AI) — CEASED
   ai_jurisdiction: Examined the opportunities and impacts of AI adoption in Australia, with particular attention to generative AI.
@@ -45,7 +50,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: 554594b42c
   research_order: 107

@@ -54,6 +54,31 @@ facts:
     - harm
     - insider
     - systemic
+  topics:
+    - consumer-protection
+    - children
+    - privacy
+  not_topics:
+    - frontier-ai
+  powers:
+    - investigate
+    - compel
+    - enforce
+    - fine
+    - handle-complaints
+    - make-rules
+  routing_evidence:
+    topics:consumer-protection: It is the closest thing the US has to a general-purpose AI consumer regulator.
+    topics:children: harms from AI products to children
+    topics:privacy: misuse of data for training
+    not_topics:frontier-ai: it has no theory of action for catastrophic or frontier risk
+    powers:investigate: Can open investigations
+    powers:compel: issue compulsory process (civil investigative demands and 6(b) orders)
+    powers:enforce: sue in federal court, obtain injunctions
+    powers:fine: civil penalties
+    powers:handle-complaints: ReportFraud.ftc.gov — the FTC's public complaint intake
+    powers:make-rules: The FTC takes public comment on proposed rules
+  routing_review: drafted
 strings:
   name: Federal Trade Commission (FTC)
   remit: "Enforces Section 5 of the FTC Act against unfair or deceptive acts and practices, plus COPPA, ROSCA and the Fair Credit Reporting Act. Applied to AI this means: deceptive claims about AI capability ('AI washing'), harms from AI products to children, deceptive chatbot design, and misuse of data for training. Can open investigations, issue compulsory process (civil investigative demands and 6(b) orders), sue in federal court, obtain injunctions and civil penalties, and impose consent decrees including algorithmic disgorgement (deletion of models built on unlawfully obtained data). It is the closest thing the US has to a general-purpose AI consumer regulator."
@@ -89,10 +114,6 @@ meta:
   sources:
     - url: https://reportfraud.ftc.gov/
       checked: 2026-09-22
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: ef05763f41
   research_order: 153
   migrated_from: input/data/institutions.json

@@ -39,6 +39,16 @@ facts:
   local_name: 中国人工智能发展与安全研究网络
   region: China
   public_input: none
+  topics:
+    - international
+    - frontier-ai
+  powers:
+    - convene
+  routing_evidence:
+    topics:international: widely described as China's counterpart to the international AISI network
+    topics:frontier-ai: "'early warning thresholds for AI systems that may pose catastrophic or existential risks to humans'"
+    powers:convene: It is a coordinating network, not an institute
+  routing_review: drafted
 strings:
   name: China AI Safety and Development Association (CnAISDA)
   remit: "STATUS DELIBERATELY AMBIGUOUS. Unveiled around the Paris AI Action Summit (Feb 2025) and widely described as China's counterpart to the international AISI network. It is a coordinating network, not an institute: it has no independent staff, no research team and no dedicated budget, and federates existing bodies — Tsinghua University (the intellectual centre), Beijing Academy of Artificial Intelligence (BAAI), CAICT, Shanghai AI Laboratory, the Institute of Automation of the Chinese Academy of Sciences, CCID, and MIIT-linked research groups. Fu Ying described it as 'established with government support'; the precise governmental relationship has never been clarified. Note the Chinese name translates as 'network' (研究网络), not 'association' — the English branding and the Chinese branding do not match."
@@ -71,8 +81,6 @@ meta:
     - url: https://ai-development-and-safety-network.cn/institutes
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 9683cb1077
   research_order: 49

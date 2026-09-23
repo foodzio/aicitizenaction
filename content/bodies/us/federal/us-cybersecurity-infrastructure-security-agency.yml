@@ -39,6 +39,23 @@ facts:
   tags:
     - flaw
     - harm
+  topics:
+    - security
+  not_topics:
+    - frontier-ai
+  powers:
+    - handle-complaints
+    - advise
+    - compel
+    - make-rules
+  routing_evidence:
+    topics:security: Operational cyber-defence agency for federal civilian networks and critical infrastructure.
+    not_topics:frontier-ai: framing a frontier-risk concern as a CISA incident report will be closed as out of scope
+    powers:handle-complaints: Anyone may report a cyber incident, including AI-enabled attacks or compromise of AI systems.
+    powers:advise: Powers are largely voluntary/advisory toward the private sector
+    powers:compel: administrative subpoena authority for vulnerability identification
+    powers:make-rules: binding operational directives that bind FEDERAL agencies only — not AI developers
+  routing_review: drafted
 strings:
   name: Cybersecurity and Infrastructure Security Agency (CISA)
   remit: Operational cyber-defence agency for federal civilian networks and critical infrastructure. Issues joint guidance on securing AI systems and on agentic AI governance (2026), runs CISA Central for incident intake, and administers CIRCIA incident-reporting rules for covered entities. Powers are largely voluntary/advisory toward the private sector, with administrative subpoena authority for vulnerability identification and binding operational directives that bind FEDERAL agencies only — not AI developers.
@@ -68,10 +85,6 @@ meta:
       checked: null
     - url: https://www.cisa.gov/ai
       checked: null
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: d1df635c35
   research_order: 152
   migrated_from: input/data/institutions.json

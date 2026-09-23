@@ -36,6 +36,14 @@ facts:
       party: D
       region: MN
       verified_on: 2026-09-22
+  topics:
+    - military-ai
+  powers:
+    - fund
+  routing_evidence:
+    topics:military-ai: Funds DoD AI programs, the Chief Digital and AI Office, DARPA and defense compute.
+    powers:fund: Funds DoD AI programs
+  routing_review: drafted
 strings:
   name: Subcommittee on Defense
   ai_jurisdiction: Funds DoD AI programs, the Chief Digital and AI Office, DARPA and defense compute. The money counterpart to HASC's CITI subcommittee.
@@ -56,8 +64,6 @@ meta:
     - url: https://appropriations.house.gov/subcommittees
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 7f3011f5c8
   research_order: 44

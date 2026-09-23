@@ -39,6 +39,24 @@ facts:
   tags:
     - harm
     - systemic
+  topics:
+    - export-controls
+    - frontier-ai
+  powers:
+    - enforce
+    - fine
+    - make-rules
+    - investigate
+    - handle-complaints
+  routing_evidence:
+    topics:export-controls: export controls on advanced computing chips, semiconductor manufacturing equipment
+    topics:frontier-ai: If your concern is frontier compute proliferation, this is the agency with teeth
+    powers:enforce: Administers and enforces the EAR
+    powers:fine: impose civil penalties
+    powers:make-rules: codified a revised advanced-chip licence review policy in Jan 2026
+    powers:investigate: one of the very few US channels where a member of the public can trigger an actual investigation into AI-related conduct
+    powers:handle-complaints: The tip line is real and is read
+  routing_review: drafted
 strings:
   name: U.S. Department of Commerce — Bureau of Industry and Security (BIS)
   remit: Administers and enforces the EAR, including export controls on advanced computing chips, semiconductor manufacturing equipment and (under some rules) model weights. Rescinded the Biden-era AI Diffusion Rule in 2025 and codified a revised advanced-chip licence review policy in Jan 2026 (see 91 FR, doc 2026-00789). Can deny licences, impose civil penalties, add parties to the Entity List / Denied Persons List, and refer criminal cases. This is the single hardest-edged US compute-governance lever.
@@ -67,8 +85,6 @@ meta:
     - url: https://www.bis.gov/contact-us
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 37eadd37b3
   research_order: 149

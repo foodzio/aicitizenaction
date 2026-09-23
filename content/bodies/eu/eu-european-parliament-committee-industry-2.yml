@@ -27,6 +27,16 @@ facts:
     - role: chair
       name: Borys Budka (EPP, Poland, Koalicja Obywatelska)
       verified_on: 2026-09-22
+  topics:
+    - export-controls
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:export-controls: semiconductors
+    powers:legislate: ITRE is the opinion-giving or associated committee on most AI files that IMCO or LIBE lead, and lead on the infrastructure side.
+    powers:hold-hearings: public hearings
+  routing_review: drafted
 strings:
   name: European Parliament — Committee on Industry, Research and Energy (ITRE)
   ai_jurisdiction: "AI as industrial and research policy: compute and supercomputing capacity, the AI gigafactories and Cloud/AI infrastructure agenda, Horizon Europe and FP10 research funding for AI, semiconductors, energy demand of data centres, and EU technological sovereignty. ITRE is the opinion-giving or associated committee on most AI files that IMCO or LIBE lead, and lead on the infrastructure side."
@@ -51,8 +61,6 @@ meta:
     - url: https://www.europarl.europa.eu/committees/en/itre/home/highlights
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 77007a9cbd
   research_order: 93

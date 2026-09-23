@@ -27,6 +27,14 @@ facts:
     - role: chair
       name: Henna Virkkunen
       verified_on: 2026-09-22
+  topics:
+    - deepfakes
+  powers:
+    - legislate
+  routing_evidence:
+    topics:deepfakes: banning 'nudifier' applications
+    powers:legislate: The Commission has the exclusive right of legislative initiative, so this is where AI files begin.
+  routing_review: drafted
 strings:
   name: European Commission — Executive Vice-President for Tech Sovereignty, Security and Democracy
   ai_jurisdiction: "The Commissioner-level holder of the digital and AI portfolio: owns the AI Act's implementation through DG CNECT and the AI Office, the Digital Omnibus simplification agenda, the Cloud and AI Development Act, the Apply AI strategy, and AI gigafactory/compute policy. The Commission has the exclusive right of legislative initiative, so this is where AI files begin."
@@ -51,8 +59,6 @@ meta:
     - url: https://ec.europa.eu/info/law/better-regulation/have-your-say
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: b7f5ebfaa3
   research_order: 98

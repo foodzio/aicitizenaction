@@ -47,6 +47,20 @@ facts:
     - harm
     - law
     - systemic
+  topics:
+    - privacy
+  powers:
+    - legislate
+    - hold-hearings
+    - oversee
+    - compel
+  routing_evidence:
+    topics:privacy: commercial data privacy
+    powers:legislate: originates most federal AI legislation
+    powers:hold-hearings: Holds hearings
+    powers:oversee: authorises and oversees NIST
+    powers:compel: It can subpoena, compel testimony and legislate
+  routing_review: drafted
 strings:
   name: U.S. Senate Committee on Commerce, Science, and Transportation
   remit: Primary Senate committee of jurisdiction for AI policy, NIST/CAISI authorisation and oversight, the FTC, NTIA and commercial data privacy. Holds hearings, authorises and oversees NIST, and originates most federal AI legislation. It can subpoena, compel testimony and legislate, but does not adjudicate individual complaints.
@@ -79,8 +93,6 @@ meta:
     - url: https://www.commerce.senate.gov/
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: "7580202834"
   research_order: 156

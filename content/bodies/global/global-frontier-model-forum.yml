@@ -37,6 +37,20 @@ facts:
   public_input: limited
   tags:
     - systemic
+  topics:
+    - frontier-ai
+    - security
+    - safety-testing
+  powers:
+    - publish
+    - convene
+  routing_evidence:
+    topics:frontier-ai: Severe misuse risk at the frontier
+    topics:security: plus security of model weights
+    topics:safety-testing: frontier capability assessments and safety frameworks
+    powers:publish: Publishes technical reports and issue briefs
+    powers:convene: Runs information-sharing between member labs and with government.
+  routing_review: drafted
 strings:
   name: Frontier Model Forum
   remit: Industry-supported non-profit founded by Amazon, Anthropic, Google, Meta, Microsoft and OpenAI. Publishes technical reports and issue briefs on frontier capability assessments and safety frameworks, with workstreams on AI-Bio, AI-Cyber, AI-Nuclear, AI Security and Safety Frameworks. Runs information-sharing between member labs and with government.
@@ -65,8 +79,6 @@ meta:
     - url: https://www.frontiermodelforum.org/membership/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: b21f5e2e44
   research_order: 90

@@ -32,6 +32,18 @@ facts:
     - role: chair
       name: UNVERIFIED — see note
       verified_on: 2026-09-22
+  topics:
+    - privacy
+  powers:
+    - legislate
+    - oversee
+    - hold-hearings
+  routing_evidence:
+    topics:privacy: personal information protection
+    powers:legislate: Handles legislation under the Cabinet Office
+    powers:oversee: Implementation oversight of the AI Act
+    powers:hold-hearings: hold 公聴会 (kōchōkai, public hearings) on major bills
+  routing_review: drafted
 strings:
   name: House of Representatives Committee on Cabinet
   ai_jurisdiction: The lead Diet committee for AI. Handles legislation under the Cabinet Office, which owns the AI Act (人工知能関連技術の研究開発及び活用の推進に関する法律), the AI Strategy Headquarters, science and technology policy, digital policy and personal information protection. Japan's AI Act was scrutinised here.
@@ -55,8 +67,6 @@ meta:
     - url: https://www.shugiin.go.jp/internet/itdb_iinkai.nsf/html/iinkai/iin_j0010.htm
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 0275fcb606
   research_order: 125

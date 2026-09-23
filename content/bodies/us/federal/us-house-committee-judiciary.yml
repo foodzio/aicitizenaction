@@ -36,6 +36,26 @@ facts:
       party: D
       region: MD
       verified_on: 2026-09-22
+  topics:
+    - copyright
+    - liability
+    - competition
+    - surveillance
+    - whistleblowing
+  powers:
+    - legislate
+    - hold-hearings
+    - oversee
+  routing_evidence:
+    topics:copyright: AI and copyright
+    topics:liability: AI liability and Section 230
+    topics:competition: AI-driven antitrust concerns in compute and model markets
+    topics:surveillance: law-enforcement use of AI and facial recognition
+    topics:whistleblowing: a dedicated whistleblower intake
+    powers:legislate: H.R.9125 Sectoral AI Governance Act of 2026 (Jacobs, D-CA) referred to this committee
+    powers:hold-hearings: Subcommittee hearing on protecting creators in the age of AI and the internet
+    powers:oversee: Jordan has also run an aggressive oversight track
+  routing_review: drafted
 strings:
   name: House Committee on the Judiciary
   ai_jurisdiction: "Courts, DOJ, FBI, copyright and patent law, antitrust, immigration, and constitutional questions. Send here: AI and copyright, AI liability and Section 230, AI-driven antitrust concerns in compute and model markets, law-enforcement use of AI and facial recognition, government pressure on platforms and AI providers over speech, and AI-enabled crime."
@@ -56,8 +76,6 @@ meta:
     - url: https://judiciary.house.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 28b7dc449e
   research_order: 30

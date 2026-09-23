@@ -37,6 +37,24 @@ facts:
       party: D
       region: OH
       verified_on: 2026-09-22
+  topics:
+    - government-use
+    - security
+    - standards
+  powers:
+    - oversee
+    - hold-hearings
+    - convene
+    - publish
+  routing_evidence:
+    topics:government-use: whether and how agencies deploy AI in decisions affecting the public
+    topics:security: federal cybersecurity
+    topics:standards: AI procurement standards
+    powers:oversee: hearings 'Examining the Federal Government's Use of Artificial Intelligence'
+    powers:hold-hearings: hearings 'Examining the Federal Government's Use of Artificial Intelligence'
+    powers:convene: a bipartisan AI roundtable
+    powers:publish: published wrap-up 'Federal Government Use of Artificial Intelligence Poses Promise, Peril'
+  routing_review: drafted
 strings:
   name: Subcommittee on Cybersecurity, Information Technology, and Government Innovation
   ai_jurisdiction: "The House's dedicated federal-AI-use subcommittee. Send here: whether and how agencies deploy AI in decisions affecting the public, AI procurement standards, OMB memoranda on AI, federal cybersecurity, IT modernization, and emerging technology inside government. This is the House venue where the 'government is using an algorithm on me' complaint belongs."
@@ -55,8 +73,6 @@ meta:
     - url: https://oversight.house.gov/subcommittee/cybersecurity-information-technology-government-innovation/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: "0275060373"
   research_order: 38

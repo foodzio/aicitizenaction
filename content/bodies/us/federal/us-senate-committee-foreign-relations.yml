@@ -37,6 +37,17 @@ facts:
       party: D
       region: NH
       verified_on: 2026-09-22
+  topics:
+    - international
+  not_topics:
+    - export-controls
+  powers:
+    - oversee
+  routing_evidence:
+    topics:international: international AI governance bodies and treaties
+    not_topics:export-controls: Note that the statutory export-control authority sits in Banking, not here
+    powers:oversee: China technology-competition oversight
+  routing_review: drafted
 strings:
   name: Senate Committee on Foreign Relations
   ai_jurisdiction: "AI diplomacy, not AI regulation. Send here: international AI governance bodies and treaties, State Department AI policy and the Bureau of Cyberspace and Digital Policy, AI provisions in bilateral technology agreements, AI and human rights abroad, foreign assistance involving AI, and confirmation of relevant ambassadors and State officials. Note that the statutory export-control authority sits in Banking, not here — Foreign Relations gets the diplomacy and the sanctions framing."
@@ -56,10 +67,6 @@ meta:
       checked: 2026-09-22
     - url: https://www.foreign.senate.gov/
       checked: 2026-09-22
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: d2dc8fb7dc
   research_order: 15
   migrated_from: input/data/committees-and-organisations.json#seats

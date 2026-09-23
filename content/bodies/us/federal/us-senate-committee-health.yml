@@ -36,6 +36,22 @@ facts:
       party: I
       region: VT
       verified_on: 2026-09-22
+  topics:
+    - work
+    - discrimination
+    - health
+    - children
+  powers:
+    - hold-hearings
+    - publish
+  routing_evidence:
+    topics:work: AI and job displacement
+    topics:discrimination: AI in hiring and employment discrimination
+    topics:health: FDA regulation of AI medical devices and clinical decision support
+    topics:children: AI in K-12 and higher education
+    powers:hold-hearings: Hearing 'The Impact of AI on the Workforce'
+    powers:publish: Cassidy released a committee white paper on artificial intelligence
+  routing_review: drafted
 strings:
   name: Senate Committee on Health, Education, Labor, and Pensions
   ai_jurisdiction: "AI where it touches work, health and school. Send here: AI and job displacement, worker surveillance and algorithmic management, AI in hiring and employment discrimination (with EEOC), FDA regulation of AI medical devices and clinical decision support, AI in drug development, AI in K-12 and higher education, and AI literacy. If your concern is 'my employer is using AI on me' or 'an AI tool is making medical decisions', this is the door."
@@ -56,8 +72,6 @@ meta:
     - url: https://www.help.senate.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 09cc918429
   research_order: 20

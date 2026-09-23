@@ -35,6 +35,16 @@ facts:
       party: D
       region: VA
       verified_on: 2026-09-22
+  topics:
+    - government-use
+    - whistleblowing
+  powers:
+    - legislate
+  routing_evidence:
+    topics:government-use: Intelligence Community use of AI
+    topics:whistleblowing: This committee also operates the statutory Intelligence Community whistleblower channel
+    powers:legislate: The committee's AI work is carried in the annual Intelligence Authorization Act.
+  routing_review: drafted
 strings:
   name: Senate Select Committee on Intelligence
   ai_jurisdiction: "Intelligence Community use of AI and AI as an intelligence target. Send here: IC adoption of frontier models, AI in signals and open-source intelligence, foreign adversary AI capabilities assessments, AI-enabled foreign influence operations, and counterintelligence risk to US AI labs (including insider threat and foreign talent access). Proceedings are largely classified, so the public route is narrow and mostly one-way."
@@ -55,8 +65,6 @@ meta:
     - url: https://www.intelligence.senate.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: adf6b9874b
   research_order: 17

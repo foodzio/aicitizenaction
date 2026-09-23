@@ -28,6 +28,32 @@ facts:
     - role: chair
       name: Ms Jo Briskey MP (Australian Labor Party, Maribyrnong, VIC)
       verified_on: 2026-09-22
+  topics:
+    - work
+    - government-use
+    - transparency
+    - copyright
+    - deepfakes
+    - children
+    - consumer-protection
+    - security
+  powers:
+    - hold-hearings
+    - publish
+    - oversee
+  routing_evidence:
+    topics:work: workforce and skills implications including job creation and displacement and job quality and security
+    topics:government-use: adoption of AI by Commonwealth departments and agencies and the transparency and accountability measures applying to it
+    topics:transparency: adoption of AI by Commonwealth departments and agencies and the transparency and accountability measures applying to it
+    topics:copyright: AI's interaction with intellectual property and copyright law including use of Australian creative, cultural and media content in training
+    topics:deepfakes: risks and harms including fraud and scams, deepfakes and risks to children and vulnerable Australians
+    topics:children: risks and harms including fraud and scams, deepfakes and risks to children and vulnerable Australians
+    topics:consumer-protection: risks and harms including fraud and scams, deepfakes and risks to children and vulnerable Australians
+    topics:security: national security and cyber security opportunities and foreign interference risks including supply chains and critical infrastructure
+    powers:hold-hearings: the committee 'may ask submitters to provide further evidence at public hearings'
+    powers:publish: FINAL REPORT DUE NO LATER THAN 30 NOVEMBER 2026
+    powers:oversee: adoption of AI by Commonwealth departments and agencies and the transparency and accountability measures applying to it
+  routing_review: drafted
 strings:
   name: Joint Select Committee on Artificial Intelligence
   ai_jurisdiction: "Australia's principal current AI inquiry body, appointed by resolution of BOTH the House of Representatives and the Senate on 20 August 2026. Its terms of reference are unusually broad and are the best single statement of Australian AI policy scope: AI's contribution to resilience, productivity, competitiveness and living standards; spreading benefits to suburbs and regions; AI and robotics in research, new industries and exports (agriculture, resources, health and medical research, advanced manufacturing, financial services, defence industry); rate and barriers to adoption by SMEs and family businesses; sovereign AI capability and its commercialisation, R&D, investment and talent; data sovereignty and narrow domain-specific models trained on Australian data; workforce and skills implications including job creation and displacement and job quality and security; adoption of AI by Commonwealth departments and agencies and the transparency and accountability measures applying to it; THE ADEQUACY OF AUSTRALIA'S EXISTING LAWS AND REGULATORY FRAMEWORKS AS THEY APPLY TO AI AND WHETHER THERE ARE GAPS WARRANTING REFORM; AI's interaction with intellectual property and copyright law including use of Australian creative, cultural and media content in training; risks and harms including fraud and scams, deepfakes and risks to children and vulnerable Australians; national security and cyber security opportunities and foreign interference risks including supply chains and critical infrastructure; and the implications of emerging AI capability for national security and strategic resilience, including the ability of regulators, THE AUSTRALIAN AI SAFETY INSTITUTE and the intelligence and security community to identify and respond to emerging risks."
@@ -52,8 +78,6 @@ meta:
     - url: https://www.aph.gov.au/Parliamentary_Business/Committees/Joint/Artificial_Intelligence
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: a5e1378bb6
   research_order: 106

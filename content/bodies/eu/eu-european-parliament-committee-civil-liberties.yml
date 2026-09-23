@@ -39,6 +39,23 @@ facts:
     - harm
     - law
     - systemic
+  topics:
+    - privacy
+    - discrimination
+    - surveillance
+  not_topics:
+    - frontier-ai
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:privacy: data protection and privacy
+    topics:discrimination: anti-discrimination
+    topics:surveillance: biometric surveillance restrictions
+    not_topics:frontier-ai: LIBE's frame is fundamental rights and surveillance, not catastrophic risk.
+    powers:legislate: Legislative co-decision power
+    powers:hold-hearings: Agendas, draft reports, amendments and hearing streams.
+  routing_review: drafted
 strings:
   name: European Parliament Committee on Civil Liberties, Justice and Home Affairs (LIBE)
   remit: Joint lead committee with IMCO on the AI Act. Described by its chair as 'the leading body of the European Parliament for shaping and overseeing EU legislation and policies that ensure EU citizens enjoy an area of freedom, security, and justice'. Responsibilities include rule of law, fundamental rights, anti-discrimination, data protection and privacy, asylum and migration, organised crime and citizen security. On AI it drove the prohibited-practices list, biometric surveillance restrictions and fundamental-rights impact assessments. Legislative co-decision power; no investigative or enforcement power over private parties.
@@ -68,10 +85,6 @@ meta:
       checked: 2026-09-22
     - url: https://www.europarl.europa.eu/petitions/en/home
       checked: 2026-09-22
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: c5f92fb472
   research_order: 181
   migrated_from: input/data/institutions.json

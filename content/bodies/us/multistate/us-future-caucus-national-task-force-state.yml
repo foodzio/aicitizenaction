@@ -31,6 +31,15 @@ facts:
       name: Rep. Monique Priestley (D-Vermont) and Rep. Doug Fiefia (R-Utah) — CO-CHAIRS
       party: D / R
       verified_on: 2026-09-22
+  powers:
+    - advise
+    - convene
+    - publish
+  routing_evidence:
+    powers:advise: The task force advises on model language
+    powers:convene: advocacy and convening body
+    powers:publish: produces a Bipartisan State AI Policy Memo
+  routing_review: drafted
 strings:
   name: Future Caucus National Task Force on State AI Policy
   ai_jurisdiction: Cross-partisan task force of Gen Z and millennial state legislators developing shared AI governance approaches across states; hosts public hearings and confidential briefings and produces a Bipartisan State AI Policy Memo.
@@ -51,7 +60,6 @@ meta:
     - url: https://futurecaucus.org/national-task-force-on-state-ai-policy
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: dee908adb8

@@ -32,6 +32,11 @@ facts:
     - role: chair
       name: KUDŌ Shōzō (工藤彰三)
       verified_on: 2026-09-17
+  powers:
+    - oversee
+  routing_evidence:
+    powers:oversee: METI oversight including the AI Industry Strategy Division
+  routing_review: drafted
 strings:
   name: House of Representatives Committee on Economy, Trade and Industry
   ai_jurisdiction: Scrutinises METI, which owns AI industrial policy, the AI Guidelines for Business (jointly with MIC), semiconductor and compute policy, and — new in 2026 — a dedicated AI Industry Strategy Division (AI産業戦略課). This is the committee for the industrial/economic side of AI rather than the governance framework side.
@@ -57,7 +62,6 @@ meta:
     - url: https://www.meti.go.jp/feedback/
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 52ba7eb5c6

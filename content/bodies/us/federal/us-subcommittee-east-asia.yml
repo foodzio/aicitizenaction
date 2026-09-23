@@ -37,6 +37,13 @@ facts:
       party: D
       region: DE
       verified_on: 2026-09-22
+  topics:
+    - international
+    - export-controls
+  routing_evidence:
+    topics:international: international cyber norms and their extension to AI
+    topics:export-controls: allied coordination on AI and semiconductor controls
+  routing_review: drafted
 strings:
   name: Subcommittee on East Asia, the Pacific, and International Cybersecurity Policy
   ai_jurisdiction: China AI competition, allied coordination on AI and semiconductor controls, international cyber norms and their extension to AI, and AI in the Indo-Pacific.
@@ -58,7 +65,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: 5546d7364a
   research_order: 16

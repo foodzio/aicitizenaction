@@ -31,6 +31,18 @@ facts:
       name: Barry R. Finegold
       party: D
       verified_on: 2026-09-22
+  topics:
+    - frontier-ai
+    - safety-testing
+    - whistleblowing
+  powers:
+    - legislate
+  routing_evidence:
+    topics:frontier-ai: The committee that actually produced Massachusetts' frontier-AI safety language
+    topics:safety-testing: third-party review by independent evaluators at least every six months
+    topics:whistleblowing: whistleblower protections
+    powers:legislate: released by this committee 22 June 2026
+  routing_review: drafted
 strings:
   name: Joint Committee on Economic Development and Emerging Technologies — Senate chair
   ai_jurisdiction: The committee that actually produced Massachusetts' frontier-AI safety language, attached to the economic development bond bill.
@@ -53,8 +65,6 @@ meta:
     - url: https://malegislature.gov/Events/Hearings
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 7ddc1d6c56
   research_order: 69

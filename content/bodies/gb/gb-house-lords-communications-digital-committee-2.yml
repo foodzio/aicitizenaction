@@ -27,6 +27,14 @@ facts:
     - role: chair
       name: The Baroness Keeley (Labour life peer)
       verified_on: 2026-09-22
+  topics:
+    - copyright
+  powers:
+    - publish
+  routing_evidence:
+    topics:copyright: "'AI, copyright and the creative industries'"
+    powers:publish: 4th Report, published 6 March 2026
+  routing_review: drafted
 strings:
   name: House of Lords Communications and Digital Committee
   ai_jurisdiction: "The Lords' standing committee on media, broadcasting, telecoms and the digital economy. It is the UK's most productive parliamentary venue on AI policy: it produced 'AI, copyright and the creative industries' (4th Report, published 6 March 2026; Government response 15 May 2026) and is now examining the Online Safety Act, where AI-generated content and algorithmic systems are squarely in scope."
@@ -51,8 +59,6 @@ meta:
     - url: https://committees.parliament.uk/committee/170/communications-and-digital-committee/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: f69cbfac72
   research_order: 85

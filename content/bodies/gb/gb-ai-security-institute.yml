@@ -46,6 +46,25 @@ facts:
     - harm
     - law
     - systemic
+  topics:
+    - frontier-ai
+    - safety-testing
+    - security
+  not_topics:
+    - discrimination
+  powers:
+    - test-models
+    - publish
+    - advise
+  routing_evidence:
+    topics:frontier-ai: Conducts pre-deployment and post-deployment testing of frontier models
+    topics:safety-testing: Conducts pre-deployment and post-deployment testing of frontier models
+    topics:security: with the focus narrowed toward security, cyber, chemical/biological and criminal-misuse risks
+    not_topics:discrimination: and away from bias and free-speech concerns
+    powers:test-models: Conducts pre-deployment and post-deployment testing of frontier models by voluntary agreement with developers
+    powers:publish: publishes a Frontier AI Trends Report
+    powers:advise: and advises government
+  routing_review: drafted
 strings:
   name: AI Security Institute (AISI)
   remit: "RENAMED: was the 'AI Safety Institute'; renamed the AI Security Institute in February 2025 (announced by written ministerial statement, HLWS454, 24 February 2025), with the focus narrowed toward security, cyber, chemical/biological and criminal-misuse risks and away from bias and free-speech concerns. It is a DIRECTORATE OF DSIT, not an independent agency. Conducts pre-deployment and post-deployment testing of frontier models by voluntary agreement with developers, builds evaluation infrastructure, publishes a Frontier AI Trends Report, and advises government. It has NO statutory powers: it cannot compel access to a model, cannot fine, cannot require testing, and cannot stop a release."
@@ -81,10 +100,6 @@ meta:
       checked: null
     - url: https://www.aisi.gov.uk/
       checked: null
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: b30dedb820
   research_order: 167
   migrated_from: input/data/institutions.json

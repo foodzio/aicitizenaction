@@ -36,6 +36,13 @@ facts:
       party: D
       region: MI
       verified_on: 2026-09-22
+  topics:
+    - military-ai
+    - frontier-ai
+  routing_evidence:
+    topics:military-ai: DARPA, DoD science and technology accounts
+    topics:frontier-ai: frontier-model capability risks framed as national security
+  routing_review: drafted
 strings:
   name: Subcommittee on Emerging Threats and Capabilities
   ai_jurisdiction: DARPA, DoD science and technology accounts, special operations, and emerging-technology threat assessment — including AI-enabled bio and chemical threats, and frontier-model capability risks framed as national security.
@@ -57,7 +64,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: f714fc9f83
   research_order: 14

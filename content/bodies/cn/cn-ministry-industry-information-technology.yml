@@ -41,6 +41,19 @@ facts:
   public_input: open
   tags:
     - systemic
+  topics:
+    - standards
+  not_topics:
+    - frontier-ai
+  powers:
+    - set-standards
+    - enforce
+  routing_evidence:
+    topics:standards: AI standardisation
+    not_topics:frontier-ai: It is not a frontier-risk body.
+    powers:set-standards: Runs a standing public-comment section (公开征求意见) on draft standards and guidelines.
+    powers:enforce: Has licensing and administrative-penalty powers over telecoms and industrial operators.
+  routing_review: drafted
 strings:
   name: Ministry of Industry and Information Technology (MIIT)
   remit: "Industrial regulator for AI as a technology sector: compute infrastructure, telecoms, AI standardisation, humanoid robotics, and the 'AI+' industrial programmes. Issued the 'AI+ Information and Communications' Innovation Development Implementation Opinions (2026–2028) in 2026. Runs a standing public-comment section (公开征求意见) on draft standards and guidelines. Has licensing and administrative-penalty powers over telecoms and industrial operators."
@@ -74,10 +87,6 @@ meta:
       checked: null
     - url: https://www.miit.gov.cn/
       checked: null
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: 57fe710633
   research_order: 47
   migrated_from: input/data/institutions.json

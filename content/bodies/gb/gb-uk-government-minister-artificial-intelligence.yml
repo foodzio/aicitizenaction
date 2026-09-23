@@ -28,6 +28,11 @@ facts:
     - role: chair
       name: Kanishka Narayan MP
       verified_on: 2026-09-22
+  topics:
+    - government-use
+  routing_evidence:
+    topics:government-use: Cabinet Office (centre-of-government AI adoption)
+  routing_review: drafted
 strings:
   name: UK Government — Minister for Artificial Intelligence (Cabinet Office and Department for Business, Innovation, Science and Trade)
   ai_jurisdiction: The UK's first Cabinet-level AI minister, holding the AI brief jointly across the Cabinet Office (centre-of-government AI adoption) and DBIST (AI industrial and regulatory policy). This post replaced the AI brief formerly held inside DSIT.
@@ -53,7 +58,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: 8656d1541b
   research_order: 89

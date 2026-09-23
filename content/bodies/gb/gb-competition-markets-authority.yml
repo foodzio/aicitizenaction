@@ -46,6 +46,27 @@ facts:
     - harm
     - law
     - systemic
+  topics:
+    - competition
+    - consumer-protection
+  not_topics:
+    - frontier-ai
+  powers:
+    - compel
+    - investigate
+    - enforce
+    - fine
+    - handle-complaints
+  routing_evidence:
+    topics:competition: Competition and consumer protection regulator.
+    topics:consumer-protection: Competition and consumer protection regulator.
+    not_topics:frontier-ai: but does not regulate model risk
+    powers:compel: Can compel information
+    powers:investigate: conduct market investigations
+    powers:enforce: block or unwind mergers, impose conduct requirements
+    powers:fine: fine up to 10% of global turnover
+    powers:handle-complaints: Anyone can report suspected anti-competitive conduct, including in AI markets
+  routing_review: drafted
 strings:
   name: Competition and Markets Authority (CMA)
   remit: Competition and consumer protection regulator. Relevant to AI through foundation-model market studies, merger review of AI partnerships and acqui-hires, and the digital markets competition regime (Strategic Market Status designations under the DMCC Act, which allow the CMA to impose conduct requirements and pro-competition interventions on designated firms). Can compel information, conduct market investigations, block or unwind mergers, impose conduct requirements, and fine up to 10% of global turnover — and under the DMCC regime the CMA can now enforce consumer law directly with fines rather than going to court.
@@ -79,10 +100,6 @@ meta:
       checked: 2026-09-22
     - url: https://www.gov.uk/government/organisations/competition-and-markets-authority
       checked: 2026-09-22
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: ef2c2dda2b
   research_order: 171
   migrated_from: input/data/institutions.json

@@ -37,6 +37,11 @@ facts:
       party: R
       region: TX
       verified_on: 2026-09-22
+  powers:
+    - convene
+  routing_evidence:
+    powers:convene: Its function is member education and cross-committee coordination
+  routing_review: drafted
 strings:
   name: Congressional Artificial Intelligence Caucus
   ai_jurisdiction: "Not a jurisdictional body — no bills are referred here and it cannot hold official hearings or markups. Its function is member education and cross-committee coordination: briefings for members and staff, sign-on letters, and building bipartisan support before a bill reaches a committee of jurisdiction. Useful to a member of the public as a way to reach AI-attentive offices in bulk, and as a signal of who is engaged."
@@ -57,7 +62,6 @@ meta:
     - url: https://artificialintelligencecaucus-beyer.house.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: e1e6742a69

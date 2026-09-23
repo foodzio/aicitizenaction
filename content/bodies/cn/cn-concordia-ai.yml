@@ -50,6 +50,16 @@ facts:
   tags:
     - harm
     - systemic
+  topics:
+    - frontier-ai
+    - international
+  powers:
+    - publish
+  routing_evidence:
+    topics:frontier-ai: Frontier AI risks including loss of control, CBRN and cyber misuse
+    topics:international: framed through international coordination
+    powers:publish: it publishes the 'State of AI Safety in China' report series
+  routing_review: drafted
 strings:
   name: Concordia AI
   remit: "NOT a government body. A social enterprise 'dedicated to advancing global AI safety and governance', with offices in Beijing and Singapore. It is the de facto bridge organisation between the Chinese and international AI safety communities: it publishes the 'State of AI Safety in China' report series and the AI Safety in China newsletter, co-authored the Frontier AI Risk Management Framework with Shanghai AI Lab, and runs the Chinese Perspectives on AI Safety translation project. Included here because for most outsiders it is the only functioning entry point to Chinese AI safety governance."
@@ -83,8 +93,6 @@ meta:
     - url: https://concordia-ai.com/contact/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: a14c1cab7b
   research_order: 52

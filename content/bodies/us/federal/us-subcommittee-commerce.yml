@@ -37,6 +37,18 @@ facts:
       party: D
       region: MD
       verified_on: 2026-09-22
+  topics:
+    - safety-testing
+  powers:
+    - fund
+    - hold-hearings
+    - legislate
+  routing_evidence:
+    topics:safety-testing: whether the US government has the capacity to evaluate frontier models at all
+    powers:fund: THE subcommittee that funds NIST
+    powers:hold-hearings: public written testimony for FY2027 accepted through 22 May 2026
+    powers:legislate: subcommittee markup of the FY2027 Commerce, Justice, Science and Related Agencies Appropriations Act held in 2026
+  routing_review: drafted
 strings:
   name: Subcommittee on Commerce, Justice, Science, and Related Agencies
   ai_jurisdiction: THE subcommittee that funds NIST and, within it, the Center for AI Standards and Innovation (CAISI, the former US AI Safety Institute). Also funds NSF (including the National AI Research Resource), NASA, NOAA, DOJ and the FTC. If your concern is whether the US government has the capacity to evaluate frontier models at all, the number that decides it is written here.
@@ -55,8 +67,6 @@ meta:
     - url: https://www.appropriations.senate.gov/subcommittees/commerce-justice-science-and-related-agencies
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: b0ce50fd4a
   research_order: 22

@@ -28,6 +28,24 @@ facts:
     - flaw
     - harm
     - systemic
+  topics:
+    - transparency
+    - frontier-ai
+    - health
+    - work
+    - government-use
+  powers:
+    - fine
+    - make-rules
+  routing_evidence:
+    topics:transparency: imposes transparency/labelling, lifecycle risk-management and human-oversight duties
+    topics:frontier-ai: the closest thing to a frontier-model trigger outside the EU
+    topics:health: healthcare, medical devices
+    topics:work: employment and lending decisions
+    topics:government-use: government functions
+    powers:fine: can levy administrative fines up to KRW 30 million (~USD 21,000)
+    powers:make-rules: imposes transparency/labelling, lifecycle risk-management and human-oversight duties
+  routing_review: drafted
 strings:
   name: Ministry of Science and ICT (MSIT) — AI Framework Act supervisory authority
   remit: "Administers the Framework Act on the Development of Artificial Intelligence and Establishment of Trust ('AI Framework Act'), in force 22 January 2026 — the world's second comprehensive national AI statute. This is a genuine regulator: it designates high-impact AI domains (energy, water, healthcare, medical devices, nuclear, biometric criminal analysis, employment and lending decisions, transport, government functions, student assessment), imposes transparency/labelling, lifecycle risk-management and human-oversight duties, and can levy administrative fines up to KRW 30 million (~USD 21,000). It also sets compute thresholds by Presidential Decree triggering additional safety obligations — the closest thing to a frontier-model trigger outside the EU."
@@ -50,8 +68,6 @@ meta:
     - url: https://www.aisi.re.kr/eng
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: c5aa151b0d
   research_order: 33

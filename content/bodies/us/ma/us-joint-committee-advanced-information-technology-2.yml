@@ -31,6 +31,13 @@ facts:
       name: Tricia Farley-Bouvier
       party: D
       verified_on: 2026-09-22
+  topics:
+    - health
+    - privacy
+  routing_evidence:
+    topics:health: S.2632 (AI in healthcare decision-making)
+    topics:privacy: the committee's broader 2025-2026 docket on AI, data privacy and mental-health AI
+  routing_review: drafted
 strings:
   name: Joint Committee on Advanced Information Technology, the Internet and Cybersecurity — House chair
   ai_jurisdiction: House-side leadership of the same joint AI/technology committee.
@@ -54,7 +61,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: d5a7382876
   research_order: 68

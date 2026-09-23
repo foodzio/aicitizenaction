@@ -45,6 +45,26 @@ facts:
   tags:
     - harm
     - systemic
+  topics:
+    - frontier-ai
+    - safety-testing
+    - transparency
+  powers:
+    - investigate
+    - compel
+    - enforce
+    - fine
+    - set-standards
+  routing_evidence:
+    topics:frontier-ai: Exclusive supervisory and enforcement competence over GPAI model providers.
+    topics:safety-testing: Develops evaluation tools, methodologies and benchmarks.
+    topics:transparency: the transparency code
+    powers:investigate: Can conduct inspections
+    powers:compel: require technical documentation and access to models to assess capabilities
+    powers:enforce: RESTRICT THE PUBLIC AVAILABILITY OF A MODEL
+    powers:fine: impose fines directly
+    powers:set-standards: Develops evaluation tools, methodologies and benchmarks.
+  routing_review: drafted
 strings:
   name: European AI Office (within DG CONNECT, European Commission)
   remit: The AI Act's central enforcement body for general-purpose AI. Exclusive supervisory and enforcement competence over GPAI model providers. Can conduct inspections, require technical documentation and access to models to assess capabilities, request corrective action, RESTRICT THE PUBLIC AVAILABILITY OF A MODEL, and impose fines directly (up to 3% of global turnover or EUR 15m for GPAI provider breaches; up to 7% or EUR 35m for prohibited-practice breaches enforced elsewhere). Develops evaluation tools, methodologies and benchmarks. Serves as secretariat to the AI Board. Under the Digital Omnibus on AI its supervisory powers were expanded. GPAI obligations have applied since 2 August 2025; the AI Office's enforcement powers over GPAI became exercisable from 2 August 2026.
@@ -77,8 +97,6 @@ meta:
     - url: https://ai-act-service-desk.ec.europa.eu/en/ai-act-service-desk
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 393273bcdd
   research_order: 175

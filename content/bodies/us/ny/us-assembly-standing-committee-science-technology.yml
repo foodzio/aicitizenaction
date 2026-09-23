@@ -31,6 +31,18 @@ facts:
       name: Steven Otis
       party: D
       verified_on: 2026-09-22
+  topics:
+    - frontier-ai
+    - transparency
+    - work
+  powers:
+    - legislate
+  routing_evidence:
+    topics:frontier-ai: frontier-model bills
+    topics:transparency: A6578 (AI training-data transparency)
+    topics:work: A9581 (AI employment-impact reporting)
+    powers:legislate: Assembly committee of reference for AI, emerging-technology and frontier-model bills
+  routing_review: drafted
 strings:
   name: Assembly Standing Committee on Science and Technology
   ai_jurisdiction: Assembly committee of reference for AI, emerging-technology and frontier-model bills. Alex Bores, the RAISE Act Assembly sponsor, sits on it.
@@ -51,8 +63,6 @@ meta:
     - url: https://nyassembly.gov/comm/?id=159
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 537d38aebd
   research_order: 55

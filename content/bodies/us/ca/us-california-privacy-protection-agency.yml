@@ -39,6 +39,29 @@ facts:
   tags:
     - harm
     - systemic
+  topics:
+    - privacy
+    - security
+  not_topics:
+    - frontier-ai
+  powers:
+    - investigate
+    - hold-hearings
+    - enforce
+    - fine
+    - make-rules
+    - handle-complaints
+  routing_evidence:
+    topics:privacy: The only dedicated US privacy regulator.
+    topics:security: cybersecurity audits
+    not_topics:frontier-ai: NOT frontier or catastrophic risk
+    powers:investigate: Can investigate, hold administrative hearings, issue orders and impose administrative fines
+    powers:hold-hearings: hold administrative hearings
+    powers:enforce: issue orders
+    powers:fine: impose administrative fines (up to $2,500 per violation, $7,500 for intentional violations or violations involving minors)
+    powers:make-rules: Conducts formal rulemaking with public comment.
+    powers:handle-complaints: The complaint form genuinely initiates enforcement review
+  routing_review: drafted
 strings:
   name: California Privacy Protection Agency (CPPA)
   remit: The only dedicated US privacy regulator. Enforces the CCPA/CPRA, including regulations on automated decisionmaking technology (ADMT), risk assessments and cybersecurity audits — the ADMT rules reach AI used for significant decisions about Californians. Can investigate, hold administrative hearings, issue orders and impose administrative fines (up to $2,500 per violation, $7,500 for intentional violations or violations involving minors). Conducts formal rulemaking with public comment.
@@ -68,10 +91,6 @@ meta:
       checked: 2026-09-22
     - url: https://www.cppa.ca.gov/regulations
       checked: 2026-09-22
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: 82b8a3bf3b
   research_order: 162
   migrated_from: input/data/institutions.json

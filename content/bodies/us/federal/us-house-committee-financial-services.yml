@@ -35,6 +35,20 @@ facts:
       party: D
       region: CA
       verified_on: 2026-09-22
+  topics:
+    - discrimination
+    - deepfakes
+    - export-controls
+    - whistleblowing
+  powers:
+    - hold-hearings
+  routing_evidence:
+    topics:discrimination: algorithmic discrimination in lending
+    topics:deepfakes: deepfake-driven scams
+    topics:export-controls: the House side of export-control and sanctions policy touching AI hardware
+    topics:whistleblowing: a dedicated whistleblower page
+    powers:hold-hearings: subcommittee hearing 'Unlocking the Next Generation of AI in the U.S. Financial System
+  routing_review: drafted
 strings:
   name: House Committee on Financial Services
   ai_jurisdiction: "AI in banking, securities, insurance and payments, plus the House side of export-control and sanctions policy touching AI hardware. Send here: AI in credit underwriting and algorithmic discrimination in lending, AI in trading and market structure, AI-enabled financial fraud and deepfake-driven scams, AI and anti-money-laundering, and financial-stability questions from AI concentration."
@@ -55,8 +69,6 @@ meta:
     - url: https://financialservices.house.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 160f7b386f
   research_order: 39

@@ -34,6 +34,18 @@ facts:
     - insider
     - law
     - systemic
+  topics:
+    - frontier-ai
+  powers:
+    - enforce
+    - fine
+    - make-rules
+  routing_evidence:
+    topics:frontier-ai: Requires large frontier developers to write, publish and follow a safety protocol
+    powers:enforce: Enforcement is exclusively by the NY Attorney General through civil penalties
+    powers:fine: Enforcement is exclusively by the NY Attorney General through civil penalties
+    powers:make-rules: the AG's rulemaking/guidance process
+  routing_review: drafted
 strings:
   name: New York State Attorney General — RAISE Act (Responsible AI Safety and Education Act) enforcement
   remit: Enforces the RAISE Act, signed by Governor Hochul (late 2025) and substantially amended/overhauled in April 2026; it takes effect 1 January 2027. Requires large frontier developers to write, publish and follow a safety protocol addressing unreasonable risk of critical harm, to report safety incidents, and bars deploying a model posing unreasonable risk of critical harm. Enforcement is exclusively by the NY Attorney General through civil penalties; there is no private right of action.
@@ -60,8 +72,6 @@ meta:
     - url: https://ag.ny.gov/
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 2db7002164
   research_order: 163

@@ -45,6 +45,16 @@ facts:
   tags:
     - law
     - systemic
+  topics:
+    - copyright
+    - children
+  powers:
+    - legislate
+  routing_evidence:
+    topics:copyright: AI and copyright policy
+    topics:children: children's-online-experience consultations
+    powers:legislate: DSIT sets policy and can sponsor legislation
+  routing_review: drafted
 strings:
   name: Department for Science, Innovation and Technology (DSIT)
   remit: Lead UK department for AI policy. Parent of the AI Security Institute. Responsible for the UK's context-based, regulator-led AI approach (no cross-sector AI statute in force), the AI Opportunities Action Plan, AI and copyright policy (including the Section 137 Data (Use and Access) Act progress reporting), and online safety policy alongside Ofcom. DSIT sets policy and can sponsor legislation; it does not itself adjudicate or fine.
@@ -81,8 +91,6 @@ meta:
     - url: https://www.gov.uk/search/policy-papers-and-consultations?content_store_document_type=open_consultations
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: f61bab5c55
   research_order: 168

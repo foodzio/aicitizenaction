@@ -46,6 +46,22 @@ facts:
   tags:
     - harm
     - systemic
+  topics:
+    - health
+    - frontier-ai
+  powers:
+    - make-rules
+    - enforce
+    - fine
+    - handle-complaints
+  routing_evidence:
+    topics:health: Regulates AI/ML-enabled medical devices and Software as a Medical Device.
+    topics:frontier-ai: including foundation models and agentic AI systems
+    powers:make-rules: mandates Predetermined Change Control Plans for adaptive models
+    powers:enforce: can order recalls, issue warning letters
+    powers:fine: impose civil money penalties
+    powers:handle-complaints: Patients and clinicians can report harm from an AI-enabled device.
+  routing_review: drafted
 strings:
   name: U.S. Food and Drug Administration (FDA) — Center for Devices and Radiological Health / Digital Health Center of Excellence
   remit: Regulates AI/ML-enabled medical devices and Software as a Medical Device. Can require premarket clearance (510(k)), De Novo or PMA approval; mandates Predetermined Change Control Plans for adaptive models; can order recalls, issue warning letters, and impose civil money penalties. Runs a Digital Health Advisory Committee. In Aug 2026 it opened a major consultation on how to regulate GENERATIVE AI-enabled devices, including foundation models and agentic AI systems.
@@ -80,8 +96,6 @@ meta:
     - url: https://www.fda.gov/medical-devices/digital-health-center-excellence/ask-question-about-digital-health-regulatory-policies
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: b26d78c7eb
   research_order: 154

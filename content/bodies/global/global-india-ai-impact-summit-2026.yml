@@ -30,6 +30,11 @@ facts:
   public_input: limited
   tags:
     - systemic
+  topics:
+    - international
+  routing_evidence:
+    topics:international: the first global AI summit hosted in the Global South
+  routing_review: drafted
 strings:
   name: India AI Impact Summit 2026 (AI summit series)
   remit: Successor to the Paris AI Action Summit (Feb 2025), held in New Delhi 19–20 February 2026 — the first global AI summit hosted in the Global South. Structured around three Sutras (People, Planet, Progress) and seven Chakras (Human Capital, Social Empowerment, Safe AI, Resilience & Innovation, Science, Democratising AI Resources, Economic Growth). Adopted the New Delhi Declaration plus investment commitments; the government reported very large public attendance (~600,000 across associated events). The International AI Safety Report 2026 was published ahead of it.
@@ -56,7 +61,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: f175393922
   research_order: 85

@@ -17,6 +17,17 @@ facts:
   public_input: limited
   tags:
     - harm
+  powers:
+    - investigate
+    - compel
+    - enforce
+    - handle-complaints
+  routing_evidence:
+    powers:investigate: it will hold investigative powers
+    powers:compel: the ability to require documentation and model access
+    powers:enforce: to order corrective measures and withdrawal of non-compliant systems
+    powers:handle-complaints: any person may lodge a complaint with a market-surveillance authority
+  routing_review: drafted
 strings:
   name: Rijksinspectie Digitale Infrastructuur (RDI)
   remit: Designated in 2026 as the Netherlands' coordinating market-surveillance authority for the EU AI Act, working alongside the Autoriteit Persoonsgegevens. As an AI Act market-surveillance authority it will hold investigative powers, the ability to require documentation and model access, and to order corrective measures and withdrawal of non-compliant systems, with penalty powers flowing from the national implementing law.
@@ -32,7 +43,6 @@ meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 580506feca

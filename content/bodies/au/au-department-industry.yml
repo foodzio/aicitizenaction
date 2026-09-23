@@ -23,6 +23,20 @@ facts:
   tags:
     - law
     - record
+  topics:
+    - international
+    - safety-testing
+    - transparency
+  powers:
+    - advise
+    - publish
+  routing_evidence:
+    topics:international: coordination of Australia's international AI engagement including GPAI
+    topics:safety-testing: A temporary AI Expert Group advised on testing, transparency and accountability for high-risk AI.
+    topics:transparency: A temporary AI Expert Group advised on testing, transparency and accountability for high-risk AI.
+    powers:advise: A temporary AI Expert Group advised on testing, transparency and accountability for high-risk AI.
+    powers:publish: Government response to the Senate Select Committee on Adopting AI report is published at industry.gov.au/publications.
+  routing_review: drafted
 strings:
   name: Department of Industry, Science and Resources — AI policy function, National AI Centre and AI Expert Group
   ai_jurisdiction: "The Commonwealth department that owns AI policy: the safe and responsible AI consultation and the Government's interim response, the proposed mandatory guardrails for high-risk AI, the AI Adopt Program, and coordination of Australia's international AI engagement including GPAI. The National Artificial Intelligence Centre, hosted at CSIRO's Data61, 'coordinates Australia's AI expertise and capabilities to address barriers for small and medium enterprises'. A temporary AI Expert Group advised on testing, transparency and accountability for high-risk AI."
@@ -45,8 +59,6 @@ meta:
     - url: https://www.industry.gov.au/publications/australian-government-response-senate-select-committee-adopting-artificial-intelligence-ai-report
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 8e6d55b470
   research_order: 110

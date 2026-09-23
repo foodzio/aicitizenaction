@@ -36,6 +36,16 @@ facts:
       party: D
       region: MS
       verified_on: 2026-09-22
+  topics:
+    - security
+  powers:
+    - hold-hearings
+    - oversee
+  routing_evidence:
+    topics:security: AI threats to critical infrastructure, AI-enabled cyberattacks
+    powers:hold-hearings: 21 Jan 2026 oversight hearing with CISA, TSA and DHS S&T
+    powers:oversee: 21 Jan 2026 oversight hearing with CISA, TSA and DHS S&T
+  routing_review: drafted
 strings:
   name: House Committee on Homeland Security
   ai_jurisdiction: "DHS, CISA, TSA and DHS Science and Technology. Send here: AI threats to critical infrastructure, AI-enabled cyberattacks, securing AI systems used in government and industry, AI in border and screening operations, AI and CBRN threat detection, and the AI capabilities of adversary states as a homeland-security matter."
@@ -56,8 +66,6 @@ meta:
     - url: https://homeland.house.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 09dcd2f839
   research_order: 32

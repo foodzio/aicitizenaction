@@ -40,6 +40,26 @@ facts:
     - harm
     - law
     - systemic
+  topics:
+    - privacy
+    - deepfakes
+    - children
+    - liability
+    - transparency
+  powers:
+    - hold-hearings
+    - compel
+    - legislate
+  routing_evidence:
+    topics:privacy: Oversight of privacy, technology and civil-liberties aspects of AI.
+    topics:deepfakes: hearings on AI-generated deepfakes
+    topics:children: chatbot harms to minors
+    topics:liability: legislates on liability, transparency and privacy
+    topics:transparency: legislates on liability, transparency and privacy
+    powers:hold-hearings: Held the 2023 'Oversight of A.I.' hearing series
+    powers:compel: Can subpoena and compel testimony
+    powers:legislate: legislates on liability, transparency and privacy
+  routing_review: drafted
 strings:
   name: U.S. Senate Committee on the Judiciary — Subcommittee on Privacy, Technology, and the Law
   remit: Oversight of privacy, technology and civil-liberties aspects of AI. Held the 2023 'Oversight of A.I.' hearing series and the bipartisan framework work on AI regulation, and has since run hearings on AI-generated deepfakes and chatbot harms to minors. Can subpoena and compel testimony; legislates on liability, transparency and privacy. No adjudicative power over individuals' complaints.
@@ -72,8 +92,6 @@ meta:
     - url: https://www.judiciary.senate.gov/
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 139ff3db76
   research_order: 158

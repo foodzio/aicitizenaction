@@ -36,6 +36,11 @@ facts:
       party: D
       region: AZ
       verified_on: 2026-09-22
+  topics:
+    - safety-testing
+  routing_evidence:
+    topics:safety-testing: DOE's role in AI compute and model evaluation
+  routing_review: drafted
 strings:
   name: Subcommittee on Energy
   ai_jurisdiction: DOE programs, the national laboratories, grid reliability and electricity markets — the subcommittee-level venue for data-center load growth, transmission, and DOE's role in AI compute and model evaluation.
@@ -57,7 +62,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: c30de59f64
   research_order: 19

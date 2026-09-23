@@ -31,6 +31,16 @@ facts:
       name: Brian J. Feldman
       party: D
       verified_on: 2026-09-22
+  topics:
+    - children
+    - government-use
+  powers:
+    - legislate
+  routing_evidence:
+    topics:children: Senate committee of reference for AI in education
+    topics:government-use: state AI governance
+    powers:legislate: Senate committee of reference for AI in education, state AI governance and technology policy bills
+  routing_review: drafted
 strings:
   name: Senate Education, Energy, and the Environment Committee (EEE)
   ai_jurisdiction: Senate committee of reference for AI in education, state AI governance and technology policy bills.
@@ -53,8 +63,6 @@ meta:
     - url: https://mgaleg.maryland.gov/pubs-current/current-ecm-faqs.pdf
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: daac8e323c
   research_order: 75

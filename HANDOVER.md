@@ -29,7 +29,7 @@ Tracked in git and committed with every step.
 | 0 — Architecture fixed | done | |
 | A — Validate with five users | blocked | Needs owner answers to brief Q1–4 and five real participants. A testable path prototype can still be built (see phase 3b) |
 | 1 — Schemas and migration | **done** | 423 records, all counts preserved, 22 tests pass |
-| 1b — Routing research | **in progress** | `powers` vocab, `apply-routing-drafts.mjs` (verbatim-quote check), topic-aware routing for reviewed records done; five agents drafting topics/not_topics/powers for 250 bodies into /tmp/claude-503/drafts-*.json (not yet applied) |
+| 1b — Routing research | **drafted; human review not started** | 222 of 250 bodies have drafted topics/not_topics/powers with verbatim evidence (`routing_review: drafted`). Routing ignores them until a person marks a record `reviewed`. Reviewer guide + notes: `docs/routing-drafts-report.md` |
 | 2 — CI checks, CODEOWNERS | **done** (local) | Workflows written, not run on GitHub (nothing pushed). GitHub settings documented in `docs/github-setup.md`, not applied |
 | 3a — Reference site | **done** | Directory, record pages, about, data API, version endpoint. Measurement hook built in, sends nothing (decision 6 still open) |
 | 3b — Door, path, draft | **built as a testable first version** | Door, 4-step path with URL state, draft with own words, insider stop, honest floor. Usable for phase A testing; revise after phase A and 1b |
@@ -65,9 +65,16 @@ Tracked in git and committed with every step.
 23. **The maintainer (catch-all CODEOWNERS owner) is never sent inactivity check-ins.** Team/alumni membership changes stay manual — the script only opens issues.
 24. **Freshness report posts to Discussions only if the owner sets repo variable `DISCUSSION_CATEGORY_ID`**; otherwise it goes to the workflow summary.
 25. **Open decision 8 given a reversible default: French as the pilot language**, fully gated. All French text is my machine draft (`machine: true`); nothing is public or indexed until a French steward approves.
+26. **Routing drafts made by five language-model agents** from each record's own text only, then machine-checked (every value backed by an exact quote; 0 dropped). Marked `drafted`; nothing uses them until reviewed. Topic vocabulary gained `online-safety`, `environment`, `finance` from gaps the agents reported.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-23T00:19:54Z — Phase 1b: routing drafts applied
+
+- Applied `/tmp/claude-503/drafts-*.json` with `scripts/apply-routing-drafts.mjs`: 222 of 250 bodies; 415 topics, 31 excluded topics, 407 powers; 0 values dropped by the quote check. 28 bodies got nothing (portals, methods, bodies not yet constituted, policy-only ministries) — they keep `meta.needs_research`.
+- `docs/routing-drafts-report.md`: how to review, plus every agent's reviewer note per record (e.g. powers_text overstating compel/investigate for several bodies; future-tense powers; merged three-agency California record).
+- Agents' recurring observation worth a human decision: the research field `powers_text` often claims stronger powers than the rest of the record supports.
 
 ### 2026-09-23T00:18:56Z — Path improvement + phase A kit
 
@@ -183,7 +190,7 @@ re-aimed at the alarmed non-expert rather than someone with evidence.
 ## How to resume
 
 1. `npm install && npm run check` — must show 0 errors and all tests passing.
-2. Next step: **phase 1b** routing research drafts (topics/not_topics per committee from `ai_jurisdiction`, marked `routing_review: drafted`), then phase 7 readiness (accessibility pass).
+2. Remaining work needs people: review routing drafts (`docs/routing-drafts-report.md`), confirm the 40 suspected duplicates (`docs/migration-report.md`), editor review of the 8 draft-published and 91 pending Resources items, run phase A (`docs/phase-a-test-kit.md`), French steward review, and the owner decisions below. Engineering follow-ups are listed under \"What to watch\".
 3. Never edit `input/`. Never deploy without asking the owner.
 
 Reference prototypes (published, private):
@@ -192,4 +199,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T00:18:56Z
+Last modified: 2026-09-23T00:19:54Z

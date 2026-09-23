@@ -25,6 +25,19 @@ facts:
   public_input: open
   tags:
     - harm
+  topics:
+    - deepfakes
+    - transparency
+  not_topics:
+    - frontier-ai
+  powers:
+    - handle-complaints
+  routing_evidence:
+    topics:deepfakes: unlabelled or non-compliant AI-generated content falls within its scope
+    topics:transparency: unlabelled or non-compliant AI-generated content falls within its scope
+    not_topics:frontier-ai: A foreigner raising a frontier-safety concern here would be using the wrong instrument entirely
+    powers:handle-complaints: CAC's public reporting channel for illegal and harmful online information.
+  routing_review: drafted
 strings:
   name: China Internet Illegal and Harmful Information Reporting Centre (12377)
   remit: CAC's public reporting channel for illegal and harmful online information. Under the Labelling Measures for AI-Generated Synthetic Content and the Generative AI Interim Measures, unlabelled or non-compliant AI-generated content falls within its scope. Reports feed CAC enforcement, which can compel takedown and service suspension.
@@ -44,10 +57,6 @@ meta:
   sources:
     - url: https://www.12377.cn/
       checked: null
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: c04600e6cc
   research_order: 46
   migrated_from: input/data/institutions.json

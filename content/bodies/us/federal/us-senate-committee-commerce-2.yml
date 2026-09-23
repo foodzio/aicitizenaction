@@ -37,6 +37,43 @@ facts:
       party: D
       region: WA
       verified_on: 2026-09-22
+  topics:
+    - frontier-ai
+    - safety-testing
+    - preemption
+    - transparency
+    - children
+    - deepfakes
+    - standards
+    - privacy
+    - consumer-protection
+  not_topics:
+    - copyright
+    - liability
+    - government-use
+    - military-ai
+    - export-controls
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:frontier-ai: general-purpose/frontier AI regulation
+    topics:safety-testing: AI safety testing and evaluation mandates
+    topics:preemption: federal preemption of state AI laws
+    topics:transparency: AI transparency and disclosure rules
+    topics:children: chatbots and minors
+    topics:deepfakes: deepfakes/NCII
+    topics:standards: NIST and the Center for AI Standards and Innovation (CAISI)
+    topics:privacy: commercial data privacy
+    topics:consumer-protection: consumer protection, unfair/deceptive AI practices
+    not_topics:copyright: "NOT here: copyright, liability/private rights of action, or DOJ (Judiciary)"
+    not_topics:liability: "NOT here: copyright, liability/private rights of action, or DOJ (Judiciary)"
+    not_topics:government-use: federal agency internal AI use (HSGAC)
+    not_topics:military-ai: military AI (Armed Services)
+    not_topics:export-controls: AI chip export controls (Banking)
+    powers:legislate: 5 Aug 2026 markup advanced S.1748 Kids Online Safety Act
+    powers:hold-hearings: "Hearing 'Intelligent Networks: Powering Artificial Intelligence and Transforming Communications' (30 Jul 2026)"
+  routing_review: drafted
 strings:
   name: Senate Committee on Commerce, Science, and Transportation
   ai_jurisdiction: "The single most important AI door in the Senate. Owns the FTC (consumer protection, unfair/deceptive AI practices), NIST and the Center for AI Standards and Innovation (CAISI), NTIA, NSF, NOAA, the FCC, interstate commerce generally, and commercial data privacy. Send here: general-purpose/frontier AI regulation, AI safety testing and evaluation mandates, federal preemption of state AI laws, AI transparency and disclosure rules, chatbots and minors, deepfakes/NCII, AI standards, commercial data privacy, autonomous vehicles, and AI in telecom. NOT here: copyright, liability/private rights of action, or DOJ (Judiciary); federal agency internal AI use (HSGAC); military AI (Armed Services); AI chip export controls (Banking)."
@@ -56,10 +93,6 @@ meta:
       checked: 2026-09-22
     - url: https://www.commerce.senate.gov/
       checked: 2026-09-22
-  needs_research:
-    - powers
-    - topics
-    - not_topics
   legacy_id: 72df6721b2
   research_order: 0
   migrated_from: input/data/committees-and-organisations.json#seats

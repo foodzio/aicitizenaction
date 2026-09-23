@@ -26,6 +26,13 @@ facts:
     - role: chair
       name: Dr Allison Gardner MP (Labour, Stoke-on-Trent South)
       verified_on: 2026-09-22
+  powers:
+    - convene
+    - publish
+  routing_evidence:
+    powers:convene: it convenes ministers, officials and MPs
+    powers:publish: publishes reports
+  routing_review: drafted
 strings:
   name: All-Party Parliamentary Group on Artificial Intelligence (APPG AI)
   ai_jurisdiction: "Cross-party, cross-House informal group. Its registered purpose: 'The APPG explores the social, economic and societal impact and implications of artificial intelligence.' It has no formal powers but it convenes ministers, officials and MPs, runs evidence sessions and publishes reports — and unlike a select committee it is genuinely open to unsolicited outside contact."
@@ -50,7 +57,6 @@ meta:
     - url: https://bicpavilion.com/about_pavilion/appg-artificial-intelligence
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 3952764d2c

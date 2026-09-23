@@ -29,6 +29,11 @@ facts:
     - role: chair
       name: Louise O'Reilly, TD (Sinn Féin)
       verified_on: 2026-09-22
+  powers:
+    - handle-complaints
+  routing_evidence:
+    powers:handle-complaints: A special Committee of TDs and Senators, the Committee on Public Petitions, will consider your petition.
+  routing_review: drafted
 strings:
   name: Committee on Public Petitions and the Ombudsmen (Houses of the Oireachtas)
   ai_jurisdiction: No AI remit of its own; it is Ireland's citizen-initiated route into the Oireachtas. An AI-related petition — on enforcement of the EU AI Act in Ireland, on data centres, on algorithmic decision-making by a public body — is considered here and can be referred onward to the Joint Committee on Artificial Intelligence.
@@ -53,7 +58,6 @@ meta:
     - url: https://www.oireachtas.ie/en/committees/making-a-submission/
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 3df62beba3

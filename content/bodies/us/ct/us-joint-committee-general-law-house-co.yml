@@ -31,6 +31,16 @@ facts:
       name: Roland J. Lemar
       party: D
       verified_on: 2026-09-22
+  topics:
+    - consumer-protection
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:consumer-protection: House-side leadership for AI and consumer-protection bills
+    powers:legislate: House-side leadership for AI and consumer-protection bills
+    powers:hold-hearings: one submission covers the joint hearing for both chambers
+  routing_review: drafted
 strings:
   name: Joint Committee on General Law — House co-chair
   ai_jurisdiction: Same joint committee; House-side leadership for AI and consumer-protection bills.
@@ -53,8 +63,6 @@ meta:
     - url: https://cga.ct.gov/aspx/CGATestimonySub/CGAtestimonysubmission.aspx?comm_code=gl
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: f79299135d
   research_order: 66

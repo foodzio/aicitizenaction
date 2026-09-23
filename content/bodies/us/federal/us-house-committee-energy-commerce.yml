@@ -35,6 +35,24 @@ facts:
       party: D
       region: NJ
       verified_on: 2026-09-22
+  topics:
+    - preemption
+    - privacy
+    - consumer-protection
+    - children
+    - health
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:preemption: preemption of state AI laws
+    topics:privacy: commercial data privacy
+    topics:consumer-protection: AI consumer protection and deceptive practices
+    topics:children: AI and kids
+    topics:health: AI in health care
+    powers:legislate: The broadest authorizing jurisdiction in the House
+    powers:hold-hearings: "'AI and the Grid: Meeting Growing Power Demand While Protecting Ratepayers' (Energy Subcommittee)"
+  routing_review: drafted
 strings:
   name: House Committee on Energy and Commerce
   ai_jurisdiction: "The broadest authorizing jurisdiction in the House and the main House counterpart to Senate Commerce. Owns the FTC, FCC, NTIA, interstate commerce, consumer protection, telecommunications, electricity and the grid, and health (FDA/HHS). Send here: comprehensive federal AI legislation and preemption of state AI laws, commercial data privacy, AI consumer protection and deceptive practices, AI and kids, AI's electricity demand and ratepayer impact, AI in health care, and communications infrastructure for AI."
@@ -55,8 +73,6 @@ meta:
     - url: https://energycommerce.house.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 1e6dd17906
   research_order: 23

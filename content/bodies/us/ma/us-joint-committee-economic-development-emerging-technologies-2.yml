@@ -31,6 +31,11 @@ facts:
       name: Carole A. Fiola
       party: D
       verified_on: 2026-09-22
+  topics:
+    - frontier-ai
+  routing_evidence:
+    topics:frontier-ai: House-side leadership on the frontier-AI provisions of the economic development bill
+  routing_review: drafted
 strings:
   name: Joint Committee on Economic Development and Emerging Technologies — House chair
   ai_jurisdiction: House-side leadership on the frontier-AI provisions of the economic development bill.
@@ -54,7 +59,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: f4f08f7875
   research_order: 70

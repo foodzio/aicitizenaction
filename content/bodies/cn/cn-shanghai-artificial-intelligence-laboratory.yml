@@ -42,6 +42,18 @@ facts:
   tags:
     - harm
     - systemic
+  topics:
+    - frontier-ai
+    - safety-testing
+  powers:
+    - test-models
+    - publish
+  routing_evidence:
+    topics:frontier-ai: the most substantive frontier-safety research operation in China
+    topics:safety-testing: an accompanying technical risk-analysis report assessing frontier models against cyber-offence, biological/chemical, persuasion, and loss-of-control risk categories
+    powers:test-models: an accompanying technical risk-analysis report assessing frontier models against cyber-offence, biological/chemical, persuasion, and loss-of-control risk categories
+    powers:publish: Published a Frontier AI Risk Management Framework
+  routing_review: drafted
 strings:
   name: Shanghai Artificial Intelligence Laboratory (Shanghai AI Lab)
   remit: State-backed AI research laboratory, a CnAISDA member, and the most substantive frontier-safety research operation in China. Published a Frontier AI Risk Management Framework (v1.0, with Concordia AI) and an accompanying technical risk-analysis report assessing frontier models against cyber-offence, biological/chemical, persuasion, and loss-of-control risk categories — methodologically comparable to Western frontier safety frameworks. Also produced the AI-45° Law / SafeWork line of research on co-evolving safety and capability. Pure research; no regulatory power.
@@ -74,8 +86,6 @@ meta:
     - url: https://arxiv.org/abs/2507.16534
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 4ea37993d0
   research_order: 51

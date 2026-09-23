@@ -49,6 +49,22 @@ facts:
   public_input: open
   tags:
     - systemic
+  topics:
+    - standards
+    - deepfakes
+    - transparency
+    - security
+  powers:
+    - set-standards
+    - publish
+  routing_evidence:
+    topics:standards: The standards body that writes China's operative AI safety rules in technical form.
+    topics:deepfakes: Practice Guides on labelling AI-generated synthetic content
+    topics:transparency: Practice Guides on labelling AI-generated synthetic content
+    topics:security: general principles for AI application security
+    powers:set-standards: The standards body that writes China's operative AI safety rules in technical form.
+    powers:publish: Produced the AI Safety Governance Framework (1.0 Sept 2024, 2.0 Sept 2025)
+  routing_review: drafted
 strings:
   name: National Information Security Standardization Technical Committee (TC260)
   remit: The standards body that writes China's operative AI safety rules in technical form. Secretariat at the China Electronics Standardization Institute (中国电子技术标准化研究院), under CAC/SAMR guidance. Produced the AI Safety Governance Framework (1.0 Sept 2024, 2.0 Sept 2025), the Ethical Security Guidelines for AI Applications (TC260-005), Practice Guides on labelling AI-generated synthetic content, and in 2026 a draft Practice Guide on general principles for AI application security (TC260-PG-2026NA, 征求意见稿 v1.0, Jan 2026) and a draft development-security guide for agent systems (智能体系统开发安全指南, Sept 2026). Its recommended national standards (GB/T) become de facto mandatory through CAC filing requirements.
@@ -81,8 +97,6 @@ meta:
     - url: https://www.tc260.org.cn/tc260/bzzqyj/yjzj_list.shtml
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 79367b0d46
   research_order: 48

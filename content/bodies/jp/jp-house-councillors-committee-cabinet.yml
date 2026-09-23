@@ -31,6 +31,18 @@ facts:
     - role: chair
       name: KITAMURA Tsuneo (北村経夫)
       verified_on: 2026-09-21
+  topics:
+    - privacy
+  powers:
+    - legislate
+    - oversee
+    - hold-hearings
+  routing_evidence:
+    topics:privacy: personal information protection
+    powers:legislate: Reviews AI legislation after Lower House passage.
+    powers:oversee: AI Act implementation oversight
+    powers:hold-hearings: 参考人 (expert witness) appearance by committee invitation only
+  routing_review: drafted
 strings:
   name: House of Councillors Committee on Cabinet
   ai_jurisdiction: "Upper-house counterpart. Same jurisdiction: Cabinet Office bills including AI, science and technology policy, digital, personal information protection. Reviews AI legislation after Lower House passage."
@@ -54,8 +66,6 @@ meta:
     - url: https://www.sangiin.go.jp/japanese/joho1/kousei/konkokkai/current/list/l0063.htm
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 2cc3971aaf
   research_order: 126

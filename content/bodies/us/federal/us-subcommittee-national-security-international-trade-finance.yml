@@ -36,6 +36,11 @@ facts:
       party: D
       region: NJ
       verified_on: 2026-09-22
+  topics:
+    - export-controls
+  routing_evidence:
+    topics:export-controls: chip and semiconductor-tooling controls
+  routing_review: drafted
 strings:
   name: Subcommittee on National Security and International Trade and Finance
   ai_jurisdiction: "The export-control workbench within Banking: BIS authorities and resourcing, entity-list designations, chip and semiconductor-tooling controls, outbound investment screening, and sanctions touching AI supply chains."
@@ -57,7 +62,6 @@ meta:
       checked: 2026-09-22
   needs_research:
     - powers
-    - topics
     - not_topics
   legacy_id: 58e424bc66
   research_order: 10

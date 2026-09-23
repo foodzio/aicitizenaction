@@ -53,6 +53,24 @@ facts:
   tags:
     - harm
     - systemic
+  topics:
+    - security
+    - safety-testing
+    - frontier-ai
+    - standards
+    - international
+  powers:
+    - test-models
+    - set-standards
+  routing_evidence:
+    topics:security: Develops guidelines/best practices to measure and improve AI system security
+    topics:safety-testing: leads unclassified evaluations of AI capabilities that may pose national-security risk
+    topics:frontier-ai: Its testing relationships with frontier labs are voluntary MOUs
+    topics:standards: represents US positions in international AI standards fora
+    topics:international: represents US positions in international AI standards fora
+    powers:test-models: leads unclassified evaluations of AI capabilities that may pose national-security risk
+    powers:set-standards: Develops guidelines/best practices to measure and improve AI system security
+  routing_review: drafted
 strings:
   name: Center for AI Standards and Innovation (CAISI)
   remit: "RENAMED: was the 'U.S. AI Safety Institute' until 4 June 2025, when Commerce Secretary Lutnick renamed and re-scoped it as CAISI. Develops guidelines/best practices to measure and improve AI system security; leads unclassified evaluations of AI capabilities that may pose national-security risk (cybersecurity, biosecurity, chemical weapons); enters VOLUNTARY agreements with private AI developers and evaluators for pre/post-deployment testing; coordinates with DoD, DOE, DHS and the IC; represents US positions in international AI standards fora. Also runs an AI Agent Standards Initiative (announced Feb 2026)."
@@ -89,8 +107,6 @@ meta:
     - url: https://www.nist.gov/artificial-intelligence/nist-ai-consortium/submit-letter-interest-join-nist-ai-consortium
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 957be4906f
   research_order: 145

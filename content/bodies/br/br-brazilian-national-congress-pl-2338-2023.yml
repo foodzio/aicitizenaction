@@ -34,6 +34,16 @@ facts:
   tags:
     - law
     - systemic
+  topics:
+    - frontier-ai
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:frontier-ai: creates obligations for 'high-risk' and general-purpose systems
+    powers:legislate: Approved by the Federal Senate in December 2024, then sent to the Chamber of Deputies
+    powers:hold-hearings: Committee hearings have taken evidence from industry and civil society.
+  routing_review: drafted
 strings:
   name: Brazilian National Congress — PL 2338/2023 (Marco Legal da Inteligência Artificial)
   remit: "STATUS AS OF SEPT 2026: NOT YET LAW. Approved by the Federal Senate in December 2024, then sent to the Chamber of Deputies where a Comissão Especial sobre Inteligência Artificial was constituted. The final vote slipped repeatedly — pushed to December 2025, then to 2026, amid political deadlock and sustained criticism of the text. The Senate-approved version is risk-tiered on an EU-AI-Act model, prohibits certain uses, creates obligations for 'high-risk' and general-purpose systems, and contemplates fines reaching BRL 50 million per infraction. Until enacted it confers no powers on anyone."
@@ -60,8 +70,6 @@ meta:
     - url: https://www2.camara.leg.br/atividade-legislativa/comissoes/comissoes-temporarias/especiais/57a-legislatura/comissao-especial-sobre-inteligencia-artificial-pl-2338-23
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: "418515e844"
   research_order: 54

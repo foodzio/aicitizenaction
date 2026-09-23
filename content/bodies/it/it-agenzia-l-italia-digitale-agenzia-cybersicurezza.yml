@@ -33,6 +33,13 @@ facts:
   tags:
     - harm
     - systemic
+  powers:
+    - enforce
+    - handle-complaints
+  routing_evidence:
+    powers:enforce: ACN is a genuine enforcement authority
+    powers:handle-complaints: Article 85 gives ANY person the right to lodge a complaint, with no nationality requirement
+  routing_review: drafted
 strings:
   name: Agenzia per l'Italia Digitale (AgID) and Agenzia per la Cybersicurezza Nazionale (ACN) — Italian national AI authorities
   remit: Law No. 132 of 23 September 2025 ('Disposizioni e deleghe al Governo in materia di intelligenza artificiale') made Italy the first EU member state with a national AI statute layered on the EU AI Act. It designates AgID as the notifying authority (promotion, notification of conformity-assessment bodies) and ACN as the market-surveillance authority (inspection and sanction powers under the AI Act). Implementing decrees on governance, training, biometrics and liability were being adopted through 2026. Banca d'Italia, CONSOB, IVASS and Garante Privacy retain sectoral competence. ACN is a genuine enforcement authority; AgID is largely administrative.
@@ -57,7 +64,6 @@ meta:
     - url: https://www.agid.gov.it/en/intervention-areas/artificial-intelligence
       checked: null
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 526b1a8438

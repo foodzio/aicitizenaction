@@ -37,6 +37,16 @@ facts:
       party: D
       region: OH
       verified_on: 2026-09-22
+  topics:
+    - government-use
+  powers:
+    - oversee
+    - hold-hearings
+  routing_evidence:
+    topics:government-use: Oversight of federal science agencies' AI programs
+    powers:oversee: Oversight of federal science agencies' AI programs
+    powers:hold-hearings: This subcommittee previously held the joint hearing
+  routing_review: drafted
 strings:
   name: Subcommittee on Investigations and Oversight
   ai_jurisdiction: Oversight of federal science agencies' AI programs — whether NIST, NSF, DOE and OSTP are actually doing what statute directs on AI, research security, and foreign influence in federally funded AI research.
@@ -57,8 +67,6 @@ meta:
     - url: https://science.house.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: a608ae62f6
   research_order: 29

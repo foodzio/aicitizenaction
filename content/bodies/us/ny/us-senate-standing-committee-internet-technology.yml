@@ -31,6 +31,22 @@ facts:
       name: Kristen Gonzalez
       party: D/WF
       verified_on: 2026-09-22
+  topics:
+    - frontier-ai
+    - transparency
+    - children
+    - work
+  powers:
+    - legislate
+    - hold-hearings
+  routing_evidence:
+    topics:frontier-ai: frontier-model safety
+    topics:transparency: AI training-data transparency
+    topics:children: companion chatbots + 5-year AI children's-toy moratorium
+    topics:work: AI employment-impact reporting
+    powers:legislate: Lead Senate committee for AI, frontier-model safety
+    powers:hold-hearings: Held a dedicated public hearing on AI in consequential/high-risk contexts on 15 Jan 2026
+  routing_review: drafted
 strings:
   name: Senate Standing Committee on Internet and Technology
   ai_jurisdiction: Lead Senate committee for AI, frontier-model safety, algorithmic pricing, AI training-data transparency and companion-chatbot bills. Held a dedicated public hearing on AI in consequential/high-risk contexts on 15 Jan 2026.
@@ -53,8 +69,6 @@ meta:
     - url: https://www.nysenate.gov/citizen-guide
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: 8912a0c9ab
   research_order: 54

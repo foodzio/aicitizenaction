@@ -31,6 +31,16 @@ facts:
   tags:
     - flaw
     - systemic
+  topics:
+    - transparency
+    - frontier-ai
+  powers:
+    - publish
+  routing_evidence:
+    topics:transparency: Voluntary transparency reporting
+    topics:frontier-ai: for organisations developing advanced AI
+    powers:publish: reports are published on a public portal
+  routing_review: drafted
 strings:
   name: G7 Hiroshima AI Process (HAIP) Reporting Framework
   remit: Voluntary transparency reporting against the G7 Hiroshima Code of Conduct for organisations developing advanced AI. Launched by the OECD Feb 2025; first reports published April 2025; a streamlined version for SMEs launched May 2026. Companies self-report on risk identification, incident handling, security, content authentication and governance; reports are published on a public portal.
@@ -56,8 +66,6 @@ meta:
     - url: https://oecd.ai/en/hiroshima
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: e0ae8f3d49
   research_order: 81

@@ -30,6 +30,20 @@ facts:
     - role: chair
       name: KIM Myuhngjoo
       verified_on: 2026-09-22
+  topics:
+    - safety-testing
+    - standards
+    - international
+  powers:
+    - test-models
+    - set-standards
+  routing_evidence:
+    topics:safety-testing: evaluate AI risk and develop safety standards
+    topics:standards: evaluate AI risk and develop safety standards
+    topics:international: Korea's node in the International Network of AI Safety Institutes
+    powers:test-models: Statutory body established under the AI Framework Act to evaluate AI risk
+    powers:set-standards: Work programme covers AI safety policy, evaluation methodology
+  routing_review: drafted
 strings:
   name: AI Safety Institute (Korea AISI)
   ai_jurisdiction: Statutory body established under the AI Framework Act to evaluate AI risk and develop safety standards. Korea's node in the International Network of AI Safety Institutes. Co-produced the bilingual Korea AI Basic Act resource with the Future of Life Institute.
@@ -55,8 +69,6 @@ meta:
     - url: https://www.aisi.re.kr/eng
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: c1ddf99070
   research_order: 136

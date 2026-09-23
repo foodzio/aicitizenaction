@@ -35,6 +35,11 @@ facts:
       party: D
       region: NM
       verified_on: 2026-09-22
+  powers:
+    - hold-hearings
+  routing_evidence:
+    powers:hold-hearings: the committee has held hearings on AI data centers and electricity demand
+  routing_review: drafted
 strings:
   name: Senate Committee on Energy and Natural Resources
   ai_jurisdiction: "The power behind AI. Send here: data-center electricity demand and who pays for it, grid interconnection queues, DOE national laboratories as AI compute and evaluation venues, DOE AI programs, nuclear and geothermal siting for AI loads, and ratepayer protection when utilities serve hyperscale data centers. This has become one of the busiest AI-adjacent committees because energy is the binding constraint on AI buildout."
@@ -55,7 +60,6 @@ meta:
     - url: https://www.energy.senate.gov/
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 0aee9a545c

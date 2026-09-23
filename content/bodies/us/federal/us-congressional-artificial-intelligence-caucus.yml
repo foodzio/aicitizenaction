@@ -32,6 +32,13 @@ facts:
   tags:
     - law
     - systemic
+  powers:
+    - convene
+    - advise
+  routing_evidence:
+    powers:convene: to convene experts from academia, government and industry for member briefings
+    powers:advise: Exists to 'inform policymakers of the technological, economic, and social impacts of advances in AI'
+  routing_review: drafted
 strings:
   name: Congressional Artificial Intelligence Caucus
   remit: An informal caucus, NOT a committee. Exists to 'inform policymakers of the technological, economic, and social impacts of advances in AI' and to convene experts from academia, government and industry for member briefings. It has no jurisdiction, no staff of its own beyond member offices, no subpoena power and no ability to legislate as a body. Co-chairs announced vice-chairs and a core initiative in a recent Congress.
@@ -56,7 +63,6 @@ meta:
     - url: https://artificialintelligencecaucus-beyer.house.gov/
       checked: null
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: 97606cd792

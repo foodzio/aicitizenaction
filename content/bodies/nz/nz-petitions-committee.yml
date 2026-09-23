@@ -28,6 +28,13 @@ facts:
     - role: chair
       name: Greg O'Connor, MP (Labour Party, Ōhāriu)
       verified_on: 2026-09-22
+  powers:
+    - hold-hearings
+    - publish
+  routing_evidence:
+    powers:hold-hearings: invite the petitioner to speak in person
+    powers:publish: The committee either publishes a report to Parliament on every petition it considers
+  routing_review: drafted
 strings:
   name: Petitions Committee (54th Parliament)
   ai_jurisdiction: No AI subject matter of its own, but it is the door through which a member of the public — including a single individual — puts a new issue such as AI regulation onto Parliament's agenda when no inquiry is open. It can refer a petition to a subject committee such as Economic Development, Science and Innovation, refer it to a Minister for response, or nominate it for debate in the House.
@@ -52,7 +59,6 @@ meta:
     - url: https://www.parliament.nz/en/pb/petitions/
       checked: 2026-09-22
   needs_research:
-    - powers
     - topics
     - not_topics
   legacy_id: a92f7cd0c4

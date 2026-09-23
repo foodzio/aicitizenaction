@@ -25,6 +25,14 @@ facts:
   tags:
     - audit
     - law
+  topics:
+    - consumer-protection
+  powers:
+    - legislate
+  routing_evidence:
+    topics:consumer-protection: AI consumer-protection and companion-chatbot bills
+    powers:legislate: Senate committee of referral for AI consumer-protection and companion-chatbot bills
+  routing_review: drafted
 strings:
   name: Senate Commerce Committee
   ai_jurisdiction: Senate committee of referral for AI consumer-protection and companion-chatbot bills.
@@ -47,8 +55,6 @@ meta:
     - url: https://njleg.gov/committee-registrations
       checked: null
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: dbec09ee4c
   research_order: 78

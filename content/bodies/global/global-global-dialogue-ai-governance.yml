@@ -51,6 +51,14 @@ facts:
   public_input: open
   tags:
     - systemic
+  topics:
+    - international
+  powers:
+    - convene
+  routing_evidence:
+    topics:international: Intergovernmental-plus-multistakeholder forum
+    powers:convene: Intergovernmental-plus-multistakeholder forum
+  routing_review: drafted
 strings:
   name: Global Dialogue on AI Governance (UN)
   remit: "Intergovernmental-plus-multistakeholder forum established alongside the Scientific Panel by the Aug 2025 UNGA resolution. Inaugural session held Geneva 6–7 July 2026 (alongside the ITU AI for Good Summit); Co-Chairs' Summary covered four clusters: AI opportunities/implications, bridging AI divides, safe and trustworthy systems, human rights. Joint Secretariat is ITU + ODET + UNESCO. Second session: New York, 3–4 May 2027."
@@ -93,8 +101,6 @@ meta:
     - url: https://www.digitalcooperationfund.org/dialogue
       checked: 2026-09-22
   needs_research:
-    - powers
-    - topics
     - not_topics
   legacy_id: ee37337008
   research_order: 74
