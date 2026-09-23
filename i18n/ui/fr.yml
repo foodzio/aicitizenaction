@@ -1,0 +1,708 @@
+# Interface strings for fr. Each entry: value (the translation), src (hash of the English it
+# was made from — set by scripts/i18n-sync.mjs --stamp), machine: true for unreviewed machine output.
+strings:
+  site:
+    name:
+      value: AI Citizen Action
+      src: b9db2dc0
+      machine: true
+    tagline:
+      value: Une action bien ciblée sur l'IA, en une seule fois.
+      src: 9b6e031b
+      machine: true
+    skip:
+      value: Aller au contenu
+      src: ac576a66
+      machine: true
+    nav_start:
+      value: Commencer
+      src: e4bb9f1e
+      machine: true
+    nav_resources:
+      value: Ressources
+      src: e89b30aa
+      machine: true
+    nav_directory:
+      value: Annuaire
+      src: c8f84c3c
+      machine: true
+    nav_about:
+      value: Comment ça marche
+      src: 9c870aa6
+      machine: true
+    footer_note:
+      value: Pas de compte, pas de liste de diffusion, pas de pistage. Chaque adresse indique si une personne l'a consultée, et quand.
+      src: 7b097b22
+      machine: true
+    footer_version:
+      value: Version
+      src: dd167905
+      machine: true
+    footer_freshness:
+      value: Ces informations sont-elles à jour ?
+      src: 74557b2b
+      machine: true
+    language:
+      value: Langue
+      src: a4fe6526
+      machine: true
+    draft_notice:
+      value: Le texte de cette page est un premier jet et n'a pas encore été relu.
+      src: 0d197ba1
+      machine: true
+    translation_fallback:
+      value: Pas encore traduit — affiché en anglais.
+      src: "6e975466"
+      machine: true
+    translation_machine:
+      value: Traduction automatique, pas encore relue.
+      src: 6320f19d
+      machine: true
+  door:
+    title:
+      value: Que voulez-vous qu'il se passe ?
+      src: d24ea023
+      machine: true
+    lede:
+      value: Pas besoin d'être expert. Votre avis compte parce que vous vivez avec les conséquences — pas parce que vous savez évaluer la technologie.
+      src: f4ccee11
+      machine: true
+    shape:
+      value: Trois étapes · environ quinze minutes · vous repartez avec un message prêt à envoyer
+      src: 89790a09
+      machine: true
+    trust:
+      value: Personne ne vous inscrira à quoi que ce soit, et rien de ce que vous tapez ne quitte votre appareil.
+      src: 97068d44
+      machine: true
+    browse:
+      value: Vous connaissez déjà le paysage ? Parcourez l'annuaire complet
+      src: c1edde06
+      machine: true
+  path:
+    step:
+      value: Étape
+      src: 8e6a6cca
+      machine: true
+    of:
+      value: sur
+      src: 28391d3b
+      machine: true
+    step1:
+      value: Où vous êtes
+      src: 54cd982f
+      machine: true
+    step2:
+      value: Qui peut agir
+      src: 4b76b839
+      machine: true
+    step3:
+      value: Votre message
+      src: 7a057bd9
+      machine: true
+    step4:
+      value: Terminé
+      src: 11a6767d
+      machine: true
+    where_question:
+      value: Où habitez-vous ?
+      src: 8a38c81b
+      machine: true
+    where_hint:
+      value: Cela détermine quelles institutions peuvent agir pour vous. Vous pourrez le changer plus tard.
+      src: 13b0a6d0
+      machine: true
+    where_state:
+      value: Quel État ? (facultatif)
+      src: 51c1ebb3
+      machine: true
+    where_skip:
+      value: Je préfère ne pas le dire
+      src: 7c973384
+      machine: true
+    where_any:
+      value: Ailleurs
+      src: 6fc42e1e
+      machine: true
+    show:
+      value: Voir qui peut agir
+      src: 48133f32
+      machine: true
+    back:
+      value: Retour
+      src: 76900f1b
+      machine: true
+    no_js:
+      value: Ce parcours guidé nécessite JavaScript. Vous pouvez toujours utiliser l'annuaire complet.
+      src: dd1581f9
+      machine: true
+    why_title:
+      value: Le meilleur destinataire
+      src: 5692b88f
+      machine: true
+    alternatives:
+      value: Ou choisissez plutôt l'un de ceux-ci
+      src: 257c73c5
+      machine: true
+    choose:
+      value: Choisir celui-ci
+      src: 715bbcde
+      machine: true
+    chosen:
+      value: Choisi
+      src: c6da331e
+      machine: true
+    can_do:
+      value: Ce qu'ils peuvent faire
+      src: 5161cce6
+      machine: true
+    leverage:
+      value: Influence réelle
+      src: "58750590"
+      machine: true
+    how_reach:
+      value: Comment les joindre
+      src: 05a49b09
+      machine: true
+    people:
+      value: Qui occupe les sièges
+      src: 70aa2b47
+      machine: true
+    checked:
+      value: Vérifié le
+      src: 0efd92a3
+      machine: true
+    membership:
+      value: Liste officielle et à jour des membres
+      src: 16a9e5c8
+      machine: true
+    details:
+      value: Fiche complète
+      src: 09f2fd27
+      machine: true
+    write:
+      value: Leur écrire
+      src: 41f35c6c
+      machine: true
+    floor_bloc:
+      value: Aucun organisme de votre pays n'a encore ce pouvoir. Les institutions de l'Union européenne l'ont, et elles acceptent les messages de toute personne vivant dans un État membre.
+      src: 270bad8e
+      machine: true
+    floor_global:
+      value: Nous n'avons pas trouvé d'organisme de votre pays ayant ce pouvoir. Ces organismes internationaux acceptent les messages de tout le monde. Vous pouvez aussi écrire à la commission du numérique de votre parlement — la méthode est dans l'annuaire.
+      src: f28a30b9
+      machine: true
+    none:
+      value: Nous n'avons encore trouvé personne qui puisse agir à ce sujet. C'est une lacune de nos recherches, pas de votre préoccupation — dites-le-nous.
+      src: acafb5bb
+      machine: true
+    own_words_title:
+      value: Pourquoi est-ce important pour vous ?
+      src: 4e37d40b
+      machine: true
+    own_words_missing:
+      value: "[Vos propres mots — pourquoi c'est important pour vous]"
+      src: f483b0d1
+      machine: true
+    draft_title:
+      value: Votre message
+      src: 7a057bd9
+      machine: true
+    draft_hint:
+      value: Modifiez ce que vous voulez. C'est le vôtre.
+      src: bbcfa109
+      machine: true
+    send_to:
+      value: À envoyer à
+      src: 7071fd5b
+      machine: true
+    copy:
+      value: Copier le message
+      src: 457efe53
+      machine: true
+    copied:
+      value: Copié
+      src: 8d525e5f
+      machine: true
+    download:
+      value: Télécharger en fichier texte
+      src: 0b566be2
+      machine: true
+    next_title:
+      value: Et ensuite ?
+      src: 8f9b77e6
+      machine: true
+    next_default:
+      value: Les équipes lisent les messages et enregistrent les positions. Un message court et personnel a plus de chances d'être lu qu'un long. Sans réponse au bout de quatre semaines, une relance polie est normale.
+      src: 59f6bf6d
+      machine: true
+    done_title:
+      value: C'est fait — vous l'avez fait.
+      src: e14ba11c
+      machine: true
+    done_body:
+      value: Envoyer un message bien ciblé est une action complète. Vous n'avez rien d'autre à faire aujourd'hui.
+      src: "29829e35"
+      machine: true
+    done_next:
+      value: Une étape de plus, si vous le souhaitez
+      src: a8ad7df5
+      machine: true
+    done_share:
+      value: Expliquez à une personne comment vous avez fait — envoyez-lui cette page.
+      src: 2c6473aa
+      machine: true
+    start_over:
+      value: Recommencer
+      src: 962e64b7
+      machine: true
+  verify:
+    "true":
+      value: Vérifié
+      src: 4f783840
+      machine: true
+    true_hint:
+      value: Quelqu'un a ouvert cette page et y a vu ce moyen de contact
+      src: 5dc24217
+      machine: true
+    "false":
+      value: Non vérifié
+      src: 33c8e8de
+      machine: true
+    false_hint:
+      value: Cité par une autre source, mais nous n'avons pas pu ouvrir la page. C'est une piste à confirmer, pas une adresse fiable
+      src: cff1223c
+      machine: true
+    "null":
+      value: Non contrôlé
+      src: 33fddd0e
+      machine: true
+    null_hint:
+      value: Repris tel que publié ; pas contrôlé de façon indépendante
+      src: 457485f4
+      machine: true
+    language:
+      value: Langue(s)
+      src: 2b7553ab
+      machine: true
+    overdue:
+      value: À revérifier depuis le
+      src: 3cef0478
+      machine: true
+    unsourced:
+      value: Pas encore de source — ne vous fiez pas à cette fiche
+      src: e3aaf502
+      machine: true
+  record:
+    type:
+      value: Type
+      src: baaddf70
+      machine: true
+    place:
+      value: Lieu
+      src: e9463dcc
+      machine: true
+    local_name:
+      value: Nom local
+      src: 8c3be4d4
+      machine: true
+    routes:
+      value: Comment les joindre
+      src: f9981496
+      machine: true
+    seats:
+      value: Sièges nominatifs
+      src: db77e897
+      machine: true
+    sources:
+      value: Sources
+      src: caf85b08
+      machine: true
+    report:
+      value: Une erreur ?
+      src: 833f1a76
+      machine: true
+    last_checked:
+      value: Dernière vérification
+      src: 0c0c351a
+      machine: true
+    review_by:
+      value: Prochaine vérification
+      src: c4504428
+      machine: true
+    fields:
+      remit:
+        value: Ce qu'il fait
+        src: c74ea9dc
+        machine: true
+      ai_jurisdiction:
+        value: Ses responsabilités en matière d'IA
+        src: d968de56
+        machine: true
+      powers_text:
+        value: Ses pouvoirs
+        src: e6668c5c
+        machine: true
+      reality_check:
+        value: Évaluation franche
+        src: a2251bee
+        machine: true
+      realistic:
+        value: Évaluation franche
+        src: a2251bee
+        machine: true
+      threat_model:
+        value: Préoccupations couvertes
+        src: 7e12a39e
+        machine: true
+      notes:
+        value: Notes
+        src: 8a7525b1
+        machine: true
+      gov_channel:
+        value: Canal gouvernemental
+        src: afa3e5b9
+        machine: true
+      accepts:
+        value: Ce qu'il accepte
+        src: 4f8674d5
+        machine: true
+      does_not_accept:
+        value: Ce qu'il n'accepte pas
+        src: "44206869"
+        machine: true
+      how:
+        value: Comment déposer
+        src: fc2351a8
+        machine: true
+      format:
+        value: Format
+        src: 2f343666
+        machine: true
+      timing:
+        value: Calendrier
+        src: fc4e8425
+        machine: true
+      after:
+        value: Ce qui se passe ensuite
+        src: a968448e
+        machine: true
+      operator:
+        value: Géré par
+        src: 86b9570e
+        machine: true
+      business:
+        value: Travaux en cours
+        src: b7b4d6ed
+        machine: true
+      status:
+        value: Statut
+        src: 920e413c
+        machine: true
+      public_route:
+        value: Voie d'accès publique
+        src: e3b120b2
+        machine: true
+      format_rules:
+        value: Règles de format
+        src: 16ecd017
+        machine: true
+      agency_route:
+        value: Voie administrative
+        src: 84ab2550
+        machine: true
+      key_people:
+        value: Personnes clés
+        src: 1116e4e1
+        machine: true
+      language_note:
+        value: Langues
+        src: 318655ce
+        machine: true
+      note:
+        value: Note de recherche
+        src: 29b0bc43
+        machine: true
+      the_ask:
+        value: Ce qu'ils demandent — dans leurs propres termes
+        src: ed5b8b3c
+        machine: true
+      what_they_do:
+        value: Ce qu'ils font
+        src: aa988bb7
+        machine: true
+      newcomer_action:
+        value: Ce qu'un nouveau venu peut faire
+        src: 7f4fbbb5
+        machine: true
+      tips:
+        value: Conseils
+        src: 3838a4d8
+        machine: true
+      geography:
+        value: Où ils agissent
+        src: 8477c198
+        machine: true
+      scale:
+        value: Taille
+        src: 1af85190
+        machine: true
+      spending:
+        value: Dépenses
+        src: c2c7ae2a
+        machine: true
+      caution:
+        value: Bon à savoir
+        src: fb9d610f
+        machine: true
+  directory:
+    title:
+      value: Annuaire
+      src: c8f84c3c
+      machine: true
+    lede:
+      value: Toutes les institutions, commissions, voies de signalement et organisations de nos recherches, avec le moyen de les joindre et la date de dernière vérification de chaque information.
+      src: 965efbfa
+      machine: true
+    search:
+      value: Rechercher par nom ou par sujet
+      src: 121d28a5
+      machine: true
+    all_sections:
+      value: Tout
+      src: 75304cf7
+      machine: true
+    all_places:
+      value: Tous les lieux
+      src: b4c2045f
+      machine: true
+    only_verified:
+      value: Seulement les fiches avec un moyen de contact vérifié
+      src: 24d92afc
+      machine: true
+    results:
+      value: résultats
+      src: c099142b
+      machine: true
+    sections:
+      bodies:
+        value: Organismes ayant un pouvoir
+        src: 9f051ed8
+        machine: true
+      channels:
+        value: Où signaler
+        src: e43ec5b8
+        machine: true
+      orgs:
+        value: Organisations
+        src: 7bd34abb
+        machine: true
+  about:
+    title:
+      value: Comment ça marche
+      src: 9c870aa6
+      machine: true
+  freshness:
+    title:
+      value: Ces informations sont-elles à jour ?
+      src: 74557b2b
+      machine: true
+    lede:
+      value: Chaque fiche a une date avant laquelle elle doit être revérifiée. Cette page montre quelle part de l'annuaire est dans les délais, où le projet est fragile, et l'équilibre des points de vue dans les Ressources.
+      src: 9aa83963
+      machine: true
+    overall:
+      value: des fiches de l'annuaire sont dans leur délai de vérification
+      src: 27f16cb2
+      machine: true
+    seats:
+      value: titulaires de sièges nominatifs ont dépassé leur vérification de 90 jours
+      src: 3ddb8e87
+      machine: true
+    by_section:
+      value: Par rubrique
+      src: 2c8a0eb5
+      machine: true
+    by_country:
+      value: Par lieu — les moins à jour d'abord
+      src: b8b6fd20
+      machine: true
+    records:
+      value: Fiches
+      src: 47a84e92
+      machine: true
+    current:
+      value: À jour
+      src: e0d1b682
+      machine: true
+    overdue:
+      value: En retard
+      src: d660945b
+      machine: true
+    unsourced:
+      value: Sans source
+      src: 8b0fea0a
+      machine: true
+    balance:
+      value: Ressources — équilibre des points de vue
+      src: bbc12765
+      machine: true
+    sources:
+      value: Sources suivies
+      src: 08c68e44
+      machine: true
+    published:
+      value: Éléments publiés
+      src: cc467d87
+      machine: true
+    pending:
+      value: éléments en attente de relecture
+      src: 4c4ccd13
+      machine: true
+    translations:
+      value: Traductions
+      src: 266a41b9
+      machine: true
+    no_translations:
+      value: Pas encore de traductions.
+      src: 5a075f0a
+      machine: true
+  contributors:
+    title:
+      value: Contributeurs
+      src: 350ad433
+      machine: true
+    lede:
+      value: Les personnes qui maintiennent ce site exact. Seules celles qui l'ont demandé apparaissent ici.
+      src: f622391b
+      machine: true
+    none:
+      value: Personne n'a encore demandé à figurer ici.
+      src: 6663b4bb
+      machine: true
+    footer:
+      value: Contributeurs
+      src: 350ad433
+      machine: true
+    volunteer:
+      value: Devenir bénévole pour un domaine
+      src: a2c72862
+      machine: true
+  resources:
+    title:
+      value: Ressources
+      src: e89b30aa
+      machine: true
+    lede:
+      value: Ce qui est rapporté, débattu et décidé sur l'IA — chaque élément avec une question qui le transforme en quelque chose sur quoi vous pouvez agir.
+      src: 1ef9e29d
+      machine: true
+    newcomer:
+      value: Vous arrivez inquiet ? Commencez plutôt par une seule question.
+      src: 7fa75e15
+      machine: true
+    newcomer_link:
+      value: Commencer ici
+      src: 2adc964c
+      machine: true
+    windows:
+      value: Ouvert en ce moment — des occasions d'agir avant la date limite
+      src: a7f48afd
+      machine: true
+    windows_none:
+      value: Aucune consultation ouverte pour le moment.
+      src: 04f4e389
+      machine: true
+    windows_archive:
+      value: Consultations closes
+      src: 79efa90a
+      machine: true
+    closes:
+      value: Clôture
+      src: 74c21a63
+      machine: true
+    closed:
+      value: Close
+      src: c21ead06
+      machine: true
+    opens:
+      value: Ouverte le
+      src: b19fb8d1
+      machine: true
+    explainers:
+      value: Comment ça marche, en bref
+      src: e51b8396
+      machine: true
+    media:
+      value: Repris d'autres publications
+      src: 2acd406c
+      machine: true
+    media_note:
+      value: Titres et liens uniquement. Nous ne copions jamais d'articles et n'intégrons jamais de vidéos. Le point de vue de chaque publication est indiqué, et l'équilibre entre les points de vue est publié.
+      src: e6e95d3f
+      machine: true
+    read_at:
+      value: À lire sur
+      src: 1deabadd
+      machine: true
+    perspective:
+      value: Point de vue
+      src: e3ad1bcc
+      machine: true
+    kind:
+      value: Type
+      src: baaddf70
+      machine: true
+    topic:
+      value: Sujet
+      src: "68971283"
+      machine: true
+    language:
+      value: Langue
+      src: a4fe6526
+      machine: true
+    all:
+      value: Tous
+      src: a52ace42
+      machine: true
+    act:
+      value: Agir
+      src: 37fafecd
+      machine: true
+    default_prompt:
+      value: Qui pourrait agir à ce sujet ? Commencez par une seule question.
+      src: fa49e4cb
+      machine: true
+    related:
+      value: Qui peut agir à ce sujet
+      src: 04e832cd
+      machine: true
+    minutes:
+      value: min de lecture
+      src: b337c945
+      machine: true
+    sources:
+      value: Sources
+      src: caf85b08
+      machine: true
+    kinds:
+      article:
+        value: Article
+        src: 29d94922
+        machine: true
+      video:
+        value: Vidéo
+        src: d534be82
+        machine: true
+      podcast:
+        value: Podcast
+        src: 27a723d6
+        machine: true
+      report:
+        value: Rapport
+        src: b6ce788d
+        machine: true
+      newsletter:
+        value: Lettre d'information
+        src: f84ca2e7
+        machine: true

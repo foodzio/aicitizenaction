@@ -1,0 +1,6 @@
+# Gate for fr. Until ui_approved is true, fr pages build with noindex and are not in the language switcher.
+name: Français
+ui_approved: false
+reviewer: null
+approved_on: null
+tier: 0

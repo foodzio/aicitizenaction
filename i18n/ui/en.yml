@@ -54,6 +54,7 @@ strings:
     floor_global: We haven't found a body in your country with this power. These international bodies accept messages from anyone. You could also ask your own parliament's technology committee — the method is in the directory.
     none: We couldn't find anyone who can act on this yet. That is a gap in our research, not in your concern — please tell us.
     own_words_title: Why does this matter to you?
+    own_words_missing: "[Your own words — why this matters to you]"
     draft_title: Your message
     draft_hint: Edit anything. It's yours.
     send_to: Send it to

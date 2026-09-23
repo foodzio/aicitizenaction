@@ -1,0 +1,61 @@
+# fr strings for content/guides/global/outcomes.yml. Strings only — no URLs, no dates, no facts.
+strings:
+  question:
+    value: Que voulez-vous qu'il se passe ?
+    src: d24ea023
+    machine: true
+  outcomes:
+    law:
+      label:
+        value: Une loi ou une règle sur l'IA
+        src: 36a47468
+        machine: true
+      hint:
+        value: Dites à ceux qui écrivent les lois sur l'IA ce que vous en pensez.
+        src: 998d3089
+        machine: true
+    harm:
+      label:
+        value: Qu'un préjudice déjà subi soit examiné
+        src: "92e84248"
+        machine: true
+      hint:
+        value: Quand un système d'IA vous a nui, à vous ou à un proche.
+        src: "61125527"
+        machine: true
+    fix:
+      label:
+        value: Qu'une entreprise d'IA corrige ce que j'ai vu
+        src: 7514505a
+        machine: true
+      hint:
+        value: Pour quelque chose qu'un chatbot ou un modèle a fait et qui vous a inquiété.
+        src: 22f7f5b0
+        machine: true
+    record:
+      label:
+        value: Que mon avis soit consigné publiquement
+        src: 3e13eb86
+        machine: true
+      hint:
+        value: Participez à une consultation ouverte, où vos mots sont publiés.
+        src: f7d723ef
+        machine: true
+    join:
+      label:
+        value: Rejoindre d'autres personnes qui veulent la même chose
+        src: 17ff1b34
+        machine: true
+      hint:
+        value: Trouvez une organisation dont les objectifs rejoignent les vôtres — elles ont leurs propres revendications.
+        src: 1dfdca81
+        machine: true
+    insider:
+      label:
+        value: Je sais quelque chose de l'intérieur
+        src: 310283a5
+        machine: true
+      hint:
+        value: Pour les personnes ayant des informations non publiques sur une entreprise ou un projet d'IA.
+        src: bb60da76
+        machine: true

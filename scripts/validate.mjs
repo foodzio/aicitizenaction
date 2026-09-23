@@ -159,6 +159,7 @@ export function validateAll({ now = today() } = {}) {
     const id = readYaml(englishPath).id;
     for (const [key, entry] of stringsOf(t.strings ?? {})) {
       if (typeof entry?.value !== 'string') { err(p, `${key}: needs value and src`); continue; }
+      if (!entry.value.trim()) continue;                  // not yet translated: English is shown
       if (URL_OR_EMAIL.test(entry.value)) err(p, `${key}: a translation must not contain a URL or email address`);
       if (!hashes.get(id)?.has(key)) err(p, `${key}: no English string with this key`);
       else if (!entry.src) err(p, `${key}: missing src hash`);
@@ -166,7 +167,10 @@ export function validateAll({ now = today() } = {}) {
   }
   for (const path of walk(join(I18N, 'ui'))) {
     const t = readYaml(path) ?? {};
-    for (const [k, v] of Object.entries(t.strings ?? {})) if (typeof v?.value === 'string' && URL_OR_EMAIL.test(v.value)) err(rel(path), `${k}: UI strings must not contain URLs or email addresses`);
+    for (const [k, v] of stringsOf(t.strings ?? {})) {
+      const text = typeof v === 'string' ? v : v?.value;
+      if (typeof text === 'string' && URL_OR_EMAIL.test(text)) err(rel(path), `${k}: UI strings must not contain URLs or email addresses`);
+    }
   }
 
   // Volunteers: optional profiles; paths must exist, conflicts must name real records.

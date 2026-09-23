@@ -1,0 +1,19 @@
+# fr strings for content/guides/global/insider.yml. Strings only — no URLs, no dates, no facts.
+strings:
+  title:
+    value: Arrêtez-vous ici, et demandez d'abord un avis juridique
+    src: a2fa3d3d
+    machine: true
+  body:
+    value: |
+      Si vous savez quelque chose qui n'est pas public — par votre travail, un contrat ou un collègue —, la manière dont vous le révélez compte autant que ce que vous révélez. Les protections des lanceurs d'alerte dépendent de la personne à qui vous vous adressez, dans quel ordre et comment. S'adresser d'abord au mauvais organisme, y compris à l'une des organisations de ce site, peut vous faire perdre des protections dont vous auriez bénéficié.
+
+      Avant de contacter qui que ce soit, parlez à un avocat qui conseille les lanceurs d'alerte dans votre pays. Beaucoup proposent un premier entretien gratuit. N'envoyez aucun document à personne avant de l'avoir fait.
+
+      Ce site ne vous orientera pas plus loin. C'est délibéré : c'est la seule situation où une action rapide et bien intentionnée peut vous nuire durablement.
+    src: 8348c869
+    machine: true
+  back:
+    value: Revenir au début
+    src: 3d218128
+    machine: true

@@ -1,0 +1,91 @@
+# fr strings for content/guides/global/about.yml. Strings only — no URLs, no dates, no facts.
+strings:
+  title:
+    value: Comment ça marche
+    src: 9c870aa6
+    machine: true
+  lede:
+    value: La plupart des gens n'ont aucune idée de la façon dont une préoccupation parvient à quelqu'un qui peut agir. Sans cette image, chaque consigne paraît arbitraire. La voici.
+    src: 443fb213
+    machine: true
+  flow_title:
+    value: Le chemin d'une préoccupation
+    src: c9939c78
+    machine: true
+  flow:
+    "0":
+      title:
+        value: Vous écrivez à l'organisme qui détient le pouvoir
+        src: fa59c146
+        machine: true
+      body:
+        value: Pas forcément à votre propre élu — à la commission, au régulateur ou au canal de l'entreprise dont c'est le rôle. C'est ce que le parcours détermine pour vous.
+        src: 1f099f6c
+        machine: true
+    "1":
+      title:
+        value: Les équipes le lisent et l'enregistrent
+        src: ce59391d
+        machine: true
+      body:
+        value: Les équipes des commissions et des régulateurs enregistrent les positions du public, les comptent et transmettent des synthèses à la présidence ou à l'équipe chargée du dossier. Les messages personnels sont lus ; les lettres types identiques sont comptées puis mises de côté.
+        src: 228f1a14
+        machine: true
+    "2":
+      title:
+        value: Il influence ce qui est examiné
+        src: 0657c365
+        machine: true
+      body:
+        value: La présidence d'une commission décide quels textes sont examinés. Les régulateurs décident quelles plaintes deviennent des enquêtes. Votre message fait partie des éléments de ces décisions.
+        src: db1ef0d9
+        machine: true
+    "3":
+      title:
+        value: Il est parfois cité
+        src: 43baf0b7
+        machine: true
+      body:
+        value: Dans les consultations et les appels à contributions, les contributions sont souvent publiées sous le nom de leur auteur, et les équipes les citent en rédigeant leur rapport.
+        src: 915affee
+        machine: true
+  verify_title:
+    value: Ce que signifient les étiquettes
+    src: 8796a556
+    machine: true
+  verify_body:
+    value: Chaque adresse de ce site porte l'une de trois étiquettes. Nous ne marquons jamais une adresse comme vérifiée sans qu'une personne ait ouvert la page et y ait vu le moyen de contact.
+    src: 59f7e7ff
+    machine: true
+  help_title:
+    value: Comment aider
+    src: a899a3d4
+    machine: true
+  help_body:
+    value: La chose la plus utile est de nous signaler une erreur — chaque fiche a un lien « Une erreur ? ». Les bénévoles s'occupent d'un pays, d'un sujet, d'une langue ou de la rubrique Ressources. Un pseudonyme suffit ; vous n'avez jamais à donner votre vrai nom.
+    src: f6ca3a03
+    machine: true
+  help_volunteer:
+    value: Devenir bénévole pour un domaine
+    src: a2c72862
+    machine: true
+  help_contributing:
+    value: Comment contribuer
+    src: fc6e44a5
+    machine: true
+  data_title:
+    value: Les données
+    src: cdc0e951
+    machine: true
+  data_body:
+    value: Tout ce qui figure sur ce site est publié en données ouvertes, pour que d'autres puissent s'en servir sans avoir à l'aspirer.
+    src: 3bdb68be
+    machine: true
+  neutral_title:
+    value: De quel côté sommes-nous ?
+    src: 7dcec840
+    machine: true
+  neutral_body:
+    value: D'aucun. Ce site n'a pas de revendication politique propre. Les positions des organisations sont présentées comme les leurs, dans leurs propres termes, y compris lorsqu'elles sont impopulaires. Tous les outils comparables appartiennent à une campagne ; ne pas en avoir est notre principale raison d'être digne de confiance.
+    src: d59736ac
+    machine: true

@@ -60,6 +60,14 @@ export function recordStrings(record, lang) {
   return out;
 }
 
+/** g(key) for one guide's strings in a language, e.g. g('outcomes.law.label'). Falls back to English. */
+export function guideText(id, lang) {
+  const s = recordStrings(data().guide(id), lang);
+  const g = key => s[key]?.text ?? key;
+  g.lang = key => s[key]?.lang ?? 'en';
+  return g;
+}
+
 const STATES = { ca: 'California', co: 'Colorado', ct: 'Connecticut', il: 'Illinois', ma: 'Massachusetts', md: 'Maryland',
   mn: 'Minnesota', nj: 'New Jersey', ny: 'New York', tx: 'Texas', ut: 'Utah', va: 'Virginia', wa: 'Washington', multistate: 'Several states', federal: 'Federal' };
 

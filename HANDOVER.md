@@ -36,7 +36,7 @@ Tracked in git and committed with every step.
 | 4 — Resources | **done** | 15 sources, 99 ingested items (8 published as drafts, 91 pending), 2 windows, 2 explainers, pages, intake workflow (not run on GitHub) |
 | 5a — Volunteer system (git) | **done** (local) | CONTRIBUTING, worked example, charters, freshness report + public page, inactivity check-ins, volunteer profiles, contributors page. Discussions not enabled (owner) |
 | 5b — Web CMS | deferred | Until the first non-git volunteer |
-| 6 — Second language | not started | |
+| 6 — Second language | **done (pilot)** | French: 173 UI strings + 45 guide strings, all machine drafts; gated (noindex, not in switcher) until a steward sets `ui_approved: true`. Tier 2 (French/EU records) not started |
 | 7 — Launch | not started | Deploys need the owner's approval |
 
 ## Judgement calls made without the owner (reverse any of them)
@@ -64,9 +64,18 @@ Tracked in git and committed with every step.
 22. **Resources link hidden on the door** (the plan: the front door never links to Resources); visible in the nav everywhere else.
 23. **The maintainer (catch-all CODEOWNERS owner) is never sent inactivity check-ins.** Team/alumni membership changes stay manual — the script only opens issues.
 24. **Freshness report posts to Discussions only if the owner sets repo variable `DISCUSSION_CATEGORY_ID`**; otherwise it goes to the workflow summary.
+25. **Open decision 8 given a reversible default: French as the pilot language**, fully gated. All French text is my machine draft (`machine: true`); nothing is public or indexed until a French steward approves.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-23T00:14:54Z — Phase 6: second language (French pilot)
+
+- `scripts/i18n-sync.mjs`: status gate file, UI sync, content mirrors (`--scaffold`), `--stamp` for new translations; never overwrites a translated value. `syncStrings()` exported and tested.
+- `i18n/ui/fr.yml` (173 strings), `i18n/fr/content/guides/global/*.yml` (door answers, templates, insider stop, how it works), `i18n/fr/status.yml` (`ui_approved: false`).
+- Site: `guideText()` resolves guide strings per language; door, path (incl. draft templates) and about use it; unapproved languages show a machine-translation notice and `noindex`; fallback prose carries `lang="en"`.
+- Validator: untranslated placeholders allowed; nested UI strings checked for URLs.
+- Tests: `i18n.test.mjs` (stale → English, machine label, sync behaviour, validator rules), site test for the language gate. 60 pass. Browser check of `/fr/`: fully French door with both notices.
 
 ### 2026-09-23T00:11:19Z — Phase 5a: volunteer system (git path)
 
@@ -162,7 +171,7 @@ re-aimed at the alarmed non-expert rather than someone with evidence.
 ## How to resume
 
 1. `npm install && npm run check` — must show 0 errors and all tests passing.
-2. Next step: **phase 6** i18n (sync script, fr UI draft behind noindex gate, fallback), then **phase 1b** routing research drafts, then phase 7 readiness (accessibility pass).
+2. Next step: **phase 1b** routing research drafts (topics/not_topics per committee from `ai_jurisdiction`, marked `routing_review: drafted`), then phase 7 readiness (accessibility pass).
 3. Never edit `input/`. Never deploy without asking the owner.
 
 Reference prototypes (published, private):
@@ -171,4 +180,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T00:11:19Z
+Last modified: 2026-09-23T00:14:54Z

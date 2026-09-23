@@ -1,12 +1,13 @@
 ---
 import Base from '../../../layouts/Base.astro';
-import { data, ui, languages, REPO, SECTIONS } from '../../../lib/data.mjs';
+import { data, ui, languages, REPO, SECTIONS, guideText } from '../../../lib/data.mjs';
 
 export const getStaticPaths = () => languages().map(l => ({ params: { lang: l.code } }));
 const { lang } = Astro.params;
 const t = ui(lang);
 const g = data().guide('about');
-const S = g.strings;
+const G = guideText('about', lang);
+const S = new Proxy({}, { get: (_, k) => k === 'flow' ? g.strings.flow.map((_, i) => ({ title: G(`flow.${i}.title`), body: G(`flow.${i}.body`) })) : G(k) });
 ---
 <Base lang={lang} title={S.title} current="about" draft={g.meta.status === 'draft'}>
   <div class="narrow">

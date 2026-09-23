@@ -1,0 +1,89 @@
+# fr strings for content/guides/global/draft-templates.yml. Strings only — no URLs, no dates, no facts.
+strings:
+  own_words_prompt:
+    value: En une ou deux phrases, pourquoi est-ce important pour vous ?
+    src: cdc85b61
+    machine: true
+  own_words_why:
+    value: Les messages écrits avec vos propres mots sont lus. Les lettres types identiques sont comptées puis mises de côté.
+    src: 91a80ed4
+    machine: true
+  own_words_placeholder:
+    value: Par exemple — « Ma fille utilise ces chatbots pour ses devoirs et personne ne semble vérifier ce qu'ils lui disent. »
+    src: 1e2ac265
+    machine: true
+  templates:
+    law:
+      value: |
+        Madame, Monsieur {recipient},
+
+        Je vous écris en tant que citoyen·ne au sujet de l'intelligence artificielle.
+
+        {own_words}
+
+        Je crois comprendre que vous examinez la législation dans ce domaine. Je souhaite que mon avis soit enregistré, et je vous serais reconnaissant·e de me dire ce que vous faites à ce sujet.
+
+        Veuillez agréer mes salutations distinguées,
+        [Votre nom]
+        [Votre ville]
+      src: 047fd011
+      machine: true
+    harm:
+      value: |
+        Madame, Monsieur {recipient},
+
+        Je vous écris pour signaler un préjudice impliquant un système d'intelligence artificielle.
+
+        {own_words}
+
+        Ce qui s'est passé : [ce qu'a fait le système, quand, et de quel produit ou entreprise il s'agissait]
+        Personne concernée : [vous, ou une personne de votre entourage]
+
+        Je vous serais reconnaissant·e de me dire si cela relève de votre compétence et quelle sera la suite.
+
+        Veuillez agréer mes salutations distinguées,
+        [Votre nom]
+      src: 7022928d
+      machine: true
+    fix:
+      value: |
+        Bonjour,
+
+        Je souhaite signaler un comportement d'un modèle d'IA qui m'a inquiété·e.
+
+        {own_words}
+
+        Produit et version : [quelle application ou quel modèle]
+        Date : [quand cela s'est produit]
+        Ce que j'ai demandé, et ce qu'il a répondu : [collez l'échange exact si possible]
+
+        Merci de bien vouloir examiner ce signalement.
+        [Votre nom]
+      src: 96f9e01b
+      machine: true
+    record:
+      value: |
+        Contribution adressée à {recipient}
+
+        Je réponds en tant que citoyen·ne.
+
+        {own_words}
+
+        Je n'ai aucun intérêt professionnel ou financier dans cette consultation.
+
+        [Votre nom]
+        [Votre ville]
+      src: ea7e7f68
+      machine: true
+    join:
+      value: |
+        Bonjour,
+
+        Je souhaite m'impliquer.
+
+        {own_words}
+
+        Pouvez-vous me dire comment je peux aider ?
+        [Votre nom]
+      src: c5f2facd
+      machine: true

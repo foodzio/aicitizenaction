@@ -81,3 +81,12 @@ test('Resources: every published item and explainer page leads into the path', (
     assert.match(page(`en/resources/${m[1]}/${m[2]}/index.html`), /href="\/en\/(start\/[a-z]+\/[^"]*|)"[^>]*class="btn"|class="btn" href="\/en\/(start\/|)/);
   }
 });
+
+test('an unapproved language builds with noindex, a machine-translation notice, and is not offered in English pages', () => {
+  const fr = page('fr/index.html');
+  assert.match(fr, /<meta name="robots" content="noindex"/);
+  assert.match(fr, /<html lang="fr"/);
+  assert.match(fr, /Traduction automatique/);
+  assert.ok(!page('en/index.html').includes('href="/fr/'), 'English pages link to an unapproved language');
+  assert.ok(!page('en/index.html').includes('noindex'));
+});

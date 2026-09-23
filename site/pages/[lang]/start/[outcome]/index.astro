@@ -3,7 +3,7 @@
 // Routing is precomputed at build time for every place; the browser only switches views.
 // Every state has a URL (?where=us&sub=ca&to=<id>&step=3), so a link can open mid-path.
 import Base from '../../../../layouts/Base.astro';
-import { data, ui, languages, outcomePayload, placeOptions } from '../../../../lib/data.mjs';
+import { data, ui, languages, outcomePayload, placeOptions, guideText } from '../../../../lib/data.mjs';
 
 export function getStaticPaths() {
   const oc = data().guide('outcomes').facts.outcomes;
@@ -14,7 +14,10 @@ const t = ui(lang);
 const { guide } = data();
 const oc = guide('outcomes');
 const outcome = oc.facts.outcomes.find(o => o.id === outcomeId);
-const label = oc.strings.outcomes[outcomeId].label;
+const go = guideText('outcomes', lang);
+const gi = guideText('insider', lang);
+const gt = guideText('draft-templates', lang);
+const label = go(`outcomes.${outcomeId}.label`);
 const insider = guide('insider');
 const tpl = guide('draft-templates');
 const places = placeOptions(lang);
@@ -22,12 +25,12 @@ const places = placeOptions(lang);
 const keys = ['path.step', 'path.of', 'path.floor_bloc', 'path.floor_global', 'path.none', 'path.can_do', 'path.leverage',
   'path.how_reach', 'path.people', 'path.checked', 'path.membership', 'path.details', 'path.choose', 'path.chosen',
   'path.copied', 'path.copy', 'verify.true', 'verify.false', 'verify.null', 'verify.true_hint', 'verify.false_hint',
-  'verify.null_hint', 'verify.language', 'verify.overdue'];
+  'verify.null_hint', 'verify.language', 'verify.overdue', 'path.own_words_missing'];
 const payload = outcome.stop ? null : {
   lang,
   outcome: { id: outcome.id, ignoreGeo: !!outcome.ignore_geo },
   byPlace: outcomePayload(outcome, lang),
-  template: tpl.strings.templates[outcome.template],
+  template: gt(`templates.${outcome.template}`),
   t: Object.fromEntries(keys.map(k => [k, t(k)]))
 };
 const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4')];
@@ -39,9 +42,9 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
 
     {outcome.stop ? (
       <section>
-        <h2>{insider.strings.title}</h2>
-        {insider.strings.body.trim().split(/\n\n+/).map(p => <p>{p}</p>)}
-        <p><a class="btn secondary" href={`/${lang}/`}>{insider.strings.back}</a></p>
+        <h2>{gi('title')}</h2>
+        {gi('body').trim().split(/\n\n+/).map(p => <p>{p}</p>)}
+        <p><a class="btn secondary" href={`/${lang}/`}>{gi('back')}</a></p>
       </section>
     ) : (
       <div id="path">
@@ -85,8 +88,8 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
 
         <section data-step="3" hidden>
           <h2><label for="own" style="margin:0;font-weight:inherit">{t('path.own_words_title')}</label></h2>
-          <p class="hint">{tpl.strings.own_words_why}</p>
-          <textarea id="own" rows="4" placeholder={tpl.strings.own_words_placeholder}></textarea>
+          <p class="hint">{gt('own_words_why')}</p>
+          <textarea id="own" rows="4" placeholder={gt('own_words_placeholder')}></textarea>
 
           <h2><label for="draft" style="margin:0;font-weight:inherit">{t('path.draft_title')}</label></h2>
           <p class="hint">{t('path.draft_hint')}</p>
@@ -189,7 +192,7 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
 
     function fill() {
       const c = chosen();
-      const own = state.own.trim() || '[Your own words — why this matters to you]';
+      const own = state.own.trim() || T['path.own_words_missing'];
       return P.template.replace(/\{recipient\}/g, c?.recipient ?? '').replace(/\{own_words\}/g, own);
     }
     function renderDraft() {

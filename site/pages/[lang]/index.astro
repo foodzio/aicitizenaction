@@ -1,12 +1,13 @@
 ---
 // The door: one question, six plain answers, no institution names, no counts (docs/ux-brief.md).
 import Base from '../../layouts/Base.astro';
-import { data, ui, languages } from '../../lib/data.mjs';
+import { data, ui, languages, guideText } from '../../lib/data.mjs';
 
 export const getStaticPaths = () => languages().map(l => ({ params: { lang: l.code } }));
 const { lang } = Astro.params;
 const t = ui(lang);
 const oc = data().guide('outcomes');
+const g = guideText('outcomes', lang);
 ---
 <Base lang={lang} current="start" hideResources draft={oc.meta.status === 'draft'} description={t('site.tagline')}>
   <div class="narrow">
@@ -17,8 +18,8 @@ const oc = data().guide('outcomes');
       {oc.facts.outcomes.map(o => (
         <li>
           <a href={`/${lang}/start/${o.id}/`}>
-            <strong>{oc.strings.outcomes[o.id].label}</strong>
-            <span>{oc.strings.outcomes[o.id].hint}</span>
+            <strong lang={g.lang(`outcomes.${o.id}.label`)}>{g(`outcomes.${o.id}.label`)}</strong>
+            <span lang={g.lang(`outcomes.${o.id}.hint`)}>{g(`outcomes.${o.id}.hint`)}</span>
           </a>
         </li>
       ))}

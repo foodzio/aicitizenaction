@@ -29,7 +29,7 @@ const href = v => /^https?:\/\//.test(v) ? v : /@/.test(v) ? `mailto:${v}` : nul
   <article>
     <div class="record-head">
       <p class="meta-line"><a href={`/${lang}/directory/?section=${section}`}>{t(`directory.sections.${section}`)}</a></p>
-      <h1>{text('name')}</h1>
+      <h1 lang={s.name.lang}>{text('name')}</h1>
       <dl class="facts">
         <dt>{t('record.type')}</dt><dd>{vocabLabel(vocab, 'record-types', r.type)}</dd>
         <dt>{t('record.place')}</dt><dd>{placeName(r.geo, lang)}{r.geo.label && r.geo.label !== placeName(r.geo, lang) ? ` — ${r.geo.label}` : ''}</dd>
@@ -71,7 +71,7 @@ const href = v => /^https?:\/\//.test(v) ? v : /@/.test(v) ? `mailto:${v}` : nul
     </section>
 
     <section class="prose">
-      {fields.map(k => (<><h2>{t(`record.fields.${k}`)}</h2>{text(k).split(/\n\n+/).map(p => <p>{p}</p>)}</>))}
+      {fields.map(k => (<><h2>{t(`record.fields.${k}`)}</h2>{text(k).split(/\n\n+/).map(p => <p lang={s[k].lang}>{p}</p>)}</>))}
     </section>
 
     {r.meta.sources?.length > 0 && (
