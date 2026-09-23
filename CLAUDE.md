@@ -54,7 +54,7 @@ Update this table as the repo grows — it is the map, so a stale map is a bug.
 | `astro.config.mjs` | Astro static site config: `srcDir: site/`, output `dist/` (override with `AICA_OUT`) |
 | `site/` | Site source — developers only. `pages/[lang]/` (door `index`, `start/[outcome]` path, `directory`, `[section]/[id]` records, `about`, `resources`, `freshness`, `contributors`), `pages/api/[section].json.js`, `pages/version.json.js`, `layouts/Base.astro`, `lib/data.mjs` (build-time data, UI strings, cards, precomputed routing), `lib/measure.js` (completion events, sends nothing), `styles/global.css` |
 | `i18n/ui/en.yml` | English source of every interface string; translations go in `i18n/ui/<lang>.yml` |
-| `i18n/fr/` | French pilot: `status.yml` (gate — `ui_approved: false` keeps it noindex and out of the switcher), `content/guides/…` translated guides. `i18n/ui/fr.yml` holds the UI. All machine drafts |
+| `i18n/fr/` | French pilot: `status.yml` (gate — `ui_approved: true` since 2026-09-24: public, indexed, in the switcher; set `false` to hide a language), `content/guides/…` translated guides. `i18n/ui/fr.yml` holds the UI. Machine translation, published by the owner |
 | `content/resources/` | Resources: `sources/<geo>/` (15 verified feeds, each with a perspective), `media/<yyyy>/<mm>/` (ingested items; only `published` are shown), `explainers/`, `windows/` (dated, expire on `closes_on`) |
 | `site/lib/resources.mjs` | Build-time Resources data, path handoff links |
 | `content/guides/global/` | Our own guidance: `outcomes.yml` (door answers + routing rules), `draft-templates.yml`, `insider.yml`, `about.yml` |
@@ -214,4 +214,4 @@ List every `HANDOVER.md` in this repo and what it covers, so the map stays true:
 | `HANDOVER.md` | Repo-wide work for `aicitizenaction` |
 | _(add rows as subprojects appear)_ | |
 
-Last modified: 2026-09-23T16:00:58Z
+Last modified: 2026-09-23T22:41:12Z

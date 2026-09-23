@@ -70,6 +70,12 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-23T22:41:12Z — French published (owner approved)
+
+- `i18n/fr/status.yml`: `ui_approved: true`, reviewer "owner (published as machine translation)", approved 2026-09-24. Effect: French pages are indexed, every page's footer offers "English · Français" for the same page, and the machine-translation notice no longer shows.
+- Content caveat stays true: the French interface and guides are machine drafts; most record prose (committee descriptions, notes, route labels) falls back to English with a "not yet translated" notice.
+- Site test rewritten to follow the gate file (approved → indexed and linked; unapproved → noindex and hidden). 70 pass. Not yet redeployed.
+
 ### 2026-09-23T22:39:35Z — Footer sentence removed (owner)
 
 - Owner asked to remove "Every address says whether a person has opened it and when." Footer now reads "No account, no mailing list, no tracking." (en + fr). The verification labels themselves (Verified / Unverified / Unchecked) are unchanged and still explained on each badge and on How it works. Not yet redeployed.
@@ -268,4 +274,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T22:39:35Z
+Last modified: 2026-09-23T22:41:12Z

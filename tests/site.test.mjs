@@ -82,13 +82,21 @@ test('Resources: every published item and explainer page leads into the path', (
   }
 });
 
-test('an unapproved language builds with noindex, a machine-translation notice, and is not offered in English pages', () => {
-  const fr = page('fr/index.html');
-  assert.match(fr, /<meta name="robots" content="noindex"/);
+test('language gate: an approved language is indexed and offered; an unapproved one is hidden', async () => {
+  const { readYaml, I18N } = await import('../scripts/lib/content.mjs');
+  const approved = readYaml(join(I18N, 'fr', 'status.yml')).ui_approved === true;
+  const fr = page('fr/index.html'), en = page('en/index.html');
   assert.match(fr, /<html lang="fr"/);
-  assert.match(fr, /Traduction automatique/);
-  assert.ok(!page('en/index.html').includes('href="/fr/'), 'English pages link to an unapproved language');
-  assert.ok(!page('en/index.html').includes('noindex'));
+  assert.ok(!en.includes('noindex'), 'English pages are always indexed');
+  if (approved) {
+    assert.ok(!fr.includes('name="robots" content="noindex"'), 'approved French is indexed');
+    assert.ok(en.includes('href="/fr/"'), 'English pages offer French');
+    assert.ok(fr.includes('href="/en/"'), 'French pages offer English');
+    assert.ok(!fr.includes('Traduction automatique, pas encore relue'), 'no machine notice once approved');
+  } else {
+    assert.match(fr, /<meta name="robots" content="noindex"/);
+    assert.ok(!en.includes('href="/fr/'), 'English pages link to an unapproved language');
+  }
 });
 
 test('the "fix" outcome asks which company, and offers independent channels alongside', () => {
