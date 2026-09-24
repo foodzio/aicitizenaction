@@ -1,0 +1,21 @@
+id: how-ai-incident-trackers-receive-records
+facts:
+  topics: [transparency]
+  channels: [global-ai-incident-database]
+  action:
+    outcome: record
+  reading_minutes: 2
+strings:
+  title: A tracker is not always a reporting destination
+  summary: The MIT AI Incident Tracker classifies incidents obtained from the AI Incident Database; submit to the underlying database rather than the tracker.
+  body: |
+    The MIT AI Incident Tracker is a research and classification interface. It does not directly accept reports from the public. Its records flow from the AI Incident Database and are then classified by risk domain, cause, harm type, severity and other attributes.
+
+    If you want an incident considered for this ecosystem, submit it to the AI Incident Database through that database’s actual reporting route.
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  status: draft
+  sources:
+    - url: https://airisk.mit.edu/
+      checked: 2026-09-22

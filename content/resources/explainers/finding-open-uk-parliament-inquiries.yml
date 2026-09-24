@@ -1,0 +1,22 @@
+id: finding-open-uk-parliament-inquiries
+facts:
+  topics: [frontier-ai]
+  channels: [gb-uk-select-committee-written-evidence]
+  action:
+    outcome: law
+    where: gb
+  reading_minutes: 2
+strings:
+  title: Finding a UK Parliament inquiry that is accepting evidence
+  summary: The inquiry finder is a discovery tool, not a recipient. Use it to locate a currently open call, then submit through that inquiry’s evidence page.
+  body: |
+    UK Parliament’s inquiry list can be filtered to inquiries that are currently accepting written evidence. The list itself does not receive a submission: each inquiry has its own questions, deadline and evidence route.
+
+    Open the inquiry, confirm that its scope covers your concern, read its terms of reference, and use the submission mechanism on that inquiry’s page. Eligibility and publication rules can vary, so check them before sending anything sensitive.
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  status: draft
+  sources:
+    - url: https://committees.parliament.uk/inquiries/
+      checked: 2026-09-22

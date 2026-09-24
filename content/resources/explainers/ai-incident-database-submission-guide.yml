@@ -1,0 +1,21 @@
+id: ai-incident-database-submission-guide
+facts:
+  topics: [transparency]
+  channels: [global-ai-incident-database]
+  action:
+    outcome: record
+  reading_minutes: 2
+strings:
+  title: What the AI Incident Database accepts
+  summary: The editor’s guide explains the database’s inclusion criteria; the database’s report form is the actual contact route.
+  body: |
+    The AI Incident Database editor’s guide is guidance, not a reporting destination. It explains how editors distinguish an incident, an issue and other material when reviewing submissions.
+
+    Read the criteria to decide whether the event fits, then use the AI Incident Database reporting route. Describe the deployed system, what happened, who or what was affected, and a source that documents the event where one is available.
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  status: draft
+  sources:
+    - url: https://incidentdatabase.ai/research/editor-guide/
+      checked: 2026-09-22

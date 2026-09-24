@@ -1,0 +1,21 @@
+id: third-party-ai-flaw-disclosure
+facts:
+  topics: [safety-testing, security, transparency]
+  channels: [global-flare-ai]
+  action:
+    outcome: fix
+  reading_minutes: 3
+strings:
+  title: Why third-party AI flaw disclosure needs real submission infrastructure
+  summary: A research proposal argues for standard reports, published testing rules, safe harbours and coordination across providers; it is not itself a disclosure route.
+  body: |
+    “In-House Evaluation Is Not Enough” proposes a framework for third-party AI flaw disclosure. The paper calls for standardised reports, published rules of engagement, broader disclosure programmes and coordination where a flaw transfers across providers.
+
+    The paper is background material. It cannot receive a disclosure. Use a currently open reporting programme such as FLARE-AI or an applicable provider channel, and check the programme’s scope and safe-harbour terms before testing.
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  status: draft
+  sources:
+    - url: https://arxiv.org/abs/2503.16861
+      checked: 2026-09-22

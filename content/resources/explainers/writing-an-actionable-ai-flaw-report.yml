@@ -1,0 +1,21 @@
+id: writing-an-actionable-ai-flaw-report
+facts:
+  topics: [safety-testing, transparency]
+  channels: [global-flare-ai, global-ai-incident-database]
+  action:
+    outcome: fix
+  reading_minutes: 3
+strings:
+  title: Writing an AI flaw report that can be acted on
+  summary: Research on an open model bounty found that useful reports connect an observed output to a concrete deployment context and harm pathway.
+  body: |
+    “To Err is AI” studied reports produced during an open-ended 2024 bounty against the OLMo language model. It is evidence about reporting practice, not a place to submit a new report.
+
+    The practical lesson is to describe more than the prompt and output. State where the system was deployed, what capability or failure you observed, how it could affect someone in that setting, and enough detail for another person to reproduce or evaluate it. Send the result through an actual incident or flaw-reporting channel.
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  status: draft
+  sources:
+    - url: https://arxiv.org/abs/2410.12104
+      checked: 2026-09-22

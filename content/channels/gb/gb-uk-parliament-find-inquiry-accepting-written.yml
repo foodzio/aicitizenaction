@@ -44,6 +44,7 @@ facts:
     - law
     - systemic
   contact_disposition: reclassify
+  recommend: false
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
 strings:

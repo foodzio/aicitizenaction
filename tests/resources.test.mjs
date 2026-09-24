@@ -7,7 +7,7 @@ import { spawn } from 'node:child_process';
 import { join } from 'node:path';
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import YAML from 'yaml';
-import { ROOT } from '../scripts/lib/content.mjs';
+import { ROOT, loadContent } from '../scripts/lib/content.mjs';
 import { tree, validate } from './helpers.mjs';
 import { parseFeed, guessLanguage, urlHash } from '../scripts/ingest-resources.mjs';
 
@@ -91,4 +91,26 @@ test('a media item may not carry body text or an embed', () => {
     [`content/resources/media/${today.slice(0, 4)}/${today.slice(5, 7)}/m.yml`]: { id: 'm', facts: { source: 's', url: 'https://pub.example/a', kind: 'article', language: 'en', published_at: today, embed: '<iframe>' }, strings: { title: 't', body: 'copied article' }, meta: { status: 'published', added_by: 'ingest', added_on: today } }
   }));
   assert.equal(r.code, 1);
+});
+
+test('misclassified contact guidance is preserved as Resources and disabled as a recipient', () => {
+  const explainers = new Set(loadContent('resources/explainers').map(x => x.id));
+  for (const id of [
+    'finding-open-uk-parliament-inquiries', 'ai-incident-database-submission-guide',
+    'writing-an-actionable-ai-flaw-report', 'third-party-ai-flaw-disclosure',
+    'how-ai-incident-trackers-receive-records', 'inbound-and-outbound-disclosure',
+    'why-outsider-ai-concerns-go-unheard', 'us-ai-whistleblower-bill-status'
+  ]) assert.ok(explainers.has(id), id);
+
+  const channels = loadContent('channels');
+  for (const id of [
+    'gb-uk-parliament-find-inquiry-accepting-written', 'global-ai-incident-database-editor-s-guide',
+    'global-err-is-ai-evidence-what-makes', 'global-house-evaluation-is-not-enough-third',
+    'global-mit-ai-incident-tracker', 'global-openai-outbound-coordinated-disclosure-policy',
+    'global-perils-ai-safety-s-insularity-why', 'us-ai-whistleblower-protection-act-federal'
+  ]) {
+    const record = channels.find(x => x.id === id);
+    assert.equal(record.facts.contact_disposition, 'reclassify', id);
+    assert.equal(record.facts.recommend, false, id);
+  }
 });

@@ -1,0 +1,21 @@
+id: inbound-and-outbound-disclosure
+facts:
+  topics: [security, transparency]
+  channels: [global-openai-inbound-reporting]
+  action:
+    outcome: fix
+  reading_minutes: 2
+strings:
+  title: Inbound and outbound disclosure policies are not the same
+  summary: An outbound policy describes how a company reports flaws it finds elsewhere. It is not evidence that the company accepts reports through that page.
+  body: |
+    OpenAI’s outbound coordinated-disclosure policy governs vulnerabilities OpenAI discovers in third-party software and reports to those vendors. It does not accept an inbound submission from a member of the public.
+
+    To report a vulnerability to OpenAI, use the separately documented inbound security-reporting programme and check its scope. A policy’s direction matters: “we report to others” is not the same as “send your report here.”
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  status: draft
+  sources:
+    - url: https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+      checked: 2026-09-22

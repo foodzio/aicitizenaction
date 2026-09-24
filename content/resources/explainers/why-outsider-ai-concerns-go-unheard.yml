@@ -1,0 +1,20 @@
+id: why-outsider-ai-concerns-go-unheard
+facts:
+  topics: [transparency]
+  action:
+    outcome: record
+  reading_minutes: 3
+strings:
+  title: Why an outside AI concern may go unheard
+  summary: Commentary about the field’s insularity can explain the problem, but it cannot receive a report. Prefer a recipient with a published duty or submission process.
+  body: |
+    Transformer’s article on AI safety’s insularity argues that the field’s networks and funding structures can make outside contributions difficult to absorb. It is commentary, not a reporting channel.
+
+    For an outsider, a formal mechanism is usually more dependable than trying to reach a research community informally. Look for a regulatory complaint, a currently open call for evidence, a provider’s documented safety route, or an incident database with published criteria.
+meta:
+  verified_on: 2026-09-22
+  review_by: 2027-03-21
+  status: draft
+  sources:
+    - url: https://www.transformernews.ai/p/the-perils-of-ai-safetys-insularity
+      checked: 2026-09-22

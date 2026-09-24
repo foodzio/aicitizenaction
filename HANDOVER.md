@@ -16,7 +16,7 @@ Tracked in git and committed with every step.
   `docs/content-architecture.md` (content as data, translation, freshness, Resources, volunteers).
 - **Corrective plan:** `docs/places-to-contact-audit-plan.md` — deterministic review and correction
   of all 74 channel records and 234 routes before they may be presented or recommended as a
-  “Place to contact.” Phases 1–3 are done; content reclassification (Phase 4) is next.
+  “Place to contact.” Phases 1–4 are done; public interface/routing convergence (Phase 5) is next.
 - **Goal:** a site that turns alarm about AI into one well-aimed action in one sitting, ending with
   a draft the user sends themselves — maintained by volunteers, multilingual, with a Resources
   collection modelled on the stockspanic resources desk.
@@ -44,7 +44,8 @@ Tracked in git and committed with every step.
 | Contact audit 1 — Contract and containment | **done** | Verified inbound routes only; explicit contradictions fail closed; Argentina attachment and three article regressions covered |
 | Contact audit 2 — Schema and inventory | **done** | Route contact schema, validator checks, generated 74-record/234-route reconciliation inventory |
 | Contact audit 3 — Full channel audit | **done** | 74 records / 234 routes reviewed; 84 eligible, 150 ineligible; no pending decisions |
-| Contact audit 4–6 | **not started** | Reclassification, UI/routing convergence, final verification |
+| Contact audit 4 — Correct/reclassify | **done** | 8 misleading informational records disabled as recipients and preserved as Resources; reference-only companies retained internally |
+| Contact audit 5–6 | **not started** | UI/routing convergence and final verification |
 
 ## Judgement calls made without the owner (reverse any of them)
 
@@ -76,6 +77,23 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T00:37:39Z — Contact audit Phase 4: misleading destinations reclassified
+
+- Marked the eight known article/paper/guidance/tracker/outbound-policy/unenacted-bill records
+  `recommend: false`; their original audited records remain internally for provenance and the
+  74/234 reconciliation, but cannot be offered as recipients.
+- Preserved their useful content as eight Resource explainers that point to actual actions and,
+  where applicable, real contact records: UK inquiry discovery, AIID criteria, actionable flaw
+  reports, third-party disclosure, indirect trackers, inbound versus outbound disclosure, outsider
+  access, and the status of the proposed US whistleblower bill.
+- The other 11 reclassified records are company/watchdog reference profiles with no qualifying
+  inbound route. They remain internal company/reference data rather than being falsely relabeled
+  as organisations; Phase 5 excludes every non-qualifying record from Places to Contact.
+- `npm run validate`: 0 errors; full suite 80/80 passes. Added a regression test that the eight
+  Resources exist and their former channel records are disabled as recipients.
+- Phase 5 next: change public labels and descriptions, show contact evidence/restrictions, filter
+  the directory/API to the shared predicate, and ensure every “Send it to” route uses it.
 
 ### 2026-09-24T00:36:02Z — Contact audit Phase 3: all channel routes reviewed
 
