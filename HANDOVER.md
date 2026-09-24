@@ -17,9 +17,9 @@ Tracked in git and committed with every step.
 - **Corrective plan:** `docs/places-to-contact-audit-plan.md` — deterministic review and correction
   of all 74 channel records and 234 routes before they may be presented or recommended as a
   “Place to contact.” All six phases are complete and deployed to production.
-- **Maintenance plan:** `docs/directory-integrity-maintenance-plan.md` — proposed recurring audit,
-  canonical-identity and duplicate-resolution system. Planning is complete; implementation has not
-  started. Baseline: 26 exact normalized-name groups / 52 records, including duplicate Access Now.
+- **Maintenance plan:** `docs/directory-integrity-maintenance-plan.md` — recurring audit,
+  canonical-identity and duplicate-resolution system. Autonomous implementation started
+  2026-09-24. Baseline: 26 exact normalized-name groups / 52 records, including duplicate Access Now.
 - **Goal:** a site that turns alarm about AI into one well-aimed action in one sitting, ending with
   a draft the user sends themselves — maintained by volunteers, multilingual, with a Resources
   collection modelled on the stockspanic resources desk.
@@ -50,6 +50,12 @@ Tracked in git and committed with every step.
 | Contact audit 4 — Correct/reclassify | **done** | 8 misleading informational records disabled as recipients and preserved as Resources; reference-only companies retained internally |
 | Contact audit 5 — UI/routing convergence | **done** | Public label, directory, API, record pages and send-to cards share audited eligibility and show restrictions/evidence |
 | Contact audit 6 — Final verification | **done and deployed** | 85 tests, 920-page build, 25 browser/axe checks, audit freshness and reconciliation pass; production deployment `673a9d41-5eaa-434c-902a-1f5773023513` is running |
+| Directory integrity 1 — Identity model and inventories | **in progress** | Add roles/identity schema, separate generated candidates from reviewed decisions, dynamic reconciliation and validation |
+| Directory integrity 2 — Backlog resolution | not started | Review candidate pairs, merge confirmed duplicates, preserve provenance and redirects |
+| Directory integrity 3 — Recurring audit | not started | Add fast/full commands, reports, coverage and backlog metrics |
+| Directory integrity 4 — Fail-closed freshness | not started | Enforce 180-day contact expiry consistently in public surfaces and production runtime |
+| Directory integrity 5 — Workflow and public reporting | not started | CI/weekly scheduling, stable issues/artifacts, freshness-page integrity metrics |
+| Directory integrity 6 — Final verification | not started | Full tests/build/browser checks and reconciliation; no deployment without separate approval |
 
 ## Judgement calls made without the owner (reverse any of them)
 
@@ -81,6 +87,17 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T13:33:36Z — Directory integrity implementation started
+
+- The owner explicitly requested autonomous implementation of
+  `docs/directory-integrity-maintenance-plan.md`, with a commit and current handover after every
+  meaningful step. The plan is now active rather than proposed.
+- Execution order: identity schema/inventories; evidence-based duplicate decisions and merges;
+  recurring audit; production freshness; workflows/public reporting; final verification.
+- No project-specific skill applies. Work uses the repository's documented Node/YAML/Astro tools.
+- Current phase: Directory integrity 1. Production deployment remains separately gated by the
+  owner's standing approval requirement.
 
 ### 2026-09-24T13:06:05Z — Directory maintenance plan strengthened after critique
 
@@ -513,4 +530,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-24T13:06:05Z
+Last modified: 2026-09-24T13:33:36Z
