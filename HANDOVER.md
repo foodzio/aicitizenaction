@@ -16,7 +16,7 @@ Tracked in git and committed with every step.
   `docs/content-architecture.md` (content as data, translation, freshness, Resources, volunteers).
 - **Corrective plan:** `docs/places-to-contact-audit-plan.md` — deterministic review and correction
   of all 74 channel records and 234 routes before they may be presented or recommended as a
-  “Place to contact.” All six phases are complete locally. Deployment is the only gated remaining action.
+  “Place to contact.” All six phases are complete and deployed to production.
 - **Goal:** a site that turns alarm about AI into one well-aimed action in one sitting, ending with
   a draft the user sends themselves — maintained by volunteers, multilingual, with a Resources
   collection modelled on the stockspanic resources desk.
@@ -46,7 +46,7 @@ Tracked in git and committed with every step.
 | Contact audit 3 — Full channel audit | **done** | 74 records / 234 routes reviewed; 84 eligible, 150 ineligible; no pending decisions |
 | Contact audit 4 — Correct/reclassify | **done** | 8 misleading informational records disabled as recipients and preserved as Resources; reference-only companies retained internally |
 | Contact audit 5 — UI/routing convergence | **done** | Public label, directory, API, record pages and send-to cards share audited eligibility and show restrictions/evidence |
-| Contact audit 6 — Final verification | **done locally** | 85 tests, 920-page build, 25 browser/axe checks, audit freshness and reconciliation pass; deployment needs owner approval |
+| Contact audit 6 — Final verification | **done and deployed** | 85 tests, 920-page build, 25 browser/axe checks, audit freshness and reconciliation pass; production deployment `673a9d41-5eaa-434c-902a-1f5773023513` is running |
 
 ## Judgement calls made without the owner (reverse any of them)
 
@@ -78,6 +78,24 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T08:26:02Z — Contact corrections deployed and verified
+
+- With the owner's explicit approval, deployed the audited contact-routing corrections to Railway
+  production as deployment `673a9d41-5eaa-434c-902a-1f5773023513` (`SUCCESS`, instance `RUNNING`).
+- The Railway domain serves version `0.1.39`, build 40. Runtime startup is healthy (`node
+  server.mjs`, listening on port 8080); the only logged stderr is npm's non-fatal production-config
+  deprecation warning.
+- Live API verification: 52 included contact records, 22 excluded, and every included record has
+  `facts.contact_disposition: keep`.
+- Live page verification: “Places to contact” replaces “Places to report”; the directory retains
+  401 total entries but excludes the three reported AI articles; the old article URL is preserved
+  as a reference-only page with an explicit “not a current contact destination” warning; and the
+  Argentina recommendation page no longer contains the dead bill-attachment URL.
+- The custom apex `aicitizenaction.org` is independently misconfigured: DNS resolves to
+  `13.248.213.45` / `76.223.67.189` and serves a JavaScript redirect to `/lander`, even though
+  Railway still lists the domain as attached. The release itself is healthy on the Railway domain;
+  fix the apex DNS before treating the canonical URL as live.
 
 ### 2026-09-24T00:44:22Z — Contact audit Phase 6 complete locally
 
@@ -405,9 +423,10 @@ re-aimed at the alarmed non-expert rather than someone with evidence.
 
 ## What to watch
 
-- **Channel eligibility is currently unsound.** Until `docs/places-to-contact-audit-plan.md` is
-  implemented, a reachable article or non-contact page can be marked verified, listed under “Places
-  to report,” and potentially treated as a contact route. The known scope is 74 records / 234 routes.
+- **Custom apex DNS is not reaching Railway.** As of 2026-09-24, `aicitizenaction.org` resolves to
+  `13.248.213.45` / `76.223.67.189` and serves a `/lander` redirect, while Railway lists it as an
+  attached custom domain. The Railway service domain is healthy; correct the registrar DNS before
+  relying on the canonical URL.
 - **Three-state verification.** `true` / `false` / `null` are different. Never collapse `null` into `false`.
 - **`content/` is now the source of truth.** Re-running `npm run migrate` overwrites `content/bodies|channels|orgs`. Do not re-run it once anyone has edited content by hand.
 - **Duplicates** (40 pairs) need a human decision; see `docs/migration-report.md`.
@@ -448,4 +467,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-24T00:44:22Z
+Last modified: 2026-09-24T08:26:02Z
