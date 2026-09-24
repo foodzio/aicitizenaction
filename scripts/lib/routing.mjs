@@ -10,13 +10,24 @@ export const CONTACT_TYPES = ['submission', 'consultation', 'evidence', 'form', 
   'reporting', 'whistleblowing', 'docket', 'petition', 'bounty', 'feedback', 'action', 'program'];
 const INPUT_RANK = { open: 0, limited: 1, none: 2 };
 
-function dateAfter(date, days) {
+export function dateAfter(date, days) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(String(date ?? ''))) return null;
   const value = new Date(`${date}T00:00:00Z`);
   if (Number.isNaN(value.getTime())) return null;
   value.setUTCDate(value.getUTCDate() + days);
   return value.toISOString().slice(0, 10);
 }
+
+/** Last calendar day on which a route's evidence permits a current recommendation. */
+export function contactValidThrough(route) {
+  const evidenceExpiry = dateAfter(route?.contact?.checked_on ?? route?.verified_on, 180);
+  if (!evidenceExpiry) return null;
+  const closes = route?.contact?.closes_on;
+  return closes && closes < evidenceExpiry ? closes : evidenceExpiry;
+}
+
+/** Last calendar day on which a named office-holder may be presented as current. */
+export const seatValidThrough = seat => dateAfter(seat?.verified_on, 90);
 
 // Some routes record a confirmed absence in `value` ("none published", "not accepted"),
 // and a few hold fragments. Only a URL, an email address, or a phone number / postal address
@@ -54,8 +65,7 @@ export function eligibleContactRoute(record, route, today = new Date().toISOStri
   // A route is a current recommendation only while its own evidence is current. Structured
   // contact reviews use checked_on; legacy reviewed routes use verified_on. Missing or expired
   // dates fail closed instead of silently remaining recommendable forever.
-  const checkedOn = route.contact?.checked_on ?? route.verified_on;
-  const expiresOn = dateAfter(checkedOn, 180);
+  const expiresOn = contactValidThrough(route);
   if (!expiresOn || today > expiresOn) return false;
 
   const c = route.contact;
@@ -105,7 +115,7 @@ export const isNamedPerson = name => !!name && !/^(not applicable|none|n\/a|vaca
 
 /** Whether a named office-holder has been checked within the 90-day seat horizon. */
 export function isCurrentSeat(seat, today = new Date().toISOString().slice(0, 10)) {
-  const expiresOn = dateAfter(seat?.verified_on, 90);
+  const expiresOn = seatValidThrough(seat);
   return isNamedPerson(seat?.name) && !!expiresOn && today <= expiresOn;
 }
 

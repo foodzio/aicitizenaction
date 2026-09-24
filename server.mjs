@@ -127,11 +127,19 @@ export function summary(totals) {
   };
 }
 
-export function createApp({ counter, inbox = createInbox(null), publicDir = join(ROOT, 'dist') } = {}) {
+export function createApp({ counter, inbox = createInbox(null), publicDir = join(ROOT, 'dist'), now = () => new Date() } = {}) {
   let redirects = {};
   const redirectFile = join(publicDir, 'redirects.json');
   if (existsSync(redirectFile)) {
     try { redirects = JSON.parse(readFileSync(redirectFile, 'utf8')).redirects ?? {}; } catch { redirects = {}; }
+  }
+  let validity = null;
+  const validityFile = join(publicDir, 'directory-validity.json');
+  if (existsSync(validityFile)) {
+    try {
+      const parsed = JSON.parse(readFileSync(validityFile, 'utf8'));
+      if (parsed.version === 1 && typeof parsed.paths === 'object') validity = parsed;
+    } catch {}
   }
   return createServer(async (req, res) => {
     if (req.method === 'GET' || req.method === 'HEAD') {
@@ -140,6 +148,31 @@ export function createApp({ counter, inbox = createInbox(null), publicDir = join
       if (redirects[path]) {
         res.writeHead(308, { location: redirects[path] + url.search, 'cache-control': 'public, max-age=86400' });
         res.end();
+        return;
+      }
+      const today = now().toISOString().slice(0, 10);
+      const isDirectory = /^\/[a-z]{2,3}\/directory\/$/.test(path);
+      const isStart = /^\/[a-z]{2,3}\/start(?:\/|$)/.test(path);
+      const isDirectoryApi = /^\/api\/(?:bodies|channels|orgs)\.json\/$/.test(path);
+      const isRecord = /^\/[a-z]{2,3}\/(?:bodies|channels|orgs)\/[^/]+\/$/.test(path);
+      let validThrough = null;
+      let protectedSurface = false;
+      if (isStart) { protectedSurface = true; validThrough = validity?.recommendation_valid_through; }
+      else if (isDirectory || isDirectoryApi) { protectedSurface = true; validThrough = validity?.contact_valid_through; }
+      else if (isRecord) { protectedSurface = true; validThrough = validity?.paths?.[path]; }
+      // A protected surface with dated facts fails closed when the manifest is missing/malformed,
+      // or when its first embedded fact has expired. A record absent from paths has no current
+      // route or seat and therefore contains nothing that can age from current to stale.
+      const missingManifest = protectedSurface && !validity;
+      const expired = !!validThrough && today > validThrough;
+      if (missingManifest || expired) {
+        const message = 'Directory verification has expired. This page is temporarily unavailable until its contact information is re-checked.';
+        res.writeHead(503, {
+          'content-type': isDirectoryApi ? 'application/json; charset=utf-8' : 'text/plain; charset=utf-8',
+          'cache-control': 'no-store',
+          'retry-after': '86400'
+        });
+        res.end(isDirectoryApi ? JSON.stringify({ error: 'directory_verification_expired', message }) : message);
         return;
       }
     }

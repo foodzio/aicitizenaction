@@ -67,7 +67,7 @@ const href = v => /^https?:\/\//.test(v) ? v : /@/.test(v) ? `mailto:${v}` : nul
             <div>{x.value ? (href(x.value) ? <a href={href(x.value)} target={/^https?:/.test(x.value) ? '_blank' : undefined} rel="noopener noreferrer">{x.value}</a> : x.value) : <em class="muted">—</em>}</div>
             <div class="meta-line">
               {x.contact ? <span class={`badge v-${contactEligible(x)}`}>{contactEligible(x) ? t(`contact.${x.contact.status}`) : t('verify.expired')}{x.contact.checked_on && ` · ${x.contact.checked_on}`}</span>
-                : <span class={`badge v-${x.verified}`} title={t(`verify.${x.verified}_hint`)}>{t(`verify.${x.verified}`)}{x.verified_on && ` · ${x.verified_on}`}</span>}
+                : <span class={`badge v-${x.verified === true && !contactEligible(x) ? false : x.verified}`} title={t(`verify.${x.verified}_hint`)}>{x.verified === true && !contactEligible(x) ? t('verify.expired') : t(`verify.${x.verified}`)}{x.verified_on && ` · ${x.verified_on}`}</span>}
             </div>
             {!contactEligible(x) && x.verified === true && <p class="notice">{t('contact.stale')}</p>}
             {x.contact?.eligible_users?.length > 0 && <p class="meta-line"><strong>{t('contact.eligible')}:</strong> {x.contact.eligible_users.join(', ')}</p>}

@@ -53,8 +53,8 @@ Tracked in git and committed with every step.
 | Directory integrity 1 — Identity model and inventories | **done** | Identity/roles/redirect/provenance schema, separate deterministic candidates and human decisions, PSL-aware matching, validation and tests |
 | Directory integrity 2 — Backlog resolution | **done** | 78 current pairs reviewed; 41 duplicates merged; provenance, roles, parent links and 82 multilingual redirects preserved |
 | Directory integrity 3 — Recurring audit | **done** | Fast/full read-only commands, stable reports, reviewed baseline, coverage/backlog/link metrics |
-| Directory integrity 4 — Fail-closed freshness | **in progress** | Enforce 180-day contact expiry consistently in public surfaces and production runtime |
-| Directory integrity 5 — Workflow and public reporting | not started | CI/weekly scheduling, stable issues/artifacts, freshness-page integrity metrics |
+| Directory integrity 4 — Fail-closed freshness | **done** | Shared 180-day route/90-day seat rules plus per-build runtime validity gate |
+| Directory integrity 5 — Workflow and public reporting | **in progress** | CI/weekly scheduling, stable issues/artifacts, freshness-page integrity metrics |
 | Directory integrity 6 — Final verification | not started | Full tests/build/browser checks and reconciliation; no deployment without separate approval |
 
 ## Judgement calls made without the owner (reverse any of them)
@@ -87,6 +87,21 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T14:05:56Z — Production freshness now fails closed
+
+- Builds now emit `dist/directory-validity.json` from the same route/seat predicates used by
+  routing. It records global contact/recommendation horizons and exact per-language record-page
+  horizons; the current build has 612 dated record paths, contact validity through 2027-03-21 and
+  recommendation validity through 2026-09-28.
+- `server.mjs` refuses expired recommendation pages, directory/API snapshots and affected record
+  pages with a non-cacheable 503. Missing/malformed manifests also fail closed on protected
+  surfaces; undated reference-only records remain available. Permanent redirects still run first.
+- Added a clock fixture and boundary/regression tests for manifest calculation, expiry, missing
+  manifests, JSON errors and reference availability. Focused tests pass 31/31 and the 838-page
+  build emits both redirect and validity manifests.
+- Phase 4 is complete. Phase 5 is active: wire fast/full audits into CI/weekly workflows, retain
+  reports, update stable-key issues, and publish integrity metrics on the freshness page.
 
 ### 2026-09-24T14:04:13Z — Shared freshness rules now fail closed
 

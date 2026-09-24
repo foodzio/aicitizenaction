@@ -73,6 +73,45 @@ test('retired multilingual record paths return a direct permanent redirect and p
   app.closeAllConnections(); app.close();
 });
 
+test('stale static directory snapshots fail closed while undated reference pages remain available', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aica-validity-'));
+  for (const path of ['en/directory', 'en/start/law', 'en/channels/current', 'en/channels/reference', 'api'])
+    mkdirSync(join(dir, path), { recursive: true });
+  for (const path of ['en/directory/index.html', 'en/start/law/index.html', 'en/channels/current/index.html', 'en/channels/reference/index.html'])
+    writeFileSync(join(dir, path), '<h1>static directory fact</h1>');
+  writeFileSync(join(dir, 'api', 'channels.json'), '{}');
+  writeFileSync(join(dir, 'directory-validity.json'), JSON.stringify({
+    version: 1,
+    contact_valid_through: '2026-06-30',
+    recommendation_valid_through: '2026-06-29',
+    paths: { '/en/channels/current/': '2026-06-30' }
+  }));
+  const app = createApp({ counter: createCounter(null), publicDir: dir, now: () => new Date('2026-07-01T00:00:00Z') });
+  await new Promise(r => app.listen(0, '127.0.0.1', r));
+  const base = `http://127.0.0.1:${app.address().port}`;
+  for (const path of ['/en/directory/', '/en/start/law/', '/en/channels/current/']) {
+    const response = await fetch(base + path);
+    assert.equal(response.status, 503, path);
+    assert.equal(response.headers.get('cache-control'), 'no-store');
+  }
+  const api = await fetch(`${base}/api/channels.json`);
+  assert.equal(api.status, 503);
+  assert.equal((await api.json()).error, 'directory_verification_expired');
+  assert.equal((await fetch(`${base}/en/channels/reference/`)).status, 200);
+  app.closeAllConnections(); app.close();
+});
+
+test('protected directory surfaces fail closed when the validity manifest is absent', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aica-validity-'));
+  mkdirSync(join(dir, 'en', 'directory'), { recursive: true });
+  writeFileSync(join(dir, 'en', 'directory', 'index.html'), '<h1>directory</h1>');
+  const app = createApp({ counter: createCounter(null), publicDir: dir });
+  await new Promise(r => app.listen(0, '127.0.0.1', r));
+  const response = await fetch(`http://127.0.0.1:${app.address().port}/en/directory/`);
+  assert.equal(response.status, 503);
+  app.closeAllConnections(); app.close();
+});
+
 test('summary gives completion and own-words rates from totals only', () => {
   const s = summary({ '2026-09-23': { 'door|none': 10, 'draft_copied|law': 2, 'draft_downloaded|harm': 1, 'own_words|law': 2 } });
   assert.equal(s.completion_rate, 30);
