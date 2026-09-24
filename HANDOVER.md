@@ -777,18 +777,27 @@ re-aimed at the alarmed non-expert rather than someone with evidence.
   relying on the canonical URL.
 - **Three-state verification.** `true` / `false` / `null` are different. Never collapse `null` into `false`.
 - **`content/` is now the source of truth.** Re-running `npm run migrate` overwrites `content/bodies|channels|orgs`. Do not re-run it once anyone has edited content by hand.
-- **Duplicates** (40 pairs) need a human decision; see `docs/migration-report.md`.
-- **Seat-holder decay** is a known gap: nothing detects a changed chair automatically (plan risk table).
-- **Two Indian bodies are already overdue** for review (their input `verified_on` dates were June and April 2026).
+- **Identity backlog is resolved, not erased.** All 78 current candidates have reviewed decisions;
+  41 duplicates were merged. Re-run `npm run directory-dedupe` and the decision validator after
+  identity-affecting changes; never treat a similarity signal as an automatic merge.
+- **Seat-holder decay fails closed at 90 days**, but automation cannot discover a changed chair
+  before that horizon. The monthly/weekly queues still require a human to reopen official sources.
+- **Current maintenance queue:** two unsourced records plus two overdue Indian records and their
+  two expired named seats. They are excluded/labelled safely but still need human source review.
 - **Data decay notes from research:** UK DSIT abolished July 2026; International Network of AI Safety Institutes renamed Dec 2025; Indian and Japanese committee chairs reconstituted annually.
 - **Prototype pages in `input/src/` are Artifact-format** (no doctype/head/body).
 - **Product trade-off:** helping each person write their own message produces authentic participation but less concentrated force than campaign tools. Deliberate; revisit.
-- **Nothing has run on GitHub.** The repo is empty on the remote; `check.yml`, `weekly.yml` and `ingest.yml` are untested there. Expect first-run fixes (permissions, cache keys).
-- **Report and volunteer links point at a private repo** — they only work for the public once the repo is public.
-- **Site rebuilds are needed for time-based content** (windows closing, overdue badges). Client-side scripts hide closed windows meanwhile; a scheduled rebuild/deploy would keep it exact.
+- **New workflow paths are locally verified but not observed in Actions yet.** In particular,
+  confirm that this repository accepts 400-day artifact retention and that issue/cache permissions
+  behave as expected on the first fast/full directory-audit runs.
+- **Directory recommendations fail closed without a rebuild** via `directory-validity.json` and the
+  production server. Other static time-based content (notably window lists) still benefits from a
+  scheduled rebuild; automatic deployment remains unauthorized.
 - **Routing heuristics** (`seatWeight`, `research_order`) stand in until drafted topics/powers are reviewed; once some are, add a "what is it about?" question to step 1 (routing already supports `where.topic`).
 - **`powers_text` in the research often overstates** compel/investigate powers (agents' finding). Don't display it as fact without review; the record page shows it under "Its powers" today.
-- **Local-only artefacts:** `tmp/` (link-check state, screenshots) is gitignored. The first weekly run starts the two-consecutive-failures state afresh.
+- **Local-only artefacts:** `tmp/` (link-check state, screenshots) is gitignored. The final local
+  link state is in `tmp/final-linkcheck-state/`; Actions maintains its own cached state. There are
+  13 first-observed failures and zero confirmed failures as of the final run.
 
 ## Owner decisions
 
@@ -799,15 +808,25 @@ re-aimed at the alarmed non-expert rather than someone with evidence.
 - **Visitor discussion on Resources:** no.
 - **Tooling:** confirmed — Astro, YAML + JSON Schema, GitHub Actions, own link checker, axe-core.
 
-**Recommended, not yet decided:** brief Q1–4 as built (location second; cross-border only as fallback; "join" one of six, after direct actions; lobbying reference-only); Q5 geography stewards / 90 days; completion measured by anonymous event counts with no cookies and no identifiers (a small counting endpoint — not built); French as gated pilot until a reviewer exists; branch protection 1 approval + owner bypass.
+**Recommended, not yet decided:** brief Q1–4 as built (location second; cross-border only as fallback; "join" one of six, after direct actions; lobbying reference-only); Q5 geography stewards / 90 days; branch protection 1 approval + owner bypass. Anonymous aggregate completion counting is implemented. French is publicly approved but remains machine-labelled until a human language steward reviews it.
 
-**Pre-publication scan (2026-09-23T15:37:42Z):** no API keys, passwords or private keys in files or history. Fixed: a Feishu form redirect `auth_token` removed from `docs/link-check-trial.md`; absolute local paths replaced in `AGENTS.md`, `CLAUDE.md`, `docs/implementation-plan.md`, `HANDOVER.md`. Remaining, for the owner: (a) earlier commits still contain the token and the local paths — publishing as-is exposes them unless history is rewritten before the first push (the remote is empty, so nobody else is affected); (b) commits carry the author email `sinscrit@gmail.com`; (c) `.projstuff` holds the local project path and `.claude/settings.local.json` holds local permissions — both are used by local tooling.
+**Pre-publication scan (2026-09-23T15:37:42Z):** no API keys, passwords or private keys in the
+then-current files. A Feishu form redirect `auth_token` and absolute local paths were removed from
+tracked files, but earlier commits may retain them; reassess history exposure rather than assuming
+the remote is empty. Commits also carry the author's configured email. `.projstuff` and
+`.claude/settings.local.json` intentionally retain local tooling metadata and permissions.
 
 ## How to resume
 
 1. `npm install && npm run check` — must show 0 errors and all tests passing.
-2. Remaining work needs people: review routing drafts (`docs/routing-drafts-report.md`), confirm the 40 suspected duplicates (`docs/migration-report.md`), editor review of the 8 draft-published and 91 pending Resources items, run phase A (`docs/phase-a-test-kit.md`), French steward review, and the owner decisions below. Engineering follow-ups are listed under \"What to watch\".
-3. Never edit `input/`. Never deploy without asking the owner.
+2. Run `npm run directory-audit`; triage its six current maintenance facts. On the next scheduled
+   full run, let the cached state decide whether the 13 first link failures are consecutive. Run
+   the prior-month evidence sample on the monthly schedule.
+3. Remaining non-automatable work needs people: review routing drafts
+   (`docs/routing-drafts-report.md`), editor review of draft/pending Resources, phase A participants
+   (`docs/phase-a-test-kit.md`), and a French language steward.
+4. Never edit `input/`. Never deploy without asking the owner; the current implementation is
+   committed but not deployed.
 
 Reference prototypes (published, private):
 - Concern Register — https://claude.ai/artifact/9BhNrXsW43HJ4rjH5fSuNy
@@ -815,4 +834,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-24T13:38:26Z
+Last modified: 2026-09-24T14:19:00Z
