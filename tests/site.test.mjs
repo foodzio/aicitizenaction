@@ -184,3 +184,14 @@ test('feedback and contributor pages post to the site, never to GitHub', () => {
     assert.ok(!page(f).includes('github.com/foodzio'), `${f} links to the repository`);
   assert.match(page('en/bodies/us-senate-committee-commerce-2/index.html'), /href="\/en\/feedback\/\?topic=wrong&amp;page=/);
 });
+
+test('links to other websites open in a new tab (static pages; links built by the path are marked at runtime)', () => {
+  for (const f of ['en/bodies/us-senate-committee-commerce-2/index.html', 'en/resources/windows/us-co-admt-chatbot-rules-comment/index.html']) {
+    const html = page(f);
+    const external = [...html.matchAll(/<a [^>]*href="https?:\/\/[^"]+"[^>]*>/g)].map(m => m[0]).filter(a => !/rel="(canonical|alternate)"/.test(a));
+    assert.ok(external.length > 0, f);
+    for (const a of external) assert.match(a, /target="_blank"/, `${f}: ${a}`);
+    for (const a of external) assert.match(a, /rel="noopener noreferrer"/, `${f}: ${a}`);
+  }
+  assert.match(page('en/index.html'), /opens in a new tab/);
+});

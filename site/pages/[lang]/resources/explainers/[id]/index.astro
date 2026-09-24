@@ -21,7 +21,7 @@ const rel = related(lang, e.facts);
     <p><a class="btn" href={handoff(lang, e.facts.action)}>{t('resources.newcomer_link')} →</a></p>
     {rel.length > 0 && (<><h3>{t('resources.related')}</h3><ul>{rel.map(r => <li><a href={r.url}>{r.name}</a></li>)}</ul></>)}
     <h3>{t('resources.sources')}</h3>
-    <ul>{e.meta.sources.map(s => <li><a href={s.url} rel="noopener">{s.url}</a> <span class="meta-line">· {s.checked}</span></li>)}</ul>
+    <ul>{e.meta.sources.map(s => <li><a href={s.url} target="_blank" rel="noopener noreferrer">{s.url}</a> <span class="meta-line">· {s.checked}</span></li>)}</ul>
     <p class="meta-line">{t('record.last_checked')} {e.meta.verified_on}</p>
   </article>
 </Base>

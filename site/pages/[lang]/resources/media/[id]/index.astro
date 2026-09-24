@@ -27,7 +27,7 @@ const draft = String(m.meta.reviewed_by ?? '').startsWith('draft');
       <dt>{t('resources.kind')}</dt><dd>{t(`resources.kinds.${m.facts.kind}`)} · {m.facts.published_at}</dd>
       {m.facts.topics?.length > 0 && <><dt>{t('resources.topic')}</dt><dd>{m.facts.topics.map(topicLabel).join(', ')}</dd></>}
     </dl>
-    <p><a class="btn secondary" href={m.facts.url} rel="noopener">{t('resources.read_at')} {s?.strings.name} ↗</a></p>
+    <p><a class="btn secondary" href={m.facts.url} target="_blank" rel="noopener noreferrer">{t('resources.read_at')} {s?.strings.name} ↗</a></p>
     <h2>{t('resources.act')}</h2>
     <p class="lede">{m.strings.prompt ?? t('resources.default_prompt')}</p>
     <p><a class="btn" href={handoff(lang, m.facts.action)}>{t('resources.newcomer_link')} →</a></p>

@@ -79,6 +79,24 @@ const menuLangs = langs.filter(l => l.public || l.code === lang);
         </p>
       </div>
     </footer>
+    <script define:vars={{ newTab: t('site.new_tab') }}>
+      // Links to other websites open in a new tab, with a note for screen readers. Covers links in
+      // the page and any the guided path builds later. Email and same-site links are untouched.
+      const mark = a => {
+        if (a.dataset.ext || !/^https?:$/.test(a.protocol) || a.host === location.host) return;
+        a.dataset.ext = '1';
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        const s = document.createElement('span'); s.className = 'sr-only'; s.textContent = ` ${newTab}`;
+        a.append(s);
+      };
+      document.querySelectorAll('a[href]').forEach(mark);
+      new MutationObserver(ms => ms.forEach(m => m.addedNodes.forEach(n => {
+        if (n.nodeType !== 1) return;
+        if (n.matches?.('a[href]')) mark(n);
+        n.querySelectorAll?.('a[href]').forEach(mark);
+      }))).observe(document.body, { childList: true, subtree: true });
+    </script>
     <script>
       // The language menu is a <details>: it works without JavaScript; this only closes it on an
       // outside click or Escape, as a dropdown should.

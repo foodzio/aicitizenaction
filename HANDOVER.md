@@ -79,6 +79,12 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T08:44:54Z — Outside links open in a new tab (owner)
+
+- Every link to another website opens in a new tab with `rel="noopener noreferrer"`: set in the templates (record, media, window, explainer pages, and the path's contact/evidence/membership links) so it works without JavaScript, plus a site-wide script in `Base.astro` that marks any external link (including those the path builds later) and adds a screen-reader note "(opens in a new tab)" / "(s'ouvre dans un nouvel onglet)". Same-site and `mailto:` links are unchanged.
+- Browser-checked: path step 2 (2/2 external links), a record page (17/17). Site test added. 86 tests pass. Not yet redeployed.
+- Also this session: pushed seven commits from a parallel session (contact audit: "Publish only audited contact destinations" etc.) that were live (v0.1.39, deployed by local upload) but not on GitHub.
+
 ### 2026-09-24T08:26:02Z — Contact corrections deployed and verified
 
 - With the owner's explicit approval, deployed the audited contact-routing corrections to Railway
@@ -467,4 +473,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-24T08:26:02Z
+Last modified: 2026-09-24T08:44:54Z

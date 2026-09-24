@@ -27,11 +27,11 @@ const rel = related(lang, w.facts);
     {w.strings.how && <p>{w.strings.how}</p>}
     <div class="row open-only" hidden={!open}>
       <a class="btn" href={handoff(lang, w.facts.action)}>{t('resources.newcomer_link')} →</a>
-      <a class="btn secondary" href={w.facts.url} rel="noopener">{t('resources.act')} ↗</a>
+      <a class="btn secondary" href={w.facts.url} target="_blank" rel="noopener noreferrer">{t('resources.act')} ↗</a>
     </div>
     {rel.length > 0 && (<><h3>{t('resources.related')}</h3><ul>{rel.map(r => <li><a href={r.url}>{r.name}</a></li>)}</ul></>)}
     <h3>{t('resources.sources')}</h3>
-    <ul>{w.meta.sources.map(s => <li><a href={s.url} rel="noopener">{s.url}</a> <span class="meta-line">· {s.checked}</span></li>)}</ul>
+    <ul>{w.meta.sources.map(s => <li><a href={s.url} target="_blank" rel="noopener noreferrer">{s.url}</a> <span class="meta-line">· {s.checked}</span></li>)}</ul>
   </article>
 </Base>
 <script>

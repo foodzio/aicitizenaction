@@ -42,6 +42,10 @@ strings:
       value: Donner votre avis
       src: 9fe6a46e
       machine: true
+    new_tab:
+      value: (s'ouvre dans un nouvel onglet)
+      src: 1d183356
+      machine: true
     footer_note:
       value: Pas de compte, pas de liste de diffusion, pas de pistage.
       src: 5c1bc1bd
