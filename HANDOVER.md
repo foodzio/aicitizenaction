@@ -88,6 +88,23 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T13:45:13Z — Complete identity candidate ledger reviewed
+
+- Classified all 126 deterministic candidates from their cited record evidence: 42 `same`, 47
+  `distinct`, 37 `related`, and zero `pending`. Evidence URLs are stored per pair; the stricter
+  180-day government review horizon (2027-03-23) is used for the whole backlog.
+- Shared parliamentary portals, government hosts and submission endpoints were not treated as
+  identity proof. The two same-name U.S. subcommittee pairs in different chambers are explicitly
+  `distinct`; clear parent/subunit and service/recipient relationships are `related`.
+- `same` rows name a canonical id and transparently record the owner's explicit autonomous
+  best-judgement instruction as the approval basis; this is not represented as pair-by-pair owner
+  source review. The cited source checks in the records are dated 2026-09-22.
+- Decision validator: 126/126 resolved, 0 errors, with the expected 42 warnings that approved
+  duplicate pairs remain published until the next merge step. Full content validation remains at
+  0 errors and four existing warnings.
+- Next: implement the deterministic merge applicator, including field-level provenance, reference
+  rewrites and retired-path redirects; dry-run it before changing content.
+
 ### 2026-09-24T13:42:51Z — Identity decisions now have an executable contract
 
 - Added `npm run directory-identity-review`, a read-only validator joining the generated candidate

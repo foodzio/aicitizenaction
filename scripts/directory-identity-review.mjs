@@ -20,7 +20,8 @@ export function validateIdentityDecisions({ inventory, ledger, records, now = to
   for (const row of active.values()) for (const old of row.meta?.redirect_from ?? []) redirects.set(old.id, row.id);
   const decisions = new Map();
 
-  for (const row of ledger.decisions ?? []) {
+  for (const item of ledger.decisions ?? []) {
+    const row = { ...(ledger.defaults ?? {}), ...item };
     const at = `decision ${row.key ?? '(missing key)'}`;
     if (!row.key) { errors.push(`${at}: missing key`); continue; }
     if (decisions.has(row.key)) errors.push(`${at}: duplicate decision`);

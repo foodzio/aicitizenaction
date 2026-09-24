@@ -35,3 +35,10 @@ test('a completed merge remains valid after the retired record becomes a redirec
   assert.deepEqual(result.errors, []);
   assert.deepEqual(result.warnings, []);
 });
+
+test('ledger defaults reduce repetition without weakening required fields', () => {
+  const { reviewed_by, reviewed_on, review_by, ...short } = valid;
+  const ledger = { defaults: { reviewed_by, reviewed_on, review_by }, decisions: [short] };
+  const result = validateIdentityDecisions({ inventory: { candidates: [candidate] }, ledger, records, now: '2026-09-24' });
+  assert.deepEqual(result.errors, []);
+});
