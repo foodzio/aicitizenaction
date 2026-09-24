@@ -79,12 +79,21 @@ export function audit({ now = today(), full = false } = {}) {
   try { redirectManifest(records); } catch (error) { add('block_publication', 'redirects:invalid', error.message); }
 
   const fullChecks = {};
+  let linkMetrics = null;
   if (full) for (const [key, command, args] of [
     ['tests', 'npm', ['test']], ['build', 'npm', ['run', 'build']],
     ['links', process.execPath, [join(ROOT, 'scripts', 'check-links.mjs'), '--out', join(ROOT, 'tmp', 'directory-audit', 'links.json')]]
   ]) {
     fullChecks[key] = run(command, args);
     if (!fullChecks[key].ok) add('block_publication', `full:${key}`, `${key} command failed; see JSON report output.`);
+  }
+  const linksPath = join(ROOT, 'tmp', 'directory-audit', 'links.json');
+  if (full && fullChecks.links?.ok && existsSync(linksPath)) {
+    const links = JSON.parse(readFileSync(linksPath, 'utf8'));
+    linkMetrics = { checked: links.checked, broken: links.broken.length, confirmed: links.confirmed.length, unknown: links.unknown.length, moved: links.moved.length, excluded: links.excluded };
+    for (const row of links.confirmed) add('block_publication', `link:confirmed:${row.url}`, `Link failed on two consecutive full audits: ${row.url}`);
+    for (const row of links.broken.filter(row => !links.confirmed.some(item => item.url === row.url))) add('needs_human_review', `link:first-failure:${row.url}`, `First observed link failure; confirm on the next run: ${row.url}`);
+    for (const row of links.moved) add('informational', `link:moved:${row.url}`, `Link moved to another host: ${row.url} → ${row.finalUrl}`);
   }
 
   const buckets = Object.fromEntries(['block_publication', 'needs_human_review', 'maintenance_due', 'informational'].map(bucket => [bucket, findings.filter(item => item.bucket === bucket)]));
@@ -105,7 +114,8 @@ export function audit({ now = today(), full = false } = {}) {
       overdue_seats: fresh.seats.overdue,
       translations: fresh.translations,
       resource_perspectives: fresh.balance,
-      redirects: records.reduce((sum, record) => sum + (record.meta.redirect_from?.length ?? 0), 0)
+      redirects: records.reduce((sum, record) => sum + (record.meta.redirect_from?.length ?? 0), 0),
+      link_check: linkMetrics
     },
     full_checks: Object.fromEntries(Object.entries(fullChecks).map(([key, value]) => [key, { ok: value.ok, status: value.status, output: value.output.slice(-4000) }]))
   };
@@ -118,6 +128,7 @@ export function auditMarkdown(report) {
     `Canonical entities: ${report.metrics.canonical_entities} · Current contact coverage: ${report.metrics.current_contact_entities}/${report.metrics.canonical_entities} (${report.metrics.contact_coverage_percent}%) · No current contact: ${report.metrics.no_current_contact_entities}`,
     `Identity candidates: ${report.metrics.identity_candidates.candidates} (${report.metrics.identity_candidates.high} high, ${report.metrics.identity_candidates.medium} medium, ${report.metrics.identity_candidates.low} low) · Unresolved: ${report.metrics.identity_unresolved}`,
     `Channel routes reviewed: ${report.metrics.contact_routes_reviewed}/${report.metrics.contact_routes_total} · Retired ids redirected: ${report.metrics.redirects}`,
+    ...(report.metrics.link_check ? [`Links: ${report.metrics.link_check.checked} checked · ${report.metrics.link_check.broken} first-run broken · ${report.metrics.link_check.confirmed} confirmed · ${report.metrics.link_check.unknown} unknown · ${report.metrics.link_check.moved} moved`] : []),
     ''
   ];
   for (const bucket of ['block_publication', 'needs_human_review', 'maintenance_due', 'informational']) {

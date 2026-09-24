@@ -52,8 +52,8 @@ Tracked in git and committed with every step.
 | Contact audit 6 — Final verification | **done and deployed** | 85 tests, 920-page build, 25 browser/axe checks, audit freshness and reconciliation pass; production deployment `673a9d41-5eaa-434c-902a-1f5773023513` is running |
 | Directory integrity 1 — Identity model and inventories | **done** | Identity/roles/redirect/provenance schema, separate deterministic candidates and human decisions, PSL-aware matching, validation and tests |
 | Directory integrity 2 — Backlog resolution | **done** | 78 current pairs reviewed; 41 duplicates merged; provenance, roles, parent links and 82 multilingual redirects preserved |
-| Directory integrity 3 — Recurring audit | **in progress** | Add fast/full commands, reports, coverage and backlog metrics |
-| Directory integrity 4 — Fail-closed freshness | not started | Enforce 180-day contact expiry consistently in public surfaces and production runtime |
+| Directory integrity 3 — Recurring audit | **done** | Fast/full read-only commands, stable reports, reviewed baseline, coverage/backlog/link metrics |
+| Directory integrity 4 — Fail-closed freshness | **in progress** | Enforce 180-day contact expiry consistently in public surfaces and production runtime |
 | Directory integrity 5 — Workflow and public reporting | not started | CI/weekly scheduling, stable issues/artifacts, freshness-page integrity metrics |
 | Directory integrity 6 — Final verification | not started | Full tests/build/browser checks and reconciliation; no deployment without separate approval |
 
@@ -87,6 +87,17 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T15:58:20Z — Directory integrity Phase 3 complete
+
+- Executed the slow `directory-audit:full`: PASS with 107/107 tests, 838 generated pages and 914
+  URLs checked. Link result: 13 first-observed failures, 0 confirmed consecutive failures, 146
+  unknown/blocked responses, 27 cross-host moves and 0 exclusions.
+- Full reports now promote confirmed consecutive link failures to publication blockers, first-run
+  failures to stable-key human-review items, and cross-host moves to information; aggregate link
+  metrics are included in JSON and Markdown instead of being buried in subprocess output.
+- Phase 3 is complete. Phase 4 is active: move the existing 180-day audit rule into the shared
+  eligibility predicate/public surfaces and add explicit stale-route UI/API evidence.
 
 ### 2026-09-24T13:57:31Z — Read-only recurring directory audit implemented
 
