@@ -19,6 +19,20 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Fast directory integrity audit
+        id: directory_audit
+        continue-on-error: true
+        run: npm run directory-audit
+      - name: Add directory audit to summary
+        if: always() && hashFiles('tmp/directory-audit/report.md') != ''
+        run: cat tmp/directory-audit/report.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload directory audit
+        if: always() && hashFiles('tmp/directory-audit/report.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: directory-audit-fast-${{ github.run_id }}
+          path: tmp/directory-audit/
+          retention-days: 400
       - name: Validate content and run tests
         run: npm run check
       - name: Build the site
@@ -35,3 +49,6 @@ jobs:
           else
             echo "No content files changed." >> "$GITHUB_STEP_SUMMARY"
           fi
+      - name: Enforce directory publication gate
+        if: always() && steps.directory_audit.outcome == 'failure'
+        run: exit 1

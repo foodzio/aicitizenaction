@@ -32,15 +32,23 @@ export function baselineDrops(counts, baseline) {
   return drops;
 }
 
-export function audit({ now = today(), full = false } = {}) {
+export function audit({ now = today(), full = false, linkState } = {}) {
   const findings = [];
   const add = (bucket, key, message, path) => findings.push(finding(bucket, key, message, path));
   const records = loadDirectory();
+  const recordByPath = new Map(records.map(record => [record._path, record]));
   const channels = records.filter(record => record._section === 'channels');
   const channelRoutes = channels.flatMap(record => record.facts.routes.map(route => ({ record, route })));
   const validation = validateAll({ now });
   for (const issue of validation.errors) add('block_publication', `schema:${issue.path}:${issue.msg}`, issue.msg, issue.path);
-  for (const issue of validation.warnings) add('maintenance_due', `validation:${issue.path}:${issue.msg}`, issue.msg, issue.path);
+  for (const issue of validation.warnings) {
+    // Record/seat expiry gets one structured finding below; do not file a second issue for the
+    // validator's summary of the same fact.
+    if (issue.msg.startsWith('overdue:')) continue;
+    const record = recordByPath.get(issue.path);
+    const key = issue.msg.startsWith('unsourced:') && record ? `record:unsourced:${record.id}` : `validation:${issue.path}:${issue.msg}`;
+    add('maintenance_due', key, issue.msg, issue.path);
+  }
 
   const inventoryPath = join(ROOT, 'docs', 'directory-identity-candidates.yml');
   const decisionsPath = join(ROOT, 'docs', 'directory-identity-decisions.yml');
@@ -80,9 +88,11 @@ export function audit({ now = today(), full = false } = {}) {
 
   const fullChecks = {};
   let linkMetrics = null;
+  const linkArgs = [join(ROOT, 'scripts', 'check-links.mjs'), '--out', join(ROOT, 'tmp', 'directory-audit', 'links.json')];
+  if (linkState) linkArgs.push('--state', linkState);
   if (full) for (const [key, command, args] of [
     ['tests', 'npm', ['test']], ['build', 'npm', ['run', 'build']],
-    ['links', process.execPath, [join(ROOT, 'scripts', 'check-links.mjs'), '--out', join(ROOT, 'tmp', 'directory-audit', 'links.json')]]
+    ['links', process.execPath, linkArgs]
   ]) {
     fullChecks[key] = run(command, args);
     if (!fullChecks[key].ok) add('block_publication', `full:${key}`, `${key} command failed; see JSON report output.`);
@@ -140,7 +150,9 @@ export function auditMarkdown(report) {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const report = audit({ full: process.argv.includes('--full') });
+  const args = process.argv.slice(2);
+  const valueAfter = flag => { const i = args.indexOf(flag); return i >= 0 ? args[i + 1] : undefined; };
+  const report = audit({ full: args.includes('--full'), linkState: valueAfter('--link-state') });
   const out = join(ROOT, 'tmp', 'directory-audit');
   mkdirSync(out, { recursive: true });
   writeFileSync(join(out, 'report.json'), JSON.stringify(report, null, 2) + '\n');

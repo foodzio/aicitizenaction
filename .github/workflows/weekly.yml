@@ -27,21 +27,44 @@ jobs:
           key: linkcheck-state-${{ github.run_id }}
           restore-keys: linkcheck-state-
       - run: mkdir -p .linkcheck
-      - name: Check every URL
-        run: node scripts/check-links.mjs --state .linkcheck/state.json --out .linkcheck/out.json --summary "$GITHUB_STEP_SUMMARY"
+      - name: Run full directory integrity audit
+        id: directory_audit
+        continue-on-error: true
+        run: node scripts/directory-audit.mjs --full --link-state .linkcheck/state.json
+      - name: Add directory audit to summary
+        if: always() && hashFiles('tmp/directory-audit/report.md') != ''
+        run: cat tmp/directory-audit/report.md >> "$GITHUB_STEP_SUMMARY"
       - name: Save link-check state
+        if: always()
         uses: actions/cache/save@v4
         with:
           path: .linkcheck
           key: linkcheck-state-${{ github.run_id }}
       - name: Open issues for confirmed failures
+        if: always() && hashFiles('tmp/directory-audit/links.json') != ''
         env:
           GH_TOKEN: ${{ github.token }}
-        run: node scripts/file-link-issues.mjs .linkcheck/out.json
+        run: node scripts/file-link-issues.mjs tmp/directory-audit/links.json
+      - name: Reconcile stable directory finding issues
+        if: always() && hashFiles('tmp/directory-audit/report.json') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/file-directory-issues.mjs tmp/directory-audit/report.json
       - name: Freshness report
+        if: always()
         run: node scripts/freshness.mjs --link-state .linkcheck/state.json --summary "$GITHUB_STEP_SUMMARY" > freshness.md
+      - name: Upload retained integrity reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: directory-audit-full-${{ github.run_id }}
+          path: |
+            tmp/directory-audit/
+            .linkcheck/state.json
+            freshness.md
+          retention-days: 400
       - name: Post the report to Discussions
-        if: vars.DISCUSSION_CATEGORY_ID != ''
+        if: always() && vars.DISCUSSION_CATEGORY_ID != ''
         env:
           GH_TOKEN: ${{ github.token }}
           CATEGORY: ${{ vars.DISCUSSION_CATEGORY_ID }}
@@ -50,6 +73,10 @@ jobs:
           gh api graphql -f query='mutation($r:ID!,$c:ID!,$t:String!,$b:String!){createDiscussion(input:{repositoryId:$r,categoryId:$c,title:$t,body:$b}){discussion{url}}}' \
             -f r="$repo_id" -f c="$CATEGORY" -f t="Freshness report $(date -u +%Y-%m-%d)" -f b="$(cat freshness.md)"
       - name: Steward check-ins
+        if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: node scripts/inactivity.mjs
+      - name: Enforce directory publication gate
+        if: always() && steps.directory_audit.outcome == 'failure'
+        run: exit 1

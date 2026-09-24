@@ -88,6 +88,21 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T14:10:05Z — Audits are CI gates with stable issue reconciliation
+
+- Pull requests and main pushes now run the fast directory audit before the normal suite, append
+  its Markdown to the run summary, retain JSON/Markdown artifacts for 400 days, and fail only after
+  preserving the report when a publication blocker exists.
+- The weekly workflow now runs the full audit with persistent link state, retains the full report,
+  link state/results and freshness report for 400 days, and preserves the existing two-run link
+  confirmation rule. It still performs steward check-ins and optional Discussions reporting.
+- Added `file-directory-issues.mjs`: actionable findings carry encoded stable-key markers, update
+  or reopen the same issue, receive CODEOWNERS/SLA context, and automatically close when resolved.
+  Duplicate validator/structured overdue findings were collapsed; the current queue is six unique
+  maintenance facts rather than eight overlapping alerts.
+- Workflow YAML parses, the fast audit passes, and focused audit/issue tests pass 5/5. Next:
+  automate the monthly human evidence sample and document the operating/service-level procedure.
+
 ### 2026-09-24T14:08:23Z — Public freshness page exposes directory integrity denominators
 
 - Added shared `directoryIntegrity()` metrics to the public/weekly freshness report: 382 canonical
