@@ -88,6 +88,16 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T13:41:03Z — Identity validator change recovered and verified
+
+- Recovered the Phase 1 validator edit that had been left uncommitted: directory `entity_key`
+  uniqueness, roles vocabulary, parent existence, retired-path ownership, active-record conflicts,
+  independent approval and identity review dates are now enforced by the normal validation command.
+- Focused validator tests: 18/18 pass. Full content validation: 0 errors and four existing warnings
+  (two overdue reviews and two explicitly unsourced records).
+- Phase 2 remains active. Next: improve deterministic spelling normalization, regenerate the
+  candidate inventory, and then record evidence-backed decisions before applying any merge.
+
 ### 2026-09-24T13:38:26Z — Non-Latin identity matching corrected
 
 - Candidate review exposed that ASCII-only name normalization reduced several unrelated Hindi,

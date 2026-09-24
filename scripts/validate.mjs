@@ -50,6 +50,9 @@ export function validateAll({ now = today() } = {}) {
   }
   const idsIn = section => new Set(records.filter(r => r._section === section).map(r => r.id));
   const known = { bodies: idsIn('bodies'), channels: idsIn('channels'), orgs: idsIn('orgs'), sources: idsIn('resources/sources') };
+  const directoryIds = new Set(records.filter(r => DIRECTORY.has(r._section)).map(r => r.id));
+  const entityKeys = new Map();
+  const redirects = new Map();
 
   const inVocab = (path, list, value, field) => {
     if (value === undefined || value === null) return;
@@ -81,6 +84,27 @@ export function validateAll({ now = today() } = {}) {
       const folder = vocab['record-types']?.values.find(v => v.id === r.type)?.folder;
       if (folder && folder !== r._section) err(p, `type "${r.type}" belongs in content/${folder}/`);
       const f = r.facts ?? {};
+      if (f.entity_key) {
+        if (entityKeys.has(f.entity_key)) err(p, `entity_key "${f.entity_key}" is also used by ${entityKeys.get(f.entity_key)}`);
+        entityKeys.set(f.entity_key, p);
+      }
+      for (const role of f.roles ?? []) inVocab(p, 'record-types', role, 'roles');
+      if (f.parent_id) {
+        if (f.parent_id === r.id) err(p, 'parent_id cannot refer to the record itself');
+        else if (!directoryIds.has(f.parent_id)) err(p, `parent_id names unknown record "${f.parent_id}"`);
+      }
+      for (const old of r.meta?.redirect_from ?? []) {
+        const key = `${old.section}/${old.id}`;
+        if (redirects.has(key)) err(p, `redirect_from ${key} is already claimed by ${redirects.get(key)}`);
+        redirects.set(key, r.id);
+        if (known[old.section]?.has(old.id)) err(p, `redirect_from ${key} still exists as an active record`);
+      }
+      const identity = r.meta?.identity_review;
+      if (identity) {
+        if (identity.approved_by && identity.approved_by === identity.reviewed_by) err(p, 'identity_review approver must differ from reviewer');
+        if (identity.review_by < identity.reviewed_on) err(p, 'identity_review.review_by is before reviewed_on');
+        if (!identity.permanent && identity.review_by < now) warn(p, `identity overdue: review_by ${identity.review_by}`);
+      }
       const routeIds = new Set();
       for (const route of f.routes ?? []) {
         if (routeIds.has(route.id)) err(p, `duplicate route id "${route.id}"`);
