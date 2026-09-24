@@ -38,6 +38,16 @@ test('candidate inventory flags same-entity evidence without deciding a merge', 
   assert.equal('decision' in inventory.candidates[0], false);
 });
 
+test('candidate inventory catches regional spelling plus a shared official acronym and domain', () => {
+  const records = [
+    record('us-caisi', 'Center for AI Standards and Innovation (CAISI)', 'https://www.nist.gov/caisi'),
+    record('us-caisi-note', 'Centre for AI Standards and Innovation (CAISI) — United States', 'https://www.nist.gov/news/caisi')
+  ];
+  const inventory = candidateInventory(records);
+  assert.equal(inventory.totals.candidates, 1);
+  assert.deepEqual(inventory.candidates[0].signals, ['shared-official-domain', 'shared-acronym']);
+});
+
 test('regenerating candidates cannot overwrite the human decision file', () => {
   const dir = tree({
     'content/bodies/us/federal/us-access-now.yml': record('us-access-now', 'Access Now', 'https://www.accessnow.org/contact/'),

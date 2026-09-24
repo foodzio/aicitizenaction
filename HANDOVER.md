@@ -88,6 +88,16 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T13:41:39Z — CAISI duplicate is now deterministically discoverable
+
+- Extended identity matching with `centre`/`center` normalization and a conservative shared-acronym
+  signal that only admits a pair when country and official registrable domain also match.
+- This adds the previously missed duplicate U.S. CAISI disambiguation record to the low-priority
+  queue without treating acronym equality as proof of identity. Inventory: 423 records / 126
+  candidates (22 high, 21 medium, 83 low).
+- Focused candidate tests: 4/4 pass; regenerated inventory passes the byte-for-byte freshness check.
+- Next: validate and populate reviewed candidate decisions, then apply only approved `same` merges.
+
 ### 2026-09-24T13:41:03Z — Identity validator change recovered and verified
 
 - Recovered the Phase 1 validator edit that had been left uncommitted: directory `entity_key`

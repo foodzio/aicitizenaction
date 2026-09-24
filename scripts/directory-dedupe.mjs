@@ -24,8 +24,13 @@ export function normalizeName(value) {
 
 function comparableName(value) {
   return normalizeName(value)
+    .replace(/\bcentre\b/g, 'center')
     .replace(/\b(incorporated|inc|limited|ltd|llc|plc|association|organisation|organization)\b/g, ' ')
     .replace(/\s+/g, ' ').trim();
+}
+
+function acronyms(value) {
+  return new Set([...String(value ?? '').matchAll(/\(([A-Z][A-Z0-9-]{2,})\)/g)].map(match => match[1]));
 }
 
 function normalizedUrl(value) {
@@ -76,6 +81,7 @@ export function candidateInventory(records = loadContent().filter(r => DIRECTORY
     name: normalizeName(record.strings?.name),
     comparable: comparableName(record.strings?.name),
     local: normalizeName(record.facts?.local_name ?? record.strings?.local_name),
+    acronyms: acronyms(record.strings?.name),
     baseId: record.id.replace(/-\d+$/, ''),
     evidence: evidence(record)
   })).sort((a, b) => a.record.id.localeCompare(b.record.id));
@@ -91,9 +97,10 @@ export function candidateInventory(records = loadContent().filter(r => DIRECTORY
     const numericSibling = a.baseId === b.baseId && a.record.id !== b.record.id;
     const sharedDomains = intersection(a.evidence.domains, b.evidence.domains);
     const sharedEndpoints = intersection(a.evidence.endpoints, b.evidence.endpoints);
+    const sharedAcronyms = intersection(a.acronyms, b.acronyms);
     const nameSimilarity = similarity(a.record.strings?.name, b.record.strings?.name);
     const include = exactName || exactLocal || numericSibling || sharedEndpoints.length
-      || (sameCountry && sharedDomains.length && (exactComparable || nameSimilarity >= 0.82));
+      || (sameCountry && sharedDomains.length && (exactComparable || sharedAcronyms.length || nameSimilarity >= 0.82));
     if (!include) continue;
 
     const signals = [];
@@ -103,6 +110,7 @@ export function candidateInventory(records = loadContent().filter(r => DIRECTORY
     if (numericSibling) signals.push('numeric-suffix-sibling');
     if (sharedDomains.length) signals.push('shared-official-domain');
     if (sharedEndpoints.length) signals.push('shared-endpoint');
+    if (sharedAcronyms.length) signals.push('shared-acronym');
     if (!exactName && nameSimilarity >= 0.82) signals.push('high-name-similarity');
     // A shared form/inbox often serves several genuinely distinct public bodies. It is useful
     // evidence, but never a high-confidence identity match without a matching name.

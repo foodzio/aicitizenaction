@@ -2,10 +2,10 @@ version: 1
 scope: Every bodies/channels/orgs record; generated evidence only. Decisions live in docs/directory-identity-decisions.yml.
 totals:
   records: 423
-  candidates: 125
+  candidates: 126
   high: 22
   medium: 21
-  low: 82
+  low: 83
 candidates:
   - key: eu-european-parliament-committee-civil-liberties--eu-european-parliament-committee-civil-liberties-2
     left:
@@ -25,6 +25,7 @@ candidates:
       - exact-normalized-name
       - numeric-suffix-sibling
       - shared-official-domain
+      - shared-acronym
     shared_domains:
       - europa.eu
     shared_endpoints: []
@@ -48,6 +49,7 @@ candidates:
       - numeric-suffix-sibling
       - shared-official-domain
       - shared-endpoint
+      - shared-acronym
     shared_domains:
       - europa.eu
     shared_endpoints:
@@ -72,6 +74,7 @@ candidates:
       - numeric-suffix-sibling
       - shared-official-domain
       - shared-endpoint
+      - shared-acronym
     shared_domains:
       - europa.eu
     shared_endpoints:
@@ -96,6 +99,7 @@ candidates:
       - numeric-suffix-sibling
       - shared-official-domain
       - shared-endpoint
+      - shared-acronym
     shared_domains:
       - europa.eu
     shared_endpoints:
@@ -186,6 +190,7 @@ candidates:
     signals:
       - exact-normalized-name
       - numeric-suffix-sibling
+      - shared-acronym
     shared_domains: []
     shared_endpoints: []
     name_similarity: 1
@@ -253,6 +258,7 @@ candidates:
       - exact-normalized-name
       - numeric-suffix-sibling
       - shared-official-domain
+      - shared-acronym
     shared_domains:
       - ajl.org
     shared_endpoints: []
@@ -276,6 +282,7 @@ candidates:
       - numeric-suffix-sibling
       - shared-official-domain
       - shared-endpoint
+      - shared-acronym
     shared_domains:
       - centeraipolicy.org
     shared_endpoints:
@@ -346,6 +353,7 @@ candidates:
       - numeric-suffix-sibling
       - shared-official-domain
       - shared-endpoint
+      - shared-acronym
     shared_domains:
       - eff.org
     shared_endpoints:
@@ -370,6 +378,7 @@ candidates:
       - numeric-suffix-sibling
       - shared-official-domain
       - shared-endpoint
+      - shared-acronym
     shared_domains:
       - epic.org
     shared_endpoints:
@@ -393,6 +402,7 @@ candidates:
       - exact-normalized-name
       - numeric-suffix-sibling
       - shared-official-domain
+      - shared-acronym
     shared_domains:
       - futureoflife.org
     shared_endpoints: []
@@ -414,6 +424,7 @@ candidates:
     signals:
       - exact-normalized-name
       - numeric-suffix-sibling
+      - shared-acronym
     shared_domains: []
     shared_endpoints: []
     name_similarity: 1
@@ -1996,6 +2007,27 @@ candidates:
     shared_endpoints:
       - https://aimoneywatch.org/ltf
     name_similarity: 0
+  - key: us-center-ai-standards-innovation--us-centre-ai-standards-innovation-united-states
+    left:
+      id: us-center-ai-standards-innovation
+      section: bodies
+      name: Center for AI Standards and Innovation (CAISI)
+      country: us
+      sub: federal
+    right:
+      id: us-centre-ai-standards-innovation-united-states
+      section: bodies
+      name: Centre for AI Standards and Innovation (CAISI) — United States, listed only to prevent acronym confusion
+      country: us
+      sub: federal
+    severity: low
+    signals:
+      - shared-official-domain
+      - shared-acronym
+    shared_domains:
+      - nist.gov
+    shared_endpoints: []
+    name_similarity: 0.375
   - key: us-center-ai-standards-innovation--us-department-commerce-bureau-industry-security
     left:
       id: us-center-ai-standards-innovation
