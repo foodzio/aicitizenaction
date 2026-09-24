@@ -7,8 +7,8 @@ strings:
   outcomes:
     law:
       label:
-        value: Une loi ou une règle sur l'IA
-        src: 36a47468
+        value: Demander une loi ou une règle sur l'IA
+        src: 374a4ad6
         machine: true
       hint:
         value: Dites à ceux qui écrivent les lois sur l'IA ce que vous en pensez.
@@ -16,17 +16,17 @@ strings:
         machine: true
     harm:
       label:
-        value: Qu'un préjudice déjà subi soit examiné
-        src: "92e84248"
+        value: Signaler un préjudice causé par une IA
+        src: a0f0ec0b
         machine: true
       hint:
-        value: Quand un système d'IA vous a nui, à vous ou à un proche.
-        src: "61125527"
+        value: Quand une IA vous a nui, à vous ou à un proche, et que vous voulez que ce soit examiné.
+        src: 24da81ac
         machine: true
     fix:
       label:
-        value: Qu'une entreprise d'IA corrige ce que j'ai vu
-        src: 7514505a
+        value: Demander à une entreprise de corriger ce que j'ai vu
+        src: 52ed63fa
         machine: true
       hint:
         value: Pour quelque chose qu'un chatbot ou un modèle a fait et qui vous a inquiété.
@@ -34,8 +34,8 @@ strings:
         machine: true
     record:
       label:
-        value: Que mon avis soit consigné publiquement
-        src: 3e13eb86
+        value: Faire consigner mon avis publiquement
+        src: 2efe1a9f
         machine: true
       hint:
         value: Participez à une consultation ouverte, où vos mots sont publiés.
@@ -52,8 +52,8 @@ strings:
         machine: true
     insider:
       label:
-        value: Je sais quelque chose de l'intérieur
-        src: 310283a5
+        value: Obtenir un conseil avant de partager des informations internes
+        src: 53e5624f
         machine: true
       hint:
         value: Pour les personnes ayant des informations non publiques sur une entreprise ou un projet d'IA.

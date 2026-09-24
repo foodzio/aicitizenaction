@@ -79,6 +79,12 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T08:50:26Z — Clearer steps; action titles on the door (owner)
+
+- Steps were unclear (unlabelled discs; the door said three, the path counted four). The door now names them: "1 Answer one question — 2 See who can act — 3 Write your message", then "About fifteen minutes · you leave with a message ready to send". The path uses the same three steps ("Step 2 of 3 · See who can act"); the finished screen shows all three complete and "Done". `StepMeta` gained a `labelled` variant (stacks vertically under 600px).
+- Door titles rewritten as actions answering "What do you want to happen with AI?" (owner asked for the vein of "Request a company fix something I saw"): Ask for an AI law or rule · Report harm an AI system caused · Ask a company to fix something I saw · Put my view on the public record · Join others who want the same thing · Get advice before sharing inside knowledge. French updated to match. Proposed to the owner as suggestions; easy to change in `content/guides/global/outcomes.yml`.
+- 86 tests pass. Not yet redeployed.
+
 ### 2026-09-24T08:44:54Z — Outside links open in a new tab (owner)
 
 - Every link to another website opens in a new tab with `rel="noopener noreferrer"`: set in the templates (record, media, window, explainer pages, and the path's contact/evidence/membership links) so it works without JavaScript, plus a site-wide script in `Base.astro` that marks any external link (including those the path builds later) and adds a screen-reader note "(opens in a new tab)" / "(s'ouvre dans un nouvel onglet)". Same-site and `mailto:` links are unchanged.
@@ -473,4 +479,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-24T08:44:54Z
+Last modified: 2026-09-24T08:50:26Z

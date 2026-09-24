@@ -1,21 +1,37 @@
 ---
 // Numbered teal discs joined by hairlines, then short facts separated by middle dots.
-// With `current`, later discs turn teal-soft and the current one is announced.
-const { steps = 3, current, facts = [], labels = [] } = Astro.props;
+// With `labels` and `labelled`, each disc is followed by what that step is (the door).
+// With `current`, later discs turn teal-soft and the current one is announced (the path).
+const { steps = 3, current, facts = [], labels = [], labelled = false } = Astro.props;
 const n = Array.from({ length: steps }, (_, i) => i + 1);
 ---
-<div class="aca-steps">
-  <span class="aca-step-discs" aria-hidden={current ? undefined : 'true'}>
-    {n.map(i => (
-      <>
-        {i > 1 && <span class="aca-step-line" />}
-        <span class:list={['aca-step-disc', current && i > current && 'is-future']} data-p={i} aria-current={current === i ? 'step' : undefined} title={labels[i - 1]}>{i}</span>
-      </>
-    ))}
-  </span>
-  {facts.length > 0 && (
-    <span class="aca-step-facts">
-      {facts.map((f, i) => (<>{i > 0 && <span class="aca-step-dot" aria-hidden="true">·</span>}<span>{f}</span></>))}
+{labelled ? (
+  <div class="aca-steps aca-steps-labelled">
+    <ol class="aca-stepline">
+      {n.map(i => (
+        <li><span class="aca-step-disc" aria-hidden="true">{i}</span><span>{labels[i - 1]}</span></li>
+      ))}
+    </ol>
+    {facts.length > 0 && (
+      <p class="aca-step-facts">
+        {facts.map((f, i) => (<>{i > 0 && <span class="aca-step-dot" aria-hidden="true">·</span>}<span>{f}</span></>))}
+      </p>
+    )}
+  </div>
+) : (
+  <div class="aca-steps">
+    <span class="aca-step-discs" aria-hidden={current ? undefined : 'true'}>
+      {n.map(i => (
+        <>
+          {i > 1 && <span class="aca-step-line" />}
+          <span class:list={['aca-step-disc', current && i > current && 'is-future']} data-p={i} aria-current={current === i ? 'step' : undefined} title={labels[i - 1]}>{i}</span>
+        </>
+      ))}
     </span>
-  )}
-</div>
+    {facts.length > 0 && (
+      <span class="aca-step-facts">
+        {facts.map((f, i) => (<>{i > 0 && <span class="aca-step-dot" aria-hidden="true">·</span>}<span>{f}</span></>))}
+      </span>
+    )}
+  </div>
+)}

@@ -23,7 +23,10 @@ strings:
   door:
     title: What do you want to happen with AI?
     lede: You don't need to be an expert. Your view counts because you live with the results.
-    shape: Three steps · about fifteen minutes · you leave with a message ready to send
+    shape: About fifteen minutes · you leave with a message ready to send
+    step1: Answer one question
+    step2: See who can act
+    step3: Write your message
     trust_lead: Nobody will sign you up to anything,
     trust_rest: and nothing you type leaves your device.
     browse: Already know the landscape? Browse the full directory

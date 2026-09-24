@@ -18,7 +18,7 @@ const facts = t('door.shape').split(/\s*·\s*/);
   <div class="door">
     <h1 class="display">{t('door.title')}</h1>
     <p class="lead">{t('door.lede')}</p>
-    <StepMeta steps={3} facts={facts} />
+    <StepMeta steps={3} labelled labels={[t('door.step1'), t('door.step2'), t('door.step3')]} facts={facts} />
     <ul class="aca-grid">
       {oc.facts.outcomes.map(o => (
         <li>

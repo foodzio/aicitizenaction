@@ -26,7 +26,7 @@ const places = placeOptions(lang);
 const keys = ['path.step', 'path.of', 'path.floor_bloc', 'path.floor_global', 'path.none', 'path.can_do', 'path.leverage',
   'path.how_reach', 'path.people', 'path.checked', 'path.membership', 'path.details', 'path.choose', 'path.chosen',
   'path.copied', 'path.copy', 'verify.true', 'verify.false', 'verify.null', 'verify.true_hint', 'verify.false_hint',
-  'verify.null_hint', 'verify.language', 'verify.overdue', 'path.own_words_missing', 'path.method_link', 'path.step1', 'path.step2', 'path.step3', 'path.step4'];
+  'verify.null_hint', 'verify.language', 'verify.overdue', 'path.own_words_missing', 'path.method_link', 'path.step4', 'door.step1', 'door.step2', 'door.step3'];
 const payload = outcome.stop ? null : {
   lang,
   outcome: { id: outcome.id, ignoreGeo: !!outcome.ignore_geo && outcome.ask !== 'company', ask: outcome.ask ?? null },
@@ -36,7 +36,7 @@ const payload = outcome.stop ? null : {
   methodUrl: (m => m ? recordUrl(lang, m) : null)(data().records.find(r => r.facts.recommend === false && r.geo.country === 'global')),
   t: Object.fromEntries(keys.map(k => [k, t(k)]))
 };
-const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4')];
+const steps = [t('door.step1'), t('door.step2'), t('door.step3')];
 ---
 <Base lang={lang} title={label} current="start" draft={oc.meta.status === 'draft' || tpl.meta.status === 'draft'}>
   <div class="narrow">
@@ -52,7 +52,7 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
     ) : (
       <div id="path">
         <div class="path-steps">
-          <StepMeta steps={4} current={1} labels={steps} />
+          <StepMeta steps={3} current={1} labels={steps} />
           <p class="meta-line" id="step-label" aria-live="polite"></p>
         </div>
         <noscript><p class="notice">{t('path.no_js')} <a href={`/${lang}/directory/`}>{t('site.nav_directory')}</a></p></noscript>
@@ -256,7 +256,8 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
         d.classList.toggle('is-future', n > step);
         if (n === step) d.setAttribute('aria-current', 'step'); else d.removeAttribute('aria-current');
       });
-      $('#step-label').textContent = `${T['path.step']} ${step} ${T['path.of']} 4 · ${T['path.step' + step]}`;
+      // Three steps; step 4 is the finished state: every disc complete, labelled "Done".
+      $('#step-label').textContent = step > 3 ? T['path.step4'] : `${T['path.step']} ${step} ${T['path.of']} 3 · ${T['door.step' + step]}`;
       if (step === 2) renderRecipients();
       if (step === 3) renderDraft();
       syncUrl(push);

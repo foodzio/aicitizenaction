@@ -9,7 +9,7 @@ Base URL: `http://localhost:4321`
 **A1 — Door is for newcomers.** Open `/`.
 - Redirects to `/en/`. One `h1` "What do you want to happen with AI?".
 - Six answers, each a link to `/en/start/<outcome>/`. No institution names, no numbers.
-- Text "You don't need to be an expert" and "Three steps" visible without scrolling.
+- Text "You don't need to be an expert" and the three named steps (Answer one question · See who can act · Write your message) visible without scrolling.
 - The header has no "Resources" link on this page (it does on other pages).
 - No horizontal scroll at 390 px.
 
@@ -18,8 +18,8 @@ Base URL: `http://localhost:4321`
 
 ## B. Guided path — "A law or rule about AI"
 
-**B1 — United States, full journey.** From `/en/`, click "A law or rule about AI".
-- Step 1 shows "Where do you live?" with a country select. Progress shows step 1 of 4.
+**B1 — United States, full journey.** From `/en/`, click "Ask for an AI law or rule".
+- Step 1 shows "Where do you live?" with a country select. Progress shows step 1 of 3.
 - Choose "United States", click "Show who can act".
 - Step 2: the first card is the **Senate Committee on Commerce, Science, and Transportation**, showing a chair name with a "Checked" date, a verification badge, and a link "Official, up-to-date list of members". Up to two alternatives listed.
 - URL contains `where=us` and `step=2`.

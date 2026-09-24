@@ -80,8 +80,20 @@ strings:
       src: 50de43a6
       machine: true
     shape:
-      value: Trois étapes · environ quinze minutes · vous repartez avec un message prêt à envoyer
-      src: 89790a09
+      value: Environ quinze minutes · vous repartez avec un message prêt à envoyer
+      src: 55406d1d
+      machine: true
+    step1:
+      value: Répondre à une question
+      src: 803daf61
+      machine: true
+    step2:
+      value: Voir qui peut agir
+      src: c5b9de2a
+      machine: true
+    step3:
+      value: Écrire votre message
+      src: aa220fb6
       machine: true
     trust_lead:
       value: Personne ne vous inscrira à quoi que ce soit,

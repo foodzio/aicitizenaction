@@ -57,22 +57,22 @@ strings:
   question: What do you want to happen with AI?
   outcomes:
     law:
-      label: A law or rule about AI
+      label: Ask for an AI law or rule
       hint: Tell the people who write AI laws what you think.
     harm:
-      label: Harm that has already happened is looked into
-      hint: For when an AI system hurt you or someone you know.
+      label: Report harm an AI system caused
+      hint: For when AI hurt you or someone you know, and you want it looked into.
     fix:
-      label: An AI company fixes something I saw
+      label: Ask a company to fix something I saw
       hint: For something a chatbot or model did that worried you.
     record:
-      label: My view is on the public record
+      label: Put my view on the public record
       hint: Take part in an open consultation, where your words are published.
     join:
       label: Join others who want the same thing
       hint: Find an organisation whose aims match yours — they have their own asks.
     insider:
-      label: I know something from the inside
+      label: Get advice before sharing inside knowledge
       hint: For people with non-public knowledge about an AI company or project.
 meta:
   verified_on: 2026-09-23

@@ -206,3 +206,14 @@ textarea.draft { min-height: 20rem; }
 }
 .aca-lang-code { display: none; }
 @media (max-width: 400px) { .aca-lang-name { display: none; } .aca-lang-code { display: inline; } }
+
+/* Labelled steps on the door: "1 Answer one question — 2 See who can act — 3 Write your message". */
+.aca-steps-labelled { flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+.aca-stepline { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-3); color: var(--ink); font-size: 17px; line-height: 24px; font-weight: 600; }
+.aca-stepline li { display: flex; align-items: center; gap: var(--space-2); }
+.aca-stepline li + li::before { content: ""; width: 28px; height: 1px; background: var(--divider); margin-right: var(--space-1); }
+.aca-steps-labelled .aca-step-facts { margin: 0; color: var(--teal); font-size: 16px; }
+@media (max-width: 600px) {
+  .aca-stepline { flex-direction: column; align-items: flex-start; gap: var(--space-2); }
+  .aca-stepline li + li::before { display: none; }
+}

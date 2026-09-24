@@ -32,8 +32,10 @@ test('the door: one question, at most six choices, no institution names, no coun
   assert.match(main, /don't need to be an expert/i);
 });
 
-test('the path states its length before it begins', () => {
-  assert.match(page('en/index.html'), /Three steps/);
+test('the path states its length and names its steps before it begins', () => {
+  const door = page('en/index.html');
+  for (const s of ['Answer one question', 'See who can act', 'Write your message', 'About fifteen minutes']) assert.ok(door.includes(s), s);
+  assert.equal((door.match(/class="aca-step-disc"/g) ?? []).length, 3);
 });
 
 test('no page loads anything from a third party (no tracking, no consent wall)', () => {
