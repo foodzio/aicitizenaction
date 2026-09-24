@@ -828,6 +828,74 @@ strings:
       value: Traductions
       src: 266a41b9
       machine: true
+    integrity:
+      value: Intégrité de l'annuaire
+      src: 244b4135
+      machine: true
+    integrity_entities:
+      value: Entités canoniques
+      src: 835fa7df
+      machine: true
+    integrity_rows:
+      value: Fiches publiques de l'annuaire
+      src: 6a58b3ab
+      machine: true
+    integrity_redirects:
+      value: Anciens identifiants redirigés
+      src: 00d3c276
+      machine: true
+    integrity_contacts:
+      value: Moyens de contact audités et à jour
+      src: 020675d8
+      machine: true
+    integrity_excluded:
+      value: Moyens de contact exclus
+      src: 4f166a61
+      machine: true
+    integrity_evidence_age:
+      value: Âge des preuves pour les moyens inclus
+      src: 1b7c4f8d
+      machine: true
+    integrity_age_values:
+      value: médiane {median} jours · plus ancien {oldest} jours
+      src: e17ad5be
+      machine: true
+    integrity_coverage:
+      value: Entités disposant d'un contact à jour
+      src: f96320d6
+      machine: true
+    integrity_places:
+      value: Lieux disposant d'au moins un contact à jour
+      src: 777bfb44
+      machine: true
+    integrity_topics:
+      value: Catégories de préoccupations disposant d'au moins un contact à jour
+      src: e8df32e0
+      machine: true
+    integrity_identity:
+      value: Décisions d'identité
+      src: cfdfd7d6
+      machine: true
+    integrity_identity_values:
+      value: "{same} fusionnées · {distinct} distinctes · {related} liées · {unresolved} non résolues"
+      src: 2e7b54ee
+      machine: true
+    integrity_backlog:
+      value: Éléments ouverts nécessitant une vérification humaine
+      src: ae28faf6
+      machine: true
+    integrity_owners:
+      value: Fiches avec un responsable nommé dans CODEOWNERS
+      src: 043d6301
+      machine: true
+    integrity_exclusion_reasons:
+      value: Motifs d'exclusion des moyens de contact
+      src: 6cfa7847
+      machine: true
+    integrity_definition:
+      value: Un contact est à jour lorsque des preuves relues confirment un mécanisme entrant, le public admissible, le sujet accepté et la disponibilité, avec une vérification datant de moins de 180 jours. La couverture est affichée avec les exclusions afin que la suppression des moyens incertains ne puisse pas donner l'illusion d'une meilleure exactitude. L'accessibilité technique ne prouve pas qu'un moyen accepte les prises de contact.
+      src: 202a7cbf
+      machine: true
     no_translations:
       value: Pas encore de traductions.
       src: 5a075f0a

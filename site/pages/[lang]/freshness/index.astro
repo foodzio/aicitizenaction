@@ -12,6 +12,7 @@ const t = ui(lang);
 const f = freshness();
 const sorted = obj => Object.entries(obj).sort((a, b) => a[1].percent - b[1].percent || b[1].total - a[1].total);
 const place = c => placeName({ country: c }, lang);
+const fill = (value, vars) => Object.entries(vars).reduce((text, [key, item]) => text.replace(`{${key}}`, item), value);
 ---
 <Base lang={lang} title={t('freshness.title')}>
   <div class="narrow">
@@ -20,6 +21,26 @@ const place = c => placeName({ country: c }, lang);
     <p><strong>{f.overall.percent}%</strong> {t('freshness.overall')} ({f.overall.current} / {f.overall.total}). {f.seats.overdue} / {f.seats.total} {t('freshness.seats')}.</p>
     <p class="meta-line">{f.now}</p>
   </div>
+  <section>
+    <h2>{t('freshness.integrity')}</h2>
+    <p>{t('freshness.integrity_definition')}</p>
+    <dl class="facts">
+      <dt>{t('freshness.integrity_entities')}</dt><dd>{f.integrity.canonical_entities}</dd>
+      <dt>{t('freshness.integrity_rows')}</dt><dd>{f.integrity.public_directory_rows}</dd>
+      <dt>{t('freshness.integrity_redirects')}</dt><dd>{f.integrity.redirects}</dd>
+      <dt>{t('freshness.integrity_contacts')}</dt><dd>{f.integrity.contacts.current} / {f.integrity.contacts.total} ({f.integrity.contacts.current_percent}%)</dd>
+      <dt>{t('freshness.integrity_excluded')}</dt><dd>{f.integrity.contacts.excluded} / {f.integrity.contacts.total}</dd>
+      <dt>{t('freshness.integrity_evidence_age')}</dt><dd>{fill(t('freshness.integrity_age_values'), { median: f.integrity.contacts.evidence_age_days.median ?? '—', oldest: f.integrity.contacts.evidence_age_days.oldest ?? '—' })}</dd>
+      <dt>{t('freshness.integrity_coverage')}</dt><dd>{f.integrity.coverage.entities_with_current_contact} / {f.integrity.canonical_entities}</dd>
+      <dt>{t('freshness.integrity_places')}</dt><dd>{f.integrity.coverage.countries_with_current_contact}</dd>
+      <dt>{t('freshness.integrity_topics')}</dt><dd>{f.integrity.coverage.topics_with_current_contact}</dd>
+      <dt>{t('freshness.integrity_identity')}</dt><dd>{fill(t('freshness.integrity_identity_values'), { ...f.integrity.identity.decisions, unresolved: f.integrity.identity.unresolved })}</dd>
+      <dt>{t('freshness.integrity_backlog')}</dt><dd>{f.integrity.backlog.total}</dd>
+      <dt>{t('freshness.integrity_owners')}</dt><dd>{f.integrity.owner_coverage.covered} / {f.integrity.owner_coverage.total}</dd>
+    </dl>
+    <h3>{t('freshness.integrity_exclusion_reasons')}</h3>
+    <ul>{Object.entries(f.integrity.contacts.exclusion_reasons).sort((a, b) => b[1] - a[1]).map(([reason, count]) => <li><code>{reason}</code>: {count}</li>)}</ul>
+  </section>
   {[['by_section', f.bySection, k => t(`directory.sections.${k}`)], ['by_country', f.byCountry, place]].map(([key, obj, label]) => (
     <section>
       <h2>{t(`freshness.${key}`)}</h2>

@@ -220,6 +220,23 @@ strings:
     published: Items published
     pending: items waiting for an editor
     translations: Translations
+    integrity: Directory integrity
+    integrity_entities: Canonical entities
+    integrity_rows: Public directory rows
+    integrity_redirects: Retired ids redirected
+    integrity_contacts: Current audited contact routes
+    integrity_excluded: Excluded contact routes
+    integrity_evidence_age: Evidence age for included routes
+    integrity_age_values: median {median} days · oldest {oldest} days
+    integrity_coverage: Entities with a current contact
+    integrity_places: Places with at least one current contact
+    integrity_topics: Concern categories with at least one current contact
+    integrity_identity: Identity decisions
+    integrity_identity_values: "{same} merged · {distinct} distinct · {related} related · {unresolved} unresolved"
+    integrity_backlog: Open human-review backlog
+    integrity_owners: Records with a named CODEOWNERS owner
+    integrity_exclusion_reasons: Why contact routes are excluded
+    integrity_definition: A current contact has reviewed evidence of an inbound mechanism, eligible audience, accepted subject and availability checked within 180 days. Coverage is shown beside exclusions so removing uncertain routes cannot look like improved accuracy. Reachability alone is not proof that a route accepts contact.
     no_translations: No translations yet.
   contributors:
     title: Contributors

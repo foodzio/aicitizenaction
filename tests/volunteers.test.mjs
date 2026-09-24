@@ -24,6 +24,11 @@ test('freshness covers every directory record and reports the Resources balance'
   const sum = Object.values(f.bySection).reduce((n, v) => n + v.total, 0);
   assert.equal(sum, f.overall.total);
   assert.ok(Object.keys(f.balance.sources).length >= 4, 'at least four perspectives watched');
+  assert.equal(f.integrity.canonical_entities, f.overall.total);
+  assert.equal(f.integrity.contacts.current + f.integrity.contacts.excluded, f.integrity.contacts.total);
+  assert.equal(f.integrity.coverage.entities_with_current_contact + f.integrity.coverage.entities_without_current_contact, f.integrity.canonical_entities);
+  assert.equal(f.integrity.identity.unresolved, 0);
+  assert.ok(f.integrity.public_directory_rows > 0 && f.integrity.public_directory_rows <= f.integrity.canonical_entities);
 });
 
 test('inactivity: check in only when quiet AND overdue; propose handover only after no reply', () => {

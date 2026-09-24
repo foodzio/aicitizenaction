@@ -88,6 +88,18 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T14:08:23Z — Public freshness page exposes directory integrity denominators
+
+- Added shared `directoryIntegrity()` metrics to the public/weekly freshness report: 382 canonical
+  entities, 360 public rows, 41 redirects, identity dispositions/unresolved candidates, 82/232
+  current audited contact routes (35.3%), 150 exclusions with reason counts, median/oldest evidence
+  age, entity/place/topic coverage, review backlog and CODEOWNERS coverage.
+- The page explicitly defines “current contact” and displays coverage beside exclusions; it does
+  not collapse the measures into a quality score or imply that URL reachability proves acceptance.
+  English and current machine-French copy are complete.
+- Focused site/i18n/freshness tests pass 26/26, denominator invariants are regression-tested, and
+  the 838-page build succeeds. Next: CI/weekly workflow integration and stable-key issue updates.
+
 ### 2026-09-24T14:05:56Z — Production freshness now fails closed
 
 - Builds now emit `dist/directory-validity.json` from the same route/seat predicates used by
