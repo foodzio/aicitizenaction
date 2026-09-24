@@ -114,6 +114,7 @@ able to work in this repo using only what is written in this section.)_
 - Validate content: `npm run validate` (`--json` for machine output; exit 1 on errors, overdue records are warnings)
 - Contact audit inventory: `npm run contact-audit` (regenerates `docs/places-to-contact-audit.yml`); `node scripts/contact-audit.mjs --check` verifies it is current
 - Directory identity candidates: `npm run directory-dedupe`; `node scripts/directory-dedupe.mjs --check` verifies the generated inventory without touching reviewed decisions
+- Directory identity decisions: `npm run directory-identity-review` checks the hand-maintained ledger against current candidates, evidence, dates, independent merge approval and completed redirects
 - Apply the deterministic channel review: `npm run contact-review` (dry-run summary), or `npm run contact-review -- --apply` to rewrite all 74 channel records; regenerate the inventory afterward
 - Focused browser/accessibility QA: build, copy `node_modules/axe-core/axe.min.js` to `dist/`, serve locally, start Chrome for Testing on the project CDP port, then run `AICA_QA_URL=http://127.0.0.1:<port> node scripts/qa-contact-audit.mjs`
 - Test: `npm test`

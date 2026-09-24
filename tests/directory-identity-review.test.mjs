@@ -1,0 +1,37 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { validateIdentityDecisions } from '../scripts/directory-identity-review.mjs';
+
+const candidate = { key: 'a--b', severity: 'high', left: { id: 'a' }, right: { id: 'b' } };
+const records = [
+  { id: 'a', _section: 'orgs', meta: {} },
+  { id: 'b', _section: 'orgs', meta: {} }
+];
+const valid = {
+  key: 'a--b', records: ['a', 'b'], decision: 'same', canonical_id: 'a',
+  evidence_urls: ['https://example.org/about'], reviewed_by: 'reviewer', approved_by: 'approver',
+  reviewed_on: '2026-09-24', review_by: '2027-09-24'
+};
+
+test('an independently approved current same decision resolves a high candidate', () => {
+  const result = validateIdentityDecisions({ inventory: { candidates: [candidate] }, ledger: { decisions: [valid] }, records, now: '2026-09-24' });
+  assert.deepEqual(result.errors, []);
+  assert.equal(result.warnings.length, 1);
+  assert.equal(result.totals.resolved, 1);
+});
+
+test('high candidates cannot be absent, pending, expired, or self-approved', () => {
+  const absent = validateIdentityDecisions({ inventory: { candidates: [candidate] }, ledger: { decisions: [] }, records, now: '2026-09-24' });
+  assert.match(absent.errors.join('\n'), /needs a current decision/);
+  const broken = { ...valid, decision: 'pending', approved_by: 'reviewer', review_by: '2026-09-23', note: 'researching' };
+  const result = validateIdentityDecisions({ inventory: { candidates: [candidate] }, ledger: { decisions: [broken] }, records, now: '2026-09-24' });
+  assert.match(result.errors.join('\n'), /expired/);
+  assert.match(result.errors.join('\n'), /high-confidence candidate/);
+});
+
+test('a completed merge remains valid after the retired record becomes a redirect', () => {
+  const merged = [{ id: 'a', _section: 'orgs', meta: { redirect_from: [{ section: 'orgs', id: 'b' }] } }];
+  const result = validateIdentityDecisions({ inventory: { candidates: [] }, ledger: { decisions: [valid] }, records: merged, now: '2026-09-24' });
+  assert.deepEqual(result.errors, []);
+  assert.deepEqual(result.warnings, []);
+});

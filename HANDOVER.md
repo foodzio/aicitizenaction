@@ -88,6 +88,19 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T13:42:51Z — Identity decisions now have an executable contract
+
+- Added `npm run directory-identity-review`, a read-only validator joining the generated candidate
+  inventory to the hand-maintained decision ledger. It enforces exact pair membership, current
+  evidence/review dates, valid dispositions, independent approval for `same`, relationship notes,
+  completed historical redirects, and resolution of every high-confidence candidate.
+- Added three focused tests covering a valid approved merge, absent/pending/expired decisions,
+  self-approval, and the post-merge historical-ledger state; 3/3 pass.
+- Expected backlog state: the command currently exits 1 with 126 candidates / 0 decisions and 22
+  high-confidence unresolved errors. This is an honest Phase 2 gate, not a test regression.
+- Next: populate all 126 decisions from the records' cited evidence; then the merge applicator can
+  consume only reviewed `same` decisions.
+
 ### 2026-09-24T13:41:39Z — CAISI duplicate is now deterministically discoverable
 
 - Extended identity matching with `centre`/`center` normalization and a conservative shared-acronym
