@@ -61,6 +61,18 @@ test('the static site is served, with the site 404 page for unknown paths', asyn
   app.closeAllConnections(); app.close();
 });
 
+test('retired multilingual record paths return a direct permanent redirect and preserve query', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aica-site-'));
+  mkdirSync(join(dir, 'en', 'orgs', 'global-access-now'), { recursive: true });
+  writeFileSync(join(dir, 'en', 'orgs', 'global-access-now', 'index.html'), '<h1>Access Now</h1>');
+  writeFileSync(join(dir, 'redirects.json'), JSON.stringify({ redirects: { '/en/orgs/global-access-now-2/': '/en/orgs/global-access-now/' } }));
+  const { app, base } = await start(createCounter(null), dir);
+  const response = await fetch(`${base}/en/orgs/global-access-now-2/?from=old`, { redirect: 'manual' });
+  assert.equal(response.status, 308);
+  assert.equal(response.headers.get('location'), '/en/orgs/global-access-now/?from=old');
+  app.closeAllConnections(); app.close();
+});
+
 test('summary gives completion and own-words rates from totals only', () => {
   const s = summary({ '2026-09-23': { 'door|none': 10, 'draft_copied|law': 2, 'draft_downloaded|harm': 1, 'own_words|law': 2 } });
   assert.equal(s.completion_rate, 30);

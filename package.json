@@ -1,6 +1,6 @@
 {
   "name": "aicitizenaction",
-  "version": "0.1.55",
+  "version": "0.1.56",
   "private": true,
   "type": "module",
   "description": "Routes an alarmed non-expert to the one institution that can act on their AI concern, and hands them a draft.",
@@ -18,7 +18,7 @@
     "test": "node --test \"tests/**/*.test.mjs\"",
     "check": "npm run validate && npm test",
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/build-redirects.mjs",
     "preview": "astro preview",
     "start": "node server.mjs",
     "serve": "npm run build && node server.mjs",

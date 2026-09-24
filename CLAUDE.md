@@ -64,7 +64,7 @@ Update this table as the repo grows — it is the map, so a stale map is a bug.
 | `content/resources/` | Resources: `sources/<geo>/` (15 verified feeds, each with a perspective), `media/<yyyy>/<mm>/` (ingested items; only `published` are shown), `explainers/`, `windows/` (dated, expire on `closes_on`) |
 | `site/lib/resources.mjs` | Build-time Resources data, path handoff links |
 | `content/guides/global/` | Our own guidance: `outcomes.yml` (door answers + routing rules), `draft-templates.yml`, `insider.yml`, `about.yml` |
-| `server.mjs` | Production server: serves `dist/` with serve-handler (the code behind `serve`) plus `POST /api/count` / `GET /api/counts` (anonymous daily totals) and `POST /api/feedback` / `POST /api/contribute` (form messages appended to `feedback.jsonl` next to the counts; no IPs, no cookies). `COUNTS_FILE`, `FEEDBACK_FILE` set the paths |
+| `server.mjs` | Production server: serves `dist/` with serve-handler (the code behind `serve`), applies permanent retired-record redirects from generated `dist/redirects.json`, plus `POST /api/count` / `GET /api/counts` (anonymous daily totals) and `POST /api/feedback` / `POST /api/contribute` (form messages appended to `feedback.jsonl` next to the counts; no IPs, no cookies). `COUNTS_FILE`, `FEEDBACK_FILE` set the paths |
 | `nixpacks.toml` | Railway build/start per the owner's convention (`serve dist`) |
 | `CONTRIBUTING.md` | Contributor guide: ways in, editorial rules, first change, roles, review cycles |
 | `docs/stewards/worked-example.md` | A new steward's first hour: one record re-checked, annotated |

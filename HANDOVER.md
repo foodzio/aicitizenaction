@@ -88,6 +88,18 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T13:54:42Z — Retired paths have permanent multilingual redirects
+
+- Added build-generated `dist/redirects.json` from canonical `meta.redirect_from` facts. The build
+  rejects active retired ids, duplicate sources, self redirects and chains, and generates direct
+  mappings for every built language.
+- `server.mjs` now returns HTTP 308 before static handling, accepts paths with or without the
+  trailing slash, and preserves the query string. Current manifest: 41 retired ids × English and
+  French = 82 direct redirects; Access Now is covered in both languages.
+- Focused redirect/server tests pass 9/9 and the 838-page production build writes and verifies the
+  manifest. Phase 2 still needs explicit `parent_id` values for the evidence-backed parent/subunit
+  decisions before it is complete.
+
 ### 2026-09-24T13:52:55Z — Duplicate backlog merged with lossless provenance
 
 - Applied 41 confirmed merges and retired 41 duplicate files, leaving 382 canonical directory

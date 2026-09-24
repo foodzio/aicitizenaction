@@ -128,7 +128,21 @@ export function summary(totals) {
 }
 
 export function createApp({ counter, inbox = createInbox(null), publicDir = join(ROOT, 'dist') } = {}) {
+  let redirects = {};
+  const redirectFile = join(publicDir, 'redirects.json');
+  if (existsSync(redirectFile)) {
+    try { redirects = JSON.parse(readFileSync(redirectFile, 'utf8')).redirects ?? {}; } catch { redirects = {}; }
+  }
   return createServer(async (req, res) => {
+    if (req.method === 'GET' || req.method === 'HEAD') {
+      const url = new URL(req.url, 'http://localhost');
+      const path = url.pathname.endsWith('/') ? url.pathname : `${url.pathname}/`;
+      if (redirects[path]) {
+        res.writeHead(308, { location: redirects[path] + url.search, 'cache-control': 'public, max-age=86400' });
+        res.end();
+        return;
+      }
+    }
     const formMatch = req.method === 'POST' && req.url.match(/^\/api\/(feedback|contribute)(?:\?.*)?$/);
     if (formMatch) {
       const kind = formMatch[1];
