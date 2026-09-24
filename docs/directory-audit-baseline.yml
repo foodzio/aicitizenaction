@@ -1,0 +1,9 @@
+version: 1
+reviewed_on: 2026-09-24
+reviewed_by: codex:post-canonicalization-baseline
+note: Reviewed baseline after the 41 approved identity merges; future material drops require an explicit baseline update.
+counts:
+  bodies: 230
+  channels: 70
+  orgs: 82
+  channel_routes: 232

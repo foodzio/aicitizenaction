@@ -88,6 +88,23 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T13:57:31Z — Read-only recurring directory audit implemented
+
+- Added `npm run directory-audit`, producing machine-readable JSON and a concise Markdown queue in
+  `tmp/directory-audit/` without changing content. Stable finding keys are grouped into publication
+  blockers, human review, maintenance and information.
+- The audit orchestrates schema/reference validation, candidate freshness, decision-ledger
+  reconciliation, contact-audit freshness, 180-day contact evidence, closed windows, 90-day seats,
+  record/decision expiry, redirect integrity, translations, Resource balance and dynamic coverage.
+- Added a reviewed post-merge baseline and a >5%/10-record (whichever is smaller) deletion gate.
+  Current fast audit passes: 382 entities; 302 with a current route (79.1%); 80 without; 78/78
+  identity candidates resolved; 232/232 channel routes reviewed; 41 retired ids redirected. Eight
+  pre-existing maintenance items remain visible (two unsourced, two overdue records/two seats,
+  with validation/report overlap), but none blocks publication.
+- Added `directory-audit:full` for tests, build and full link checking. Focused audit tests pass 3/3,
+  including future contact evidence failing closed. Next: execute the slow full audit, then wire both
+  modes into CI/weekly retention and stable issue handling.
+
 ### 2026-09-24T13:55:35Z — Directory integrity Phase 2 complete
 
 - Added 14 conservative `parent_id` links only where evidence supports an actual parent/subunit

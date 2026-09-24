@@ -116,6 +116,7 @@ able to work in this repo using only what is written in this section.)_
 - Directory identity candidates: `npm run directory-dedupe`; `node scripts/directory-dedupe.mjs --check` verifies the generated inventory without touching reviewed decisions
 - Directory identity decisions: `npm run directory-identity-review` checks the hand-maintained ledger against current candidates, evidence, dates, independent merge approval and completed redirects
 - Apply approved identity decisions: `npm run directory-identity-apply` is a non-mutating dry run; add `-- --apply` only after review to merge approved `same` rows, rewrite references, retire duplicate files and assign canonical entity keys/roles
+- Directory integrity audit: `npm run directory-audit` is read-only apart from JSON/Markdown reports under `tmp/directory-audit/`; `npm run directory-audit:full` also runs the full tests, production build and link check
 - Apply the deterministic channel review: `npm run contact-review` (dry-run summary), or `npm run contact-review -- --apply` to rewrite all 74 channel records; regenerate the inventory afterward
 - Focused browser/accessibility QA: build, copy `node_modules/axe-core/axe.min.js` to `dist/`, serve locally, start Chrome for Testing on the project CDP port, then run `AICA_QA_URL=http://127.0.0.1:<port> node scripts/qa-contact-audit.mjs`
 - Test: `npm test`
