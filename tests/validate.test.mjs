@@ -49,6 +49,41 @@ test('duplicate ids fail', () => {
   assert.ok(has(r, 'duplicate id'));
 });
 
+test('directory identity: entity keys are unique and roles may be plural', () => {
+  const a = body({
+    facts: { ...body().facts, entity_key: 'entity-alpha', roles: ['seat', 'government'] }
+  });
+  const ok = validate(tree({ [P]: a }));
+  assert.equal(ok.code, 0, JSON.stringify(ok.errors));
+
+  const b = body({
+    id: 'us-other-committee',
+    facts: { ...body().facts, entity_key: 'entity-alpha' },
+    strings: { ...body().strings, name: 'Other Committee' }
+  });
+  const bad = validate(tree({ [P]: a, 'content/bodies/us/federal/us-other-committee.yml': b }));
+  assert.ok(has(bad, 'entity_key "entity-alpha" is also used'));
+});
+
+test('directory identity: parent, redirects and independent approval are validated', () => {
+  const a = body({
+    facts: { ...body().facts, parent_id: 'missing-parent' },
+    meta: {
+      ...body().meta,
+      redirect_from: [{ section: 'bodies', id: 'us-test-committee' }],
+      identity_review: {
+        evidence_urls: ['https://example.org/identity'], reviewed_by: '@same', approved_by: '@same',
+        reviewed_on: '2026-09-22', review_by: '2026-09-21'
+      }
+    }
+  });
+  const result = validate(tree({ [P]: a }));
+  assert.ok(has(result, 'parent_id names unknown record'));
+  assert.ok(has(result, 'still exists as an active record'));
+  assert.ok(has(result, 'approver must differ from reviewer'));
+  assert.ok(has(result, 'identity_review.review_by is before reviewed_on'));
+});
+
 test('file name must match id, and path must match geography', () => {
   const r = validate(tree({ 'content/bodies/gb/other-name.yml': body() }));
   assert.ok(has(r, 'file name must be'));

@@ -11,6 +11,9 @@
       "additionalProperties": false,
       "required": ["routes"],
       "properties": {
+        "entity_key": { "$ref": "common.schema.json#/$defs/id" },
+        "roles": { "$ref": "common.schema.json#/$defs/vocabList" },
+        "parent_id": { "$ref": "common.schema.json#/$defs/id" },
         "routes": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/route" } },
         "local_name": { "type": "string" },
         "region": { "type": "string" },

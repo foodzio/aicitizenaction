@@ -50,8 +50,8 @@ Tracked in git and committed with every step.
 | Contact audit 4 — Correct/reclassify | **done** | 8 misleading informational records disabled as recipients and preserved as Resources; reference-only companies retained internally |
 | Contact audit 5 — UI/routing convergence | **done** | Public label, directory, API, record pages and send-to cards share audited eligibility and show restrictions/evidence |
 | Contact audit 6 — Final verification | **done and deployed** | 85 tests, 920-page build, 25 browser/axe checks, audit freshness and reconciliation pass; production deployment `673a9d41-5eaa-434c-902a-1f5773023513` is running |
-| Directory integrity 1 — Identity model and inventories | **in progress** | Add roles/identity schema, separate generated candidates from reviewed decisions, dynamic reconciliation and validation |
-| Directory integrity 2 — Backlog resolution | not started | Review candidate pairs, merge confirmed duplicates, preserve provenance and redirects |
+| Directory integrity 1 — Identity model and inventories | **done** | Identity/roles/redirect/provenance schema, separate deterministic candidates and human decisions, PSL-aware matching, validation and tests |
+| Directory integrity 2 — Backlog resolution | **in progress** | Review candidate pairs, merge confirmed duplicates, preserve provenance and redirects |
 | Directory integrity 3 — Recurring audit | not started | Add fast/full commands, reports, coverage and backlog metrics |
 | Directory integrity 4 — Fail-closed freshness | not started | Enforce 180-day contact expiry consistently in public surfaces and production runtime |
 | Directory integrity 5 — Workflow and public reporting | not started | CI/weekly scheduling, stable issues/artifacts, freshness-page integrity metrics |
@@ -87,6 +87,23 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T13:37:08Z — Directory integrity Phase 1 complete
+
+- Added identity schema for stable entity keys, plural roles, parent ids, aliases, retired-path
+  redirects, identity reviews, multiple legacy ids and field-level merge provenance. Validator now
+  rejects duplicate entity keys, missing parents, active/duplicate redirects and self-approval.
+- Added PSL-aware `scripts/directory-dedupe.mjs` / `npm run directory-dedupe`. Its generated
+  `docs/directory-identity-candidates.yml` is structurally separate from the hand-maintained
+  `docs/directory-identity-decisions.yml`; regeneration cannot overwrite decisions.
+- Current deterministic inventory: 423 records, 135 candidates — 22 high, 31 medium, 82 low.
+  Exact/local names plus corroborating domain/suffix evidence are high; a shared endpoint alone is
+  low because distinct public bodies often share one portal or inbox.
+- Added `tldts@7.4.15` for Public Suffix List domain handling and focused schema/determinism tests.
+  Validation: 0 errors (four pre-existing warnings). Focused tests: 21/21 pass; candidate freshness
+  check and whitespace check pass.
+- Phase 2 is active: review all candidates, record current evidence, merge confirmed duplicates,
+  and preserve redirects/provenance. Destructive merges still require an independent approver.
 
 ### 2026-09-24T13:33:36Z — Directory integrity implementation started
 
@@ -530,4 +547,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-24T13:33:36Z
+Last modified: 2026-09-24T13:37:08Z

@@ -181,6 +181,52 @@
         }
       }
     },
+    "identityReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_urls", "reviewed_by", "reviewed_on", "review_by"],
+      "properties": {
+        "evidence_urls": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/url" }
+        },
+        "reviewed_by": { "type": "string", "minLength": 1 },
+        "approved_by": { "type": "string", "minLength": 1 },
+        "reviewed_on": { "$ref": "#/$defs/date" },
+        "review_by": { "$ref": "#/$defs/date" },
+        "permanent": { "type": "boolean" },
+        "note": { "type": "string", "minLength": 1 }
+      }
+    },
+    "redirect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["section", "id"],
+      "properties": {
+        "section": { "enum": ["bodies", "channels", "orgs"] },
+        "id": { "$ref": "#/$defs/id" }
+      }
+    },
+    "mergeProvenance": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["record_id", "source_url", "checked_on"],
+          "properties": {
+            "record_id": { "$ref": "#/$defs/id" },
+            "source_url": { "$ref": "#/$defs/url" },
+            "checked_on": { "$ref": "#/$defs/date" }
+          }
+        }
+      }
+    },
     "meta": {
       "type": "object",
       "additionalProperties": false,
@@ -224,6 +270,24 @@
           "type": "string",
           "description": "id in input/data, for traceability"
         },
+        "legacy_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 },
+          "description": "All source ids retained when records are merged"
+        },
+        "aliases": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 }
+        },
+        "redirect_from": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/redirect" }
+        },
+        "identity_review": { "$ref": "#/$defs/identityReview" },
+        "merge_provenance": { "$ref": "#/$defs/mergeProvenance" },
         "migrated_from": {
           "type": "string"
         },

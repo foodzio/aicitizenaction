@@ -23,6 +23,9 @@
         "routes"
       ],
       "properties": {
+        "entity_key": { "$ref": "common.schema.json#/$defs/id" },
+        "roles": { "$ref": "common.schema.json#/$defs/vocabList" },
+        "parent_id": { "$ref": "common.schema.json#/$defs/id" },
         "routes": {
           "type": "array",
           "items": {
