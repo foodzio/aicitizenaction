@@ -16,12 +16,27 @@
         "parent_id": { "$ref": "common.schema.json#/$defs/id" },
         "routes": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/route" } },
         "local_name": { "type": "string" },
+        "level": { "$ref": "common.schema.json#/$defs/vocabId" },
+        "chamber": { "type": "string" },
+        "parent": { "type": "string" },
         "region": { "type": "string" },
         "perspective": { "$ref": "common.schema.json#/$defs/vocabId" },
         "public_input": { "enum": ["open", "limited", "none"] },
         "volunteers": { "type": "string" },
+        "language": { "type": "string" },
         "tags": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/vocabId" } },
-        "topics": { "$ref": "common.schema.json#/$defs/vocabList" }
+        "seats": { "type": "array", "items": { "type": "object", "additionalProperties": false, "required": ["role", "name", "verified_on"], "properties": { "role": { "enum": ["chair", "ranking", "rapporteur", "minister", "head", "member", "other"] }, "name": { "type": "string", "minLength": 1 }, "party": { "type": "string" }, "region": { "type": "string" }, "verified_on": { "$ref": "common.schema.json#/$defs/date" } } } },
+        "accepts_foreign": { "type": "boolean" },
+        "effort_minutes": { "type": "integer", "minimum": 1 },
+        "powers": { "$ref": "common.schema.json#/$defs/vocabList" },
+        "topics": { "$ref": "common.schema.json#/$defs/vocabList" },
+        "not_topics": { "$ref": "common.schema.json#/$defs/vocabList" },
+        "routing_evidence": { "type": "object", "additionalProperties": { "type": "string" } },
+        "routing_review": { "enum": ["drafted", "reviewed"] },
+        "recommend": { "type": "boolean" },
+        "contact_disposition": { "enum": ["keep", "fix", "reclassify", "merge", "remove"] },
+        "contact_reviewed_by": { "type": "string", "minLength": 1 },
+        "contact_reviewed_on": { "$ref": "common.schema.json#/$defs/date" }
       }
     }
   }

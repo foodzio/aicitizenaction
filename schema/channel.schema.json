@@ -47,6 +47,8 @@
         "region": {
           "type": "string"
         },
+        "perspective": { "$ref": "common.schema.json#/$defs/vocabId" },
+        "volunteers": { "type": "string" },
         "public_input": {
           "enum": [
             "open",

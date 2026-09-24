@@ -88,6 +88,16 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T13:46:08Z — Directory schemas support multi-role canonical entities
+
+- Aligned body, channel and organisation fact schemas on the complementary fields needed by the
+  approved cross-section merges. A canonical body may retain reviewed contact metadata; a channel
+  may retain perspective/volunteer facts; an organisation may retain powers, seats, routing and
+  contact facts. The record still lives in one section and keeps one compatibility `type`.
+- This is a schema prerequisite only; no records were merged. All schemas parse, full content
+  validation has 0 errors/four existing warnings, and focused validator tests pass 18/18.
+- Next: add and dry-run the merge applicator.
+
 ### 2026-09-24T13:45:13Z — Complete identity candidate ledger reviewed
 
 - Classified all 126 deterministic candidates from their cited record evidence: 42 `same`, 47
