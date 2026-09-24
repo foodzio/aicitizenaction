@@ -88,6 +88,20 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T13:47:31Z — Approved merge applicator added and dry-run
+
+- Added `npm run directory-identity-apply`: dry-run by default, explicit `-- --apply` required.
+  It accepts only reviewed `same` rows with distinct reviewer/approver identities, refuses missing
+  active records or cited sources, resolves route-id collisions, unions facts/routes/sources/roles,
+  preserves aliases and legacy ids, records field-level provenance, rewrites exact content
+  references, retains historical decisions, creates retired-path metadata, and assigns opaque
+  entity keys to every surviving directory entity.
+- Dry run is non-mutating and reports exactly 42 approved retirements, leaving 381 canonical
+  entities. The full mapping was inspected in `tmp/identity-merge-dry-run.txt`.
+- Focused merge and ledger tests pass 6/6, including collision-safe routes, provenance and
+  self-approval rejection. Next: apply the reviewed merge set, regenerate candidates, then repair
+  any post-merge validation or decision-ledger inconsistencies before committing content.
+
 ### 2026-09-24T13:46:08Z — Directory schemas support multi-role canonical entities
 
 - Aligned body, channel and organisation fact schemas on the complementary fields needed by the
