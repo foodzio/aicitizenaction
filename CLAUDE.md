@@ -34,7 +34,7 @@ Update this table as the repo grows — it is the map, so a stale map is a bug.
 | `docs/implementation-plan.md` | Phased implementation plan for the brief and the architecture, with open decisions and what each blocks |
 | `docs/places-to-contact-audit-plan.md` | Corrective plan to audit all channel records/routes and require deterministic evidence before listing or recommending a Place to Contact |
 | `docs/places-to-contact-audit.yml` | Generated, tracked reconciliation inventory: one audit row for every route under `content/channels/` |
-| `docs/directory-integrity-maintenance-plan.md` | Plan for canonical entity identity, duplicate reconciliation, recurring directory audits, fail-closed freshness, and human re-verification |
+| `docs/directory-integrity-maintenance-plan.md` | Plan for canonical entity identity, duplicate reconciliation, recurring directory audits, fail-closed freshness, and human re-verification; operating procedure and SLAs are in `CONTRIBUTING.md` |
 | `docs/directory-identity-candidates.yml` | Generated deterministic directory identity candidates; contains signals only and is safe to regenerate |
 | `docs/directory-identity-decisions.yml` | Hand-maintained identity decisions; never generated or overwritten by the candidate scanner |
 | `input/` | Source assets from the Sept 2026 research and build pass — see `input/README.md` for the manifest |
@@ -116,7 +116,7 @@ able to work in this repo using only what is written in this section.)_
 - Directory identity candidates: `npm run directory-dedupe`; `node scripts/directory-dedupe.mjs --check` verifies the generated inventory without touching reviewed decisions
 - Directory identity decisions: `npm run directory-identity-review` checks the hand-maintained ledger against current candidates, evidence, dates, independent merge approval and completed redirects
 - Apply approved identity decisions: `npm run directory-identity-apply` is a non-mutating dry run; add `-- --apply` only after review to merge approved `same` rows, rewrite references, retire duplicate files and assign canonical entity keys/roles
-- Directory integrity audit: `npm run directory-audit` is read-only apart from JSON/Markdown reports under `tmp/directory-audit/`; `npm run directory-audit:full` also runs the full tests, production build and link check. Weekly stateful runs add `--link-state .linkcheck/state.json`; `npm run directory-issues` previews the stable-key issues for the latest report
+- Directory integrity audit: `npm run directory-audit` is read-only apart from JSON/Markdown reports under `tmp/directory-audit/`; `npm run directory-audit:full` also runs the full tests, production build and link check. Weekly stateful runs add `--link-state .linkcheck/state.json`; `npm run directory-issues` previews the stable-key issues for the latest report; `npm run directory-sample` creates the deterministic prior-month human evidence sample
 - Apply the deterministic channel review: `npm run contact-review` (dry-run summary), or `npm run contact-review -- --apply` to rewrite all 74 channel records; regenerate the inventory afterward
 - Focused browser/accessibility QA: build, copy `node_modules/axe-core/axe.min.js` to `dist/`, serve locally, start Chrome for Testing on the project CDP port, then run `AICA_QA_URL=http://127.0.0.1:<port> node scripts/qa-contact-audit.mjs`
 - Test: `npm test`

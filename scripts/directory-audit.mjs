@@ -32,6 +32,13 @@ export function baselineDrops(counts, baseline) {
   return drops;
 }
 
+export function coverageDrops(current, baseline) {
+  return ['countries_with_current_contact', 'topics_with_current_contact'].filter(key => {
+    const previous = baseline?.[key];
+    return Number.isFinite(previous) && current[key] < previous * 0.95;
+  }).map(key => ({ key, previous: baseline[key], current: current[key] }));
+}
+
 export function audit({ now = today(), full = false, linkState } = {}) {
   const findings = [];
   const add = (bucket, key, message, path) => findings.push(finding(bucket, key, message, path));
@@ -76,6 +83,8 @@ export function audit({ now = today(), full = false, linkState } = {}) {
     channel_routes: channelRoutes.length
   };
   for (const drop of baselineDrops(counts, baseline)) add('block_publication', `baseline:drop:${drop.section}`, `${drop.section} fell from ${drop.previous} to ${drop.current}; update the reviewed baseline if intentional.`);
+  for (const drop of coverageDrops(fresh.integrity.coverage, baseline.coverage)) add('block_publication', `baseline:coverage:${drop.key}`, `${drop.key} fell from ${drop.previous} to ${drop.current}; update the reviewed baseline with an explicit explanation if intentional.`);
+  if (!fresh.integrity.contacts.current) add('block_publication', 'coverage:empty-recommendation-set', 'No audited current contact route remains; an empty directory cannot pass by excluding everything.');
   for (const record of records) {
     if (record.meta.review_by < now) add('maintenance_due', `record:overdue:${record.id}`, `Record review was due ${record.meta.review_by}.`, record._path);
     for (const seat of record.facts.seats ?? []) if (daysSince(seat.verified_on, now) > 90) add('maintenance_due', `seat:overdue:${record.id}:${seat.role}:${seat.name}`, `Named seat was checked ${daysSince(seat.verified_on, now)} days ago.`, record._path);

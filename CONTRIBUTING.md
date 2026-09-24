@@ -89,6 +89,9 @@ When a record passes `review_by`, it appears in its steward's charter and the si
 
 ```bash
 npm run check                              # validate everything + run tests
+npm run directory-audit                    # fast, read-only integrity gate and review queue
+npm run directory-audit:full               # tests + build + stateful full link check
+npm run directory-sample                   # deterministic sample of last month's contact reviews
 node scripts/charter.mjs @your-handle      # your queue
 node scripts/freshness.mjs                 # how current the whole project is
 node scripts/check-links.mjs --files content/bodies/ie/ie-x.yml   # check the URLs in one file
@@ -97,3 +100,19 @@ node scripts/check-links.mjs --files content/bodies/ie/ie-x.yml   # check the UR
 ## Talking to each other
 
 GitHub Discussions, with one category per role. The weekly freshness report is posted there.
+
+## Directory integrity operations
+
+The fast audit runs on every pull request. A publication blocker must be fixed before merge. The
+weekly full audit updates one issue per stable finding key: contact/link failures are reviewed in
+7 days, identity questions in 14 days, and ordinary maintenance in 30 days. Uncertainty is handled
+by excluding the claim, never by marking it verified.
+
+On the first day of each month, `npm run directory-sample` selects 10% of the prior month's current
+contact reviews (at least five where available). A human reopens every cited evidence page and
+confirms the recipient, inbound mechanism, accepted subject, audience, restrictions, and current
+availability. A successful HTTP response alone is not a pass.
+
+`docs/directory-audit-baseline.yml` is a reviewed regression baseline, not a target. Update it only
+in the same reviewed pull request that explains an intentional material reduction in records,
+country coverage, or concern-category coverage. Never update it merely to make a failing gate pass.

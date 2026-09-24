@@ -6,6 +6,7 @@ name: Weekly
 on:
   schedule:
     - cron: '0 6 * * 1'
+    - cron: '0 7 1 * *'
   workflow_dispatch:
 permissions:
   contents: read
@@ -53,6 +54,9 @@ jobs:
       - name: Freshness report
         if: always()
         run: node scripts/freshness.mjs --link-state .linkcheck/state.json --summary "$GITHUB_STEP_SUMMARY" > freshness.md
+      - name: Prepare monthly human evidence sample
+        if: always() && github.event.schedule == '0 7 1 * *'
+        run: node scripts/monthly-route-sample.mjs --summary "$GITHUB_STEP_SUMMARY"
       - name: Upload retained integrity reports
         if: always()
         uses: actions/upload-artifact@v4

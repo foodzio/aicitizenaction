@@ -88,6 +88,20 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T14:11:40Z — Coverage gate and monthly evidence sampling are executable
+
+- Expanded the reviewed baseline from section totals to the actual 18-place and 14-topic current
+  contact coverage sets. The audit blocks a >5% decline in either coverage count and explicitly
+  blocks an empty recommendation set, so exclusion alone cannot manufacture a passing result.
+- Added deterministic prior-month sampling of 10% of contact reviews (minimum five where
+  available), with JSON/Markdown queues and an explicit six-factor manual evidence checklist. The
+  monthly workflow schedule adds the queue to its summary/artifact; September's current population
+  would sample 9/82 routes.
+- Documented PR/weekly/monthly operations, 7/14/30-day service levels and the reviewed-baseline
+  change rule in `CONTRIBUTING.md`. Focused audit/sample tests pass 6/6, workflow YAML parses and
+  the current fast audit passes with six unique maintenance findings.
+- Phase 5 remains active only for SLA/owner-overflow escalation mechanics, then final verification.
+
 ### 2026-09-24T14:10:05Z — Audits are CI gates with stable issue reconciliation
 
 - Pull requests and main pushes now run the fast directory audit before the normal suite, append

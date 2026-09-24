@@ -7,3 +7,40 @@ counts:
   channels: 70
   orgs: 82
   channel_routes: 232
+coverage:
+  countries_with_current_contact: 18
+  topics_with_current_contact: 14
+  countries:
+    - au
+    - br
+    - ca
+    - cn
+    - es
+    - eu
+    - fr
+    - gb
+    - global
+    - ie
+    - in
+    - jp
+    - kr
+    - nl
+    - nz
+    - tw
+    - us
+    - za
+  topics:
+    - audit
+    - behaviour
+    - flaw
+    - fund
+    - harm
+    - insider
+    - join
+    - law
+    - opposition
+    - petition
+    - record
+    - research
+    - systemic
+    - tip
