@@ -65,7 +65,7 @@ Base URL: `http://localhost:4321`
 
 **D2a — False-positive exclusions.** “The perils of AI safety's insularity,” “In-House Evaluation Is Not Enough,” and “To Err is AI” do not appear under Places to contact. Their useful material appears under Resources instead.
 
-**D3 — Record page.** Open `/en/bodies/us-senate-committee-commerce-2/`: named seats with dates; membership link with badge; routes with Verified/Unverified/Unchecked badges and dates; "Last checked" and "Next check due"; a "Something wrong here?" link to a GitHub issue form with the record id prefilled.
+**D3 — Record page.** Open `/en/bodies/us-senate-committee-commerce/`: named seats with dates; membership link with badge; routes with Verified/Unverified/Unchecked/expired badges and dates; "Last checked" and "Next check due"; a "Something wrong here?" link with the record id prefilled. The retired `us-senate-committee-commerce-2` path returns one permanent redirect to this canonical record.
 
 **D4 — Overdue and unsourced records.** `/en/bodies/in-indiaai-mission/` shows a "Due for a re-check since" notice. `/en/bodies/cl-chile-artificial-intelligence-bill-ministry-science/` shows the "No source yet" notice.
 
@@ -97,9 +97,9 @@ Base URL: `http://localhost:4321`
 
 **G1 — How it works.** `/en/about/`: four-step flow diagram, the three verification labels explained, "Whose side are we on?", links to `/api/*.json`.
 
-**G2 — Freshness.** `/en/freshness/`: overall percentage, section and country tables, Resources perspective balance, translations line.
+**G2 — Freshness.** `/en/freshness/`: overall percentage, directory-integrity denominators (canonical/public/current/excluded/coverage/backlog), exclusion reasons, section and country tables, Resources perspective balance, translations line.
 
-**G3 — Data API.** `/api/bodies.json` returns JSON with `count` 250; `/api/orgs.json` 99; `/api/channels.json` returns the audited public contact set (`count` 52, `excluded_count` 22); `/version.json` has a version.
+**G3 — Data API.** `/api/bodies.json` and `/api/orgs.json` return their canonical records; `/api/channels.json` returns exactly the currently audited public contact set and reports the excluded count; the sum equals the channel files discovered at build time. `/version.json` has a version. No test hard-codes migration-era totals.
 
 **G4 — Contact contract.** Every `/api/channels.json` record has `facts.contact_disposition: keep` and at least one reviewed route with status `open` or `limited`, audience, accepted subjects, evidence URL/note and check date.
 

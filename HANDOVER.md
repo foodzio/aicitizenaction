@@ -55,7 +55,7 @@ Tracked in git and committed with every step.
 | Directory integrity 3 — Recurring audit | **done** | Fast/full read-only commands, stable reports, reviewed baseline, coverage/backlog/link metrics |
 | Directory integrity 4 — Fail-closed freshness | **done** | Shared 180-day route/90-day seat rules plus per-build runtime validity gate |
 | Directory integrity 5 — Workflow and public reporting | **done** | CI/weekly/monthly automation, stable issues, 400-day artifacts, SLA escalation, public integrity metrics |
-| Directory integrity 6 — Final verification | **in progress** | Full tests/build/browser checks and reconciliation; no deployment without separate approval |
+| Directory integrity 6 — Final verification | **done** | 118 tests, 838-page build, 914-link stateful audit, 35 browser/axe checks; deployment still requires separate approval |
 
 ## Judgement calls made without the owner (reverse any of them)
 
@@ -87,6 +87,23 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T14:17:57Z — Directory integrity maintenance plan fully implemented
+
+- Final verification passes: content validation 0 errors/four known warnings; 118/118 tests;
+  838-page production build; stateful full audit PASS across 914 URLs (13 first observations,
+  zero confirmed failures, 149 unknown/blocked and 27 moved).
+- Expanded the repeatable Chrome-for-Testing QA to cover canonical Access Now uniqueness, dynamic
+  API totals, current contact evidence, false-positive reference classification, expired named
+  seats, Argentina attachment exclusion and public integrity denominators. Final result: 35/35
+  browser checks, including light/dark axe checks on six affected pages.
+- The expanded QA initially found mobile overflow in the new integrity fact grid. Added a <=600px
+  single-column facts layout with safe wrapping; the full browser set then passed. Updated stale
+  migration-era totals/ids in `docs/test-scenarios.md` and recorded evidence in
+  `docs/test-results.md`.
+- All six directory-integrity phases are complete. No deployment was attempted because project
+  policy requires separate owner approval. The next operational action is the scheduled audit;
+  the next release action is an owner-approved Railway deployment.
 
 ### 2026-09-24T14:12:45Z — Directory workflow ownership and SLA enforcement complete
 

@@ -1,6 +1,26 @@
 # Test results
 
-*Browser scenario results against local production builds. Latest update 2026-09-24T00:44:22Z.*
+*Browser scenario results against local production builds. Latest update 2026-09-24T14:17:57Z.*
+
+## Directory-integrity final verification — 2026-09-24
+
+35 PASS · 0 FAIL against the local production server at 390×844 in Chrome for Testing 151.
+The repeatable runner is `scripts/qa-contact-audit.mjs`; screenshots and JSON evidence are under
+`tmp/qa-contact/`.
+
+| Area | Result | Evidence |
+| --- | --- | --- |
+| Canonical directory | PASS | Access Now appears exactly once; article/paper false positives are excluded from Places to contact; public/API totals are derived dynamically rather than hard-coded. |
+| Contact contract | PASS | A current contact shows status and acceptance evidence; every API record passes the shared current-route predicate. |
+| Fail-closed references | PASS | The Transformer article is labelled reference-only; the overdue IndiaAI seat is explicitly “Verification expired”; the Argentina bill attachment is absent from the guided path. |
+| Public credibility report | PASS | `/en/freshness/` exposes canonical/public/current/excluded/coverage/backlog measures and exclusion reasons. |
+| French | PASS | Directory category and current-contact filter wording remain translated and current. |
+| Accessibility/layout | PASS | Six affected pages in light and dark have zero axe violations and no mobile horizontal overflow. A first run caught the new integrity fact grid overflowing; the responsive grid fix passed the rerun. |
+| Full automated audit | PASS | 118/118 tests; 512 files, 0 validation errors/four known warnings; 838-page build; 914 URLs; 0 confirmed failures, 13 first observations, 149 unknown/blocked, 27 moved. |
+
+The 13 first link failures remain first observations by design. The saved state is available in the
+local ignored `tmp/final-linkcheck-state/`; the next scheduled weekly run must confirm a second
+consecutive failure before filing a confirmed-broken-link issue.
 
 ## Focused contact-integrity run — 2026-09-24
 

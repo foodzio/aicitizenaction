@@ -3,7 +3,8 @@
 // Requires the built site (including dist/axe.min.js), a local server, and Chrome for Testing on CDP.
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { ROOT } from './lib/content.mjs';
+import { ROOT, loadDirectory } from './lib/content.mjs';
+import { eligibleContactRoute, placeToContact } from './lib/routing.mjs';
 
 const base = process.env.AICA_QA_URL ?? 'http://127.0.0.1:4322';
 const cdp = process.env.AICA_CDP ?? 'http://127.0.0.1:9352';
@@ -44,6 +45,8 @@ const pages = [
   ['/en/directory/', 'directory'],
   ['/en/channels/global-ai-incident-database/', 'valid-contact'],
   ['/en/channels/global-perils-ai-safety-s-insularity-why/', 'reference-record'],
+  ['/en/bodies/in-indiaai-mission/', 'expired-seat'],
+  ['/en/freshness/', 'integrity-report'],
   ['/en/start/record/?where=ar&step=3', 'argentina-regression']
 ];
 
@@ -55,6 +58,7 @@ for (const [path, name] of pages) {
   const facts = await browser.evaluate(`({
     title: document.title,
     text: document.body.innerText,
+    accessNowRows: [...document.querySelectorAll('#results a')].filter(a => a.textContent.trim() === 'Access Now').length,
     overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
     errors: window.__qaErrors || []
   })`);
@@ -62,12 +66,18 @@ for (const [path, name] of pages) {
   if (name === 'directory') {
     check(facts.text.includes('Places to contact'), 'directory: renamed category');
     check(!facts.text.includes("The perils of AI safety's insularity"), 'directory: article excluded');
+    check(facts.accessNowRows === 1, 'directory: Access Now appears once', String(facts.accessNowRows));
   }
   if (name === 'valid-contact') {
     check(/Open contact route|Limited contact route/.test(facts.text), 'record: contact status shown');
     check(facts.text.includes('Evidence that this route accepts contact'), 'record: acceptance evidence shown');
   }
   if (name === 'reference-record') check(facts.text.includes('not a current contact destination'), 'record: reference warning shown');
+  if (name === 'expired-seat') check(facts.text.includes('Verification expired'), 'record: stale named seat is explicitly expired');
+  if (name === 'integrity-report') {
+    check(facts.text.includes('Directory integrity'), 'freshness: integrity section shown');
+    check(facts.text.includes('Why contact routes are excluded'), 'freshness: exclusion denominators shown');
+  }
   if (name === 'argentina-regression') {
     check(!facts.text.includes('rest.hcdn.gob.ar/web/proyectos/289500/adjuntos/104100'), 'path: bill attachment excluded');
     check(!facts.text.includes('AI bills before the Chamber of Deputies'), 'path: false recipient excluded');
@@ -93,9 +103,11 @@ check(fr.includes('Lieux à contacter'), 'French directory: renamed category');
 check(fr.includes('Afficher uniquement les moyens de contact actuellement vérifiés'), 'French directory: verified-contact wording');
 
 const api = await fetch(`${base}/api/channels.json`).then(r => r.json());
-check(api.count === 52 && api.excluded_count === 22, 'API: audited public count', `${api.count}/${api.excluded_count}`);
+const channels = loadDirectory().filter(record => record._section === 'channels');
+const expectedPublic = channels.filter(placeToContact).length;
+check(api.count === expectedPublic && api.excluded_count === channels.length - expectedPublic, 'API: audited public count', `${api.count}/${api.excluded_count}`);
 check(api.records.every(r => r.facts.contact_disposition === 'keep'), 'API: every record passes disposition');
-check(api.records.every(r => r.facts.routes.some(x => x.contact?.review === 'reviewed' && ['open', 'limited'].includes(x.contact.status))), 'API: every record has reviewed eligible route');
+check(api.records.every(r => r.facts.routes.some(x => eligibleContactRoute(r, x))), 'API: every record has a current reviewed eligible route');
 
 await fetch(`${cdp}/json/close/${browser.target.id}`);
 writeFileSync(join(out, 'results.json'), JSON.stringify({ run_at: new Date().toISOString(), base, results, failures }, null, 2));
