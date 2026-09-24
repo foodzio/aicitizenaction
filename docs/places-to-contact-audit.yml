@@ -1,0 +1,4854 @@
+generated_on: 2026-09-24
+scope: Every route in content/channels; generated rows are reconciled against source content.
+totals:
+  records: 74
+  routes: 234
+  eligible: 87
+  ineligible: 147
+  dispositions:
+    keep: 0
+    fix: 0
+    reclassify: 0
+    merge: 0
+    remove: 0
+    reference-only: 0
+    pending: 234
+routes:
+  - record_id: ae-g42
+    name: G42
+    file: content/channels/ae/ae-g42.yml
+    record_type: company
+    country: ae
+    public_input: none
+    route_id: no-verified-safety-channel
+    claimed_type: form
+    value: https://www.g42.ai/contact-us
+    verified: false
+    evidence_hint: Not found — general contact only.
+    source_urls:
+      - https://www.g42.ai/contact-us
+      - https://www.g42.ai/
+      - https://www.g42.ai/application/files/9517/3882/2182/G42_Frontier_Safety_Framework_Publication_Version.pdf
+    failed_rules:
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: ae-g42
+    name: G42
+    file: content/channels/ae/ae-g42.yml
+    record_type: company
+    country: ae
+    public_input: none
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.g42.ai/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://www.g42.ai/contact-us
+      - https://www.g42.ai/
+      - https://www.g42.ai/application/files/9517/3882/2182/G42_Frontier_Safety_Framework_Publication_Version.pdf
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: ae-g42
+    name: G42
+    file: content/channels/ae/ae-g42.yml
+    record_type: company
+    country: ae
+    public_input: none
+    route_id: framework
+    claimed_type: framework
+    value: https://www.g42.ai/application/files/9517/3882/2182/G42_Frontier_Safety_Framework_Publication_Version.pdf
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://www.g42.ai/contact-us
+      - https://www.g42.ai/
+      - https://www.g42.ai/application/files/9517/3882/2182/G42_Frontier_Safety_Framework_Publication_Version.pdf
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: ca-cohere
+    name: Cohere
+    file: content/channels/ca/ca-cohere.yml
+    record_type: company
+    country: ca
+    public_input: open
+    route_id: safety-misuse-reports
+    claimed_type: email
+    value: safety@cohere.com
+    verified: true
+    evidence_hint: "Usage Policy states: 'please notify us immediately at safety@cohere.com'. Covers policy violations, misuse or abuse of Cohere Services, model safety issues, and security research falling outside the disclosure procedure."
+    source_urls:
+      - https://coral.cohere.com/
+      - https://trustcenter.cohere.com/
+      - https://cohere.com/security
+      - https://cohere.com/security/the-cohere-secure-ai-frontier-model-framework-february-2025.pdf
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: ca-cohere
+    name: Cohere
+    file: content/channels/ca/ca-cohere.yml
+    record_type: company
+    country: ca
+    public_input: open
+    route_id: thumbs-down-output
+    claimed_type: feedback
+    value: https://coral.cohere.com/
+    verified: false
+    evidence_hint: In-product feedback on a bad model output, offered in the Usage Policy as an alternative to emailing.
+    source_urls:
+      - https://coral.cohere.com/
+      - https://trustcenter.cohere.com/
+      - https://cohere.com/security
+      - https://cohere.com/security/the-cohere-secure-ai-frontier-model-framework-february-2025.pdf
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: ca-cohere
+    name: Cohere
+    file: content/channels/ca/ca-cohere.yml
+    record_type: company
+    country: ca
+    public_input: open
+    route_id: responsible-disclosure-policy-via
+    claimed_type: disclosure
+    value: https://trustcenter.cohere.com/
+    verified: false
+    evidence_hint: Security vulnerability disclosure; the policy document is downloadable from the Trust Center.
+    source_urls:
+      - https://coral.cohere.com/
+      - https://trustcenter.cohere.com/
+      - https://cohere.com/security
+      - https://cohere.com/security/the-cohere-secure-ai-frontier-model-framework-february-2025.pdf
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: ca-cohere
+    name: Cohere
+    file: content/channels/ca/ca-cohere.yml
+    record_type: company
+    country: ca
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://cohere.com/security
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://coral.cohere.com/
+      - https://trustcenter.cohere.com/
+      - https://cohere.com/security
+      - https://cohere.com/security/the-cohere-secure-ai-frontier-model-framework-february-2025.pdf
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: ca-cohere
+    name: Cohere
+    file: content/channels/ca/ca-cohere.yml
+    record_type: company
+    country: ca
+    public_input: open
+    route_id: framework
+    claimed_type: framework
+    value: https://cohere.com/security/the-cohere-secure-ai-frontier-model-framework-february-2025.pdf
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://coral.cohere.com/
+      - https://trustcenter.cohere.com/
+      - https://cohere.com/security
+      - https://cohere.com/security/the-cohere-secure-ai-frontier-model-framework-february-2025.pdf
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-alibaba
+    name: Alibaba (Qwen)
+    file: content/channels/cn/cn-alibaba.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: alibaba-security-response-center
+    claimed_type: disclosure
+    value: https://asrc.alibaba.com/
+    verified: false
+    evidence_hint: Vulnerability reporting across Alibaba properties. Page is fully JS-rendered and returned only a 'please enable JS' message when fetched, so scope, AI coverage and registration requirements could not be confirmed.
+    source_urls:
+      - https://asrc.alibaba.com/
+      - https://www.alibabacloud.com/en/trust-center/security-compliance-practice
+      - https://qwen.ai/
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-alibaba
+    name: Alibaba (Qwen)
+    file: content/channels/cn/cn-alibaba.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: alibaba-cloud-trust-center
+    claimed_type: form
+    value: https://www.alibabacloud.com/en/trust-center/security-compliance-practice
+    verified: false
+    evidence_hint: Compliance documentation, not an incident channel.
+    source_urls:
+      - https://asrc.alibaba.com/
+      - https://www.alibabacloud.com/en/trust-center/security-compliance-practice
+      - https://qwen.ai/
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-alibaba
+    name: Alibaba (Qwen)
+    file: content/channels/cn/cn-alibaba.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://qwen.ai/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://asrc.alibaba.com/
+      - https://www.alibabacloud.com/en/trust-center/security-compliance-practice
+      - https://qwen.ai/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-alibaba
+    name: Alibaba (Qwen)
+    file: content/channels/cn/cn-alibaba.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://qwen.ai/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://asrc.alibaba.com/
+      - https://www.alibabacloud.com/en/trust-center/security-compliance-practice
+      - https://qwen.ai/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-baidu
+    name: Baidu
+    file: content/channels/cn/cn-baidu.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: baidu-security-response-center
+    claimed_type: disclosure
+    value: https://bsrc.baidu.com/
+    verified: false
+    evidence_hint: Vulnerability reporting for Baidu products. Chinese-language platform; AI model safety scope not established.
+    source_urls:
+      - https://bsrc.baidu.com/
+      - https://www.baidu.com/
+      - https://yiyan.baidu.com/
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-baidu
+    name: Baidu
+    file: content/channels/cn/cn-baidu.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.baidu.com/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://bsrc.baidu.com/
+      - https://www.baidu.com/
+      - https://yiyan.baidu.com/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-baidu
+    name: Baidu
+    file: content/channels/cn/cn-baidu.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://yiyan.baidu.com/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://bsrc.baidu.com/
+      - https://www.baidu.com/
+      - https://yiyan.baidu.com/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-bytedance-seed
+    name: ByteDance Seed
+    file: content/channels/cn/cn-bytedance-seed.yml
+    record_type: company
+    country: cn
+    public_input: none
+    route_id: no-verified-safety-or
+    claimed_type: form
+    value: https://seed.bytedance.com/en/
+    verified: false
+    evidence_hint: Not found — general contact only. The Responsible AI page returned no readable body content when fetched (JS-rendered) and no contact details.
+    source_urls:
+      - https://seed.bytedance.com/en/
+      - https://seed.bytedance.com/en/direction/responsible_ai
+    failed_rules:
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-bytedance-seed
+    name: ByteDance Seed
+    file: content/channels/cn/cn-bytedance-seed.yml
+    record_type: company
+    country: cn
+    public_input: none
+    route_id: homepage
+    claimed_type: homepage
+    value: https://seed.bytedance.com/en/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://seed.bytedance.com/en/
+      - https://seed.bytedance.com/en/direction/responsible_ai
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-bytedance-seed
+    name: ByteDance Seed
+    file: content/channels/cn/cn-bytedance-seed.yml
+    record_type: company
+    country: cn
+    public_input: none
+    route_id: framework
+    claimed_type: framework
+    value: https://seed.bytedance.com/en/direction/responsible_ai
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://seed.bytedance.com/en/
+      - https://seed.bytedance.com/en/direction/responsible_ai
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-deepseek
+    name: DeepSeek
+    file: content/channels/cn/cn-deepseek.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: security
+    claimed_type: email
+    value: security@deepseek.com
+    verified: true
+    evidence_hint: Published as a mailto link in the footer of deepseek.com. No published policy defines what is in scope.
+    source_urls:
+      - https://www.deepseek.com/
+      - https://www.deepseek.com/harness/en/privacy/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-deepseek
+    name: DeepSeek
+    file: content/channels/cn/cn-deepseek.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: general-service-contact
+    claimed_type: email
+    value: service@deepseek.com
+    verified: true
+    evidence_hint: General enquiries.
+    source_urls:
+      - https://www.deepseek.com/
+      - https://www.deepseek.com/harness/en/privacy/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-deepseek
+    name: DeepSeek
+    file: content/channels/cn/cn-deepseek.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.deepseek.com/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://www.deepseek.com/
+      - https://www.deepseek.com/harness/en/privacy/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-deepseek
+    name: DeepSeek
+    file: content/channels/cn/cn-deepseek.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://www.deepseek.com/harness/en/privacy/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://www.deepseek.com/
+      - https://www.deepseek.com/harness/en/privacy/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-moonshot-ai
+    name: Moonshot AI
+    file: content/channels/cn/cn-moonshot-ai.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: security-reports
+    claimed_type: email
+    value: security@moonshot.ai
+    verified: true
+    evidence_hint: "Confirmed by a Moonshot staff member relaying their Security Team on the official forum: 'If you discover any potential security issues, please report them to us at: security@moonshot.ai. We kindly ask that you follow responsible disclosure practices and give us reasonable time to investigate and address any finding…'"
+    source_urls:
+      - https://forum.moonshot.ai/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-moonshot-ai
+    name: Moonshot AI
+    file: content/channels/cn/cn-moonshot-ai.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: moonshot-kimi-developer-forum
+    claimed_type: form
+    value: https://forum.moonshot.ai/
+    verified: true
+    evidence_hint: Public forum where staff do respond.
+    source_urls:
+      - https://forum.moonshot.ai/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-moonshot-ai
+    name: Moonshot AI
+    file: content/channels/cn/cn-moonshot-ai.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.moonshot.ai/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://forum.moonshot.ai/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-moonshot-ai
+    name: Moonshot AI
+    file: content/channels/cn/cn-moonshot-ai.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://platform.kimi.ai/docs/agreement/userprivacy
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://forum.moonshot.ai/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-tencent
+    name: Tencent
+    file: content/channels/cn/cn-tencent.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: tencent-security
+    claimed_type: email
+    value: security@tencent.com
+    verified: true
+    evidence_hint: Primary contact listed on the English TSRC about page.
+    source_urls:
+      - https://en.security.tencent.com/index.php/report/add
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-tencent
+    name: Tencent
+    file: content/channels/cn/cn-tencent.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: tsrc-vulnerability-report-form
+    claimed_type: disclosure
+    value: https://en.security.tencent.com/index.php/report/add
+    verified: true
+    evidence_hint: Vulnerability submission. English interface available, with Facebook/Twitter/Google login options — so it is more accessible to outside researchers than most Chinese SRCs.
+    source_urls:
+      - https://en.security.tencent.com/index.php/report/add
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-tencent
+    name: Tencent
+    file: content/channels/cn/cn-tencent.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://en.security.tencent.com/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://en.security.tencent.com/index.php/report/add
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-tencent
+    name: Tencent
+    file: content/channels/cn/cn-tencent.yml
+    record_type: company
+    country: cn
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://hunyuan.tencent.com/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://en.security.tencent.com/index.php/report/add
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-zhipu-ai-z-ai
+    name: Zhipu AI / Z.ai
+    file: content/channels/cn/cn-zhipu-ai-z-ai.yml
+    record_type: company
+    country: cn
+    public_input: none
+    route_id: no-verified-safety-or
+    claimed_type: form
+    value: https://z.ai/
+    verified: false
+    evidence_hint: Not found — general contact only.
+    source_urls:
+      - https://z.ai/
+    failed_rules:
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-zhipu-ai-z-ai
+    name: Zhipu AI / Z.ai
+    file: content/channels/cn/cn-zhipu-ai-z-ai.yml
+    record_type: company
+    country: cn
+    public_input: none
+    route_id: homepage
+    claimed_type: homepage
+    value: https://z.ai/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://z.ai/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: cn-zhipu-ai-z-ai
+    name: Zhipu AI / Z.ai
+    file: content/channels/cn/cn-zhipu-ai-z-ai.yml
+    record_type: company
+    country: cn
+    public_input: none
+    route_id: framework
+    claimed_type: framework
+    value: https://z.ai/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://z.ai/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: eu-eu-ai-act-article-73-serious
+    name: EU AI Act Article 73 — serious incident reporting
+    file: content/channels/eu/eu-eu-ai-act-article-73-serious.yml
+    record_type: reporting-channel
+    country: eu
+    public_input: open
+    route_id: submission-page
+    claimed_type: reporting
+    value: https://artificialintelligenceact.eu/article/73/
+    verified: true
+    evidence_hint: "Serious incidents as defined in Article 3(49), reported by the provider. Deadlines: immediately after establishing a causal link and in any case not later than 15 days after awareness; 2 days for widespread infringement or certain serious incidents; and for a death, immediately after establishing or suspecting a causal relationship and within 10 days maximum. Incomplete initial reports are permitted, followed by a complete report."
+    source_urls:
+      - https://artificialintelligenceact.eu/article/73/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: eu-eu-ai-act-article-73-serious
+    name: EU AI Act Article 73 — serious incident reporting
+    file: content/channels/eu/eu-eu-ai-act-article-73-serious.yml
+    record_type: reporting-channel
+    country: eu
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://artificialintelligenceact.eu/article/73/
+    verified: null
+    evidence_hint: "Serious incidents as defined in Article 3(49), reported by the provider. Deadlines: immediately after establishing a causal link and in any case not later than 15 days after awareness; 2 days for widespread infringement or certain serious incidents; and for a death, immediately after establishing or suspecting a causal relationship and within 10 days maximum. Incomplete initial reports are permitted, followed by a complete report."
+    source_urls:
+      - https://artificialintelligenceact.eu/article/73/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: eu-eu-ai-act-article-85-right
+    name: EU AI Act Article 85 — right to lodge a complaint with a market surveillance authority
+    file: content/channels/eu/eu-eu-ai-act-article-85-right.yml
+    record_type: reporting-channel
+    country: eu
+    public_input: open
+    route_id: submission-page
+    claimed_type: complaint
+    value: https://artificialintelligenceact.eu/article/85/
+    verified: true
+    evidence_hint: Complaints from 'any natural or legal person' with grounds to consider there has been an infringement of the AI Act. No standing requirement, no need to be personally harmed, no institutional affiliation required. Applies without prejudice to other administrative or judicial remedies.
+    source_urls:
+      - https://artificialintelligenceact.eu/article/85/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: eu-eu-ai-act-article-85-right
+    name: EU AI Act Article 85 — right to lodge a complaint with a market surveillance authority
+    file: content/channels/eu/eu-eu-ai-act-article-85-right.yml
+    record_type: reporting-channel
+    country: eu
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://artificialintelligenceact.eu/article/85/
+    verified: null
+    evidence_hint: Complaints from 'any natural or legal person' with grounds to consider there has been an infringement of the AI Act. No standing requirement, no need to be personally harmed, no institutional affiliation required. Applies without prejudice to other administrative or judicial remedies.
+    source_urls:
+      - https://artificialintelligenceact.eu/article/85/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: eu-eu-ai-act-article-87-protection
+    name: EU AI Act Article 87 — protection of persons reporting infringements
+    file: content/channels/eu/eu-eu-ai-act-article-87-protection.yml
+    record_type: reporting-channel
+    country: eu
+    public_input: open
+    route_id: submission-page
+    claimed_type: whistleblowing
+    value: https://artificialintelligenceact.eu/article/87/
+    verified: true
+    evidence_hint: Reports of AI Act infringements by workers in the broad sense covered by the Whistleblower Directive.
+    source_urls:
+      - https://artificialintelligenceact.eu/article/87/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: eu-eu-ai-act-article-87-protection
+    name: EU AI Act Article 87 — protection of persons reporting infringements
+    file: content/channels/eu/eu-eu-ai-act-article-87-protection.yml
+    record_type: reporting-channel
+    country: eu
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://artificialintelligenceact.eu/article/87/
+    verified: null
+    evidence_hint: Reports of AI Act infringements by workers in the broad sense covered by the Whistleblower Directive.
+    source_urls:
+      - https://artificialintelligenceact.eu/article/87/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: eu-eu-ai-act-complaints-tool
+    name: EU AI Act complaints tool (AI Office)
+    file: content/channels/eu/eu-eu-ai-act-complaints-tool.yml
+    record_type: reporting-channel
+    country: eu
+    public_input: open
+    route_id: submission-page
+    claimed_type: complaint
+    value: https://digital-strategy.ec.europa.eu/en/policies/ai-act-complaints-tool
+    verified: true
+    evidence_hint: Complaints from individuals and organisations about alleged AI Act infringements falling within the exclusive competence of the AI Office, under Article 85. All official EU languages. Supporting detail and a stated country of incident are required.
+    source_urls:
+      - https://digital-strategy.ec.europa.eu/en/policies/ai-act-complaints-tool
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: eu-eu-ai-act-complaints-tool
+    name: EU AI Act complaints tool (AI Office)
+    file: content/channels/eu/eu-eu-ai-act-complaints-tool.yml
+    record_type: reporting-channel
+    country: eu
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://digital-strategy.ec.europa.eu/en/policies/ai-act-complaints-tool
+    verified: null
+    evidence_hint: Complaints from individuals and organisations about alleged AI Act infringements falling within the exclusive competence of the AI Office, under Article 85. All official EU languages. Supporting detail and a stated country of incident are required.
+    source_urls:
+      - https://digital-strategy.ec.europa.eu/en/policies/ai-act-complaints-tool
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: eu-eu-ai-act-service-desk
+    name: EU AI Act Service Desk
+    file: content/channels/eu/eu-eu-ai-act-service-desk.yml
+    record_type: reporting-channel
+    country: eu
+    public_input: open
+    route_id: submission-page
+    claimed_type: complaint
+    value: https://ai-act-service-desk.ec.europa.eu/en/resources
+    verified: true
+    evidence_hint: Questions about AI Act interpretation and compliance; routes users to the complaints tool and whistleblower tool.
+    source_urls:
+      - https://ai-act-service-desk.ec.europa.eu/en/resources
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: eu-eu-ai-act-service-desk
+    name: EU AI Act Service Desk
+    file: content/channels/eu/eu-eu-ai-act-service-desk.yml
+    record_type: reporting-channel
+    country: eu
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://ai-act-service-desk.ec.europa.eu/en/resources
+    verified: null
+    evidence_hint: Questions about AI Act interpretation and compliance; routes users to the complaints tool and whistleblower tool.
+    source_urls:
+      - https://ai-act-service-desk.ec.europa.eu/en/resources
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: eu-eu-ai-act-whistleblower-tool
+    name: EU AI Act Whistleblower Tool (AI Office)
+    file: content/channels/eu/eu-eu-ai-act-whistleblower-tool.yml
+    record_type: reporting-channel
+    country: eu
+    public_input: open
+    route_id: submission-page
+    claimed_type: whistleblowing
+    value: https://digital-strategy.ec.europa.eu/en/policies/ai-act-whistleblower-tool
+    verified: true
+    evidence_hint: Reports of harmful practices or other AI Act violations, from 'individuals who are professionally connected to providers of general-purpose AI (GPAI) models or of AI systems' within the AI Office's enforcement scope. Supporting documents may be attached.
+    source_urls:
+      - https://digital-strategy.ec.europa.eu/en/policies/ai-act-whistleblower-tool
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: eu-eu-ai-act-whistleblower-tool
+    name: EU AI Act Whistleblower Tool (AI Office)
+    file: content/channels/eu/eu-eu-ai-act-whistleblower-tool.yml
+    record_type: reporting-channel
+    country: eu
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://digital-strategy.ec.europa.eu/en/policies/ai-act-whistleblower-tool
+    verified: null
+    evidence_hint: Reports of harmful practices or other AI Act violations, from 'individuals who are professionally connected to providers of general-purpose AI (GPAI) models or of AI systems' within the AI Office's enforcement scope. Supporting documents may be attached.
+    source_urls:
+      - https://digital-strategy.ec.europa.eu/en/policies/ai-act-whistleblower-tool
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: eu-gdpr-article-77-complaint-data-protection
+    name: GDPR Article 77 — complaint to a data protection supervisory authority
+    file: content/channels/eu/eu-gdpr-article-77-complaint-data-protection.yml
+    record_type: reporting-channel
+    country: eu
+    public_input: open
+    route_id: submission-page
+    claimed_type: complaint
+    value: https://gdpr-info.eu/art-77-gdpr/
+    verified: true
+    evidence_hint: Complaints from any data subject who considers that processing of their personal data infringes the GDPR. You may complain to the authority in your Member State of habitual residence, your place of work, or the place of the alleged infringement.
+    source_urls:
+      - https://gdpr-info.eu/art-77-gdpr/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: eu-gdpr-article-77-complaint-data-protection
+    name: GDPR Article 77 — complaint to a data protection supervisory authority
+    file: content/channels/eu/eu-gdpr-article-77-complaint-data-protection.yml
+    record_type: reporting-channel
+    country: eu
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://gdpr-info.eu/art-77-gdpr/
+    verified: null
+    evidence_hint: Complaints from any data subject who considers that processing of their personal data infringes the GDPR. You may complain to the authority in your Member State of habitual residence, your place of work, or the place of the alleged infringement.
+    source_urls:
+      - https://gdpr-info.eu/art-77-gdpr/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: fr-mistral-ai
+    name: Mistral AI
+    file: content/channels/fr/fr-mistral-ai.yml
+    record_type: company
+    country: fr
+    public_input: limited
+    route_id: content-usage-policy-report
+    claimed_type: form
+    value: https://mistral.ai/report/
+    verified: true
+    evidence_hint: "21 categories of content violation (hate speech, CSAM, violence, NCII, fraud, IP). Intro: 'Mistral AI is committed to maintaining a safe environment for all. This form allows you to report content you believe violates our terms or applicable laws.'"
+    source_urls:
+      - https://mistral.ai/report/
+      - https://hackerone.com/58acc269-165e-4d18-a2d8-61f296cdea60/embedded_submissions/new?locale=en
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: fr-mistral-ai
+    name: Mistral AI
+    file: content/channels/fr/fr-mistral-ai.yml
+    record_type: company
+    country: fr
+    public_input: limited
+    route_id: hackerone-vulnerability-submission
+    claimed_type: disclosure
+    value: https://hackerone.com/58acc269-165e-4d18-a2d8-61f296cdea60/embedded_submissions/new?locale=en
+    verified: true
+    evidence_hint: Security vulnerabilities. Published on the contact page, which notes 'General bugs shall be reported via our standard support channels'.
+    source_urls:
+      - https://mistral.ai/report/
+      - https://hackerone.com/58acc269-165e-4d18-a2d8-61f296cdea60/embedded_submissions/new?locale=en
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: fr-mistral-ai
+    name: Mistral AI
+    file: content/channels/fr/fr-mistral-ai.yml
+    record_type: company
+    country: fr
+    public_input: limited
+    route_id: press
+    claimed_type: email
+    value: press@mistral.ai
+    verified: true
+    evidence_hint: Media enquiries only.
+    source_urls:
+      - https://mistral.ai/report/
+      - https://hackerone.com/58acc269-165e-4d18-a2d8-61f296cdea60/embedded_submissions/new?locale=en
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: fr-mistral-ai
+    name: Mistral AI
+    file: content/channels/fr/fr-mistral-ai.yml
+    record_type: company
+    country: fr
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://mistral.ai/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://mistral.ai/report/
+      - https://hackerone.com/58acc269-165e-4d18-a2d8-61f296cdea60/embedded_submissions/new?locale=en
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: fr-mistral-ai
+    name: Mistral AI
+    file: content/channels/fr/fr-mistral-ai.yml
+    record_type: company
+    country: fr
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://legal.mistral.ai/terms/usage-policy
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://mistral.ai/report/
+      - https://hackerone.com/58acc269-165e-4d18-a2d8-61f296cdea60/embedded_submissions/new?locale=en
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: fr-saferai
+    name: SaferAI
+    file: content/channels/fr/fr-saferai.yml
+    record_type: watchdog
+    country: fr
+    public_input: limited
+    route_id: general-enquiries
+    claimed_type: email
+    value: contact@safer-ai.org
+    verified: true
+    evidence_hint: Anyone
+    source_urls:
+      - https://ratings.safer-ai.org/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: fr-saferai
+    name: SaferAI
+    file: content/channels/fr/fr-saferai.yml
+    record_type: watchdog
+    country: fr
+    public_input: limited
+    route_id: company-risk-management-ratings
+    claimed_type: submission
+    value: https://ratings.safer-ai.org/
+    verified: true
+    evidence_hint: Public read; methodology published
+    source_urls:
+      - https://ratings.safer-ai.org/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: fr-saferai
+    name: SaferAI
+    file: content/channels/fr/fr-saferai.yml
+    record_type: watchdog
+    country: fr
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.safer-ai.org/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://ratings.safer-ai.org/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-google-deepmind
+    name: Google DeepMind
+    file: content/channels/gb/gb-google-deepmind.yml
+    record_type: company
+    country: gb
+    public_input: limited
+    route_id: google-ai-vulnerability-reward
+    claimed_type: bounty
+    value: https://bughunters.google.com/about/rules/google-friends/ai-vulnerability-reward-program-rules
+    verified: false
+    evidence_hint: Security vulnerabilities in AI products. Jailbreaks and in-session harmful content generation are EXPLICITLY OUT OF SCOPE.
+    source_urls:
+      - https://bughunters.google.com/about/rules/google-friends/ai-vulnerability-reward-program-rules
+      - https://support.google.com/legal/troubleshooter/1114905
+      - https://gemini.google.com/
+      - https://deepmind.google/
+      - https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-google-deepmind
+    name: Google DeepMind
+    file: content/channels/gb/gb-google-deepmind.yml
+    record_type: company
+    country: gb
+    public_input: limited
+    route_id: gemini-content-reporting
+    claimed_type: form
+    value: https://support.google.com/legal/troubleshooter/1114905
+    verified: false
+    evidence_hint: Content removal under Google policies and applicable law.
+    source_urls:
+      - https://bughunters.google.com/about/rules/google-friends/ai-vulnerability-reward-program-rules
+      - https://support.google.com/legal/troubleshooter/1114905
+      - https://gemini.google.com/
+      - https://deepmind.google/
+      - https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-google-deepmind
+    name: Google DeepMind
+    file: content/channels/gb/gb-google-deepmind.yml
+    record_type: company
+    country: gb
+    public_input: limited
+    route_id: product-thumbs-down-gemini
+    claimed_type: feedback
+    value: https://gemini.google.com/
+    verified: false
+    evidence_hint: The only routine route for flagging a bad model response.
+    source_urls:
+      - https://bughunters.google.com/about/rules/google-friends/ai-vulnerability-reward-program-rules
+      - https://support.google.com/legal/troubleshooter/1114905
+      - https://gemini.google.com/
+      - https://deepmind.google/
+      - https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-google-deepmind
+    name: Google DeepMind
+    file: content/channels/gb/gb-google-deepmind.yml
+    record_type: company
+    country: gb
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://deepmind.google/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://bughunters.google.com/about/rules/google-friends/ai-vulnerability-reward-program-rules
+      - https://support.google.com/legal/troubleshooter/1114905
+      - https://gemini.google.com/
+      - https://deepmind.google/
+      - https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-google-deepmind
+    name: Google DeepMind
+    file: content/channels/gb/gb-google-deepmind.yml
+    record_type: company
+    country: gb
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://bughunters.google.com/about/rules/google-friends/ai-vulnerability-reward-program-rules
+      - https://support.google.com/legal/troubleshooter/1114905
+      - https://gemini.google.com/
+      - https://deepmind.google/
+      - https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-ofcom-individual-complaint-about-online-service
+    name: Ofcom — individual complaint about an online service
+    file: content/channels/gb/gb-ofcom-individual-complaint-about-online-service.yml
+    record_type: reporting-channel
+    country: gb
+    public_input: open
+    route_id: submission-page
+    claimed_type: complaint
+    value: https://www.ofcom.org.uk/make-a-complaint/
+    verified: true
+    evidence_hint: Complaints about phone, broadband and postal services; TV, radio and on-demand programmes; wireless interference; something you have seen on an online service, website or app; and premium rate services.
+    source_urls:
+      - https://www.ofcom.org.uk/make-a-complaint/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-ofcom-individual-complaint-about-online-service
+    name: Ofcom — individual complaint about an online service
+    file: content/channels/gb/gb-ofcom-individual-complaint-about-online-service.yml
+    record_type: reporting-channel
+    country: gb
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.ofcom.org.uk/make-a-complaint/
+    verified: null
+    evidence_hint: Complaints about phone, broadband and postal services; TV, radio and on-demand programmes; wireless interference; something you have seen on an online service, website or app; and premium rate services.
+    source_urls:
+      - https://www.ofcom.org.uk/make-a-complaint/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-ofcom-online-safety-super-complaints
+    name: Ofcom Online Safety super-complaints
+    file: content/channels/gb/gb-ofcom-online-safety-super-complaints.yml
+    record_type: reporting-channel
+    country: gb
+    public_input: open
+    route_id: submission-page
+    claimed_type: complaint
+    value: https://www.ofcom.org.uk/online-safety/online-safety-super-complaints
+    verified: true
+    evidence_hint: Complaints from eligible entities about a feature or conduct of one or more regulated services presenting a material risk of significant harm, of significant adverse impact on freedom of expression, or other significant adverse impacts. For a single-service complaint you must additionally explain its particular importance or the scale of user impact.
+    source_urls:
+      - https://www.ofcom.org.uk/online-safety/online-safety-super-complaints
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-ofcom-online-safety-super-complaints
+    name: Ofcom Online Safety super-complaints
+    file: content/channels/gb/gb-ofcom-online-safety-super-complaints.yml
+    record_type: reporting-channel
+    country: gb
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.ofcom.org.uk/online-safety/online-safety-super-complaints
+    verified: null
+    evidence_hint: Complaints from eligible entities about a feature or conduct of one or more regulated services presenting a material risk of significant harm, of significant adverse impact on freedom of expression, or other significant adverse impacts. For a single-service complaint you must additionally explain its particular importance or the scale of user impact.
+    source_urls:
+      - https://www.ofcom.org.uk/online-safety/online-safety-super-complaints
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-stability-ai
+    name: Stability AI
+    file: content/channels/gb/gb-stability-ai.yml
+    record_type: company
+    country: gb
+    public_input: open
+    route_id: safety-misuse-reports
+    claimed_type: email
+    value: safety@stability.ai
+    verified: true
+    evidence_hint: Reporting misuse of Stability models and safety concerns.
+    source_urls:
+      - https://stability.ai/safety
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-stability-ai
+    name: Stability AI
+    file: content/channels/gb/gb-stability-ai.yml
+    record_type: company
+    country: gb
+    public_input: open
+    route_id: appeals-request-form
+    claimed_type: form
+    value: https://stability.ai/safety
+    verified: true
+    evidence_hint: Appealing a policy-violation determination believed to be in error.
+    source_urls:
+      - https://stability.ai/safety
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-stability-ai
+    name: Stability AI
+    file: content/channels/gb/gb-stability-ai.yml
+    record_type: company
+    country: gb
+    public_input: open
+    route_id: trust-center
+    claimed_type: program
+    value: https://trust.stability.ai/
+    verified: false
+    evidence_hint: Security and compliance documentation.
+    source_urls:
+      - https://stability.ai/safety
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-stability-ai
+    name: Stability AI
+    file: content/channels/gb/gb-stability-ai.yml
+    record_type: company
+    country: gb
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://stability.ai/safety
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://stability.ai/safety
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-stability-ai
+    name: Stability AI
+    file: content/channels/gb/gb-stability-ai.yml
+    record_type: company
+    country: gb
+    public_input: open
+    route_id: framework
+    claimed_type: framework
+    value: https://stability.ai/use-policy
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://stability.ai/safety
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-uk-ico-data-protection-complaint
+    name: UK ICO data protection complaint
+    file: content/channels/gb/gb-uk-ico-data-protection-complaint.yml
+    record_type: reporting-channel
+    country: gb
+    public_input: open
+    route_id: submission-page
+    claimed_type: complaint
+    value: https://ico.org.uk/make-a-complaint/data-protection-framework/
+    verified: true
+    evidence_hint: Complaints about how an organisation has handled your personal information. General customer service complaints only if combined with a data protection concern.
+    source_urls:
+      - https://ico.org.uk/make-a-complaint/data-protection-framework/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-uk-ico-data-protection-complaint
+    name: UK ICO data protection complaint
+    file: content/channels/gb/gb-uk-ico-data-protection-complaint.yml
+    record_type: reporting-channel
+    country: gb
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://ico.org.uk/make-a-complaint/data-protection-framework/
+    verified: null
+    evidence_hint: Complaints about how an organisation has handled your personal information. General customer service complaints only if combined with a data protection concern.
+    source_urls:
+      - https://ico.org.uk/make-a-complaint/data-protection-framework/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-uk-parliament-e-petitions
+    name: UK Parliament e-petitions
+    file: content/channels/gb/gb-uk-parliament-e-petitions.yml
+    record_type: reporting-channel
+    country: gb
+    public_input: open
+    route_id: submission-page
+    claimed_type: consultation
+    value: https://petition.parliament.uk/help
+    verified: true
+    evidence_hint: Petitions from British citizens and UK residents that ask for a clear action from the UK Government or Parliament on a matter within their responsibility.
+    source_urls:
+      - https://petition.parliament.uk/help
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-uk-parliament-e-petitions
+    name: UK Parliament e-petitions
+    file: content/channels/gb/gb-uk-parliament-e-petitions.yml
+    record_type: reporting-channel
+    country: gb
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://petition.parliament.uk/help
+    verified: null
+    evidence_hint: Petitions from British citizens and UK residents that ask for a clear action from the UK Government or Parliament on a matter within their responsibility.
+    source_urls:
+      - https://petition.parliament.uk/help
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-uk-parliament-find-inquiry-accepting-written
+    name: UK Parliament — find an inquiry accepting written evidence
+    file: content/channels/gb/gb-uk-parliament-find-inquiry-accepting-written.yml
+    record_type: reporting-channel
+    country: gb
+    public_input: open
+    route_id: submission-page
+    claimed_type: consultation
+    value: https://committees.parliament.uk/inquiries/?SearchTerm=&DateFrom=&DateTo=&SessionId=&SortBy=0&Status=Any&CurrentlyAcceptingEvidence=true
+    verified: true
+    evidence_hint: N/A — this is the discovery tool.
+    source_urls:
+      - https://committees.parliament.uk/inquiries/?SearchTerm=&DateFrom=&DateTo=&SessionId=&SortBy=0&Status=Any&CurrentlyAcceptingEvidence=true
+    failed_rules: []
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-uk-parliament-find-inquiry-accepting-written
+    name: UK Parliament — find an inquiry accepting written evidence
+    file: content/channels/gb/gb-uk-parliament-find-inquiry-accepting-written.yml
+    record_type: reporting-channel
+    country: gb
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://committees.parliament.uk/inquiries/?SearchTerm=&DateFrom=&DateTo=&SessionId=&SortBy=0&Status=Any&CurrentlyAcceptingEvidence=true
+    verified: null
+    evidence_hint: N/A — this is the discovery tool.
+    source_urls:
+      - https://committees.parliament.uk/inquiries/?SearchTerm=&DateFrom=&DateTo=&SessionId=&SortBy=0&Status=Any&CurrentlyAcceptingEvidence=true
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-uk-public-interest-disclosure-act-protected
+    name: UK Public Interest Disclosure Act — protected disclosure to a prescribed person
+    file: content/channels/gb/gb-uk-public-interest-disclosure-act-protected.yml
+    record_type: reporting-channel
+    country: gb
+    public_input: open
+    route_id: submission-page
+    claimed_type: whistleblowing
+    value: https://www.handleygill.co.uk/handley-gill-blog/public-interest-disclosure-prescribed-persons-order-2026-whistleblowing
+    verified: true
+    evidence_hint: Qualifying disclosures by workers, in the public interest, to a prescribed person with responsibility for the relevant subject matter — giving statutory protection against detriment and dismissal.
+    source_urls:
+      - https://www.handleygill.co.uk/handley-gill-blog/public-interest-disclosure-prescribed-persons-order-2026-whistleblowing
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-uk-public-interest-disclosure-act-protected
+    name: UK Public Interest Disclosure Act — protected disclosure to a prescribed person
+    file: content/channels/gb/gb-uk-public-interest-disclosure-act-protected.yml
+    record_type: reporting-channel
+    country: gb
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.handleygill.co.uk/handley-gill-blog/public-interest-disclosure-prescribed-persons-order-2026-whistleblowing
+    verified: null
+    evidence_hint: Qualifying disclosures by workers, in the public interest, to a prescribed person with responsibility for the relevant subject matter — giving statutory protection against detriment and dismissal.
+    source_urls:
+      - https://www.handleygill.co.uk/handley-gill-blog/public-interest-disclosure-prescribed-persons-order-2026-whistleblowing
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-uk-select-committee-written-evidence
+    name: UK select committee written evidence
+    file: content/channels/gb/gb-uk-select-committee-written-evidence.yml
+    record_type: reporting-channel
+    country: gb
+    public_input: open
+    route_id: submission-page
+    claimed_type: consultation
+    value: https://publications.parliament.uk/pa/cm/written-evidence-guidance.htm
+    verified: true
+    evidence_hint: Evidence drawn from research, professional expertise or personal experience. You explicitly do not need to be a formal expert or have any institutional affiliation. Address the questions in the call for evidence; you need not answer all of them.
+    source_urls:
+      - https://publications.parliament.uk/pa/cm/written-evidence-guidance.htm
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: gb-uk-select-committee-written-evidence
+    name: UK select committee written evidence
+    file: content/channels/gb/gb-uk-select-committee-written-evidence.yml
+    record_type: reporting-channel
+    country: gb
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://publications.parliament.uk/pa/cm/written-evidence-guidance.htm
+    verified: null
+    evidence_hint: Evidence drawn from research, professional expertise or personal experience. You explicitly do not need to be a formal expert or have any institutional affiliation. Address the questions in the call for evidence; you need not answer all of them.
+    source_urls:
+      - https://publications.parliament.uk/pa/cm/written-evidence-guidance.htm
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-ai-incident-database
+    name: AI Incident Database (Responsible AI Collaborative)
+    file: content/channels/global/global-ai-incident-database.yml
+    record_type: watchdog
+    country: global
+    public_input: open
+    route_id: submit-incident-open-anyone
+    claimed_type: submission
+    value: https://incidentdatabase.ai/apps/submit/
+    verified: true
+    evidence_hint: Anyone, worldwide
+    source_urls:
+      - https://incidentdatabase.ai/apps/submit/
+      - https://incidentdatabase.ai/contact/
+      - https://github.com/responsible-ai-collaborative/aiid/issues/new
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-ai-incident-database
+    name: AI Incident Database (Responsible AI Collaborative)
+    file: content/channels/global/global-ai-incident-database.yml
+    record_type: watchdog
+    country: global
+    public_input: open
+    route_id: responsible-ai-collaborative-collaboration
+    claimed_type: email
+    value: info@raicollab.org
+    verified: true
+    evidence_hint: Partnership, research, editorial
+    source_urls:
+      - https://incidentdatabase.ai/apps/submit/
+      - https://incidentdatabase.ai/contact/
+      - https://github.com/responsible-ai-collaborative/aiid/issues/new
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-ai-incident-database
+    name: AI Incident Database (Responsible AI Collaborative)
+    file: content/channels/global/global-ai-incident-database.yml
+    record_type: watchdog
+    country: global
+    public_input: open
+    route_id: contact-page
+    claimed_type: form
+    value: https://incidentdatabase.ai/contact/
+    verified: true
+    evidence_hint: General
+    source_urls:
+      - https://incidentdatabase.ai/apps/submit/
+      - https://incidentdatabase.ai/contact/
+      - https://github.com/responsible-ai-collaborative/aiid/issues/new
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-ai-incident-database
+    name: AI Incident Database (Responsible AI Collaborative)
+    file: content/channels/global/global-ai-incident-database.yml
+    record_type: watchdog
+    country: global
+    public_input: open
+    route_id: github-issues-bugs
+    claimed_type: submission
+    value: https://github.com/responsible-ai-collaborative/aiid/issues/new
+    verified: true
+    evidence_hint: Anyone
+    source_urls:
+      - https://incidentdatabase.ai/apps/submit/
+      - https://incidentdatabase.ai/contact/
+      - https://github.com/responsible-ai-collaborative/aiid/issues/new
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-ai-incident-database
+    name: AI Incident Database (Responsible AI Collaborative)
+    file: content/channels/global/global-ai-incident-database.yml
+    record_type: watchdog
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://incidentdatabase.ai/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://incidentdatabase.ai/apps/submit/
+      - https://incidentdatabase.ai/contact/
+      - https://github.com/responsible-ai-collaborative/aiid/issues/new
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-ai-incident-database-editor-s-guide
+    name: AI Incident Database — Editor's Guide (inclusion criteria)
+    file: content/channels/global/global-ai-incident-database-editor-s-guide.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: reporting
+    value: https://incidentdatabase.ai/editors-guide/
+    verified: true
+    evidence_hint: N/A — this is the criteria document that determines what the database accepts. Read it before submitting.
+    source_urls:
+      - https://incidentdatabase.ai/editors-guide/
+    failed_rules: []
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-ai-incident-database-editor-s-guide
+    name: AI Incident Database — Editor's Guide (inclusion criteria)
+    file: content/channels/global/global-ai-incident-database-editor-s-guide.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://incidentdatabase.ai/editors-guide/
+    verified: null
+    evidence_hint: N/A — this is the criteria document that determines what the database accepts. Read it before submitting.
+    source_urls:
+      - https://incidentdatabase.ai/editors-guide/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-ai-vulnerability-database
+    name: AI Vulnerability Database (AVID)
+    file: content/channels/global/global-ai-vulnerability-database.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: reporting
+    value: https://avidml.org/
+    verified: true
+    evidence_hint: Failure modes in general-purpose AI systems — open-weight generative models, closed-API systems, developer tools, and end-to-end AI applications and agents. Records are split into vulnerabilities and reports, organised by a taxonomy library. Rebuilt in 2026 for agentic AI.
+    source_urls:
+      - https://avidml.org/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-ai-vulnerability-database
+    name: AI Vulnerability Database (AVID)
+    file: content/channels/global/global-ai-vulnerability-database.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://avidml.org/
+    verified: null
+    evidence_hint: Failure modes in general-purpose AI systems — open-weight generative models, closed-API systems, developer tools, and end-to-end AI applications and agents. Records are split into vulnerabilities and reports, organised by a taxonomy library. Rebuilt in 2026 for agentic AI.
+    source_urls:
+      - https://avidml.org/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-anthropic-model-safety-bug-bounty
+    name: Anthropic Model Safety Bug Bounty
+    file: content/channels/global/global-anthropic-model-safety-bug-bounty.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: disclosure
+    value: https://support.claude.com/en/articles/12119250-model-safety-bug-bounty-program
+    verified: true
+    evidence_hint: Universal jailbreaks that defeat Anthropic's Constitutional Classifiers — generalised techniques that work across many prompts, tested against a supplied set of harmful questions concerning CBRN/biological threat information. Narrow, context-specific exploits do not qualify.
+    source_urls:
+      - https://support.claude.com/en/articles/12119250-model-safety-bug-bounty-program
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-anthropic-model-safety-bug-bounty
+    name: Anthropic Model Safety Bug Bounty
+    file: content/channels/global/global-anthropic-model-safety-bug-bounty.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://support.claude.com/en/articles/12119250-model-safety-bug-bounty-program
+    verified: null
+    evidence_hint: Universal jailbreaks that defeat Anthropic's Constitutional Classifiers — generalised techniques that work across many prompts, tested against a supplied set of harmful questions concerning CBRN/biological threat information. Narrow, context-specific exploits do not qualify.
+    source_urls:
+      - https://support.claude.com/en/articles/12119250-model-safety-bug-bounty-program
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-anthropic-responsible-disclosure-policy-usersafety-anthropic
+    name: Anthropic Responsible Disclosure Policy / usersafety@anthropic.com
+    file: content/channels/global/global-anthropic-responsible-disclosure-policy-usersafety-anthropic.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: disclosure
+    value: https://www.anthropic.com/responsible-disclosure-policy
+    verified: true
+    evidence_hint: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
+    source_urls:
+      - https://www.anthropic.com/responsible-disclosure-policy
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-anthropic-responsible-disclosure-policy-usersafety-anthropic
+    name: Anthropic Responsible Disclosure Policy / usersafety@anthropic.com
+    file: content/channels/global/global-anthropic-responsible-disclosure-policy-usersafety-anthropic.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.anthropic.com/responsible-disclosure-policy
+    verified: null
+    evidence_hint: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
+    source_urls:
+      - https://www.anthropic.com/responsible-disclosure-policy
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-cert-cc-vince
+    name: CERT/CC VINCE (Vulnerability Information and Coordination Environment)
+    file: content/channels/global/global-cert-cc-vince.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: disclosure
+    value: https://kb.cert.org/vince/
+    verified: true
+    evidence_hint: Vulnerability reports from anyone — you can report with or without a VINCE account. CERT/CC coordinates multi-vendor disclosure where a flaw affects several parties, which is precisely the case for transferable AI jailbreaks and shared model weaknesses.
+    source_urls:
+      - https://kb.cert.org/vince/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-cert-cc-vince
+    name: CERT/CC VINCE (Vulnerability Information and Coordination Environment)
+    file: content/channels/global/global-cert-cc-vince.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://kb.cert.org/vince/
+    verified: null
+    evidence_hint: Vulnerability reports from anyone — you can report with or without a VINCE account. CERT/CC coordinates multi-vendor disclosure where a flaw affects several parties, which is precisely the case for transferable AI jailbreaks and shared model weaknesses.
+    source_urls:
+      - https://kb.cert.org/vince/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-err-is-ai-evidence-what-makes
+    name: "'To Err is AI' — evidence on what makes an LLM flaw report land"
+    file: content/channels/global/global-err-is-ai-evidence-what-makes.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: disclosure
+    value: https://arxiv.org/abs/2410.12104
+    verified: true
+    evidence_hint: N/A — empirical evidence on flaw reporting practice.
+    source_urls:
+      - https://arxiv.org/abs/2410.12104
+    failed_rules: []
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-err-is-ai-evidence-what-makes
+    name: "'To Err is AI' — evidence on what makes an LLM flaw report land"
+    file: content/channels/global/global-err-is-ai-evidence-what-makes.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://arxiv.org/abs/2410.12104
+    verified: null
+    evidence_hint: N/A — empirical evidence on flaw reporting practice.
+    source_urls:
+      - https://arxiv.org/abs/2410.12104
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-flare-ai
+    name: FLARE-AI (Flaw Reporting for AI)
+    file: content/channels/global/global-flare-ai.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: disclosure
+    value: https://www.ai-reports.org/
+    verified: true
+    evidence_hint: A flaw, vulnerability or incident in any AI system. This is the first live implementation of the standardised AI flaw report concept — it covers model-behaviour flaws, biases and incidents, not only security bugs.
+    source_urls:
+      - https://www.ai-reports.org/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-flare-ai
+    name: FLARE-AI (Flaw Reporting for AI)
+    file: content/channels/global/global-flare-ai.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.ai-reports.org/
+    verified: null
+    evidence_hint: A flaw, vulnerability or incident in any AI system. This is the first live implementation of the standardised AI flaw report concept — it covers model-behaviour flaws, biases and incidents, not only security bugs.
+    source_urls:
+      - https://www.ai-reports.org/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-google-ai-vulnerability-reward-program
+    name: Google AI Vulnerability Reward Program (AI VRP)
+    file: content/channels/global/global-google-ai-vulnerability-reward-program.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: disclosure
+    value: https://www.theregister.com/2025/10/07/google_ai_bug_bounty/
+    verified: true
+    evidence_hint: "Eight categories of AI security flaw: rogue actions (account/data modification via indirect prompt injection), sensitive data exfiltration, phishing enablement (persistent HTML injection), model theft (parameter exfiltration), cross-account context manipulation, access control bypass, unauthorised product usage, and cross-user denial of service."
+    source_urls:
+      - https://www.theregister.com/2025/10/07/google_ai_bug_bounty/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-google-ai-vulnerability-reward-program
+    name: Google AI Vulnerability Reward Program (AI VRP)
+    file: content/channels/global/global-google-ai-vulnerability-reward-program.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.theregister.com/2025/10/07/google_ai_bug_bounty/
+    verified: null
+    evidence_hint: "Eight categories of AI security flaw: rogue actions (account/data modification via indirect prompt injection), sensitive data exfiltration, phishing enablement (persistent HTML injection), model theft (parameter exfiltration), cross-account context manipulation, access control bypass, unauthorised product usage, and cross-user denial of service."
+    source_urls:
+      - https://www.theregister.com/2025/10/07/google_ai_bug_bounty/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-house-evaluation-is-not-enough-third
+    name: "'In-House Evaluation Is Not Enough' — third-party AI flaw disclosure framework"
+    file: content/channels/global/global-house-evaluation-is-not-enough-third.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: disclosure
+    value: https://arxiv.org/abs/2503.16861
+    verified: true
+    evidence_hint: N/A — it is the proposal document that defines the emerging norm. Read it to understand the vocabulary that labs and coordinators are converging on.
+    source_urls:
+      - https://arxiv.org/abs/2503.16861
+    failed_rules: []
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-house-evaluation-is-not-enough-third
+    name: "'In-House Evaluation Is Not Enough' — third-party AI flaw disclosure framework"
+    file: content/channels/global/global-house-evaluation-is-not-enough-third.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://arxiv.org/abs/2503.16861
+    verified: null
+    evidence_hint: N/A — it is the proposal document that defines the emerging norm. Read it to understand the vocabulary that labs and coordinators are converging on.
+    source_urls:
+      - https://arxiv.org/abs/2503.16861
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-humane-intelligence-bias-bounty
+    name: Humane Intelligence Bias Bounty
+    file: content/channels/global/global-humane-intelligence-bias-bounty.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: disclosure
+    value: https://humane-intelligence.org/programs-services/bias-bounty/
+    verified: true
+    evidence_hint: Structured challenge entries that surface and measure biased or exclusionary outcomes in AI systems, and — unusually — that design technical mitigations, not just identify problems. Domains span generative AI, computer vision, environmental decision-making and digital accessibility.
+    source_urls:
+      - https://humane-intelligence.org/programs-services/bias-bounty/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-humane-intelligence-bias-bounty
+    name: Humane Intelligence Bias Bounty
+    file: content/channels/global/global-humane-intelligence-bias-bounty.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://humane-intelligence.org/programs-services/bias-bounty/
+    verified: null
+    evidence_hint: Structured challenge entries that surface and measure biased or exclusionary outcomes in AI systems, and — unusually — that design technical mitigations, not just identify problems. Domains span generative AI, computer vision, environmental decision-making and digital accessibility.
+    source_urls:
+      - https://humane-intelligence.org/programs-services/bias-bounty/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-mit-ai-incident-tracker
+    name: MIT AI Incident Tracker (AI Risk Repository)
+    file: content/channels/global/global-mit-ai-incident-tracker.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: reporting
+    value: https://airisk.mit.edu/ai-incident-tracker
+    verified: true
+    evidence_hint: Nothing directly from the public. It ingests and classifies incidents from the AI Incident Database — 1,600+ incidents classified by risk domain, cause, harm type (10 categories including physical harm, financial loss and human rights), severity, entity and timing.
+    source_urls:
+      - https://airisk.mit.edu/ai-incident-tracker
+    failed_rules: []
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-mit-ai-incident-tracker
+    name: MIT AI Incident Tracker (AI Risk Repository)
+    file: content/channels/global/global-mit-ai-incident-tracker.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://airisk.mit.edu/ai-incident-tracker
+    verified: null
+    evidence_hint: Nothing directly from the public. It ingests and classifies incidents from the AI Incident Database — 1,600+ incidents classified by risk domain, cause, harm type (10 categories including physical harm, financial loss and human rights), severity, entity and timing.
+    source_urls:
+      - https://airisk.mit.edu/ai-incident-tracker
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-mitre-atlas
+    name: MITRE ATLAS (Adversarial Threat Landscape for AI Systems)
+    file: content/channels/global/global-mitre-atlas.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: reporting
+    value: https://github.com/mitre-atlas/atlas-data
+    verified: true
+    evidence_hint: Adversarial ML tactics, techniques and real-world case studies — i.e. attacks against AI systems. Contributions are curated into the ATLAS matrix and case study set.
+    source_urls:
+      - https://github.com/mitre-atlas/atlas-data
+    failed_rules:
+      - 5-relevant-scope
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-mitre-atlas
+    name: MITRE ATLAS (Adversarial Threat Landscape for AI Systems)
+    file: content/channels/global/global-mitre-atlas.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://github.com/mitre-atlas/atlas-data
+    verified: null
+    evidence_hint: Adversarial ML tactics, techniques and real-world case studies — i.e. attacks against AI systems. Contributions are curated into the ATLAS matrix and case study set.
+    source_urls:
+      - https://github.com/mitre-atlas/atlas-data
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 5-relevant-scope
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-oecd-ai-incidents-hazards-monitor
+    name: OECD AI Incidents and Hazards Monitor (AIM)
+    file: content/channels/global/global-oecd-ai-incidents-hazards-monitor.yml
+    record_type: watchdog
+    country: global
+    public_input: none
+    route_id: open-submission-process-announced
+    claimed_type: submission
+    value: https://oecd.ai/en/incidents-methodology
+    verified: true
+    evidence_hint: Will follow the common reporting framework once launched
+    source_urls:
+      - https://oecd.ai/en/incidents-methodology
+      - https://oecd.ai/en/incidents
+    failed_rules:
+      - 4-eligible-user
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-oecd-ai-incidents-hazards-monitor
+    name: OECD AI Incidents and Hazards Monitor (AIM)
+    file: content/channels/global/global-oecd-ai-incidents-hazards-monitor.yml
+    record_type: watchdog
+    country: global
+    public_input: none
+    route_id: incidents-dashboard
+    claimed_type: form
+    value: https://oecd.ai/en/incidents
+    verified: true
+    evidence_hint: Browsing indexed incidents
+    source_urls:
+      - https://oecd.ai/en/incidents-methodology
+      - https://oecd.ai/en/incidents
+    failed_rules:
+      - 4-eligible-user
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-oecd-ai-incidents-hazards-monitor
+    name: OECD AI Incidents and Hazards Monitor (AIM)
+    file: content/channels/global/global-oecd-ai-incidents-hazards-monitor.yml
+    record_type: watchdog
+    country: global
+    public_input: none
+    route_id: homepage
+    claimed_type: homepage
+    value: https://oecd.ai/en/incidents
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://oecd.ai/en/incidents-methodology
+      - https://oecd.ai/en/incidents
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-openai-inbound-reporting
+    name: OpenAI inbound reporting (Bugcrowd bug bounty + in-product feedback)
+    file: content/channels/global/global-openai-inbound-reporting.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: disclosure
+    value: https://openai.com/form/model-behavior-feedback/
+    verified: true
+    evidence_hint: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
+    source_urls:
+      - https://openai.com/form/model-behavior-feedback/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-openai-inbound-reporting
+    name: OpenAI inbound reporting (Bugcrowd bug bounty + in-product feedback)
+    file: content/channels/global/global-openai-inbound-reporting.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://openai.com/form/model-behavior-feedback/
+    verified: null
+    evidence_hint: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
+    source_urls:
+      - https://openai.com/form/model-behavior-feedback/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-openai-outbound-coordinated-disclosure-policy
+    name: OpenAI Outbound Coordinated Disclosure Policy
+    file: content/channels/global/global-openai-outbound-coordinated-disclosure-policy.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: disclosure
+    value: https://openai.com/policies/outbound-coordinated-disclosure-policy/
+    verified: true
+    evidence_hint: Nothing. This governs vulnerabilities OpenAI discovers in third-party software and reports outward.
+    source_urls:
+      - https://openai.com/policies/outbound-coordinated-disclosure-policy/
+    failed_rules: []
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-openai-outbound-coordinated-disclosure-policy
+    name: OpenAI Outbound Coordinated Disclosure Policy
+    file: content/channels/global/global-openai-outbound-coordinated-disclosure-policy.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://openai.com/policies/outbound-coordinated-disclosure-policy/
+    verified: null
+    evidence_hint: Nothing. This governs vulnerabilities OpenAI discovers in third-party software and reports outward.
+    source_urls:
+      - https://openai.com/policies/outbound-coordinated-disclosure-policy/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-perils-ai-safety-s-insularity-why
+    name: "'The perils of AI safety's insularity' — why outside contributions get ignored"
+    file: content/channels/global/global-perils-ai-safety-s-insularity-why.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: disclosure
+    value: https://www.transformernews.ai/p/the-perils-of-ai-safetys-insularity
+    verified: true
+    evidence_hint: N/A
+    source_urls:
+      - https://www.transformernews.ai/p/the-perils-of-ai-safetys-insularity
+    failed_rules: []
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-perils-ai-safety-s-insularity-why
+    name: "'The perils of AI safety's insularity' — why outside contributions get ignored"
+    file: content/channels/global/global-perils-ai-safety-s-insularity-why.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.transformernews.ai/p/the-perils-of-ai-safetys-insularity
+    verified: null
+    evidence_hint: N/A
+    source_urls:
+      - https://www.transformernews.ai/p/the-perils-of-ai-safetys-insularity
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-signals-network-tech-accountability-project
+    name: The Signals Network — Tech Accountability Project
+    file: content/channels/global/global-signals-network-tech-accountability-project.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: submission-page
+    claimed_type: whistleblowing
+    value: https://thesignalsnetwork.org/tech-accountability-project/
+    verified: true
+    evidence_hint: Tech workers with public-interest concerns, including those considering going to media.
+    source_urls:
+      - https://thesignalsnetwork.org/tech-accountability-project/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: global-signals-network-tech-accountability-project
+    name: The Signals Network — Tech Accountability Project
+    file: content/channels/global/global-signals-network-tech-accountability-project.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://thesignalsnetwork.org/tech-accountability-project/
+    verified: null
+    evidence_hint: Tech workers with public-interest concerns, including those considering going to media.
+    source_urls:
+      - https://thesignalsnetwork.org/tech-accountability-project/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: jp-sakana-ai
+    name: Sakana AI
+    file: content/channels/jp/jp-sakana-ai.yml
+    record_type: company
+    country: jp
+    public_input: none
+    route_id: no-verified-safety-or
+    claimed_type: form
+    value: https://sakana.ai/
+    verified: true
+    evidence_hint: Not found — general contact only. Fetching the homepage and corporate info page found no email addresses and no mailto links at all; only X and LinkedIn accounts.
+    source_urls:
+      - https://sakana.ai/
+    failed_rules:
+      - 4-eligible-user
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: jp-sakana-ai
+    name: Sakana AI
+    file: content/channels/jp/jp-sakana-ai.yml
+    record_type: company
+    country: jp
+    public_input: none
+    route_id: homepage
+    claimed_type: homepage
+    value: https://sakana.ai/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://sakana.ai/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: jp-sakana-ai
+    name: Sakana AI
+    file: content/channels/jp/jp-sakana-ai.yml
+    record_type: company
+    country: jp
+    public_input: none
+    route_id: framework
+    claimed_type: framework
+    value: https://sakana.ai/company-info/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://sakana.ai/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: kr-naver
+    name: NAVER
+    file: content/channels/kr/kr-naver.yml
+    record_type: company
+    country: kr
+    public_input: none
+    route_id: naver-cloud-sales-support
+    claimed_type: form
+    value: https://www.ncloud.com/support/question/sales?parentCode=SALES_PNSTS
+    verified: true
+    evidence_hint: The only contact route published alongside the ASF — a sales enquiry form.
+    source_urls:
+      - https://www.ncloud.com/support/question/sales?parentCode=SALES_PNSTS
+    failed_rules:
+      - 4-eligible-user
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: kr-naver
+    name: NAVER
+    file: content/channels/kr/kr-naver.yml
+    record_type: company
+    country: kr
+    public_input: none
+    route_id: homepage
+    claimed_type: homepage
+    value: https://clova.ai/en
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://www.ncloud.com/support/question/sales?parentCode=SALES_PNSTS
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: kr-naver
+    name: NAVER
+    file: content/channels/kr/kr-naver.yml
+    record_type: company
+    country: kr
+    public_input: none
+    route_id: framework
+    claimed_type: framework
+    value: https://clova.ai/en/tech-blog/en-navers-ai-safety-framework-asf
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://www.ncloud.com/support/question/sales?parentCode=SALES_PNSTS
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-ai-lab-watch
+    name: AI Lab Watch
+    file: content/channels/us/us-ai-lab-watch.yml
+    record_type: watchdog
+    country: us
+    public_input: none
+    route_id: resources-page
+    claimed_type: form
+    value: https://ailabwatch.org/resources
+    verified: true
+    evidence_hint: Read-only
+    source_urls:
+      - https://ailabwatch.org/resources
+      - https://ailabwatch.substack.com/
+    failed_rules:
+      - 4-eligible-user
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-ai-lab-watch
+    name: AI Lab Watch
+    file: content/channels/us/us-ai-lab-watch.yml
+    record_type: watchdog
+    country: us
+    public_input: none
+    route_id: blog-substack
+    claimed_type: form
+    value: https://ailabwatch.substack.com/
+    verified: true
+    evidence_hint: Following
+    source_urls:
+      - https://ailabwatch.org/resources
+      - https://ailabwatch.substack.com/
+    failed_rules:
+      - 4-eligible-user
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-ai-lab-watch
+    name: AI Lab Watch
+    file: content/channels/us/us-ai-lab-watch.yml
+    record_type: watchdog
+    country: us
+    public_input: none
+    route_id: homepage
+    claimed_type: homepage
+    value: https://ailabwatch.org/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://ailabwatch.org/resources
+      - https://ailabwatch.substack.com/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-ai-whistleblower-protection-act-federal
+    name: AI Whistleblower Protection Act (S.1792) — federal, not law
+    file: content/channels/us/us-ai-whistleblower-protection-act-federal.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: submission-page
+    claimed_type: whistleblowing
+    value: https://billsincongress.com/bills/1792s119
+    verified: true
+    evidence_hint: N/A — not enacted.
+    source_urls:
+      - https://billsincongress.com/bills/1792s119
+    failed_rules: []
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-ai-whistleblower-protection-act-federal
+    name: AI Whistleblower Protection Act (S.1792) — federal, not law
+    file: content/channels/us/us-ai-whistleblower-protection-act-federal.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://billsincongress.com/bills/1792s119
+    verified: null
+    evidence_hint: N/A — not enacted.
+    source_urls:
+      - https://billsincongress.com/bills/1792s119
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-allen-institute-ai
+    name: Allen Institute for AI (Ai2)
+    file: content/channels/us/us-allen-institute-ai.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: general-support-also-safety
+    claimed_type: email
+    value: support@allenai.org
+    verified: true
+    evidence_hint: "The Responsible Use Guidelines name this single address twice: for questions about the guidelines and violation reports, and for 'reporting bugs, security concerns, and inappropriate/unsafe content generated by Ai2 Tools'."
+    source_urls:
+      - https://allenai.org/research-principles
+      - https://allenai.org/
+      - https://allenai.org/responsible-use
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-allen-institute-ai
+    name: Allen Institute for AI (Ai2)
+    file: content/channels/us/us-allen-institute-ai.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: research-principles
+    claimed_type: program
+    value: https://allenai.org/research-principles
+    verified: false
+    evidence_hint: Statement of principles, not a contact channel.
+    source_urls:
+      - https://allenai.org/research-principles
+      - https://allenai.org/
+      - https://allenai.org/responsible-use
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-allen-institute-ai
+    name: Allen Institute for AI (Ai2)
+    file: content/channels/us/us-allen-institute-ai.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://allenai.org/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://allenai.org/research-principles
+      - https://allenai.org/
+      - https://allenai.org/responsible-use
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-allen-institute-ai
+    name: Allen Institute for AI (Ai2)
+    file: content/channels/us/us-allen-institute-ai.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: framework
+    claimed_type: framework
+    value: https://allenai.org/responsible-use
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://allenai.org/research-principles
+      - https://allenai.org/
+      - https://allenai.org/responsible-use
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-amazon-aws
+    name: Amazon / AWS
+    file: content/channels/us/us-amazon-aws.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: aws-security-vulnerabilities
+    claimed_type: email
+    value: aws-security@amazon.com
+    verified: true
+    evidence_hint: Security vulnerabilities in AWS services. AI model safety is not mentioned anywhere in the policy.
+    source_urls:
+      - https://hackerone.com/aws_vdp
+      - https://repost.aws/knowledge-center/report-aws-abuse
+    failed_rules:
+      - 4-eligible-user
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-amazon-aws
+    name: Amazon / AWS
+    file: content/channels/us/us-amazon-aws.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: aws-abuse-trust-safety
+    claimed_type: email
+    value: trustandsafety@support.aws.com
+    verified: true
+    evidence_hint: Suspected abuse of AWS resources (EC2, S3 etc.).
+    source_urls:
+      - https://hackerone.com/aws_vdp
+      - https://repost.aws/knowledge-center/report-aws-abuse
+    failed_rules:
+      - 4-eligible-user
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-amazon-aws
+    name: Amazon / AWS
+    file: content/channels/us/us-amazon-aws.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: aws-vulnerability-disclosure-program
+    claimed_type: disclosure
+    value: https://hackerone.com/aws_vdp
+    verified: true
+    evidence_hint: Security only.
+    source_urls:
+      - https://hackerone.com/aws_vdp
+      - https://repost.aws/knowledge-center/report-aws-abuse
+    failed_rules:
+      - 4-eligible-user
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-amazon-aws
+    name: Amazon / AWS
+    file: content/channels/us/us-amazon-aws.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: aws-abuse-form
+    claimed_type: form
+    value: https://repost.aws/knowledge-center/report-aws-abuse
+    verified: true
+    evidence_hint: Reporting abusive use of AWS resources.
+    source_urls:
+      - https://hackerone.com/aws_vdp
+      - https://repost.aws/knowledge-center/report-aws-abuse
+    failed_rules:
+      - 4-eligible-user
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-amazon-aws
+    name: Amazon / AWS
+    file: content/channels/us/us-amazon-aws.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: homepage
+    claimed_type: homepage
+    value: https://aws.amazon.com/ai/responsible-ai/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://hackerone.com/aws_vdp
+      - https://repost.aws/knowledge-center/report-aws-abuse
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-amazon-aws
+    name: Amazon / AWS
+    file: content/channels/us/us-amazon-aws.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: framework
+    claimed_type: framework
+    value: https://cdn.amazon.science/a0/4f/bca5cb32495280835d9370a466b7/amazon-fmsf-9-2026.pdf
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://hackerone.com/aws_vdp
+      - https://repost.aws/knowledge-center/report-aws-abuse
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-anthropic
+    name: Anthropic
+    file: content/channels/us/us-anthropic.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: model-safety-issues-jailbreaks
+    claimed_type: email
+    value: usersafety@anthropic.com
+    verified: true
+    evidence_hint: Safety issues, jailbreaks, harmful model behaviour. Named on both the Responsible Disclosure Policy and the Usage Policy.
+    source_urls:
+      - https://www.anthropic.com/responsible-disclosure-policy
+      - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
+      - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-anthropic
+    name: Anthropic
+    file: content/channels/us/us-anthropic.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: questions-about-disclosure-policy
+    claimed_type: email
+    value: disclosure@anthropic.com
+    verified: true
+    evidence_hint: Questions about the Responsible Disclosure Policy itself, not for submitting reports.
+    source_urls:
+      - https://www.anthropic.com/responsible-disclosure-policy
+      - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
+      - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-anthropic
+    name: Anthropic
+    file: content/channels/us/us-anthropic.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: responsible-disclosure-policy
+    claimed_type: disclosure
+    value: https://www.anthropic.com/responsible-disclosure-policy
+    verified: true
+    evidence_hint: "Infrastructure vulnerabilities AND model safety. States: 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models.'"
+    source_urls:
+      - https://www.anthropic.com/responsible-disclosure-policy
+      - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
+      - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-anthropic
+    name: Anthropic
+    file: content/channels/us/us-anthropic.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: hackerone-submission-form
+    claimed_type: bounty
+    value: https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
+    verified: true
+    evidence_hint: Vulnerability submissions under the Responsible Disclosure Policy.
+    source_urls:
+      - https://www.anthropic.com/responsible-disclosure-policy
+      - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
+      - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-anthropic
+    name: Anthropic
+    file: content/channels/us/us-anthropic.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: model-safety-bug-bounty
+    claimed_type: bounty
+    value: https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+    verified: true
+    evidence_hint: Universal jailbreaks that defeat Constitutional Classifiers, especially CBRN. Up to $35,000 per novel universal jailbreak.
+    source_urls:
+      - https://www.anthropic.com/responsible-disclosure-policy
+      - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
+      - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-anthropic
+    name: Anthropic
+    file: content/channels/us/us-anthropic.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: usage-policy-trust-safety
+    claimed_type: form
+    value: https://support.claude.com/en/articles/8241253-trust-and-safety-warnings-and-appeals
+    verified: false
+    evidence_hint: Appealing enforcement decisions against your own account.
+    source_urls:
+      - https://www.anthropic.com/responsible-disclosure-policy
+      - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
+      - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-anthropic
+    name: Anthropic
+    file: content/channels/us/us-anthropic.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.anthropic.com/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://www.anthropic.com/responsible-disclosure-policy
+      - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
+      - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-anthropic
+    name: Anthropic
+    file: content/channels/us/us-anthropic.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: framework
+    claimed_type: framework
+    value: https://www.anthropic.com/rsp
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://www.anthropic.com/responsible-disclosure-policy
+      - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
+      - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-apple
+    name: Apple
+    file: content/channels/us/us-apple.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: apple-security-bounty
+    claimed_type: bounty
+    value: https://security.apple.com/submit/
+    verified: true
+    evidence_hint: "'If you've discovered a security or privacy vulnerability that affects Apple devices, software, or services, please report it directly to us.' Covers Apple products and public-facing services; rewards up to $2M for exploit chains, over $5M with bonuses. AI/Apple Intelligence is not named in the terms."
+    source_urls:
+      - https://security.apple.com/submit/
+      - https://security.apple.com/terms-and-conditions/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-apple
+    name: Apple
+    file: content/channels/us/us-apple.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: bounty-terms-conditions
+    claimed_type: disclosure
+    value: https://security.apple.com/terms-and-conditions/
+    verified: true
+    evidence_hint: Section 8 provides a limited exemption from reverse-engineering restrictions where 'The actions were performed during good-faith security research, which was — or was intended to be — responsibly reported to Apple'.
+    source_urls:
+      - https://security.apple.com/submit/
+      - https://security.apple.com/terms-and-conditions/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-apple
+    name: Apple
+    file: content/channels/us/us-apple.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://security.apple.com/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://security.apple.com/submit/
+      - https://security.apple.com/terms-and-conditions/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-apple
+    name: Apple
+    file: content/channels/us/us-apple.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://security.apple.com/bounty/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://security.apple.com/submit/
+      - https://security.apple.com/terms-and-conditions/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-california-attorney-general-consumer-complaint
+    name: California Attorney General — consumer complaint
+    file: content/channels/us/ca/us-california-attorney-general-consumer-complaint.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: submission-page
+    claimed_type: complaint
+    value: https://oag.ca.gov/contact/consumer-complaint-against-business-or-company
+    verified: true
+    evidence_hint: Complaints about businesses, including AI companies. The AG investigates where complaints suggest patterns of consumer harm or systematic violations of consumer protection law.
+    source_urls:
+      - https://oag.ca.gov/contact/consumer-complaint-against-business-or-company
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-california-attorney-general-consumer-complaint
+    name: California Attorney General — consumer complaint
+    file: content/channels/us/ca/us-california-attorney-general-consumer-complaint.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://oag.ca.gov/contact/consumer-complaint-against-business-or-company
+    verified: null
+    evidence_hint: Complaints about businesses, including AI companies. The AG investigates where complaints suggest patterns of consumer harm or systematic violations of consumer protection law.
+    source_urls:
+      - https://oag.ca.gov/contact/consumer-complaint-against-business-or-company
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-california-sb-53-whistleblower-protections-public
+    name: California SB 53 (Transparency in Frontier Artificial Intelligence Act) — whistleblower protections and public incident reporting
+    file: content/channels/us/ca/us-california-sb-53-whistleblower-protections-public.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: submission-page
+    claimed_type: whistleblowing
+    value: https://fpf.org/blog/californias-sb-53-the-first-frontier-ai-law-explained/
+    verified: true
+    evidence_hint: "Two distinct things. (1) Whistleblower protection: employees and contractors of frontier developers are protected against retaliation for reporting activity connected to catastrophic risks — defined around foreseeable risks of a frontier model causing death or serious injury to 50+ people, enabling weapons creation, engaging in criminal conduct without meaningful human intervention, or evading developer control. Employers must give notice of these rights and maintain anonymous internal reporting channels. (2) Developer reporting: frontier developers must report critical safety incidents to OES within 15 days of discovery, or 24 hours where there is imminent danger of death or serious injury."
+    source_urls:
+      - https://fpf.org/blog/californias-sb-53-the-first-frontier-ai-law-explained/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-california-sb-53-whistleblower-protections-public
+    name: California SB 53 (Transparency in Frontier Artificial Intelligence Act) — whistleblower protections and public incident reporting
+    file: content/channels/us/ca/us-california-sb-53-whistleblower-protections-public.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://fpf.org/blog/californias-sb-53-the-first-frontier-ai-law-explained/
+    verified: null
+    evidence_hint: "Two distinct things. (1) Whistleblower protection: employees and contractors of frontier developers are protected against retaliation for reporting activity connected to catastrophic risks — defined around foreseeable risks of a frontier model causing death or serious injury to 50+ people, enabling weapons creation, engaging in criminal conduct without meaningful human intervention, or evading developer control. Employers must give notice of these rights and maintain anonymous internal reporting channels. (2) Developer reporting: frontier developers must report critical safety incidents to OES within 15 days of discovery, or 24 hours where there is imminent danger of death or serious injury."
+    source_urls:
+      - https://fpf.org/blog/californias-sb-53-the-first-frontier-ai-law-explained/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-government-accountability-project
+    name: Government Accountability Project
+    file: content/channels/us/us-government-accountability-project.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: submission-page
+    claimed_type: whistleblowing
+    value: https://whistleblower.org/how-to-request-assistance/
+    verified: true
+    evidence_hint: People who have discovered illegality, gross mismanagement or waste of funds, or threats to health and safety in their employment. Focus is on widespread, systemic issues affecting the public interest.
+    source_urls:
+      - https://whistleblower.org/how-to-request-assistance/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-government-accountability-project
+    name: Government Accountability Project
+    file: content/channels/us/us-government-accountability-project.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://whistleblower.org/how-to-request-assistance/
+    verified: null
+    evidence_hint: People who have discovered illegality, gross mismanagement or waste of funds, or threats to health and safety in their employment. Focus is on widespread, systemic issues affecting the public interest.
+    source_urls:
+      - https://whistleblower.org/how-to-request-assistance/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-ibm
+    name: IBM
+    file: content/channels/us/us-ibm.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: ibm-psirt
+    claimed_type: email
+    value: psirt@us.ibm.com
+    verified: true
+    evidence_hint: "'Potential security and AI vulnerabilities in IBM products and websites.' AI vulnerabilities explicitly in scope. PGP available."
+    source_urls:
+      - https://hackerone.com/ibm?type=team
+      - https://www.ibm.com/trust/security-psirt
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-ibm
+    name: IBM
+    file: content/channels/us/us-ibm.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: ibm-hackerone
+    claimed_type: disclosure
+    value: https://hackerone.com/ibm?type=team
+    verified: true
+    evidence_hint: Third-party researcher submissions.
+    source_urls:
+      - https://hackerone.com/ibm?type=team
+      - https://www.ibm.com/trust/security-psirt
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-ibm
+    name: IBM
+    file: content/channels/us/us-ibm.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: ibm-safe-harbor-policy
+    claimed_type: disclosure
+    value: https://www.ibm.com/trust/security-psirt
+    verified: true
+    evidence_hint: The PSIRT page states vulnerability reporting is 'protected by IBM Safe Harbor Policy', available as a downloadable document.
+    source_urls:
+      - https://hackerone.com/ibm?type=team
+      - https://www.ibm.com/trust/security-psirt
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-ibm
+    name: IBM
+    file: content/channels/us/us-ibm.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.ibm.com/trust
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://hackerone.com/ibm?type=team
+      - https://www.ibm.com/trust/security-psirt
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-ibm
+    name: IBM
+    file: content/channels/us/us-ibm.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://www.ibm.com/impact/ai-ethics
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://hackerone.com/ibm?type=team
+      - https://www.ibm.com/trust/security-psirt
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-magic
+    name: Magic
+    file: content/channels/us/us-magic.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: no-verified-safety-or
+    claimed_type: form
+    value: https://magic.dev/
+    verified: false
+    evidence_hint: Not found — general contact only.
+    source_urls:
+      - https://magic.dev/
+      - https://magic.dev/agi-readiness-policy
+    failed_rules:
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-magic
+    name: Magic
+    file: content/channels/us/us-magic.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: homepage
+    claimed_type: homepage
+    value: https://magic.dev/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://magic.dev/
+      - https://magic.dev/agi-readiness-policy
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-magic
+    name: Magic
+    file: content/channels/us/us-magic.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: framework
+    claimed_type: framework
+    value: https://magic.dev/agi-readiness-policy
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://magic.dev/
+      - https://magic.dev/agi-readiness-policy
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-meta
+    name: Meta
+    file: content/channels/us/us-meta.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: llama-policy-violation-reports
+    claimed_type: email
+    value: LlamaUseReport@meta.com
+    verified: true
+    evidence_hint: Reporting violations of the Llama Acceptable Use Policy (i.e. someone else misusing the model).
+    source_urls:
+      - https://developers.facebook.com/llama_output_feedback/
+      - https://facebook.com/whitehat/info/
+      - https://github.com/facebookresearch/llama
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-meta
+    name: Meta
+    file: content/channels/us/us-meta.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: risky-content-model-output
+    claimed_type: feedback
+    value: https://developers.facebook.com/llama_output_feedback/
+    verified: true
+    evidence_hint: Reporting risky or harmful content produced by Llama models.
+    source_urls:
+      - https://developers.facebook.com/llama_output_feedback/
+      - https://facebook.com/whitehat/info/
+      - https://github.com/facebookresearch/llama
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-meta
+    name: Meta
+    file: content/channels/us/us-meta.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: meta-security-whitehat
+    claimed_type: disclosure
+    value: https://facebook.com/whitehat/info/
+    verified: true
+    evidence_hint: Security bugs and vulnerabilities.
+    source_urls:
+      - https://developers.facebook.com/llama_output_feedback/
+      - https://facebook.com/whitehat/info/
+      - https://github.com/facebookresearch/llama
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-meta
+    name: Meta
+    file: content/channels/us/us-meta.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: meta-bug-bounty-genai
+    claimed_type: bounty
+    value: https://bugbounty.meta.com/payout-guidelines/meta-genai/
+    verified: false
+    evidence_hint: GenAI reports assessed by security impact; the page states it illustrates 'how we assess the security impact' of reports.
+    source_urls:
+      - https://developers.facebook.com/llama_output_feedback/
+      - https://facebook.com/whitehat/info/
+      - https://github.com/facebookresearch/llama
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-meta
+    name: Meta
+    file: content/channels/us/us-meta.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: model-issues-via-github
+    claimed_type: disclosure
+    value: https://github.com/facebookresearch/llama
+    verified: true
+    evidence_hint: Technical model issues.
+    source_urls:
+      - https://developers.facebook.com/llama_output_feedback/
+      - https://facebook.com/whitehat/info/
+      - https://github.com/facebookresearch/llama
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-meta
+    name: Meta
+    file: content/channels/us/us-meta.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://ai.meta.com/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://developers.facebook.com/llama_output_feedback/
+      - https://facebook.com/whitehat/info/
+      - https://github.com/facebookresearch/llama
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-meta
+    name: Meta
+    file: content/channels/us/us-meta.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://ai.meta.com/static-resource/Meta_Advanced-AI-Scaling-Framework-v2
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://developers.facebook.com/llama_output_feedback/
+      - https://facebook.com/whitehat/info/
+      - https://github.com/facebookresearch/llama
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-microsoft
+    name: Microsoft
+    file: content/channels/us/us-microsoft.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: msrc-researcher-portal
+    claimed_type: disclosure
+    value: https://msrc.microsoft.com/report/
+    verified: false
+    evidence_hint: Security vulnerability submissions including AI systems, graded against the AI bug bar.
+    source_urls:
+      - https://www.microsoft.com/en-us/msrc/bounty-ai
+      - https://www.microsoft.com/en-us/msrc/aibugbar
+      - https://go.microsoft.com/fwlink/?linkid=2299798
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-microsoft
+    name: Microsoft
+    file: content/channels/us/us-microsoft.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: microsoft-copilot-ai-bounty
+    claimed_type: bounty
+    value: https://www.microsoft.com/en-us/msrc/bounty-ai
+    verified: true
+    evidence_hint: $250-$30,000. Security vulnerabilities in Copilot surfaces. Explicitly EXCLUDES 'AI prompt injection attacks that do not have a security impact on users other than the attacker', 'model hallucination where the model pretends to run arbitrary code', and 'attacks that aim to leak (part of) the system/meta prompt'. Content issues must be reported separately as 'AI derived harm'.
+    source_urls:
+      - https://www.microsoft.com/en-us/msrc/bounty-ai
+      - https://www.microsoft.com/en-us/msrc/aibugbar
+      - https://go.microsoft.com/fwlink/?linkid=2299798
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-microsoft
+    name: Microsoft
+    file: content/channels/us/us-microsoft.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: ai-ml-vulnerability-severity
+    claimed_type: disclosure
+    value: https://www.microsoft.com/en-us/msrc/aibugbar
+    verified: true
+    evidence_hint: "Splits AI issues into security vulnerabilities (CVSS-rated: inference manipulation, membership inference, model theft) and Responsible AI issues (hate speech, misinformation, sexual content, self-harm) classified only 'In Scope' or 'Out of Scope for investigation, without severity ratings'."
+    source_urls:
+      - https://www.microsoft.com/en-us/msrc/bounty-ai
+      - https://www.microsoft.com/en-us/msrc/aibugbar
+      - https://go.microsoft.com/fwlink/?linkid=2299798
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-microsoft
+    name: Microsoft
+    file: content/channels/us/us-microsoft.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: report-concern
+    claimed_type: form
+    value: https://www.microsoft.com/digitalsafety/report-a-concern
+    verified: false
+    evidence_hint: Harmful content across Microsoft services, including AI-generated.
+    source_urls:
+      - https://www.microsoft.com/en-us/msrc/bounty-ai
+      - https://www.microsoft.com/en-us/msrc/aibugbar
+      - https://go.microsoft.com/fwlink/?linkid=2299798
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-microsoft
+    name: Microsoft
+    file: content/channels/us/us-microsoft.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: enterprise-ai-services-abuse
+    claimed_type: form
+    value: https://go.microsoft.com/fwlink/?linkid=2299798
+    verified: true
+    evidence_hint: Reporting abusive, illegal or infringing use of a Microsoft AI Service.
+    source_urls:
+      - https://www.microsoft.com/en-us/msrc/bounty-ai
+      - https://www.microsoft.com/en-us/msrc/aibugbar
+      - https://go.microsoft.com/fwlink/?linkid=2299798
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-microsoft
+    name: Microsoft
+    file: content/channels/us/us-microsoft.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.microsoft.com/ai/responsible-ai
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://www.microsoft.com/en-us/msrc/bounty-ai
+      - https://www.microsoft.com/en-us/msrc/aibugbar
+      - https://go.microsoft.com/fwlink/?linkid=2299798
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-microsoft
+    name: Microsoft
+    file: content/channels/us/us-microsoft.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/Frontier-Governance-Framework-Feb-2026.pdf
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://www.microsoft.com/en-us/msrc/bounty-ai
+      - https://www.microsoft.com/en-us/msrc/aibugbar
+      - https://go.microsoft.com/fwlink/?linkid=2299798
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-midas-project
+    name: The Midas Project
+    file: content/channels/us/us-midas-project.yml
+    record_type: watchdog
+    country: us
+    public_input: open
+    route_id: submit-tip-best-designed
+    claimed_type: submission
+    value: https://www.themidasproject.com/tips
+    verified: true
+    evidence_hint: Anyone with specific, non-public, evidence-backed information; they particularly want evidence of gaps between public statements and internal practice
+    source_urls:
+      - https://www.themidasproject.com/tips
+      - https://www.themidasproject.com/contact
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-midas-project
+    name: The Midas Project
+    file: content/channels/us/us-midas-project.yml
+    record_type: watchdog
+    country: us
+    public_input: open
+    route_id: signal-username
+    claimed_type: submission
+    value: midasproject.10
+    verified: true
+    evidence_hint: Sensitive tips; no name required
+    source_urls:
+      - https://www.themidasproject.com/tips
+      - https://www.themidasproject.com/contact
+    failed_rules:
+      - 2-inbound-mechanism
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-midas-project
+    name: The Midas Project
+    file: content/channels/us/us-midas-project.yml
+    record_type: watchdog
+    country: us
+    public_input: open
+    route_id: general-enquiries
+    claimed_type: email
+    value: info@themidasproject.com
+    verified: true
+    evidence_hint: Non-sensitive
+    source_urls:
+      - https://www.themidasproject.com/tips
+      - https://www.themidasproject.com/contact
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-midas-project
+    name: The Midas Project
+    file: content/channels/us/us-midas-project.yml
+    record_type: watchdog
+    country: us
+    public_input: open
+    route_id: contact-form
+    claimed_type: form
+    value: https://www.themidasproject.com/contact
+    verified: true
+    evidence_hint: General
+    source_urls:
+      - https://www.themidasproject.com/tips
+      - https://www.themidasproject.com/contact
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-midas-project
+    name: The Midas Project
+    file: content/channels/us/us-midas-project.yml
+    record_type: watchdog
+    country: us
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.themidasproject.com/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://www.themidasproject.com/tips
+      - https://www.themidasproject.com/contact
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-nist-caisi-requests-information-ai
+    name: NIST / CAISI requests for information on AI
+    file: content/channels/us/us-nist-caisi-requests-information-ai.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: submission-page
+    claimed_type: consultation
+    value: https://www.federalregister.gov/documents/2026/08/12/2026-16371/request-for-information-rfi-on-modernizing-the-national-vulnerability-database-in-the-age-of
+    verified: true
+    evidence_hint: Technical input from developers, deployers and security researchers on AI security and standards questions. Recent dockets have covered unique security threats to AI agents, security practices and technical controls, assessment methods for identifying and managing AI vulnerabilities, deployment constraints and monitoring, and research and policy priorities.
+    source_urls:
+      - https://www.federalregister.gov/documents/2026/08/12/2026-16371/request-for-information-rfi-on-modernizing-the-national-vulnerability-database-in-the-age-of
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-nist-caisi-requests-information-ai
+    name: NIST / CAISI requests for information on AI
+    file: content/channels/us/us-nist-caisi-requests-information-ai.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.federalregister.gov/documents/2026/08/12/2026-16371/request-for-information-rfi-on-modernizing-the-national-vulnerability-database-in-the-age-of
+    verified: null
+    evidence_hint: Technical input from developers, deployers and security researchers on AI security and standards questions. Recent dockets have covered unique security threats to AI agents, security practices and technical controls, assessment methods for identifying and managing AI vulnerabilities, deployment constraints and monitoring, and research and policy priorities.
+    source_urls:
+      - https://www.federalregister.gov/documents/2026/08/12/2026-16371/request-for-information-rfi-on-modernizing-the-national-vulnerability-database-in-the-age-of
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-nvidia
+    name: NVIDIA
+    file: content/channels/us/us-nvidia.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: nvidia-psirt
+    claimed_type: email
+    value: psirt@nvidia.com
+    verified: true
+    evidence_hint: Product security vulnerabilities and AI concerns.
+    source_urls:
+      - https://app.intigriti.com/company/programs/nvidia/nvidiavdp/detail
+      - https://app.intigriti.com/company/programs/nvidia/nvidiapublicbugbounty/detail
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-nvidia
+    name: NVIDIA
+    file: content/channels/us/us-nvidia.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: report-security-vulnerability-or
+    claimed_type: disclosure
+    value: https://app.intigriti.com/company/programs/nvidia/nvidiavdp/detail
+    verified: true
+    evidence_hint: Explicitly includes 'AI vulnerability or hack, AI trust concern, malicious prompt engineering, data poisoning possibility'.
+    source_urls:
+      - https://app.intigriti.com/company/programs/nvidia/nvidiavdp/detail
+      - https://app.intigriti.com/company/programs/nvidia/nvidiapublicbugbounty/detail
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-nvidia
+    name: NVIDIA
+    file: content/channels/us/us-nvidia.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: nvidia-public-bug-bounty
+    claimed_type: bounty
+    value: https://app.intigriti.com/company/programs/nvidia/nvidiapublicbugbounty/detail
+    verified: true
+    evidence_hint: Paid security research.
+    source_urls:
+      - https://app.intigriti.com/company/programs/nvidia/nvidiavdp/detail
+      - https://app.intigriti.com/company/programs/nvidia/nvidiapublicbugbounty/detail
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-nvidia
+    name: NVIDIA
+    file: content/channels/us/us-nvidia.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.nvidia.com/en-us/security/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://app.intigriti.com/company/programs/nvidia/nvidiavdp/detail
+      - https://app.intigriti.com/company/programs/nvidia/nvidiapublicbugbounty/detail
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-nvidia
+    name: NVIDIA
+    file: content/channels/us/us-nvidia.yml
+    record_type: company
+    country: us
+    public_input: open
+    route_id: framework
+    claimed_type: framework
+    value: https://images.nvidia.com/content/pdf/NVIDIA-Frontier-AI-Risk-Assessment.pdf
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://app.intigriti.com/company/programs/nvidia/nvidiavdp/detail
+      - https://app.intigriti.com/company/programs/nvidia/nvidiapublicbugbounty/detail
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-openai
+    name: OpenAI
+    file: content/channels/us/us-openai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: coordinated-vulnerability-disclosure-policy
+    claimed_type: disclosure
+    value: https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+    verified: true
+    evidence_hint: "States: 'We invite you to report vulnerabilities, bugs, safety and abuse issues, or security flaws you discover in our systems.'"
+    source_urls:
+      - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+      - https://openai.com/form/report-content/
+      - https://openai.com/form/researcher-access-program/
+      - https://openai.com/index/red-teaming-network/
+      - https://openai.com/form/model-behavior-feedback/
+      - https://openai.com/form/model-spec-feedback/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-openai
+    name: OpenAI
+    file: content/channels/us/us-openai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: openai-bug-bounty
+    claimed_type: bounty
+    value: https://bugcrowd.com/openai
+    verified: false
+    evidence_hint: Infrastructure/product security. $200 to $20,000.
+    source_urls:
+      - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+      - https://openai.com/form/report-content/
+      - https://openai.com/form/researcher-access-program/
+      - https://openai.com/index/red-teaming-network/
+      - https://openai.com/form/model-behavior-feedback/
+      - https://openai.com/form/model-spec-feedback/
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-openai
+    name: OpenAI
+    file: content/channels/us/us-openai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: openai-safety-bug-bounty
+    claimed_type: bounty
+    value: https://bugcrowd.com/engagements/openai-safety
+    verified: false
+    evidence_hint: Model safety / CBRN jailbreaks. Separate engagement from the main bounty.
+    source_urls:
+      - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+      - https://openai.com/form/report-content/
+      - https://openai.com/form/researcher-access-program/
+      - https://openai.com/index/red-teaming-network/
+      - https://openai.com/form/model-behavior-feedback/
+      - https://openai.com/form/model-spec-feedback/
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-openai
+    name: OpenAI
+    file: content/channels/us/us-openai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: report-content
+    claimed_type: form
+    value: https://openai.com/form/report-content/
+    verified: true
+    evidence_hint: "Publicly open form for policy violations and illegal content: violence and self-harm, sexual exploitation, child exploitation, bullying, fraud, privacy, IP."
+    source_urls:
+      - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+      - https://openai.com/form/report-content/
+      - https://openai.com/form/researcher-access-program/
+      - https://openai.com/index/red-teaming-network/
+      - https://openai.com/form/model-behavior-feedback/
+      - https://openai.com/form/model-spec-feedback/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-openai
+    name: OpenAI
+    file: content/channels/us/us-openai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: researcher-access-program
+    claimed_type: program
+    value: https://openai.com/form/researcher-access-program/
+    verified: true
+    evidence_hint: Open and active. Up to $1,000 of API credits for 'researchers using our products to study areas related to the responsible deployment of AI and mitigating associated risks'. Reviewed quarterly.
+    source_urls:
+      - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+      - https://openai.com/form/report-content/
+      - https://openai.com/form/researcher-access-program/
+      - https://openai.com/index/red-teaming-network/
+      - https://openai.com/form/model-behavior-feedback/
+      - https://openai.com/form/model-spec-feedback/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-openai
+    name: OpenAI
+    file: content/channels/us/us-openai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: red-teaming-network
+    claimed_type: program
+    value: https://openai.com/index/red-teaming-network/
+    verified: true
+    evidence_hint: External domain experts stress-testing models.
+    source_urls:
+      - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+      - https://openai.com/form/report-content/
+      - https://openai.com/form/researcher-access-program/
+      - https://openai.com/index/red-teaming-network/
+      - https://openai.com/form/model-behavior-feedback/
+      - https://openai.com/form/model-spec-feedback/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-openai
+    name: OpenAI
+    file: content/channels/us/us-openai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: model-behavior-feedback-form
+    claimed_type: feedback
+    value: https://openai.com/form/model-behavior-feedback/
+    verified: true
+    evidence_hint: "DEPRECATED. Page now reads: 'We've deprecated this web form in favor of other channels.'"
+    source_urls:
+      - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+      - https://openai.com/form/report-content/
+      - https://openai.com/form/researcher-access-program/
+      - https://openai.com/index/red-teaming-network/
+      - https://openai.com/form/model-behavior-feedback/
+      - https://openai.com/form/model-spec-feedback/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-openai
+    name: OpenAI
+    file: content/channels/us/us-openai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: model-spec-feedback-form
+    claimed_type: feedback
+    value: https://openai.com/form/model-spec-feedback/
+    verified: true
+    evidence_hint: CLOSED. 'This feedback form is now closed.'
+    source_urls:
+      - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+      - https://openai.com/form/report-content/
+      - https://openai.com/form/researcher-access-program/
+      - https://openai.com/index/red-teaming-network/
+      - https://openai.com/form/model-behavior-feedback/
+      - https://openai.com/form/model-spec-feedback/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-openai
+    name: OpenAI
+    file: content/channels/us/us-openai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://openai.com/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+      - https://openai.com/form/report-content/
+      - https://openai.com/form/researcher-access-program/
+      - https://openai.com/index/red-teaming-network/
+      - https://openai.com/form/model-behavior-feedback/
+      - https://openai.com/form/model-spec-feedback/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-openai
+    name: OpenAI
+    file: content/channels/us/us-openai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://model-spec.openai.com/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+      - https://openai.com/form/report-content/
+      - https://openai.com/form/researcher-access-program/
+      - https://openai.com/index/red-teaming-network/
+      - https://openai.com/form/model-behavior-feedback/
+      - https://openai.com/form/model-spec-feedback/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-perplexity
+    name: Perplexity
+    file: content/channels/us/us-perplexity.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: vulnerability-disclosure-program
+    claimed_type: disclosure
+    value: https://bugcrowd.com/f1d4df64-af62-46e2-b7d3-dbe70b69a34e/external/report
+    verified: true
+    evidence_hint: "'All public facing endpoints of Perplexity. All user-facing clients and API endpoints are in scope.' Explicitly OUT of scope: 'AI-related issues such as hallucinations and model safety are not in scope of the security program.'"
+    source_urls:
+      - https://bugcrowd.com/f1d4df64-af62-46e2-b7d3-dbe70b69a34e/external/report
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-perplexity
+    name: Perplexity
+    file: content/channels/us/us-perplexity.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: support-including-what-they
+    claimed_type: email
+    value: support@perplexity.ai
+    verified: true
+    evidence_hint: Account, functional and safety issues, per the VDP page.
+    source_urls:
+      - https://bugcrowd.com/f1d4df64-af62-46e2-b7d3-dbe70b69a34e/external/report
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-perplexity
+    name: Perplexity
+    file: content/channels/us/us-perplexity.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: privacy-data-concerns
+    claimed_type: email
+    value: privacy@perplexity.ai
+    verified: true
+    evidence_hint: Privacy and data.
+    source_urls:
+      - https://bugcrowd.com/f1d4df64-af62-46e2-b7d3-dbe70b69a34e/external/report
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-perplexity
+    name: Perplexity
+    file: content/channels/us/us-perplexity.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.perplexity.ai/hub/security
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://bugcrowd.com/f1d4df64-af62-46e2-b7d3-dbe70b69a34e/external/report
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-perplexity
+    name: Perplexity
+    file: content/channels/us/us-perplexity.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://www.perplexity.ai/hub/security-vdp
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://bugcrowd.com/f1d4df64-af62-46e2-b7d3-dbe70b69a34e/external/report
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-psst-org-information-escrow-digital-safe
+    name: Psst.org — information escrow / 'digital safe'
+    file: content/channels/us/us-psst-org-information-escrow-digital-safe.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: submission-page
+    claimed_type: whistleblowing
+    value: https://psst.org/about
+    verified: true
+    evidence_hint: Concerns from tech and AI workers, at any level of completeness — explicitly including partial information, 'one line of code that is a red flag', or a general unease. Designed as a 'lower stakes way' to report without becoming a formal whistleblower.
+    source_urls:
+      - https://psst.org/about
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-psst-org-information-escrow-digital-safe
+    name: Psst.org — information escrow / 'digital safe'
+    file: content/channels/us/us-psst-org-information-escrow-digital-safe.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://psst.org/about
+    verified: null
+    evidence_hint: Concerns from tech and AI workers, at any level of completeness — explicitly including partial information, 'one line of code that is a red flag', or a general unease. Designed as a 'lower stakes way' to report without becoming a formal whistleblower.
+    source_urls:
+      - https://psst.org/about
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-reflection-ai
+    name: Reflection AI
+    file: content/channels/us/us-reflection-ai.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: single-catch-all-contact
+    claimed_type: email
+    value: https://reflection.ai/legal/privacy-policy/
+    verified: true
+    evidence_hint: The privacy policy routes everything — privacy rights, children's privacy, appeals, and notably 'factual accuracy correction requests regarding AI model outputs' — to one address published in that document.
+    source_urls:
+      - https://reflection.ai/legal/privacy-policy/
+    failed_rules:
+      - 4-eligible-user
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-reflection-ai
+    name: Reflection AI
+    file: content/channels/us/us-reflection-ai.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: support-knowledge-base
+    claimed_type: form
+    value: https://support.reflection.ai/
+    verified: false
+    evidence_hint: Product support.
+    source_urls:
+      - https://reflection.ai/legal/privacy-policy/
+    failed_rules:
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-reflection-ai
+    name: Reflection AI
+    file: content/channels/us/us-reflection-ai.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: homepage
+    claimed_type: homepage
+    value: https://reflection.ai/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://reflection.ai/legal/privacy-policy/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-reflection-ai
+    name: Reflection AI
+    file: content/channels/us/us-reflection-ai.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: framework
+    claimed_type: framework
+    value: https://reflection.ai/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://reflection.ai/legal/privacy-policy/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-safe-superintelligence-inc
+    name: Safe Superintelligence Inc. (SSI)
+    file: content/channels/us/us-safe-superintelligence-inc.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: contact-page
+    claimed_type: form
+    value: https://ssi.inc/contact
+    verified: false
+    evidence_hint: The only contact route linked from the homepage. No email address is published anywhere on the site.
+    source_urls:
+      - https://ssi.inc/contact
+      - https://ssi.inc/
+    failed_rules:
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-safe-superintelligence-inc
+    name: Safe Superintelligence Inc. (SSI)
+    file: content/channels/us/us-safe-superintelligence-inc.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: homepage
+    claimed_type: homepage
+    value: https://ssi.inc/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://ssi.inc/contact
+      - https://ssi.inc/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-safe-superintelligence-inc
+    name: Safe Superintelligence Inc. (SSI)
+    file: content/channels/us/us-safe-superintelligence-inc.yml
+    record_type: company
+    country: us
+    public_input: none
+    route_id: framework
+    claimed_type: framework
+    value: https://ssi.inc/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://ssi.inc/contact
+      - https://ssi.inc/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-scale-ai
+    name: Scale AI
+    file: content/channels/us/us-scale-ai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: vulnerability-reports
+    claimed_type: email
+    value: vulnerabilities@scale.com
+    verified: true
+    evidence_hint: Responsible disclosure of security vulnerabilities. AI model safety is not mentioned.
+    source_urls:
+      - https://trust.scale.com/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-scale-ai
+    name: Scale AI
+    file: content/channels/us/us-scale-ai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: trust-center
+    claimed_type: program
+    value: https://trust.scale.com/
+    verified: true
+    evidence_hint: Compliance artifacts (SOC 2 Type II, ISO 27001, FedRAMP High, DoD IL4).
+    source_urls:
+      - https://trust.scale.com/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-scale-ai
+    name: Scale AI
+    file: content/channels/us/us-scale-ai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://scale.com/security
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://trust.scale.com/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-scale-ai
+    name: Scale AI
+    file: content/channels/us/us-scale-ai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://scale.com/blog/risk-matrix
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://trust.scale.com/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-sec-whistleblower-program
+    name: SEC Whistleblower Program (Form TCR)
+    file: content/channels/us/us-sec-whistleblower-program.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: submission-page
+    claimed_type: whistleblowing
+    value: https://www.sec.gov/enforcement-litigation/whistleblower-program/information-about-submitting-whistleblower-tip
+    verified: true
+    evidence_hint: "Original information about potential violations of the federal securities laws. For AI: material misrepresentation of model capability, safety practices or risk to investors — 'AI-washing' cases have been brought. Reaches Google, Microsoft, Meta and Nvidia; reaches private labs only where securities law otherwise bites."
+    source_urls:
+      - https://www.sec.gov/enforcement-litigation/whistleblower-program/information-about-submitting-whistleblower-tip
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-sec-whistleblower-program
+    name: SEC Whistleblower Program (Form TCR)
+    file: content/channels/us/us-sec-whistleblower-program.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.sec.gov/enforcement-litigation/whistleblower-program/information-about-submitting-whistleblower-tip
+    verified: null
+    evidence_hint: "Original information about potential violations of the federal securities laws. For AI: material misrepresentation of model capability, safety practices or risk to investors — 'AI-washing' cases have been brought. Reaches Google, Microsoft, Meta and Nvidia; reaches private labs only where securities law otherwise bites."
+    source_urls:
+      - https://www.sec.gov/enforcement-litigation/whistleblower-program/information-about-submitting-whistleblower-tip
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-thinking-machines-lab
+    name: Thinking Machines Lab
+    file: content/channels/us/us-thinking-machines-lab.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: security-vulnerability-reports
+    claimed_type: email
+    value: security-reports@thinkingmachines.ai
+    verified: true
+    evidence_hint: Security vulnerabilities in systems, services and infrastructure. PGP key at https://thinkingmachines.ai/.well-known/pgp-key.txt (fingerprint 4FA9 136F 8F68 DDFD 1E78 6EBE CB0B 7A1E 3028 4CB4).
+    source_urls:
+      - https://thinkingmachines.ai/
+      - https://thinkingmachines.ai/security/disclosure-policy/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-thinking-machines-lab
+    name: Thinking Machines Lab
+    file: content/channels/us/us-thinking-machines-lab.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: model-safety-incidents-routed
+    claimed_type: email
+    value: legal@thinkingmachines.ai
+    verified: true
+    evidence_hint: "The disclosure policy states: 'This policy does not cover model safety. To report an incident related to Inkling, please contact us at [legal@thinkingmachines.ai].'"
+    source_urls:
+      - https://thinkingmachines.ai/
+      - https://thinkingmachines.ai/security/disclosure-policy/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-thinking-machines-lab
+    name: Thinking Machines Lab
+    file: content/channels/us/us-thinking-machines-lab.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://thinkingmachines.ai/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://thinkingmachines.ai/
+      - https://thinkingmachines.ai/security/disclosure-policy/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-thinking-machines-lab
+    name: Thinking Machines Lab
+    file: content/channels/us/us-thinking-machines-lab.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://thinkingmachines.ai/security/disclosure-policy/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://thinkingmachines.ai/
+      - https://thinkingmachines.ai/security/disclosure-policy/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-us-federal-rulemaking-comments-regulations-gov
+    name: US federal rulemaking comments — Regulations.gov
+    file: content/channels/us/us-us-federal-rulemaking-comments-regulations-gov.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: submission-page
+    claimed_type: consultation
+    value: https://www.regulations.gov/assets/files/Public-Comment-on-Federal-Regulations_Final.pdf
+    verified: true
+    evidence_hint: Comments from anyone, including non-US persons, on proposed rules, requests for information and requests for comment. No affiliation required.
+    source_urls:
+      - https://www.regulations.gov/assets/files/Public-Comment-on-Federal-Regulations_Final.pdf
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-us-federal-rulemaking-comments-regulations-gov
+    name: US federal rulemaking comments — Regulations.gov
+    file: content/channels/us/us-us-federal-rulemaking-comments-regulations-gov.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://www.regulations.gov/assets/files/Public-Comment-on-Federal-Regulations_Final.pdf
+    verified: null
+    evidence_hint: Comments from anyone, including non-US persons, on proposed rules, requests for information and requests for comment. No affiliation required.
+    source_urls:
+      - https://www.regulations.gov/assets/files/Public-Comment-on-Federal-Regulations_Final.pdf
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-us-ftc-reportfraud-ftc-gov
+    name: US FTC — ReportFraud.ftc.gov
+    file: content/channels/us/us-us-ftc-reportfraud-ftc-gov.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: submission-page
+    claimed_type: complaint
+    value: https://reportfraud.ftc.gov/
+    verified: true
+    evidence_hint: "Reports of fraud, scams and bad business practices — which covers AI-related deception: false capability claims, deceptive AI marketing, undisclosed AI use, AI-enabled impersonation. The FTC has brought AI-deception cases under its Section 5 unfair-or-deceptive-practices authority."
+    source_urls:
+      - https://reportfraud.ftc.gov/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-us-ftc-reportfraud-ftc-gov
+    name: US FTC — ReportFraud.ftc.gov
+    file: content/channels/us/us-us-ftc-reportfraud-ftc-gov.yml
+    record_type: reporting-channel
+    country: us
+    public_input: open
+    route_id: homepage
+    claimed_type: homepage
+    value: https://reportfraud.ftc.gov/
+    verified: null
+    evidence_hint: "Reports of fraud, scams and bad business practices — which covers AI-related deception: false capability claims, deceptive AI marketing, undisclosed AI use, AI-enabled impersonation. The FTC has brought AI-deception cases under its Section 5 unfair-or-deceptive-practices authority."
+    source_urls:
+      - https://reportfraud.ftc.gov/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-xai
+    name: xAI (SpaceXAI)
+    file: content/channels/us/us-xai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: safety-reports
+    claimed_type: email
+    value: safety@x.ai
+    verified: true
+    evidence_hint: Published on x.ai/safety for 'reporting harmful outputs, jailbreaks, or other safety issues'.
+    source_urls:
+      - https://hackerone.com/x
+      - https://x.ai/
+      - https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-xai
+    name: xAI (SpaceXAI)
+    file: content/channels/us/us-xai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: hackerone-bug-bounty
+    claimed_type: bounty
+    value: https://hackerone.com/x
+    verified: false
+    evidence_hint: Security vulnerabilities.
+    source_urls:
+      - https://hackerone.com/x
+      - https://x.ai/
+      - https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf
+    failed_rules:
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-xai
+    name: xAI (SpaceXAI)
+    file: content/channels/us/us-xai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: homepage
+    claimed_type: homepage
+    value: https://x.ai/
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://hackerone.com/x
+      - https://x.ai/
+      - https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null
+  - record_id: us-xai
+    name: xAI (SpaceXAI)
+    file: content/channels/us/us-xai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    route_id: framework
+    claimed_type: framework
+    value: https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf
+    verified: null
+    evidence_hint: ""
+    source_urls:
+      - https://hackerone.com/x
+      - https://x.ai/
+      - https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: pending
+    reviewer: null
+    reviewed_on: null

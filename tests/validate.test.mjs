@@ -81,3 +81,27 @@ test('an overdue record is a warning, not an error', () => {
   const r = validate(tree({ [P]: { ...b } }));
   assert.equal(r.code, 0);
 });
+
+test('a reviewed open contact route requires evidence, audience and subjects', () => {
+  const b = body();
+  b.facts.routes[0] = {
+    id: 'contact', type: 'form', value: 'https://example.org/report', verified: true, verified_on: '2026-09-22',
+    contact: { status: 'open', directness: 'direct', review: 'reviewed' }
+  };
+  const r = validate(tree({ [P]: b }));
+  assert.ok(has(r, 'needs evidence_url'));
+  assert.ok(has(r, 'needs eligible_users'));
+  assert.ok(has(r, 'needs accepted_subjects'));
+});
+
+test('a reviewed limited contact route requires restrictions', () => {
+  const b = body();
+  b.facts.routes[0] = {
+    id: 'contact', type: 'form', value: 'https://example.org/report', verified: true, verified_on: '2026-09-22',
+    contact: {
+      status: 'limited', directness: 'direct', review: 'reviewed', eligible_users: ['employees'],
+      accepted_subjects: ['ai-safety'], evidence_url: 'https://example.org/policy', evidence_note: 'Employees may report.', checked_on: '2026-09-22'
+    }
+  };
+  assert.ok(has(validate(tree({ [P]: b })), 'needs restrictions'));
+});

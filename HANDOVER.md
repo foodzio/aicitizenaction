@@ -16,7 +16,7 @@ Tracked in git and committed with every step.
   `docs/content-architecture.md` (content as data, translation, freshness, Resources, volunteers).
 - **Corrective plan:** `docs/places-to-contact-audit-plan.md` — deterministic review and correction
   of all 74 channel records and 234 routes before they may be presented or recommended as a
-  “Place to contact.” Phase 1 (contract and containment) is done; Phase 2 is next.
+  “Place to contact.” Phases 1–2 are done; the full content audit (Phase 3) is next.
 - **Goal:** a site that turns alarm about AI into one well-aimed action in one sitting, ending with
   a draft the user sends themselves — maintained by volunteers, multilingual, with a Resources
   collection modelled on the stockspanic resources desk.
@@ -42,7 +42,8 @@ Tracked in git and committed with every step.
 | 6 — Second language | **done (pilot)** | French: 173 UI strings + 45 guide strings, all machine drafts; gated (noindex, not in switcher) until a steward sets `ui_approved: true`. Tier 2 (French/EU records) not started |
 | 7 — Launch | **in progress** | Accessibility pass done (0 axe violations, light + dark, `docs/accessibility.md`). Deploy needs the owner |
 | Contact audit 1 — Contract and containment | **done** | Verified inbound routes only; explicit contradictions fail closed; Argentina attachment and three article regressions covered |
-| Contact audit 2–6 | **not started** | Schema/inventory, complete audit, reclassification, UI/routing convergence, final verification |
+| Contact audit 2 — Schema and inventory | **done** | Route contact schema, validator checks, generated 74-record/234-route reconciliation inventory |
+| Contact audit 3–6 | **not started** | Complete audit, reclassification, UI/routing convergence, final verification |
 
 ## Judgement calls made without the owner (reverse any of them)
 
@@ -74,6 +75,20 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T00:34:24Z — Contact audit Phase 2: schema and complete inventory
+
+- Added route-level structured contact facts to `schema/common.schema.json`: status, directness,
+  eligible users, accepted subjects, restrictions, evidence, dates, and review state.
+- Validator enforces evidence/audience/subject requirements for reviewed open or limited routes,
+  restrictions for limited routes, verification, and date consistency.
+- Added `scripts/contact-audit.mjs` / `npm run contact-audit` and generated the tracked
+  `docs/places-to-contact-audit.yml`: exactly 74 records and 234 unique routes, initially all
+  pending. The baseline gate finds 87 legacy-eligible and 147 ineligible routes; neither count is
+  treated as a completed semantic review.
+- Added reconciliation and validation tests. `npm run validate`: 0 errors; 33 focused tests pass.
+- Phase 3 next: apply the six-rule review to every audit row, write reviewed contact metadata into
+  content, and eliminate all pending dispositions.
 
 ### 2026-09-24T00:33:15Z — Contact audit Phase 1: contract and containment
 

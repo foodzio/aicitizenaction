@@ -33,6 +33,7 @@ Update this table as the repo grows — it is the map, so a stale map is a bug.
 | `docs/content-architecture.md` | Content architecture: content as data, repo layout, record format, translation, freshness, Resources layer, volunteer roles and lifecycle |
 | `docs/implementation-plan.md` | Phased implementation plan for the brief and the architecture, with open decisions and what each blocks |
 | `docs/places-to-contact-audit-plan.md` | Corrective plan to audit all channel records/routes and require deterministic evidence before listing or recommending a Place to Contact |
+| `docs/places-to-contact-audit.yml` | Generated, tracked reconciliation inventory: one audit row for every route under `content/channels/` |
 | `input/` | Source assets from the Sept 2026 research and build pass — see `input/README.md` for the manifest |
 | `input/data/` | Normalized datasets: institutions, committees and organisations, source index |
 | `input/data/raw/` | Unnormalized output from the ten research agents. Expensive to recreate — do not delete |
@@ -108,6 +109,7 @@ able to work in this repo using only what is written in this section.)_
 - Install: `npm install`
 - Regenerate content from `input/`: `npm run migrate` (overwrites `content/bodies|channels|orgs` and `docs/migration-report.md`; only needed if the migration itself changes — after that, `content/` is the source of truth and is edited directly)
 - Validate content: `npm run validate` (`--json` for machine output; exit 1 on errors, overdue records are warnings)
+- Contact audit inventory: `npm run contact-audit` (regenerates `docs/places-to-contact-audit.yml`); `node scripts/contact-audit.mjs --check` verifies it is current
 - Test: `npm test`
 - Validate + test: `npm run check`
 - Translations: `node scripts/i18n-sync.mjs fr` (report/refresh), `--scaffold content/bodies/fr/` (create mirrors), `--stamp` (mark new translations as made from the current English)
@@ -217,4 +219,4 @@ List every `HANDOVER.md` in this repo and what it covers, so the map stays true:
 | `HANDOVER.md` | Repo-wide work for `aicitizenaction` |
 | _(add rows as subprojects appear)_ | |
 
-Last modified: 2026-09-24T00:26:34Z
+Last modified: 2026-09-24T00:34:24Z

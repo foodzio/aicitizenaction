@@ -90,6 +90,18 @@ export function validateAll({ now = today() } = {}) {
         if (route.verified === true && !route.value) err(p, `route ${route.id}: verified true but has no value`);
         if (route.verified === true && !route.verified_on) err(p, `route ${route.id}: verified true needs verified_on`);
         if (route.verified_on && route.verified_on > tomorrow) err(p, `route ${route.id}: verified_on is in the future`);
+        const c = route.contact;
+        if (c) {
+          if (c.checked_on && c.checked_on > tomorrow) err(p, `route ${route.id}: contact.checked_on is in the future`);
+          if (c.opens_on && c.closes_on && c.closes_on < c.opens_on) err(p, `route ${route.id}: contact.closes_on is before opens_on`);
+          if (c.review === 'reviewed' && ['open', 'limited'].includes(c.status)) {
+            if (route.verified !== true) err(p, `route ${route.id}: reviewed contact route must be verified true`);
+            if (!c.evidence_url || !c.checked_on || !c.evidence_note) err(p, `route ${route.id}: reviewed contact route needs evidence_url, evidence_note and checked_on`);
+            if (!c.eligible_users?.length) err(p, `route ${route.id}: reviewed contact route needs eligible_users`);
+            if (!c.accepted_subjects?.length) err(p, `route ${route.id}: reviewed contact route needs accepted_subjects`);
+            if (c.status === 'limited' && !c.restrictions) err(p, `route ${route.id}: limited contact route needs restrictions`);
+          }
+        }
       }
       for (const id of Object.keys(r.strings?.routes ?? {})) if (!routeIds.has(id)) err(p, `strings.routes.${id} has no matching route`);
       for (const t of f.tags ?? []) inVocab(p, 'action-tags', t, 'tags');

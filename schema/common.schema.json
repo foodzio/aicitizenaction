@@ -97,6 +97,55 @@
         },
         "source_id": {
           "type": "string"
+        },
+        "contact": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "directness",
+            "review"
+          ],
+          "properties": {
+            "status": {
+              "enum": ["open", "limited", "closed", "none", "unknown"]
+            },
+            "directness": {
+              "enum": ["direct", "official-instructions", "indirect"]
+            },
+            "eligible_users": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 },
+              "uniqueItems": true
+            },
+            "accepted_subjects": {
+              "type": "array",
+              "items": { "type": "string", "minLength": 1 },
+              "uniqueItems": true
+            },
+            "restrictions": {
+              "type": ["string", "null"]
+            },
+            "evidence_url": {
+              "$ref": "#/$defs/url"
+            },
+            "evidence_note": {
+              "type": "string",
+              "minLength": 1
+            },
+            "checked_on": {
+              "$ref": "#/$defs/date"
+            },
+            "opens_on": {
+              "oneOf": [{ "$ref": "#/$defs/date" }, { "type": "null" }]
+            },
+            "closes_on": {
+              "oneOf": [{ "$ref": "#/$defs/date" }, { "type": "null" }]
+            },
+            "review": {
+              "enum": ["pending", "reviewed"]
+            }
+          }
         }
       }
     },
