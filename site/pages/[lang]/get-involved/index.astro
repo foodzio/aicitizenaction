@@ -1,0 +1,45 @@
+---
+// How to become a contributor, and a request form that needs no account (/api/contribute).
+import Base from '../../../layouts/Base.astro';
+import { ui, languages } from '../../../lib/data.mjs';
+export const getStaticPaths = () => languages().map(l => ({ params: { lang: l.code } }));
+const { lang } = Astro.params;
+const t = ui(lang);
+const roles = ['geography', 'domain', 'language', 'editor', 'other'];
+---
+<Base lang={lang} title={t('involved.title')} current="involved">
+  <div class="narrow">
+    <h1>{t('involved.title')}</h1>
+    <p class="lede">{t('involved.lede')}</p>
+    <h2>{t('involved.roles_title')}</h2>
+    <ul class="routes">{roles.slice(0, 4).map(r => <li>{t(`involved.role_${r}`)}</li>)}</ul>
+    <h2>{t('involved.how_title')}</h2>
+    <p>{t('involved.how_body')}</p>
+    <h2 id="join">{t('involved.form_title')}</h2>
+    <p class="notice" id="form-error" hidden>{t('involved.error')}</p>
+    <form class="form" method="post" action="/api/contribute">
+      <input type="hidden" name="lang" value={lang} />
+      <label for="role">{t('involved.role')}</label>
+      <select id="role" name="role" required>{roles.map(r => <option value={r}>{t(`involved.role_${r}`)}</option>)}</select>
+      <label for="area">{t('involved.area')}</label>
+      <p class="hint" id="area-hint">{t('involved.area_hint')}</p>
+      <input type="text" id="area" name="area" maxlength="200" aria-describedby="area-hint" />
+      <label for="languages">{t('involved.languages')}</label>
+      <input type="text" id="languages" name="languages" maxlength="120" />
+      <label for="contact">{t('involved.contact')}</label>
+      <p class="hint" id="contact-hint">{t('involved.contact_hint')}</p>
+      <input type="text" id="contact" name="contact" required maxlength="200" autocomplete="email" aria-describedby="contact-hint" />
+      <label for="conflicts">{t('involved.conflicts')}</label>
+      <p class="hint" id="conflicts-hint">{t('involved.conflicts_hint')}</p>
+      <textarea id="conflicts" name="conflicts" maxlength="1000" rows="3" aria-describedby="conflicts-hint"></textarea>
+      <label for="experience">{t('involved.experience')}</label>
+      <textarea id="experience" name="experience" maxlength="2000" rows="4"></textarea>
+      <div class="honeypot" aria-hidden="true"><label for="website">Website</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+      <p class="hint">{t('involved.sent_note')}</p>
+      <div class="row"><button class="btn" type="submit">{t('involved.send')}</button></div>
+    </form>
+  </div>
+</Base>
+<script>
+  if (new URLSearchParams(location.search).get('error')) document.getElementById('form-error').hidden = false;
+</script>

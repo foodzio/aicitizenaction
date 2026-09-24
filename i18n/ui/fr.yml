@@ -34,6 +34,14 @@ strings:
       value: Votre vie privée
       src: cad972db
       machine: true
+    nav_involved:
+      value: S'impliquer
+      src: 4dd77d3a
+      machine: true
+    footer_feedback:
+      value: Donner votre avis
+      src: 9fe6a46e
+      machine: true
     footer_note:
       value: Pas de compte, pas de liste de diffusion, pas de pistage.
       src: 5c1bc1bd
@@ -521,6 +529,173 @@ strings:
     title:
       value: Comment ça marche
       src: 9c870aa6
+      machine: true
+  feedback:
+    title:
+      value: Dites-nous ce que vous en pensez
+      src: 0e7fd615
+      machine: true
+    lede:
+      value: Une erreur, un manque, une idée, ou une page qui n'a pas fonctionné — nous lisons chaque message. Aucun compte nécessaire.
+      src: 8a0ca0c4
+      machine: true
+    sent_note:
+      value: Contrairement au message que vous écrivez à une institution, ce que vous tapez ici nous est envoyé. Nous ne conservons que ce que vous mettez dans le formulaire — pas d'adresse IP, pas de cookies. Laissez le champ de contact vide si vous n'avez pas besoin de réponse.
+      src: 87ca327b
+      machine: true
+    topic:
+      value: De quoi s'agit-il ?
+      src: 4cbf3ccc
+      machine: true
+    topic_wrong:
+      value: Une information est fausse ou dépassée
+      src: 92a090d8
+      machine: true
+    topic_idea:
+      value: Une idée ou une suggestion
+      src: 78150b65
+      machine: true
+    topic_broken:
+      value: Quelque chose n'a pas fonctionné
+      src: 217fd698
+      machine: true
+    topic_other:
+      value: Autre chose
+      src: cc728431
+      machine: true
+    message:
+      value: Votre message
+      src: 7a057bd9
+      machine: true
+    message_hint:
+      value: S'il s'agit d'une institution ou d'une page précise, dites laquelle.
+      src: 999e56b5
+      machine: true
+    page:
+      value: Quelle page ? (facultatif)
+      src: 78f67982
+      machine: true
+    contact:
+      value: E-mail, si vous souhaitez une réponse (facultatif)
+      src: b41d7d91
+      machine: true
+    send:
+      value: Envoyer l'avis
+      src: 8235980b
+      machine: true
+    error:
+      value: Il manquait quelque chose — vérifiez le formulaire et réessayez.
+      src: 1050387e
+      machine: true
+  involved:
+    title:
+      value: S'impliquer
+      src: 2cba40c2
+      machine: true
+    lede:
+      value: Ce site ne reste exact que si des personnes l'entretiennent. Les bénévoles s'occupent d'un pays, d'un sujet, d'une langue, ou de la sélection d'articles et de consultations. Quelques heures par mois suffisent.
+      src: f2669ba1
+      machine: true
+    roles_title:
+      value: Ce dont vous pourriez vous occuper
+      src: 30fb81d6
+      machine: true
+    role_geography:
+      value: Un pays ou une région — tenir à jour ses commissions, régulateurs et sièges nominatifs
+      src: be5b02cb
+      machine: true
+    role_domain:
+      value: Un sujet dans tous les pays — par exemple les signalements d’incidents ou les consultations
+      src: b7ee216c
+      machine: true
+    role_language:
+      value: Une langue — traduire et relire le site
+      src: 6790cd93
+      machine: true
+    role_editor:
+      value: La rubrique Ressources — choisir les articles et rédiger la question neutre de chacun
+      src: e4c46627
+      machine: true
+    role_other:
+      value: Autre chose, ou pas encore sûr
+      src: 95a917a6
+      machine: true
+    how_title:
+      value: Comment ça marche
+      src: 9c870aa6
+      machine: true
+    how_body:
+      value: Vous vous occupez d'un petit domaine. Chaque fiche a une date avant laquelle elle doit être revérifiée, et vous recevez une courte liste de ce qui est dû. Un pseudonyme suffit — vous n'avez jamais à donner votre vrai nom. Déclarer un lien avec une organisation de la liste est attendu ; vous ne relirez simplement pas la fiche de cette organisation.
+      src: 43d22165
+      machine: true
+    form_title:
+      value: Demander à rejoindre
+      src: 461bd7c6
+      machine: true
+    role:
+      value: De quoi aimeriez-vous vous occuper ?
+      src: 0a8b9fbd
+      machine: true
+    area:
+      value: Lequel ?
+      src: 31de73d7
+      machine: true
+    area_hint:
+      value: Par exemple — Irlande, signalement d’incidents, portugais.
+      src: efdb3b08
+      machine: true
+    languages:
+      value: Langues que vous lisez bien
+      src: e633b8fd
+      machine: true
+    contact:
+      value: Comment vous joindre ?
+      src: a0c974d3
+      machine: true
+    contact_hint:
+      value: Une adresse e-mail ou un nom d'utilisateur GitHub. Nous l'utilisons uniquement pour vous répondre.
+      src: 3eb5df65
+      machine: true
+    experience:
+      value: Quelque chose à nous dire ? (facultatif)
+      src: 7257e62b
+      machine: true
+    conflicts:
+      value: Travaillez-vous pour une organisation citée sur ce site, ou avez-vous des liens avec elle ?
+      src: c9cc30c5
+      machine: true
+    conflicts_hint:
+      value: Le déclarer ne vous disqualifie pas.
+      src: ae60e568
+      machine: true
+    send:
+      value: Envoyer la demande
+      src: 3a69f897
+      machine: true
+    sent_note:
+      value: Ce que vous tapez ici nous est envoyé et n'est conservé que pour répondre à votre demande. Pas d'adresse IP, pas de cookies.
+      src: 21bc4afb
+      machine: true
+    error:
+      value: Il manquait quelque chose — vérifiez le formulaire et réessayez.
+      src: 1050387e
+      machine: true
+  thanks:
+    title:
+      value: Merci
+      src: 268bc183
+      machine: true
+    feedback:
+      value: Votre message nous est parvenu. Si vous avez laissé une adresse, nous vous répondrons.
+      src: "32972067"
+      machine: true
+    contribute:
+      value: Votre demande nous est parvenue. Nous vous contacterons à l'adresse indiquée.
+      src: 2d60c7f1
+      machine: true
+    back:
+      value: Revenir au début
+      src: 7c0daaf8
       machine: true
   notfound:
     title:

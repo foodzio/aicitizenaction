@@ -2,7 +2,7 @@
 // One record: every date beside the fact it applies to, the membership list first-class,
 // three-state verification labelled, route language shown before the click.
 import Base from '../../../../layouts/Base.astro';
-import { data, ui, languages, placeName, recordStrings, reportUrl, isOverdue, SECTIONS } from '../../../../lib/data.mjs';
+import { data, ui, languages, placeName, recordStrings, isOverdue, SECTIONS } from '../../../../lib/data.mjs';
 import { vocabLabel } from '../../../../../scripts/lib/content.mjs';
 
 export function getStaticPaths() {
@@ -80,6 +80,6 @@ const href = v => /^https?:\/\//.test(v) ? v : /@/.test(v) ? `mailto:${v}` : nul
         <ul>{r.meta.sources.map(x => <li><a href={x.url} rel="noopener">{x.url}</a>{x.checked && <span class="meta-line"> · {x.checked}</span>}</li>)}</ul>
       </section>
     )}
-    <p><a href={reportUrl(r)} rel="noopener">{t('record.report')}</a></p>
+    <p><a href={`/${lang}/feedback/?topic=wrong&page=${encodeURIComponent(`/${lang}/${section}/${id}/`)}`}>{t('record.report')}</a></p>
   </article>
 </Base>

@@ -70,6 +70,17 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T00:16:42Z — Feedback, Get Involved, constant menu, French in header, logo fix, no GitHub links
+
+- Owner asked for: a feedback place; a place to request to become a contributor; a top menu that doesn't change between pages; French visible as a locale option; the logo to appear (broken on the live site); no links to GitHub.
+- **Logo fix**: `.gitignore` excluded every `*.png`, so `site/public/brand/*.png` was never committed or deployed. Added `!site/public/brand/*.png`.
+- **Menu**: the same five items on every page — Take Action · Resources · Directory · How It Works · Get Involved — plus the language switch and "Your Privacy". The door no longer hides Resources (owner decision overrides the plan's "door never links to Resources"). Test asserts the header is identical across pages in each language.
+- **French**: a "Français" / "English" link in the header on every page (to the same page in the other language); footer switch kept.
+- **Feedback** (`/<lang>/feedback/`) and **Get Involved** (`/<lang>/get-involved/`, roles + request form) — no account; plain HTML forms posting to `server.mjs` (`/api/feedback`, `/api/contribute`), 303 to `/<lang>/thanks/`. Stored in `feedback.jsonl` beside the counts (Railway: `/data`), no IP/cookies; honeypot field; global rate cap; field length limits; whitelisted topics/roles. The pages say plainly that this text, unlike the draft, is sent. Record pages' "Something wrong here?" now opens the feedback form prefilled (topic + page). Footer: "Give feedback". Read with `npm run feedback` / `railway ssh`.
+- **No GitHub links**: removed from footer ("Source and data"), about, contributors, feedback, get-involved; `REPO`/`reportUrl` removed. Remaining github.com URLs on the site are listed institutions' own contact routes in the research data (e.g. AI Incident Database's report form) — kept as data.
+- "What we count" (How it works) now names the forms as the one exception to "nothing you type is sent".
+- Browser-checked (desktop + phone, form submitted end to end); axe light + dark on the new pages: 0 violations. 74 tests pass. Not yet redeployed.
+
 ### 2026-09-24T00:10:15Z — Redeployed (owner approved); custom domains attached
 
 - Redeployed from source: **v0.1.30 live** (design system, French published, draft notice and footer sentence removed). Verified on https://web-production-ce384.up.railway.app.
@@ -298,4 +309,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-24T00:10:15Z
+Last modified: 2026-09-24T00:16:42Z

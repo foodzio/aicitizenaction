@@ -1,18 +1,20 @@
 ---
 import '../styles/global.css';
 import Icon from '../components/Icon.astro';
-import { ui, languages, REPO } from '../lib/data.mjs';
+import { ui, languages } from '../lib/data.mjs';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { ROOT } from '../../scripts/lib/content.mjs';
 
-const { lang = 'en', title, description = '', current = '', draft = false, noindex = false, hideResources = false } = Astro.props;
+const { lang = 'en', title, description = '', current = '', draft = false, noindex = false } = Astro.props;
 const t = ui(lang);
 const langs = languages();
 const thisLang = langs.find(l => l.code === lang);
 const hide = noindex || !thisLang?.public;
 const version = JSON.parse(readFileSync(join(ROOT, 'version.json'), 'utf8')).version;
 const path = Astro.url.pathname.replace(/^\/[a-z]{2,3}\//, '/');
+// Every other public language, offered in the header on every page (and hidden languages only to themselves).
+const switchTo = langs.filter(l => l.code !== lang && (l.public || !thisLang?.public));
 ---
 <!doctype html>
 <html lang={lang}>
@@ -38,11 +40,15 @@ const path = Astro.url.pathname.replace(/^\/[a-z]{2,3}\//, '/');
         <div class="aca-header-bar">
         <nav class="aca-header-nav" aria-label="Main">
           <a class:list={['aca-nav-link', current === 'start' && 'is-active']} href={`/${lang}/`} aria-current={current === 'start' ? 'page' : undefined}>{t('site.nav_start')}</a>
-          {!hideResources && <a class:list={['aca-nav-link', current === 'resources' && 'is-active']} href={`/${lang}/resources/`} aria-current={current === 'resources' ? 'page' : undefined}>{t('site.nav_resources')}</a>}
+          <a class:list={['aca-nav-link', current === 'resources' && 'is-active']} href={`/${lang}/resources/`} aria-current={current === 'resources' ? 'page' : undefined}>{t('site.nav_resources')}</a>
           <a class:list={['aca-nav-link', current === 'directory' && 'is-active']} href={`/${lang}/directory/`} aria-current={current === 'directory' ? 'page' : undefined}>{t('site.nav_directory')}</a>
           <a class:list={['aca-nav-link', current === 'about' && 'is-active']} href={`/${lang}/about/`} aria-current={current === 'about' ? 'page' : undefined}>{t('site.nav_about')}</a>
+          <a class:list={['aca-nav-link', current === 'involved' && 'is-active']} href={`/${lang}/get-involved/`} aria-current={current === 'involved' ? 'page' : undefined}>{t('site.nav_involved')}</a>
         </nav>
-        <a class="aca-header-utility" href={`/${lang}/about/#privacy`}><Icon name="lock" size={18} />{t('site.nav_privacy')}</a>
+        <div class="aca-header-utils">
+          {switchTo.map(l => <a class="aca-header-lang" href={`/${l.code}${path}`} lang={l.code} hreflang={l.code}>{l.name}</a>)}
+          <a class="aca-header-utility" href={`/${lang}/about/#privacy`}><Icon name="lock" size={18} />{t('site.nav_privacy')}</a>
+        </div>
         </div>
       </div>
     </header>
@@ -61,7 +67,7 @@ const path = Astro.url.pathname.replace(/^\/[a-z]{2,3}\//, '/');
               <>{i > 0 && ' · '}<a href={`/${l.code}${path}`} lang={l.code} aria-current={l.code === lang ? 'true' : undefined}>{l.name}</a></>
             ))} · </span>
           )}
-          <a href={`/${lang}/freshness/`}>{t('site.footer_freshness')}</a> · <a href={`/${lang}/contributors/`}>{t('contributors.footer')}</a> · {t('site.footer_version')} {version} · <a href={REPO}>Source and data</a>
+          <a href={`/${lang}/feedback/`}>{t('site.footer_feedback')}</a> · <a href={`/${lang}/freshness/`}>{t('site.footer_freshness')}</a> · <a href={`/${lang}/contributors/`}>{t('contributors.footer')}</a> · {t('site.footer_version')} {version}
         </p>
       </div>
     </footer>

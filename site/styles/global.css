@@ -44,7 +44,10 @@ small, .muted { color: var(--ink-muted); }
 .aca-nav-link { display: flex; align-items: center; min-height: 44px; font-size: 15px; line-height: 20px; font-weight: 500; color: var(--ink); text-decoration: none; border-bottom: 3px solid transparent; border-top: 3px solid transparent; }
 .aca-nav-link.is-active { font-weight: 600; border-bottom-color: var(--teal); }
 .aca-nav-link:hover { color: var(--teal); }
-.aca-header-utility { margin-left: auto; display: flex; align-items: center; gap: var(--space-2); min-height: 44px; font-size: 15px; line-height: 20px; font-weight: 500; color: var(--teal); text-decoration: none; white-space: nowrap; }
+.aca-header-utils { margin-left: auto; display: flex; align-items: center; gap: var(--space-5); }
+.aca-header-lang { display: flex; align-items: center; min-height: 44px; font-size: 15px; line-height: 20px; font-weight: 600; color: var(--teal); text-decoration: none; white-space: nowrap; }
+.aca-header-lang:hover { text-decoration: underline; }
+.aca-header-utility { display: flex; align-items: center; gap: var(--space-2); min-height: 44px; font-size: 15px; line-height: 20px; font-weight: 500; color: var(--teal); text-decoration: none; white-space: nowrap; }
 .aca-nav-link { white-space: nowrap; }
 @media (min-width: 900px) { .aca-header-nav { gap: 0 var(--space-10); } }
 /* Narrow screens: logo on its own line, then one row of links that scrolls sideways if needed. */
@@ -177,3 +180,7 @@ textarea.draft { min-height: 20rem; }
 
 [hidden] { display: none !important; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Forms (feedback, get involved). The honeypot field is invisible to people and skipped by keyboards. */
+.form { margin: var(--space-4) 0 var(--space-6); }
+.honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }

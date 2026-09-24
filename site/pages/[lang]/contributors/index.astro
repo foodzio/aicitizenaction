@@ -1,7 +1,7 @@
 ---
 // Opt-in only: people with `credit: true` in volunteers/<handle>.yml. No counts, no ranking.
 import Base from '../../../layouts/Base.astro';
-import { ui, languages, REPO } from '../../../lib/data.mjs';
+import { ui, languages } from '../../../lib/data.mjs';
 import { walk, readYaml, ROOT } from '../../../../scripts/lib/content.mjs';
 import { join } from 'node:path';
 
@@ -15,6 +15,6 @@ const people = walk(join(ROOT, 'volunteers')).map(readYaml).filter(v => v?.credi
     <h1>{t('contributors.title')}</h1>
     <p class="lede">{t('contributors.lede')}</p>
     {people.length ? <ul>{people.map(p => <li>{p.handle}{p.status === 'alumni' ? ' (alumni)' : ''}</li>)}</ul> : <p class="muted">{t('contributors.none')}</p>}
-    <p><a href={`${REPO}/issues/new?template=volunteer.yml`} rel="noopener">{t('contributors.volunteer')}</a></p>
+    <p><a href={`/${lang}/get-involved/`}>{t('contributors.volunteer')}</a></p>
   </div>
 </Base>

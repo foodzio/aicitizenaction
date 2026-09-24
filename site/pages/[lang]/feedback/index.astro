@@ -1,0 +1,40 @@
+---
+// Feedback without an account. The form posts to server.mjs (/api/feedback), which keeps only
+// what is typed here — no IP address, no cookies — and redirects to the thank-you page.
+import Base from '../../../layouts/Base.astro';
+import { ui, languages } from '../../../lib/data.mjs';
+export const getStaticPaths = () => languages().map(l => ({ params: { lang: l.code } }));
+const { lang } = Astro.params;
+const t = ui(lang);
+const topics = ['wrong', 'idea', 'broken', 'other'];
+---
+<Base lang={lang} title={t('feedback.title')} current="feedback">
+  <div class="narrow">
+    <h1>{t('feedback.title')}</h1>
+    <p class="lede">{t('feedback.lede')}</p>
+    <p class="notice" id="form-error" hidden>{t('feedback.error')}</p>
+    <form class="form" method="post" action="/api/feedback">
+      <input type="hidden" name="lang" value={lang} />
+      <label for="topic">{t('feedback.topic')}</label>
+      <select id="topic" name="topic">{topics.map(k => <option value={k}>{t(`feedback.topic_${k}`)}</option>)}</select>
+      <label for="message">{t('feedback.message')}</label>
+      <p class="hint" id="message-hint">{t('feedback.message_hint')}</p>
+      <textarea id="message" name="message" required maxlength="4000" rows="7" aria-describedby="message-hint"></textarea>
+      <label for="page">{t('feedback.page')}</label>
+      <input type="text" id="page" name="page" maxlength="300" />
+      <label for="contact">{t('feedback.contact')}</label>
+      <input type="text" id="contact" name="contact" maxlength="200" autocomplete="email" inputmode="email" />
+      <div class="honeypot" aria-hidden="true"><label for="website">Website</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off" /></div>
+      <p class="hint">{t('feedback.sent_note')}</p>
+      <div class="row"><button class="btn" type="submit">{t('feedback.send')}</button></div>
+    </form>
+  </div>
+</Base>
+<script>
+  // Prefill from links such as "Something wrong here?" on a record: ?topic=wrong&page=/en/bodies/…
+  const q = new URLSearchParams(location.search);
+  const topic = document.getElementById('topic'), page = document.getElementById('page');
+  if (q.get('topic') && [...topic.options].some(o => o.value === q.get('topic'))) topic.value = q.get('topic');
+  if (q.get('page')) page.value = q.get('page');
+  if (q.get('error')) document.getElementById('form-error').hidden = false;
+</script>

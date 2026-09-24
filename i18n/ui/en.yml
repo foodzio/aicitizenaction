@@ -11,6 +11,8 @@ strings:
     nav_directory: Directory
     nav_about: How It Works
     nav_privacy: Your Privacy
+    nav_involved: Get Involved
+    footer_feedback: Give feedback
     footer_note: No account, no mailing list, no tracking.
     footer_version: Version
     footer_freshness: How current is this?
@@ -139,6 +141,50 @@ strings:
       orgs: Organisations
   about:
     title: How it works
+  feedback:
+    title: Tell us what you think
+    lede: Something wrong, something missing, an idea, or a page that didn't work — we read every message. No account needed.
+    sent_note: Unlike the message you write to an institution, what you type here is sent to us. We keep only what you put in the form — no IP address, no cookies. Leave the contact box empty if you don't need a reply.
+    topic: What is it about?
+    topic_wrong: Something is wrong or out of date
+    topic_idea: An idea or suggestion
+    topic_broken: Something didn't work
+    topic_other: Something else
+    message: Your message
+    message_hint: If it's about a particular institution or page, say which.
+    page: Which page? (optional)
+    contact: Email, if you'd like a reply (optional)
+    send: Send feedback
+    error: Something was missing — please check the form and try again.
+  involved:
+    title: Get involved
+    lede: This site stays accurate only if people keep it that way. Volunteers look after one country, one subject, one language, or the collection of articles and consultations. A few hours a month is enough.
+    roles_title: What you could look after
+    role_geography: A country or region — keep its committees, regulators and named seats current
+    role_domain: A subject across all countries — for example incident reporting or consultations
+    role_language: A language — translate and review the site
+    role_editor: The Resources collection — choose articles and write the neutral question on each
+    role_other: Something else, or not sure yet
+    how_title: How it works
+    how_body: You look after a small area. Every record has a date by which it must be checked again, and you get a short list of what is due. A handle is enough — you never need to give your real name. Declaring a link to an organisation we list is expected; you simply won't review that organisation's record.
+    form_title: Ask to join
+    role: What would you like to look after?
+    area: Which one?
+    area_hint: For example — Ireland, incident reporting, Portuguese.
+    languages: Languages you read well
+    contact: How can we reach you?
+    contact_hint: An email address or a GitHub username. We use it only to reply.
+    experience: Anything you'd like us to know (optional)
+    conflicts: Do you work for, or have ties to, any organisation listed on this site?
+    conflicts_hint: Declaring it doesn't disqualify you.
+    send: Send request
+    sent_note: What you type here is sent to us and kept only to answer your request. No IP address, no cookies.
+    error: Something was missing — please check the form and try again.
+  thanks:
+    title: Thank you
+    feedback: Your message has reached us. If you left an address, we'll reply.
+    contribute: Your request has reached us. We'll be in touch at the address you gave.
+    back: Back to the start
   notfound:
     title: This page isn't here
     body: It may have moved, or an item may not be published yet. You can start from one question, or search the directory.

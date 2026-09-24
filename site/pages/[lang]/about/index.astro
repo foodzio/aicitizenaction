@@ -1,6 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
-import { data, ui, languages, REPO, SECTIONS, guideText } from '../../../lib/data.mjs';
+import { data, ui, languages, SECTIONS, guideText } from '../../../lib/data.mjs';
 
 export const getStaticPaths = () => languages().map(l => ({ params: { lang: l.code } }));
 const { lang } = Astro.params;
@@ -24,7 +24,7 @@ const S = new Proxy({}, { get: (_, k) => k === 'flow' ? g.strings.flow.map((_, i
     <p>{S.neutral_body}</p>
     <h2>{S.help_title}</h2>
     <p>{S.help_body}</p>
-    <p><a href={`${REPO}/issues/new?template=volunteer.yml`} rel="noopener">{S.help_volunteer}</a> · <a href={`${REPO}/blob/main/CONTRIBUTING.md`} rel="noopener">{S.help_contributing}</a></p>
+    <p><a href={`/${lang}/get-involved/`}>{S.help_volunteer}</a> · <a href={`/${lang}/feedback/`}>{t('site.footer_feedback')}</a></p>
     <h2 id="privacy">{S.count_title}</h2>
     <p>{S.count_body}</p>
     <p><a href="/api/counts">{S.count_link}</a></p>

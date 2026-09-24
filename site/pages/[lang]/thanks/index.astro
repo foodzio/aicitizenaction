@@ -1,0 +1,21 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { ui, languages } from '../../../lib/data.mjs';
+export const getStaticPaths = () => languages().map(l => ({ params: { lang: l.code } }));
+const { lang } = Astro.params;
+const t = ui(lang);
+---
+<Base lang={lang} title={t('thanks.title')} noindex>
+  <div class="narrow">
+    <h1>{t('thanks.title')}</h1>
+    <p class="lede" id="thanks-feedback">{t('thanks.feedback')}</p>
+    <p class="lede" id="thanks-contribute" hidden>{t('thanks.contribute')}</p>
+    <p><a class="btn secondary" href={`/${lang}/`}>{t('thanks.back')}</a></p>
+  </div>
+</Base>
+<script>
+  if (new URLSearchParams(location.search).get('k') === 'contribute') {
+    document.getElementById('thanks-feedback').hidden = true;
+    document.getElementById('thanks-contribute').hidden = false;
+  }
+</script>

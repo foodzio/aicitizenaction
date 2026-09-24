@@ -69,17 +69,13 @@ strings:
     value: Devenir bénévole pour un domaine
     src: a2c72862
     machine: true
-  help_contributing:
-    value: Comment contribuer
-    src: fc6e44a5
-    machine: true
   count_title:
     value: Ce que nous comptons
     src: dd5f5ee1
     machine: true
   count_body:
-    value: Nous comptons combien de personnes arrivent, jusqu'où elles vont et combien repartent avec un message — par jour et par type de préoccupation, sous forme de simples totaux. C'est ainsi que nous savons si le site fonctionne. Nous n'utilisons aucun cookie, ne stockons rien sur votre appareil, ne conservons aucune adresse IP et n'envoyons jamais ce que vous tapez. Les totaux sont publics.
-    src: acc396d3
+    value: Nous comptons combien de personnes arrivent, jusqu'où elles vont et combien repartent avec un message — par jour et par type de préoccupation, sous forme de simples totaux. C'est ainsi que nous savons si le site fonctionne. Nous n'utilisons aucun cookie, ne stockons rien sur votre appareil, ne conservons aucune adresse IP et n'envoyons jamais ce que vous tapez dans le parcours guidé. La seule exception est un message que vous choisissez de nous envoyer via les formulaires d'avis ou de participation — celui-ci est envoyé, et conservé uniquement pour le lire et y répondre. Les totaux sont publics.
+    src: a9541af4
     machine: true
   count_link:
     value: Voir les totaux

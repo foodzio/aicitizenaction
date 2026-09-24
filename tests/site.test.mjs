@@ -66,15 +66,14 @@ test('the data is published: /api/*.json match the content', () => {
   assert.ok(JSON.parse(page('version.json')).version);
 });
 
-test('Resources: only published items get pages; the door has no Resources link', async () => {
+test('Resources: only published items get pages', async () => {
   const { loadContent } = await import('../scripts/lib/content.mjs');
   const media = loadContent('resources/media');
   for (const m of media) {
     const built = existsSync(join(out, 'en/resources/media', m.id, 'index.html'));
     assert.equal(built, m.meta.status === 'published', `${m.id} (${m.meta.status})`);
   }
-  const door = page('en/index.html').split('<main')[0] + page('en/index.html').split('<main')[1];
-  assert.ok(!door.includes('/en/resources/'), 'door links to Resources');
+  // (Owner decision 2026-09-24: the top menu is the same on every page, door included.)
 });
 
 test('Resources: every published item and explainer page leads into the path', () => {
@@ -131,4 +130,26 @@ test('design system: tokens, self-hosted Figtree, logo, and the door uses its co
   assert.ok(readdirSync(join(out, '_astro')).some(f => f.endsWith('.woff2')), 'Figtree woff2 files are bundled');
   const harm = door.indexOf('/en/start/harm/'), join_ = door.indexOf('/en/start/join/');
   assert.ok(harm > 0 && join_ > 0);
+});
+
+test('the top menu is identical on every page, in each language', () => {
+  const navOf = html => (html.match(/<header class="aca-header">[\s\S]*?<\/header>/) ?? [''])[0]
+    .replace(/ class="aca-nav-link is-active"/g, ' class="aca-nav-link"').replace(/ aria-current="page"/g, '');
+  for (const lang of ['en', 'fr']) {
+    const pages = [`${lang}/index.html`, `${lang}/start/law/index.html`, `${lang}/directory/index.html`, `${lang}/resources/index.html`,
+      `${lang}/about/index.html`, `${lang}/feedback/index.html`, `${lang}/get-involved/index.html`, `${lang}/bodies/us-senate-committee-commerce-2/index.html`];
+    const menus = pages.map(p => navOf(page(p)).replace(/href="\/(en|fr)\/[^"]*"/g, m => m.replace(/\/(en|fr)\/.*"/, '/$1/…"')));
+    for (const [i, m] of menus.entries()) assert.equal(m, menus[0], `${pages[i]} menu differs`);
+    for (const link of ['/start', '/resources/', '/directory/', '/about/', '/get-involved/']) assert.ok(page(`${lang}/index.html`).includes(`href="/${lang}${link === '/start' ? '/' : link}"`), link);
+  }
+  assert.match(page('en/index.html'), /class="aca-header-lang" href="\/fr\/" lang="fr"[^>]*>Français/);
+  assert.match(page('fr/index.html'), /class="aca-header-lang" href="\/en\/" lang="en"[^>]*>English/);
+});
+
+test('feedback and contributor pages post to the site, never to GitHub', () => {
+  assert.match(page('en/feedback/index.html'), /<form class="form" method="post" action="\/api\/feedback"/);
+  assert.match(page('en/get-involved/index.html'), /<form class="form" method="post" action="\/api\/contribute"/);
+  for (const f of ['en/index.html', 'en/feedback/index.html', 'en/get-involved/index.html', 'en/about/index.html', 'en/contributors/index.html', 'fr/index.html'])
+    assert.ok(!page(f).includes('github.com/foodzio'), `${f} links to the repository`);
+  assert.match(page('en/bodies/us-senate-committee-commerce-2/index.html'), /href="\/en\/feedback\/\?topic=wrong&amp;page=/);
 });

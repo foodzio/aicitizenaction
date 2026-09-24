@@ -6,7 +6,6 @@ import { loadDirectory, loadContent, loadVocab, vocabLabel, readYaml, walk, I18N
 import { stringsOf, resolveString } from '../../scripts/lib/i18n.mjs';
 import { route, places, contactRoute, membershipRoute, fillTemplate, isNamedPerson } from '../../scripts/lib/routing.mjs';
 
-export const REPO = 'https://github.com/foodzio/aicitizenaction';
 export const SECTIONS = ['bodies', 'channels', 'orgs'];
 
 let cache;
@@ -94,7 +93,6 @@ export function firstSentences(text, n = 2, max = 420) {
 }
 
 export const recordUrl = (lang, r) => `/${lang}/${r._section}/${r.id}/`;
-export const reportUrl = r => `${REPO}/issues/new?template=report-record.yml&record=${encodeURIComponent(r.id)}&title=${encodeURIComponent(`Record: ${r.id}`)}`;
 
 export function isOverdue(r, now = new Date().toISOString().slice(0, 10)) {
   return r.meta?.review_by && r.meta.review_by < now;

@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { createApp, createCounter, summary } from '../server.mjs';
+import { createApp, createCounter, createInbox, summary } from '../server.mjs';
 
 function start(counter, publicDir) {
   const app = createApp({ counter, publicDir });
@@ -71,4 +71,31 @@ test('the page code uses no cookies or device storage', () => {
   const src = readFileSync(new URL('../site/lib/measure.js', import.meta.url), 'utf8').replace(/\/\/.*$/gm, '');
   for (const w of ['document.cookie', 'localStorage', 'sessionStorage', 'indexedDB']) assert.ok(!src.includes(w), w);
   assert.match(src, /credentials: 'omit'/);
+});
+
+test('feedback and contributor forms: stored without IP, bots and bad input rejected, 303 back to the site', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'aica-inbox-'));
+  const file = join(dir, 'feedback.jsonl');
+  const app = createApp({ counter: createCounter(null), inbox: createInbox(file), publicDir: dir });
+  await new Promise(r => app.listen(0, '127.0.0.1', r));
+  const base = `http://127.0.0.1:${app.address().port}`;
+  const send = (path, fields) => fetch(base + path, { method: 'POST', redirect: 'manual', body: new URLSearchParams(fields), headers: { 'x-forwarded-for': '9.9.9.9' } });
+  let r = await send('/api/feedback', { lang: 'fr', topic: 'wrong', message: 'The FTC link is dead', page: '/fr/bodies/x/' });
+  assert.equal(r.status, 303); assert.equal(r.headers.get('location'), '/fr/thanks/?k=feedback');
+  r = await send('/api/feedback', { lang: 'en', topic: 'wrong', message: '' });
+  assert.equal(r.headers.get('location'), '/en/feedback/?error=missing%20message');
+  r = await send('/api/feedback', { lang: 'en', message: 'buy pills', website: 'http://spam' });
+  assert.equal(r.headers.get('location'), '/en/thanks/?k=feedback');           // bots are told it worked
+  r = await send('/api/contribute', { lang: 'en', role: 'geography', area: 'Ireland', contact: 'me@example.org' });
+  assert.equal(r.headers.get('location'), '/en/thanks/?k=contribute');
+  r = await send('/api/contribute', { lang: 'en', role: 'geography' });
+  assert.match(r.headers.get('location'), /get-involved\/\?error=missing%20contact/);
+  r = await send('/api/contribute', { lang: 'en', role: 'admin', contact: 'x@y.z' });
+  assert.match(r.headers.get('location'), /error=role/);
+  const lines = readFileSync(file, 'utf8').trim().split('\n').map(l => JSON.parse(l));
+  assert.equal(lines.length, 2);
+  assert.deepEqual(lines.map(l => l.kind), ['feedback', 'contribute']);
+  assert.ok(!readFileSync(file, 'utf8').includes('9.9.9.9') && !readFileSync(file, 'utf8').includes('127.0.0.1'));
+  assert.ok(!readFileSync(file, 'utf8').includes('buy pills'));
+  app.closeAllConnections(); app.close();
 });

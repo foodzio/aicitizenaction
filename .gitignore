@@ -36,6 +36,8 @@ logs/
 *.png
 # ...except the build-reference renders, which are tracked project assets
 !input/screenshots/*.png
+# ...and the logo files the site serves
+!site/public/brand/*.png
 
 # Temp files (keep folder via .gitkeep)
 tmp/*

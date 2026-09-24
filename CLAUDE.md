@@ -53,13 +53,13 @@ Update this table as the repo grows — it is the map, so a stale map is a bug.
 | `tests/` | `node:test` suites; `helpers.mjs` builds throwaway content trees via `AICA_CONTENT` / `AICA_I18N` |
 | `package.json` | Node scripts and dependencies |
 | `astro.config.mjs` | Astro static site config: `srcDir: site/`, output `dist/` (override with `AICA_OUT`) |
-| `site/` | Site source — developers only. `pages/[lang]/` (door `index`, `start/[outcome]` path, `directory`, `[section]/[id]` records, `about`, `resources`, `freshness`, `contributors`), `pages/api/[section].json.js`, `pages/version.json.js`, `layouts/Base.astro` (design-system SiteHeader), `components/` (Icon, IconDisc, ActionCard, StepMeta, ReassuranceNote), `styles/tokens.css` (design tokens), `public/brand/` (logo), `lib/data.mjs` (build-time data, UI strings, cards, precomputed routing), `lib/measure.js` (completion events, sends nothing), `styles/global.css` |
+| `site/` | Site source — developers only. `pages/[lang]/` (door `index`, `start/[outcome]` path, `directory`, `[section]/[id]` records, `about`, `resources`, `freshness`, `contributors`, `feedback`, `get-involved`, `thanks`), `pages/api/[section].json.js`, `pages/version.json.js`, `layouts/Base.astro` (design-system SiteHeader), `components/` (Icon, IconDisc, ActionCard, StepMeta, ReassuranceNote), `styles/tokens.css` (design tokens), `public/brand/` (logo), `lib/data.mjs` (build-time data, UI strings, cards, precomputed routing), `lib/measure.js` (completion events, sends nothing), `styles/global.css` |
 | `i18n/ui/en.yml` | English source of every interface string; translations go in `i18n/ui/<lang>.yml` |
 | `i18n/fr/` | French pilot: `status.yml` (gate — `ui_approved: true` since 2026-09-24: public, indexed, in the switcher; set `false` to hide a language), `content/guides/…` translated guides. `i18n/ui/fr.yml` holds the UI. Machine translation, published by the owner |
 | `content/resources/` | Resources: `sources/<geo>/` (15 verified feeds, each with a perspective), `media/<yyyy>/<mm>/` (ingested items; only `published` are shown), `explainers/`, `windows/` (dated, expire on `closes_on`) |
 | `site/lib/resources.mjs` | Build-time Resources data, path handoff links |
 | `content/guides/global/` | Our own guidance: `outcomes.yml` (door answers + routing rules), `draft-templates.yml`, `insider.yml`, `about.yml` |
-| `server.mjs` | Production server: serves `dist/` with serve-handler (the code behind `serve`) plus `POST /api/count` and `GET /api/counts` — anonymous daily totals, no cookies, no IPs. `COUNTS_FILE` sets where totals are kept |
+| `server.mjs` | Production server: serves `dist/` with serve-handler (the code behind `serve`) plus `POST /api/count` / `GET /api/counts` (anonymous daily totals) and `POST /api/feedback` / `POST /api/contribute` (form messages appended to `feedback.jsonl` next to the counts; no IPs, no cookies). `COUNTS_FILE`, `FEEDBACK_FILE` set the paths |
 | `nixpacks.toml` | Railway build/start per the owner's convention (`serve dist`) |
 | `CONTRIBUTING.md` | Contributor guide: ways in, editorial rules, first change, roles, review cycles |
 | `docs/stewards/worked-example.md` | A new steward's first hour: one record re-checked, annotated |
@@ -113,6 +113,7 @@ able to work in this repo using only what is written in this section.)_
 - Freshness report: `node scripts/freshness.mjs [--link-state s.json] [--out f.json]`
 - A steward's queue: `node scripts/charter.mjs @handle` or `--path content/bodies/ie/`
 - Steward check-ins: `node scripts/inactivity.mjs --dry-run`
+- Read feedback and contributor requests: `npm run feedback` (local `data/feedback.jsonl`); production: `railway ssh -- cat /data/feedback.jsonl > tmp/feedback.jsonl && npm run feedback -- tmp/feedback.jsonl`
 - Collect Resources: `node scripts/ingest-resources.mjs [--since 21] [--dry-run] [--summary f.md] [--out f.json]`
 - Link check: `node scripts/check-links.mjs [--files f.yml …] [--state s.json] [--out o.json]` (full run ≈ 5 min for ~780 URLs)
 - Point tools at another tree: `AICA_CONTENT=/path/content AICA_I18N=/path/i18n npm run validate`
@@ -215,4 +216,4 @@ List every `HANDOVER.md` in this repo and what it covers, so the map stays true:
 | `HANDOVER.md` | Repo-wide work for `aicitizenaction` |
 | _(add rows as subprojects appear)_ | |
 
-Last modified: 2026-09-23T23:32:05Z
+Last modified: 2026-09-24T00:16:42Z
