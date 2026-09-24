@@ -32,6 +32,7 @@ Update this table as the repo grows — it is the map, so a stale map is a bug.
 | `docs/ux-brief.md` | UX brief: product definition, user portrait, information architecture, screen flow, testable design principles |
 | `docs/content-architecture.md` | Content architecture: content as data, repo layout, record format, translation, freshness, Resources layer, volunteer roles and lifecycle |
 | `docs/implementation-plan.md` | Phased implementation plan for the brief and the architecture, with open decisions and what each blocks |
+| `docs/places-to-contact-audit-plan.md` | Corrective plan to audit all channel records/routes and require deterministic evidence before listing or recommending a Place to Contact |
 | `input/` | Source assets from the Sept 2026 research and build pass — see `input/README.md` for the manifest |
 | `input/data/` | Normalized datasets: institutions, committees and organisations, source index |
 | `input/data/raw/` | Unnormalized output from the ten research agents. Expensive to recreate — do not delete |
@@ -216,4 +217,4 @@ List every `HANDOVER.md` in this repo and what it covers, so the map stays true:
 | `HANDOVER.md` | Repo-wide work for `aicitizenaction` |
 | _(add rows as subprojects appear)_ | |
 
-Last modified: 2026-09-24T00:16:42Z
+Last modified: 2026-09-24T00:26:34Z

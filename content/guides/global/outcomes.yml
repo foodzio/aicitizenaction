@@ -54,7 +54,7 @@ facts:
   eu_members: [at, be, bg, hr, cy, cz, dk, ee, fi, fr, de, gr, hu, ie, it, lv, lt, lu, mt, nl, pl, pt, ro, sk, si, es, se]
   max_recipients: 3
 strings:
-  question: What do you want to happen?
+  question: What do you want to happen with AI?
   outcomes:
     law:
       label: A law or rule about AI

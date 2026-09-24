@@ -68,12 +68,12 @@ strings:
       machine: true
   door:
     title:
-      value: Que voulez-vous qu'il se passe ?
-      src: d24ea023
+      value: Que voulez-vous qu'il se passe avec l'IA ?
+      src: 2a24e6c9
       machine: true
     lede:
-      value: Pas besoin d'être expert. Votre avis compte parce que vous vivez avec les conséquences — pas parce que vous savez évaluer la technologie.
-      src: f4ccee11
+      value: Pas besoin d'être expert. Votre avis compte parce que vous vivez avec les conséquences.
+      src: 50de43a6
       machine: true
     shape:
       value: Trois étapes · environ quinze minutes · vous repartez avec un message prêt à envoyer

@@ -20,8 +20,8 @@ strings:
     translation_fallback: Not yet translated — shown in English.
     translation_machine: Machine translation, not yet reviewed.
   door:
-    title: What do you want to happen?
-    lede: You don't need to be an expert. Your view counts because you live with the results — not because you can evaluate the technology.
+    title: What do you want to happen with AI?
+    lede: You don't need to be an expert. Your view counts because you live with the results.
     shape: Three steps · about fifteen minutes · you leave with a message ready to send
     trust_lead: Nobody will sign you up to anything,
     trust_rest: and nothing you type leaves your device.

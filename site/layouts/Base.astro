@@ -13,8 +13,8 @@ const thisLang = langs.find(l => l.code === lang);
 const hide = noindex || !thisLang?.public;
 const version = JSON.parse(readFileSync(join(ROOT, 'version.json'), 'utf8')).version;
 const path = Astro.url.pathname.replace(/^\/[a-z]{2,3}\//, '/');
-// Every other public language, offered in the header on every page (and hidden languages only to themselves).
-const switchTo = langs.filter(l => l.code !== lang && (l.public || !thisLang?.public));
+// Languages offered in the header dropdown: every public one, plus the current page's own.
+const menuLangs = langs.filter(l => l.public || l.code === lang);
 ---
 <!doctype html>
 <html lang={lang}>
@@ -46,10 +46,23 @@ const switchTo = langs.filter(l => l.code !== lang && (l.public || !thisLang?.pu
           <a class:list={['aca-nav-link', current === 'involved' && 'is-active']} href={`/${lang}/get-involved/`} aria-current={current === 'involved' ? 'page' : undefined}>{t('site.nav_involved')}</a>
         </nav>
         <div class="aca-header-utils">
-          {switchTo.map(l => <a class="aca-header-lang" href={`/${l.code}${path}`} lang={l.code} hreflang={l.code}>{l.name}</a>)}
           <a class="aca-header-utility" href={`/${lang}/about/#privacy`}><Icon name="lock" size={18} />{t('site.nav_privacy')}</a>
         </div>
         </div>
+        {menuLangs.length > 1 && (
+          <details class="aca-lang">
+            <summary aria-label={`${t('site.language')}: ${thisLang?.name ?? lang}`}>
+              <span class="aca-lang-name" lang={lang}>{thisLang?.name ?? lang}</span>
+              <span class="aca-lang-code" aria-hidden="true">{lang.toUpperCase()}</span>
+              <svg class="aca-lang-chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </summary>
+            <ul class="aca-lang-menu">
+              {menuLangs.map(l => (
+                <li><a href={`/${l.code}${path}`} lang={l.code} hreflang={l.code} aria-current={l.code === lang ? 'true' : undefined}>{l.name}</a></li>
+              ))}
+            </ul>
+          </details>
+        )}
       </div>
     </header>
     <main id="main">
@@ -62,14 +75,18 @@ const switchTo = langs.filter(l => l.code !== lang && (l.public || !thisLang?.pu
       <div class="wrap">
         <p>{t('site.footer_note')}</p>
         <p>
-          {langs.filter(l => l.public || l.code === lang).length > 1 && (
-            <span>{t('site.language')}: {langs.filter(l => l.public || l.code === lang).map((l, i) => (
-              <>{i > 0 && ' · '}<a href={`/${l.code}${path}`} lang={l.code} aria-current={l.code === lang ? 'true' : undefined}>{l.name}</a></>
-            ))} · </span>
-          )}
           <a href={`/${lang}/feedback/`}>{t('site.footer_feedback')}</a> · <a href={`/${lang}/freshness/`}>{t('site.footer_freshness')}</a> · <a href={`/${lang}/contributors/`}>{t('contributors.footer')}</a> · {t('site.footer_version')} {version}
         </p>
       </div>
     </footer>
+    <script>
+      // The language menu is a <details>: it works without JavaScript; this only closes it on an
+      // outside click or Escape, as a dropdown should.
+      const lm = document.querySelector('.aca-lang');
+      if (lm) {
+        document.addEventListener('click', e => { if (lm.open && !lm.contains(e.target)) lm.open = false; });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape' && lm.open) { lm.open = false; lm.querySelector('summary').focus(); } });
+      }
+    </script>
   </body>
 </html>

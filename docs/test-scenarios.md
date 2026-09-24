@@ -7,7 +7,7 @@ Base URL: `http://localhost:4321`
 ## A. The door
 
 **A1 — Door is for newcomers.** Open `/`.
-- Redirects to `/en/`. One `h1` "What do you want to happen?".
+- Redirects to `/en/`. One `h1` "What do you want to happen with AI?".
 - Six answers, each a link to `/en/start/<outcome>/`. No institution names, no numbers.
 - Text "You don't need to be an expert" and "Three steps" visible without scrolling.
 - The header has no "Resources" link on this page (it does on other pages).

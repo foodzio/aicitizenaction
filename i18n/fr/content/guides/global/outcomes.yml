@@ -1,8 +1,8 @@
 # fr strings for content/guides/global/outcomes.yml. Strings only — no URLs, no dates, no facts.
 strings:
   question:
-    value: Que voulez-vous qu'il se passe ?
-    src: d24ea023
+    value: Que voulez-vous qu'il se passe avec l'IA ?
+    src: 2a24e6c9
     machine: true
   outcomes:
     law:

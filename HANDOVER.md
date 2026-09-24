@@ -14,6 +14,9 @@ Tracked in git and committed with every step.
 
 - **Plan:** `docs/implementation-plan.md` — implements `docs/ux-brief.md` (the product) and
   `docs/content-architecture.md` (content as data, translation, freshness, Resources, volunteers).
+- **Corrective plan:** `docs/places-to-contact-audit-plan.md` — deterministic review and correction
+  of all 74 channel records and 234 routes before they may be presented or recommended as a
+  “Place to contact.” Plan written; implementation not started.
 - **Goal:** a site that turns alarm about AI into one well-aimed action in one sitting, ending with
   a draft the user sends themselves — maintained by volunteers, multilingual, with a Resources
   collection modelled on the stockspanic resources desk.
@@ -69,6 +72,27 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T00:28:43Z — Language dropdown, header fit, door wording
+
+- **Logo still broken on the live site**: confirmed the live deployment is v0.1.30, from before the `.gitignore` fix (live `/brand/…png` → 404, local → 200). Fixed by the next redeploy.
+- **Language selection is a dropdown at the top right** (`<details class="aca-lang">` in `Base.astro`): current language marked ✓, every public language listed, links to the same page; works without JavaScript; closes on outside click / Escape. Footer language links removed. On phones it sits on the logo row (menu row scrolls sideways beneath); under 400px it shows "EN"/"FR" (full name still announced).
+- Header fit: gaps 24px; single row ≥1100px in both languages, two rows below; logo 30px tall on small phones. Measured at 320–1440px: no clipping or overlap; logo + language share a row from 360px.
+- Door wording (owner): title "What do you want to happen with AI?"; lede "You don't need to be an expert. Your view counts because you live with the results." French updated to match.
+- 74 tests pass; axe light + dark with the menu open: 0 violations. Not yet redeployed.
+
+### 2026-09-24T00:26:34Z — Places to Contact audit plan written
+
+- Added `docs/places-to-contact-audit-plan.md` after the owner reported that topical articles were
+  appearing under “Places to report.”
+- The plan incorporates every reviewed recommendation scored at least 80/100: six deterministic
+  eligibility rules; a route-by-route 74-record/234-route audit; structured acceptance evidence,
+  eligibility, scope and availability; one shared directory/routing predicate; fixed dispositions;
+  schema enforcement; regression tests; risk-based second review; and full reconciliation.
+- Public naming recommendation is “Places to contact”; internal `channels` paths may remain to avoid
+  needless URL/API churn. No content, schema, routing, UI, or production changes have been made yet.
+- Next step: implement Phase 1 of the corrective plan (contract and containment), starting with
+  regression tests for the known article false positives. Do not deploy without owner approval.
 
 ### 2026-09-24T00:16:42Z — Feedback, Get Involved, constant menu, French in header, logo fix, no GitHub links
 
@@ -269,6 +293,9 @@ re-aimed at the alarmed non-expert rather than someone with evidence.
 
 ## What to watch
 
+- **Channel eligibility is currently unsound.** Until `docs/places-to-contact-audit-plan.md` is
+  implemented, a reachable article or non-contact page can be marked verified, listed under “Places
+  to report,” and potentially treated as a contact route. The known scope is 74 records / 234 routes.
 - **Three-state verification.** `true` / `false` / `null` are different. Never collapse `null` into `false`.
 - **`content/` is now the source of truth.** Re-running `npm run migrate` overwrites `content/bodies|channels|orgs`. Do not re-run it once anyone has edited content by hand.
 - **Duplicates** (40 pairs) need a human decision; see `docs/migration-report.md`.
@@ -309,4 +336,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-24T00:16:42Z
+Last modified: 2026-09-24T00:28:43Z

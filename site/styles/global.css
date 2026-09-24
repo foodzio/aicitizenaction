@@ -34,7 +34,7 @@ small, .muted { color: var(--ink-muted); }
 
 /* ── SiteHeader ─────────────────────────────────────────────────────────── */
 .aca-header { background: var(--surface); border-bottom: 1px solid var(--line); }
-.aca-header .wrap { min-height: var(--header-height); display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-10); }
+.aca-header .wrap { min-height: var(--header-height); display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-6); }
 .aca-header-logo { display: flex; align-items: center; text-decoration: none; color: var(--ink); padding: var(--space-3) 0; }
 .aca-header-logo img { display: block; height: 40px; width: auto; }
 .aca-header-name { font-size: 24px; font-weight: 700; letter-spacing: -0.01em; display: none; }
@@ -45,17 +45,31 @@ small, .muted { color: var(--ink-muted); }
 .aca-nav-link.is-active { font-weight: 600; border-bottom-color: var(--teal); }
 .aca-nav-link:hover { color: var(--teal); }
 .aca-header-utils { margin-left: auto; display: flex; align-items: center; gap: var(--space-5); }
-.aca-header-lang { display: flex; align-items: center; min-height: 44px; font-size: 15px; line-height: 20px; font-weight: 600; color: var(--teal); text-decoration: none; white-space: nowrap; }
-.aca-header-lang:hover { text-decoration: underline; }
 .aca-header-utility { display: flex; align-items: center; gap: var(--space-2); min-height: 44px; font-size: 15px; line-height: 20px; font-weight: 500; color: var(--teal); text-decoration: none; white-space: nowrap; }
 .aca-nav-link { white-space: nowrap; }
-@media (min-width: 900px) { .aca-header-nav { gap: 0 var(--space-10); } }
-/* Narrow screens: logo on its own line, then one row of links that scrolls sideways if needed. */
-@media (max-width: 899px) {
+@media (min-width: 1100px) { .aca-header-nav { gap: 0 var(--space-6); } }
+/* Narrower screens: logo and language on the first line, then one row of links that scrolls sideways if needed. */
+@media (max-width: 1099px) {
   .aca-header .wrap { row-gap: 0; }
   .aca-header-bar { flex: 1 1 100%; overflow-x: auto; scrollbar-width: none; gap: var(--space-5); }
   .aca-header-bar::-webkit-scrollbar { display: none; }
   .aca-header-nav { gap: 0 var(--space-5); }
+}
+/* Language dropdown, top right. */
+.aca-lang { position: relative; order: 3; }
+.aca-lang summary { list-style: none; display: flex; align-items: center; gap: var(--space-1); min-height: 44px; padding: 0 var(--space-3); border: 1px solid var(--line-cool); border-radius: var(--radius-card); background: var(--surface-cool); font-size: 15px; line-height: 20px; font-weight: 600; color: var(--ink); cursor: pointer; white-space: nowrap; }
+.aca-lang summary::-webkit-details-marker { display: none; }
+.aca-lang summary:hover { border-color: var(--teal); }
+.aca-lang[open] .aca-lang-chevron { transform: rotate(180deg); }
+.aca-lang-menu { position: absolute; right: 0; top: calc(100% + var(--space-1)); z-index: 20; min-width: 160px; list-style: none; margin: 0; padding: var(--space-1); background: var(--surface); border: 1px solid var(--line-cool); border-radius: var(--radius-card); }
+.aca-lang-menu a { display: flex; align-items: center; min-height: 44px; padding: 0 var(--space-3); border-radius: 4px; color: var(--ink); text-decoration: none; font-size: 15px; font-weight: 500; }
+.aca-lang-menu a:hover { background: var(--teal-soft); }
+.aca-lang-menu a[aria-current="true"] { font-weight: 700; color: var(--teal-deep); }
+.aca-lang-menu a[aria-current="true"]::after { content: "✓"; margin-left: auto; padding-left: var(--space-3); }
+.aca-header-bar { order: 2; }
+@media (max-width: 1099px) {
+  .aca-lang { order: 2; margin-left: auto; }          /* phones: on the logo row, right-aligned */
+  .aca-header-bar { order: 3; }
 }
 /* The logo PNG has the light surface baked in; on dark grounds show the wordmark instead. */
 @media (prefers-color-scheme: dark) {
@@ -184,3 +198,11 @@ textarea.draft { min-height: 20rem; }
 /* Forms (feedback, get involved). The honeypot field is invisible to people and skipped by keyboards. */
 .form { margin: var(--space-4) 0 var(--space-6); }
 .honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+/* Small phones: a slightly smaller logo so the logo and the language menu share the first row. */
+@media (max-width: 480px) {
+  .aca-header-logo img { height: 30px; }
+  .aca-header-name { font-size: 20px; }
+  .aca-lang summary { padding: 0 var(--space-2); }
+}
+.aca-lang-code { display: none; }
+@media (max-width: 400px) { .aca-lang-name { display: none; } .aca-lang-code { display: inline; } }

@@ -142,8 +142,13 @@ test('the top menu is identical on every page, in each language', () => {
     for (const [i, m] of menus.entries()) assert.equal(m, menus[0], `${pages[i]} menu differs`);
     for (const link of ['/start', '/resources/', '/directory/', '/about/', '/get-involved/']) assert.ok(page(`${lang}/index.html`).includes(`href="/${lang}${link === '/start' ? '/' : link}"`), link);
   }
-  assert.match(page('en/index.html'), /class="aca-header-lang" href="\/fr\/" lang="fr"[^>]*>Français/);
-  assert.match(page('fr/index.html'), /class="aca-header-lang" href="\/en\/" lang="en"[^>]*>English/);
+  // Language dropdown, top right, on every page: both languages, the current one marked.
+  for (const [lang, other, name] of [['en', 'fr', 'Français'], ['fr', 'en', 'English']]) {
+    const html = page(`${lang}/directory/index.html`);
+    assert.match(html, /<details class="aca-lang">/);
+    assert.match(html, new RegExp(`<a href="/${other}/directory/" lang="${other}" hreflang="${other}">${name}</a>`));
+    assert.match(html, new RegExp(`href="/${lang}/directory/" lang="${lang}" hreflang="${lang}" aria-current="true"`));
+  }
 });
 
 test('feedback and contributor pages post to the site, never to GitHub', () => {
