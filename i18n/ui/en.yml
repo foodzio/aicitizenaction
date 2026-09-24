@@ -93,6 +93,7 @@ strings:
     seats: Named seats
     sources: Sources
     report: Something wrong here?
+    not_contact: This record is preserved as reference material. It is not a current contact destination and is excluded from Places to contact and recommendations.
     last_checked: Last checked
     review_by: Next check due
     fields:
@@ -127,17 +128,26 @@ strings:
       scale: Size
       spending: Spending
       caution: Worth knowing
+  contact:
+    open: Open contact route
+    limited: Limited contact route
+    closed: Closed contact route
+    none: Reference only — not a contact route
+    unknown: Contact route not verified
+    eligible: Who may use it
+    restrictions: Restrictions
+    evidence: Evidence that this route accepts contact
   directory:
     title: Directory
-    lede: Every institution, committee, reporting channel and organisation in our research, with how to reach them and when each fact was last checked.
+    lede: Institutions, committees, organisations, and contact points that explicitly accept concerns, complaints, reports, evidence, or feedback. Every contact listing says who may use it, what it accepts, and when we last checked it.
     search: Search by name or subject
     all_sections: Everything
     all_places: All places
-    only_verified: Only records with a verified route
+    only_verified: Only show currently verified contact routes
     results: results
     sections:
       bodies: Bodies with power
-      channels: Places to report
+      channels: Places to contact
       orgs: Organisations
   about:
     title: How it works

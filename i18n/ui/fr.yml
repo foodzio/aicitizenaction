@@ -350,6 +350,10 @@ strings:
       value: Une erreur ?
       src: 833f1a76
       machine: true
+    not_contact:
+      value: Cette fiche est conservée comme référence. Elle n’est pas un point de contact actuel et n’apparaît ni dans les lieux à contacter ni dans les recommandations.
+      src: 8e9af29c
+      machine: true
     last_checked:
       value: Dernière vérification
       src: 0c0c351a
@@ -483,14 +487,47 @@ strings:
         value: Bon à savoir
         src: fb9d610f
         machine: true
+  contact:
+    open:
+      value: Contact ouvert
+      src: 8ffce9a6
+      machine: true
+    limited:
+      value: Contact à accès limité
+      src: 90df021a
+      machine: true
+    closed:
+      value: Contact fermé
+      src: 7c14be41
+      machine: true
+    none:
+      value: Référence uniquement — pas un moyen de contact
+      src: 80ea300c
+      machine: true
+    unknown:
+      value: Moyen de contact non vérifié
+      src: 68d0ce67
+      machine: true
+    eligible:
+      value: Qui peut l’utiliser
+      src: 2faf1ec7
+      machine: true
+    restrictions:
+      value: Restrictions
+      src: 25ed7728
+      machine: true
+    evidence:
+      value: Preuve que ce moyen accepte les prises de contact
+      src: 786ba289
+      machine: true
   directory:
     title:
       value: Annuaire
       src: c8f84c3c
       machine: true
     lede:
-      value: Toutes les institutions, commissions, voies de signalement et organisations de nos recherches, avec le moyen de les joindre et la date de dernière vérification de chaque information.
-      src: 965efbfa
+      value: Institutions, commissions, organisations et points de contact qui acceptent explicitement des préoccupations, plaintes, signalements, témoignages ou retours. Chaque fiche indique qui peut les contacter, ce qu’ils acceptent et la date de notre dernière vérification.
+      src: cf42e5d1
       machine: true
     search:
       value: Rechercher par nom ou par sujet
@@ -505,8 +542,8 @@ strings:
       src: b4c2045f
       machine: true
     only_verified:
-      value: Seulement les fiches avec un moyen de contact vérifié
-      src: 24d92afc
+      value: Afficher uniquement les moyens de contact actuellement vérifiés
+      src: "02719e58"
       machine: true
     results:
       value: résultats
@@ -518,8 +555,8 @@ strings:
         src: 9f051ed8
         machine: true
       channels:
-        value: Où signaler
-        src: e43ec5b8
+        value: Lieux à contacter
+        src: 7f79fcfa
         machine: true
       orgs:
         value: Organisations

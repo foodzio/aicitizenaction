@@ -16,7 +16,7 @@ Tracked in git and committed with every step.
   `docs/content-architecture.md` (content as data, translation, freshness, Resources, volunteers).
 - **Corrective plan:** `docs/places-to-contact-audit-plan.md` — deterministic review and correction
   of all 74 channel records and 234 routes before they may be presented or recommended as a
-  “Place to contact.” Phases 1–4 are done; public interface/routing convergence (Phase 5) is next.
+  “Place to contact.” Phases 1–5 are done; final verification (Phase 6) is next.
 - **Goal:** a site that turns alarm about AI into one well-aimed action in one sitting, ending with
   a draft the user sends themselves — maintained by volunteers, multilingual, with a Resources
   collection modelled on the stockspanic resources desk.
@@ -45,7 +45,8 @@ Tracked in git and committed with every step.
 | Contact audit 2 — Schema and inventory | **done** | Route contact schema, validator checks, generated 74-record/234-route reconciliation inventory |
 | Contact audit 3 — Full channel audit | **done** | 74 records / 234 routes reviewed; 84 eligible, 150 ineligible; no pending decisions |
 | Contact audit 4 — Correct/reclassify | **done** | 8 misleading informational records disabled as recipients and preserved as Resources; reference-only companies retained internally |
-| Contact audit 5–6 | **not started** | UI/routing convergence and final verification |
+| Contact audit 5 — UI/routing convergence | **done** | Public label, directory, API, record pages and send-to cards share audited eligibility and show restrictions/evidence |
+| Contact audit 6 — Final verification | **not started** | Browser/accessibility QA, final reconciliation and release report; deployment still needs owner approval |
 
 ## Judgement calls made without the owner (reverse any of them)
 
@@ -77,6 +78,26 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T00:41:14Z — Contact audit Phase 5: public surfaces use the audit
+
+- Renamed the public category to “Places to contact” / “Lieux à contacter” and rewrote the lede and
+  verified-only control to state the actual contract.
+- Added `placeToContact()` as the one public eligibility predicate. Directory and
+  `/api/channels.json` now publish only the 52 audited records with a qualifying route; the API
+  reports `excluded_count: 22`. All 74 source records remain available internally and by direct
+  record URL for provenance.
+- Record pages distinguish open/limited contact routes from reference-only, unknown and closed
+  routes; they show audience, restrictions, evidence and check date. Reclassified pages carry an
+  explicit “not a current contact destination” notice.
+- Action cards and “Send it to” now expose structured contact status, audience, restrictions and
+  evidence when available. Routing already uses the same eligible route gate; the Argentina bill
+  attachment regression proves it is absent even for a manually supplied `where=ar` URL.
+- Updated English and French UI with current translation hashes; 232/232 French UI strings current.
+- API/directory/article/Argentina regression scenarios added. `npm run check`, production build
+  (920 pages), audit freshness and whitespace checks pass.
+- Phase 6 next: run final browser and accessibility QA, write the updated results/reconciliation,
+  and stop before deployment unless the owner separately approves it.
 
 ### 2026-09-24T00:37:39Z — Contact audit Phase 4: misleading destinations reclassified
 

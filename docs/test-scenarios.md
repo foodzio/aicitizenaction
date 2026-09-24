@@ -61,7 +61,9 @@ Base URL: `http://localhost:4321`
 
 **D1 — Search.** `/en/directory/`: type "Ofcom" → the results count drops and Ofcom appears. URL gains `q=Ofcom`.
 
-**D2 — Filters.** Choose type "Places to report" and place "United States" → only US channels; tick "Only records with a verified route" → count does not increase.
+**D2 — Filters.** Choose type "Places to contact" and place "United States" → only audited US contact destinations; tick "Only show currently verified contact routes" → count does not increase because the category already requires one.
+
+**D2a — False-positive exclusions.** “The perils of AI safety's insularity,” “In-House Evaluation Is Not Enough,” and “To Err is AI” do not appear under Places to contact. Their useful material appears under Resources instead.
 
 **D3 — Record page.** Open `/en/bodies/us-senate-committee-commerce-2/`: named seats with dates; membership link with badge; routes with Verified/Unverified/Unchecked badges and dates; "Last checked" and "Next check due"; a "Something wrong here?" link to a GitHub issue form with the record id prefilled.
 
@@ -97,7 +99,11 @@ Base URL: `http://localhost:4321`
 
 **G2 — Freshness.** `/en/freshness/`: overall percentage, section and country tables, Resources perspective balance, translations line.
 
-**G3 — Data API.** `/api/bodies.json` returns JSON with `count` 250; `/api/orgs.json` 99; `/api/channels.json` 74; `/version.json` has a version.
+**G3 — Data API.** `/api/bodies.json` returns JSON with `count` 250; `/api/orgs.json` 99; `/api/channels.json` returns the audited public contact set (`count` 52, `excluded_count` 22); `/version.json` has a version.
+
+**G4 — Contact contract.** Every `/api/channels.json` record has `facts.contact_disposition: keep` and at least one reviewed route with status `open` or `limited`, audience, accepted subjects, evidence URL/note and check date.
+
+**B9 — No document as an address.** Open `/en/start/record/?where=ar&step=3`: the Argentina AI-governance record and its Chamber of Deputies bill attachment are never shown under “Send it to.” A manually supplied unsupported country falls back to the honest global result.
 
 **G4 — No third-party requests.** On `/en/`, `/en/start/law/?where=us&step=2` and `/en/resources/`, every network request goes to localhost.
 

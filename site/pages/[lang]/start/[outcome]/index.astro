@@ -185,7 +185,11 @@ const steps = [t('path.step1'), t('path.step2'), t('path.step3'), t('path.step4'
       if (!c) return '';
       const href = c.isUrl ? c.value : /@/.test(c.value) ? `mailto:${c.value}` : '';
       const val = href ? `<a href="${esc(href)}" rel="noopener">${esc(c.value)}</a>` : esc(c.value);
-      return `<div>${esc(c.label || c.type)}</div><div>${val}</div><div class="meta-line">${badge(c.verified, c.verifiedOn)}${c.language ? ` · ${esc(T['verify.language'])}: ${esc(c.language)}` : ''}</div>`;
+      const status = c.status ? `<span class="badge v-true">${esc(T['contact.' + c.status])}${c.evidenceChecked ? ` · ${esc(c.evidenceChecked)}` : ''}</span>` : badge(c.verified, c.verifiedOn);
+      const eligible = c.eligibleUsers?.length ? `<div class="meta-line"><strong>${esc(T['contact.eligible'])}:</strong> ${esc(c.eligibleUsers.join(', '))}</div>` : '';
+      const restrictions = c.restrictions ? `<div class="meta-line"><strong>${esc(T['contact.restrictions'])}:</strong> ${esc(c.restrictions)}</div>` : '';
+      const evidence = c.evidenceUrl ? `<div class="meta-line"><a href="${esc(c.evidenceUrl)}" rel="noopener">${esc(T['contact.evidence'])}</a></div>` : '';
+      return `<div>${esc(c.label || c.type)}</div><div>${val}</div><div class="meta-line">${status}${c.language ? ` · ${esc(T['verify.language'])}: ${esc(c.language)}` : ''}</div>${eligible}${restrictions}${evidence}`;
     }
     function cardHtml(r, primary) {
       const seats = r.seats.length ? `<dt>${esc(T['path.people'])}</dt><dd>${r.seats.map(s => `${esc(s.name)} (${esc(s.role)}${s.party ? ', ' + esc(s.party) : ''}${s.region ? ', ' + esc(s.region) : ''}) <span class="meta-line">· ${esc(T['path.checked'])} ${esc(s.verifiedOn)}</span>`).join('<br>')}${r.membership ? `<br><a href="${esc(r.membership)}" rel="noopener">${esc(T['path.membership'])}</a>` : ''}</dd>` : '';

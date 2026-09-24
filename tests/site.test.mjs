@@ -6,6 +6,7 @@ import { mkdtempSync, readFileSync, readdirSync, statSync, existsSync } from 'no
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { ROOT, loadDirectory } from '../scripts/lib/content.mjs';
+import { placeToContact } from '../scripts/lib/routing.mjs';
 
 const out = mkdtempSync(join(tmpdir(), 'aica-site-'));
 const page = p => readFileSync(join(out, p), 'utf8');
@@ -61,9 +62,34 @@ test('path pages carry precomputed routing and the draft keeps the user\'s own w
 test('the data is published: /api/*.json match the content', () => {
   for (const s of ['bodies', 'channels', 'orgs']) {
     const j = JSON.parse(page(`api/${s}.json`));
-    assert.equal(j.count, records.filter(r => r._section === s).length);
+    const all = records.filter(r => r._section === s);
+    const expected = s === 'channels' ? all.filter(placeToContact) : all;
+    assert.equal(j.count, expected.length);
+    assert.equal(j.excluded_count, all.length - expected.length);
   }
   assert.ok(JSON.parse(page('version.json')).version);
+});
+
+test('Places to contact publishes only audited destinations', () => {
+  const html = page('en/directory/index.html');
+  assert.match(html, /Places to contact/);
+  assert.match(html, /Only show currently verified contact routes/);
+  assert.ok(!html.includes('The perils of AI safety&#39;s insularity'), 'article is absent from the directory');
+  const api = JSON.parse(page('api/channels.json'));
+  assert.equal(api.count, 52);
+  assert.equal(api.excluded_count, 22);
+  assert.ok(api.records.every(r => r.facts.contact_disposition === 'keep'));
+  assert.match(page('en/channels/global-perils-ai-safety-s-insularity-why/index.html'), /not a current contact destination/i);
+  const valid = page('en/channels/global-ai-incident-database/index.html');
+  assert.match(valid, /Open contact route|Limited contact route/);
+  assert.match(valid, /Evidence that this route accepts contact/);
+});
+
+test('regression: Argentina bill attachment is never offered as the send-to address', () => {
+  const json = JSON.parse(page('en/start/record/index.html').match(/id="payload">([\s\S]*?)<\/script>/)[1]);
+  const argentina = json.byPlace.ar;
+  assert.ok(!argentina || argentina.recipients.every(r => r.id !== 'ar-argentina-ai-governance'));
+  for (const result of Object.values(json.byPlace)) assert.ok(result.recipients.every(r => r.contact?.verified === true));
 });
 
 test('Resources: only published items get pages', async () => {

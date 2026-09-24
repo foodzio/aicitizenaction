@@ -79,6 +79,11 @@ export function matches(record, match) {
 
 export const recommendable = record => record.facts?.recommend !== false && !record.meta?.unsourced && !!contactRoute(record);
 
+/** Public Places to Contact contains only audited channel records with an eligible route. */
+export const placeToContact = record => record._section === 'channels'
+  && record.facts?.contact_disposition === 'keep'
+  && !!contactRoute(record);
+
 /** A seat-holder name that is a real person, not a placeholder like "Not applicable". */
 export const isNamedPerson = name => !!name && !/^(not applicable|none|n\/a|vacant|not verified|unknown)/i.test(String(name).trim());
 

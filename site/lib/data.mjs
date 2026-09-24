@@ -4,7 +4,7 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadDirectory, loadContent, loadVocab, vocabLabel, readYaml, walk, I18N, ROOT } from '../../scripts/lib/content.mjs';
 import { stringsOf, resolveString } from '../../scripts/lib/i18n.mjs';
-import { route, places, contactRoute, membershipRoute, fillTemplate, isNamedPerson } from '../../scripts/lib/routing.mjs';
+import { route, places, contactRoute, membershipRoute, fillTemplate, isNamedPerson, placeToContact } from '../../scripts/lib/routing.mjs';
 
 export const SECTIONS = ['bodies', 'channels', 'orgs'];
 
@@ -125,7 +125,13 @@ export function card(r, lang) {
       verified: contact.verified,
       verifiedOn: contact.verified_on ?? null,
       language: contact.language ?? null,
-      isUrl: /^https?:\/\//.test(contact.value)
+      isUrl: /^https?:\/\//.test(contact.value),
+      status: contact.contact?.status ?? null,
+      directness: contact.contact?.directness ?? null,
+      eligibleUsers: contact.contact?.eligible_users ?? [],
+      restrictions: contact.contact?.restrictions ?? null,
+      evidenceUrl: contact.contact?.evidence_url ?? null,
+      evidenceChecked: contact.contact?.checked_on ?? null
     },
     membership: member?.value ?? null,
     seats: (r.facts.seats ?? []).filter(x => isNamedPerson(x.name)).map(x => ({ role: x.role, name: x.name, party: x.party ?? '', region: x.region ?? '', verifiedOn: x.verified_on })),
@@ -172,4 +178,4 @@ export function placeOptions(lang) {
   return { countries, states };
 }
 
-export { fillTemplate, ROOT };
+export { fillTemplate, placeToContact, ROOT };

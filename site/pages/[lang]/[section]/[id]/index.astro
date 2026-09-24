@@ -22,6 +22,7 @@ const fieldOrder = ['remit', 'ai_jurisdiction', 'the_ask', 'what_they_do', 'powe
 const fields = fieldOrder.filter(k => text(k));
 const membership = r.facts.routes.find(x => x.type === 'membership' && x.value);
 const routes = r.facts.routes.filter(x => x !== membership);
+const contactEligible = x => ['open', 'limited'].includes(x.contact?.status) && x.contact?.review === 'reviewed';
 const fallback = Object.values(s).some(x => x.state === 'fallback' || x.state === 'stale') && lang !== 'en';
 const href = v => /^https?:\/\//.test(v) ? v : /@/.test(v) ? `mailto:${v}` : null;
 ---
@@ -39,6 +40,7 @@ const href = v => /^https?:\/\//.test(v) ? v : /@/.test(v) ? `mailto:${v}` : nul
       </dl>
       {isOverdue(r) && <p class="notice">{t('verify.overdue')} {r.meta.review_by}.</p>}
       {r.meta.unsourced && <p class="notice">{t('verify.unsourced')}</p>}
+      {section === 'channels' && r.facts.contact_disposition !== 'keep' && <p class="notice">{t('record.not_contact')}</p>}
       {fallback && <p class="notice">{t('site.translation_fallback')}</p>}
     </div>
 
@@ -62,7 +64,13 @@ const href = v => /^https?:\/\//.test(v) ? v : /@/.test(v) ? `mailto:${v}` : nul
             <div><strong>{text(`routes.${x.id}.label`) || vocabLabel(vocab, 'route-types', x.type)}</strong> <span class="meta-line">· {vocabLabel(vocab, 'route-types', x.type)}</span></div>
             {x.language && <div class="meta-line">{t('verify.language')}: {x.language}</div>}
             <div>{x.value ? (href(x.value) ? <a href={href(x.value)} rel="noopener">{x.value}</a> : x.value) : <em class="muted">—</em>}</div>
-            <div class="meta-line"><span class={`badge v-${x.verified}`} title={t(`verify.${x.verified}_hint`)}>{t(`verify.${x.verified}`)}{x.verified_on && ` · ${x.verified_on}`}</span></div>
+            <div class="meta-line">
+              {x.contact ? <span class={`badge v-${contactEligible(x)}`}>{t(`contact.${x.contact.status}`)}{x.contact.checked_on && ` · ${x.contact.checked_on}`}</span>
+                : <span class={`badge v-${x.verified}`} title={t(`verify.${x.verified}_hint`)}>{t(`verify.${x.verified}`)}{x.verified_on && ` · ${x.verified_on}`}</span>}
+            </div>
+            {x.contact?.eligible_users?.length > 0 && <p class="meta-line"><strong>{t('contact.eligible')}:</strong> {x.contact.eligible_users.join(', ')}</p>}
+            {x.contact?.restrictions && <p class="meta-line"><strong>{t('contact.restrictions')}:</strong> {x.contact.restrictions}</p>}
+            {x.contact?.evidence_url && <p class="meta-line"><a href={x.contact.evidence_url} rel="noopener">{t('contact.evidence')}</a>{x.contact.checked_on && ` · ${x.contact.checked_on}`}</p>}
             {text(`routes.${x.id}.scope`) && <p class="meta-line">{text(`routes.${x.id}.scope`)}</p>}
             {text(`routes.${x.id}.note`) && <p class="meta-line">{text(`routes.${x.id}.note`)}</p>}
           </li>
