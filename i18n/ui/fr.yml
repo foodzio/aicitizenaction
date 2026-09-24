@@ -241,8 +241,8 @@ strings:
       src: bbcfa109
       machine: true
     send_to:
-      value: À envoyer à
-      src: 7071fd5b
+      value: Comment l’envoyer
+      src: "29464145"
       machine: true
     copy:
       value: Copier le message

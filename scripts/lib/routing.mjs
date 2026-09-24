@@ -25,12 +25,12 @@ export function isUsableValue(v) {
 // A conservative compatibility gate used while legacy records are being given structured
 // contact evidence. These phrases are an explicit statement that the record is not a current
 // inbound destination; a route must never outrank the record's own warning.
-const CONTRADICTION = /^(?:n\/?a\b|nothing\b|not enacted\b)|\b(?:no (?:identified |verified |public )?(?:contact|channel|submission)|does not accept|doesn't accept|accepts nothing|outbound[- ]only|window has closed)\b/i;
+const CONTRADICTION = /^(?:n\/?a\b|nothing\b|not enacted\b)|\b(?:no (?:identified |verified |public )?(?:contact|channel|submission)|does not accept|doesn't accept|accepts nothing|outbound[- ]only|window has closed|no open consultation|could not confirm an open|most recent (?:verified )?(?:one|window|consultation) closed)\b/i;
 
 function legacyContradiction(record, route) {
   const s = record.strings ?? {};
   const rs = s.routes?.[route.id] ?? {};
-  return [s.accepts, s.how, s.timing, s.reality_check, rs.scope, rs.note]
+  return [s.accepts, s.how, s.timing, s.reality_check, s.note, rs.scope, rs.note]
     .filter(Boolean).some(x => CONTRADICTION.test(String(x).trim()));
 }
 

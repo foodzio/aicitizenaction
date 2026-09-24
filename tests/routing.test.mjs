@@ -68,6 +68,13 @@ test('regression: a bill attachment is not a contact route', () => {
   assert.equal(recommendable(argentina), false);
 });
 
+test('a consultation listing with no currently open window is not a send-to route', () => {
+  const meity = records.find(r => r.id === 'in-ministry-electronics-information-technology');
+  assert.ok(meity);
+  assert.match(meity.strings.note, /could not confirm an open consultation/i);
+  assert.equal(contactRoute(meity), null);
+});
+
 test('regression: topical articles and papers are not contact destinations', () => {
   for (const id of [
     'global-perils-ai-safety-s-insularity-why',
@@ -155,4 +162,24 @@ test('regression (QA B7): "somewhere else" offers international bodies, never a 
   }
   assert.equal(isNamedPerson('Not applicable'), false);
   assert.equal(isNamedPerson('Ted Cruz'), true);
+});
+
+test('every routed recipient in every available place has a verified, non-document destination or explicit submission instructions', () => {
+  const where = [{}, { country: 'zz' }];
+  const available = new Map();
+  for (const r of records.filter(recommendable)) {
+    if (r.geo.country !== 'global') available.set(`${r.geo.country}/${r.geo.sub ?? ''}`, { country: r.geo.country, ...(r.geo.sub && !['federal', 'multistate'].includes(r.geo.sub) ? { sub: r.geo.sub } : {}) });
+  }
+  where.push(...available.values());
+  for (const o of oc.outcomes) for (const w of where) for (const r of route(o, w, records, opts).recipients) {
+    const c = contactRoute(r);
+    assert.equal(c?.verified, true, `${o.id}/${JSON.stringify(w)}: ${r.id}`);
+    assert.notEqual(r.facts.public_input, 'none', r.id);
+    const value = String(c.value);
+    assert.ok(!/arxiv\.org|transformernews|\/adjuntos\//i.test(value), `${r.id}: ${value}`);
+    if (/\.pdf(?:$|\?)/i.test(value)) {
+      const instructions = `${r.strings.public_route ?? ''} ${r.strings.routes?.[c.id]?.note ?? ''}`;
+      assert.match(instructions, /submit|testimony|witness|upload|email|account/i, `${r.id}: PDF without explicit submission instructions`);
+    }
+  }
 });

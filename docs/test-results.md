@@ -1,6 +1,27 @@
 # Test results
 
-*Browser scenario runs from `docs/test-scenarios.md`, executed by a QA subagent through Playwright MCP against the local build. Latest update 2026-09-23T02:01:40Z.*
+*Browser scenario results against local production builds. Latest update 2026-09-24T00:44:22Z.*
+
+## Focused contact-integrity run — 2026-09-24
+
+25 PASS · 0 FAIL against the local production build at 390×844 in Chrome for Testing 151. The
+repeatable runner is `scripts/qa-contact-audit.mjs`; screenshots and JSON evidence are written to
+`tmp/qa-contact/`.
+
+| Area | Result | Evidence |
+| --- | --- | --- |
+| Directory | PASS | Public label is “Places to contact”; only 52 audited destinations appear; the three reported article/paper examples are absent; total directory count is 401 rather than presenting all 423 source records as actionable. |
+| Valid contact record | PASS | Status, eligible users, restrictions where applicable, acceptance evidence, and check date are displayed. |
+| Reclassified record | PASS | The Transformer article page warns that it is reference material and not a current destination; its useful content is available as a Resource. |
+| Argentina regression | PASS | `/en/start/record/?where=ar&step=3` does not contain the Chamber bill attachment or the false recipient; it uses the honest global fallback and labels the section “How to send it.” |
+| API | PASS | `/api/channels.json`: `count: 52`, `excluded_count: 22`; every public record has `contact_disposition: keep` and a reviewed open/limited route. |
+| French | PASS | Directory uses “Lieux à contacter” and the verified-contact wording; all 232 UI strings are current. |
+| Accessibility | PASS | Four affected pages, light and dark: zero axe violations; no mobile horizontal overflow. |
+| Console/build | PASS | No browser-run failures; production build completes with 920 pages. |
+
+Automated completion checks: `npm run check` passes 85/85 tests; content validation has 0 errors
+(four pre-existing warnings: two overdue records and two unsourced records); the 74-record/234-route
+audit has zero pending decisions and passes its freshness check.
 
 ## Run 1 — 2026-09-23
 

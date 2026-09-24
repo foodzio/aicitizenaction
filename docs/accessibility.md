@@ -36,3 +36,21 @@
 - Screen-reader walkthrough of the path (VoiceOver, TalkBack) with a real user.
 - Zoom to 200% and 400% on desktop.
 - The five-person usability test from the brief (phase A).
+
+## Places to Contact correction — 2026-09-24
+
+Focused repeat at 390×844 in Chrome for Testing 151, using `scripts/qa-contact-audit.mjs` against
+the local production build. Axe-core 4.13 ran with `wcag2a`, `wcag2aa`, and `best-practice` in both
+light and dark colour schemes.
+
+| Page | Light | Dark | Mobile overflow |
+| --- | --- | --- | --- |
+| Directory | 0 violations | 0 | none |
+| Valid contact record (AI Incident Database) | 0 | 0 | none |
+| Reclassified reference record (Transformer article) | 0 | 0 | none |
+| Record path at the reported Argentina URL, step 3 | 0 | 0 | none |
+
+The same run confirmed that eligibility and evidence are visible, the article is absent from the
+directory, the Argentina bill attachment is absent from “How to send it,” French uses “Lieux à
+contacter,” and `/api/channels.json` exposes only the audited set. Result: 25/25 checks pass.
+Screenshots and the machine-readable result are generated under `tmp/qa-contact/` (gitignored).

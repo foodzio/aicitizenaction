@@ -2,6 +2,14 @@
 
 *Created 2026-09-24T00:26:34Z. This plan incorporates every recommendation rated at least 80/100 in the review prompted by the incorrect “Places to report” listings.*
 
+**Implemented 2026-09-24.** All six delivery phases are complete locally. The reconciled audit
+contains 74 records and 234 routes with zero pending decisions: 52 records are public Places to
+Contact, 3 need future route verification, and 19 are reference/reclassification records. The
+public API excludes 22 non-qualifying records. Eight misleading informational records were
+preserved as Resources. The full test suite, production build, audit freshness check, and focused
+browser/accessibility run pass. Production deployment was deliberately not performed because it
+requires separate owner approval.
+
 ## 1. Problem and objective
 
 The directory currently presents all 74 records in `content/channels/` as “Places to report.” Some are articles, papers, guidance, discovery tools, unenacted proposals, outbound-only policies, indirect trackers, or organisations without a verified inbound route. A URL being reachable is currently enough for the directory to call a record verified, even when the URL cannot receive a concern.
@@ -399,4 +407,3 @@ This correction is complete only when:
 | Audit judgments drift between reviewers | Six binary rules, cited evidence, deterministic disposition, risk-based second review |
 | The directory and routing disagree | One shared predicate consumed by every surface |
 | The correction stalls with unsafe pending entries public | Pending entries remain outside Places to Contact and recommendations |
-

@@ -64,7 +64,7 @@ strings:
     own_words_missing: "[Your own words — why this matters to you]"
     draft_title: Your message
     draft_hint: Edit anything. It's yours.
-    send_to: Send it to
+    send_to: How to send it
     copy: Copy message
     copied: Copied
     download: Download as a text file

@@ -16,7 +16,7 @@ Tracked in git and committed with every step.
   `docs/content-architecture.md` (content as data, translation, freshness, Resources, volunteers).
 - **Corrective plan:** `docs/places-to-contact-audit-plan.md` — deterministic review and correction
   of all 74 channel records and 234 routes before they may be presented or recommended as a
-  “Place to contact.” Phases 1–5 are done; final verification (Phase 6) is next.
+  “Place to contact.” All six phases are complete locally. Deployment is the only gated remaining action.
 - **Goal:** a site that turns alarm about AI into one well-aimed action in one sitting, ending with
   a draft the user sends themselves — maintained by volunteers, multilingual, with a Resources
   collection modelled on the stockspanic resources desk.
@@ -46,7 +46,7 @@ Tracked in git and committed with every step.
 | Contact audit 3 — Full channel audit | **done** | 74 records / 234 routes reviewed; 84 eligible, 150 ineligible; no pending decisions |
 | Contact audit 4 — Correct/reclassify | **done** | 8 misleading informational records disabled as recipients and preserved as Resources; reference-only companies retained internally |
 | Contact audit 5 — UI/routing convergence | **done** | Public label, directory, API, record pages and send-to cards share audited eligibility and show restrictions/evidence |
-| Contact audit 6 — Final verification | **not started** | Browser/accessibility QA, final reconciliation and release report; deployment still needs owner approval |
+| Contact audit 6 — Final verification | **done locally** | 85 tests, 920-page build, 25 browser/axe checks, audit freshness and reconciliation pass; deployment needs owner approval |
 
 ## Judgement calls made without the owner (reverse any of them)
 
@@ -78,6 +78,27 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T00:44:22Z — Contact audit Phase 6 complete locally
+
+- Added a repeatable raw-CDP browser runner, `scripts/qa-contact-audit.mjs`, using the project’s
+  Chrome for Testing instance. At 390×844 it checks the directory, a valid contact, a reclassified
+  article, the exact Argentina URL, French labels, API contract, mobile overflow, screenshots, and
+  axe in light/dark mode.
+- Focused browser result: 25/25 pass; zero axe violations on four affected pages in both colour
+  schemes; no mobile horizontal overflow. Evidence is in gitignored `tmp/qa-contact/`.
+- Defensive sweep covers every outcome in every available jurisdiction. Every routed recipient has
+  a technically verified route; article/arXiv/bill-attachment targets fail; instruction PDFs are
+  allowed only when the record explicitly explains submission. A MeitY consultation listing whose
+  record says no window is currently open was removed from routing.
+- Changed the draft section label from “Send it to” to “How to send it” (and French equivalent), so
+  a valid official-instructions page is not misrepresented as the form itself.
+- Final reconciliation remains 74 records / 234 routes, 84 eligible / 150 ineligible, 52 keep / 3
+  fix / 19 reclassify, zero pending. Public API: 52 included / 22 excluded.
+- Final checks: validation 0 errors (four pre-existing warnings), 85/85 tests, 920-page production
+  build, audit freshness, translation integrity (232/232 French UI strings), and whitespace pass.
+- `docs/test-results.md`, `docs/accessibility.md`, and the corrective plan contain the final result.
+- **Not deployed.** The owner’s standing rule requires explicit approval for production deployment.
 
 ### 2026-09-24T00:41:14Z — Contact audit Phase 5: public surfaces use the audit
 
@@ -427,4 +448,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-24T00:28:43Z
+Last modified: 2026-09-24T00:44:22Z

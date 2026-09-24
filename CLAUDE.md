@@ -111,6 +111,7 @@ able to work in this repo using only what is written in this section.)_
 - Validate content: `npm run validate` (`--json` for machine output; exit 1 on errors, overdue records are warnings)
 - Contact audit inventory: `npm run contact-audit` (regenerates `docs/places-to-contact-audit.yml`); `node scripts/contact-audit.mjs --check` verifies it is current
 - Apply the deterministic channel review: `npm run contact-review` (dry-run summary), or `npm run contact-review -- --apply` to rewrite all 74 channel records; regenerate the inventory afterward
+- Focused browser/accessibility QA: build, copy `node_modules/axe-core/axe.min.js` to `dist/`, serve locally, start Chrome for Testing on the project CDP port, then run `AICA_QA_URL=http://127.0.0.1:<port> node scripts/qa-contact-audit.mjs`
 - Test: `npm test`
 - Validate + test: `npm run check`
 - Translations: `node scripts/i18n-sync.mjs fr` (report/refresh), `--scaffold content/bodies/fr/` (create mirrors), `--stamp` (mark new translations as made from the current English)
@@ -220,4 +221,4 @@ List every `HANDOVER.md` in this repo and what it covers, so the map stays true:
 | `HANDOVER.md` | Repo-wide work for `aicitizenaction` |
 | _(add rows as subprojects appear)_ | |
 
-Last modified: 2026-09-24T00:36:02Z
+Last modified: 2026-09-24T00:44:22Z
