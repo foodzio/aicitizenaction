@@ -79,6 +79,10 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T08:56:37Z — Deployed v0.1.42 (owner approved)
+
+- `railway redeploy --from-source` of `c6388a0`: SUCCESS. Live checks: named steps, action titles, external links marked "(opens in a new tab)", logo 200.
+
 ### 2026-09-24T08:50:26Z — Clearer steps; action titles on the door (owner)
 
 - Steps were unclear (unlabelled discs; the door said three, the path counted four). The door now names them: "1 Answer one question — 2 See who can act — 3 Write your message", then "About fifteen minutes · you leave with a message ready to send". The path uses the same three steps ("Step 2 of 3 · See who can act"); the finished screen shows all three complete and "Done". `StepMeta` gained a `labelled` variant (stacks vertically under 600px).
@@ -479,4 +483,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-24T08:50:26Z
+Last modified: 2026-09-24T08:56:37Z
