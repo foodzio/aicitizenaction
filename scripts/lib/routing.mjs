@@ -10,6 +10,14 @@ export const CONTACT_TYPES = ['submission', 'consultation', 'evidence', 'form', 
   'reporting', 'whistleblowing', 'docket', 'petition', 'bounty', 'feedback', 'action', 'program'];
 const INPUT_RANK = { open: 0, limited: 1, none: 2 };
 
+function dateAfter(date, days) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(String(date ?? ''))) return null;
+  const value = new Date(`${date}T00:00:00Z`);
+  if (Number.isNaN(value.getTime())) return null;
+  value.setUTCDate(value.getUTCDate() + days);
+  return value.toISOString().slice(0, 10);
+}
+
 // Some routes record a confirmed absence in `value` ("none published", "not accepted"),
 // and a few hold fragments. Only a URL, an email address, or a phone number / postal address
 // can be offered to a user as a way to reach someone.
@@ -42,6 +50,13 @@ export function eligibleContactRoute(record, route, today = new Date().toISOStri
   // `verified` means the destination was actually opened. Unchecked and failed routes are useful
   // research leads, but must never be handed to a user as the place to send a finished message.
   if (route.verified !== true) return false;
+
+  // A route is a current recommendation only while its own evidence is current. Structured
+  // contact reviews use checked_on; legacy reviewed routes use verified_on. Missing or expired
+  // dates fail closed instead of silently remaining recommendable forever.
+  const checkedOn = route.contact?.checked_on ?? route.verified_on;
+  const expiresOn = dateAfter(checkedOn, 180);
+  if (!expiresOn || today > expiresOn) return false;
 
   const c = route.contact;
   if (c) {
@@ -88,6 +103,12 @@ export const placeToContact = record => record._section === 'channels'
 /** A seat-holder name that is a real person, not a placeholder like "Not applicable". */
 export const isNamedPerson = name => !!name && !/^(not applicable|none|n\/a|vacant|not verified|unknown)/i.test(String(name).trim());
 
+/** Whether a named office-holder has been checked within the 90-day seat horizon. */
+export function isCurrentSeat(seat, today = new Date().toISOString().slice(0, 10)) {
+  const expiresOn = dateAfter(seat?.verified_on, 90);
+  return isNamedPerson(seat?.name) && !!expiresOn && today <= expiresOn;
+}
+
 // Until phase 1b adds powers and topics, prefer full committees with a named chair over
 // subcommittees, caucuses, task forces and participation systems. The brief's first insight:
 // aim at the seat that decides what gets heard.
@@ -96,7 +117,7 @@ export function seatWeight(r) {
   if (!roles.includes('seat')) return 2;
   const name = r.strings?.name ?? '';
   if (/caucus|task force|route|system|method|portal|platform/i.test(name)) return 3;
-  const chair = (r.facts?.seats ?? []).some(s => s.role === 'chair' && isNamedPerson(s.name));
+  const chair = (r.facts?.seats ?? []).some(s => s.role === 'chair' && isCurrentSeat(s));
   if (/\bsubcommittee\b/i.test(name)) return chair ? 1 : 2;
   if (/\bcommittee\b|commission|\bcomit|委員会|위원회/i.test(name)) return chair ? 0 : 1;
   return chair ? 1 : 2;

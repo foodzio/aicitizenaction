@@ -89,6 +89,7 @@ strings:
     language: Works in
     overdue: Due for a re-check since
     unsourced: No source yet — do not rely on this record
+    expired: Verification expired
   record:
     type: Type
     place: Place
@@ -141,6 +142,7 @@ strings:
     eligible: Who may use it
     restrictions: Restrictions
     evidence: Evidence that this route accepts contact
+    stale: This route is retained as reference only. Its verification is missing, more than 180 days old, or the contact window is not currently open; do not rely on it until it is re-checked.
   directory:
     title: Directory
     lede: Institutions, committees, organisations, and contact points that explicitly accept concerns, complaints, reports, evidence, or feedback. Every contact listing says who may use it, what it accepts, and when we last checked it.

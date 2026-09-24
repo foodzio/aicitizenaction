@@ -88,6 +88,20 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T14:04:13Z — Shared freshness rules now fail closed
+
+- `eligibleContactRoute()` now requires dated route evidence and expires structured and legacy
+  contact evidence after 180 days. Missing dates, closed/future windows and expired evidence are
+  excluded consistently from routing, Places to contact, the verified directory filter and the
+  generated API.
+- Added `isCurrentSeat()`: named office-holders expire after 90 days. Stale names no longer affect
+  ranking, salutations or guided-path cards; reference pages retain them with an explicit expired
+  badge. Expired contact routes likewise remain visible only with a reference-only warning.
+- Added current English/French UI copy and boundary tests for both horizons. Focused tests pass
+  42/42, validation has 0 errors/four known warnings, and the 838-page production build succeeds.
+- Phase 4 remains in progress: next add a build-time validity manifest plus a production-server
+  guard so an old static deployment cannot keep serving expired recommendation snapshots.
+
 ### 2026-09-24T15:58:20Z — Directory integrity Phase 3 complete
 
 - Executed the slow `directory-audit:full`: PASS with 107/107 tests, 838 generated pages and 914

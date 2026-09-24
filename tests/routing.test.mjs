@@ -3,7 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { loadDirectory, loadContent } from '../scripts/lib/content.mjs';
-import { route, contactRoute, eligibleContactRoute, recommendable, fillTemplate, diversify } from '../scripts/lib/routing.mjs';
+import { route, contactRoute, eligibleContactRoute, isCurrentSeat, recommendable, fillTemplate, diversify } from '../scripts/lib/routing.mjs';
 
 const records = loadDirectory();
 const guides = loadContent('guides');
@@ -62,9 +62,9 @@ test('join shows different perspectives and excludes industry lobbying (open dec
 test('contact route prefers a verified route over an unverified one', () => {
   const rec = { facts: { routes: [
     { id: 'a', type: 'email', value: 'a@x.org', verified: false },
-    { id: 'b', type: 'form', value: 'https://x.org/f', verified: true }
+    { id: 'b', type: 'form', value: 'https://x.org/f', verified: true, verified_on: '2026-09-24' }
   ] } };
-  assert.equal(contactRoute(rec).id, 'b');
+  assert.equal(contactRoute(rec, '2026-09-24').id, 'b');
 });
 
 test('regression: a bill attachment is not a contact route', () => {
@@ -99,8 +99,10 @@ test('contact eligibility fails closed for unavailable, contradictory and expire
   const base = {
     facts: { public_input: 'open' }, meta: {}, strings: {},
   };
-  const route = { id: 'r', type: 'form', value: 'https://example.org/report', verified: true };
+  const route = { id: 'r', type: 'form', value: 'https://example.org/report', verified: true, verified_on: '2026-03-28' };
   assert.equal(eligibleContactRoute(base, route, '2026-09-24'), true);
+  assert.equal(eligibleContactRoute(base, route, '2026-09-25'), false);
+  assert.equal(eligibleContactRoute(base, { ...route, verified_on: undefined }, '2026-09-24'), false);
   assert.equal(eligibleContactRoute({ ...base, facts: { public_input: 'none' } }, route, '2026-09-24'), false);
   assert.equal(eligibleContactRoute({ ...base, strings: { accepts: 'Nothing from the public.' } }, route, '2026-09-24'), false);
   assert.equal(eligibleContactRoute(base, { ...route, verified: null }, '2026-09-24'), false);
@@ -108,6 +110,14 @@ test('contact eligibility fails closed for unavailable, contradictory and expire
     status: 'open', directness: 'direct', eligible_users: ['public'], accepted_subjects: ['ai-incident'],
     evidence_url: route.value, checked_on: '2026-09-24', review: 'reviewed', closes_on: '2026-09-23'
   } }, '2026-09-24'), false);
+});
+
+test('named seat holders fail closed after 90 days', () => {
+  const seat = { role: 'chair', name: 'Ada Example', verified_on: '2026-06-26' };
+  assert.equal(isCurrentSeat(seat, '2026-09-24'), true);
+  assert.equal(isCurrentSeat(seat, '2026-09-25'), false);
+  assert.equal(isCurrentSeat({ ...seat, verified_on: undefined }, '2026-09-24'), false);
+  assert.equal(isCurrentSeat({ ...seat, name: 'Vacant' }, '2026-09-24'), false);
 });
 
 test('every outcome with a template has one in draft-templates, and templates keep the user\'s words', () => {

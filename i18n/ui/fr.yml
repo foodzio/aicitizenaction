@@ -337,6 +337,10 @@ strings:
       value: Pas encore de source — ne vous fiez pas à cette fiche
       src: e3aaf502
       machine: true
+    expired:
+      value: Vérification expirée
+      src: a58d601d
+      machine: true
   record:
     type:
       value: Type
@@ -535,6 +539,10 @@ strings:
     evidence:
       value: Preuve que ce moyen accepte les prises de contact
       src: 786ba289
+      machine: true
+    stale:
+      value: Ce canal est conservé uniquement comme référence. Sa vérification est absente, date de plus de 180 jours, ou la période de contact n'est pas ouverte actuellement ; ne vous y fiez pas avant une nouvelle vérification.
+      src: 3900e97c
       machine: true
   directory:
     title:
