@@ -88,6 +88,15 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T13:38:26Z — Non-Latin identity matching corrected
+
+- Candidate review exposed that ASCII-only name normalization reduced several unrelated Hindi,
+  Japanese and Korean local names to the same fragments. `directory-dedupe.mjs` now preserves all
+  Unicode letter/number categories after NFKD normalization.
+- Deterministic inventory is now 423 records / 125 candidates: 22 high, 21 medium, 82 low. The 10
+  false medium candidates disappeared; all 22 high candidates remain.
+- Focused candidate tests: 3/3 pass. Candidate output was regenerated and remains deterministic.
+
 ### 2026-09-24T13:37:08Z — Directory integrity Phase 1 complete
 
 - Added identity schema for stable entity keys, plural roles, parent ids, aliases, retired-path
@@ -96,7 +105,8 @@ Tracked in git and committed with every step.
 - Added PSL-aware `scripts/directory-dedupe.mjs` / `npm run directory-dedupe`. Its generated
   `docs/directory-identity-candidates.yml` is structurally separate from the hand-maintained
   `docs/directory-identity-decisions.yml`; regeneration cannot overwrite decisions.
-- Current deterministic inventory: 423 records, 135 candidates — 22 high, 31 medium, 82 low.
+- Current deterministic inventory after the Unicode correction: 423 records, 125 candidates — 22
+  high, 21 medium, 82 low.
   Exact/local names plus corroborating domain/suffix evidence are high; a shared endpoint alone is
   low because distinct public bodies often share one portal or inbox.
 - Added `tldts@7.4.15` for Public Suffix List domain handling and focused schema/determinism tests.
@@ -547,4 +557,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-24T13:37:08Z
+Last modified: 2026-09-24T13:38:26Z

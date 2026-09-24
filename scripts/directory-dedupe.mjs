@@ -19,7 +19,7 @@ export function normalizeName(value) {
     .normalize('NFKD').replace(/\p{M}/gu, '')
     .toLowerCase().replace(/&/g, ' and ')
     .replace(/\bthe\b/g, ' ')
-    .replace(/[^a-z0-9]+/g, ' ').trim().replace(/\s+/g, ' ');
+    .replace(/[^\p{L}\p{N}]+/gu, ' ').trim().replace(/\s+/g, ' ');
 }
 
 function comparableName(value) {
