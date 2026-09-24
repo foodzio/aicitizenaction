@@ -17,6 +17,9 @@ Tracked in git and committed with every step.
 - **Corrective plan:** `docs/places-to-contact-audit-plan.md` — deterministic review and correction
   of all 74 channel records and 234 routes before they may be presented or recommended as a
   “Place to contact.” All six phases are complete and deployed to production.
+- **Maintenance plan:** `docs/directory-integrity-maintenance-plan.md` — proposed recurring audit,
+  canonical-identity and duplicate-resolution system. Planning is complete; implementation has not
+  started. Baseline: 26 exact normalized-name groups / 52 records, including duplicate Access Now.
 - **Goal:** a site that turns alarm about AI into one well-aimed action in one sitting, ending with
   a draft the user sends themselves — maintained by volunteers, multilingual, with a Resources
   collection modelled on the stockspanic resources desk.
@@ -78,6 +81,20 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T13:02:53Z — Directory integrity maintenance plan written
+
+- Added `docs/directory-integrity-maintenance-plan.md`, covering one canonical record per
+  real-world entity, a deterministic duplicate decision inventory, safe merge/redirect procedure,
+  a read-only recurring `directory-audit` command, fail-closed 180-day contact evidence, scheduled
+  automation, human re-verification, credibility metrics and acceptance tests.
+- Confirmed the reported Access Now duplication comes from two records imported from different
+  datasets. The current 423-record directory contains 26 exact normalized-name groups / 52 records;
+  these are candidates rather than automatic merges because some generic same-name subunits may be
+  distinct.
+- The plan requires Access Now to become one canonical listing, with the retired URL redirected and
+  all useful facts and provenance preserved. It explicitly prohibits automatic semantic merges.
+- No production content or application behaviour changed in this planning step.
 
 ### 2026-09-24T08:56:37Z — Deployed v0.1.42 (owner approved)
 
@@ -483,4 +500,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-24T08:56:37Z
+Last modified: 2026-09-24T13:02:53Z

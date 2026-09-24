@@ -34,6 +34,7 @@ Update this table as the repo grows — it is the map, so a stale map is a bug.
 | `docs/implementation-plan.md` | Phased implementation plan for the brief and the architecture, with open decisions and what each blocks |
 | `docs/places-to-contact-audit-plan.md` | Corrective plan to audit all channel records/routes and require deterministic evidence before listing or recommending a Place to Contact |
 | `docs/places-to-contact-audit.yml` | Generated, tracked reconciliation inventory: one audit row for every route under `content/channels/` |
+| `docs/directory-integrity-maintenance-plan.md` | Plan for canonical entity identity, duplicate reconciliation, recurring directory audits, fail-closed freshness, and human re-verification |
 | `input/` | Source assets from the Sept 2026 research and build pass — see `input/README.md` for the manifest |
 | `input/data/` | Normalized datasets: institutions, committees and organisations, source index |
 | `input/data/raw/` | Unnormalized output from the ten research agents. Expensive to recreate — do not delete |
@@ -221,4 +222,4 @@ List every `HANDOVER.md` in this repo and what it covers, so the map stays true:
 | `HANDOVER.md` | Repo-wide work for `aicitizenaction` |
 | _(add rows as subprojects appear)_ | |
 
-Last modified: 2026-09-24T00:44:22Z
+Last modified: 2026-09-24T13:02:53Z
