@@ -82,6 +82,19 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T13:06:05Z — Directory maintenance plan strengthened after critique
+
+- Revised `docs/directory-integrity-maintenance-plan.md` with every recommendation rated at least
+  80/100: separate generated candidates and human decisions, multi-role canonical entities,
+  dynamic reconciliation counts, field-level merge provenance, independent merge approval,
+  production-time expiry enforcement, coverage/backlog metrics, operational ownership and service
+  levels, identity-decision expiry, and permanent multilingual redirects.
+- Added regression tests and completion criteria for each control. The plan now prevents correctness
+  percentages from being improved merely by excluding every uncertain destination and explicitly
+  respects the owner's separate approval requirement for production deployments.
+- Revised estimated likelihood of sustained directory accuracy and credibility: 87/100 if the
+  controls are implemented and staffed. Implementation has not started.
+
 ### 2026-09-24T13:02:53Z — Directory integrity maintenance plan written
 
 - Added `docs/directory-integrity-maintenance-plan.md`, covering one canonical record per
@@ -500,4 +513,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-24T13:02:53Z
+Last modified: 2026-09-24T13:06:05Z
