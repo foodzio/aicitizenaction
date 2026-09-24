@@ -16,7 +16,7 @@ Tracked in git and committed with every step.
   `docs/content-architecture.md` (content as data, translation, freshness, Resources, volunteers).
 - **Corrective plan:** `docs/places-to-contact-audit-plan.md` — deterministic review and correction
   of all 74 channel records and 234 routes before they may be presented or recommended as a
-  “Place to contact.” Plan written; implementation not started.
+  “Place to contact.” Phase 1 (contract and containment) is done; Phase 2 is next.
 - **Goal:** a site that turns alarm about AI into one well-aimed action in one sitting, ending with
   a draft the user sends themselves — maintained by volunteers, multilingual, with a Resources
   collection modelled on the stockspanic resources desk.
@@ -41,6 +41,8 @@ Tracked in git and committed with every step.
 | 5b — Web CMS | deferred | Until the first non-git volunteer |
 | 6 — Second language | **done (pilot)** | French: 173 UI strings + 45 guide strings, all machine drafts; gated (noindex, not in switcher) until a steward sets `ui_approved: true`. Tier 2 (French/EU records) not started |
 | 7 — Launch | **in progress** | Accessibility pass done (0 axe violations, light + dark, `docs/accessibility.md`). Deploy needs the owner |
+| Contact audit 1 — Contract and containment | **done** | Verified inbound routes only; explicit contradictions fail closed; Argentina attachment and three article regressions covered |
+| Contact audit 2–6 | **not started** | Schema/inventory, complete audit, reclassification, UI/routing convergence, final verification |
 
 ## Judgement calls made without the owner (reverse any of them)
 
@@ -72,6 +74,20 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T00:33:15Z — Contact audit Phase 1: contract and containment
+
+- Added `eligibleContactRoute()` as the shared conservative gate in `scripts/lib/routing.mjs`.
+  A recommendation now requires an allowed inbound mechanism, a usable value, `verified: true`,
+  public or limited input, and no explicit contradiction such as “N/A,” “accepts nothing,” “not
+  enacted,” “no channel,” or a closed window.
+- `contactRoute()` now fails closed instead of falling back to unchecked or failed routes. This
+  fixes the reported Argentina path, which treated an unverified bill attachment as the address
+  for a completed message.
+- Added regression tests for that attachment, the three reported article/paper false positives,
+  `public_input: none`, contradictions, unchecked routes, and expired structured routes.
+- `node --test tests/routing.test.mjs`: 16/16 pass.
+- Phase 2 next: add the structured contact schema, complete audit inventory, and reconciliation.
 
 ### 2026-09-24T00:28:43Z — Language dropdown, header fit, door wording
 

@@ -3,7 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { loadDirectory, loadContent } from '../scripts/lib/content.mjs';
-import { route, contactRoute, recommendable, fillTemplate, diversify } from '../scripts/lib/routing.mjs';
+import { route, contactRoute, eligibleContactRoute, recommendable, fillTemplate, diversify } from '../scripts/lib/routing.mjs';
 
 const records = loadDirectory();
 const guides = loadContent('guides');
@@ -58,6 +58,42 @@ test('contact route prefers a verified route over an unverified one', () => {
     { id: 'b', type: 'form', value: 'https://x.org/f', verified: true }
   ] } };
   assert.equal(contactRoute(rec).id, 'b');
+});
+
+test('regression: a bill attachment is not a contact route', () => {
+  const argentina = records.find(r => r.id === 'ar-argentina-ai-governance');
+  assert.ok(argentina);
+  assert.equal(argentina.facts.routes[0].verified, false);
+  assert.equal(contactRoute(argentina), null);
+  assert.equal(recommendable(argentina), false);
+});
+
+test('regression: topical articles and papers are not contact destinations', () => {
+  for (const id of [
+    'global-perils-ai-safety-s-insularity-why',
+    'global-house-evaluation-is-not-enough-third',
+    'global-err-is-ai-evidence-what-makes'
+  ]) {
+    const record = records.find(r => r.id === id);
+    assert.ok(record, id);
+    assert.equal(contactRoute(record), null, id);
+    assert.equal(recommendable(record), false, id);
+  }
+});
+
+test('contact eligibility fails closed for unavailable, contradictory and expired routes', () => {
+  const base = {
+    facts: { public_input: 'open' }, meta: {}, strings: {},
+  };
+  const route = { id: 'r', type: 'form', value: 'https://example.org/report', verified: true };
+  assert.equal(eligibleContactRoute(base, route, '2026-09-24'), true);
+  assert.equal(eligibleContactRoute({ ...base, facts: { public_input: 'none' } }, route, '2026-09-24'), false);
+  assert.equal(eligibleContactRoute({ ...base, strings: { accepts: 'Nothing from the public.' } }, route, '2026-09-24'), false);
+  assert.equal(eligibleContactRoute(base, { ...route, verified: null }, '2026-09-24'), false);
+  assert.equal(eligibleContactRoute(base, { ...route, contact: {
+    status: 'open', directness: 'direct', eligible_users: ['public'], accepted_subjects: ['ai-incident'],
+    evidence_url: route.value, checked_on: '2026-09-24', review: 'reviewed', closes_on: '2026-09-23'
+  } }, '2026-09-24'), false);
 });
 
 test('every outcome with a template has one in draft-templates, and templates keep the user\'s words', () => {

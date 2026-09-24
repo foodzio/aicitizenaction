@@ -6,7 +6,7 @@
 // route, are never recommended. When nothing matches in the user's country the result says so
 // (the "honest floor") and falls back to the bloc (EU) and then to global bodies.
 
-const CONTACT_TYPES = ['submission', 'consultation', 'evidence', 'form', 'email', 'complaint', 'disclosure',
+export const CONTACT_TYPES = ['submission', 'consultation', 'evidence', 'form', 'email', 'complaint', 'disclosure',
   'reporting', 'whistleblowing', 'docket', 'petition', 'bounty', 'feedback', 'action', 'program'];
 const INPUT_RANK = { open: 0, limited: 1, none: 2 };
 
@@ -22,10 +22,47 @@ export function isUsableValue(v) {
   return /\d{3}/.test(s) && /[\s-]/.test(s);             // phone number or postal address
 }
 
-/** The route a user should use to reach this record, or null. Verified routes first. */
-export function contactRoute(record) {
-  const routes = (record.facts?.routes ?? []).filter(r => isUsableValue(r.value) && CONTACT_TYPES.includes(r.type));
-  const rank = r => (r.verified === true ? 0 : r.verified === null ? 1 : 2) * 100 + CONTACT_TYPES.indexOf(r.type);
+// A conservative compatibility gate used while legacy records are being given structured
+// contact evidence. These phrases are an explicit statement that the record is not a current
+// inbound destination; a route must never outrank the record's own warning.
+const CONTRADICTION = /^(?:n\/?a\b|nothing\b|not enacted\b)|\b(?:no (?:identified |verified |public )?(?:contact|channel|submission)|does not accept|doesn't accept|accepts nothing|outbound[- ]only|window has closed)\b/i;
+
+function legacyContradiction(record, route) {
+  const s = record.strings ?? {};
+  const rs = s.routes?.[route.id] ?? {};
+  return [s.accepts, s.how, s.timing, s.reality_check, rs.scope, rs.note]
+    .filter(Boolean).some(x => CONTRADICTION.test(String(x).trim()));
+}
+
+/** Whether one route is safe to present as a current inbound contact mechanism. */
+export function eligibleContactRoute(record, route, today = new Date().toISOString().slice(0, 10)) {
+  if (!route || record.facts?.recommend === false || record.meta?.unsourced) return false;
+  if (record.facts?.public_input === 'none') return false;
+  if (!CONTACT_TYPES.includes(route.type) || !isUsableValue(route.value)) return false;
+  // `verified` means the destination was actually opened. Unchecked and failed routes are useful
+  // research leads, but must never be handed to a user as the place to send a finished message.
+  if (route.verified !== true) return false;
+
+  const c = route.contact;
+  if (c) {
+    if (c.review !== 'reviewed' || !['open', 'limited'].includes(c.status)) return false;
+    if (!c.evidence_url || !c.checked_on) return false;
+    if (!c.eligible_users?.length || !c.accepted_subjects?.length) return false;
+    if (c.status === 'limited' && !c.restrictions) return false;
+    if (c.opens_on && c.opens_on > today) return false;
+    if (c.closes_on && c.closes_on < today) return false;
+    return true;
+  }
+
+  // Legacy records are allowed only through this deliberately narrow bridge. Phase 3 of the
+  // contact audit removes the bridge once every recommendable route has structured evidence.
+  return !legacyContradiction(record, route);
+}
+
+/** The route a user should use to reach this record, or null. */
+export function contactRoute(record, today) {
+  const routes = (record.facts?.routes ?? []).filter(r => eligibleContactRoute(record, r, today));
+  const rank = r => CONTACT_TYPES.indexOf(r.type);
   return routes.sort((a, b) => rank(a) - rank(b))[0] ?? null;
 }
 
