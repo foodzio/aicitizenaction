@@ -3,16 +3,23 @@ scope: Every route in content/channels; generated rows are reconciled against so
 totals:
   records: 74
   routes: 234
-  eligible: 87
-  ineligible: 147
+  eligible: 84
+  ineligible: 150
+  record_dispositions:
+    keep: 52
+    fix: 3
+    reclassify: 19
+    merge: 0
+    remove: 0
+    pending: 0
   dispositions:
-    keep: 0
-    fix: 0
+    keep: 84
+    fix: 16
     reclassify: 0
     merge: 0
     remove: 0
-    reference-only: 0
-    pending: 234
+    reference-only: 134
+    pending: 0
 routes:
   - record_id: ae-g42
     name: G42
@@ -20,6 +27,7 @@ routes:
     record_type: company
     country: ae
     public_input: none
+    record_disposition: reclassify
     route_id: no-verified-safety-channel
     claimed_type: form
     value: https://www.g42.ai/contact-us
@@ -34,15 +42,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: ae-g42
     name: G42
     file: content/channels/ae/ae-g42.yml
     record_type: company
     country: ae
     public_input: none
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://www.g42.ai/
@@ -58,15 +67,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: ae-g42
     name: G42
     file: content/channels/ae/ae-g42.yml
     record_type: company
     country: ae
     public_input: none
+    record_disposition: reclassify
     route_id: framework
     claimed_type: framework
     value: https://www.g42.ai/application/files/9517/3882/2182/G42_Frontier_Safety_Framework_Publication_Version.pdf
@@ -82,15 +92,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: ca-cohere
     name: Cohere
     file: content/channels/ca/ca-cohere.yml
     record_type: company
     country: ca
     public_input: open
+    record_disposition: keep
     route_id: safety-misuse-reports
     claimed_type: email
     value: safety@cohere.com
@@ -103,15 +114,16 @@ routes:
       - https://cohere.com/security/the-cohere-secure-ai-frontier-model-framework-february-2025.pdf
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: ca-cohere
     name: Cohere
     file: content/channels/ca/ca-cohere.yml
     record_type: company
     country: ca
     public_input: open
+    record_disposition: keep
     route_id: thumbs-down-output
     claimed_type: feedback
     value: https://coral.cohere.com/
@@ -124,17 +136,19 @@ routes:
       - https://cohere.com/security/the-cohere-secure-ai-frontier-model-framework-february-2025.pdf
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: ca-cohere
     name: Cohere
     file: content/channels/ca/ca-cohere.yml
     record_type: company
     country: ca
     public_input: open
+    record_disposition: keep
     route_id: responsible-disclosure-policy-via
     claimed_type: disclosure
     value: https://trustcenter.cohere.com/
@@ -147,17 +161,19 @@ routes:
       - https://cohere.com/security/the-cohere-secure-ai-frontier-model-framework-february-2025.pdf
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: ca-cohere
     name: Cohere
     file: content/channels/ca/ca-cohere.yml
     record_type: company
     country: ca
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://cohere.com/security
@@ -171,17 +187,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: ca-cohere
     name: Cohere
     file: content/channels/ca/ca-cohere.yml
     record_type: company
     country: ca
     public_input: open
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://cohere.com/security/the-cohere-secure-ai-frontier-model-framework-february-2025.pdf
@@ -195,17 +213,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-alibaba
     name: Alibaba (Qwen)
     file: content/channels/cn/cn-alibaba.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: fix
     route_id: alibaba-security-response-center
     claimed_type: disclosure
     value: https://asrc.alibaba.com/
@@ -217,17 +237,19 @@ routes:
       - https://qwen.ai/
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-alibaba
     name: Alibaba (Qwen)
     file: content/channels/cn/cn-alibaba.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: fix
     route_id: alibaba-cloud-trust-center
     claimed_type: form
     value: https://www.alibabacloud.com/en/trust-center/security-compliance-practice
@@ -239,17 +261,19 @@ routes:
       - https://qwen.ai/
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-alibaba
     name: Alibaba (Qwen)
     file: content/channels/cn/cn-alibaba.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: fix
     route_id: homepage
     claimed_type: homepage
     value: https://qwen.ai/
@@ -262,17 +286,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-alibaba
     name: Alibaba (Qwen)
     file: content/channels/cn/cn-alibaba.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: fix
     route_id: framework
     claimed_type: framework
     value: https://qwen.ai/
@@ -285,17 +311,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-baidu
     name: Baidu
     file: content/channels/cn/cn-baidu.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: fix
     route_id: baidu-security-response-center
     claimed_type: disclosure
     value: https://bsrc.baidu.com/
@@ -307,17 +335,19 @@ routes:
       - https://yiyan.baidu.com/
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-baidu
     name: Baidu
     file: content/channels/cn/cn-baidu.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: fix
     route_id: homepage
     claimed_type: homepage
     value: https://www.baidu.com/
@@ -330,17 +360,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-baidu
     name: Baidu
     file: content/channels/cn/cn-baidu.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: fix
     route_id: framework
     claimed_type: framework
     value: https://yiyan.baidu.com/
@@ -353,17 +385,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-bytedance-seed
     name: ByteDance Seed
     file: content/channels/cn/cn-bytedance-seed.yml
     record_type: company
     country: cn
     public_input: none
+    record_disposition: reclassify
     route_id: no-verified-safety-or
     claimed_type: form
     value: https://seed.bytedance.com/en/
@@ -377,15 +411,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-bytedance-seed
     name: ByteDance Seed
     file: content/channels/cn/cn-bytedance-seed.yml
     record_type: company
     country: cn
     public_input: none
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://seed.bytedance.com/en/
@@ -400,15 +435,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-bytedance-seed
     name: ByteDance Seed
     file: content/channels/cn/cn-bytedance-seed.yml
     record_type: company
     country: cn
     public_input: none
+    record_disposition: reclassify
     route_id: framework
     claimed_type: framework
     value: https://seed.bytedance.com/en/direction/responsible_ai
@@ -423,15 +459,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-deepseek
     name: DeepSeek
     file: content/channels/cn/cn-deepseek.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: keep
     route_id: security
     claimed_type: email
     value: security@deepseek.com
@@ -442,15 +479,16 @@ routes:
       - https://www.deepseek.com/harness/en/privacy/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-deepseek
     name: DeepSeek
     file: content/channels/cn/cn-deepseek.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: keep
     route_id: general-service-contact
     claimed_type: email
     value: service@deepseek.com
@@ -461,15 +499,16 @@ routes:
       - https://www.deepseek.com/harness/en/privacy/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-deepseek
     name: DeepSeek
     file: content/channels/cn/cn-deepseek.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.deepseek.com/
@@ -481,17 +520,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-deepseek
     name: DeepSeek
     file: content/channels/cn/cn-deepseek.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://www.deepseek.com/harness/en/privacy/
@@ -503,17 +544,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-moonshot-ai
     name: Moonshot AI
     file: content/channels/cn/cn-moonshot-ai.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: keep
     route_id: security-reports
     claimed_type: email
     value: security@moonshot.ai
@@ -523,15 +566,16 @@ routes:
       - https://forum.moonshot.ai/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-moonshot-ai
     name: Moonshot AI
     file: content/channels/cn/cn-moonshot-ai.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: keep
     route_id: moonshot-kimi-developer-forum
     claimed_type: form
     value: https://forum.moonshot.ai/
@@ -541,15 +585,16 @@ routes:
       - https://forum.moonshot.ai/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-moonshot-ai
     name: Moonshot AI
     file: content/channels/cn/cn-moonshot-ai.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.moonshot.ai/
@@ -560,17 +605,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-moonshot-ai
     name: Moonshot AI
     file: content/channels/cn/cn-moonshot-ai.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://platform.kimi.ai/docs/agreement/userprivacy
@@ -581,17 +628,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-tencent
     name: Tencent
     file: content/channels/cn/cn-tencent.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: keep
     route_id: tencent-security
     claimed_type: email
     value: security@tencent.com
@@ -601,15 +650,16 @@ routes:
       - https://en.security.tencent.com/index.php/report/add
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-tencent
     name: Tencent
     file: content/channels/cn/cn-tencent.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: keep
     route_id: tsrc-vulnerability-report-form
     claimed_type: disclosure
     value: https://en.security.tencent.com/index.php/report/add
@@ -619,15 +669,16 @@ routes:
       - https://en.security.tencent.com/index.php/report/add
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-tencent
     name: Tencent
     file: content/channels/cn/cn-tencent.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://en.security.tencent.com/
@@ -638,17 +689,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-tencent
     name: Tencent
     file: content/channels/cn/cn-tencent.yml
     record_type: company
     country: cn
     public_input: limited
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://hunyuan.tencent.com/
@@ -659,17 +712,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-zhipu-ai-z-ai
     name: Zhipu AI / Z.ai
     file: content/channels/cn/cn-zhipu-ai-z-ai.yml
     record_type: company
     country: cn
     public_input: none
+    record_disposition: reclassify
     route_id: no-verified-safety-or
     claimed_type: form
     value: https://z.ai/
@@ -682,15 +737,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-zhipu-ai-z-ai
     name: Zhipu AI / Z.ai
     file: content/channels/cn/cn-zhipu-ai-z-ai.yml
     record_type: company
     country: cn
     public_input: none
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://z.ai/
@@ -704,15 +760,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: cn-zhipu-ai-z-ai
     name: Zhipu AI / Z.ai
     file: content/channels/cn/cn-zhipu-ai-z-ai.yml
     record_type: company
     country: cn
     public_input: none
+    record_disposition: reclassify
     route_id: framework
     claimed_type: framework
     value: https://z.ai/
@@ -726,15 +783,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: eu-eu-ai-act-article-73-serious
     name: EU AI Act Article 73 — serious incident reporting
     file: content/channels/eu/eu-eu-ai-act-article-73-serious.yml
     record_type: reporting-channel
     country: eu
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: reporting
     value: https://artificialintelligenceact.eu/article/73/
@@ -744,15 +802,16 @@ routes:
       - https://artificialintelligenceact.eu/article/73/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: eu-eu-ai-act-article-73-serious
     name: EU AI Act Article 73 — serious incident reporting
     file: content/channels/eu/eu-eu-ai-act-article-73-serious.yml
     record_type: reporting-channel
     country: eu
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://artificialintelligenceact.eu/article/73/
@@ -763,17 +822,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: eu-eu-ai-act-article-85-right
     name: EU AI Act Article 85 — right to lodge a complaint with a market surveillance authority
     file: content/channels/eu/eu-eu-ai-act-article-85-right.yml
     record_type: reporting-channel
     country: eu
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: complaint
     value: https://artificialintelligenceact.eu/article/85/
@@ -783,15 +844,16 @@ routes:
       - https://artificialintelligenceact.eu/article/85/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: eu-eu-ai-act-article-85-right
     name: EU AI Act Article 85 — right to lodge a complaint with a market surveillance authority
     file: content/channels/eu/eu-eu-ai-act-article-85-right.yml
     record_type: reporting-channel
     country: eu
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://artificialintelligenceact.eu/article/85/
@@ -802,17 +864,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: eu-eu-ai-act-article-87-protection
     name: EU AI Act Article 87 — protection of persons reporting infringements
     file: content/channels/eu/eu-eu-ai-act-article-87-protection.yml
     record_type: reporting-channel
     country: eu
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: whistleblowing
     value: https://artificialintelligenceact.eu/article/87/
@@ -822,15 +886,16 @@ routes:
       - https://artificialintelligenceact.eu/article/87/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: eu-eu-ai-act-article-87-protection
     name: EU AI Act Article 87 — protection of persons reporting infringements
     file: content/channels/eu/eu-eu-ai-act-article-87-protection.yml
     record_type: reporting-channel
     country: eu
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://artificialintelligenceact.eu/article/87/
@@ -841,17 +906,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: eu-eu-ai-act-complaints-tool
     name: EU AI Act complaints tool (AI Office)
     file: content/channels/eu/eu-eu-ai-act-complaints-tool.yml
     record_type: reporting-channel
     country: eu
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: complaint
     value: https://digital-strategy.ec.europa.eu/en/policies/ai-act-complaints-tool
@@ -861,15 +928,16 @@ routes:
       - https://digital-strategy.ec.europa.eu/en/policies/ai-act-complaints-tool
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: eu-eu-ai-act-complaints-tool
     name: EU AI Act complaints tool (AI Office)
     file: content/channels/eu/eu-eu-ai-act-complaints-tool.yml
     record_type: reporting-channel
     country: eu
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://digital-strategy.ec.europa.eu/en/policies/ai-act-complaints-tool
@@ -880,17 +948,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: eu-eu-ai-act-service-desk
     name: EU AI Act Service Desk
     file: content/channels/eu/eu-eu-ai-act-service-desk.yml
     record_type: reporting-channel
     country: eu
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: complaint
     value: https://ai-act-service-desk.ec.europa.eu/en/resources
@@ -900,15 +970,16 @@ routes:
       - https://ai-act-service-desk.ec.europa.eu/en/resources
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: eu-eu-ai-act-service-desk
     name: EU AI Act Service Desk
     file: content/channels/eu/eu-eu-ai-act-service-desk.yml
     record_type: reporting-channel
     country: eu
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://ai-act-service-desk.ec.europa.eu/en/resources
@@ -919,17 +990,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: eu-eu-ai-act-whistleblower-tool
     name: EU AI Act Whistleblower Tool (AI Office)
     file: content/channels/eu/eu-eu-ai-act-whistleblower-tool.yml
     record_type: reporting-channel
     country: eu
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: whistleblowing
     value: https://digital-strategy.ec.europa.eu/en/policies/ai-act-whistleblower-tool
@@ -939,15 +1012,16 @@ routes:
       - https://digital-strategy.ec.europa.eu/en/policies/ai-act-whistleblower-tool
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: eu-eu-ai-act-whistleblower-tool
     name: EU AI Act Whistleblower Tool (AI Office)
     file: content/channels/eu/eu-eu-ai-act-whistleblower-tool.yml
     record_type: reporting-channel
     country: eu
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://digital-strategy.ec.europa.eu/en/policies/ai-act-whistleblower-tool
@@ -958,17 +1032,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: eu-gdpr-article-77-complaint-data-protection
     name: GDPR Article 77 — complaint to a data protection supervisory authority
     file: content/channels/eu/eu-gdpr-article-77-complaint-data-protection.yml
     record_type: reporting-channel
     country: eu
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: complaint
     value: https://gdpr-info.eu/art-77-gdpr/
@@ -978,15 +1054,16 @@ routes:
       - https://gdpr-info.eu/art-77-gdpr/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: eu-gdpr-article-77-complaint-data-protection
     name: GDPR Article 77 — complaint to a data protection supervisory authority
     file: content/channels/eu/eu-gdpr-article-77-complaint-data-protection.yml
     record_type: reporting-channel
     country: eu
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://gdpr-info.eu/art-77-gdpr/
@@ -997,17 +1074,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: fr-mistral-ai
     name: Mistral AI
     file: content/channels/fr/fr-mistral-ai.yml
     record_type: company
     country: fr
     public_input: limited
+    record_disposition: keep
     route_id: content-usage-policy-report
     claimed_type: form
     value: https://mistral.ai/report/
@@ -1018,15 +1097,16 @@ routes:
       - https://hackerone.com/58acc269-165e-4d18-a2d8-61f296cdea60/embedded_submissions/new?locale=en
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: fr-mistral-ai
     name: Mistral AI
     file: content/channels/fr/fr-mistral-ai.yml
     record_type: company
     country: fr
     public_input: limited
+    record_disposition: keep
     route_id: hackerone-vulnerability-submission
     claimed_type: disclosure
     value: https://hackerone.com/58acc269-165e-4d18-a2d8-61f296cdea60/embedded_submissions/new?locale=en
@@ -1037,15 +1117,16 @@ routes:
       - https://hackerone.com/58acc269-165e-4d18-a2d8-61f296cdea60/embedded_submissions/new?locale=en
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: fr-mistral-ai
     name: Mistral AI
     file: content/channels/fr/fr-mistral-ai.yml
     record_type: company
     country: fr
     public_input: limited
+    record_disposition: keep
     route_id: press
     claimed_type: email
     value: press@mistral.ai
@@ -1056,15 +1137,16 @@ routes:
       - https://hackerone.com/58acc269-165e-4d18-a2d8-61f296cdea60/embedded_submissions/new?locale=en
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: fr-mistral-ai
     name: Mistral AI
     file: content/channels/fr/fr-mistral-ai.yml
     record_type: company
     country: fr
     public_input: limited
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://mistral.ai/
@@ -1076,17 +1158,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: fr-mistral-ai
     name: Mistral AI
     file: content/channels/fr/fr-mistral-ai.yml
     record_type: company
     country: fr
     public_input: limited
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://legal.mistral.ai/terms/usage-policy
@@ -1098,17 +1182,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: fr-saferai
     name: SaferAI
     file: content/channels/fr/fr-saferai.yml
     record_type: watchdog
     country: fr
     public_input: limited
+    record_disposition: keep
     route_id: general-enquiries
     claimed_type: email
     value: contact@safer-ai.org
@@ -1118,15 +1204,16 @@ routes:
       - https://ratings.safer-ai.org/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: fr-saferai
     name: SaferAI
     file: content/channels/fr/fr-saferai.yml
     record_type: watchdog
     country: fr
     public_input: limited
+    record_disposition: keep
     route_id: company-risk-management-ratings
     claimed_type: submission
     value: https://ratings.safer-ai.org/
@@ -1136,15 +1223,16 @@ routes:
       - https://ratings.safer-ai.org/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: fr-saferai
     name: SaferAI
     file: content/channels/fr/fr-saferai.yml
     record_type: watchdog
     country: fr
     public_input: limited
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.safer-ai.org/
@@ -1155,17 +1243,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-google-deepmind
     name: Google DeepMind
     file: content/channels/gb/gb-google-deepmind.yml
     record_type: company
     country: gb
     public_input: limited
+    record_disposition: fix
     route_id: google-ai-vulnerability-reward
     claimed_type: bounty
     value: https://bughunters.google.com/about/rules/google-friends/ai-vulnerability-reward-program-rules
@@ -1179,17 +1269,19 @@ routes:
       - https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-google-deepmind
     name: Google DeepMind
     file: content/channels/gb/gb-google-deepmind.yml
     record_type: company
     country: gb
     public_input: limited
+    record_disposition: fix
     route_id: gemini-content-reporting
     claimed_type: form
     value: https://support.google.com/legal/troubleshooter/1114905
@@ -1203,17 +1295,19 @@ routes:
       - https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-google-deepmind
     name: Google DeepMind
     file: content/channels/gb/gb-google-deepmind.yml
     record_type: company
     country: gb
     public_input: limited
+    record_disposition: fix
     route_id: product-thumbs-down-gemini
     claimed_type: feedback
     value: https://gemini.google.com/
@@ -1227,17 +1321,19 @@ routes:
       - https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-google-deepmind
     name: Google DeepMind
     file: content/channels/gb/gb-google-deepmind.yml
     record_type: company
     country: gb
     public_input: limited
+    record_disposition: fix
     route_id: homepage
     claimed_type: homepage
     value: https://deepmind.google/
@@ -1252,17 +1348,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-google-deepmind
     name: Google DeepMind
     file: content/channels/gb/gb-google-deepmind.yml
     record_type: company
     country: gb
     public_input: limited
+    record_disposition: fix
     route_id: framework
     claimed_type: framework
     value: https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf
@@ -1277,17 +1375,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-ofcom-individual-complaint-about-online-service
     name: Ofcom — individual complaint about an online service
     file: content/channels/gb/gb-ofcom-individual-complaint-about-online-service.yml
     record_type: reporting-channel
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: complaint
     value: https://www.ofcom.org.uk/make-a-complaint/
@@ -1297,15 +1397,16 @@ routes:
       - https://www.ofcom.org.uk/make-a-complaint/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-ofcom-individual-complaint-about-online-service
     name: Ofcom — individual complaint about an online service
     file: content/channels/gb/gb-ofcom-individual-complaint-about-online-service.yml
     record_type: reporting-channel
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.ofcom.org.uk/make-a-complaint/
@@ -1316,17 +1417,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-ofcom-online-safety-super-complaints
     name: Ofcom Online Safety super-complaints
     file: content/channels/gb/gb-ofcom-online-safety-super-complaints.yml
     record_type: reporting-channel
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: complaint
     value: https://www.ofcom.org.uk/online-safety/online-safety-super-complaints
@@ -1336,15 +1439,16 @@ routes:
       - https://www.ofcom.org.uk/online-safety/online-safety-super-complaints
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-ofcom-online-safety-super-complaints
     name: Ofcom Online Safety super-complaints
     file: content/channels/gb/gb-ofcom-online-safety-super-complaints.yml
     record_type: reporting-channel
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.ofcom.org.uk/online-safety/online-safety-super-complaints
@@ -1355,17 +1459,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-stability-ai
     name: Stability AI
     file: content/channels/gb/gb-stability-ai.yml
     record_type: company
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: safety-misuse-reports
     claimed_type: email
     value: safety@stability.ai
@@ -1375,15 +1481,16 @@ routes:
       - https://stability.ai/safety
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-stability-ai
     name: Stability AI
     file: content/channels/gb/gb-stability-ai.yml
     record_type: company
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: appeals-request-form
     claimed_type: form
     value: https://stability.ai/safety
@@ -1393,15 +1500,16 @@ routes:
       - https://stability.ai/safety
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-stability-ai
     name: Stability AI
     file: content/channels/gb/gb-stability-ai.yml
     record_type: company
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: trust-center
     claimed_type: program
     value: https://trust.stability.ai/
@@ -1411,17 +1519,19 @@ routes:
       - https://stability.ai/safety
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-stability-ai
     name: Stability AI
     file: content/channels/gb/gb-stability-ai.yml
     record_type: company
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://stability.ai/safety
@@ -1432,17 +1542,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-stability-ai
     name: Stability AI
     file: content/channels/gb/gb-stability-ai.yml
     record_type: company
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://stability.ai/use-policy
@@ -1453,17 +1565,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-uk-ico-data-protection-complaint
     name: UK ICO data protection complaint
     file: content/channels/gb/gb-uk-ico-data-protection-complaint.yml
     record_type: reporting-channel
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: complaint
     value: https://ico.org.uk/make-a-complaint/data-protection-framework/
@@ -1473,15 +1587,16 @@ routes:
       - https://ico.org.uk/make-a-complaint/data-protection-framework/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-uk-ico-data-protection-complaint
     name: UK ICO data protection complaint
     file: content/channels/gb/gb-uk-ico-data-protection-complaint.yml
     record_type: reporting-channel
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://ico.org.uk/make-a-complaint/data-protection-framework/
@@ -1492,17 +1607,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-uk-parliament-e-petitions
     name: UK Parliament e-petitions
     file: content/channels/gb/gb-uk-parliament-e-petitions.yml
     record_type: reporting-channel
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: consultation
     value: https://petition.parliament.uk/help
@@ -1512,15 +1629,16 @@ routes:
       - https://petition.parliament.uk/help
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-uk-parliament-e-petitions
     name: UK Parliament e-petitions
     file: content/channels/gb/gb-uk-parliament-e-petitions.yml
     record_type: reporting-channel
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://petition.parliament.uk/help
@@ -1531,17 +1649,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-uk-parliament-find-inquiry-accepting-written
     name: UK Parliament — find an inquiry accepting written evidence
     file: content/channels/gb/gb-uk-parliament-find-inquiry-accepting-written.yml
     record_type: reporting-channel
     country: gb
     public_input: open
+    record_disposition: reclassify
     route_id: submission-page
     claimed_type: consultation
     value: https://committees.parliament.uk/inquiries/?SearchTerm=&DateFrom=&DateTo=&SessionId=&SortBy=0&Status=Any&CurrentlyAcceptingEvidence=true
@@ -1549,17 +1669,20 @@ routes:
     evidence_hint: N/A — this is the discovery tool.
     source_urls:
       - https://committees.parliament.uk/inquiries/?SearchTerm=&DateFrom=&DateTo=&SessionId=&SortBy=0&Status=Any&CurrentlyAcceptingEvidence=true
-    failed_rules: []
+    failed_rules:
+      - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-uk-parliament-find-inquiry-accepting-written
     name: UK Parliament — find an inquiry accepting written evidence
     file: content/channels/gb/gb-uk-parliament-find-inquiry-accepting-written.yml
     record_type: reporting-channel
     country: gb
     public_input: open
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://committees.parliament.uk/inquiries/?SearchTerm=&DateFrom=&DateTo=&SessionId=&SortBy=0&Status=Any&CurrentlyAcceptingEvidence=true
@@ -1570,17 +1693,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-uk-public-interest-disclosure-act-protected
     name: UK Public Interest Disclosure Act — protected disclosure to a prescribed person
     file: content/channels/gb/gb-uk-public-interest-disclosure-act-protected.yml
     record_type: reporting-channel
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: whistleblowing
     value: https://www.handleygill.co.uk/handley-gill-blog/public-interest-disclosure-prescribed-persons-order-2026-whistleblowing
@@ -1590,15 +1715,16 @@ routes:
       - https://www.handleygill.co.uk/handley-gill-blog/public-interest-disclosure-prescribed-persons-order-2026-whistleblowing
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-uk-public-interest-disclosure-act-protected
     name: UK Public Interest Disclosure Act — protected disclosure to a prescribed person
     file: content/channels/gb/gb-uk-public-interest-disclosure-act-protected.yml
     record_type: reporting-channel
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.handleygill.co.uk/handley-gill-blog/public-interest-disclosure-prescribed-persons-order-2026-whistleblowing
@@ -1609,17 +1735,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-uk-select-committee-written-evidence
     name: UK select committee written evidence
     file: content/channels/gb/gb-uk-select-committee-written-evidence.yml
     record_type: reporting-channel
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: consultation
     value: https://publications.parliament.uk/pa/cm/written-evidence-guidance.htm
@@ -1629,15 +1757,16 @@ routes:
       - https://publications.parliament.uk/pa/cm/written-evidence-guidance.htm
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: gb-uk-select-committee-written-evidence
     name: UK select committee written evidence
     file: content/channels/gb/gb-uk-select-committee-written-evidence.yml
     record_type: reporting-channel
     country: gb
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://publications.parliament.uk/pa/cm/written-evidence-guidance.htm
@@ -1648,17 +1777,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-ai-incident-database
     name: AI Incident Database (Responsible AI Collaborative)
     file: content/channels/global/global-ai-incident-database.yml
     record_type: watchdog
     country: global
     public_input: open
+    record_disposition: keep
     route_id: submit-incident-open-anyone
     claimed_type: submission
     value: https://incidentdatabase.ai/apps/submit/
@@ -1670,15 +1801,16 @@ routes:
       - https://github.com/responsible-ai-collaborative/aiid/issues/new
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-ai-incident-database
     name: AI Incident Database (Responsible AI Collaborative)
     file: content/channels/global/global-ai-incident-database.yml
     record_type: watchdog
     country: global
     public_input: open
+    record_disposition: keep
     route_id: responsible-ai-collaborative-collaboration
     claimed_type: email
     value: info@raicollab.org
@@ -1690,15 +1822,16 @@ routes:
       - https://github.com/responsible-ai-collaborative/aiid/issues/new
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-ai-incident-database
     name: AI Incident Database (Responsible AI Collaborative)
     file: content/channels/global/global-ai-incident-database.yml
     record_type: watchdog
     country: global
     public_input: open
+    record_disposition: keep
     route_id: contact-page
     claimed_type: form
     value: https://incidentdatabase.ai/contact/
@@ -1710,15 +1843,16 @@ routes:
       - https://github.com/responsible-ai-collaborative/aiid/issues/new
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-ai-incident-database
     name: AI Incident Database (Responsible AI Collaborative)
     file: content/channels/global/global-ai-incident-database.yml
     record_type: watchdog
     country: global
     public_input: open
+    record_disposition: keep
     route_id: github-issues-bugs
     claimed_type: submission
     value: https://github.com/responsible-ai-collaborative/aiid/issues/new
@@ -1730,15 +1864,16 @@ routes:
       - https://github.com/responsible-ai-collaborative/aiid/issues/new
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-ai-incident-database
     name: AI Incident Database (Responsible AI Collaborative)
     file: content/channels/global/global-ai-incident-database.yml
     record_type: watchdog
     country: global
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://incidentdatabase.ai/
@@ -1751,17 +1886,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-ai-incident-database-editor-s-guide
     name: AI Incident Database — Editor's Guide (inclusion criteria)
     file: content/channels/global/global-ai-incident-database-editor-s-guide.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: reclassify
     route_id: submission-page
     claimed_type: reporting
     value: https://incidentdatabase.ai/editors-guide/
@@ -1769,17 +1906,20 @@ routes:
     evidence_hint: N/A — this is the criteria document that determines what the database accepts. Read it before submitting.
     source_urls:
       - https://incidentdatabase.ai/editors-guide/
-    failed_rules: []
+    failed_rules:
+      - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-ai-incident-database-editor-s-guide
     name: AI Incident Database — Editor's Guide (inclusion criteria)
     file: content/channels/global/global-ai-incident-database-editor-s-guide.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://incidentdatabase.ai/editors-guide/
@@ -1790,17 +1930,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-ai-vulnerability-database
     name: AI Vulnerability Database (AVID)
     file: content/channels/global/global-ai-vulnerability-database.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: reporting
     value: https://avidml.org/
@@ -1810,15 +1952,16 @@ routes:
       - https://avidml.org/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-ai-vulnerability-database
     name: AI Vulnerability Database (AVID)
     file: content/channels/global/global-ai-vulnerability-database.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://avidml.org/
@@ -1829,17 +1972,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-anthropic-model-safety-bug-bounty
     name: Anthropic Model Safety Bug Bounty
     file: content/channels/global/global-anthropic-model-safety-bug-bounty.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: disclosure
     value: https://support.claude.com/en/articles/12119250-model-safety-bug-bounty-program
@@ -1849,15 +1994,16 @@ routes:
       - https://support.claude.com/en/articles/12119250-model-safety-bug-bounty-program
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-anthropic-model-safety-bug-bounty
     name: Anthropic Model Safety Bug Bounty
     file: content/channels/global/global-anthropic-model-safety-bug-bounty.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://support.claude.com/en/articles/12119250-model-safety-bug-bounty-program
@@ -1868,17 +2014,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-anthropic-responsible-disclosure-policy-usersafety-anthropic
     name: Anthropic Responsible Disclosure Policy / usersafety@anthropic.com
     file: content/channels/global/global-anthropic-responsible-disclosure-policy-usersafety-anthropic.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: disclosure
     value: https://www.anthropic.com/responsible-disclosure-policy
@@ -1888,15 +2036,16 @@ routes:
       - https://www.anthropic.com/responsible-disclosure-policy
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-anthropic-responsible-disclosure-policy-usersafety-anthropic
     name: Anthropic Responsible Disclosure Policy / usersafety@anthropic.com
     file: content/channels/global/global-anthropic-responsible-disclosure-policy-usersafety-anthropic.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.anthropic.com/responsible-disclosure-policy
@@ -1907,17 +2056,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-cert-cc-vince
     name: CERT/CC VINCE (Vulnerability Information and Coordination Environment)
     file: content/channels/global/global-cert-cc-vince.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: disclosure
     value: https://kb.cert.org/vince/
@@ -1927,15 +2078,16 @@ routes:
       - https://kb.cert.org/vince/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-cert-cc-vince
     name: CERT/CC VINCE (Vulnerability Information and Coordination Environment)
     file: content/channels/global/global-cert-cc-vince.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://kb.cert.org/vince/
@@ -1946,17 +2098,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-err-is-ai-evidence-what-makes
     name: "'To Err is AI' — evidence on what makes an LLM flaw report land"
     file: content/channels/global/global-err-is-ai-evidence-what-makes.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: reclassify
     route_id: submission-page
     claimed_type: disclosure
     value: https://arxiv.org/abs/2410.12104
@@ -1964,17 +2118,20 @@ routes:
     evidence_hint: N/A — empirical evidence on flaw reporting practice.
     source_urls:
       - https://arxiv.org/abs/2410.12104
-    failed_rules: []
+    failed_rules:
+      - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-err-is-ai-evidence-what-makes
     name: "'To Err is AI' — evidence on what makes an LLM flaw report land"
     file: content/channels/global/global-err-is-ai-evidence-what-makes.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://arxiv.org/abs/2410.12104
@@ -1985,17 +2142,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-flare-ai
     name: FLARE-AI (Flaw Reporting for AI)
     file: content/channels/global/global-flare-ai.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: disclosure
     value: https://www.ai-reports.org/
@@ -2005,15 +2164,16 @@ routes:
       - https://www.ai-reports.org/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-flare-ai
     name: FLARE-AI (Flaw Reporting for AI)
     file: content/channels/global/global-flare-ai.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.ai-reports.org/
@@ -2024,17 +2184,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-google-ai-vulnerability-reward-program
     name: Google AI Vulnerability Reward Program (AI VRP)
     file: content/channels/global/global-google-ai-vulnerability-reward-program.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: disclosure
     value: https://www.theregister.com/2025/10/07/google_ai_bug_bounty/
@@ -2044,15 +2206,16 @@ routes:
       - https://www.theregister.com/2025/10/07/google_ai_bug_bounty/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-google-ai-vulnerability-reward-program
     name: Google AI Vulnerability Reward Program (AI VRP)
     file: content/channels/global/global-google-ai-vulnerability-reward-program.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.theregister.com/2025/10/07/google_ai_bug_bounty/
@@ -2063,17 +2226,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-house-evaluation-is-not-enough-third
     name: "'In-House Evaluation Is Not Enough' — third-party AI flaw disclosure framework"
     file: content/channels/global/global-house-evaluation-is-not-enough-third.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: reclassify
     route_id: submission-page
     claimed_type: disclosure
     value: https://arxiv.org/abs/2503.16861
@@ -2081,17 +2246,20 @@ routes:
     evidence_hint: N/A — it is the proposal document that defines the emerging norm. Read it to understand the vocabulary that labs and coordinators are converging on.
     source_urls:
       - https://arxiv.org/abs/2503.16861
-    failed_rules: []
+    failed_rules:
+      - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-house-evaluation-is-not-enough-third
     name: "'In-House Evaluation Is Not Enough' — third-party AI flaw disclosure framework"
     file: content/channels/global/global-house-evaluation-is-not-enough-third.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://arxiv.org/abs/2503.16861
@@ -2102,17 +2270,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-humane-intelligence-bias-bounty
     name: Humane Intelligence Bias Bounty
     file: content/channels/global/global-humane-intelligence-bias-bounty.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: disclosure
     value: https://humane-intelligence.org/programs-services/bias-bounty/
@@ -2122,15 +2292,16 @@ routes:
       - https://humane-intelligence.org/programs-services/bias-bounty/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-humane-intelligence-bias-bounty
     name: Humane Intelligence Bias Bounty
     file: content/channels/global/global-humane-intelligence-bias-bounty.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://humane-intelligence.org/programs-services/bias-bounty/
@@ -2141,17 +2312,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-mit-ai-incident-tracker
     name: MIT AI Incident Tracker (AI Risk Repository)
     file: content/channels/global/global-mit-ai-incident-tracker.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: reclassify
     route_id: submission-page
     claimed_type: reporting
     value: https://airisk.mit.edu/ai-incident-tracker
@@ -2159,57 +2332,62 @@ routes:
     evidence_hint: Nothing directly from the public. It ingests and classifies incidents from the AI Incident Database — 1,600+ incidents classified by risk domain, cause, harm type (10 categories including physical harm, financial loss and human rights), severity, entity and timing.
     source_urls:
       - https://airisk.mit.edu/ai-incident-tracker
+    failed_rules:
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
+  - record_id: global-mit-ai-incident-tracker
+    name: MIT AI Incident Tracker (AI Risk Repository)
+    file: content/channels/global/global-mit-ai-incident-tracker.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    record_disposition: reclassify
+    route_id: homepage
+    claimed_type: homepage
+    value: https://airisk.mit.edu/ai-incident-tracker
+    verified: null
+    evidence_hint: Nothing directly from the public. It ingests and classifies incidents from the AI Incident Database — 1,600+ incidents classified by risk domain, cause, harm type (10 categories including physical harm, financial loss and human rights), severity, entity and timing.
+    source_urls:
+      - https://airisk.mit.edu/ai-incident-tracker
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
+  - record_id: global-mitre-atlas
+    name: MITRE ATLAS (Adversarial Threat Landscape for AI Systems)
+    file: content/channels/global/global-mitre-atlas.yml
+    record_type: reporting-channel
+    country: global
+    public_input: open
+    record_disposition: keep
+    route_id: submission-page
+    claimed_type: reporting
+    value: https://github.com/mitre-atlas/atlas-data
+    verified: true
+    evidence_hint: Adversarial ML tactics, techniques and real-world case studies — i.e. attacks against AI systems. Contributions are curated into the ATLAS matrix and case study set.
+    source_urls:
+      - https://github.com/mitre-atlas/atlas-data
     failed_rules: []
-    current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
-  - record_id: global-mit-ai-incident-tracker
-    name: MIT AI Incident Tracker (AI Risk Repository)
-    file: content/channels/global/global-mit-ai-incident-tracker.yml
-    record_type: reporting-channel
-    country: global
-    public_input: open
-    route_id: homepage
-    claimed_type: homepage
-    value: https://airisk.mit.edu/ai-incident-tracker
-    verified: null
-    evidence_hint: Nothing directly from the public. It ingests and classifies incidents from the AI Incident Database — 1,600+ incidents classified by risk domain, cause, harm type (10 categories including physical harm, financial loss and human rights), severity, entity and timing.
-    source_urls:
-      - https://airisk.mit.edu/ai-incident-tracker
-    failed_rules:
-      - 2-inbound-mechanism
-      - 3-acceptance-evidence
-      - 6-currently-usable
-    current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
-  - record_id: global-mitre-atlas
-    name: MITRE ATLAS (Adversarial Threat Landscape for AI Systems)
-    file: content/channels/global/global-mitre-atlas.yml
-    record_type: reporting-channel
-    country: global
-    public_input: open
-    route_id: submission-page
-    claimed_type: reporting
-    value: https://github.com/mitre-atlas/atlas-data
-    verified: true
-    evidence_hint: Adversarial ML tactics, techniques and real-world case studies — i.e. attacks against AI systems. Contributions are curated into the ATLAS matrix and case study set.
-    source_urls:
-      - https://github.com/mitre-atlas/atlas-data
-    failed_rules:
-      - 5-relevant-scope
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-mitre-atlas
     name: MITRE ATLAS (Adversarial Threat Landscape for AI Systems)
     file: content/channels/global/global-mitre-atlas.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://github.com/mitre-atlas/atlas-data
@@ -2220,18 +2398,20 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 5-relevant-scope
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-oecd-ai-incidents-hazards-monitor
     name: OECD AI Incidents and Hazards Monitor (AIM)
     file: content/channels/global/global-oecd-ai-incidents-hazards-monitor.yml
     record_type: watchdog
     country: global
     public_input: none
+    record_disposition: reclassify
     route_id: open-submission-process-announced
     claimed_type: submission
     value: https://oecd.ai/en/incidents-methodology
@@ -2242,16 +2422,18 @@ routes:
       - https://oecd.ai/en/incidents
     failed_rules:
       - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-oecd-ai-incidents-hazards-monitor
     name: OECD AI Incidents and Hazards Monitor (AIM)
     file: content/channels/global/global-oecd-ai-incidents-hazards-monitor.yml
     record_type: watchdog
     country: global
     public_input: none
+    record_disposition: reclassify
     route_id: incidents-dashboard
     claimed_type: form
     value: https://oecd.ai/en/incidents
@@ -2262,16 +2444,18 @@ routes:
       - https://oecd.ai/en/incidents
     failed_rules:
       - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-oecd-ai-incidents-hazards-monitor
     name: OECD AI Incidents and Hazards Monitor (AIM)
     file: content/channels/global/global-oecd-ai-incidents-hazards-monitor.yml
     record_type: watchdog
     country: global
     public_input: none
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://oecd.ai/en/incidents
@@ -2286,15 +2470,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-openai-inbound-reporting
     name: OpenAI inbound reporting (Bugcrowd bug bounty + in-product feedback)
     file: content/channels/global/global-openai-inbound-reporting.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: disclosure
     value: https://openai.com/form/model-behavior-feedback/
@@ -2304,15 +2489,16 @@ routes:
       - https://openai.com/form/model-behavior-feedback/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-openai-inbound-reporting
     name: OpenAI inbound reporting (Bugcrowd bug bounty + in-product feedback)
     file: content/channels/global/global-openai-inbound-reporting.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://openai.com/form/model-behavior-feedback/
@@ -2323,17 +2509,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-openai-outbound-coordinated-disclosure-policy
     name: OpenAI Outbound Coordinated Disclosure Policy
     file: content/channels/global/global-openai-outbound-coordinated-disclosure-policy.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: reclassify
     route_id: submission-page
     claimed_type: disclosure
     value: https://openai.com/policies/outbound-coordinated-disclosure-policy/
@@ -2341,17 +2529,20 @@ routes:
     evidence_hint: Nothing. This governs vulnerabilities OpenAI discovers in third-party software and reports outward.
     source_urls:
       - https://openai.com/policies/outbound-coordinated-disclosure-policy/
-    failed_rules: []
+    failed_rules:
+      - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-openai-outbound-coordinated-disclosure-policy
     name: OpenAI Outbound Coordinated Disclosure Policy
     file: content/channels/global/global-openai-outbound-coordinated-disclosure-policy.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://openai.com/policies/outbound-coordinated-disclosure-policy/
@@ -2362,17 +2553,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-perils-ai-safety-s-insularity-why
     name: "'The perils of AI safety's insularity' — why outside contributions get ignored"
     file: content/channels/global/global-perils-ai-safety-s-insularity-why.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: reclassify
     route_id: submission-page
     claimed_type: disclosure
     value: https://www.transformernews.ai/p/the-perils-of-ai-safetys-insularity
@@ -2380,17 +2573,20 @@ routes:
     evidence_hint: N/A
     source_urls:
       - https://www.transformernews.ai/p/the-perils-of-ai-safetys-insularity
-    failed_rules: []
+    failed_rules:
+      - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-perils-ai-safety-s-insularity-why
     name: "'The perils of AI safety's insularity' — why outside contributions get ignored"
     file: content/channels/global/global-perils-ai-safety-s-insularity-why.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://www.transformernews.ai/p/the-perils-of-ai-safetys-insularity
@@ -2401,17 +2597,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-signals-network-tech-accountability-project
     name: The Signals Network — Tech Accountability Project
     file: content/channels/global/global-signals-network-tech-accountability-project.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: whistleblowing
     value: https://thesignalsnetwork.org/tech-accountability-project/
@@ -2421,15 +2619,16 @@ routes:
       - https://thesignalsnetwork.org/tech-accountability-project/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: global-signals-network-tech-accountability-project
     name: The Signals Network — Tech Accountability Project
     file: content/channels/global/global-signals-network-tech-accountability-project.yml
     record_type: reporting-channel
     country: global
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://thesignalsnetwork.org/tech-accountability-project/
@@ -2440,17 +2639,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: jp-sakana-ai
     name: Sakana AI
     file: content/channels/jp/jp-sakana-ai.yml
     record_type: company
     country: jp
     public_input: none
+    record_disposition: reclassify
     route_id: no-verified-safety-or
     claimed_type: form
     value: https://sakana.ai/
@@ -2460,16 +2661,18 @@ routes:
       - https://sakana.ai/
     failed_rules:
       - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: jp-sakana-ai
     name: Sakana AI
     file: content/channels/jp/jp-sakana-ai.yml
     record_type: company
     country: jp
     public_input: none
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://sakana.ai/
@@ -2483,15 +2686,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: jp-sakana-ai
     name: Sakana AI
     file: content/channels/jp/jp-sakana-ai.yml
     record_type: company
     country: jp
     public_input: none
+    record_disposition: reclassify
     route_id: framework
     claimed_type: framework
     value: https://sakana.ai/company-info/
@@ -2505,15 +2709,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: kr-naver
     name: NAVER
     file: content/channels/kr/kr-naver.yml
     record_type: company
     country: kr
     public_input: none
+    record_disposition: reclassify
     route_id: naver-cloud-sales-support
     claimed_type: form
     value: https://www.ncloud.com/support/question/sales?parentCode=SALES_PNSTS
@@ -2523,16 +2728,18 @@ routes:
       - https://www.ncloud.com/support/question/sales?parentCode=SALES_PNSTS
     failed_rules:
       - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: kr-naver
     name: NAVER
     file: content/channels/kr/kr-naver.yml
     record_type: company
     country: kr
     public_input: none
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://clova.ai/en
@@ -2546,15 +2753,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: kr-naver
     name: NAVER
     file: content/channels/kr/kr-naver.yml
     record_type: company
     country: kr
     public_input: none
+    record_disposition: reclassify
     route_id: framework
     claimed_type: framework
     value: https://clova.ai/en/tech-blog/en-navers-ai-safety-framework-asf
@@ -2568,15 +2776,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-ai-lab-watch
     name: AI Lab Watch
     file: content/channels/us/us-ai-lab-watch.yml
     record_type: watchdog
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: resources-page
     claimed_type: form
     value: https://ailabwatch.org/resources
@@ -2587,16 +2796,18 @@ routes:
       - https://ailabwatch.substack.com/
     failed_rules:
       - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-ai-lab-watch
     name: AI Lab Watch
     file: content/channels/us/us-ai-lab-watch.yml
     record_type: watchdog
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: blog-substack
     claimed_type: form
     value: https://ailabwatch.substack.com/
@@ -2607,16 +2818,18 @@ routes:
       - https://ailabwatch.substack.com/
     failed_rules:
       - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-ai-lab-watch
     name: AI Lab Watch
     file: content/channels/us/us-ai-lab-watch.yml
     record_type: watchdog
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://ailabwatch.org/
@@ -2631,15 +2844,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-ai-whistleblower-protection-act-federal
     name: AI Whistleblower Protection Act (S.1792) — federal, not law
     file: content/channels/us/us-ai-whistleblower-protection-act-federal.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: reclassify
     route_id: submission-page
     claimed_type: whistleblowing
     value: https://billsincongress.com/bills/1792s119
@@ -2647,17 +2861,20 @@ routes:
     evidence_hint: N/A — not enacted.
     source_urls:
       - https://billsincongress.com/bills/1792s119
-    failed_rules: []
+    failed_rules:
+      - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-ai-whistleblower-protection-act-federal
     name: AI Whistleblower Protection Act (S.1792) — federal, not law
     file: content/channels/us/us-ai-whistleblower-protection-act-federal.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://billsincongress.com/bills/1792s119
@@ -2668,17 +2885,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-allen-institute-ai
     name: Allen Institute for AI (Ai2)
     file: content/channels/us/us-allen-institute-ai.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: general-support-also-safety
     claimed_type: email
     value: support@allenai.org
@@ -2690,15 +2909,16 @@ routes:
       - https://allenai.org/responsible-use
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-allen-institute-ai
     name: Allen Institute for AI (Ai2)
     file: content/channels/us/us-allen-institute-ai.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: research-principles
     claimed_type: program
     value: https://allenai.org/research-principles
@@ -2710,17 +2930,19 @@ routes:
       - https://allenai.org/responsible-use
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-allen-institute-ai
     name: Allen Institute for AI (Ai2)
     file: content/channels/us/us-allen-institute-ai.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://allenai.org/
@@ -2733,17 +2955,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-allen-institute-ai
     name: Allen Institute for AI (Ai2)
     file: content/channels/us/us-allen-institute-ai.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://allenai.org/responsible-use
@@ -2756,17 +2980,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-amazon-aws
     name: Amazon / AWS
     file: content/channels/us/us-amazon-aws.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: aws-security-vulnerabilities
     claimed_type: email
     value: aws-security@amazon.com
@@ -2777,16 +3003,18 @@ routes:
       - https://repost.aws/knowledge-center/report-aws-abuse
     failed_rules:
       - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-amazon-aws
     name: Amazon / AWS
     file: content/channels/us/us-amazon-aws.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: aws-abuse-trust-safety
     claimed_type: email
     value: trustandsafety@support.aws.com
@@ -2797,16 +3025,18 @@ routes:
       - https://repost.aws/knowledge-center/report-aws-abuse
     failed_rules:
       - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-amazon-aws
     name: Amazon / AWS
     file: content/channels/us/us-amazon-aws.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: aws-vulnerability-disclosure-program
     claimed_type: disclosure
     value: https://hackerone.com/aws_vdp
@@ -2817,16 +3047,18 @@ routes:
       - https://repost.aws/knowledge-center/report-aws-abuse
     failed_rules:
       - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-amazon-aws
     name: Amazon / AWS
     file: content/channels/us/us-amazon-aws.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: aws-abuse-form
     claimed_type: form
     value: https://repost.aws/knowledge-center/report-aws-abuse
@@ -2837,16 +3069,18 @@ routes:
       - https://repost.aws/knowledge-center/report-aws-abuse
     failed_rules:
       - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-amazon-aws
     name: Amazon / AWS
     file: content/channels/us/us-amazon-aws.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://aws.amazon.com/ai/responsible-ai/
@@ -2861,15 +3095,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-amazon-aws
     name: Amazon / AWS
     file: content/channels/us/us-amazon-aws.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: framework
     claimed_type: framework
     value: https://cdn.amazon.science/a0/4f/bca5cb32495280835d9370a466b7/amazon-fmsf-9-2026.pdf
@@ -2884,15 +3119,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-anthropic
     name: Anthropic
     file: content/channels/us/us-anthropic.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: model-safety-issues-jailbreaks
     claimed_type: email
     value: usersafety@anthropic.com
@@ -2904,15 +3140,16 @@ routes:
       - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-anthropic
     name: Anthropic
     file: content/channels/us/us-anthropic.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: questions-about-disclosure-policy
     claimed_type: email
     value: disclosure@anthropic.com
@@ -2924,15 +3161,16 @@ routes:
       - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-anthropic
     name: Anthropic
     file: content/channels/us/us-anthropic.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: responsible-disclosure-policy
     claimed_type: disclosure
     value: https://www.anthropic.com/responsible-disclosure-policy
@@ -2944,15 +3182,16 @@ routes:
       - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-anthropic
     name: Anthropic
     file: content/channels/us/us-anthropic.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: hackerone-submission-form
     claimed_type: bounty
     value: https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
@@ -2964,15 +3203,16 @@ routes:
       - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-anthropic
     name: Anthropic
     file: content/channels/us/us-anthropic.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: model-safety-bug-bounty
     claimed_type: bounty
     value: https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
@@ -2984,15 +3224,16 @@ routes:
       - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-anthropic
     name: Anthropic
     file: content/channels/us/us-anthropic.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: usage-policy-trust-safety
     claimed_type: form
     value: https://support.claude.com/en/articles/8241253-trust-and-safety-warnings-and-appeals
@@ -3004,17 +3245,19 @@ routes:
       - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-anthropic
     name: Anthropic
     file: content/channels/us/us-anthropic.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.anthropic.com/
@@ -3027,17 +3270,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-anthropic
     name: Anthropic
     file: content/channels/us/us-anthropic.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://www.anthropic.com/rsp
@@ -3050,17 +3295,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-apple
     name: Apple
     file: content/channels/us/us-apple.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: apple-security-bounty
     claimed_type: bounty
     value: https://security.apple.com/submit/
@@ -3071,15 +3318,16 @@ routes:
       - https://security.apple.com/terms-and-conditions/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-apple
     name: Apple
     file: content/channels/us/us-apple.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: bounty-terms-conditions
     claimed_type: disclosure
     value: https://security.apple.com/terms-and-conditions/
@@ -3090,15 +3338,16 @@ routes:
       - https://security.apple.com/terms-and-conditions/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-apple
     name: Apple
     file: content/channels/us/us-apple.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://security.apple.com/
@@ -3110,17 +3359,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-apple
     name: Apple
     file: content/channels/us/us-apple.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://security.apple.com/bounty/
@@ -3132,17 +3383,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-california-attorney-general-consumer-complaint
     name: California Attorney General — consumer complaint
     file: content/channels/us/ca/us-california-attorney-general-consumer-complaint.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: complaint
     value: https://oag.ca.gov/contact/consumer-complaint-against-business-or-company
@@ -3152,15 +3405,16 @@ routes:
       - https://oag.ca.gov/contact/consumer-complaint-against-business-or-company
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-california-attorney-general-consumer-complaint
     name: California Attorney General — consumer complaint
     file: content/channels/us/ca/us-california-attorney-general-consumer-complaint.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://oag.ca.gov/contact/consumer-complaint-against-business-or-company
@@ -3171,17 +3425,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-california-sb-53-whistleblower-protections-public
     name: California SB 53 (Transparency in Frontier Artificial Intelligence Act) — whistleblower protections and public incident reporting
     file: content/channels/us/ca/us-california-sb-53-whistleblower-protections-public.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: whistleblowing
     value: https://fpf.org/blog/californias-sb-53-the-first-frontier-ai-law-explained/
@@ -3191,15 +3447,16 @@ routes:
       - https://fpf.org/blog/californias-sb-53-the-first-frontier-ai-law-explained/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-california-sb-53-whistleblower-protections-public
     name: California SB 53 (Transparency in Frontier Artificial Intelligence Act) — whistleblower protections and public incident reporting
     file: content/channels/us/ca/us-california-sb-53-whistleblower-protections-public.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://fpf.org/blog/californias-sb-53-the-first-frontier-ai-law-explained/
@@ -3210,17 +3467,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-government-accountability-project
     name: Government Accountability Project
     file: content/channels/us/us-government-accountability-project.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: whistleblowing
     value: https://whistleblower.org/how-to-request-assistance/
@@ -3230,15 +3489,16 @@ routes:
       - https://whistleblower.org/how-to-request-assistance/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-government-accountability-project
     name: Government Accountability Project
     file: content/channels/us/us-government-accountability-project.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://whistleblower.org/how-to-request-assistance/
@@ -3249,17 +3509,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-ibm
     name: IBM
     file: content/channels/us/us-ibm.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: ibm-psirt
     claimed_type: email
     value: psirt@us.ibm.com
@@ -3270,15 +3532,16 @@ routes:
       - https://www.ibm.com/trust/security-psirt
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-ibm
     name: IBM
     file: content/channels/us/us-ibm.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: ibm-hackerone
     claimed_type: disclosure
     value: https://hackerone.com/ibm?type=team
@@ -3289,15 +3552,16 @@ routes:
       - https://www.ibm.com/trust/security-psirt
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-ibm
     name: IBM
     file: content/channels/us/us-ibm.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: ibm-safe-harbor-policy
     claimed_type: disclosure
     value: https://www.ibm.com/trust/security-psirt
@@ -3308,15 +3572,16 @@ routes:
       - https://www.ibm.com/trust/security-psirt
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-ibm
     name: IBM
     file: content/channels/us/us-ibm.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.ibm.com/trust
@@ -3328,17 +3593,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-ibm
     name: IBM
     file: content/channels/us/us-ibm.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://www.ibm.com/impact/ai-ethics
@@ -3350,17 +3617,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-magic
     name: Magic
     file: content/channels/us/us-magic.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: no-verified-safety-or
     claimed_type: form
     value: https://magic.dev/
@@ -3374,15 +3643,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-magic
     name: Magic
     file: content/channels/us/us-magic.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://magic.dev/
@@ -3397,15 +3667,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-magic
     name: Magic
     file: content/channels/us/us-magic.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: framework
     claimed_type: framework
     value: https://magic.dev/agi-readiness-policy
@@ -3420,15 +3691,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-meta
     name: Meta
     file: content/channels/us/us-meta.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: llama-policy-violation-reports
     claimed_type: email
     value: LlamaUseReport@meta.com
@@ -3440,15 +3712,16 @@ routes:
       - https://github.com/facebookresearch/llama
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-meta
     name: Meta
     file: content/channels/us/us-meta.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: risky-content-model-output
     claimed_type: feedback
     value: https://developers.facebook.com/llama_output_feedback/
@@ -3460,15 +3733,16 @@ routes:
       - https://github.com/facebookresearch/llama
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-meta
     name: Meta
     file: content/channels/us/us-meta.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: meta-security-whitehat
     claimed_type: disclosure
     value: https://facebook.com/whitehat/info/
@@ -3480,15 +3754,16 @@ routes:
       - https://github.com/facebookresearch/llama
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-meta
     name: Meta
     file: content/channels/us/us-meta.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: meta-bug-bounty-genai
     claimed_type: bounty
     value: https://bugbounty.meta.com/payout-guidelines/meta-genai/
@@ -3500,17 +3775,19 @@ routes:
       - https://github.com/facebookresearch/llama
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-meta
     name: Meta
     file: content/channels/us/us-meta.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: model-issues-via-github
     claimed_type: disclosure
     value: https://github.com/facebookresearch/llama
@@ -3522,15 +3799,16 @@ routes:
       - https://github.com/facebookresearch/llama
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-meta
     name: Meta
     file: content/channels/us/us-meta.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://ai.meta.com/
@@ -3543,17 +3821,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-meta
     name: Meta
     file: content/channels/us/us-meta.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://ai.meta.com/static-resource/Meta_Advanced-AI-Scaling-Framework-v2
@@ -3566,17 +3846,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-microsoft
     name: Microsoft
     file: content/channels/us/us-microsoft.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: msrc-researcher-portal
     claimed_type: disclosure
     value: https://msrc.microsoft.com/report/
@@ -3588,17 +3870,19 @@ routes:
       - https://go.microsoft.com/fwlink/?linkid=2299798
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-microsoft
     name: Microsoft
     file: content/channels/us/us-microsoft.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: microsoft-copilot-ai-bounty
     claimed_type: bounty
     value: https://www.microsoft.com/en-us/msrc/bounty-ai
@@ -3610,15 +3894,16 @@ routes:
       - https://go.microsoft.com/fwlink/?linkid=2299798
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-microsoft
     name: Microsoft
     file: content/channels/us/us-microsoft.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: ai-ml-vulnerability-severity
     claimed_type: disclosure
     value: https://www.microsoft.com/en-us/msrc/aibugbar
@@ -3630,15 +3915,16 @@ routes:
       - https://go.microsoft.com/fwlink/?linkid=2299798
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-microsoft
     name: Microsoft
     file: content/channels/us/us-microsoft.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: report-concern
     claimed_type: form
     value: https://www.microsoft.com/digitalsafety/report-a-concern
@@ -3650,17 +3936,19 @@ routes:
       - https://go.microsoft.com/fwlink/?linkid=2299798
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-microsoft
     name: Microsoft
     file: content/channels/us/us-microsoft.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: enterprise-ai-services-abuse
     claimed_type: form
     value: https://go.microsoft.com/fwlink/?linkid=2299798
@@ -3672,15 +3960,16 @@ routes:
       - https://go.microsoft.com/fwlink/?linkid=2299798
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-microsoft
     name: Microsoft
     file: content/channels/us/us-microsoft.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.microsoft.com/ai/responsible-ai
@@ -3693,17 +3982,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-microsoft
     name: Microsoft
     file: content/channels/us/us-microsoft.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/Frontier-Governance-Framework-Feb-2026.pdf
@@ -3716,17 +4007,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-midas-project
     name: The Midas Project
     file: content/channels/us/us-midas-project.yml
     record_type: watchdog
     country: us
     public_input: open
+    record_disposition: keep
     route_id: submit-tip-best-designed
     claimed_type: submission
     value: https://www.themidasproject.com/tips
@@ -3737,15 +4030,16 @@ routes:
       - https://www.themidasproject.com/contact
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-midas-project
     name: The Midas Project
     file: content/channels/us/us-midas-project.yml
     record_type: watchdog
     country: us
     public_input: open
+    record_disposition: keep
     route_id: signal-username
     claimed_type: submission
     value: midasproject.10
@@ -3756,16 +4050,19 @@ routes:
       - https://www.themidasproject.com/contact
     failed_rules:
       - 2-inbound-mechanism
+      - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-midas-project
     name: The Midas Project
     file: content/channels/us/us-midas-project.yml
     record_type: watchdog
     country: us
     public_input: open
+    record_disposition: keep
     route_id: general-enquiries
     claimed_type: email
     value: info@themidasproject.com
@@ -3776,15 +4073,16 @@ routes:
       - https://www.themidasproject.com/contact
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-midas-project
     name: The Midas Project
     file: content/channels/us/us-midas-project.yml
     record_type: watchdog
     country: us
     public_input: open
+    record_disposition: keep
     route_id: contact-form
     claimed_type: form
     value: https://www.themidasproject.com/contact
@@ -3795,15 +4093,16 @@ routes:
       - https://www.themidasproject.com/contact
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-midas-project
     name: The Midas Project
     file: content/channels/us/us-midas-project.yml
     record_type: watchdog
     country: us
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.themidasproject.com/
@@ -3815,17 +4114,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-nist-caisi-requests-information-ai
     name: NIST / CAISI requests for information on AI
     file: content/channels/us/us-nist-caisi-requests-information-ai.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: consultation
     value: https://www.federalregister.gov/documents/2026/08/12/2026-16371/request-for-information-rfi-on-modernizing-the-national-vulnerability-database-in-the-age-of
@@ -3835,15 +4136,16 @@ routes:
       - https://www.federalregister.gov/documents/2026/08/12/2026-16371/request-for-information-rfi-on-modernizing-the-national-vulnerability-database-in-the-age-of
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-nist-caisi-requests-information-ai
     name: NIST / CAISI requests for information on AI
     file: content/channels/us/us-nist-caisi-requests-information-ai.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.federalregister.gov/documents/2026/08/12/2026-16371/request-for-information-rfi-on-modernizing-the-national-vulnerability-database-in-the-age-of
@@ -3854,17 +4156,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-nvidia
     name: NVIDIA
     file: content/channels/us/us-nvidia.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: nvidia-psirt
     claimed_type: email
     value: psirt@nvidia.com
@@ -3875,15 +4179,16 @@ routes:
       - https://app.intigriti.com/company/programs/nvidia/nvidiapublicbugbounty/detail
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-nvidia
     name: NVIDIA
     file: content/channels/us/us-nvidia.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: report-security-vulnerability-or
     claimed_type: disclosure
     value: https://app.intigriti.com/company/programs/nvidia/nvidiavdp/detail
@@ -3894,15 +4199,16 @@ routes:
       - https://app.intigriti.com/company/programs/nvidia/nvidiapublicbugbounty/detail
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-nvidia
     name: NVIDIA
     file: content/channels/us/us-nvidia.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: nvidia-public-bug-bounty
     claimed_type: bounty
     value: https://app.intigriti.com/company/programs/nvidia/nvidiapublicbugbounty/detail
@@ -3913,15 +4219,16 @@ routes:
       - https://app.intigriti.com/company/programs/nvidia/nvidiapublicbugbounty/detail
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-nvidia
     name: NVIDIA
     file: content/channels/us/us-nvidia.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.nvidia.com/en-us/security/
@@ -3933,17 +4240,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-nvidia
     name: NVIDIA
     file: content/channels/us/us-nvidia.yml
     record_type: company
     country: us
     public_input: open
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://images.nvidia.com/content/pdf/NVIDIA-Frontier-AI-Risk-Assessment.pdf
@@ -3955,17 +4264,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-openai
     name: OpenAI
     file: content/channels/us/us-openai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: coordinated-vulnerability-disclosure-policy
     claimed_type: disclosure
     value: https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
@@ -3980,15 +4291,16 @@ routes:
       - https://openai.com/form/model-spec-feedback/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-openai
     name: OpenAI
     file: content/channels/us/us-openai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: openai-bug-bounty
     claimed_type: bounty
     value: https://bugcrowd.com/openai
@@ -4003,17 +4315,19 @@ routes:
       - https://openai.com/form/model-spec-feedback/
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-openai
     name: OpenAI
     file: content/channels/us/us-openai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: openai-safety-bug-bounty
     claimed_type: bounty
     value: https://bugcrowd.com/engagements/openai-safety
@@ -4028,17 +4342,19 @@ routes:
       - https://openai.com/form/model-spec-feedback/
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-openai
     name: OpenAI
     file: content/channels/us/us-openai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: report-content
     claimed_type: form
     value: https://openai.com/form/report-content/
@@ -4053,15 +4369,16 @@ routes:
       - https://openai.com/form/model-spec-feedback/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-openai
     name: OpenAI
     file: content/channels/us/us-openai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: researcher-access-program
     claimed_type: program
     value: https://openai.com/form/researcher-access-program/
@@ -4074,17 +4391,20 @@ routes:
       - https://openai.com/index/red-teaming-network/
       - https://openai.com/form/model-behavior-feedback/
       - https://openai.com/form/model-spec-feedback/
-    failed_rules: []
-    current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    failed_rules:
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-openai
     name: OpenAI
     file: content/channels/us/us-openai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: red-teaming-network
     claimed_type: program
     value: https://openai.com/index/red-teaming-network/
@@ -4097,17 +4417,20 @@ routes:
       - https://openai.com/index/red-teaming-network/
       - https://openai.com/form/model-behavior-feedback/
       - https://openai.com/form/model-spec-feedback/
-    failed_rules: []
-    current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    failed_rules:
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-openai
     name: OpenAI
     file: content/channels/us/us-openai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: model-behavior-feedback-form
     claimed_type: feedback
     value: https://openai.com/form/model-behavior-feedback/
@@ -4122,15 +4445,16 @@ routes:
       - https://openai.com/form/model-spec-feedback/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-openai
     name: OpenAI
     file: content/channels/us/us-openai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: model-spec-feedback-form
     claimed_type: feedback
     value: https://openai.com/form/model-spec-feedback/
@@ -4145,15 +4469,16 @@ routes:
       - https://openai.com/form/model-spec-feedback/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-openai
     name: OpenAI
     file: content/channels/us/us-openai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://openai.com/
@@ -4169,17 +4494,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-openai
     name: OpenAI
     file: content/channels/us/us-openai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://model-spec.openai.com/
@@ -4195,17 +4522,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-perplexity
     name: Perplexity
     file: content/channels/us/us-perplexity.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: vulnerability-disclosure-program
     claimed_type: disclosure
     value: https://bugcrowd.com/f1d4df64-af62-46e2-b7d3-dbe70b69a34e/external/report
@@ -4215,15 +4544,16 @@ routes:
       - https://bugcrowd.com/f1d4df64-af62-46e2-b7d3-dbe70b69a34e/external/report
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-perplexity
     name: Perplexity
     file: content/channels/us/us-perplexity.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: support-including-what-they
     claimed_type: email
     value: support@perplexity.ai
@@ -4233,15 +4563,16 @@ routes:
       - https://bugcrowd.com/f1d4df64-af62-46e2-b7d3-dbe70b69a34e/external/report
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-perplexity
     name: Perplexity
     file: content/channels/us/us-perplexity.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: privacy-data-concerns
     claimed_type: email
     value: privacy@perplexity.ai
@@ -4251,15 +4582,16 @@ routes:
       - https://bugcrowd.com/f1d4df64-af62-46e2-b7d3-dbe70b69a34e/external/report
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-perplexity
     name: Perplexity
     file: content/channels/us/us-perplexity.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.perplexity.ai/hub/security
@@ -4270,17 +4602,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-perplexity
     name: Perplexity
     file: content/channels/us/us-perplexity.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://www.perplexity.ai/hub/security-vdp
@@ -4291,17 +4625,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-psst-org-information-escrow-digital-safe
     name: Psst.org — information escrow / 'digital safe'
     file: content/channels/us/us-psst-org-information-escrow-digital-safe.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: whistleblowing
     value: https://psst.org/about
@@ -4311,15 +4647,16 @@ routes:
       - https://psst.org/about
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-psst-org-information-escrow-digital-safe
     name: Psst.org — information escrow / 'digital safe'
     file: content/channels/us/us-psst-org-information-escrow-digital-safe.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://psst.org/about
@@ -4330,17 +4667,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-reflection-ai
     name: Reflection AI
     file: content/channels/us/us-reflection-ai.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: single-catch-all-contact
     claimed_type: email
     value: https://reflection.ai/legal/privacy-policy/
@@ -4350,16 +4689,18 @@ routes:
       - https://reflection.ai/legal/privacy-policy/
     failed_rules:
       - 4-eligible-user
+      - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-reflection-ai
     name: Reflection AI
     file: content/channels/us/us-reflection-ai.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: support-knowledge-base
     claimed_type: form
     value: https://support.reflection.ai/
@@ -4372,15 +4713,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-reflection-ai
     name: Reflection AI
     file: content/channels/us/us-reflection-ai.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://reflection.ai/
@@ -4394,15 +4736,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-reflection-ai
     name: Reflection AI
     file: content/channels/us/us-reflection-ai.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: framework
     claimed_type: framework
     value: https://reflection.ai/
@@ -4416,15 +4759,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-safe-superintelligence-inc
     name: Safe Superintelligence Inc. (SSI)
     file: content/channels/us/us-safe-superintelligence-inc.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: contact-page
     claimed_type: form
     value: https://ssi.inc/contact
@@ -4438,15 +4782,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-safe-superintelligence-inc
     name: Safe Superintelligence Inc. (SSI)
     file: content/channels/us/us-safe-superintelligence-inc.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: homepage
     claimed_type: homepage
     value: https://ssi.inc/
@@ -4461,15 +4806,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-safe-superintelligence-inc
     name: Safe Superintelligence Inc. (SSI)
     file: content/channels/us/us-safe-superintelligence-inc.yml
     record_type: company
     country: us
     public_input: none
+    record_disposition: reclassify
     route_id: framework
     claimed_type: framework
     value: https://ssi.inc/
@@ -4484,15 +4830,16 @@ routes:
       - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-scale-ai
     name: Scale AI
     file: content/channels/us/us-scale-ai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: vulnerability-reports
     claimed_type: email
     value: vulnerabilities@scale.com
@@ -4502,15 +4849,16 @@ routes:
       - https://trust.scale.com/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-scale-ai
     name: Scale AI
     file: content/channels/us/us-scale-ai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: trust-center
     claimed_type: program
     value: https://trust.scale.com/
@@ -4518,17 +4866,20 @@ routes:
     evidence_hint: Compliance artifacts (SOC 2 Type II, ISO 27001, FedRAMP High, DoD IL4).
     source_urls:
       - https://trust.scale.com/
-    failed_rules: []
-    current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    failed_rules:
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-scale-ai
     name: Scale AI
     file: content/channels/us/us-scale-ai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://scale.com/security
@@ -4539,17 +4890,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-scale-ai
     name: Scale AI
     file: content/channels/us/us-scale-ai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://scale.com/blog/risk-matrix
@@ -4560,17 +4913,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-sec-whistleblower-program
     name: SEC Whistleblower Program (Form TCR)
     file: content/channels/us/us-sec-whistleblower-program.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: whistleblowing
     value: https://www.sec.gov/enforcement-litigation/whistleblower-program/information-about-submitting-whistleblower-tip
@@ -4580,15 +4935,16 @@ routes:
       - https://www.sec.gov/enforcement-litigation/whistleblower-program/information-about-submitting-whistleblower-tip
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-sec-whistleblower-program
     name: SEC Whistleblower Program (Form TCR)
     file: content/channels/us/us-sec-whistleblower-program.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.sec.gov/enforcement-litigation/whistleblower-program/information-about-submitting-whistleblower-tip
@@ -4599,17 +4955,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-thinking-machines-lab
     name: Thinking Machines Lab
     file: content/channels/us/us-thinking-machines-lab.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: security-vulnerability-reports
     claimed_type: email
     value: security-reports@thinkingmachines.ai
@@ -4620,15 +4978,16 @@ routes:
       - https://thinkingmachines.ai/security/disclosure-policy/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-thinking-machines-lab
     name: Thinking Machines Lab
     file: content/channels/us/us-thinking-machines-lab.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: model-safety-incidents-routed
     claimed_type: email
     value: legal@thinkingmachines.ai
@@ -4639,15 +4998,16 @@ routes:
       - https://thinkingmachines.ai/security/disclosure-policy/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-thinking-machines-lab
     name: Thinking Machines Lab
     file: content/channels/us/us-thinking-machines-lab.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://thinkingmachines.ai/
@@ -4659,17 +5019,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-thinking-machines-lab
     name: Thinking Machines Lab
     file: content/channels/us/us-thinking-machines-lab.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://thinkingmachines.ai/security/disclosure-policy/
@@ -4681,17 +5043,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-us-federal-rulemaking-comments-regulations-gov
     name: US federal rulemaking comments — Regulations.gov
     file: content/channels/us/us-us-federal-rulemaking-comments-regulations-gov.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: consultation
     value: https://www.regulations.gov/assets/files/Public-Comment-on-Federal-Regulations_Final.pdf
@@ -4701,15 +5065,16 @@ routes:
       - https://www.regulations.gov/assets/files/Public-Comment-on-Federal-Regulations_Final.pdf
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-us-federal-rulemaking-comments-regulations-gov
     name: US federal rulemaking comments — Regulations.gov
     file: content/channels/us/us-us-federal-rulemaking-comments-regulations-gov.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://www.regulations.gov/assets/files/Public-Comment-on-Federal-Regulations_Final.pdf
@@ -4720,17 +5085,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-us-ftc-reportfraud-ftc-gov
     name: US FTC — ReportFraud.ftc.gov
     file: content/channels/us/us-us-ftc-reportfraud-ftc-gov.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: submission-page
     claimed_type: complaint
     value: https://reportfraud.ftc.gov/
@@ -4740,15 +5107,16 @@ routes:
       - https://reportfraud.ftc.gov/
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-us-ftc-reportfraud-ftc-gov
     name: US FTC — ReportFraud.ftc.gov
     file: content/channels/us/us-us-ftc-reportfraud-ftc-gov.yml
     record_type: reporting-channel
     country: us
     public_input: open
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://reportfraud.ftc.gov/
@@ -4759,17 +5127,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-xai
     name: xAI (SpaceXAI)
     file: content/channels/us/us-xai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: safety-reports
     claimed_type: email
     value: safety@x.ai
@@ -4781,15 +5151,16 @@ routes:
       - https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf
     failed_rules: []
     current_result: legacy-eligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-xai
     name: xAI (SpaceXAI)
     file: content/channels/us/us-xai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: hackerone-bug-bounty
     claimed_type: bounty
     value: https://hackerone.com/x
@@ -4801,17 +5172,19 @@ routes:
       - https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf
     failed_rules:
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: fix
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-xai
     name: xAI (SpaceXAI)
     file: content/channels/us/us-xai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: homepage
     claimed_type: homepage
     value: https://x.ai/
@@ -4824,17 +5197,19 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
   - record_id: us-xai
     name: xAI (SpaceXAI)
     file: content/channels/us/us-xai.yml
     record_type: company
     country: us
     public_input: limited
+    record_disposition: keep
     route_id: framework
     claimed_type: framework
     value: https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf
@@ -4847,8 +5222,9 @@ routes:
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
+      - 4-eligible-user
       - 6-currently-usable
     current_result: ineligible
-    disposition: pending
-    reviewer: null
-    reviewed_on: null
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24

@@ -12,6 +12,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 8e7bd4acb37a
+      contact:
+        status: open
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://psst.org/about
+        evidence_note: Concerns from tech and AI workers, at any level of completeness — explicitly including partial information, 'one line of code that is a red flag', or a general unease. Designed as a 'lower stakes way' to report without becoming a formal whistleblower.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - flaw
+          - harm
+          - insider
+          - whistleblowing
     - id: homepage
       type: homepage
       value: https://psst.org/about
@@ -19,12 +36,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 3e2f3a617584
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://psst.org/about
+        evidence_note: Concerns from tech and AI workers, at any level of completeness — explicitly including partial information, 'one line of code that is a red flag', or a general unease. Designed as a 'lower stakes way' to report without becoming a formal whistleblower.
   region: Other
   public_input: open
   tags:
     - flaw
     - harm
     - insider
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Psst.org — information escrow / 'digital safe'
   remit: Concerns from tech and AI workers, at any level of completeness — explicitly including partial information, 'one line of code that is a red flag', or a general unease. Designed as a 'lower stakes way' to report without becoming a formal whistleblower.

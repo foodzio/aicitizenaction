@@ -12,6 +12,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: e3f2dfa88b63
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.themidasproject.com/tips
+        evidence_note: Anyone with specific, non-public, evidence-backed information; they particularly want evidence of gaps between public statements and internal practice
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - flaw
+          - insider
+          - research
+          - submission
     - id: signal-username
       type: submission
       value: midasproject.10
@@ -19,6 +36,16 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 195d4ecdb8b6
+      contact:
+        status: unknown
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: fix
+        evidence_url: https://www.themidasproject.com/tips
+        evidence_note: Sensitive tips; no name required
+        checked_on: 2026-09-22
     - id: general-enquiries
       type: email
       value: info@themidasproject.com
@@ -26,6 +53,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: ffa4ce394921
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.themidasproject.com/tips
+        evidence_note: Non-sensitive
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - flaw
+          - insider
+          - research
+          - email
     - id: contact-form
       type: form
       value: https://www.themidasproject.com/contact
@@ -33,6 +77,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 008b9e565e56
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.themidasproject.com/contact
+        evidence_note: General
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - flaw
+          - insider
+          - research
+          - form
     - id: homepage
       type: homepage
       value: https://www.themidasproject.com/
@@ -40,12 +101,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 1d333ea7ebb6
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.themidasproject.com/
+        evidence_note: "Tiny, and it absolutely reads its inbox — the single best target in this list for someone with concrete non-public evidence about an AI company's conduct. Note their own advice: if you are an employee considering disclosure, contact the AI Whistleblower Initiative first for independent legal guidance before approaching any journalist or watchdog."
   region: United States
   public_input: open
   tags:
     - flaw
     - insider
     - research
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: The Midas Project
   remit: "Watchdog non-profit holding AI companies to their own stated commitments. Projects: Watchtower (tracks changes to and violations of corporate AI safety policies), the Seoul Tracker (whether 16 organisations met the Seoul frontier-safety commitments), The OpenAI Files (documented governance, leadership and culture concerns at OpenAI), and Model Republic (industry influence on policymakers)."

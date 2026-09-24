@@ -12,6 +12,16 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 10f4932af455
+      contact:
+        status: none
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://oecd.ai/en/incidents-methodology
+        evidence_note: Will follow the common reporting framework once launched
+        checked_on: 2026-09-22
     - id: incidents-dashboard
       type: form
       value: https://oecd.ai/en/incidents
@@ -19,6 +29,16 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 2e29adf64108
+      contact:
+        status: none
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://oecd.ai/en/incidents
+        evidence_note: Browsing indexed incidents
+        checked_on: 2026-09-22
     - id: homepage
       type: homepage
       value: https://oecd.ai/en/incidents
@@ -26,11 +46,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: cbff411f31ac
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://oecd.ai/en/incidents
+        evidence_note: Do not route an incident here yet — there is nowhere to put it. Use the AI Incident Database (incidentdatabase.ai), which accepts public submissions today and which OECD AIM draws on conceptually. Check back when OECD opens submissions.
   region: Other
   public_input: none
   tags:
     - behaviour
     - research
+  contact_disposition: reclassify
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: OECD AI Incidents and Hazards Monitor (AIM)
   remit: Tracks AI incidents and hazards to build an evidence base for policy, currently by automated monitoring of 150,000+ news articles daily via Event Registry, with LLM-based classification against the OECD's common reporting framework for AI incidents.

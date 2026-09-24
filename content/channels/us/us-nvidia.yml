@@ -12,6 +12,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 2eec0dd526f7
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://app.intigriti.com/company/programs/nvidia/nvidiavdp/detail
+        evidence_note: Product security vulnerabilities and AI concerns.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - harm
+          - email
     - id: report-security-vulnerability-or
       type: disclosure
       value: https://app.intigriti.com/company/programs/nvidia/nvidiavdp/detail
@@ -19,6 +36,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 6c4bdbe3cbe0
+      contact:
+        status: open
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://app.intigriti.com/company/programs/nvidia/nvidiavdp/detail
+        evidence_note: Explicitly includes 'AI vulnerability or hack, AI trust concern, malicious prompt engineering, data poisoning possibility'.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - harm
+          - disclosure
     - id: nvidia-public-bug-bounty
       type: bounty
       value: https://app.intigriti.com/company/programs/nvidia/nvidiapublicbugbounty/detail
@@ -26,6 +60,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 701c2c3d45fa
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://app.intigriti.com/company/programs/nvidia/nvidiapublicbugbounty/detail
+        evidence_note: Paid security research.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - harm
+          - bounty
     - id: homepage
       type: homepage
       value: https://www.nvidia.com/en-us/security/
@@ -33,6 +84,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 0afe9f5a6da6
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.nvidia.com/en-us/security/
+        evidence_note: No public complaints found about NVIDIA PSIRT being unresponsive; PSIRT is an established, publicly active team (it posts as @nvidiapsirt). The AI-concern category on the VDP intake form is genuine and unusual. Note that from 1 October 2026 NVIDIA PSIRT will publish security bulletins only on GitHub (github.com/nvidia/product-security), so that is where to watch for outcomes.
     - id: framework
       type: framework
       value: https://images.nvidia.com/content/pdf/NVIDIA-Frontier-AI-Risk-Assessment.pdf
@@ -40,12 +100,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: db76a1d26f2f
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://images.nvidia.com/content/pdf/NVIDIA-Frontier-AI-Risk-Assessment.pdf
+        evidence_note: No public complaints found about NVIDIA PSIRT being unresponsive; PSIRT is an established, publicly active team (it posts as @nvidiapsirt). The AI-concern category on the VDP intake form is genuine and unusual. Note that from 1 October 2026 NVIDIA PSIRT will publish security bulletins only on GitHub (github.com/nvidia/product-security), so that is where to watch for outcomes.
   region: United States
   public_input: open
   tags:
     - behaviour
     - flaw
     - harm
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: NVIDIA
   remit: NVIDIA PSIRT handles product security including AI-specific concerns; a Trustworthy AI function publishes model cards and the NeMo Guardrails tooling.

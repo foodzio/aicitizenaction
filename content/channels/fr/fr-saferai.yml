@@ -12,6 +12,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 10f7fb0b44e8
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://ratings.safer-ai.org/
+        evidence_note: Anyone
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - research
+          - systemic
+          - email
+        restrictions: Anyone
     - id: company-risk-management-ratings
       type: submission
       value: https://ratings.safer-ai.org/
@@ -19,6 +36,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 825782d119b3
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://ratings.safer-ai.org/
+        evidence_note: Public read; methodology published
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - research
+          - systemic
+          - submission
+        restrictions: Public read; methodology published
     - id: homepage
       type: homepage
       value: https://www.safer-ai.org/
@@ -26,11 +60,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 4ad5fb52ce5d
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.safer-ai.org/
+        evidence_note: Small, technically serious and European — which matters, because it has standing in the EU standardisation processes that most US safety organisations do not. Responsive to substantive technical input on risk methodology.
   region: European Union
   public_input: limited
   tags:
     - research
     - systemic
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: SaferAI
   remit: "Non-profit focused on AI risk management. Three arms: research (quantitative risk models — nine cyber risk models completed, expanding to loss of control and CBRN); ratings (independent grading of how well leading AI companies manage risk, across risk identification, severity assessment, safeguards and governance, published at ratings.safer-ai.org); and standards (leads AI risk management standards work in the EU and edits international red-teaming standards)."

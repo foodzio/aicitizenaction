@@ -12,6 +12,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 38b79dfd50a1
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://incidentdatabase.ai/apps/submit/
+        evidence_note: Anyone, worldwide
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - harm
+          - research
+          - submission
     - id: responsible-ai-collaborative-collaboration
       type: email
       value: info@raicollab.org
@@ -19,6 +36,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 305c0c08618f
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://incidentdatabase.ai/apps/submit/
+        evidence_note: Partnership, research, editorial
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - harm
+          - research
+          - email
     - id: contact-page
       type: form
       value: https://incidentdatabase.ai/contact/
@@ -26,6 +60,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: ab3736cdabf0
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://incidentdatabase.ai/contact/
+        evidence_note: General
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - harm
+          - research
+          - form
     - id: github-issues-bugs
       type: submission
       value: https://github.com/responsible-ai-collaborative/aiid/issues/new
@@ -33,6 +84,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: e7aae82bc1d4
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://github.com/responsible-ai-collaborative/aiid/issues/new
+        evidence_note: Anyone
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - harm
+          - research
+          - submission
     - id: homepage
       type: homepage
       value: https://incidentdatabase.ai/
@@ -40,12 +108,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 85bee4a5ec3e
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://incidentdatabase.ai/
+        evidence_note: Small, volunteer-heavy, and genuinely reads its submissions — one of the few places in this entire list where an unaffiliated person's report reliably gets human attention and can end up in the permanent public record. If you have a specific realised harm, start here. Editorial review takes time and marginal submissions do get rejected.
   region: Global
   public_input: open
   tags:
     - behaviour
     - harm
     - research
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: AI Incident Database (Responsible AI Collaborative)
   remit: Public, open-source, citable index of realised AI harms and near-harms, modelled on aviation and cybersecurity incident databases. Community-submitted incidents are editorially reviewed and indexed with reports, entities and classifications. Recent entries span AI medical transcription misuse, deepfake tooling, chatbots implicated in violence planning, and law-enforcement technology abuse.

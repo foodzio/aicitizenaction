@@ -12,6 +12,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: d2c15df6cbf0
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://coral.cohere.com/
+        evidence_note: "Usage Policy states: 'please notify us immediately at safety@cohere.com'. Covers policy violations, misuse or abuse of Cohere Services, model safety issues, and security research falling outside the disclosure procedure."
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - harm
+          - email
     - id: thumbs-down-output
       type: feedback
       value: https://coral.cohere.com/
@@ -19,6 +36,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: 4c38f662abaa
+      contact:
+        status: unknown
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: fix
+        evidence_url: https://coral.cohere.com/
+        evidence_note: In-product feedback on a bad model output, offered in the Usage Policy as an alternative to emailing.
     - id: responsible-disclosure-policy-via
       type: disclosure
       value: https://trustcenter.cohere.com/
@@ -26,6 +52,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: 023b865473da
+      contact:
+        status: unknown
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: fix
+        evidence_url: https://trustcenter.cohere.com/
+        evidence_note: Security vulnerability disclosure; the policy document is downloadable from the Trust Center.
     - id: homepage
       type: homepage
       value: https://cohere.com/security
@@ -33,6 +68,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 50e7ee83a150
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://cohere.com/security
+        evidence_note: No public accounts found either way — no complaints of a black hole, and no published confirmations of response. Cohere is a smaller enterprise-focused developer with a correspondingly low volume of external safety research directed at it. The framework names external partners (NIST, Humane Intelligence) but describes no public intake process.
     - id: framework
       type: framework
       value: https://cohere.com/security/the-cohere-secure-ai-frontier-model-framework-february-2025.pdf
@@ -40,12 +84,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 011ce49c6c31
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://cohere.com/security/the-cohere-secure-ai-frontier-model-framework-february-2025.pdf
+        evidence_note: No public accounts found either way — no complaints of a black hole, and no published confirmations of response. Cohere is a smaller enterprise-focused developer with a correspondingly low volume of external safety research directed at it. The framework names external partners (NIST, Humane Intelligence) but describes no public intake process.
   region: Canada
   public_input: open
   tags:
     - behaviour
     - flaw
     - harm
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Cohere
   remit: Chief Scientist holds 'final authority to determine if our products are safe, secure, and ready to be made available to our customers', delegated by the CEO under the Secure AI Frontier Model Framework.

@@ -12,6 +12,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 615e826d5b8b
+      contact:
+        status: limited
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://bugcrowd.com/f1d4df64-af62-46e2-b7d3-dbe70b69a34e/external/report
+        evidence_note: "'All public facing endpoints of Perplexity. All user-facing clients and API endpoints are in scope.' Explicitly OUT of scope: 'AI-related issues such as hallucinations and model safety are not in scope of the security program.'"
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - disclosure
+        restrictions: "'All public facing endpoints of Perplexity. All user-facing clients and API endpoints are in scope.' Explicitly OUT of scope: 'AI-related issues such as hallucinations and model safety are not in scope of the security program.'"
     - id: support-including-what-they
       type: email
       value: support@perplexity.ai
@@ -19,6 +36,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 23cebcb76cf2
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://bugcrowd.com/f1d4df64-af62-46e2-b7d3-dbe70b69a34e/external/report
+        evidence_note: Account, functional and safety issues, per the VDP page.
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - email
+        restrictions: Account, functional and safety issues, per the VDP page.
     - id: privacy-data-concerns
       type: email
       value: privacy@perplexity.ai
@@ -26,6 +60,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: ebac60d43b81
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://bugcrowd.com/f1d4df64-af62-46e2-b7d3-dbe70b69a34e/external/report
+        evidence_note: Privacy and data.
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - email
+        restrictions: Privacy and data.
     - id: homepage
       type: homepage
       value: https://www.perplexity.ai/hub/security
@@ -33,6 +84,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 282c2506ad4b
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.perplexity.ai/hub/security
+        evidence_note: "The Comet browser has been a repeated target of serious external security research — Hacktron's one-click UXSS and Brave's prompt-injection findings — and those were handled through the security program, which does function. But model safety is formally excluded from it, and the fallback is a general support inbox. No safe-harbour language is published on the VDP page: it asks researchers to 'avoid actions that could compromise the privacy of our users' but offers no legal protection in return."
     - id: framework
       type: framework
       value: https://www.perplexity.ai/hub/security-vdp
@@ -40,11 +100,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: b769477478d4
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.perplexity.ai/hub/security-vdp
+        evidence_note: "The Comet browser has been a repeated target of serious external security research — Hacktron's one-click UXSS and Brave's prompt-injection findings — and those were handled through the security program, which does function. But model safety is formally excluded from it, and the fallback is a general support inbox. No safe-harbour language is published on the VDP page: it asks researchers to 'avoid actions that could compromise the privacy of our users' but offers no legal protection in return."
   region: United States
   public_input: limited
   tags:
     - behaviour
     - flaw
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Perplexity
   remit: No publicly named safety or alignment function. A security team runs the VDP; support handles what Perplexity calls 'safety issues' at the account level.

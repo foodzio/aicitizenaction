@@ -12,6 +12,21 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: fc0a83f71728
+      contact:
+        status: open
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://whistleblower.org/how-to-request-assistance/
+        evidence_note: People who have discovered illegality, gross mismanagement or waste of funds, or threats to health and safety in their employment. Focus is on widespread, systemic issues affecting the public interest.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - insider
+          - whistleblowing
     - id: homepage
       type: homepage
       value: https://whistleblower.org/how-to-request-assistance/
@@ -19,10 +34,22 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 01cd07864a81
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://whistleblower.org/how-to-request-assistance/
+        evidence_note: People who have discovered illegality, gross mismanagement or waste of funds, or threats to health and safety in their employment. Focus is on widespread, systemic issues affecting the public interest.
   region: United States
   public_input: open
   tags:
     - insider
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Government Accountability Project
   remit: People who have discovered illegality, gross mismanagement or waste of funds, or threats to health and safety in their employment. Focus is on widespread, systemic issues affecting the public interest.

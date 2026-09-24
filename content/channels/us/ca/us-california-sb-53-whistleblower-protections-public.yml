@@ -13,6 +13,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 9eb47a8e3d83
+      contact:
+        status: open
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://fpf.org/blog/californias-sb-53-the-first-frontier-ai-law-explained/
+        evidence_note: "Two distinct things. (1) Whistleblower protection: employees and contractors of frontier developers are protected against retaliation for reporting activity connected to catastrophic risks — defined around foreseeable risks of a frontier model causing death or serious injury to 50+ people, enabling weapons creation, engaging in criminal conduct without meaningful human intervention, or evading developer control. Employers must give notice of these rights and maintain anonymous internal reporting channels. (2) Developer reporting: frontier developers must report critical safety incidents to OES within 15 days of discovery, or 24 hours where there is imminent danger of death or serious injury."
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - insider
+          - whistleblowing
     - id: homepage
       type: homepage
       value: https://fpf.org/blog/californias-sb-53-the-first-frontier-ai-law-explained/
@@ -20,12 +37,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: b7cbcee11267
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://fpf.org/blog/californias-sb-53-the-first-frontier-ai-law-explained/
+        evidence_note: "Two distinct things. (1) Whistleblower protection: employees and contractors of frontier developers are protected against retaliation for reporting activity connected to catastrophic risks — defined around foreseeable risks of a frontier model causing death or serious injury to 50+ people, enabling weapons creation, engaging in criminal conduct without meaningful human intervention, or evading developer control. Employers must give notice of these rights and maintain anonymous internal reporting channels. (2) Developer reporting: frontier developers must report critical safety incidents to OES within 15 days of discovery, or 24 hours where there is imminent danger of death or serious injury."
   region: Other
   public_input: open
   tags:
     - behaviour
     - flaw
     - insider
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: California SB 53 (Transparency in Frontier Artificial Intelligence Act) — whistleblower protections and public incident reporting
   remit: "Two distinct things. (1) Whistleblower protection: employees and contractors of frontier developers are protected against retaliation for reporting activity connected to catastrophic risks — defined around foreseeable risks of a frontier model causing death or serious injury to 50+ people, enabling weapons creation, engaging in criminal conduct without meaningful human intervention, or evading developer control. Employers must give notice of these rights and maintain anonymous internal reporting channels. (2) Developer reporting: frontier developers must report critical safety incidents to OES within 15 days of discovery, or 24 hours where there is imminent danger of death or serious injury."

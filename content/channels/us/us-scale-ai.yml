@@ -12,6 +12,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 4a5dbb344c0d
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://trust.scale.com/
+        evidence_note: Responsible disclosure of security vulnerabilities. AI model safety is not mentioned.
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - email
+        restrictions: Responsible disclosure of security vulnerabilities. AI model safety is not mentioned.
     - id: trust-center
       type: program
       value: https://trust.scale.com/
@@ -19,6 +36,16 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 3dbc8844b80b
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://trust.scale.com/
+        evidence_note: Compliance artifacts (SOC 2 Type II, ISO 27001, FedRAMP High, DoD IL4).
+        checked_on: 2026-09-22
     - id: homepage
       type: homepage
       value: https://scale.com/security
@@ -26,6 +53,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: c6f68a9e1a60
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://scale.com/security
+        evidence_note: Scale's public safety relevance is as an evaluator of others rather than a developer, so external safety reports about Scale itself are rare. Scale had a significant 2025 incident in which public Google Docs exposed confidential client project details and contractor data, surfaced by journalists rather than through disclosure. Since Meta's investment and the departure of leadership to Meta, SEAL's independence as a third-party evaluator has been publicly questioned — which matters if you are considering Scale as a neutral route for a finding about another lab.
     - id: framework
       type: framework
       value: https://scale.com/blog/risk-matrix
@@ -33,11 +69,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 811654b0a348
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://scale.com/blog/risk-matrix
+        evidence_note: Scale's public safety relevance is as an evaluator of others rather than a developer, so external safety reports about Scale itself are rare. Scale had a significant 2025 incident in which public Google Docs exposed confidential client project details and contractor data, surfaced by journalists rather than through disclosure. Since Meta's investment and the departure of leadership to Meta, SEAL's independence as a third-party evaluator has been publicly questioned — which matters if you are considering Scale as a neutral route for a finding about another lab.
   region: United States
   public_input: limited
   tags:
     - behaviour
     - flaw
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Scale AI
   remit: Safety, Evaluations and Alignment Lab (SEAL) produces third-party model evaluations and red-teaming for other developers; internally a trust/security function runs disclosure.

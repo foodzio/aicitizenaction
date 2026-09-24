@@ -12,6 +12,25 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 1aedc14b9469
+      contact:
+        status: limited
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+        evidence_note: "States: 'We invite you to report vulnerabilities, bugs, safety and abuse issues, or security flaws you discover in our systems.'"
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - insider
+          - systemic
+          - disclosure
+        restrictions: "States: 'We invite you to report vulnerabilities, bugs, safety and abuse issues, or security flaws you discover in our systems.'"
     - id: openai-bug-bounty
       type: bounty
       value: https://bugcrowd.com/openai
@@ -19,6 +38,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: afab3013403b
+      contact:
+        status: unknown
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: fix
+        evidence_url: https://bugcrowd.com/openai
+        evidence_note: Infrastructure/product security. $200 to $20,000.
     - id: openai-safety-bug-bounty
       type: bounty
       value: https://bugcrowd.com/engagements/openai-safety
@@ -26,6 +54,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: aecc1c096002
+      contact:
+        status: unknown
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: fix
+        evidence_url: https://bugcrowd.com/engagements/openai-safety
+        evidence_note: Model safety / CBRN jailbreaks. Separate engagement from the main bounty.
     - id: report-content
       type: form
       value: https://openai.com/form/report-content/
@@ -33,6 +70,25 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: efe0c7c75168
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://openai.com/form/report-content/
+        evidence_note: "Publicly open form for policy violations and illegal content: violence and self-harm, sexual exploitation, child exploitation, bullying, fraud, privacy, IP."
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - insider
+          - systemic
+          - form
+        restrictions: "Publicly open form for policy violations and illegal content: violence and self-harm, sexual exploitation, child exploitation, bullying, fraud, privacy, IP."
     - id: researcher-access-program
       type: program
       value: https://openai.com/form/researcher-access-program/
@@ -40,6 +96,16 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: b00592fd887c
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://openai.com/form/researcher-access-program/
+        evidence_note: Open and active. Up to $1,000 of API credits for 'researchers using our products to study areas related to the responsible deployment of AI and mitigating associated risks'. Reviewed quarterly.
+        checked_on: 2026-09-22
     - id: red-teaming-network
       type: program
       value: https://openai.com/index/red-teaming-network/
@@ -47,6 +113,16 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 98d99781c863
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://openai.com/index/red-teaming-network/
+        evidence_note: External domain experts stress-testing models.
+        checked_on: 2026-09-22
     - id: model-behavior-feedback-form
       type: feedback
       value: https://openai.com/form/model-behavior-feedback/
@@ -54,6 +130,25 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 4db1a40e523f
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://openai.com/form/model-behavior-feedback/
+        evidence_note: "DEPRECATED. Page now reads: 'We've deprecated this web form in favor of other channels.'"
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - insider
+          - systemic
+          - feedback
+        restrictions: "DEPRECATED. Page now reads: 'We've deprecated this web form in favor of other channels.'"
     - id: model-spec-feedback-form
       type: feedback
       value: https://openai.com/form/model-spec-feedback/
@@ -61,6 +156,25 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: b01088987243
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://openai.com/form/model-spec-feedback/
+        evidence_note: CLOSED. 'This feedback form is now closed.'
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - insider
+          - systemic
+          - feedback
+        restrictions: CLOSED. 'This feedback form is now closed.'
     - id: homepage
       type: homepage
       value: https://openai.com/
@@ -68,6 +182,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 9bb60af6ec90
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://openai.com/
+        evidence_note: "Mixed and worsening for unpaid routes. Two named public feedback channels — the model behavior feedback form and the Model Spec feedback form — are both now closed or deprecated, so a citizen's only open door is the content-report form. OpenAI's September 2026 model misalignment reporting framework is explicitly internal: 'Any OpenAI employee may flag a misalignment example for investigation' — it creates no external intake. Researchers in the Trusted Access for Cyber / Daybreak program publicly complained in August 2026 (TechCrunch, 19 Aug 2026) that access was revoked with messages saying their identity 'could not be verified', disproportionately affecting researchers outside the US and Eu"
     - id: framework
       type: framework
       value: https://model-spec.openai.com/
@@ -75,6 +198,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 26739653b9f2
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://model-spec.openai.com/
+        evidence_note: "Mixed and worsening for unpaid routes. Two named public feedback channels — the model behavior feedback form and the Model Spec feedback form — are both now closed or deprecated, so a citizen's only open door is the content-report form. OpenAI's September 2026 model misalignment reporting framework is explicitly internal: 'Any OpenAI employee may flag a misalignment example for investigation' — it creates no external intake. Researchers in the Trusted Access for Cyber / Daybreak program publicly complained in August 2026 (TechCrunch, 19 Aug 2026) that access was revoked with messages saying their identity 'could not be verified', disproportionately affecting researchers outside the US and Eu"
   region: United States
   public_input: limited
   tags:
@@ -82,6 +214,9 @@ facts:
     - flaw
     - insider
     - systemic
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: OpenAI
   remit: Safety Systems, Preparedness and Alignment teams, with a Safety and Security Committee at board level; Preparedness runs capability thresholds and the Model Spec defines intended model behaviour.

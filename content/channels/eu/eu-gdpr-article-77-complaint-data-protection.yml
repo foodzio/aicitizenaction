@@ -12,6 +12,21 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 62a2615182cb
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://gdpr-info.eu/art-77-gdpr/
+        evidence_note: Complaints from any data subject who considers that processing of their personal data infringes the GDPR. You may complain to the authority in your Member State of habitual residence, your place of work, or the place of the alleged infringement.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - harm
+          - complaint
     - id: homepage
       type: homepage
       value: https://gdpr-info.eu/art-77-gdpr/
@@ -19,10 +34,22 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: e367d009f49a
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://gdpr-info.eu/art-77-gdpr/
+        evidence_note: Complaints from any data subject who considers that processing of their personal data infringes the GDPR. You may complain to the authority in your Member State of habitual residence, your place of work, or the place of the alleged infringement.
   region: United Kingdom
   public_input: open
   tags:
     - harm
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: GDPR Article 77 — complaint to a data protection supervisory authority
   remit: Complaints from any data subject who considers that processing of their personal data infringes the GDPR. You may complain to the authority in your Member State of habitual residence, your place of work, or the place of the alleged infringement.

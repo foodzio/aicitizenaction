@@ -12,6 +12,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: 93e4ea1e9a86
+      contact:
+        status: none
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://seed.bytedance.com/en/
+        evidence_note: Not found — general contact only. The Responsible AI page returned no readable body content when fetched (JS-rendered) and no contact details.
     - id: homepage
       type: homepage
       value: https://seed.bytedance.com/en/
@@ -19,6 +28,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: cb100cd96279
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://seed.bytedance.com/en/
+        evidence_note: "ByteDance's AI safety responses in 2026 were driven by legal and commercial pressure rather than researcher reports: it pledged safeguards for Seedance 2.0 only after legal threats from Disney and Paramount over IP, and suspended a photo-to-voice feature over risk concerns. Both were reactive and externally forced. No evidence of a functioning researcher channel."
     - id: framework
       type: framework
       value: https://seed.bytedance.com/en/direction/responsible_ai
@@ -26,12 +44,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: d3515942aab1
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://seed.bytedance.com/en/direction/responsible_ai
+        evidence_note: "ByteDance's AI safety responses in 2026 were driven by legal and commercial pressure rather than researcher reports: it pledged safeguards for Seedance 2.0 only after legal threats from Disney and Paramount over IP, and suspended a photo-to-voice feature over risk concerns. Both were reactive and externally forced. No evidence of a functioning researcher channel."
   region: China
   public_input: none
   tags:
     - behaviour
     - flaw
     - harm
+  contact_disposition: reclassify
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: ByteDance Seed
   remit: A Responsible AI research direction within Seed; TechNode reported in August 2026 that ByteDance formed a new AI Data and Safety department. No named external-facing safety office.

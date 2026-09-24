@@ -12,6 +12,22 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 20cfc72695aa
+      contact:
+        status: open
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.handleygill.co.uk/handley-gill-blog/public-interest-disclosure-prescribed-persons-order-2026-whistleblowing
+        evidence_note: Qualifying disclosures by workers, in the public interest, to a prescribed person with responsibility for the relevant subject matter — giving statutory protection against detriment and dismissal.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - flaw
+          - insider
+          - whistleblowing
     - id: homepage
       type: homepage
       value: https://www.handleygill.co.uk/handley-gill-blog/public-interest-disclosure-prescribed-persons-order-2026-whistleblowing
@@ -19,11 +35,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 1cd242721547
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.handleygill.co.uk/handley-gill-blog/public-interest-disclosure-prescribed-persons-order-2026-whistleblowing
+        evidence_note: Qualifying disclosures by workers, in the public interest, to a prescribed person with responsibility for the relevant subject matter — giving statutory protection against detriment and dismissal.
   region: United Kingdom
   public_input: open
   tags:
     - flaw
     - insider
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: UK Public Interest Disclosure Act — protected disclosure to a prescribed person
   remit: Qualifying disclosures by workers, in the public interest, to a prescribed person with responsibility for the relevant subject matter — giving statutory protection against detriment and dismissal.

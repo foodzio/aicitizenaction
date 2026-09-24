@@ -39,6 +39,7 @@ const rows = channels.flatMap(record => (record.facts?.routes ?? []).map(route =
     record_type: record.type,
     country: record.geo?.country ?? '',
     public_input: record.facts?.public_input ?? 'unknown',
+    record_disposition: record.facts?.contact_disposition ?? 'pending',
     route_id: route.id,
     claimed_type: route.type,
     value: route.value,
@@ -47,9 +48,9 @@ const rows = channels.flatMap(record => (record.facts?.routes ?? []).map(route =
     source_urls: (record.meta?.sources ?? []).map(x => x.url),
     failed_rules: failures,
     current_result: eligibleContactRoute(record, route) ? 'legacy-eligible' : 'ineligible',
-    disposition: c?.review === 'reviewed' ? (eligibleContactRoute(record, route) ? 'keep' : 'reference-only') : 'pending',
-    reviewer: null,
-    reviewed_on: null
+    disposition: c?.review === 'reviewed' ? (c.disposition ?? (eligibleContactRoute(record, route) ? 'keep' : 'reference-only')) : 'pending',
+    reviewer: c?.reviewed_by ?? null,
+    reviewed_on: c?.reviewed_on ?? null
   };
 }));
 
@@ -63,6 +64,8 @@ const report = {
     routes: rows.length,
     eligible: rows.filter(r => r.current_result === 'legacy-eligible').length,
     ineligible: rows.filter(r => r.current_result === 'ineligible').length,
+    record_dispositions: Object.fromEntries(['keep', 'fix', 'reclassify', 'merge', 'remove', 'pending']
+      .map(x => [x, channels.filter(r => (r.facts?.contact_disposition ?? 'pending') === x).length])),
     dispositions
   },
   routes: rows

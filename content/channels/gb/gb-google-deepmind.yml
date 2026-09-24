@@ -12,6 +12,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: b13884c87dc9
+      contact:
+        status: unknown
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: fix
+        evidence_url: https://bughunters.google.com/about/rules/google-friends/ai-vulnerability-reward-program-rules
+        evidence_note: Security vulnerabilities in AI products. Jailbreaks and in-session harmful content generation are EXPLICITLY OUT OF SCOPE.
     - id: gemini-content-reporting
       type: form
       value: https://support.google.com/legal/troubleshooter/1114905
@@ -19,6 +28,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: 4c468fea96e0
+      contact:
+        status: unknown
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: fix
+        evidence_url: https://support.google.com/legal/troubleshooter/1114905
+        evidence_note: Content removal under Google policies and applicable law.
     - id: product-thumbs-down-gemini
       type: feedback
       value: https://gemini.google.com/
@@ -26,6 +44,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: 1524d5cf46a2
+      contact:
+        status: unknown
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: fix
+        evidence_url: https://gemini.google.com/
+        evidence_note: The only routine route for flagging a bad model response.
     - id: homepage
       type: homepage
       value: https://deepmind.google/
@@ -33,6 +60,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: db97e994ff4e
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://deepmind.google/
+        evidence_note: "Documented black hole for model-safety issues. A researcher who submitted a Gemini guardrail-bypass to the AI VRP on 20 October 2025 published Google's verbatim reply classifying it 'Infeasible / Out of Scope': 'Generating violative content (such as hate speech, violent content, or illegal instructions)...within the user's own session (e.g., jailbreaks, safety bypasses, or alignment bypasses) is not a qualifying report for the AI VRP.' AI Frontiers' 2026 review groups Google DeepMind with Meta and xAI as labs that exclude jailbreaks from their vulnerability programs, leaving only untracked thumbs-down feedback. Neither the Frontier Safety Framework page nor the Responsibility and Safety page"
     - id: framework
       type: framework
       value: https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf
@@ -40,11 +76,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 5a3b0e2fbdc8
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf
+        evidence_note: "Documented black hole for model-safety issues. A researcher who submitted a Gemini guardrail-bypass to the AI VRP on 20 October 2025 published Google's verbatim reply classifying it 'Infeasible / Out of Scope': 'Generating violative content (such as hate speech, violent content, or illegal instructions)...within the user's own session (e.g., jailbreaks, safety bypasses, or alignment bypasses) is not a qualifying report for the AI VRP.' AI Frontiers' 2026 review groups Google DeepMind with Meta and xAI as labs that exclude jailbreaks from their vulnerability programs, leaving only untracked thumbs-down feedback. Neither the Frontier Safety Framework page nor the Responsibility and Safety page"
   region: United States
   public_input: limited
   tags:
     - behaviour
     - flaw
+  contact_disposition: fix
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Google DeepMind
   remit: Responsibility and Safety Council (co-chaired by COO Lila Ibrahim and VP Responsibility Helen King) reviews research and deployments; a separate AGI Safety Council led by co-founder Shane Legg works alongside it on frontier risk.

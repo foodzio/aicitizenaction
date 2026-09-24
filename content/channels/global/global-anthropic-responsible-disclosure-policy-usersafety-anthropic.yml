@@ -12,6 +12,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: dde7fdbf9d5e
+      contact:
+        status: open
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.anthropic.com/responsible-disclosure-policy
+        evidence_note: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - harm
+          - disclosure
     - id: homepage
       type: homepage
       value: https://www.anthropic.com/responsible-disclosure-policy
@@ -19,12 +36,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: e2d7a5916452
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.anthropic.com/responsible-disclosure-policy
+        evidence_note: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
   region: Global
   public_input: open
   tags:
     - behaviour
     - flaw
     - harm
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Anthropic Responsible Disclosure Policy / usersafety@anthropic.com
   remit: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."

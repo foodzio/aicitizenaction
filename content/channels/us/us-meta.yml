@@ -12,6 +12,24 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 54440a4633b8
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://developers.facebook.com/llama_output_feedback/
+        evidence_note: Reporting violations of the Llama Acceptable Use Policy (i.e. someone else misusing the model).
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - insider
+          - email
+        restrictions: Reporting violations of the Llama Acceptable Use Policy (i.e. someone else misusing the model).
     - id: risky-content-model-output
       type: feedback
       value: https://developers.facebook.com/llama_output_feedback/
@@ -19,6 +37,24 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: ad35847b0746
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://developers.facebook.com/llama_output_feedback/
+        evidence_note: Reporting risky or harmful content produced by Llama models.
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - insider
+          - feedback
+        restrictions: Reporting risky or harmful content produced by Llama models.
     - id: meta-security-whitehat
       type: disclosure
       value: https://facebook.com/whitehat/info/
@@ -26,6 +62,24 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: c841b044803b
+      contact:
+        status: limited
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://facebook.com/whitehat/info/
+        evidence_note: Security bugs and vulnerabilities.
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - insider
+          - disclosure
+        restrictions: Security bugs and vulnerabilities.
     - id: meta-bug-bounty-genai
       type: bounty
       value: https://bugbounty.meta.com/payout-guidelines/meta-genai/
@@ -33,6 +87,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: 693c502b4de5
+      contact:
+        status: unknown
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: fix
+        evidence_url: https://bugbounty.meta.com/payout-guidelines/meta-genai/
+        evidence_note: GenAI reports assessed by security impact; the page states it illustrates 'how we assess the security impact' of reports.
     - id: model-issues-via-github
       type: disclosure
       value: https://github.com/facebookresearch/llama
@@ -40,6 +103,24 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: d6b32d4258b5
+      contact:
+        status: limited
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://github.com/facebookresearch/llama
+        evidence_note: Technical model issues.
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - insider
+          - disclosure
+        restrictions: Technical model issues.
     - id: homepage
       type: homepage
       value: https://ai.meta.com/
@@ -47,6 +128,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 8312da5dd667
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://ai.meta.com/
+        evidence_note: Meta publishes more named routes than most, but responsiveness is the documented problem. Cybernews reported researchers complaining on Reddit that 'Meta wasn't even reacting to their reports about allegedly critical bugs', with some 'still waiting for a response months after submitting the report'; Meta received nearly 10,000 reports in 2024 and deemed only around 600 valid. The article notes one researcher who published a 'horrible experience' publicly got a reply within 10 hours and a generous bounty — i.e. public pressure works where the queue does not. AI Frontiers groups Meta with Google and xAI as excluding jailbreaks from vulnerability programs.
     - id: framework
       type: framework
       value: https://ai.meta.com/static-resource/Meta_Advanced-AI-Scaling-Framework-v2
@@ -54,12 +144,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 5f4dabef0c24
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://ai.meta.com/static-resource/Meta_Advanced-AI-Scaling-Framework-v2
+        evidence_note: Meta publishes more named routes than most, but responsiveness is the documented problem. Cybernews reported researchers complaining on Reddit that 'Meta wasn't even reacting to their reports about allegedly critical bugs', with some 'still waiting for a response months after submitting the report'; Meta received nearly 10,000 reports in 2024 and deemed only around 600 valid. The article notes one researcher who published a 'horrible experience' publicly got a reply within 10 hours and a generous bounty — i.e. public pressure works where the queue does not. AI Frontiers groups Meta with Google and xAI as excluding jailbreaks from vulnerability programs.
   region: United States
   public_input: limited
   tags:
     - behaviour
     - flaw
     - insider
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Meta
   remit: Internal governance function plus a Chief AI Officer and a Director of Alignment and Risk who receive non-compliance reports under the Advanced AI Scaling Framework; preparedness reports are published at model release.

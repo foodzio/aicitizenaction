@@ -12,6 +12,22 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: f4234caf977e
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.regulations.gov/assets/files/Public-Comment-on-Federal-Regulations_Final.pdf
+        evidence_note: Comments from anyone, including non-US persons, on proposed rules, requests for information and requests for comment. No affiliation required.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - flaw
+          - systemic
+          - consultation
     - id: homepage
       type: homepage
       value: https://www.regulations.gov/assets/files/Public-Comment-on-Federal-Regulations_Final.pdf
@@ -19,11 +35,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: a3b59ec49d3f
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.regulations.gov/assets/files/Public-Comment-on-Federal-Regulations_Final.pdf
+        evidence_note: Comments from anyone, including non-US persons, on proposed rules, requests for information and requests for comment. No affiliation required.
   region: United States
   public_input: open
   tags:
     - flaw
     - systemic
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: US federal rulemaking comments — Regulations.gov
   remit: Comments from anyone, including non-US persons, on proposed rules, requests for information and requests for comment. No affiliation required.

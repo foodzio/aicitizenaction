@@ -12,6 +12,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: ca735c19cc59
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://hackerone.com/ibm?type=team
+        evidence_note: "'Potential security and AI vulnerabilities in IBM products and websites.' AI vulnerabilities explicitly in scope. PGP available."
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - email
+        restrictions: "'Potential security and AI vulnerabilities in IBM products and websites.' AI vulnerabilities explicitly in scope. PGP available."
     - id: ibm-hackerone
       type: disclosure
       value: https://hackerone.com/ibm?type=team
@@ -19,6 +36,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 2f3ea5273b93
+      contact:
+        status: limited
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://hackerone.com/ibm?type=team
+        evidence_note: Third-party researcher submissions.
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - disclosure
+        restrictions: Third-party researcher submissions.
     - id: ibm-safe-harbor-policy
       type: disclosure
       value: https://www.ibm.com/trust/security-psirt
@@ -26,6 +60,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 02ede153665e
+      contact:
+        status: limited
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.ibm.com/trust/security-psirt
+        evidence_note: The PSIRT page states vulnerability reporting is 'protected by IBM Safe Harbor Policy', available as a downloadable document.
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - disclosure
+        restrictions: The PSIRT page states vulnerability reporting is 'protected by IBM Safe Harbor Policy', available as a downloadable document.
     - id: homepage
       type: homepage
       value: https://www.ibm.com/trust
@@ -33,6 +84,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 36c8c88be9d2
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.ibm.com/trust
+        evidence_note: No public accounts found of AI-specific reports to IBM PSIRT. IBM's AI Ethics Board is well-documented in its governance publications but is an internal review body with no published external intake. The PSIRT route is professional and long-established; whether a pure model-behaviour finding survives triage there is untested in public.
     - id: framework
       type: framework
       value: https://www.ibm.com/impact/ai-ethics
@@ -40,11 +100,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 26156bc25339
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.ibm.com/impact/ai-ethics
+        evidence_note: No public accounts found of AI-specific reports to IBM PSIRT. IBM's AI Ethics Board is well-documented in its governance publications but is an internal review body with no published external intake. The PSIRT route is professional and long-established; whether a pure model-behaviour finding survives triage there is untested in public.
   region: United States
   public_input: limited
   tags:
     - behaviour
     - flaw
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: IBM
   remit: AI Ethics Board plus a Responsible Technology function governing watsonx and Granite models; PSIRT handles security and, unusually, explicitly names AI vulnerabilities in scope.

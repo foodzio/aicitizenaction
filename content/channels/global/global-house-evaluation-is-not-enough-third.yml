@@ -12,6 +12,16 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 884144de82eb
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://arxiv.org/abs/2503.16861
+        evidence_note: N/A — it is the proposal document that defines the emerging norm. Read it to understand the vocabulary that labs and coordinators are converging on.
+        checked_on: 2026-09-22
     - id: homepage
       type: homepage
       value: https://arxiv.org/abs/2503.16861
@@ -19,11 +29,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 0b24f4313c3a
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://arxiv.org/abs/2503.16861
+        evidence_note: N/A — it is the proposal document that defines the emerging norm. Read it to understand the vocabulary that labs and coordinators are converging on.
   region: Global
   public_input: open
   tags:
     - flaw
     - systemic
+  contact_disposition: reclassify
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: "'In-House Evaluation Is Not Enough' — third-party AI flaw disclosure framework"
   remit: N/A — it is the proposal document that defines the emerging norm. Read it to understand the vocabulary that labs and coordinators are converging on.

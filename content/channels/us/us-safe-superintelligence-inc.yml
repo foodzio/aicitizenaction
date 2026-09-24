@@ -12,6 +12,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: 9da26e4f9110
+      contact:
+        status: none
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://ssi.inc/contact
+        evidence_note: The only contact route linked from the homepage. No email address is published anywhere on the site.
     - id: homepage
       type: homepage
       value: https://ssi.inc/
@@ -19,6 +28,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 4e73e452bdd3
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://ssi.inc/
+        evidence_note: Nothing to report on, which is itself the finding. SSI has shipped no product, published no safety framework, joined no public commitment process with a published framework, and has essentially no public communications surface beyond a single-page site and a jobs link. There is no external safety channel and no evidence anyone has reached one.
     - id: framework
       type: framework
       value: https://ssi.inc/
@@ -26,10 +44,22 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: a0ae81c87c27
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://ssi.inc/
+        evidence_note: Nothing to report on, which is itself the finding. SSI has shipped no product, published no safety framework, joined no public commitment process with a published framework, and has essentially no public communications surface beyond a single-page site and a jobs link. There is no external safety channel and no evidence anyone has reached one.
   region: United States
   public_input: none
   tags:
     - behaviour
+  contact_disposition: reclassify
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Safe Superintelligence Inc. (SSI)
   remit: The entire company is framed as a safety-first effort — 'safety and capabilities in tandem' — but no internal safety function, framework, model spec or governance structure has been published.

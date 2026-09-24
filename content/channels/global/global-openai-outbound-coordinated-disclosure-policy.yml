@@ -12,6 +12,16 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 241159280f15
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://openai.com/policies/outbound-coordinated-disclosure-policy/
+        evidence_note: Nothing. This governs vulnerabilities OpenAI discovers in third-party software and reports outward.
+        checked_on: 2026-09-22
     - id: homepage
       type: homepage
       value: https://openai.com/policies/outbound-coordinated-disclosure-policy/
@@ -19,11 +29,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 626b1732068c
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://openai.com/policies/outbound-coordinated-disclosure-policy/
+        evidence_note: Nothing. This governs vulnerabilities OpenAI discovers in third-party software and reports outward.
   region: Global
   public_input: open
   tags:
     - flaw
     - systemic
+  contact_disposition: reclassify
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: OpenAI Outbound Coordinated Disclosure Policy
   remit: Nothing. This governs vulnerabilities OpenAI discovers in third-party software and reports outward.

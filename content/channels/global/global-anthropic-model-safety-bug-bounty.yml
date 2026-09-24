@@ -12,6 +12,21 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: afcd1c431875
+      contact:
+        status: open
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://support.claude.com/en/articles/12119250-model-safety-bug-bounty-program
+        evidence_note: Universal jailbreaks that defeat Anthropic's Constitutional Classifiers — generalised techniques that work across many prompts, tested against a supplied set of harmful questions concerning CBRN/biological threat information. Narrow, context-specific exploits do not qualify.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - flaw
+          - disclosure
     - id: homepage
       type: homepage
       value: https://support.claude.com/en/articles/12119250-model-safety-bug-bounty-program
@@ -19,10 +34,22 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: c0b175e7dec4
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://support.claude.com/en/articles/12119250-model-safety-bug-bounty-program
+        evidence_note: Universal jailbreaks that defeat Anthropic's Constitutional Classifiers — generalised techniques that work across many prompts, tested against a supplied set of harmful questions concerning CBRN/biological threat information. Narrow, context-specific exploits do not qualify.
   region: Global
   public_input: open
   tags:
     - flaw
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Anthropic Model Safety Bug Bounty
   remit: Universal jailbreaks that defeat Anthropic's Constitutional Classifiers — generalised techniques that work across many prompts, tested against a supplied set of harmful questions concerning CBRN/biological threat information. Narrow, context-specific exploits do not qualify.

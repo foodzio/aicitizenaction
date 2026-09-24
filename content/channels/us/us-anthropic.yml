@@ -12,6 +12,24 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 9ad25716ccb0
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.anthropic.com/responsible-disclosure-policy
+        evidence_note: Safety issues, jailbreaks, harmful model behaviour. Named on both the Responsible Disclosure Policy and the Usage Policy.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - harm
+          - insider
+          - email
     - id: questions-about-disclosure-policy
       type: email
       value: disclosure@anthropic.com
@@ -19,6 +37,24 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: b7da28fe5932
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.anthropic.com/responsible-disclosure-policy
+        evidence_note: Questions about the Responsible Disclosure Policy itself, not for submitting reports.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - harm
+          - insider
+          - email
     - id: responsible-disclosure-policy
       type: disclosure
       value: https://www.anthropic.com/responsible-disclosure-policy
@@ -26,6 +62,24 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: f151f78297da
+      contact:
+        status: open
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.anthropic.com/responsible-disclosure-policy
+        evidence_note: "Infrastructure vulnerabilities AND model safety. States: 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models.'"
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - harm
+          - insider
+          - disclosure
     - id: hackerone-submission-form
       type: bounty
       value: https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
@@ -33,6 +87,24 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: ccb8c901350b
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
+        evidence_note: Vulnerability submissions under the Responsible Disclosure Policy.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - harm
+          - insider
+          - bounty
     - id: model-safety-bug-bounty
       type: bounty
       value: https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
@@ -40,6 +112,24 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 3beb7e70b622
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+        evidence_note: Universal jailbreaks that defeat Constitutional Classifiers, especially CBRN. Up to $35,000 per novel universal jailbreak.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - harm
+          - insider
+          - bounty
     - id: usage-policy-trust-safety
       type: form
       value: https://support.claude.com/en/articles/8241253-trust-and-safety-warnings-and-appeals
@@ -47,6 +137,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: b516e902b926
+      contact:
+        status: unknown
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: fix
+        evidence_url: https://support.claude.com/en/articles/8241253-trust-and-safety-warnings-and-appeals
+        evidence_note: Appealing enforcement decisions against your own account.
     - id: homepage
       type: homepage
       value: https://www.anthropic.com/
@@ -54,6 +153,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 1dafc6db1f84
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.anthropic.com/
+        evidence_note: Best-documented pathway of any lab. AI Frontiers' 2026 review of jailbreak disclosure found Anthropic runs two programs — a restricted NDA-bound CBRN bounty and an open cyber jailbreak program where 'anyone can submit without an NDA, findings may be publicly disclosed once timing is coordinated' — and named it as one of the few labs with a genuinely working route. Independent researchers pursuing cross-model universal jailbreaks in 2025-26 reported labs have 'very heterogeneous disclosure pathways (or none at all)' but that some, including Anthropic, remediated. No public evidence of usersafety@ being a black hole, but also little public evidence of reply rates.
     - id: framework
       type: framework
       value: https://www.anthropic.com/rsp
@@ -61,6 +169,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 7374b9e41624
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.anthropic.com/rsp
+        evidence_note: Best-documented pathway of any lab. AI Frontiers' 2026 review of jailbreak disclosure found Anthropic runs two programs — a restricted NDA-bound CBRN bounty and an open cyber jailbreak program where 'anyone can submit without an NDA, findings may be publicly disclosed once timing is coordinated' — and named it as one of the few labs with a genuinely working route. Independent researchers pursuing cross-model universal jailbreaks in 2025-26 reported labs have 'very heterogeneous disclosure pathways (or none at all)' but that some, including Anthropic, remediated. No public evidence of usersafety@ being a black hole, but also little public evidence of reply rates.
   region: United States
   public_input: open
   tags:
@@ -68,6 +185,9 @@ facts:
     - flaw
     - harm
     - insider
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Anthropic
   remit: Safeguards team enforces the Usage Policy and runs Constitutional Classifiers; Alignment Science and Frontier Red Team run capability/misalignment evaluations feeding the Responsible Scaling Policy, overseen by a Responsible Scaling Officer.

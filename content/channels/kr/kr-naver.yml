@@ -12,6 +12,16 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: ccff1a5eda78
+      contact:
+        status: none
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.ncloud.com/support/question/sales?parentCode=SALES_PNSTS
+        evidence_note: The only contact route published alongside the ASF — a sales enquiry form.
+        checked_on: 2026-09-22
     - id: homepage
       type: homepage
       value: https://clova.ai/en
@@ -19,6 +29,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 4ec05008ab9c
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://clova.ai/en
+        evidence_note: No public accounts found of anyone contacting NAVER about HyperCLOVA X safety. NAVER was among the earliest non-US companies to publish a frontier safety framework and extended it in 2026 to user-facing services, so the internal governance is real; but the framework document points an interested outsider at a cloud sales form, which is a telling gap between governance and accessibility.
     - id: framework
       type: framework
       value: https://clova.ai/en/tech-blog/en-navers-ai-safety-framework-asf
@@ -26,11 +45,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: c0f4e2cd3499
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://clova.ai/en/tech-blog/en-navers-ai-safety-framework-asf
+        evidence_note: No public accounts found of anyone contacting NAVER about HyperCLOVA X safety. NAVER was among the earliest non-US companies to publish a frontier safety framework and extended it in 2026 to user-facing services, so the internal governance is real; but the framework document points an interested outsider at a cloud sales form, which is a telling gap between governance and accessibility.
   region: South Korea
   public_input: none
   tags:
     - behaviour
     - systemic
+  contact_disposition: reclassify
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: NAVER
   remit: Future AI Center, supported by a risk management working group and a board-level risk management committee, operates the AI Safety Framework; frontier systems are reassessed every three months or when capability increases 6x.

@@ -16,7 +16,7 @@ Tracked in git and committed with every step.
   `docs/content-architecture.md` (content as data, translation, freshness, Resources, volunteers).
 - **Corrective plan:** `docs/places-to-contact-audit-plan.md` — deterministic review and correction
   of all 74 channel records and 234 routes before they may be presented or recommended as a
-  “Place to contact.” Phases 1–2 are done; the full content audit (Phase 3) is next.
+  “Place to contact.” Phases 1–3 are done; content reclassification (Phase 4) is next.
 - **Goal:** a site that turns alarm about AI into one well-aimed action in one sitting, ending with
   a draft the user sends themselves — maintained by volunteers, multilingual, with a Resources
   collection modelled on the stockspanic resources desk.
@@ -43,7 +43,8 @@ Tracked in git and committed with every step.
 | 7 — Launch | **in progress** | Accessibility pass done (0 axe violations, light + dark, `docs/accessibility.md`). Deploy needs the owner |
 | Contact audit 1 — Contract and containment | **done** | Verified inbound routes only; explicit contradictions fail closed; Argentina attachment and three article regressions covered |
 | Contact audit 2 — Schema and inventory | **done** | Route contact schema, validator checks, generated 74-record/234-route reconciliation inventory |
-| Contact audit 3–6 | **not started** | Complete audit, reclassification, UI/routing convergence, final verification |
+| Contact audit 3 — Full channel audit | **done** | 74 records / 234 routes reviewed; 84 eligible, 150 ineligible; no pending decisions |
+| Contact audit 4–6 | **not started** | Reclassification, UI/routing convergence, final verification |
 
 ## Judgement calls made without the owner (reverse any of them)
 
@@ -75,6 +76,26 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T00:36:02Z — Contact audit Phase 3: all channel routes reviewed
+
+- Added `scripts/apply-contact-review.mjs` (`npm run contact-review`) and applied the six-rule,
+  fail-closed review to every route in all 74 channel records using the cited source facts and
+  checks already stored in the content.
+- Every route now has status, directness, disposition, reviewer and review date. Eligible routes
+  also have audience, accepted subjects, evidence URL/note, and check date; limited routes state
+  their restrictions. Schema validation requires these facts and rejects incomplete reviewed
+  contact claims.
+- Reconciled result: 84 eligible routes, 150 ineligible; records: 52 keep, 3 fix (unverified
+  candidate routes), 19 reclassify; route dispositions: 84 keep, 16 fix, 134 reference-only; zero
+  pending rows. The audit report records all 234 unique route decisions.
+- Conservative judgement: technical failure or missing evidence stays `unknown`/fix; homepage,
+  framework, program, article, outbound-policy, indirect-tracker and explicit no-channel routes are
+  reference-only, never upgraded by inference.
+- `npm run validate`: 0 errors. Audit inventory freshness check passes; 33 focused tests pass.
+- Phase 4 next: move useful reclassified material to Resources or merge it into a valid contact,
+  retain necessary company reference records without exposing them as Places to Contact, and repair
+  all references.
 
 ### 2026-09-24T00:34:24Z — Contact audit Phase 2: schema and complete inventory
 

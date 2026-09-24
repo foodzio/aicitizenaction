@@ -1,6 +1,6 @@
 {
   "name": "aicitizenaction",
-  "version": "0.1.35",
+  "version": "0.1.36",
   "private": true,
   "type": "module",
   "description": "Routes an alarmed non-expert to the one institution that can act on their AI concern, and hands them a draft.",
@@ -11,6 +11,7 @@
     "migrate": "node scripts/migrate-input.mjs",
     "validate": "node scripts/validate.mjs",
     "contact-audit": "node scripts/contact-audit.mjs",
+    "contact-review": "node scripts/apply-contact-review.mjs",
     "test": "node --test \"tests/**/*.test.mjs\"",
     "check": "npm run validate && npm test",
     "dev": "astro dev",

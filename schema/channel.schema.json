@@ -132,6 +132,16 @@
         "recommend": {
           "type": "boolean",
           "description": "false: never offered as a recipient on the path (a method, portal or guidance record); still listed in the directory"
+        },
+        "contact_disposition": {
+          "enum": ["keep", "fix", "reclassify", "merge", "remove"]
+        },
+        "contact_reviewed_by": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contact_reviewed_on": {
+          "$ref": "common.schema.json#/$defs/date"
         }
       }
     }

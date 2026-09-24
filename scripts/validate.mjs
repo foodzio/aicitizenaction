@@ -101,6 +101,7 @@ export function validateAll({ now = today() } = {}) {
             if (!c.accepted_subjects?.length) err(p, `route ${route.id}: reviewed contact route needs accepted_subjects`);
             if (c.status === 'limited' && !c.restrictions) err(p, `route ${route.id}: limited contact route needs restrictions`);
           }
+          if (c.review === 'reviewed' && (!c.reviewed_by || !c.reviewed_on || !c.disposition)) err(p, `route ${route.id}: reviewed contact decision needs reviewed_by, reviewed_on and disposition`);
         }
       }
       for (const id of Object.keys(r.strings?.routes ?? {})) if (!routeIds.has(id)) err(p, `strings.routes.${id} has no matching route`);
@@ -115,6 +116,10 @@ export function validateAll({ now = today() } = {}) {
         if (f[key]?.length && r.meta?.needs_research?.includes(key)) err(p, `${key} is filled but still listed in meta.needs_research`);
       }
       if (f.routing_review === 'drafted' && !f.routing_evidence) err(p, 'routing_review drafted needs routing_evidence');
+      if (r._section === 'channels') {
+        if (!f.contact_disposition || !f.contact_reviewed_by || !f.contact_reviewed_on) err(p, 'channel needs contact_disposition, contact_reviewed_by and contact_reviewed_on');
+        for (const route of f.routes ?? []) if (!route.contact || route.contact.review !== 'reviewed') err(p, `route ${route.id}: every channel route needs a reviewed contact decision`);
+      }
     }
 
     // Resources: every resource points at an action; ids it names must exist.

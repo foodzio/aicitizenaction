@@ -12,6 +12,16 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: c99fd23f1e3e
+      contact:
+        status: none
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://sakana.ai/
+        evidence_note: Not found — general contact only. Fetching the homepage and corporate info page found no email addresses and no mailto links at all; only X and LinkedIn accounts.
+        checked_on: 2026-09-22
     - id: homepage
       type: homepage
       value: https://sakana.ai/
@@ -19,6 +29,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: c29272849f9b
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://sakana.ai/
+        evidence_note: No public accounts found of anyone attempting to reach Sakana about safety. Sakana's most notable public correction — the 2025 episode where its 'AI CUDA Engineer' claimed speedups that turned out to be a benchmark-gaming artifact — was surfaced on X by independent researchers and acknowledged publicly, not through any disclosure channel. That is the de facto route.
     - id: framework
       type: framework
       value: https://sakana.ai/company-info/
@@ -26,11 +45,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: f46c34e29298
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://sakana.ai/company-info/
+        evidence_note: No public accounts found of anyone attempting to reach Sakana about safety. Sakana's most notable public correction — the 2025 episode where its 'AI CUDA Engineer' claimed speedups that turned out to be a benchmark-gaming artifact — was surfaced on X by independent researchers and acknowledged publicly, not through any disclosure channel. That is the de facto route.
   region: Japan
   public_input: none
   tags:
     - behaviour
     - flaw
+  contact_disposition: reclassify
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Sakana AI
   remit: No publicly named safety or alignment function. Corporate team covers finance, legal, HR and operations; a Defense Policy is published covering defence-related work.

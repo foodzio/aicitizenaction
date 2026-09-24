@@ -12,6 +12,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 4e906427fe34
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://thinkingmachines.ai/
+        evidence_note: Security vulnerabilities in systems, services and infrastructure. PGP key at https://thinkingmachines.ai/.well-known/pgp-key.txt (fingerprint 4FA9 136F 8F68 DDFD 1E78 6EBE CB0B 7A1E 3028 4CB4).
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - email
+        restrictions: Security vulnerabilities in systems, services and infrastructure. PGP key at https://thinkingmachines.ai/.well-known/pgp-key.txt (fingerprint 4FA9 136F 8F68 DDFD 1E78 6EBE CB0B 7A1E 3028 4CB4).
     - id: model-safety-incidents-routed
       type: email
       value: legal@thinkingmachines.ai
@@ -19,6 +36,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 6d209b03e290
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://thinkingmachines.ai/
+        evidence_note: "The disclosure policy states: 'This policy does not cover model safety. To report an incident related to Inkling, please contact us at [legal@thinkingmachines.ai].'"
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - email
+        restrictions: "The disclosure policy states: 'This policy does not cover model safety. To report an incident related to Inkling, please contact us at [legal@thinkingmachines.ai].'"
     - id: homepage
       type: homepage
       value: https://thinkingmachines.ai/
@@ -26,6 +60,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 5ad74fbd52fc
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://thinkingmachines.ai/
+        evidence_note: "Too new for public accounts of responsiveness. The structural signal is clear though: Thinking Machines writes an unusually strong safe-harbour clause for security research and then explicitly excludes model safety from it, routing model-safety incidents to legal@ — which means a model-safety report arrives at a desk whose job is liability, and arrives outside the protections the same page grants to security researchers."
     - id: framework
       type: framework
       value: https://thinkingmachines.ai/security/disclosure-policy/
@@ -33,11 +76,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: ea587484a8cc
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://thinkingmachines.ai/security/disclosure-policy/
+        evidence_note: "Too new for public accounts of responsiveness. The structural signal is clear though: Thinking Machines writes an unusually strong safe-harbour clause for security research and then explicitly excludes model safety from it, routing model-safety incidents to legal@ — which means a model-safety report arrives at a desk whose job is liability, and arrives outside the protections the same page grants to security researchers."
   region: United States
   public_input: limited
   tags:
     - behaviour
     - flaw
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Thinking Machines Lab
   remit: States it will contribute to AI safety by 'maintaining a high safety bar—preventing misuse of our released models while maximizing users' freedom', sharing best practices, and 'accelerating external research on alignment by sharing code, datasets, and model specs'. No named safety team.

@@ -144,6 +144,16 @@
             },
             "review": {
               "enum": ["pending", "reviewed"]
+            },
+            "reviewed_by": {
+              "type": "string",
+              "minLength": 1
+            },
+            "reviewed_on": {
+              "$ref": "#/$defs/date"
+            },
+            "disposition": {
+              "enum": ["keep", "fix", "reference-only", "remove"]
             }
           }
         }

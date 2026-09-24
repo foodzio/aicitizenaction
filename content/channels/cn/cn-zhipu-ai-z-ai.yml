@@ -12,6 +12,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: acc597833aad
+      contact:
+        status: none
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://z.ai/
+        evidence_note: Not found — general contact only.
     - id: homepage
       type: homepage
       value: https://z.ai/
@@ -19,6 +28,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 7d4d7d97fd58
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://z.ai/
+        evidence_note: "A live example of the gap: in September 2026 Z.ai disabled features of its ZCode coding assistant after it was found uploading users' repositories — a serious incident surfaced publicly rather than through a disclosure channel. NIST's CAISI published an assessment of GLM-5.2 in July 2026. Zhipu is a signatory to the Frontier AI Safety Commitments made at the AI Seoul Summit, but has not published a corresponding framework or an external reporting route."
     - id: framework
       type: framework
       value: https://z.ai/
@@ -26,11 +44,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 7d202cb6ed8a
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://z.ai/
+        evidence_note: "A live example of the gap: in September 2026 Z.ai disabled features of its ZCode coding assistant after it was found uploading users' repositories — a serious incident surfaced publicly rather than through a disclosure channel. NIST's CAISI published an assessment of GLM-5.2 in July 2026. Zhipu is a signatory to the Frontier AI Safety Commitments made at the AI Seoul Summit, but has not published a corresponding framework or an external reporting route."
   region: China
   public_input: none
   tags:
     - behaviour
     - flaw
+  contact_disposition: reclassify
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Zhipu AI / Z.ai
   remit: No publicly named safety or alignment function in English. GLM models are released open-weight and via API; the company was placed on the US Entity List, complicating external engagement.

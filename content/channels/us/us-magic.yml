@@ -12,6 +12,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: cc555d2ff45d
+      contact:
+        status: none
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://magic.dev/
+        evidence_note: Not found — general contact only.
     - id: homepage
       type: homepage
       value: https://magic.dev/
@@ -19,6 +28,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: fe1b92ee7d6d
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://magic.dev/
+        evidence_note: Included because it appears in METR's index of published frontier safety policies, which is the standard reference list. The policy has not been revised since July 2024 and the company has been publicly quiet since. No evidence of any external safety channel or of anyone using one.
     - id: framework
       type: framework
       value: https://magic.dev/agi-readiness-policy
@@ -26,12 +44,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 18940b306174
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://magic.dev/agi-readiness-policy
+        evidence_note: Included because it appears in METR's index of published frontier safety policies, which is the standard reference list. The policy has not been revised since July 2024 and the company has been publicly quiet since. No evidence of any external safety channel or of anyone using one.
   region: United States
   public_input: none
   tags:
     - behaviour
     - flaw
     - systemic
+  contact_disposition: reclassify
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Magic
   remit: Published an AGI Readiness Policy — an early, small-lab equivalent of a responsible scaling policy — but has published no named safety function or external channel.

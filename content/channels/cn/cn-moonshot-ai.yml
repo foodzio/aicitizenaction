@@ -12,6 +12,24 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: e8786072be25
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://forum.moonshot.ai/
+        evidence_note: "Confirmed by a Moonshot staff member relaying their Security Team on the official forum: 'If you discover any potential security issues, please report them to us at: security@moonshot.ai. We kindly ask that you follow responsible disclosure practices and give us reasonable time to investigate and address any finding…'"
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - insider
+          - email
+        restrictions: "Confirmed by a Moonshot staff member relaying their Security Team on the official forum: 'If you discover any potential security issues, please report them to us at: security@moonshot.ai. We kindly ask that you follow responsible disclosure practices and give us reasonable time to investigate and address any finding…'"
     - id: moonshot-kimi-developer-forum
       type: form
       value: https://forum.moonshot.ai/
@@ -19,6 +37,24 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 8837db9683e0
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://forum.moonshot.ai/
+        evidence_note: Public forum where staff do respond.
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - insider
+          - form
+        restrictions: Public forum where staff do respond.
     - id: homepage
       type: homepage
       value: https://www.moonshot.ai/
@@ -26,6 +62,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 107a81340bfa
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.moonshot.ai/
+        evidence_note: "Rare documented case of a channel failing and a workaround succeeding. A security researcher posted on forum.moonshot.ai after emailing security@moonshot.ai and waiting 90 days with no response; a Moonshot staff member (yuikns) then replied on the forum within the thread, relaying the Security Team's confirmation of the address and of the absence of any formal VDP. The lesson is explicit: the email exists, went unanswered for three months, and a public post got a reply."
     - id: framework
       type: framework
       value: https://platform.kimi.ai/docs/agreement/userprivacy
@@ -33,12 +78,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 106641d91818
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://platform.kimi.ai/docs/agreement/userprivacy
+        evidence_note: "Rare documented case of a channel failing and a workaround succeeding. A security researcher posted on forum.moonshot.ai after emailing security@moonshot.ai and waiting 90 days with no response; a Moonshot staff member (yuikns) then replied on the forum within the thread, relaying the Security Team's confirmation of the address and of the absence of any formal VDP. The lesson is explicit: the email exists, went unanswered for three months, and a public post got a reply."
   region: China
   public_input: limited
   tags:
     - behaviour
     - flaw
     - insider
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Moonshot AI
   remit: No publicly named safety or alignment function. A security team exists and responds via the developer forum; Kimi models are released open-weight and via API.

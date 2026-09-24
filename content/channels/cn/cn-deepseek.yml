@@ -12,6 +12,24 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 30e8400143e6
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.deepseek.com/
+        evidence_note: Published as a mailto link in the footer of deepseek.com. No published policy defines what is in scope.
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - systemic
+          - email
+        restrictions: Published as a mailto link in the footer of deepseek.com. No published policy defines what is in scope.
     - id: general-service-contact
       type: email
       value: service@deepseek.com
@@ -19,6 +37,24 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: f17a7a47c103
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.deepseek.com/
+        evidence_note: General enquiries.
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - systemic
+          - email
+        restrictions: General enquiries.
     - id: homepage
       type: homepage
       value: https://www.deepseek.com/
@@ -26,6 +62,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: e7b3a5a054fd
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.deepseek.com/
+        evidence_note: DeepSeek has been the subject of an unusual volume of external security and safety findings — Wiz Research found a publicly exposed ClickHouse database leaking chat history in January 2025, and Cisco's red-teaming reported a 100% attack success rate against R1 on a standard harmful-prompt benchmark. In none of these widely covered cases did the researchers describe a functioning coordinated-disclosure exchange with DeepSeek; Wiz described reaching out and the exposure being closed quickly, but there is no published disclosure process. No bug bounty, no VDP, no safe harbour.
     - id: framework
       type: framework
       value: https://www.deepseek.com/harness/en/privacy/
@@ -33,12 +78,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: b172ba0baa0e
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.deepseek.com/harness/en/privacy/
+        evidence_note: DeepSeek has been the subject of an unusual volume of external security and safety findings — Wiz Research found a publicly exposed ClickHouse database leaking chat history in January 2025, and Cisco's red-teaming reported a 100% attack success rate against R1 on a standard harmful-prompt benchmark. In none of these widely covered cases did the researchers describe a functioning coordinated-disclosure exchange with DeepSeek; Wiz described reaching out and the exposure being closed quickly, but there is no published disclosure process. No bug bounty, no VDP, no safe harbour.
   region: China
   public_input: limited
   tags:
     - behaviour
     - flaw
     - systemic
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: DeepSeek
   remit: No publicly named safety or alignment function. Safe Use Policy governs the hosted service; the company publishes research papers but no safety framework.

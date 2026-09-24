@@ -12,6 +12,22 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: bd3d1e5e4acb
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://artificialintelligenceact.eu/article/85/
+        evidence_note: Complaints from 'any natural or legal person' with grounds to consider there has been an infringement of the AI Act. No standing requirement, no need to be personally harmed, no institutional affiliation required. Applies without prejudice to other administrative or judicial remedies.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - harm
+          - law
+          - complaint
     - id: homepage
       type: homepage
       value: https://artificialintelligenceact.eu/article/85/
@@ -19,11 +35,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: b02184f3348d
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://artificialintelligenceact.eu/article/85/
+        evidence_note: Complaints from 'any natural or legal person' with grounds to consider there has been an infringement of the AI Act. No standing requirement, no need to be personally harmed, no institutional affiliation required. Applies without prejudice to other administrative or judicial remedies.
   region: European Union
   public_input: open
   tags:
     - harm
     - law
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: EU AI Act Article 85 — right to lodge a complaint with a market surveillance authority
   remit: Complaints from 'any natural or legal person' with grounds to consider there has been an infringement of the AI Act. No standing requirement, no need to be personally harmed, no institutional affiliation required. Applies without prejudice to other administrative or judicial remedies.

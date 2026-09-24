@@ -12,6 +12,21 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 160d4b8bafc0
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.federalregister.gov/documents/2026/08/12/2026-16371/request-for-information-rfi-on-modernizing-the-national-vulnerability-database-in-the-age-of
+        evidence_note: Technical input from developers, deployers and security researchers on AI security and standards questions. Recent dockets have covered unique security threats to AI agents, security practices and technical controls, assessment methods for identifying and managing AI vulnerabilities, deployment constraints and monitoring, and research and policy priorities.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - systemic
+          - consultation
     - id: homepage
       type: homepage
       value: https://www.federalregister.gov/documents/2026/08/12/2026-16371/request-for-information-rfi-on-modernizing-the-national-vulnerability-database-in-the-age-of
@@ -19,10 +34,22 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 6e36e7bc7b0d
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.federalregister.gov/documents/2026/08/12/2026-16371/request-for-information-rfi-on-modernizing-the-national-vulnerability-database-in-the-age-of
+        evidence_note: Technical input from developers, deployers and security researchers on AI security and standards questions. Recent dockets have covered unique security threats to AI agents, security practices and technical controls, assessment methods for identifying and managing AI vulnerabilities, deployment constraints and monitoring, and research and policy priorities.
   region: United States
   public_input: open
   tags:
     - systemic
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: NIST / CAISI requests for information on AI
   remit: Technical input from developers, deployers and security researchers on AI security and standards questions. Recent dockets have covered unique security threats to AI agents, security practices and technical controls, assessment methods for identifying and managing AI vulnerabilities, deployment constraints and monitoring, and research and policy priorities.

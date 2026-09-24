@@ -12,6 +12,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 6b34ec0adb5c
+      contact:
+        status: open
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://openai.com/form/model-behavior-feedback/
+        evidence_note: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - systemic
+          - disclosure
     - id: homepage
       type: homepage
       value: https://openai.com/form/model-behavior-feedback/
@@ -19,12 +36,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 2c1ab07bf651
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://openai.com/form/model-behavior-feedback/
+        evidence_note: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
   region: Global
   public_input: open
   tags:
     - behaviour
     - flaw
     - systemic
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: OpenAI inbound reporting (Bugcrowd bug bounty + in-product feedback)
   remit: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."

@@ -13,6 +13,21 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: b0a6b91e3a1b
+      contact:
+        status: open
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://oag.ca.gov/contact/consumer-complaint-against-business-or-company
+        evidence_note: Complaints about businesses, including AI companies. The AG investigates where complaints suggest patterns of consumer harm or systematic violations of consumer protection law.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - harm
+          - complaint
     - id: homepage
       type: homepage
       value: https://oag.ca.gov/contact/consumer-complaint-against-business-or-company
@@ -20,10 +35,22 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 9dae01766790
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://oag.ca.gov/contact/consumer-complaint-against-business-or-company
+        evidence_note: Complaints about businesses, including AI companies. The AG investigates where complaints suggest patterns of consumer harm or systematic violations of consumer protection law.
   region: Other
   public_input: open
   tags:
     - harm
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: California Attorney General — consumer complaint
   remit: Complaints about businesses, including AI companies. The AG investigates where complaints suggest patterns of consumer harm or systematic violations of consumer protection law.

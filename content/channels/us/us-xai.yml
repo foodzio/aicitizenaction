@@ -12,6 +12,24 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 57c4be431cae
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://hackerone.com/x
+        evidence_note: Published on x.ai/safety for 'reporting harmful outputs, jailbreaks, or other safety issues'.
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - insider
+          - email
+        restrictions: Published on x.ai/safety for 'reporting harmful outputs, jailbreaks, or other safety issues'.
     - id: hackerone-bug-bounty
       type: bounty
       value: https://hackerone.com/x
@@ -19,6 +37,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: 2e7d4bb90acb
+      contact:
+        status: unknown
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: fix
+        evidence_url: https://hackerone.com/x
+        evidence_note: Security vulnerabilities.
     - id: homepage
       type: homepage
       value: https://x.ai/
@@ -26,6 +53,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 5a4b718f0383
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://x.ai/
+        evidence_note: "Worst documented record of the major labs. AI Frontiers (2026) reports a researcher who emailed the safety address in October 2025 with evidence of 'clear, step-by-step guidance on building a massively destructive chemical weapon' and 'did not receive anything other than an automated response'. Separately, GitGuardian documented a disclosure in April/May 2025: no security.txt, an expired HackerOne link on x.com, and when they finally reached safety@x.ai the reply 12 hours later was 'For us to analyze and also for you to receive proper credit, if applicable, would you please submit this to xAI's Bug Bounty Program on HackerOne?' — the leak was quietly fixed with no update to the reporters, 'c"
     - id: framework
       type: framework
       value: https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf
@@ -33,12 +69,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 213d9f3c60b5
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://media.x.ai/v1/website/xai-frontier-artificial-intelligence-framework-30-june-2026-99c40684.pdf
+        evidence_note: "Worst documented record of the major labs. AI Frontiers (2026) reports a researcher who emailed the safety address in October 2025 with evidence of 'clear, step-by-step guidance on building a massively destructive chemical weapon' and 'did not receive anything other than an automated response'. Separately, GitGuardian documented a disclosure in April/May 2025: no security.txt, an expired HackerOne link on x.com, and when they finally reached safety@x.ai the reply 12 hours later was 'For us to analyze and also for you to receive proper credit, if applicable, would you please submit this to xAI's Bug Bounty Program on HackerOne?' — the leak was quietly fixed with no update to the reporters, 'c"
   region: United States
   public_input: limited
   tags:
     - behaviour
     - flaw
     - insider
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: xAI (SpaceXAI)
   remit: A safety team (unnamed publicly; the site says it 'is actively hiring researchers and engineers') producing model cards and safety evaluations under the Frontier AI Framework. No named safety office or officer is published.

@@ -12,6 +12,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: 00c15175379f
+      contact:
+        status: unknown
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: fix
+        evidence_url: https://msrc.microsoft.com/report/
+        evidence_note: Security vulnerability submissions including AI systems, graded against the AI bug bar.
     - id: microsoft-copilot-ai-bounty
       type: bounty
       value: https://www.microsoft.com/en-us/msrc/bounty-ai
@@ -19,6 +28,26 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: f13a69b17948
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.microsoft.com/en-us/msrc/bounty-ai
+        evidence_note: $250-$30,000. Security vulnerabilities in Copilot surfaces. Explicitly EXCLUDES 'AI prompt injection attacks that do not have a security impact on users other than the attacker', 'model hallucination where the model pretends to run arbitrary code', and 'attacks that aim to leak (part of) the system/meta prompt'. Content issues must be reported separately as 'AI derived harm'.
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - harm
+          - insider
+          - systemic
+          - bounty
+        restrictions: $250-$30,000. Security vulnerabilities in Copilot surfaces. Explicitly EXCLUDES 'AI prompt injection attacks that do not have a security impact on users other than the attacker', 'model hallucination where the model pretends to run arbitrary code', and 'attacks that aim to leak (part of) the system/meta prompt'. Content issues must be reported separately as 'AI derived harm'.
     - id: ai-ml-vulnerability-severity
       type: disclosure
       value: https://www.microsoft.com/en-us/msrc/aibugbar
@@ -26,6 +55,26 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 09315f610f5a
+      contact:
+        status: limited
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.microsoft.com/en-us/msrc/aibugbar
+        evidence_note: "Splits AI issues into security vulnerabilities (CVSS-rated: inference manipulation, membership inference, model theft) and Responsible AI issues (hate speech, misinformation, sexual content, self-harm) classified only 'In Scope' or 'Out of Scope for investigation, without severity ratings'."
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - harm
+          - insider
+          - systemic
+          - disclosure
+        restrictions: "Splits AI issues into security vulnerabilities (CVSS-rated: inference manipulation, membership inference, model theft) and Responsible AI issues (hate speech, misinformation, sexual content, self-harm) classified only 'In Scope' or 'Out of Scope for investigation, without severity ratings'."
     - id: report-concern
       type: form
       value: https://www.microsoft.com/digitalsafety/report-a-concern
@@ -33,6 +82,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: 3daf378c646d
+      contact:
+        status: unknown
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: fix
+        evidence_url: https://www.microsoft.com/digitalsafety/report-a-concern
+        evidence_note: Harmful content across Microsoft services, including AI-generated.
     - id: enterprise-ai-services-abuse
       type: form
       value: https://go.microsoft.com/fwlink/?linkid=2299798
@@ -40,6 +98,26 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 71145e9c411d
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://go.microsoft.com/fwlink/?linkid=2299798
+        evidence_note: Reporting abusive, illegal or infringing use of a Microsoft AI Service.
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - harm
+          - insider
+          - systemic
+          - form
+        restrictions: Reporting abusive, illegal or infringing use of a Microsoft AI Service.
     - id: homepage
       type: homepage
       value: https://www.microsoft.com/ai/responsible-ai
@@ -47,6 +125,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: dcdc307198ed
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.microsoft.com/ai/responsible-ai
+        evidence_note: "No large body of public complaints specific to Microsoft's AI safety intake, and the AI bug bar is unusually candid about what it will and will not investigate. The honest read: security-impacting AI bugs get a real, paid, well-run process through MSRC; pure model-behaviour findings get a 'Responsible AI' classification with no severity and no stated timeline, which is closer to a content-moderation queue than a safety review. Microsoft has publicly said it will pay out for high-impact bugs even outside formal bounty scope (The Register, Dec 2025)."
     - id: framework
       type: framework
       value: https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/Frontier-Governance-Framework-Feb-2026.pdf
@@ -54,6 +141,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: d739c285acca
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/Frontier-Governance-Framework-Feb-2026.pdf
+        evidence_note: "No large body of public complaints specific to Microsoft's AI safety intake, and the AI bug bar is unusually candid about what it will and will not investigate. The honest read: security-impacting AI bugs get a real, paid, well-run process through MSRC; pure model-behaviour findings get a 'Responsible AI' classification with no severity and no stated timeline, which is closer to a content-moderation queue than a safety review. Microsoft has publicly said it will pay out for high-impact bugs even outside formal bounty scope (The Register, Dec 2025)."
   region: United States
   public_input: limited
   tags:
@@ -62,6 +158,9 @@ facts:
     - harm
     - insider
     - systemic
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Microsoft
   remit: Office of Responsible AI and a Chief Responsible AI Officer maintain the Responsible AI Standard and review revisions to the Frontier Governance Framework; MSRC handles security and an AI-specific severity bug bar.

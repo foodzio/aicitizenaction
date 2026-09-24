@@ -12,6 +12,16 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 67bf5712544f
+      contact:
+        status: none
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://reflection.ai/legal/privacy-policy/
+        evidence_note: The privacy policy routes everything — privacy rights, children's privacy, appeals, and notably 'factual accuracy correction requests regarding AI model outputs' — to one address published in that document.
+        checked_on: 2026-09-22
     - id: support-knowledge-base
       type: form
       value: https://support.reflection.ai/
@@ -19,6 +29,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: 1ac29f32c55f
+      contact:
+        status: none
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://support.reflection.ai/
+        evidence_note: Product support.
     - id: homepage
       type: homepage
       value: https://reflection.ai/
@@ -26,6 +45,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 993ddc20a3a5
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://reflection.ai/
+        evidence_note: No public accounts of safety contact. Reflection raised at frontier-lab scale and positions itself as America's open-weights answer to Chinese labs, but publishes no safety framework, no disclosure policy and no security contact — only a privacy policy with one catch-all address. The fact that 'correction requests regarding AI model outputs' are handled as a privacy-law obligation rather than a safety process is the tell.
     - id: framework
       type: framework
       value: https://reflection.ai/
@@ -33,11 +61,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 860293d76ac5
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://reflection.ai/
+        evidence_note: No public accounts of safety contact. Reflection raised at frontier-lab scale and positions itself as America's open-weights answer to Chinese labs, but publishes no safety framework, no disclosure policy and no security contact — only a privacy policy with one catch-all address. The fact that 'correction requests regarding AI model outputs' are handled as a privacy-law obligation rather than a safety process is the tell.
   region: United States
   public_input: none
   tags:
     - behaviour
     - flaw
+  contact_disposition: reclassify
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Reflection AI
   remit: No publicly named safety or alignment function and no published safety framework, despite positioning as an open frontier lab.

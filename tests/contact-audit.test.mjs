@@ -16,4 +16,7 @@ test('contact audit accounts for every channel record and route', () => {
   assert.equal(report.routes.length, 234);
   assert.equal(new Set(report.routes.map(x => `${x.record_id}:${x.route_id}`)).size, 234);
   assert.equal(Object.values(report.totals.dispositions).reduce((a, b) => a + b, 0), 234);
+  assert.equal(Object.values(report.totals.record_dispositions).reduce((a, b) => a + b, 0), 74);
+  assert.equal(report.totals.dispositions.pending, 0);
+  assert.equal(report.totals.record_dispositions.pending, 0);
 });

@@ -12,6 +12,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 8f423382b21e
+      contact:
+        status: limited
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://security.apple.com/submit/
+        evidence_note: "'If you've discovered a security or privacy vulnerability that affects Apple devices, software, or services, please report it directly to us.' Covers Apple products and public-facing services; rewards up to $2M for exploit chains, over $5M with bonuses. AI/Apple Intelligence is not named in the terms."
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - bounty
+        restrictions: "'If you've discovered a security or privacy vulnerability that affects Apple devices, software, or services, please report it directly to us.' Covers Apple products and public-facing services; rewards up to $2M for exploit chains, over $5M with bonuses. AI/Apple Intelligence is not named in the terms."
     - id: bounty-terms-conditions
       type: disclosure
       value: https://security.apple.com/terms-and-conditions/
@@ -19,6 +36,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: b76f9bc7b1a2
+      contact:
+        status: limited
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://security.apple.com/terms-and-conditions/
+        evidence_note: Section 8 provides a limited exemption from reverse-engineering restrictions where 'The actions were performed during good-faith security research, which was — or was intended to be — responsibly reported to Apple'.
+        checked_on: 2026-09-22
+        eligible_users:
+          - users-meeting-published-eligibility
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - disclosure
+        restrictions: Section 8 provides a limited exemption from reverse-engineering restrictions where 'The actions were performed during good-faith security research, which was — or was intended to be — responsibly reported to Apple'.
     - id: homepage
       type: homepage
       value: https://security.apple.com/
@@ -26,6 +60,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 6cdbf149996e
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://security.apple.com/
+        evidence_note: Apple's bounty is well-funded and known to pay, but it is a security program. Apple has historically been criticised by researchers for slow triage and for disputes over credit and payout, though the 2025-26 program restructure raised maximums substantially. There is no published channel of any kind for Apple Intelligence model behaviour — no safety@, no model feedback form, no responsible AI contact.
     - id: framework
       type: framework
       value: https://security.apple.com/bounty/
@@ -33,11 +76,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: f12627e11fcf
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://security.apple.com/bounty/
+        evidence_note: Apple's bounty is well-funded and known to pay, but it is a security program. Apple has historically been criticised by researchers for slow triage and for disputes over credit and payout, though the 2025-26 program restructure raised maximums substantially. There is no published channel of any kind for Apple Intelligence model behaviour — no safety@, no model feedback form, no responsible AI contact.
   region: United States
   public_input: limited
   tags:
     - behaviour
     - flaw
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Apple
   remit: No publicly named AI safety or alignment function. Apple Security Engineering and Architecture runs the bounty; Private Cloud Compute is the published mechanism for AI privacy guarantees.

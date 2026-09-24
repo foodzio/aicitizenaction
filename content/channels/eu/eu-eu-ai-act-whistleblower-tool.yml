@@ -12,6 +12,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 3b15e0868a20
+      contact:
+        status: open
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://digital-strategy.ec.europa.eu/en/policies/ai-act-whistleblower-tool
+        evidence_note: Reports of harmful practices or other AI Act violations, from 'individuals who are professionally connected to providers of general-purpose AI (GPAI) models or of AI systems' within the AI Office's enforcement scope. Supporting documents may be attached.
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - harm
+          - insider
+          - systemic
+          - whistleblowing
     - id: homepage
       type: homepage
       value: https://digital-strategy.ec.europa.eu/en/policies/ai-act-whistleblower-tool
@@ -19,12 +36,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: ca2f56527d54
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://digital-strategy.ec.europa.eu/en/policies/ai-act-whistleblower-tool
+        evidence_note: Reports of harmful practices or other AI Act violations, from 'individuals who are professionally connected to providers of general-purpose AI (GPAI) models or of AI systems' within the AI Office's enforcement scope. Supporting documents may be attached.
   region: European Union
   public_input: open
   tags:
     - harm
     - insider
     - systemic
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: EU AI Act Whistleblower Tool (AI Office)
   remit: Reports of harmful practices or other AI Act violations, from 'individuals who are professionally connected to providers of general-purpose AI (GPAI) models or of AI systems' within the AI Office's enforcement scope. Supporting documents may be attached.

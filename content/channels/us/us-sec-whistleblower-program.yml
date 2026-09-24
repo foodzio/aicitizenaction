@@ -12,6 +12,23 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 8f02d7b47e38
+      contact:
+        status: open
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.sec.gov/enforcement-litigation/whistleblower-program/information-about-submitting-whistleblower-tip
+        evidence_note: "Original information about potential violations of the federal securities laws. For AI: material misrepresentation of model capability, safety practices or risk to investors — 'AI-washing' cases have been brought. Reaches Google, Microsoft, Meta and Nvidia; reaches private labs only where securities law otherwise bites."
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - flaw
+          - harm
+          - insider
+          - whistleblowing
     - id: homepage
       type: homepage
       value: https://www.sec.gov/enforcement-litigation/whistleblower-program/information-about-submitting-whistleblower-tip
@@ -19,12 +36,24 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: a6163f09f428
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.sec.gov/enforcement-litigation/whistleblower-program/information-about-submitting-whistleblower-tip
+        evidence_note: "Original information about potential violations of the federal securities laws. For AI: material misrepresentation of model capability, safety practices or risk to investors — 'AI-washing' cases have been brought. Reaches Google, Microsoft, Meta and Nvidia; reaches private labs only where securities law otherwise bites."
   region: United States
   public_input: open
   tags:
     - flaw
     - harm
     - insider
+  contact_disposition: keep
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: SEC Whistleblower Program (Form TCR)
   remit: "Original information about potential violations of the federal securities laws. For AI: material misrepresentation of model capability, safety practices or risk to investors — 'AI-washing' cases have been brought. Reaches Google, Microsoft, Meta and Nvidia; reaches private labs only where securities law otherwise bites."

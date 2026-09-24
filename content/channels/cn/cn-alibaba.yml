@@ -12,6 +12,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: e1422378dff4
+      contact:
+        status: unknown
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: fix
+        evidence_url: https://asrc.alibaba.com/
+        evidence_note: Vulnerability reporting across Alibaba properties. Page is fully JS-rendered and returned only a 'please enable JS' message when fetched, so scope, AI coverage and registration requirements could not be confirmed.
     - id: alibaba-cloud-trust-center
       type: form
       value: https://www.alibabacloud.com/en/trust-center/security-compliance-practice
@@ -19,6 +28,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: b4f3b57c77f3
+      contact:
+        status: unknown
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: fix
+        evidence_url: https://www.alibabacloud.com/en/trust-center/security-compliance-practice
+        evidence_note: Compliance documentation, not an incident channel.
     - id: homepage
       type: homepage
       value: https://qwen.ai/
@@ -26,6 +44,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 49695afa9c14
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://qwen.ai/
+        evidence_note: No public accounts found of a foreign researcher successfully reporting a Qwen model-safety issue to Alibaba. Qwen weights are widely distributed on Hugging Face and most published safety findings about Qwen (red-teaming reports, jailbreak evaluations) are released as papers or blog posts rather than disclosed to Alibaba, which is itself the signal. CISA's September 2026 advisory on PRC AI developers adds a geopolitical overlay that makes direct engagement harder for some researchers.
     - id: framework
       type: framework
       value: https://qwen.ai/
@@ -33,11 +60,23 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 7b5cdf9bdca5
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://qwen.ai/
+        evidence_note: No public accounts found of a foreign researcher successfully reporting a Qwen model-safety issue to Alibaba. Qwen weights are widely distributed on Hugging Face and most published safety findings about Qwen (red-teaming reports, jailbreak evaluations) are released as papers or blog posts rather than disclosed to Alibaba, which is itself the signal. CISA's September 2026 advisory on PRC AI developers adds a geopolitical overlay that makes direct engagement harder for some researchers.
   region: China
   public_input: limited
   tags:
     - behaviour
     - flaw
+  contact_disposition: fix
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: Alibaba (Qwen)
   remit: No separately named frontier safety or alignment function published in English. Security is handled by the Alibaba Security Response Center (ASRC); model governance follows PRC regulatory requirements (CAC algorithm and generative AI filings).

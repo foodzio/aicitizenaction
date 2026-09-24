@@ -12,6 +12,15 @@ facts:
       verification_method: secondary_citation
       verified_on: null
       source_id: f46a0d6d1a6f
+      contact:
+        status: none
+        directness: direct
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.g42.ai/contact-us
+        evidence_note: Not found — general contact only.
     - id: homepage
       type: homepage
       value: https://www.g42.ai/
@@ -19,6 +28,15 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: c13457e6c0b7
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.g42.ai/
+        evidence_note: No public accounts of external safety contact. G42 is significant as the main non-Western, non-Chinese signatory with a published framework, and is deeply tied to Microsoft and to UAE state AI strategy, but its framework publishes no intake route.
     - id: framework
       type: framework
       value: https://www.g42.ai/application/files/9517/3882/2182/G42_Frontier_Safety_Framework_Publication_Version.pdf
@@ -26,10 +44,22 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: e66308971070
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.g42.ai/application/files/9517/3882/2182/G42_Frontier_Safety_Framework_Publication_Version.pdf
+        evidence_note: No public accounts of external safety contact. G42 is significant as the main non-Western, non-Chinese signatory with a published framework, and is deeply tied to Microsoft and to UAE state AI strategy, but its framework publishes no intake route.
   region: Middle East
   public_input: none
   tags:
     - behaviour
+  contact_disposition: reclassify
+  contact_reviewed_by: codex:deterministic-contact-audit
+  contact_reviewed_on: 2026-09-24
 strings:
   name: G42
   remit: Publishes a Frontier AI Safety Framework as part of the Seoul/Korea frontier safety commitments; no named external-facing safety office.
