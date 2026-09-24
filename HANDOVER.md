@@ -54,8 +54,8 @@ Tracked in git and committed with every step.
 | Directory integrity 2 — Backlog resolution | **done** | 78 current pairs reviewed; 41 duplicates merged; provenance, roles, parent links and 82 multilingual redirects preserved |
 | Directory integrity 3 — Recurring audit | **done** | Fast/full read-only commands, stable reports, reviewed baseline, coverage/backlog/link metrics |
 | Directory integrity 4 — Fail-closed freshness | **done** | Shared 180-day route/90-day seat rules plus per-build runtime validity gate |
-| Directory integrity 5 — Workflow and public reporting | **in progress** | CI/weekly scheduling, stable issues/artifacts, freshness-page integrity metrics |
-| Directory integrity 6 — Final verification | not started | Full tests/build/browser checks and reconciliation; no deployment without separate approval |
+| Directory integrity 5 — Workflow and public reporting | **done** | CI/weekly/monthly automation, stable issues, 400-day artifacts, SLA escalation, public integrity metrics |
+| Directory integrity 6 — Final verification | **in progress** | Full tests/build/browser checks and reconciliation; no deployment without separate approval |
 
 ## Judgement calls made without the owner (reverse any of them)
 
@@ -87,6 +87,17 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T14:12:45Z — Directory workflow ownership and SLA enforcement complete
+
+- Stable issue reconciliation now enforces executable 7/14/30-day horizons, labels overdue work
+  `sla-breach`, adds it to the Actions summary, and maintains one aggregate escalation issue until
+  all breaches clear.
+- Specialist owners receive at most 20 current findings; overflow is explicitly routed to the
+  wildcard maintainer backlog and disclosed in the issue. The maintainer itself is intentionally
+  uncapped so findings are never dropped.
+- Focused tests pass 3/3, issue dry-run produces six stable unique maintenance issues, and weekly
+  workflow YAML parses. Phase 5 is complete; Phase 6 full verification is now active.
 
 ### 2026-09-24T14:11:40Z — Coverage gate and monthly evidence sampling are executable
 

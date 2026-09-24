@@ -50,7 +50,7 @@ jobs:
         if: always() && hashFiles('tmp/directory-audit/report.json') != ''
         env:
           GH_TOKEN: ${{ github.token }}
-        run: node scripts/file-directory-issues.mjs tmp/directory-audit/report.json
+        run: node scripts/file-directory-issues.mjs tmp/directory-audit/report.json --summary "$GITHUB_STEP_SUMMARY"
       - name: Freshness report
         if: always()
         run: node scripts/freshness.mjs --link-state .linkcheck/state.json --summary "$GITHUB_STEP_SUMMARY" > freshness.md

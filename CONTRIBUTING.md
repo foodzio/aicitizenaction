@@ -108,6 +108,10 @@ weekly full audit updates one issue per stable finding key: contact/link failure
 7 days, identity questions in 14 days, and ordinary maintenance in 30 days. Uncertainty is handled
 by excluding the claim, never by marking it verified.
 
+The issue reconciler caps a specialist steward queue at 20 findings and sends overflow to the
+maintainer backlog. Findings older than their service level receive the `sla-breach` label, appear
+in the workflow summary, and are collected in one maintained escalation issue until resolved.
+
 On the first day of each month, `npm run directory-sample` selects 10% of the prior month's current
 contact reviews (at least five where available). A human reopens every cited evidence page and
 confirms the recipient, inbound mechanism, accepted subject, audience, restrictions, and current
