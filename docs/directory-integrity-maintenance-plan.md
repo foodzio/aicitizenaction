@@ -1,6 +1,6 @@
 # Directory integrity and recurring maintenance plan
 
-**Status:** implemented and locally verified 2026-09-24; production deployment requires separate owner approval
+**Status:** implemented, verified, and deployed to production 2026-09-24
 
 **Created:** 2026-09-24
 

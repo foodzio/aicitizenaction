@@ -55,7 +55,7 @@ Tracked in git and committed with every step.
 | Directory integrity 3 — Recurring audit | **done** | Fast/full read-only commands, stable reports, reviewed baseline, coverage/backlog/link metrics |
 | Directory integrity 4 — Fail-closed freshness | **done** | Shared 180-day route/90-day seat rules plus per-build runtime validity gate |
 | Directory integrity 5 — Workflow and public reporting | **done** | CI/weekly/monthly automation, stable issues, 400-day artifacts, SLA escalation, public integrity metrics |
-| Directory integrity 6 — Final verification | **done** | 118 tests, 838-page build, 914-link stateful audit, 35 browser/axe checks; deployment still requires separate approval |
+| Directory integrity 6 — Final verification | **done and deployed** | 118 tests, 838-page build, 914-link stateful audit, 35 browser/axe checks; production deployment `d84b4913-076b-4965-bb81-deb951eaf306` |
 
 ## Judgement calls made without the owner (reverse any of them)
 
@@ -87,6 +87,18 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T15:11:40Z — Directory integrity release deployed and verified
+
+- After explicit owner approval, deployed the verified local tree to Railway production using
+  deployment `d84b4913-076b-4965-bb81-deb951eaf306`. Railway completed the Node 22 build and
+  generated 838 pages, 82 redirects and the runtime validity manifest.
+- Production serves version 0.1.67 / build 68. Direct checks pass: exactly one Access Now directory
+  row; reported Transformer article absent from the directory and explicitly reference-only on its
+  record; channels API 48 public / 22 excluded; public integrity metrics present; retired Access
+  Now id returns a direct query-preserving HTTP 308.
+- The directory-integrity maintenance plan is now implemented, verified and live. Continue with
+  the scheduled audits and human maintenance queue described below.
 
 ### 2026-09-24T14:17:57Z — Directory integrity maintenance plan fully implemented
 
@@ -825,8 +837,8 @@ the remote is empty. Commits also carry the author's configured email. `.projstu
 3. Remaining non-automatable work needs people: review routing drafts
    (`docs/routing-drafts-report.md`), editor review of draft/pending Resources, phase A participants
    (`docs/phase-a-test-kit.md`), and a French language steward.
-4. Never edit `input/`. Never deploy without asking the owner; the current implementation is
-   committed but not deployed.
+4. Never edit `input/`. Never deploy a later change without asking the owner. The directory
+   integrity release itself is live as deployment `d84b4913-076b-4965-bb81-deb951eaf306`.
 
 Reference prototypes (published, private):
 - Concern Register — https://claude.ai/artifact/9BhNrXsW43HJ4rjH5fSuNy
@@ -834,4 +846,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-24T14:19:00Z
+Last modified: 2026-09-24T15:11:40Z
