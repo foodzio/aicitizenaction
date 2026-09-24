@@ -47,6 +47,7 @@ facts:
   entity_key: entity-edb2678a-e1c4-4888-a430-7626d7e07fd4
   roles:
     - seat
+  parent_id: us-senate-committee-foreign-relations
 strings:
   name: Subcommittee on East Asia, the Pacific, and International Cybersecurity Policy
   ai_jurisdiction: China AI competition, allied coordination on AI and semiconductor controls, international cyber norms and their extension to AI, and AI in the Indo-Pacific.

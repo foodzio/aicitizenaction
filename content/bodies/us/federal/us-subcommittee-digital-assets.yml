@@ -39,6 +39,7 @@ facts:
   entity_key: entity-7482fa6c-837b-4a29-a47f-d58c1a6b7a42
   roles:
     - seat
+  parent_id: us-senate-committee-banking
 strings:
   name: Subcommittee on Digital Assets
   ai_jurisdiction: Newly created in the 119th Congress. Relevant to AI where AI agents transact — autonomous agents holding or moving assets, AI-driven trading, AI-enabled financial fraud, and identity/authentication for machine actors.

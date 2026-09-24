@@ -46,6 +46,7 @@ facts:
   entity_key: entity-ca279827-5877-4aab-a193-d59a5965fcdd
   roles:
     - seat
+  parent_id: us-senate-committee-armed-services
 strings:
   name: Subcommittee on Cybersecurity
   ai_jurisdiction: AI-enabled offensive and defensive cyber operations, CYBERCOM, AI model security and adversarial attacks on defense systems, and the security of AI supply chains inside DoD.

@@ -42,3 +42,12 @@ test('ledger defaults reduce repetition without weakening required fields', () =
   const result = validateIdentityDecisions({ inventory: { candidates: [candidate] }, ledger, records, now: '2026-09-24' });
   assert.deepEqual(result.errors, []);
 });
+
+test('parent-child decisions require the child record to name the reviewed parent', () => {
+  const related = { ...valid, decision: 'related', relationship: 'parent-child', parent_id: 'a', child_id: 'b', canonical_id: undefined, approved_by: undefined };
+  const missing = validateIdentityDecisions({ inventory: { candidates: [{ ...candidate, severity: 'low' }] }, ledger: { decisions: [related] }, records, now: '2026-09-24' });
+  assert.match(missing.errors.join('\n'), /does not name the reviewed parent_id/);
+  const linked = [records[0], { ...records[1], facts: { parent_id: 'a' } }];
+  const result = validateIdentityDecisions({ inventory: { candidates: [{ ...candidate, severity: 'low' }] }, ledger: { decisions: [related] }, records: linked, now: '2026-09-24' });
+  assert.deepEqual(result.errors, []);
+});

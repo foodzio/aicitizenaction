@@ -51,8 +51,8 @@ Tracked in git and committed with every step.
 | Contact audit 5 — UI/routing convergence | **done** | Public label, directory, API, record pages and send-to cards share audited eligibility and show restrictions/evidence |
 | Contact audit 6 — Final verification | **done and deployed** | 85 tests, 920-page build, 25 browser/axe checks, audit freshness and reconciliation pass; production deployment `673a9d41-5eaa-434c-902a-1f5773023513` is running |
 | Directory integrity 1 — Identity model and inventories | **done** | Identity/roles/redirect/provenance schema, separate deterministic candidates and human decisions, PSL-aware matching, validation and tests |
-| Directory integrity 2 — Backlog resolution | **in progress** | Review candidate pairs, merge confirmed duplicates, preserve provenance and redirects |
-| Directory integrity 3 — Recurring audit | not started | Add fast/full commands, reports, coverage and backlog metrics |
+| Directory integrity 2 — Backlog resolution | **done** | 78 current pairs reviewed; 41 duplicates merged; provenance, roles, parent links and 82 multilingual redirects preserved |
+| Directory integrity 3 — Recurring audit | **in progress** | Add fast/full commands, reports, coverage and backlog metrics |
 | Directory integrity 4 — Fail-closed freshness | not started | Enforce 180-day contact expiry consistently in public surfaces and production runtime |
 | Directory integrity 5 — Workflow and public reporting | not started | CI/weekly scheduling, stable issues/artifacts, freshness-page integrity metrics |
 | Directory integrity 6 — Final verification | not started | Full tests/build/browser checks and reconciliation; no deployment without separate approval |
@@ -87,6 +87,19 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-24T13:55:35Z — Directory integrity Phase 2 complete
+
+- Added 14 conservative `parent_id` links only where evidence supports an actual parent/subunit
+  relationship: government AI institutes and their host bodies plus congressional subcommittees
+  and their parent committees. Shared portals and looser programmes remain related without an
+  invented hierarchy.
+- Parent-child decisions now name `parent_id`/`child_id`, and the ledger validator requires the
+  child record to carry that exact reviewed parent. Focused identity/validator tests pass 23/23;
+  ledger has 78/78 current candidates resolved and content validation has 0 errors.
+- Phase 2 is complete: identity model, complete review ledger, canonical merges, lossless
+  provenance, exact references, parent links and permanent multilingual redirects are all in
+  place. Phase 3 is active: implement the read-only fast/full recurring audit and metrics.
 
 ### 2026-09-24T13:54:42Z — Retired paths have permanent multilingual redirects
 

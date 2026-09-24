@@ -249,11 +249,13 @@ decisions:
       - gb-ai-security-institute
       - gb-department-science
     decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
+    relationship: parent-child
     evidence_urls:
       - https://www.aisi.gov.uk/contact
       - https://correspondence-for-ministerial-support.dsit.gov.uk/s/
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+    note: gb-ai-security-institute is a separately addressable subunit of gb-department-science; keep both identities and enforce the canonical parent reference.
+    child_id: gb-ai-security-institute
+    parent_id: gb-department-science
   - key: gb-centre-study-existential-risk--gb-leverhulme-centre-future-intelligence
     records:
       - gb-centre-study-existential-risk
@@ -478,11 +480,13 @@ decisions:
       - in-indiaai-mission
       - in-indiaai-safety-institute
     decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
+    relationship: parent-child
     evidence_urls:
       - https://indiaai.gov.in/
       - https://indiaai.s3.ap-south-1.amazonaws.com/docs/sg-call-for-partnerships-indiaai-safety-institute.pdf
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+    note: in-indiaai-safety-institute is a separately addressable subunit of in-indiaai-mission; keep both identities and enforce the canonical parent reference.
+    child_id: in-indiaai-safety-institute
+    parent_id: in-indiaai-mission
   - key: jp-artificial-intelligence-strategy-headquarters--jp-e-gov-public-comment
     records:
       - jp-artificial-intelligence-strategy-headquarters
@@ -518,11 +522,13 @@ decisions:
       - jp-information-technology-promotion-agency
       - jp-japan-ai-safety-institute
     decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
+    relationship: parent-child
     evidence_urls:
       - https://www.ipa.go.jp/contact.html
       - https://aisi.go.jp/about/
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+    note: jp-japan-ai-safety-institute is a separately addressable subunit of jp-information-technology-promotion-agency; keep both identities and enforce the canonical parent reference.
+    child_id: jp-japan-ai-safety-institute
+    parent_id: jp-information-technology-promotion-agency
   - key: kr-ai-safety-institute--kr-ai-safety-institute-2
     records:
       - kr-ai-safety-institute
@@ -718,11 +724,13 @@ decisions:
       - us-center-ai-standards-innovation
       - us-national-institute-standards-technology-information-technology
     decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
+    relationship: parent-child
     evidence_urls:
       - https://www.nist.gov/artificial-intelligence/nist-ai-consortium/submit-letter-interest-join-nist-ai-consortium
       - https://www.nist.gov/artificial-intelligence
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+    note: us-center-ai-standards-innovation is a separately addressable subunit of us-national-institute-standards-technology-information-technology; keep both identities and enforce the canonical parent reference.
+    child_id: us-center-ai-standards-innovation
+    parent_id: us-national-institute-standards-technology-information-technology
   - key: us-center-ai-standards-innovation--us-nist-ai-consortium
     records:
       - us-center-ai-standards-innovation
@@ -874,11 +882,13 @@ decisions:
       - us-house-committee-financial-services
       - us-subcommittee-digital-assets-2
     decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
+    relationship: parent-child
     evidence_urls:
       - https://financialservices.house.gov/about/members.htm
       - https://financialservices.house.gov/subcommittees
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+    note: us-subcommittee-digital-assets-2 is a separately addressable subunit of us-house-committee-financial-services; keep both identities and enforce the canonical parent reference.
+    child_id: us-subcommittee-digital-assets-2
+    parent_id: us-house-committee-financial-services
   - key: us-house-committee-science--us-house-committee-science-2
     records:
       - us-house-committee-science
@@ -896,12 +906,14 @@ decisions:
       - us-house-committee-science
       - us-subcommittee-investigations-oversight
     decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
+    relationship: parent-child
     evidence_urls:
       - https://science.house.gov/contact
       - https://science.house.gov/members
       - https://science.house.gov/
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+    note: us-subcommittee-investigations-oversight is a separately addressable subunit of us-house-committee-science; keep both identities and enforce the canonical parent reference.
+    child_id: us-subcommittee-investigations-oversight
+    parent_id: us-house-committee-science
   - key: us-house-economic-matters-committee--us-senate-education
     records:
       - us-house-economic-matters-committee
@@ -985,11 +997,13 @@ decisions:
       - us-permanent-subcommittee-investigations
       - us-senate-committee-homeland-security-governmental-affairs
     decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
+    relationship: parent-child
     evidence_urls:
       - https://www.hsgac.senate.gov/about/members/
       - https://www.hsgac.senate.gov/
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+    note: us-permanent-subcommittee-investigations is a separately addressable subunit of us-senate-committee-homeland-security-governmental-affairs; keep both identities and enforce the canonical parent reference.
+    child_id: us-permanent-subcommittee-investigations
+    parent_id: us-senate-committee-homeland-security-governmental-affairs
   - key: us-public-citizen--us-public-citizen-2
     records:
       - us-public-citizen
@@ -1007,41 +1021,49 @@ decisions:
       - us-senate-committee-armed-services
       - us-subcommittee-cybersecurity
     decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
+    relationship: parent-child
     evidence_urls:
       - https://www.armed-services.senate.gov/about/membership
       - https://www.armed-services.senate.gov/
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+    note: us-subcommittee-cybersecurity is a separately addressable subunit of us-senate-committee-armed-services; keep both identities and enforce the canonical parent reference.
+    child_id: us-subcommittee-cybersecurity
+    parent_id: us-senate-committee-armed-services
   - key: us-senate-committee-armed-services--us-subcommittee-emerging-threats-capabilities
     records:
       - us-senate-committee-armed-services
       - us-subcommittee-emerging-threats-capabilities
     decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
+    relationship: parent-child
     evidence_urls:
       - https://www.armed-services.senate.gov/about/membership
       - https://www.armed-services.senate.gov/
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+    note: us-subcommittee-emerging-threats-capabilities is a separately addressable subunit of us-senate-committee-armed-services; keep both identities and enforce the canonical parent reference.
+    child_id: us-subcommittee-emerging-threats-capabilities
+    parent_id: us-senate-committee-armed-services
   - key: us-senate-committee-banking--us-subcommittee-digital-assets
     records:
       - us-senate-committee-banking
       - us-subcommittee-digital-assets
     decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
+    relationship: parent-child
     evidence_urls:
       - https://www.banking.senate.gov/about/membership
       - https://www.banking.senate.gov/
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+    note: us-subcommittee-digital-assets is a separately addressable subunit of us-senate-committee-banking; keep both identities and enforce the canonical parent reference.
+    child_id: us-subcommittee-digital-assets
+    parent_id: us-senate-committee-banking
   - key: us-senate-committee-banking--us-subcommittee-national-security-international-trade-finance
     records:
       - us-senate-committee-banking
       - us-subcommittee-national-security-international-trade-finance
     decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
+    relationship: parent-child
     evidence_urls:
       - https://www.banking.senate.gov/about/membership
       - https://www.banking.senate.gov/
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+    note: us-subcommittee-national-security-international-trade-finance is a separately addressable subunit of us-senate-committee-banking; keep both identities and enforce the canonical parent reference.
+    child_id: us-subcommittee-national-security-international-trade-finance
+    parent_id: us-senate-committee-banking
   - key: us-senate-committee-commerce--us-senate-committee-commerce-2
     records:
       - us-senate-committee-commerce
@@ -1059,21 +1081,25 @@ decisions:
       - us-senate-committee-energy-natural-resources
       - us-subcommittee-energy
     decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
+    relationship: parent-child
     evidence_urls:
       - https://www.energy.senate.gov/about/membership
       - https://www.energy.senate.gov/
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+    note: us-subcommittee-energy is a separately addressable subunit of us-senate-committee-energy-natural-resources; keep both identities and enforce the canonical parent reference.
+    child_id: us-subcommittee-energy
+    parent_id: us-senate-committee-energy-natural-resources
   - key: us-senate-committee-foreign-relations--us-subcommittee-east-asia
     records:
       - us-senate-committee-foreign-relations
       - us-subcommittee-east-asia
     decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
+    relationship: parent-child
     evidence_urls:
       - https://www.foreign.senate.gov/about/membership
       - https://www.foreign.senate.gov/
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+    note: us-subcommittee-east-asia is a separately addressable subunit of us-senate-committee-foreign-relations; keep both identities and enforce the canonical parent reference.
+    child_id: us-subcommittee-east-asia
+    parent_id: us-senate-committee-foreign-relations
   - key: us-senate-committee-judiciary--us-senate-committee-judiciary-2
     records:
       - us-senate-committee-judiciary
@@ -1088,11 +1114,13 @@ decisions:
       - us-senate-committee-judiciary
       - us-senate-committee-judiciary-subcommittee-privacy
     decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
+    relationship: parent-child
     evidence_urls:
       - https://www.judiciary.senate.gov/about/members
       - https://www.judiciary.senate.gov/committee-activity/hearings
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+    note: us-senate-committee-judiciary-subcommittee-privacy is a separately addressable subunit of us-senate-committee-judiciary; keep both identities and enforce the canonical parent reference.
+    child_id: us-senate-committee-judiciary-subcommittee-privacy
+    parent_id: us-senate-committee-judiciary
   - key: us-senate-committee-judiciary-subcommittee-privacy--us-subcommittee-crime-counterterrorism
     records:
       - us-senate-committee-judiciary-subcommittee-privacy

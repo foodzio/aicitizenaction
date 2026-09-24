@@ -55,6 +55,10 @@ export function validateIdentityDecisions({ inventory, ledger, records, now = to
       if (bothActive) warnings.push(`${at}: approved same pair is still published twice`);
     }
     if (row.decision === 'related' && !row.relationship) errors.push(`${at}: related decision needs relationship`);
+    if (row.decision === 'related' && row.relationship === 'parent-child') {
+      if (!row.parent_id || !row.child_id || !row.records?.includes(row.parent_id) || !row.records?.includes(row.child_id)) errors.push(`${at}: parent-child decision needs parent_id and child_id from the pair`);
+      else if (active.get(row.child_id)?.facts?.parent_id !== row.parent_id) errors.push(`${at}: child record does not name the reviewed parent_id`);
+    }
     if (row.decision === 'pending' && !row.note) errors.push(`${at}: pending decision needs a note`);
   }
 

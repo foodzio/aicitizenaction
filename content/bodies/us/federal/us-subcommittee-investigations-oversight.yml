@@ -50,6 +50,7 @@ facts:
   entity_key: entity-3a720919-12c2-45a9-bdfe-8064d6e40f9c
   roles:
     - seat
+  parent_id: us-house-committee-science
 strings:
   name: Subcommittee on Investigations and Oversight
   ai_jurisdiction: Oversight of federal science agencies' AI programs — whether NIST, NSF, DOE and OSTP are actually doing what statute directs on AI, research security, and foreign influence in federally funded AI research.

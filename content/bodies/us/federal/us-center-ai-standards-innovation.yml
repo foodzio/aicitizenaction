@@ -82,6 +82,7 @@ facts:
   entity_key: entity-f0b37108-5bb9-4aea-b137-32474b585f0a
   roles:
     - government
+  parent_id: us-national-institute-standards-technology-information-technology
 strings:
   name: Center for AI Standards and Innovation (CAISI)
   remit: "RENAMED: was the 'U.S. AI Safety Institute' until 4 June 2025, when Commerce Secretary Lutnick renamed and re-scoped it as CAISI. Develops guidelines/best practices to measure and improve AI system security; leads unclassified evaluations of AI capabilities that may pose national-security risk (cybersecurity, biosecurity, chemical weapons); enters VOLUNTARY agreements with private AI developers and evaluators for pre/post-deployment testing; coordinates with DoD, DOE, DHS and the IC; represents US positions in international AI standards fora. Also runs an AI Agent Standards Initiative (announced Feb 2026)."

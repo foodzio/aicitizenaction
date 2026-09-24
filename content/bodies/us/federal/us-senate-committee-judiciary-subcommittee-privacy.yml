@@ -98,6 +98,7 @@ facts:
   roles:
     - government
     - seat
+  parent_id: us-senate-committee-judiciary
 strings:
   name: U.S. Senate Committee on the Judiciary — Subcommittee on Privacy, Technology, and the Law
   remit: Oversight of privacy, technology and civil-liberties aspects of AI. Held the 2023 'Oversight of A.I.' hearing series and the bipartisan framework work on AI regulation, and has since run hearings on AI-generated deepfakes and chatbot harms to minors. Can subpoena and compel testimony; legislates on liability, transparency and privacy. No adjudicative power over individuals' complaints.

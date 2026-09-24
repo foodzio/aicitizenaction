@@ -68,6 +68,7 @@ facts:
   entity_key: entity-30bbc136-f2a1-4790-a150-d0228302d4c3
   roles:
     - government
+  parent_id: gb-department-science
 strings:
   name: AI Security Institute (AISI)
   remit: "RENAMED: was the 'AI Safety Institute'; renamed the AI Security Institute in February 2025 (announced by written ministerial statement, HLWS454, 24 February 2025), with the focus narrowed toward security, cyber, chemical/biological and criminal-misuse risks and away from bias and free-speech concerns. It is a DIRECTORATE OF DSIT, not an independent agency. Conducts pre-deployment and post-deployment testing of frontier models by voluntary agreement with developers, builds evaluation infrastructure, publishes a Frontier AI Trends Report, and advises government. It has NO statutory powers: it cannot compel access to a model, cannot fine, cannot require testing, and cannot stop a release."
