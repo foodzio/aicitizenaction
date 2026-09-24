@@ -70,6 +70,21 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T00:10:15Z — Redeployed (owner approved); custom domains attached
+
+- Redeployed from source: **v0.1.30 live** (design system, French published, draft notice and footer sentence removed). Verified on https://web-production-ce384.up.railway.app.
+- Custom domains added to the Railway service `web`: `aicitizenaction.org` and `www.aicitizenaction.org`. **Waiting on DNS at GoDaddy** (nameservers ns29/ns30.domaincontrol.com; currently parked):
+
+| Type | Host | Value |
+| --- | --- | --- |
+| CNAME | @ (apex) | dvrqrdz2.up.railway.app |
+| TXT | _railway-verify | railway-verify=d2f36160d8865a2a888fe27a7dd6f6c95a10dc59131706956ef5897d69e83385 |
+| CNAME | www | f75ikr18.up.railway.app |
+| TXT | _railway-verify.www | railway-verify=85b706501be853bb7c53c3086e69b0342d62bb3460d9a5299f7c1d7039702f6b |
+
+- GoDaddy cannot put a CNAME on the apex. Either move DNS to a provider with CNAME flattening (e.g. Cloudflare, free) and keep `https://aicitizenaction.org` canonical (as the site is built now), or use GoDaddy forwarding from the apex to `https://www.aicitizenaction.org` — then change Astro `site` to the www address so canonical links match.
+- Check status: `railway domain status aicitizenaction.org`.
+
 ### 2026-09-23T23:32:05Z — Design system applied; domain AICitizenAction.org
 
 - Owner supplied `input/aicitizenaction-design-system.zip` and confirmed the domain **AICitizenAction.org**.
@@ -283,4 +298,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-23T23:32:05Z
+Last modified: 2026-09-24T00:10:15Z
