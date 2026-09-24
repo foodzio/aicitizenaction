@@ -44,6 +44,9 @@ facts:
   public_input: open
   tags:
     - research
+  entity_key: entity-2d8c3951-e267-4d3d-a254-2bec498bb06e
+  roles:
+    - academic
 strings:
   name: PKU Alignment Group / Center for AI Safety and Governance, Peking University
   remit: PKU-Alignment is a student-organised research team at Peking University working on reinforcement learning, LLMs, world models and AI alignment. Widely known for open-sourcing alignment resources — PKU-SafeRLHF datasets, Safe-RLHF training code, BeaverTails and the Align-Anything framework — published at ACL, NeurIPS and ICLR, with collaborations including Anthropic, Google DeepMind, DeepSeek and Alibaba. PKU's Institute for AI separately hosts a Center for AI Safety and Governance.

@@ -19,10 +19,32 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: af00424415d8
+    - id: written-evidence-open-inquiry
+      type: evidence
+      value: https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3c39c3503e20
+    - id: committee-staff
+      type: email
+      value: commonssitc@parliament.uk
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 86d8bae2ddc9
+    - id: homepage
+      type: homepage
+      value: https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 0cb39690268c
   level: national
   tags:
     - law
     - record
+    - systemic
   seats:
     - role: chair
       name: Dame Chi Onwurah MP (Labour, Newcastle upon Tyne Central and West)
@@ -32,11 +54,21 @@ facts:
   powers:
     - oversee
     - publish
+    - hold-hearings
+    - compel
   routing_evidence:
     topics:government-use: It scrutinises AI research, compute, AI in government
     powers:oversee: It scrutinises AI research, compute, AI in government
     powers:publish: Science diplomacy (reported 7 Jul 2026)
+    powers:hold-hearings: takes oral and written evidence
+    powers:compel: it can compel the attendance of officials and extract documents
   routing_review: drafted
+  region: United Kingdom
+  public_input: open
+  entity_key: entity-39174bb4-69b1-45f7-b81b-873831141c63
+  roles:
+    - seat
+    - government
 strings:
   name: House of Commons Science and Technology Committee (committee id 135; formerly the Science, Innovation and Technology Committee)
   ai_jurisdiction: "Commons departmental select committee for science, research and technology policy. Following the abolition of DSIT in July 2026 its title reverted to 'Science and Technology Committee'. It scrutinises AI research, compute, AI in government, and has written to Government on UK AI sovereignty (letter reported 15 September 2026). Its live inquiries touch AI obliquely rather than head-on: 'Low-energy computing' (opened 16 April 2026) and 'Neuroscience and digital childhoods' (opened 24 March 2026)."
@@ -52,6 +84,20 @@ strings:
       label: Live membership list
     public-route:
       label: Public submission route
+    written-evidence-open-inquiry:
+      label: Written evidence to an open inquiry
+      scope: Each open inquiry carries its own 'Submit evidence' link and deadline on the committee's inquiry page. Anyone may submit; accepted submissions are PUBLISHED on the committee website and become part of the formal record.
+      note: VERIFIED — the committee page was fetched and lists its current inquiries. Note https://committees.parliament.uk/submit-written-evidence/ returns 404; submission is always via the specific inquiry's page.
+    committee-staff:
+      label: Committee staff
+      scope: Correspondence with the committee team, including asking the clerk whether a submission is in scope.
+      note: "VERIFIED on the committee page. Postal: Science and Technology Committee, House of Commons, London SW1A 0AA."
+    homepage:
+      label: Homepage
+  remit: Scrutinises DSIT — and therefore the AI Security Institute — its policy, administration and spending. Conducts inquiries, takes oral and written evidence, summons ministers and officials, and publishes reports to which the Government must respond within 60 days. It cannot legislate, fine or compel a private party in practice, but it can compel the attendance of officials and extract documents, and its reports set the terms of UK AI debate. Recent and current inquiries have included Low-energy computing (opened 16 April 2026), Neuroscience and digital childhoods (24 March 2026), Digital centre of government (3 February 2025), and Science diplomacy (3 April 2025).
+  powers_text: investigate
+  reality_check: "THIS IS THE UK'S BEST PUBLIC ROUTE and the clearest example of the contrast the question draws. Written evidence to an open select committee inquiry is read by the committee's specialist advisers and clerks, published under your name, indexed, quoted in the report, and cited afterwards by others — unlike a ministerial inbox, which produces a templated reply. Practitioner guidance (UCL Public Policy and others) converges on: keep it short and structured with numbered recommendations, answer the committee's published terms of reference point by point, submit before the deadline, and — the step most people skip — contact the clerk beforehand to check scope and signal availability to give oral evidence. The clerk, not the chair and not a minister, is the person who matters. Building a relationship with the clerk leads to future opportunities, including being called as a witness."
+  notes: Correct current name is 'Science, Innovation and Technology Committee' (committee ID 135). Do not confuse it with the House of Lords Science and Technology Committee (ID 193), which is a separate body.
 meta:
   verified_on: 2026-09-22
   review_by: 2026-12-21
@@ -60,8 +106,94 @@ meta:
       checked: 2026-09-22
     - url: https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/
       checked: 2026-09-22
+    - url: https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/
+      checked: 2026-09-22
   needs_research:
     - not_topics
   legacy_id: 86ee135bc7
   research_order: 83
   migrated_from: input/data/committees-and-organisations.json#seats
+  legacy_ids:
+    - 86ee135bc7
+    - 52535e21b4
+  aliases:
+    - gb-house-commons-science
+    - House of Commons Science, Innovation and Technology Committee
+  redirect_from:
+    - section: bodies
+      id: gb-house-commons-science
+  identity_review:
+    evidence_urls:
+      - https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/
+      - https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/membership/
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: gb-house-commons-science-technology-committee
+        source_url: https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/membership/
+        checked_on: 2026-09-22
+      - &a2
+        record_id: gb-house-commons-science
+        source_url: https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.level:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    facts.seats:
+      - *a1
+    facts.topics:
+      - *a1
+    facts.powers:
+      - *a1
+      - *a2
+    facts.routing_evidence:
+      - *a1
+      - *a2
+    facts.routing_review:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.ai_jurisdiction:
+      - *a1
+    strings.business:
+      - *a1
+    strings.public_route:
+      - *a1
+    strings.format_rules:
+      - *a1
+    strings.key_people:
+      - *a1
+    strings.note:
+      - *a1
+    strings.seat_notes:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a2
+    facts.public_input:
+      - *a2
+    strings.remit:
+      - *a2
+    strings.powers_text:
+      - *a2
+    strings.reality_check:
+      - *a2
+    strings.notes:
+      - *a2

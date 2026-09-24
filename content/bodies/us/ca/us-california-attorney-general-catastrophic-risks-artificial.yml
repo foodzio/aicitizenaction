@@ -50,6 +50,9 @@ facts:
     powers:handle-complaints: Covered employees are the intended users, but the form itself is open.
     powers:publish: The AG must publish an annual anonymised, aggregated report on employee reports received.
   routing_review: drafted
+  entity_key: entity-cebe1dac-eddf-4120-9c82-00a2fb12dd15
+  roles:
+    - government
 strings:
   name: California Attorney General — Catastrophic Risks in Artificial Intelligence Foundation Models (SB 53 / TFAIA enforcement)
   remit: Enforces the Transparency in Frontier Artificial Intelligence Act (SB 53, signed 29 September 2025). Large frontier developers must publish a Frontier AI Framework covering catastrophic-risk identification, mitigation and governance; all frontier developers must publish transparency reports before deployment; critical safety incidents must be reported to Cal OES within 15 days (24 hours if imminent danger). The AG can seek civil penalties of up to $1,000,000 per violation. SB 53 also creates whistleblower protection for covered employees and requires anonymous internal reporting channels. The AG must publish an annual anonymised, aggregated report on employee reports received.

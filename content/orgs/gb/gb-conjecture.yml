@@ -30,6 +30,9 @@ facts:
   public_input: limited
   tags:
     - research
+  entity_key: entity-c36f4621-2964-4108-93c0-aa18db0fc656
+  roles:
+    - civil-society
 strings:
   name: Conjecture
   remit: For-profit AI company founded from the alignment community. Public agenda is Cognitive Emulation — building AI systems that follow bounded, auditable, human-like reasoning processes rather than opaque end-to-end learned policies. In practice the public site now emphasises task-specific training, modular AI components and workflow automation products.

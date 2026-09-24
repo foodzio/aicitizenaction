@@ -50,6 +50,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-cfebe9da-5056-40e8-9d32-1d2e113ccaae
+  roles:
+    - reporting-channel
 strings:
   name: GDPR Article 77 — complaint to a data protection supervisory authority
   remit: Complaints from any data subject who considers that processing of their personal data infringes the GDPR. You may complain to the authority in your Member State of habitual residence, your place of work, or the place of the alleged infringement.

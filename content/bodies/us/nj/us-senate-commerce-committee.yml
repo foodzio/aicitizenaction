@@ -33,6 +33,9 @@ facts:
     topics:consumer-protection: AI consumer-protection and companion-chatbot bills
     powers:legislate: Senate committee of referral for AI consumer-protection and companion-chatbot bills
   routing_review: drafted
+  entity_key: entity-0e00e2d1-ab3d-43eb-8186-a70f708d2ca0
+  roles:
+    - seat
 strings:
   name: Senate Commerce Committee
   ai_jurisdiction: Senate committee of referral for AI consumer-protection and companion-chatbot bills.

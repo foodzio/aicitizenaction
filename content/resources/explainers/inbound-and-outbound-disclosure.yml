@@ -1,7 +1,10 @@
 id: inbound-and-outbound-disclosure
 facts:
-  topics: [security, transparency]
-  channels: [global-openai-inbound-reporting]
+  topics:
+    - security
+    - transparency
+  channels:
+    - us-openai
   action:
     outcome: fix
   reading_minutes: 2

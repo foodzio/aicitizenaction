@@ -42,6 +42,9 @@ facts:
     topics:transparency: Second Amendment Rules 2026 on AI-generated content labelling
     powers:make-rules: notified thereafter
   routing_review: drafted
+  entity_key: entity-2038b153-96bb-472f-8edb-973ad9e869e9
+  roles:
+    - seat
 strings:
   name: Ministry of Electronics and Information Technology (MeitY)
   ai_jurisdiction: The primary AI policy ministry. Owns the IndiaAI Mission, the India AI Governance Guidelines (Nov 2025), the IT Act and IT Rules including the 2026 AI-labelling/deepfake amendments, the DPDP Act rules, and the India AI Impact Summit. Any future Indian AI statute will originate here.

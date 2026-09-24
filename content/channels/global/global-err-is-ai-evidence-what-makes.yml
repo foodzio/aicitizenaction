@@ -46,6 +46,9 @@ facts:
   recommend: false
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-5745bbfd-0ed8-4a36-a904-7f9deb3e2f87
+  roles:
+    - reporting-channel
 strings:
   name: "'To Err is AI' — evidence on what makes an LLM flaw report land"
   remit: N/A — empirical evidence on flaw reporting practice.

@@ -118,6 +118,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-ada6c257-4029-4f27-8002-e69fa5e0b78a
+  roles:
+    - company
 strings:
   name: NVIDIA
   remit: NVIDIA PSIRT handles product security including AI-specific concerns; a Trustworthy AI function publishes model cards and the NeMo Guardrails tooling.

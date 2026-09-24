@@ -47,6 +47,9 @@ facts:
   recommend: false
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-e60a8739-da72-49ea-8c7b-3f709ea87a6a
+  roles:
+    - reporting-channel
 strings:
   name: OpenAI Outbound Coordinated Disclosure Policy
   remit: Nothing. This governs vulnerabilities OpenAI discovers in third-party software and reports outward.

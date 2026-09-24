@@ -39,6 +39,9 @@ facts:
     - harm
     - research
     - systemic
+  entity_key: entity-e9e2da9d-3666-4a5e-91c0-2b318a379d44
+  roles:
+    - academic
 strings:
   name: IIT Madras Centre for Responsible AI (CeRAI) and the IndiaAI Safe & Trusted AI pillar
   remit: CeRAI is a virtual interdisciplinary research centre within IIT Madras's Wadhwani School of Data Science and AI, doing fundamental and applied responsible-AI research, developing accountability/explainability guidelines, and positioning itself as a national standards-contributing body. Co-hosted the Global Conclave on Safe & Trusted AI with the IndiaAI Mission ahead of the India AI Impact Summit 2026, launching eight initiatives and reports. The IndiaAI Mission's Safe & Trusted AI pillar has approved 13+ projects on deepfakes, bias and related harms.

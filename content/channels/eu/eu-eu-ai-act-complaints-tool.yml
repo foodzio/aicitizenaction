@@ -52,6 +52,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-31880c76-1de6-4b10-b53d-ff79eb671f67
+  roles:
+    - reporting-channel
 strings:
   name: EU AI Act complaints tool (AI Office)
   remit: Complaints from individuals and organisations about alleged AI Act infringements falling within the exclusive competence of the AI Office, under Article 85. All official EU languages. Supporting detail and a stated country of incident are required.

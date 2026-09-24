@@ -37,6 +37,9 @@ facts:
   public_input: limited
   tags:
     - research
+  entity_key: entity-21652835-365a-461d-a0d1-f757223e8a29
+  roles:
+    - academic
 strings:
   name: Centre for the Study of Existential Risk (CSER), University of Cambridge
   remit: Interdisciplinary research centre on risks that threaten human extinction or civilisational collapse — AI, biological risk, climate and ecological risk, and systemic/cascading risk. Now part of Cambridge's Institute for Technology and Humanity (ITH) alongside LCFI and the Centre for Human-Inspired AI. Runs education programmes, visitor and affiliate schemes.

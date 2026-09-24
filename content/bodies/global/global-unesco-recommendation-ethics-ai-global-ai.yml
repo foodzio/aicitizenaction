@@ -56,6 +56,9 @@ facts:
     powers:convene: a Global Forum on the Ethics of AI
     powers:advise: the Recommendation is implemented via national RAM exercises with ministries
   routing_review: drafted
+  entity_key: entity-744064f3-4e69-4661-b232-66483a3a69c2
+  roles:
+    - multilateral
 strings:
   name: UNESCO — Recommendation on the Ethics of AI / Global AI Ethics and Governance Observatory
   remit: "Adopted Nov 2021, the first global standard-setting instrument on AI ethics: four core values, ten principles, eleven policy action areas. Implementation tools include the Readiness Assessment Methodology (RAM) and Ethical Impact Assessment, a Global Forum on the Ethics of AI, and the Observatory, which maintains a public directory of civil society organisations working on AI ethics. Co-convenor of the UN Global Dialogue Joint Secretariat."

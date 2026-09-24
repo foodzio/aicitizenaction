@@ -49,6 +49,9 @@ facts:
   tags:
     - harm
     - systemic
+  entity_key: entity-57035ffa-dde7-4da1-91ff-1eb0146bca2a
+  roles:
+    - government
 strings:
   name: Department of Communications and Digital Technologies (DCDT)
   remit: Owns South Africa's AI policy process. Published the Draft South Africa National Artificial Intelligence (AI) Policy in Government Gazette No. 54477 on 10 April 2026 for a 60-day public comment period closing 10 June 2026 at 16:00. Policy-making body; enforcement of AI-adjacent harms sits with the Information Regulator (POPIA, which has fining power) and sectoral regulators. South Africa chaired the G20 in 2025 and used it to push African AI capacity issues.

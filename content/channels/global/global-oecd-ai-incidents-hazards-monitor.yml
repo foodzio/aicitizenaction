@@ -63,6 +63,9 @@ facts:
   contact_disposition: reclassify
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-fbdef232-53d7-41ed-9bcf-5acdc50b8d35
+  roles:
+    - watchdog
 strings:
   name: OECD AI Incidents and Hazards Monitor (AIM)
   remit: Tracks AI incidents and hazards to build an evidence base for policy, currently by automated monitoring of 150,000+ news articles daily via Event Registry, with LLM-based classification against the OECD's common reporting framework for AI incidents.

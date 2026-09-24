@@ -50,6 +50,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-e01a960b-efc3-488a-aa0d-105b92a8dfcf
+  roles:
+    - reporting-channel
 strings:
   name: Anthropic Model Safety Bug Bounty
   remit: Universal jailbreaks that defeat Anthropic's Constitutional Classifiers — generalised techniques that work across many prompts, tested against a supplied set of harmful questions concerning CBRN/biological threat information. Narrow, context-specific exploits do not qualify.

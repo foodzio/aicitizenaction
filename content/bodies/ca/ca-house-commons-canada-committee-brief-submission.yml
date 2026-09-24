@@ -23,6 +23,9 @@ facts:
   tags:
     - law
     - record
+  entity_key: entity-9f394905-fe2c-4e8b-a66f-0f57bb626ad7
+  roles:
+    - seat
 strings:
   name: House of Commons of Canada — committee brief submission system (the public route)
   ai_jurisdiction: The mechanism, not a body. Every Commons standing, special and legislative committee accepts briefs from the public on any study it is conducting.

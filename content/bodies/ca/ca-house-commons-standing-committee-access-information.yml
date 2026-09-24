@@ -40,6 +40,9 @@ facts:
     topics:government-use: government use of AI tools
     powers:oversee: the committee that handles algorithmic and automated decision-making from a rights and privacy angle, facial recognition, and government use of AI tools
   routing_review: drafted
+  entity_key: entity-cd2ed8f4-a371-4841-be52-55727b10fadd
+  roles:
+    - seat
 strings:
   name: House of Commons Standing Committee on Access to Information, Privacy and Ethics (ETHI)
   ai_jurisdiction: Privacy, data protection and ethics oversight — the committee that handles algorithmic and automated decision-making from a rights and privacy angle, facial recognition, and government use of AI tools. The natural home for AI-and-privacy work now that AIDA is dead and the privacy half of Bill C-27 has been reintroduced separately.

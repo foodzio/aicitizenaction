@@ -30,6 +30,9 @@ facts:
     - role: chair
       name: Not applicable
       verified_on: 2026-09-22
+  entity_key: entity-0b415b50-9bc4-4802-8b26-7f26e699a4ae
+  roles:
+    - seat
 strings:
   name: National Assembly National Petition System (electronic petition with public assent)
   ai_jurisdiction: Not AI-specific, but AI petitions are routed to the 과학기술정보방송통신위원회. This is the one route in this entire research with a genuine, automatic legislative trigger, which is why it deserves precise treatment.

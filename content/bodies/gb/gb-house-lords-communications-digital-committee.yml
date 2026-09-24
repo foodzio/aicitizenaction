@@ -26,11 +26,27 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 45cf5a3aa4e1
+    - id: membership
+      type: membership
+      value: https://committees.parliament.uk/committee/170/communications-and-digital-committee/membership/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: d7c91d530c2e
+    - id: public-route
+      type: submission
+      value: https://committees.parliament.uk/committee/170/communications-and-digital-committee/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: f4322bc2f6a9
   region: United Kingdom
   public_input: open
   tags:
     - harm
     - systemic
+    - law
+    - record
   topics:
     - copyright
   not_topics:
@@ -44,6 +60,15 @@ facts:
     powers:hold-hearings: Takes evidence, reports, and obliges a Government response; no enforcement power.
     powers:publish: Takes evidence, reports, and obliges a Government response; no enforcement power.
   routing_review: drafted
+  level: national
+  seats:
+    - role: chair
+      name: The Baroness Keeley (Labour life peer)
+      verified_on: 2026-09-22
+  entity_key: entity-8aff9b29-5bbc-475e-80d5-edf21348ba66
+  roles:
+    - government
+    - seat
 strings:
   name: House of Lords Communications and Digital Committee
   remit: "Considers the media, digital and creative industries. Has run the most substantial Lords work on AI, including its 'AI and copyright' inquiry (opened 3 November 2025; report published 6 March 2026; Government response published 15 May 2026) and earlier large language models and generative AI work. Currently running 'The Online Safety Act: implementation and impact' (opened 27 July 2026, written evidence deadline 21 September 2026). Takes evidence, reports, and obliges a Government response; no enforcement power."
@@ -61,12 +86,115 @@ strings:
       note: "VERIFIED on the committee page. Postal: Communications and Digital Committee, House of Lords, London SW1A 0PW."
     homepage:
       label: Homepage
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+  ai_jurisdiction: "The Lords' standing committee on media, broadcasting, telecoms and the digital economy. It is the UK's most productive parliamentary venue on AI policy: it produced 'AI, copyright and the creative industries' (4th Report, published 6 March 2026; Government response 15 May 2026) and is now examining the Online Safety Act, where AI-generated content and algorithmic systems are squarely in scope."
+  business: "2 current inquiries: 'The Online Safety Act: implementation and impact' (opened 27 July 2026, written evidence deadline 21 September 2026 — now closed); 'AI and copyright' (opened 3 Nov 2025, reported 6 March 2026, Government response 15 May 2026)."
+  public_route: Written evidence via the portal on the inquiry page. Lords committees receive far fewer submissions than Commons ones, so a competent submission has a much higher chance of being cited.
+  format_rules: "Same Parliament-wide rules: usually max 3,000 words, numbered paragraphs, single Word/ODT/RTF file under 25MB, not previously published, published online permanently, covered by parliamentary privilege once accepted."
+  key_people: Viscount Colville of Culross (Crossbench), Lord Holmes of Richmond MBE (Con) — a persistent AI-regulation campaigner in the Lords, Lord Knight of Weymouth (Lab), Lord Tarassenko CBE FREng (Crossbench) — an AI/engineering academic, Baroness Owen of Alderley Edge (Con) — deepfake legislation, Baroness Fleet, Baroness Caine of Kentish Town, Baroness Elliott of Whitburn Bay, Lord Kirkhope of Harrogate, Lord McNally (LD), Lord Storey (LD), Lord Bishop of Winchester. 13 members total.
+  note: VERIFIED 2026-09-22 from the committee's membership page. Baroness Keeley is listed as 'Chair Lords'. The Online Safety Act evidence window closed the day before this check (21 Sep 2026).
+  seat_notes:
+    chair: Chair
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
   sources:
     - url: https://committees.parliament.uk/committee/170/communications-and-digital-committee/
       checked: 2026-09-22
+    - url: https://committees.parliament.uk/committee/170/communications-and-digital-committee/membership/
+      checked: 2026-09-22
+    - url: https://committees.parliament.uk/committee/170/communications-and-digital-committee/
+      checked: 2026-09-22
   legacy_id: 03ce98422c
   research_order: 173
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - 03ce98422c
+    - f69cbfac72
+  aliases:
+    - gb-house-lords-communications-digital-committee-2
+    - House of Lords Communications and Digital Committee
+  redirect_from:
+    - section: bodies
+      id: gb-house-lords-communications-digital-committee-2
+  identity_review:
+    evidence_urls:
+      - https://committees.parliament.uk/committee/170/communications-and-digital-committee/
+      - https://committees.parliament.uk/committee/170/communications-and-digital-committee/membership/
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: gb-house-lords-communications-digital-committee
+        source_url: https://committees.parliament.uk/committee/170/communications-and-digital-committee/
+        checked_on: 2026-09-22
+      - &a2
+        record_id: gb-house-lords-communications-digital-committee-2
+        source_url: https://committees.parliament.uk/committee/170/communications-and-digital-committee/membership/
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+    facts.public_input:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    facts.topics:
+      - *a1
+      - *a2
+    facts.not_topics:
+      - *a1
+    facts.powers:
+      - *a1
+      - *a2
+    facts.routing_evidence:
+      - *a1
+      - *a2
+    facts.routing_review:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+    strings.powers_text:
+      - *a1
+    strings.reality_check:
+      - *a1
+    strings.notes:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.level:
+      - *a2
+    facts.seats:
+      - *a2
+    strings.ai_jurisdiction:
+      - *a2
+    strings.business:
+      - *a2
+    strings.public_route:
+      - *a2
+    strings.format_rules:
+      - *a2
+    strings.key_people:
+      - *a2
+    strings.note:
+      - *a2
+    strings.seat_notes:
+      - *a2

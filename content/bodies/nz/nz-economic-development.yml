@@ -38,6 +38,9 @@ facts:
     topics:copyright: AI-and-copyright inside 'intellectual property'
     powers:hold-hearings: Make a submission when the committee calls for them on a bill or inquiry
   routing_review: drafted
+  entity_key: entity-d9c892e0-4647-40fc-9fc8-7e0c7a155a5b
+  roles:
+    - seat
 strings:
   name: Economic Development, Science and Innovation Committee (54th Parliament)
   ai_jurisdiction: "The New Zealand select committee whose subject area covers AI. Its stated remit: 'business development, tourism, Crown minerals, commerce, consumer protection and trading standards, research, science, innovation, intellectual property, broadcasting, communications, and information technology.' AI sits inside 'research, science, innovation' and 'information technology', and AI-and-copyright inside 'intellectual property'. This is New Zealand's default destination for an AI bill, petition or briefing."

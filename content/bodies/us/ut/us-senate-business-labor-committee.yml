@@ -41,6 +41,9 @@ facts:
     topics:health: SB 150 (AI medical advice
     powers:legislate: Senate standing committee for AI consumer-protection and technology-commerce bills
   routing_review: drafted
+  entity_key: entity-0586942e-9544-43d5-b663-e62baddab344
+  roles:
+    - seat
 strings:
   name: Senate Business and Labor Committee
   ai_jurisdiction: Senate standing committee for AI consumer-protection and technology-commerce bills, including SB 226 and the 2026 AI package.

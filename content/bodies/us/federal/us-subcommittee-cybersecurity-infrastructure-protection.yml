@@ -42,6 +42,9 @@ facts:
   routing_evidence:
     topics:security: AI-enabled offensive cyber operations against US critical infrastructure
   routing_review: drafted
+  entity_key: entity-cac62025-14fe-4a43-8335-9c5f703849ca
+  roles:
+    - seat
 strings:
   name: Subcommittee on Cybersecurity and Infrastructure Protection
   ai_jurisdiction: CISA's authorities and budget; AI-enabled offensive cyber operations against US critical infrastructure; securing AI systems and model supply chains; automated vulnerability discovery; and the cyber-information-sharing framework as applied to AI incidents.

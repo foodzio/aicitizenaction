@@ -30,6 +30,9 @@ facts:
     - role: chair
       name: Not applicable
       verified_on: 2026-09-22
+  entity_key: entity-0b384805-9fa1-473b-b37f-213ad96ee9ae
+  roles:
+    - seat
 strings:
   name: Chamber of Deputies e-Democracia and Participa + Brasil
   ai_jurisdiction: Two general-purpose participation platforms covering AI when an AI bill or an AI-related regulation is open. e-Democracia covers Chamber bills including PL 2338/2023 and its 37 appended bills; Participa + Brasil covers executive-branch consultations including ANPD's.

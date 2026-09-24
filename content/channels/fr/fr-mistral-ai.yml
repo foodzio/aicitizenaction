@@ -125,6 +125,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-85e501c2-3e72-4d96-aa32-32a8192a1945
+  roles:
+    - company
 strings:
   name: Mistral AI
   remit: No publicly named safety or alignment function. Trust Center covers data protection and security compliance; the Usage Policy is enforced through a content-reporting form.

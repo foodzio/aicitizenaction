@@ -18,6 +18,9 @@ facts:
     - join
     - opposition
     - tip
+  entity_key: entity-94311988-69cf-4272-8904-d4875e11fe61
+  roles:
+    - organisation
 strings:
   name: Leading the Future
   the_ask: Elect politicians who will keep AI lightly regulated, and secure a single federal framework that pre-empts state AI laws.

@@ -62,6 +62,9 @@ facts:
   contact_disposition: reclassify
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-77752042-6eeb-4444-b6ea-7cb48375141c
+  roles:
+    - company
 strings:
   name: Sakana AI
   remit: No publicly named safety or alignment function. Corporate team covers finance, legal, HR and operations; a Defense Policy is published covering defence-related work.

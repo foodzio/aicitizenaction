@@ -52,6 +52,9 @@ facts:
     topics:transparency: AI transparency and disclosure to consumers
     powers:hold-hearings: "'AI Regulation and the Future of US Leadership' (21 May 2025)"
   routing_review: drafted
+  entity_key: entity-dab63bb9-5d34-47a9-a6e2-feb61521c131
+  roles:
+    - seat
 strings:
   name: Subcommittee on Commerce, Manufacturing, and Trade
   ai_jurisdiction: "The House's front-line AI regulation subcommittee. FTC jurisdiction, consumer protection, product safety, data privacy and security, and manufacturing/trade. Send here: general AI regulatory frameworks, federal preemption of state AI laws, AI transparency and disclosure to consumers, deceptive AI, AI in products and toys, and AI in manufacturing."

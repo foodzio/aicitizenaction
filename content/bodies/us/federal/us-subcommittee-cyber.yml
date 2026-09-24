@@ -51,6 +51,9 @@ facts:
     powers:oversee: DoD AI adoption and CDAO oversight
     powers:legislate: CITI subcommittee print of the FY27 NDAA
   routing_review: drafted
+  entity_key: entity-73a87204-9b0c-4e9e-b5ad-6181b1068253
+  roles:
+    - seat
 strings:
   name: Subcommittee on Cyber, Information Technologies, and Innovation
   ai_jurisdiction: "The dedicated AI-and-emerging-technology subcommittee of HASC. Send here: DoD AI adoption and CDAO oversight, military cyber operations, defense software acquisition reform, AI test and evaluation inside DoD, and commercial AI companies' defense contracts."

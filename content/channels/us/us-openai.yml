@@ -207,6 +207,46 @@ facts:
         disposition: reference-only
         evidence_url: https://model-spec.openai.com/
         evidence_note: "Mixed and worsening for unpaid routes. Two named public feedback channels — the model behavior feedback form and the Model Spec feedback form — are both now closed or deprecated, so a citizen's only open door is the content-report form. OpenAI's September 2026 model misalignment reporting framework is explicitly internal: 'Any OpenAI employee may flag a misalignment example for investigation' — it creates no external intake. Researchers in the Trusted Access for Cyber / Daybreak program publicly complained in August 2026 (TechCrunch, 19 Aug 2026) that access was revoked with messages saying their identity 'could not be verified', disproportionately affecting researchers outside the US and Eu"
+    - id: submission-page
+      type: disclosure
+      value: https://openai.com/form/model-behavior-feedback/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 6b34ec0adb5c
+      contact:
+        status: open
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://openai.com/form/model-behavior-feedback/
+        evidence_note: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - systemic
+          - disclosure
+    - id: homepage-9304dfe0
+      type: homepage
+      value: https://openai.com/form/model-behavior-feedback/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 2c1ab07bf651
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://openai.com/form/model-behavior-feedback/
+        evidence_note: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
   region: United States
   public_input: limited
   tags:
@@ -217,6 +257,10 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-3a4f627e-a0ce-495a-9600-3753986f57da
+  roles:
+    - company
+    - reporting-channel
 strings:
   name: OpenAI
   remit: Safety Systems, Preparedness and Alignment teams, with a Safety and Security Committee at board level; Preparedness runs capability thresholds and the Model Spec defines intended model behaviour.
@@ -259,6 +303,19 @@ strings:
       label: Homepage
     framework:
       label: Preparedness Framework v2.0 (15 April 2025); Frontier Governance Framework (May 2026); Model Spec (updated continuously)
+    submission-page:
+      label: Submission page
+      scope: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
+      note: "Security: bugcrowd.com/engagements/openai. Model behaviour: OpenAI now directs ChatGPT users to the thumbs-down control under any response or the content reporting form; API customers to enable thumbs-down feedback in the Playground via the API dashboard; everything else to customer support."
+    homepage-9304dfe0:
+      label: Homepage
+  accepts: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
+  does_not_accept: The Bugcrowd engagement page states model safety issues, jailbreaks and hallucinations are excluded from the bug bounty and directs them elsewhere. The dedicated 'Model behavior feedback' web form (openai.com/form/model-behavior-feedback) has been deprecated and no longer accepts submissions.
+  how: "Security: bugcrowd.com/engagements/openai. Model behaviour: OpenAI now directs ChatGPT users to the thumbs-down control under any response or the content reporting form; API customers to enable thumbs-down feedback in the Playground via the API dashboard; everything else to customer support."
+  format: "Security: Bugcrowd vulnerability report. Model behaviour: an in-product thumbs-down with free text — there is no structured external report format any more."
+  timing: Rolling.
+  after: Security reports are triaged and may be rewarded (historically up to $20,000). Model-behaviour feedback disappears into product telemetry with no case number, no acknowledgment and no route back to the reporter.
+  operator: OpenAI, security program run on Bugcrowd
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
@@ -275,6 +332,8 @@ meta:
       checked: 2026-09-22
     - url: https://openai.com/form/model-spec-feedback/
       checked: 2026-09-22
+    - url: https://openai.com/form/model-behavior-feedback/
+      checked: 2026-09-22
   needs_research:
     - powers
     - topics
@@ -282,3 +341,83 @@ meta:
   legacy_id: d59b26f957
   research_order: 1
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - d59b26f957
+    - acc09e28da
+  aliases:
+    - global-openai-inbound-reporting
+    - OpenAI inbound reporting (Bugcrowd bug bounty + in-product feedback)
+  redirect_from:
+    - section: channels
+      id: global-openai-inbound-reporting
+  identity_review:
+    evidence_urls:
+      - https://openai.com/form/model-behavior-feedback/
+      - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: us-openai
+        source_url: https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+        checked_on: 2026-09-22
+      - &a2
+        record_id: global-openai-inbound-reporting
+        source_url: https://openai.com/form/model-behavior-feedback/
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+      - *a2
+    facts.public_input:
+      - *a1
+      - *a2
+    facts.tags:
+      - *a1
+      - *a2
+    facts.contact_disposition:
+      - *a1
+      - *a2
+    facts.contact_reviewed_by:
+      - *a1
+      - *a2
+    facts.contact_reviewed_on:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+      - *a2
+    strings.reality_check:
+      - *a1
+      - *a2
+    strings.notes:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    strings.accepts:
+      - *a2
+    strings.does_not_accept:
+      - *a2
+    strings.how:
+      - *a2
+    strings.format:
+      - *a2
+    strings.timing:
+      - *a2
+    strings.after:
+      - *a2
+    strings.operator:
+      - *a2

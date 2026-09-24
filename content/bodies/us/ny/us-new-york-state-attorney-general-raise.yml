@@ -46,6 +46,9 @@ facts:
     powers:fine: Enforcement is exclusively by the NY Attorney General through civil penalties
     powers:make-rules: the AG's rulemaking/guidance process
   routing_review: drafted
+  entity_key: entity-439206bf-b029-483c-80c1-143f3f5839ed
+  roles:
+    - government
 strings:
   name: New York State Attorney General — RAISE Act (Responsible AI Safety and Education Act) enforcement
   remit: Enforces the RAISE Act, signed by Governor Hochul (late 2025) and substantially amended/overhauled in April 2026; it takes effect 1 January 2027. Requires large frontier developers to write, publish and follow a safety protocol addressing unreasonable risk of critical harm, to report safety incidents, and bars deploying a model posing unreasonable risk of critical harm. Enforcement is exclusively by the NY Attorney General through civil penalties; there is no private right of action.

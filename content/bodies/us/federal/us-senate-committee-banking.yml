@@ -47,6 +47,9 @@ facts:
     powers:legislate: so this committee is the chokepoint for AI chip export legislation
     powers:hold-hearings: "Hearing 'AI and the American Dream: Promoting Innovation, Affordability, and American Dominance' (June 2026)"
   routing_review: drafted
+  entity_key: entity-5a4a589a-cabb-4b0a-ac69-67ca0f648de4
+  roles:
+    - seat
 strings:
   name: Senate Committee on Banking, Housing, and Urban Affairs
   ai_jurisdiction: "Export controls and financial-sector AI. This committee owns the Export Control Reform Act and the Commerce Department's Bureau of Industry and Security — so every question about AI chip export controls, location verification on advanced chips, and smuggling to China lands here, not in Foreign Relations. Also: AI in credit decisions, underwriting, insurance and fraud detection, algorithmic discrimination in lending, AI and financial stability, and CFIUS review of AI investments."

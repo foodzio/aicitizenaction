@@ -18,6 +18,9 @@ facts:
     - audit
     - harm
     - join
+  entity_key: entity-659bdc65-3120-4911-99f8-ccd4145bf1d6
+  roles:
+    - organisation
 strings:
   name: Which?
   the_ask: Consumers should be protected in digital markets and against fraud, including AI-enabled scams.

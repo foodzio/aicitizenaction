@@ -52,6 +52,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-871dd579-ed95-41f6-82dd-e840ee9fba34
+  roles:
+    - reporting-channel
 strings:
   name: UK select committee written evidence
   remit: Evidence drawn from research, professional expertise or personal experience. You explicitly do not need to be a formal expert or have any institutional affiliation. Address the questions in the call for evidence; you need not answer all of them.

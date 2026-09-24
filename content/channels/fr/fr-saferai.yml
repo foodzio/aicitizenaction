@@ -69,14 +69,37 @@ facts:
         disposition: reference-only
         evidence_url: https://www.safer-ai.org/
         evidence_note: Small, technically serious and European — which matters, because it has standing in the EU standardisation processes that most US safety organisations do not. Responsive to substantive technical input on risk methodology.
+    - id: action
+      type: action
+      value: https://www.safer-ai.org/about#donate
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 725296e25adb
+      contact:
+        status: unknown
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:source-review-2026-09-24
+        reviewed_on: 2026-09-24
+        disposition: reference-only
   region: European Union
   public_input: limited
   tags:
     - research
     - systemic
+    - fund
+    - join
+    - law
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  perspective: safety-advocacy
+  volunteers: no
+  entity_key: entity-3b6b8dd4-6ea5-40fc-8ebb-c98c5fe65444
+  roles:
+    - watchdog
+    - organisation
 strings:
   name: SaferAI
   remit: "Non-profit focused on AI risk management. Three arms: research (quantitative risk models — nine cyber risk models completed, expanding to loss of control and CBRN); ratings (independent grading of how well leading AI companies manage risk, across risk identification, severity assessment, safeguards and governance, published at ratings.safer-ai.org); and standards (leads AI risk management standards work in the EU and edits international red-teaming standards)."
@@ -93,11 +116,23 @@ strings:
       note: UNVERIFIED whether they accept public submissions of evidence about a company's practices — worth asking via contact@.
     homepage:
       label: Homepage
+    action:
+      label: Action page
+  the_ask: AI companies should be held to real risk-management standards, and governance should be built on rigorous, auditable frameworks rather than voluntary promises.
+  what_they_do: Research on risk management frameworks, public ratings of AI companies' safety practices (ratings.safer-ai.org), and standards work in EU and international governance processes.
+  newcomer_action: Read and cite the company ratings when arguing with policymakers or employers; donate; apply for an open role.
+  tips: unclear
+  geography: France (Paris) and EU-level; registered French nonprofit, reg. no. 919 185 199 00016.
+  scale: Small technical nonprofit; headcount not published.
+  spending: Not disclosed.
+  caution: A research and standards body, not a campaign — there is no membership or activist route. Its ratings are useful ammunition for other people's campaigns.
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
   sources:
     - url: https://ratings.safer-ai.org/
+      checked: 2026-09-22
+    - url: https://www.safer-ai.org/about#donate
       checked: 2026-09-22
   needs_research:
     - powers
@@ -106,3 +141,84 @@ meta:
   legacy_id: 7fdb66554d
   research_order: 125
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - 7fdb66554d
+    - 421f461bd7
+  aliases:
+    - fr-saferai-2
+    - SaferAI
+  redirect_from:
+    - section: orgs
+      id: fr-saferai-2
+  identity_review:
+    evidence_urls:
+      - https://ratings.safer-ai.org/
+      - https://www.safer-ai.org/about#donate
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: fr-saferai
+        source_url: https://ratings.safer-ai.org/
+        checked_on: 2026-09-22
+      - &a2
+        record_id: fr-saferai-2
+        source_url: https://www.safer-ai.org/about#donate
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+    facts.public_input:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    facts.contact_disposition:
+      - *a1
+    facts.contact_reviewed_by:
+      - *a1
+    facts.contact_reviewed_on:
+      - *a1
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+    strings.threat_model:
+      - *a1
+    strings.reality_check:
+      - *a1
+    strings.gov_channel:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.perspective:
+      - *a2
+    facts.volunteers:
+      - *a2
+    strings.the_ask:
+      - *a2
+    strings.what_they_do:
+      - *a2
+    strings.newcomer_action:
+      - *a2
+    strings.tips:
+      - *a2
+    strings.geography:
+      - *a2
+    strings.scale:
+      - *a2
+    strings.spending:
+      - *a2
+    strings.caution:
+      - *a2

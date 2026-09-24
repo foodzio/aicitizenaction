@@ -41,6 +41,9 @@ facts:
     topics:government-use: state AI governance
     powers:legislate: Senate committee of reference for AI in education, state AI governance and technology policy bills
   routing_review: drafted
+  entity_key: entity-910d0f04-37f2-4ffb-b097-87d7165dd8ae
+  roles:
+    - seat
 strings:
   name: Senate Education, Energy, and the Environment Committee (EEE)
   ai_jurisdiction: Senate committee of reference for AI in education, state AI governance and technology policy bills.

@@ -38,6 +38,9 @@ facts:
     topics:security: offensive cyber
     powers:test-models: The roadmap commits INESIA to evaluate how high-impact models 'could generate negative real effects
   routing_review: drafted
+  entity_key: entity-e180cf18-6342-40e7-9cb9-eda85114c084
+  roles:
+    - government
 strings:
   name: Institut national pour l'évaluation et la sécurité de l'intelligence artificielle (INESIA)
   remit: "Announced 31 Jan 2025 ahead of the Paris AI Action Summit. NOT a new legal entity — it is a coordination structure federating four existing bodies: ANSSI (cyber agency), Inria (public research), LNE (national metrology/testing laboratory) and PEReN (digital-platform regulation expertise centre). Coordinated under SGDSN (Secretariat-General for Defence and National Security), which also handles French participation in the international network. Its published 2026–2027 roadmap is explicit that it 'is not empowered to regulate' and instead supports the authorities implementing the EU AI Act. Research, evaluation and foresight only."

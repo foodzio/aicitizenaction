@@ -178,6 +178,46 @@ facts:
         disposition: reference-only
         evidence_url: https://www.anthropic.com/rsp
         evidence_note: Best-documented pathway of any lab. AI Frontiers' 2026 review of jailbreak disclosure found Anthropic runs two programs — a restricted NDA-bound CBRN bounty and an open cyber jailbreak program where 'anyone can submit without an NDA, findings may be publicly disclosed once timing is coordinated' — and named it as one of the few labs with a genuinely working route. Independent researchers pursuing cross-model universal jailbreaks in 2025-26 reported labs have 'very heterogeneous disclosure pathways (or none at all)' but that some, including Anthropic, remediated. No public evidence of usersafety@ being a black hole, but also little public evidence of reply rates.
+    - id: submission-page
+      type: disclosure
+      value: https://www.anthropic.com/responsible-disclosure-policy
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: dde7fdbf9d5e
+      contact:
+        status: open
+        directness: official-instructions
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: keep
+        evidence_url: https://www.anthropic.com/responsible-disclosure-policy
+        evidence_note: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
+        checked_on: 2026-09-22
+        eligible_users:
+          - public
+        accepted_subjects:
+          - behaviour
+          - flaw
+          - harm
+          - disclosure
+    - id: homepage-f2d0c046
+      type: homepage
+      value: https://www.anthropic.com/responsible-disclosure-policy
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: e2d7a5916452
+      contact:
+        status: none
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:deterministic-contact-audit
+        reviewed_on: 2026-09-24
+        disposition: reference-only
+        evidence_url: https://www.anthropic.com/responsible-disclosure-policy
+        evidence_note: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
   region: United States
   public_input: open
   tags:
@@ -188,6 +228,10 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-141006f7-1ada-4183-9bbb-c4886fccb424
+  roles:
+    - company
+    - reporting-channel
 strings:
   name: Anthropic
   remit: Safeguards team enforces the Usage Policy and runs Constitutional Classifiers; Alignment Science and Frontier Red Team run capability/misalignment evaluations feeding the Responsible Scaling Policy, overseen by a Responsible Scaling Officer.
@@ -222,6 +266,19 @@ strings:
       label: Homepage
     framework:
       label: Anthropic's Responsible Scaling Policy, Version 3.4 (effective 8 July 2026)
+    submission-page:
+      label: Submission page
+      scope: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
+      note: "Security bugs: submit through Anthropic's HackerOne program with vulnerability type, technical detail, reproduction steps, URLs, PoC and impact. Model behaviour and jailbreaks: email usersafety@anthropic.com. This is the cleanest published example of the procedural split — a model-behaviour finding sent to a security intake will be closed as out of scope, and a security bug emailed to a safety address loses bounty eligibility."
+    homepage-f2d0c046:
+      label: Homepage
+  accepts: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
+  does_not_accept: SSL/TLS issues without a proof of concept, physical intrusion, rate limiting on unauthenticated endpoints, social engineering, phishing, DoS, and widely publicised zero-days with no patch or a patch under 30 days old.
+  how: "Security bugs: submit through Anthropic's HackerOne program with vulnerability type, technical detail, reproduction steps, URLs, PoC and impact. Model behaviour and jailbreaks: email usersafety@anthropic.com. This is the cleanest published example of the procedural split — a model-behaviour finding sent to a security intake will be closed as out of scope, and a security bug emailed to a safety address loses bounty eligibility."
+  format: "Security: standard vulnerability report. Model safety: prose email with exact prompts, transcripts, model version, date and reproducibility notes."
+  timing: Rolling. Anthropic commits to acknowledge HackerOne submissions within three business days.
+  after: Security reports are triaged on HackerOne with possible bounty. Model-safety emails have no published SLA, triage process or feedback loop.
+  operator: Anthropic
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
@@ -232,6 +289,8 @@ meta:
       checked: 2026-09-22
     - url: https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
       checked: 2026-09-22
+    - url: https://www.anthropic.com/responsible-disclosure-policy
+      checked: 2026-09-22
   needs_research:
     - powers
     - topics
@@ -239,3 +298,83 @@ meta:
   legacy_id: 9ca2360419
   research_order: 0
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - 9ca2360419
+    - 6b6853ba78
+  aliases:
+    - global-anthropic-responsible-disclosure-policy-usersafety-anthropic
+    - Anthropic Responsible Disclosure Policy / usersafety@anthropic.com
+  redirect_from:
+    - section: channels
+      id: global-anthropic-responsible-disclosure-policy-usersafety-anthropic
+  identity_review:
+    evidence_urls:
+      - https://www.anthropic.com/responsible-disclosure-policy
+      - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: us-anthropic
+        source_url: https://www.anthropic.com/responsible-disclosure-policy
+        checked_on: 2026-09-22
+      - &a2
+        record_id: global-anthropic-responsible-disclosure-policy-usersafety-anthropic
+        source_url: https://www.anthropic.com/responsible-disclosure-policy
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+      - *a2
+    facts.public_input:
+      - *a1
+      - *a2
+    facts.tags:
+      - *a1
+      - *a2
+    facts.contact_disposition:
+      - *a1
+      - *a2
+    facts.contact_reviewed_by:
+      - *a1
+      - *a2
+    facts.contact_reviewed_on:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+      - *a2
+    strings.reality_check:
+      - *a1
+      - *a2
+    strings.notes:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    strings.accepts:
+      - *a2
+    strings.does_not_accept:
+      - *a2
+    strings.how:
+      - *a2
+    strings.format:
+      - *a2
+    strings.timing:
+      - *a2
+    strings.after:
+      - *a2
+    strings.operator:
+      - *a2

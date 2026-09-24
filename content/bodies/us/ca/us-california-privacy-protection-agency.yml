@@ -62,6 +62,9 @@ facts:
     powers:make-rules: Conducts formal rulemaking with public comment.
     powers:handle-complaints: The complaint form genuinely initiates enforcement review
   routing_review: drafted
+  entity_key: entity-b45cf73a-5be0-4e3a-8611-74ce1c27d9c9
+  roles:
+    - government
 strings:
   name: California Privacy Protection Agency (CPPA)
   remit: The only dedicated US privacy regulator. Enforces the CCPA/CPRA, including regulations on automated decisionmaking technology (ADMT), risk assessments and cybersecurity audits — the ADMT rules reach AI used for significant decisions about Californians. Can investigate, hold administrative hearings, issue orders and impose administrative fines (up to $2,500 per violation, $7,500 for intentional violations or violations involving minors). Conducts formal rulemaking with public comment.

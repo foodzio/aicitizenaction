@@ -22,6 +22,9 @@ facts:
   level: national
   tags:
     - law
+  entity_key: entity-44fd1708-2048-489a-962a-163d8e1deef8
+  roles:
+    - seat
 strings:
   name: All-Party Parliamentary Group on AI safety (searched for; none found)
   ai_jurisdiction: A dedicated AI-safety APPG distinct from the APPG on Artificial Intelligence.

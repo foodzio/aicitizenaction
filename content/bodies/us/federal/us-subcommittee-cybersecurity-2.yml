@@ -55,6 +55,9 @@ facts:
     powers:convene: a bipartisan AI roundtable
     powers:publish: published wrap-up 'Federal Government Use of Artificial Intelligence Poses Promise, Peril'
   routing_review: drafted
+  entity_key: entity-7a682d11-420b-46b2-9eb9-c5688da03164
+  roles:
+    - seat
 strings:
   name: Subcommittee on Cybersecurity, Information Technology, and Government Innovation
   ai_jurisdiction: "The House's dedicated federal-AI-use subcommittee. Send here: whether and how agencies deploy AI in decisions affecting the public, AI procurement standards, OMB memoranda on AI, federal cybersecurity, IT modernization, and emerging technology inside government. This is the House venue where the 'government is using an algorithm on me' complaint belongs."

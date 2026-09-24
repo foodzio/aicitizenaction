@@ -38,6 +38,9 @@ facts:
     not_topics:frontier-ai: A foreigner raising a frontier-safety concern here would be using the wrong instrument entirely
     powers:handle-complaints: CAC's public reporting channel for illegal and harmful online information.
   routing_review: drafted
+  entity_key: entity-cd5e512e-5c67-48e6-b78a-849b845a586d
+  roles:
+    - government
 strings:
   name: China Internet Illegal and Harmful Information Reporting Centre (12377)
   remit: CAC's public reporting channel for illegal and harmful online information. Under the Labelling Measures for AI-Generated Synthetic Content and the Generative AI Interim Measures, unlabelled or non-compliant AI-generated content falls within its scope. Reports feed CAC enforcement, which can compel takedown and service suspension.

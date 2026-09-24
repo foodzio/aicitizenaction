@@ -40,6 +40,9 @@ facts:
     topics:international: reports directly to the UN General Assembly
     powers:publish: Produces one annual evidence-based assessment of AI opportunities/risks/impacts plus thematic briefs
   routing_review: drafted
+  entity_key: entity-d17406b9-4284-48a5-846d-14fbdb443c25
+  roles:
+    - multilateral
 strings:
   name: Independent International Scientific Panel on AI (UN)
   remit: 40-member panel created by UNGA resolution (Aug 2025), members appointed by the General Assembly 12 Feb 2026, co-chairs Yoshua Bengio (Canada) and Maria Ressa (Philippines) elected 3 Mar 2026. Produces one annual evidence-based assessment of AI opportunities/risks/impacts plus thematic briefs; may update the GA up to twice a year. Preliminary Report launched 1 July 2026; first full annual report due at the second Global Dialogue (New York, May 2027).

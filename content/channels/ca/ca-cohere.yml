@@ -102,6 +102,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-5fa9dd85-9cbf-42b4-bf57-3ce426a19ca2
+  roles:
+    - company
 strings:
   name: Cohere
   remit: Chief Scientist holds 'final authority to determine if our products are safe, secure, and ready to be made available to our customers', delegated by the CEO under the Secure AI Frontier Model Framework.

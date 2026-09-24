@@ -31,6 +31,9 @@ facts:
   tags:
     - harm
     - research
+  entity_key: entity-89f1ebcc-e486-4e56-ae7c-1de0c84abaca
+  roles:
+    - civil-society
 strings:
   name: Redwood Research
   remit: "Non-profit research organisation that effectively founded the 'AI control' agenda: designing and red-teaming protocols that keep deployments safe even if the model is actively trying to subvert them. Known for control evaluations, monitoring protocols for malign LLM agents, the alignment-faking work with Anthropic, and helping developers build safety cases."

@@ -51,6 +51,9 @@ facts:
     not_topics:export-controls: Not the venue for compute, export controls or model-level safety testing
     not_topics:safety-testing: Not the venue for compute, export controls or model-level safety testing
   routing_review: drafted
+  entity_key: entity-ab99ff85-6b8d-45cf-bc92-fd6ecdac983f
+  roles:
+    - seat
 strings:
   name: Subcommittee on Consumer Protection, Technology, and Data Privacy
   ai_jurisdiction: "The FTC-facing consumer door. AI harms to individual consumers: deceptive AI claims, algorithmic pricing, AI chatbots and companion apps marketed to minors, dark patterns, commercial surveillance and data privacy as inputs to AI training, kids' online safety. This is where a parent, a consumer, or a state AG concern about a specific AI product lands. Not the venue for compute, export controls or model-level safety testing."

@@ -39,6 +39,9 @@ facts:
   routing_evidence:
     powers:enforce: content takedown orders, and the ability to block platforms — which it has used aggressively
   routing_review: drafted
+  entity_key: entity-ab9e73b4-4be9-4e01-8102-f3581df4c13c
+  roles:
+    - government
 strings:
   name: Ministry of Communications and Digital Affairs (Komdigi)
   remit: STATUS IN FLUX AS OF SEPT 2026. Indonesia has no AI act. Komdigi (renamed from Kominfo in late 2024) issued a non-binding AI Ethics Circular (Circular Letter 9/2023) and as of 2026 had submitted two draft Presidential Regulations (Rancangan Peraturan Presiden / Perpres) on AI to the President, with the Deputy Minister publicly explaining that AI would be regulated by Perpres first as a foundation for later primary AI legislation. Komdigi does hold hard powers over electronic system operators under MR 5/2020 — registration requirements, content takedown orders, and the ability to block platforms — which it has used aggressively.

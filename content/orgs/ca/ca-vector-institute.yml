@@ -44,6 +44,9 @@ facts:
   public_input: limited
   tags:
     - research
+  entity_key: entity-a0f67e3c-2721-402e-b2ea-fefe98b06c4c
+  roles:
+    - academic
 strings:
   name: Vector Institute
   remit: Canada's Toronto-based AI institute — 1,488+ affiliated researchers and faculty, 30+ industry partnerships, 450+ papers. Focus is research excellence and accelerating AI adoption across Canadian industry and health systems, with a stated 'responsible AI leadership' strand and work on trustworthy AI frameworks and evaluation.

@@ -19,6 +19,9 @@ facts:
     - join
     - law
     - tip
+  entity_key: entity-1dfa654f-17e0-4e21-ad7a-89b8d6e53cbc
+  roles:
+    - organisation
 strings:
   name: Public First Action / Public First PAC
   the_ask: Elect and pressure federal and state politicians to back AI safeguards for children, workers and the public, stronger semiconductor export controls, and transparency from leading AI labs — and to resist federal pre-emption of state AI laws.

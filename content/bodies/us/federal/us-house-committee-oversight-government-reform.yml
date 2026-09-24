@@ -53,6 +53,9 @@ facts:
     powers:investigate: Also the House's broadest general-investigative committee
     powers:legislate: H.R.9125 Sectoral AI Governance Act of 2026 (Jacobs) referred here jointly with Judiciary
   routing_review: drafted
+  entity_key: entity-a68c79ec-36a0-49cf-894d-a83d37842a6b
+  roles:
+    - seat
 strings:
   name: House Committee on Oversight and Government Reform
   ai_jurisdiction: "The House counterpart to Senate HSGAC: how the federal government itself uses AI. Send here: agency AI use cases and inventories, federal AI procurement, OMB AI guidance, GSA, federal IT modernization, the federal AI workforce, and the civil-liberties consequences of government AI. Also the House's broadest general-investigative committee, so evidence-backed allegations about AI companies or federal AI contracts can land here."

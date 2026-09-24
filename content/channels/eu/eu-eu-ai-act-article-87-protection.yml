@@ -54,6 +54,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-c21867ff-de8d-4272-a411-bc0fadca314a
+  roles:
+    - reporting-channel
 strings:
   name: EU AI Act Article 87 — protection of persons reporting infringements
   remit: Reports of AI Act infringements by workers in the broad sense covered by the Whistleblower Directive.

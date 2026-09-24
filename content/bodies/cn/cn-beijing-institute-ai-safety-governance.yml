@@ -51,6 +51,9 @@ facts:
     topics:international: governance research, and international engagement
     powers:test-models: Works on AI safety evaluation and benchmarking
   routing_review: drafted
+  entity_key: entity-ef7b1b3b-a38c-4a90-bc42-b9ff89fffe32
+  roles:
+    - government
 strings:
   name: Beijing Institute of AI Safety and Governance (Beijing-AISI)
   remit: Research institute founded in the Beijing AI ecosystem, associated with Yi Zeng (Institute of Automation, Chinese Academy of Sciences), who is also a member of the UN High-Level Advisory Body on AI and a leading Chinese voice on AI risk. Works on AI safety evaluation and benchmarking (it hosts a 'foresight safety bench'), governance research, and international engagement. Research body with no regulatory power. A separate Beijing Key Laboratory of AI Safety and Super Alignment also exists at Beijing Normal University — do not conflate them.

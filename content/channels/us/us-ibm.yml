@@ -117,6 +117,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-310e1bea-2ec1-4ca1-8cfa-71af6eedb5e6
+  roles:
+    - company
 strings:
   name: IBM
   remit: AI Ethics Board plus a Responsible Technology function governing watsonx and Granite models; PSIRT handles security and, unusually, explicitly names AI vulnerabilities in scope.

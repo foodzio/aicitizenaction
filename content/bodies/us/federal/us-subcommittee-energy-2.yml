@@ -41,6 +41,9 @@ facts:
   routing_evidence:
     powers:hold-hearings: "hearing 'AI and the Grid: Meeting Growing Power Demand While Protecting Ratepayers'"
   routing_review: drafted
+  entity_key: entity-9f612a7f-1204-4267-b8ea-c4fe4d48acad
+  roles:
+    - seat
 strings:
   name: Subcommittee on Energy
   ai_jurisdiction: "The House door for AI's power problem: data-center load growth, FERC and grid reliability, interconnection, ratepayer cost allocation when utilities serve hyperscalers, and generation siting for AI."

@@ -43,6 +43,9 @@ facts:
     powers:oversee: AI Act implementation oversight
     powers:hold-hearings: 参考人 (expert witness) appearance by committee invitation only
   routing_review: drafted
+  entity_key: entity-574b9f5b-971a-4ee4-a84b-b5c342234f8d
+  roles:
+    - seat
 strings:
   name: House of Councillors Committee on Cabinet
   ai_jurisdiction: "Upper-house counterpart. Same jurisdiction: Cabinet Office bills including AI, science and technology policy, digital, personal information protection. Reviews AI legislation after Lower House passage."

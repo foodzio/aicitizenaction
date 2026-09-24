@@ -53,6 +53,9 @@ facts:
     powers:oversee: NTIA oversight hearing
     powers:legislate: a markup of six bills on communications networks and satellite regulation
   routing_review: drafted
+  entity_key: entity-1c5eaa12-4347-4d74-926a-32af32f58a9e
+  roles:
+    - seat
 strings:
   name: Subcommittee on Communications and Technology
   ai_jurisdiction: "FCC and NTIA jurisdiction. Send here: spectrum and network capacity for AI, broadband and data-center connectivity, AI in media and content distribution, robocalls and AI voice cloning in telecom, Section 230 in its communications-law aspect, and NTIA's role in AI policy and open model weights."

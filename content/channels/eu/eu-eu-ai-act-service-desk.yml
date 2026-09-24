@@ -54,6 +54,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-315bb6bc-b5a5-4f9d-85b1-8d47fe3d6ae3
+  roles:
+    - reporting-channel
 strings:
   name: EU AI Act Service Desk
   remit: Questions about AI Act interpretation and compliance; routes users to the complaints tool and whistleblower tool.

@@ -45,6 +45,9 @@ facts:
   tags:
     - research
     - systemic
+  entity_key: entity-7e962278-e599-4126-9519-77be8c2f558f
+  roles:
+    - civil-society
 strings:
   name: Center for AI Safety (CAIS)
   remit: "Three pillars: technical and conceptual safety research; field-building (fellowships, the ML Safety course, and free access to its compute cluster for safety researchers); and safety standards/advocacy. Authored the one-sentence 2023 Statement on AI Risk signed by most leading AI scientists and lab CEOs. Paired with a separate 501(c)(4), the CAIS Action Fund."

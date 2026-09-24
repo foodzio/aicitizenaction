@@ -30,6 +30,9 @@ facts:
   public_input: limited
   tags:
     - research
+  entity_key: entity-24ddd012-bb6d-401e-83f2-2acf3f399804
+  roles:
+    - civil-society
 strings:
   name: Partnership on AI (PAI)
   remit: "Multistakeholder convener with 100+ partner organisations spanning Amazon, Google, Meta, Microsoft, OpenAI, Apple alongside ACLU, ARTICLE 19, Future of Privacy Forum, UNICEF, UNDP and universities. Produces guidance documents and frameworks — notably on safe foundation model deployment, synthetic media, and AI and labour — across four programme areas: AI and Human Connection; AI, Labor and the Economy; Safety-Critical AI; and Public Policy."

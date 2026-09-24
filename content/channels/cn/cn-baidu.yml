@@ -60,6 +60,9 @@ facts:
   contact_disposition: fix
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-e3cc6063-d069-41bd-ac22-b4c6fb069b4f
+  roles:
+    - company
 strings:
   name: Baidu
   remit: No publicly named frontier safety function in English. Baidu Security Response Center (BSRC) handles vulnerabilities across Baidu properties including Ernie.

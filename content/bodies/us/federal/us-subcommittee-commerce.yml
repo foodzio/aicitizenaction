@@ -49,6 +49,9 @@ facts:
     powers:hold-hearings: public written testimony for FY2027 accepted through 22 May 2026
     powers:legislate: subcommittee markup of the FY2027 Commerce, Justice, Science and Related Agencies Appropriations Act held in 2026
   routing_review: drafted
+  entity_key: entity-d6a801df-1cd5-464f-92fd-0f9f02efba34
+  roles:
+    - seat
 strings:
   name: Subcommittee on Commerce, Justice, Science, and Related Agencies
   ai_jurisdiction: THE subcommittee that funds NIST and, within it, the Center for AI Standards and Innovation (CAISI, the former US AI Safety Institute). Also funds NSF (including the National AI Research Resource), NASA, NOAA, DOJ and the FTC. If your concern is whether the US government has the capacity to evaluate frontier models at all, the number that decides it is written here.

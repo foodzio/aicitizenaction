@@ -52,6 +52,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-6f891efe-c4eb-45d1-84d5-1ab1abd3ffce
+  roles:
+    - reporting-channel
 strings:
   name: CERT/CC VINCE (Vulnerability Information and Coordination Environment)
   remit: Vulnerability reports from anyone — you can report with or without a VINCE account. CERT/CC coordinates multi-vendor disclosure where a flaw affects several parties, which is precisely the case for transferable AI jailbreaks and shared model weaknesses.

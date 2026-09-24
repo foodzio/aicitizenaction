@@ -12,12 +12,47 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 622f9db2dc40
+    - id: take-action-contact-your
+      type: form
+      value: https://controlai.org/take-action
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: a0bcf14a4ef9
+    - id: general-enquiries
+      type: email
+      value: hello@controlai.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 4c0f3dc28a78
+    - id: newsletter
+      type: form
+      value: https://blog.controlai.org/embed
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 9b3e8473479d
+    - id: homepage
+      type: homepage
+      value: https://controlai.org/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: a6dc9458b2e9
   perspective: safety-advocacy
   volunteers: unclear
   tags:
     - fund
     - join
     - law
+    - research
+  region: United Kingdom
+  public_input: open
+  entity_key: entity-23853d16-1bce-4581-bc0e-064f2e3acfb6
+  roles:
+    - organisation
+    - civil-society
 strings:
   name: ControlAI
   the_ask: Governments should pass binding law prohibiting the development of superintelligent AI, and coordinate internationally to enforce that prohibition.
@@ -31,14 +66,110 @@ strings:
   routes:
     action:
       label: Action page
+    take-action-contact-your:
+      label: Take action — contact your representative
+      scope: Anyone, especially UK, US, Canada and Germany
+      note: The most operationally effective grassroots tool in this space — it has demonstrably produced lawmaker endorsements.
+    general-enquiries:
+      label: General enquiries, briefing requests and funding enquiries
+      scope: Anyone; note the email domain is controlai.com while the website is controlai.org
+      note: Verified on controlai.org. They explicitly invite briefing requests — a legislator's office or an individual can ask for one.
+    newsletter:
+      label: Newsletter
+      scope: Anyone
+    homepage:
+      label: Homepage
+  remit: "Campaigning organisation working for a prohibition on the development of superintelligent AI. Three functions: public education (newsletter with 148,000+ readers), grassroots advocacy (tooling that helps tens of thousands contact their elected representatives), and direct policymaker briefing — claims 400+ lawmakers briefed since November 2024, with 160+ cross-party UK MPs and Peers and 35+ Canadian lawmakers having endorsed its statement."
+  threat_model: Extinction risk from superintelligence, narrowly. Its stated position is that superintelligence could arrive before 2030 with no known containment method. No engagement with near-term harms.
+  reality_check: Small, fast-moving, and it answers its email. Best-in-class if your goal is to get a loss-of-control concern in front of a legislator. It will not engage with bias, privacy or labour concerns.
+  gov_channel: Direct and unusually effective for its size — its core product is legislator briefings, and it has secured named cross-party endorsements in three parliaments.
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
   sources:
     - url: https://act.controlai.org/
       checked: 2026-09-22
+    - url: https://controlai.org/take-action
+      checked: 2026-09-22
+    - url: https://blog.controlai.org/embed
+      checked: 2026-09-22
   needs_research:
     - topics
   legacy_id: 87343ca3cf
   research_order: 0
   migrated_from: input/data/committees-and-organisations.json#orgs
+  legacy_ids:
+    - 87343ca3cf
+    - ca235e82ec
+  aliases:
+    - gb-controlai
+    - ControlAI
+  redirect_from:
+    - section: orgs
+      id: gb-controlai
+  identity_review:
+    evidence_urls:
+      - https://controlai.org/take-action
+      - https://act.controlai.org/
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: global-controlai
+        source_url: https://act.controlai.org/
+        checked_on: 2026-09-22
+      - &a2
+        record_id: gb-controlai
+        source_url: https://controlai.org/take-action
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.perspective:
+      - *a1
+    facts.volunteers:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.the_ask:
+      - *a1
+    strings.what_they_do:
+      - *a1
+    strings.newcomer_action:
+      - *a1
+    strings.tips:
+      - *a1
+    strings.geography:
+      - *a1
+    strings.scale:
+      - *a1
+    strings.spending:
+      - *a1
+    strings.caution:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a2
+    facts.public_input:
+      - *a2
+    strings.remit:
+      - *a2
+    strings.threat_model:
+      - *a2
+    strings.reality_check:
+      - *a2
+    strings.gov_channel:
+      - *a2

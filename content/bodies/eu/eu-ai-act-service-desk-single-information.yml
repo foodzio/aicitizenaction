@@ -35,6 +35,9 @@ facts:
   routing_evidence:
     powers:advise: It gives guidance; it does not take complaints, does not enforce, and its answers are not legally binding.
   routing_review: drafted
+  entity_key: entity-35261710-75fa-4d8c-9efe-3229cee44572
+  roles:
+    - government
 strings:
   name: AI Act Service Desk / Single Information Platform
   remit: Commission-run help service operated by the AI Office. Described as 'a central initiative to help stakeholders navigate the AI Act requirements', providing interactive tools to determine whether a given actor falls within the Act's obligations, and a staffed desk where anyone can 'submit questions about the AI Act and receive answers from a team of experts' in their own language. It gives guidance; it does not take complaints, does not enforce, and its answers are not legally binding.

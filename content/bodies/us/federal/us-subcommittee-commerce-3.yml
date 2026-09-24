@@ -47,6 +47,9 @@ facts:
     powers:fund: THE House subcommittee that funds NIST and the Center for AI Standards and Innovation (CAISI)
     powers:hold-hearings: FY2027 outside witness written testimony accepted
   routing_review: drafted
+  entity_key: entity-a73f483c-a795-45bd-b243-247ebcae3078
+  roles:
+    - seat
 strings:
   name: Subcommittee on Commerce, Justice, Science, and Related Agencies
   ai_jurisdiction: THE House subcommittee that funds NIST and the Center for AI Standards and Innovation (CAISI), plus NSF, NASA, NOAA, DOJ and the FTC. Every argument about whether the US government can evaluate frontier AI models, and whether the FTC can police AI, reduces to a line in this subcommittee's bill.

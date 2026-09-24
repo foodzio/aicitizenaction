@@ -38,6 +38,9 @@ facts:
   tags:
     - law
     - research
+  entity_key: entity-c3756e5d-2edd-42e4-9e6f-dc6089c21d98
+  roles:
+    - academic
 strings:
   name: Center for Security and Emerging Technology (CSET), Georgetown University
   remit: Data-driven, nonpartisan policy research at the intersection of security and technology, covering AI, advanced computing and biotechnology. Research lines include Applications, Assessment, Bio-Risk, Competition, CyberAI, Data and Workforce. Staff give congressional testimony and consult with policymakers; maintains large datasets (e.g. on Chinese AI research and chip supply chains).

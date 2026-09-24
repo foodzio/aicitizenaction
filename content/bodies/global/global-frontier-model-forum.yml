@@ -51,6 +51,9 @@ facts:
     powers:publish: Publishes technical reports and issue briefs
     powers:convene: Runs information-sharing between member labs and with government.
   routing_review: drafted
+  entity_key: entity-3cb42e1e-8567-4071-ab28-9ee82c9608d6
+  roles:
+    - standards
 strings:
   name: Frontier Model Forum
   remit: Industry-supported non-profit founded by Amazon, Anthropic, Google, Meta, Microsoft and OpenAI. Publishes technical reports and issue briefs on frontier capability assessments and safety frameworks, with workstreams on AI-Bio, AI-Cyber, AI-Nuclear, AI Security and Safety Frameworks. Runs information-sharing between member labs and with government.

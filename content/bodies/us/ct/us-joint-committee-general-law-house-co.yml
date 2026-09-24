@@ -13,6 +13,9 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: b733dc4930c0
+      source_ids:
+        - b733dc4930c0
+        - 0fed672b4ec7
     - id: public-route
       type: submission
       value: https://cga.ct.gov/aspx/CGATestimonySub/CGAtestimonysubmission.aspx?comm_code=gl
@@ -20,6 +23,9 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 3b1107cabfaf
+      source_ids:
+        - 3b1107cabfaf
+        - 1623bb6b7ae9
   level: state
   chamber: House (joint committee)
   tags:
@@ -31,8 +37,17 @@ facts:
       name: Roland J. Lemar
       party: D
       verified_on: 2026-09-22
+    - role: chair
+      name: James J. Maroney
+      party: D
+      verified_on: 2026-09-22
   topics:
     - consumer-protection
+    - privacy
+    - work
+    - frontier-ai
+    - children
+    - transparency
   powers:
     - legislate
     - hold-hearings
@@ -40,7 +55,15 @@ facts:
     topics:consumer-protection: House-side leadership for AI and consumer-protection bills
     powers:legislate: House-side leadership for AI and consumer-protection bills
     powers:hold-hearings: one submission covers the joint hearing for both chambers
+    topics:privacy: Connecticut's lead committee on AI, consumer protection and data privacy
+    topics:work: Covers employment AI disclosure
+    topics:frontier-ai: frontier-developer obligations
+    topics:children: youth online safety
+    topics:transparency: Covers employment AI disclosure
   routing_review: drafted
+  entity_key: entity-bfd6697a-198f-44dd-9309-ea6b9d778778
+  roles:
+    - seat
 strings:
   name: Joint Committee on General Law — House co-chair
   ai_jurisdiction: Same joint committee; House-side leadership for AI and consumer-protection bills.
@@ -62,8 +85,97 @@ meta:
       checked: 2026-09-22
     - url: https://cga.ct.gov/aspx/CGATestimonySub/CGAtestimonysubmission.aspx?comm_code=gl
       checked: 2026-09-22
+    - url: https://www.cga.ct.gov/gl/
+      checked: 2026-09-22
+    - url: https://cga.ct.gov/aspx/CGATestimonySub/CGAtestimonysubmission.aspx?comm_code=gl
+      checked: 2026-09-22
   needs_research:
     - not_topics
   legacy_id: f79299135d
   research_order: 66
   migrated_from: input/data/committees-and-organisations.json#seats
+  legacy_ids:
+    - f79299135d
+    - 206ca005f5
+  aliases:
+    - us-joint-committee-general-law-senate-co
+    - Joint Committee on General Law — Senate co-chair
+  redirect_from:
+    - section: bodies
+      id: us-joint-committee-general-law-senate-co
+  identity_review:
+    evidence_urls:
+      - https://www.cga.ct.gov/gl/
+      - https://cga.ct.gov/aspx/CGATestimonySub/CGAtestimonysubmission.aspx?comm_code=gl
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: us-joint-committee-general-law-house-co
+        source_url: https://www.cga.ct.gov/gl/
+        checked_on: 2026-09-22
+      - &a2
+        record_id: us-joint-committee-general-law-senate-co
+        source_url: https://www.cga.ct.gov/gl/
+        checked_on: 2026-09-22
+    geo.sub:
+      - *a1
+      - *a2
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.level:
+      - *a1
+      - *a2
+    facts.chamber:
+      - *a1
+      - *a2
+    facts.tags:
+      - *a1
+      - *a2
+    facts.seats:
+      - *a1
+      - *a2
+    facts.topics:
+      - *a1
+      - *a2
+    facts.powers:
+      - *a1
+      - *a2
+    facts.routing_evidence:
+      - *a1
+      - *a2
+    facts.routing_review:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.ai_jurisdiction:
+      - *a1
+      - *a2
+    strings.business:
+      - *a1
+      - *a2
+    strings.status:
+      - *a1
+      - *a2
+    strings.public_route:
+      - *a1
+      - *a2
+    strings.agency_route:
+      - *a1
+      - *a2
+    strings.note:
+      - *a1
+      - *a2
+    strings.routes:
+      - *a1
+      - *a2

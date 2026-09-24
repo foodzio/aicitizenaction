@@ -17,6 +17,9 @@ facts:
   tags:
     - join
     - tip
+  entity_key: entity-84692e5d-6ca8-447c-b019-1ae55ff3ffe5
+  roles:
+    - organisation
 strings:
   name: SAG-AFTRA
   the_ask: "Performers must control their own voice and likeness: informed consent and compensation for digital replicas in contracts, and a federal right for all Americans to control their likeness and voice via the NO FAKES Act."

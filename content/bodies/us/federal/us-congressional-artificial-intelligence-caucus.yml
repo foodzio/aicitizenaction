@@ -27,11 +27,27 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 100e911098b1
+    - id: membership
+      type: membership
+      value: https://artificialintelligencecaucus-beyer.house.gov/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 06206c866885
+    - id: public-route
+      type: submission
+      value: https://artificialintelligencecaucus-beyer.house.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ae541ac09ad1
   region: United States
   public_input: limited
   tags:
     - law
     - systemic
+    - audit
+    - record
   powers:
     - convene
     - advise
@@ -39,6 +55,23 @@ facts:
     powers:convene: to convene experts from academia, government and industry for member briefings
     powers:advise: Exists to 'inform policymakers of the technological, economic, and social impacts of advances in AI'
   routing_review: drafted
+  level: federal
+  chamber: House
+  seats:
+    - role: chair
+      name: Don Beyer
+      party: D
+      region: VA
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Michael T. McCaul
+      party: R
+      region: TX
+      verified_on: 2026-09-22
+  entity_key: entity-129de3e7-0f94-4623-8112-04473659bc2b
+  roles:
+    - government
+    - seat
 strings:
   name: Congressional Artificial Intelligence Caucus
   remit: An informal caucus, NOT a committee. Exists to 'inform policymakers of the technological, economic, and social impacts of advances in AI' and to convene experts from academia, government and industry for member briefings. It has no jurisdiction, no staff of its own beyond member offices, no subpoena power and no ability to legislate as a body. Co-chairs announced vice-chairs and a core initiative in a recent Congress.
@@ -56,15 +89,108 @@ strings:
       note: VERIFIED ABSENCE — the about page identifies no co-chairs by name and publishes no email, referring only generically to 'Chair offices'.
     homepage:
       label: Homepage
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+  ai_jurisdiction: "Not a jurisdictional body — no bills are referred here and it cannot hold official hearings or markups. Its function is member education and cross-committee coordination: briefings for members and staff, sign-on letters, and building bipartisan support before a bill reaches a committee of jurisdiction. Useful to a member of the public as a way to reach AI-attentive offices in bulk, and as a signal of who is engaged."
+  business: "VERIFIED: 16 Sep 2026 bipartisan letter to House leadership urging immediate action on AI guardrails, oversight, security and transparency, signed by Don Beyer, Jay Obernolte, Lori Trahan, Ted Lieu, Scott Franklin, Sara Jacobs, Gabe Amo, Valerie Foushee, Brian Fitzpatrick and Veronica Escobar (beyer.house.gov DocumentID 9218). 17 Sep 2026: Beyer publicly warned Congress 'may not receive another warning shot' on AI."
+  public_route: "VERIFIED: caucus office at 1226 Longworth House Office Building, Washington DC 20515, 202-225-4376; contact form at https://artificialintelligencecaucus-beyer.house.gov/contact-us. Caucus membership is for Members of Congress only; the public engages by contacting the co-chairs' offices or by asking their own representative to join."
+  note: Co-chairs verified 2026-09-22 from the caucus's official House website. Beyer and McCaul are listed as co-chairs; the 'chair'/'ranking' fields above are used to carry the two co-chairs, not a majority/minority relationship. Note the caucus historically ran from Rep. Eshoo's site (artificialintelligencecaucus-eshoo.house.gov), which is now legacy.
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
   sources:
     - url: https://artificialintelligencecaucus-beyer.house.gov/
       checked: null
+    - url: https://artificialintelligencecaucus-beyer.house.gov/members
+      checked: 2026-09-22
+    - url: https://artificialintelligencecaucus-beyer.house.gov/
+      checked: 2026-09-22
   needs_research:
     - topics
     - not_topics
   legacy_id: 97606cd792
   research_order: 159
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - 97606cd792
+    - e1e6742a69
+  aliases:
+    - us-congressional-artificial-intelligence-caucus-2
+    - Congressional Artificial Intelligence Caucus
+  redirect_from:
+    - section: bodies
+      id: us-congressional-artificial-intelligence-caucus-2
+  identity_review:
+    evidence_urls:
+      - https://artificialintelligencecaucus-beyer.house.gov/
+      - https://artificialintelligencecaucus-beyer.house.gov/members
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: us-congressional-artificial-intelligence-caucus
+        source_url: https://artificialintelligencecaucus-beyer.house.gov/
+        checked_on: 2026-09-22
+      - &a2
+        record_id: us-congressional-artificial-intelligence-caucus-2
+        source_url: https://artificialintelligencecaucus-beyer.house.gov/members
+        checked_on: 2026-09-22
+    geo.sub:
+      - *a1
+      - *a2
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+    facts.public_input:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    facts.powers:
+      - *a1
+      - *a2
+    facts.routing_evidence:
+      - *a1
+      - *a2
+    facts.routing_review:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+    strings.powers_text:
+      - *a1
+    strings.reality_check:
+      - *a1
+    strings.notes:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.level:
+      - *a2
+    facts.chamber:
+      - *a2
+    facts.seats:
+      - *a2
+    strings.ai_jurisdiction:
+      - *a2
+    strings.business:
+      - *a2
+    strings.public_route:
+      - *a2
+    strings.note:
+      - *a2

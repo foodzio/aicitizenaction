@@ -52,6 +52,9 @@ facts:
   tags:
     - behaviour
     - research
+  entity_key: entity-f08f68f7-065b-44cd-97c3-e82f3288ff75
+  roles:
+    - civil-society
 strings:
   name: Transluce
   remit: Non-profit research lab building, in its words, 'the public tech stack for scalable oversight of AI'. Outputs include Docent (a platform for understanding model behaviours at scale), public behaviour reports (e.g. evaluating model responses in mental-health crisis scenarios), and research on activation oracles and surfacing behaviours third parties should monitor.

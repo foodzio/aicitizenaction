@@ -10,7 +10,7 @@ facts:
   topics:
     - frontier-ai
   bodies:
-    - us-senate-committee-commerce-2
+    - us-senate-committee-commerce
   action:
     outcome: law
     where: us

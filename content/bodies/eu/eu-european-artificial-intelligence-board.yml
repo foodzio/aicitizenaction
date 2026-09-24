@@ -39,6 +39,9 @@ facts:
     powers:convene: co-ordinates national competent authorities
     powers:publish: issues opinions and recommendations
   routing_review: drafted
+  entity_key: entity-1e11ac73-c439-48fb-b803-330a85b51f3d
+  roles:
+    - government
 strings:
   name: European Artificial Intelligence Board
   remit: Advisory and co-ordination body created by the AI Act, operational since the Act took effect on 1 August 2024. Composed of one representative per Member State, chaired by a Member State, with the EDPS and EEA-EFTA states as observers; the AI Office is its secretariat. Ensures consistent application of the AI Act, co-ordinates national competent authorities, issues opinions and recommendations, and endorses key documents — it endorsed the adequacy assessments of the GPAI Code of Practice and of the Transparency of AI-Generated Content code, and guidance on harmonised standards for high-risk systems. It advises; it does not itself fine or investigate.

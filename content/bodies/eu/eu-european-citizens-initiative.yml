@@ -46,6 +46,9 @@ facts:
     - harm
     - law
     - systemic
+  entity_key: entity-76267b91-17e1-450c-84e2-458751f39bf1
+  roles:
+    - government
 strings:
   name: European Citizens' Initiative (ECI)
   remit: Treaty-based participatory instrument administered by the European Commission. Allows citizens to 'call on the European Commission to propose new laws'. On reaching one million valid signatures across a minimum number of Member States within the collection period, the Commission must meet the organisers, the Parliament holds a public hearing, and the Commission must respond formally setting out what action it will take and why. The Commission is NOT obliged to legislate.

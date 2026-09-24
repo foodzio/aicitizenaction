@@ -30,6 +30,9 @@ facts:
     - role: chair
       name: UNVERIFIED
       verified_on: 2026-09-22
+  entity_key: entity-a2012bf3-2656-4040-923a-4e0db4ff65fc
+  roles:
+    - seat
 strings:
   name: MyGov (Citizen Engagement Platform)
   ai_jurisdiction: Cross-government citizen consultation platform under MeitY/Digital India Corporation. Used inconsistently for MeitY drafts; hosts discussions, polls, and 'Share your ideas' consultations, including on AI and digital policy.

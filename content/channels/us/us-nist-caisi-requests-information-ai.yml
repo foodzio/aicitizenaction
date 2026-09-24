@@ -50,6 +50,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-6adb6504-f61b-481c-b75e-63b868428f9a
+  roles:
+    - reporting-channel
 strings:
   name: NIST / CAISI requests for information on AI
   remit: Technical input from developers, deployers and security researchers on AI security and standards questions. Recent dockets have covered unique security threats to AI agents, security practices and technical controls, assessment methods for identifying and managing AI vulnerabilities, deployment constraints and monitoring, and research and policy priorities.

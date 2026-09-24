@@ -47,6 +47,9 @@ facts:
     powers:fine: civil penalties and injunctive relief
     powers:handle-complaints: Anyone may file an AI-specific complaint under TRAIGA.
   routing_review: drafted
+  entity_key: entity-b4b1c333-2734-427e-9b85-3c6f7a53df2c
+  roles:
+    - government
 strings:
   name: Texas Attorney General — Texas Responsible Artificial Intelligence Governance Act (TRAIGA)
   remit: Enforces TRAIGA, effective 1 January 2026. Prohibits AI developed or deployed to manipulate human behaviour to incite harm, social scoring by government, unlawful capture of biometric identifiers, AI intended to infringe constitutional rights, unlawful discrimination, and certain sexually explicit AI content; requires government agencies deploying consumer-facing AI to disclose it. The AG has exclusive enforcement, with a 60-day cure period, civil penalties and injunctive relief; there is no private right of action. TRAIGA also creates a regulatory sandbox and an AI Council.

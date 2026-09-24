@@ -57,6 +57,9 @@ facts:
     powers:oversee: oversight of the federal AI Action Plan
     powers:hold-hearings: hearing 'Advancing America's AI Action Plan', 14 Jan 2026
   routing_review: drafted
+  entity_key: entity-0c3b055a-9769-4e9c-8ca5-ae222dcbbdac
+  roles:
+    - seat
 strings:
   name: Subcommittee on Research and Technology
   ai_jurisdiction: "NIST, CAISI, NSF and OSTP at subcommittee level — the most AI-specific authorizing subcommittee in the House. Send here: AI standards, model evaluation methodology, AI safety and security research, AI flaw and incident reporting, AI education and workforce, and oversight of the federal AI Action Plan."

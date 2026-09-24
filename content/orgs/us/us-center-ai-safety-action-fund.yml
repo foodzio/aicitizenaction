@@ -26,11 +26,26 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: f522b7e7bccf
+    - id: action
+      type: action
+      value: https://action.safe.ai/donate
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8076c535ac6e
   region: United States
   public_input: limited
   tags:
     - law
     - research
+    - fund
+    - join
+  perspective: safety-advocacy
+  volunteers: no
+  entity_key: entity-9f88edb4-1dcc-4ec9-abe7-60076224e567
+  roles:
+    - civil-society
+    - organisation
 strings:
   name: Center for AI Safety Action Fund (CAIS AF)
   remit: "501(c)(4) advocacy arm of CAIS. Nonpartisan lobbying and policymaker education. Stated policy focus areas: US leadership in AI chip manufacturing, compute security, preventing malicious use of AI, and global cooperation for safe and secure AI. Registered federal lobbyist; active in state legislation."
@@ -47,14 +62,101 @@ strings:
       scope: Anyone
     homepage:
       label: Homepage
+    action:
+      label: Action page
+  the_ask: US policy should maintain American leadership in AI while protecting against AI-related national security threats — chip manufacturing leadership, compute security, preventing malicious use, and global cooperation on safe AI.
+  what_they_do: "501(c)(4) advocacy: convening lawmakers, business leaders and security experts; building bipartisan consensus; educating policymakers. Sister organisation to the Center for AI Safety research nonprofit."
+  newcomer_action: Donate (not tax-deductible), or apply for a job. There is no constituent action tool — this is an inside-Washington operation.
+  tips: no
+  geography: United States, federal.
+  scale: Small professional policy staff. EIN 93-2442608.
+  spending: Not published on its own site; a 501(c)(4) so donations are not tax-deductible and donors need not be disclosed.
+  caution: Its framing is national-security and US competitiveness, not a pause or ban — noticeably more hawkish in framing than PauseAI or ControlAI, and it sits comfortably with 'US leadership in AI'. If your goal is slowing AI, check the framing matches your intent. There is essentially no public participation route.
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
   sources:
     - url: https://action.safe.ai/news
       checked: 2026-09-22
+    - url: https://action.safe.ai/donate
+      checked: 2026-09-22
   needs_research:
     - topics
   legacy_id: "1380955610"
   research_order: 109
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - "1380955610"
+    - 97afcbbd40
+  aliases:
+    - us-center-ai-safety-action-fund-2
+    - Center for AI Safety Action Fund (CAIS AF)
+  redirect_from:
+    - section: orgs
+      id: us-center-ai-safety-action-fund-2
+  identity_review:
+    evidence_urls:
+      - https://action.safe.ai/news
+      - https://action.safe.ai/donate
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: us-center-ai-safety-action-fund
+        source_url: https://action.safe.ai/news
+        checked_on: 2026-09-22
+      - &a2
+        record_id: us-center-ai-safety-action-fund-2
+        source_url: https://action.safe.ai/donate
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+    facts.public_input:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+    strings.threat_model:
+      - *a1
+    strings.reality_check:
+      - *a1
+    strings.gov_channel:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.perspective:
+      - *a2
+    facts.volunteers:
+      - *a2
+    strings.the_ask:
+      - *a2
+    strings.what_they_do:
+      - *a2
+    strings.newcomer_action:
+      - *a2
+    strings.tips:
+      - *a2
+    strings.geography:
+      - *a2
+    strings.scale:
+      - *a2
+    strings.spending:
+      - *a2
+    strings.caution:
+      - *a2

@@ -30,6 +30,9 @@ facts:
   public_input: none
   tags:
     - research
+  entity_key: entity-869ef0fb-83e9-4634-8b50-1245c7f5fedc
+  roles:
+    - academic
 strings:
   name: NYU Alignment Research Group (ARG)
   remit: A set of NYU researchers doing empirical work with language models aimed at longer-term concerns about deploying highly capable AI. Associated with Sam Bowman's group and collaborating across NYU's ML2, CILVR, the Center for Data Science and the Department of Linguistics. Known for work on debate and scalable oversight, chain-of-thought faithfulness, and benchmarks that resist saturation.

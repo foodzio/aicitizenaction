@@ -61,6 +61,9 @@ facts:
   contact_disposition: reclassify
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-da014dab-ab27-44d8-abac-dec2fd2941ae
+  roles:
+    - company
 strings:
   name: Zhipu AI / Z.ai
   remit: No publicly named safety or alignment function in English. GLM models are released open-weight and via API; the company was placed on the US Entity List, complicating external engagement.

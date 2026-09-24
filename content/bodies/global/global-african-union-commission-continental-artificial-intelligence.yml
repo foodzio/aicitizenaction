@@ -44,6 +44,9 @@ facts:
     not_topics:frontier-ai: No frontier or catastrophic-risk content
     powers:convene: The AU Commission (Department of Infrastructure and Energy / the AU Development Agency AUDA-NEPAD) coordinates
   routing_review: drafted
+  entity_key: entity-ea30cee9-c15b-4a67-ae26-4a60d4a466f0
+  roles:
+    - government
 strings:
   name: African Union Commission — Continental Artificial Intelligence Strategy
   remit: The Continental AI Strategy was adopted by African ministers in June 2024 and endorsed by the AU Executive Council in July 2024, alongside the African Digital Compact. It is an Africa-owned, development-first framework covering capacity, infrastructure, datasets, governance and regional cooperation, with an implementation horizon to 2030 and a call for member states to establish national AI strategies and regulatory frameworks. The AU Commission (Department of Infrastructure and Energy / the AU Development Agency AUDA-NEPAD) coordinates; there is no continental AI regulator and no enforcement power. Development was preceded by genuine multistakeholder consultative sessions (2024).

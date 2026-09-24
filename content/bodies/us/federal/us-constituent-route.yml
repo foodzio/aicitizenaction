@@ -33,6 +33,9 @@ facts:
     - role: ranking
       name: n/a
       verified_on: 2026-09-22
+  entity_key: entity-d646213c-beb3-4638-b864-be2c3625226e
+  roles:
+    - seat
 strings:
   name: "Constituent route: chair and ranking member district and state offices"
   ai_jurisdiction: "Not a committee. This entry answers the brief's recurring question of whether a chair's own office beats the committee. Rule of thumb, verified against the contact structures above: for almost every committee in this list, a constituent should go to the member's own district or state office first, and a non-constituent should go to the committee or to an organization that has standing with it."

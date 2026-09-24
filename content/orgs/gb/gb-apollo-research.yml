@@ -37,6 +37,9 @@ facts:
   public_input: limited
   tags:
     - research
+  entity_key: entity-88f7c6e5-f00a-40d8-b43b-ea8e30470bb1
+  roles:
+    - civil-society
 strings:
   name: Apollo Research
   remit: Evaluates frontier models for scheming, strategic deception and evaluation-awareness; builds Watcher, a runtime monitoring tool for coding agents; and advises governments on frontier regulation. Ran the in-context scheming evaluations that appear in OpenAI and Anthropic system cards.

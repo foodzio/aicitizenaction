@@ -87,6 +87,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-1578f322-4abe-45b6-8aeb-dd2a021f9a93
+  roles:
+    - company
 strings:
   name: xAI (SpaceXAI)
   remit: A safety team (unnamed publicly; the site says it 'is actively hiring researchers and engineers') producing model cards and safety evaluations under the Frontier AI Framework. No named safety office or officer is published.

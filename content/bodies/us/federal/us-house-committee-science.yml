@@ -34,6 +34,20 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 4f6db28d51b4
+    - id: membership
+      type: membership
+      value: https://science.house.gov/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: cfc7ef58f8a5
+    - id: public-route
+      type: submission
+      value: https://science.house.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 73bfad1c5ed1
   region: United States
   public_input: limited
   tags:
@@ -43,6 +57,9 @@ facts:
   topics:
     - standards
     - whistleblowing
+    - safety-testing
+    - work
+    - consumer-protection
   powers:
     - legislate
     - hold-hearings
@@ -57,7 +74,27 @@ facts:
     powers:oversee: conducts oversight hearings
     powers:compel: Can subpoena and compel testimony
     powers:fund: where the legal status and funding of CAISI is actually decided
+    topics:safety-testing: AI testing and evaluation methods
+    topics:work: AI workforce and education
+    topics:consumer-protection: H.R.8893 Protecting Consumers from Deceptive AI Act
   routing_review: drafted
+  level: federal
+  chamber: House
+  seats:
+    - role: chair
+      name: Brian Babin
+      party: R
+      region: TX
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Zoe Lofgren
+      party: D
+      region: CA
+      verified_on: 2026-09-22
+  entity_key: entity-12340d0c-4c29-4bcb-b32a-c656fedbf38f
+  roles:
+    - government
+    - seat
 strings:
   name: U.S. House Committee on Science, Space, and Technology
   remit: House committee of jurisdiction for NIST (and therefore CAISI), DOE Office of Science, NSF and federal AI R&D. Authorises NIST's AI programmes, conducts oversight hearings, and has produced the main House bills to put the US AI institute on a statutory footing. Can subpoena and compel testimony; cannot fine or adjudicate.
@@ -79,14 +116,110 @@ strings:
       note: VERIFIED on the contact page.
     homepage:
       label: Homepage
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+  ai_jurisdiction: "Non-defense federal R&D. Owns NIST (and therefore CAISI), NSF, OSTP, NASA, and the civilian side of DOE including the national labs. Send here: AI standards and measurement science, AI testing and evaluation methods, AI safety research funding, the National AI Research Resource, AI workforce and education, AI incident and flaw reporting, and federal AI R&D coordination. In the 119th Congress this committee has produced more reported AI legislation than any other House committee."
+  business: "VERIFIED: full-committee markup of ten AI bills on 25 Jun 2026 — H.R.9341 AI-Ready Federal Data Guidelines Act; H.R.9363 AI Security and Innovation Act; H.R.2385 CREATE AI Act (Obernolte), reported 29-0; H.R.5351 NSF AI Education Act of 2025 (Fong), reported 33-0; H.R.5584 LIFT AI Act (34-1); H.R.6461 READ AI Models Act; H.R.8893 Protecting Consumers from Deceptive AI Act; H.R.9333 AI Flaw Reporting and Security Enhancement Act; H.R.9334 Workforce for AI Trust Act; H.R.9372 Data Infrastructure Energy Measurement and Standards Act (34-1). Nine were favorably reported. Also: Research and Technology Subcommittee hearing 'Advancing America's AI Action Plan' with OSTP Director Michael Kratsios, 14 Jan 2026, 2318 Rayburn."
+  public_route: "VERIFIED: https://science.house.gov/contact, 202-225-6371. Minority: https://democrats-science.house.gov/."
+  note: Chair/ranking verified 2026-09-22 from the House Clerk's MemberData.xml. If you care about AI evaluation capacity and standards, this committee plus Appropriations CJS is the pair that matters.
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
   sources:
     - url: https://science.house.gov/contact
       checked: 2026-09-22
+    - url: https://science.house.gov/members
+      checked: 2026-09-22
+    - url: https://science.house.gov/
+      checked: 2026-09-22
   needs_research:
     - not_topics
   legacy_id: ad744d053a
   research_order: 157
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - ad744d053a
+    - e64a4104d1
+  aliases:
+    - us-house-committee-science-2
+    - House Committee on Science, Space, and Technology
+  redirect_from:
+    - section: bodies
+      id: us-house-committee-science-2
+  identity_review:
+    evidence_urls:
+      - https://science.house.gov/contact
+      - https://science.house.gov/members
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: us-house-committee-science
+        source_url: https://science.house.gov/contact
+        checked_on: 2026-09-22
+      - &a2
+        record_id: us-house-committee-science-2
+        source_url: https://science.house.gov/members
+        checked_on: 2026-09-22
+    geo.sub:
+      - *a1
+      - *a2
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+    facts.public_input:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    facts.topics:
+      - *a1
+      - *a2
+    facts.powers:
+      - *a1
+      - *a2
+    facts.routing_evidence:
+      - *a1
+      - *a2
+    facts.routing_review:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+    strings.powers_text:
+      - *a1
+    strings.reality_check:
+      - *a1
+    strings.notes:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.level:
+      - *a2
+    facts.chamber:
+      - *a2
+    facts.seats:
+      - *a2
+    strings.ai_jurisdiction:
+      - *a2
+    strings.business:
+      - *a2
+    strings.public_route:
+      - *a2
+    strings.note:
+      - *a2

@@ -18,6 +18,9 @@ facts:
     - fund
     - join
     - law
+  entity_key: entity-4795cc81-e555-49fe-b01b-f2be81b6d5df
+  roles:
+    - organisation
 strings:
   name: PauseAI UK
   the_ask: The UK should act to avert risks from superhuman AI, including binding frontier AI legislation.

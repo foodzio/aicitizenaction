@@ -1,479 +1,12 @@
 version: 1
 scope: Every bodies/channels/orgs record; generated evidence only. Decisions live in docs/directory-identity-decisions.yml.
 totals:
-  records: 423
-  candidates: 126
-  high: 22
-  medium: 21
-  low: 83
+  records: 382
+  candidates: 78
+  high: 2
+  medium: 6
+  low: 70
 candidates:
-  - key: eu-european-parliament-committee-civil-liberties--eu-european-parliament-committee-civil-liberties-2
-    left:
-      id: eu-european-parliament-committee-civil-liberties
-      section: bodies
-      name: European Parliament Committee on Civil Liberties, Justice and Home Affairs (LIBE)
-      country: eu
-      sub: null
-    right:
-      id: eu-european-parliament-committee-civil-liberties-2
-      section: bodies
-      name: European Parliament — Committee on Civil Liberties, Justice and Home Affairs (LIBE)
-      country: eu
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-acronym
-    shared_domains:
-      - europa.eu
-    shared_endpoints: []
-    name_similarity: 1
-  - key: eu-european-parliament-committee-industry--eu-european-parliament-committee-industry-2
-    left:
-      id: eu-european-parliament-committee-industry
-      section: bodies
-      name: European Parliament Committee on Industry, Research and Energy (ITRE)
-      country: eu
-      sub: null
-    right:
-      id: eu-european-parliament-committee-industry-2
-      section: bodies
-      name: European Parliament — Committee on Industry, Research and Energy (ITRE)
-      country: eu
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-endpoint
-      - shared-acronym
-    shared_domains:
-      - europa.eu
-    shared_endpoints:
-      - https://www.europarl.europa.eu/committees/en/itre/home/highlights
-    name_similarity: 1
-  - key: eu-european-parliament-committee-internal-market-consumer--eu-european-parliament-committee-internal-market-consumer-2
-    left:
-      id: eu-european-parliament-committee-internal-market-consumer
-      section: bodies
-      name: European Parliament Committee on the Internal Market and Consumer Protection (IMCO)
-      country: eu
-      sub: null
-    right:
-      id: eu-european-parliament-committee-internal-market-consumer-2
-      section: bodies
-      name: European Parliament — Committee on the Internal Market and Consumer Protection (IMCO)
-      country: eu
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-endpoint
-      - shared-acronym
-    shared_domains:
-      - europa.eu
-    shared_endpoints:
-      - https://www.europarl.europa.eu/committees/en/imco/home/highlights
-    name_similarity: 1
-  - key: eu-european-parliament-committee-petitions--eu-european-parliament-committee-petitions-2
-    left:
-      id: eu-european-parliament-committee-petitions
-      section: bodies
-      name: European Parliament Committee on Petitions (PETI)
-      country: eu
-      sub: null
-    right:
-      id: eu-european-parliament-committee-petitions-2
-      section: bodies
-      name: European Parliament — Committee on Petitions (PETI)
-      country: eu
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-endpoint
-      - shared-acronym
-    shared_domains:
-      - europa.eu
-    shared_endpoints:
-      - https://www.europarl.europa.eu/petitions/en/home
-    name_similarity: 1
-  - key: fr-saferai--fr-saferai-2
-    left:
-      id: fr-saferai
-      section: channels
-      name: SaferAI
-      country: fr
-      sub: null
-    right:
-      id: fr-saferai-2
-      section: orgs
-      name: SaferAI
-      country: fr
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-    shared_domains:
-      - safer-ai.org
-    shared_endpoints: []
-    name_similarity: 1
-  - key: gb-house-lords-communications-digital-committee--gb-house-lords-communications-digital-committee-2
-    left:
-      id: gb-house-lords-communications-digital-committee
-      section: bodies
-      name: House of Lords Communications and Digital Committee
-      country: gb
-      sub: null
-    right:
-      id: gb-house-lords-communications-digital-committee-2
-      section: bodies
-      name: House of Lords Communications and Digital Committee
-      country: gb
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - parliament.uk
-    shared_endpoints:
-      - https://committees.parliament.uk/committee/170/communications-and-digital-committee
-    name_similarity: 1
-  - key: global-access-now--global-access-now-2
-    left:
-      id: global-access-now
-      section: orgs
-      name: Access Now
-      country: global
-      sub: null
-    right:
-      id: global-access-now-2
-      section: orgs
-      name: Access Now
-      country: global
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-    shared_domains:
-      - accessnow.org
-    shared_endpoints: []
-    name_similarity: 1
-  - key: global-ai-safety-asia--global-ai-safety-asia-2
-    left:
-      id: global-ai-safety-asia
-      section: orgs
-      name: AI Safety Asia (AISA)
-      country: global
-      sub: null
-    right:
-      id: global-ai-safety-asia-2
-      section: orgs
-      name: AI Safety Asia (AISA)
-      country: global
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-acronym
-    shared_domains: []
-    shared_endpoints: []
-    name_similarity: 1
-  - key: kr-ai-safety-institute--kr-ai-safety-institute-2
-    left:
-      id: kr-ai-safety-institute
-      section: bodies
-      name: AI Safety Institute (Korea AISI)
-      country: kr
-      sub: null
-    right:
-      id: kr-ai-safety-institute-2
-      section: bodies
-      name: AI Safety Institute (Korea AISI)
-      country: kr
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - aisi.re.kr
-    shared_endpoints:
-      - https://www.aisi.re.kr/eng
-    name_similarity: 1
-  - key: us-ai-now-institute--us-ai-now-institute-2
-    left:
-      id: us-ai-now-institute
-      section: orgs
-      name: AI Now Institute
-      country: us
-      sub: null
-    right:
-      id: us-ai-now-institute-2
-      section: orgs
-      name: AI Now Institute
-      country: us
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-    shared_domains:
-      - ainowinstitute.org
-    shared_endpoints: []
-    name_similarity: 1
-  - key: us-algorithmic-justice-league--us-algorithmic-justice-league-2
-    left:
-      id: us-algorithmic-justice-league
-      section: orgs
-      name: Algorithmic Justice League (AJL)
-      country: us
-      sub: null
-    right:
-      id: us-algorithmic-justice-league-2
-      section: orgs
-      name: Algorithmic Justice League (AJL)
-      country: us
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-acronym
-    shared_domains:
-      - ajl.org
-    shared_endpoints: []
-    name_similarity: 1
-  - key: us-center-ai-policy--us-center-ai-policy-2
-    left:
-      id: us-center-ai-policy
-      section: orgs
-      name: Center for AI Policy (CAIP)
-      country: us
-      sub: null
-    right:
-      id: us-center-ai-policy-2
-      section: orgs
-      name: Center for AI Policy (CAIP)
-      country: us
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-endpoint
-      - shared-acronym
-    shared_domains:
-      - centeraipolicy.org
-    shared_endpoints:
-      - https://www.centeraipolicy.org/
-    name_similarity: 1
-  - key: us-center-ai-safety-action-fund--us-center-ai-safety-action-fund-2
-    left:
-      id: us-center-ai-safety-action-fund
-      section: orgs
-      name: Center for AI Safety Action Fund (CAIS AF)
-      country: us
-      sub: null
-    right:
-      id: us-center-ai-safety-action-fund-2
-      section: orgs
-      name: Center for AI Safety Action Fund (CAIS AF)
-      country: us
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-    shared_domains:
-      - safe.ai
-    shared_endpoints: []
-    name_similarity: 1
-  - key: us-congressional-artificial-intelligence-caucus--us-congressional-artificial-intelligence-caucus-2
-    left:
-      id: us-congressional-artificial-intelligence-caucus
-      section: bodies
-      name: Congressional Artificial Intelligence Caucus
-      country: us
-      sub: federal
-    right:
-      id: us-congressional-artificial-intelligence-caucus-2
-      section: bodies
-      name: Congressional Artificial Intelligence Caucus
-      country: us
-      sub: federal
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - house.gov
-    shared_endpoints:
-      - https://artificialintelligencecaucus-beyer.house.gov/
-    name_similarity: 1
-  - key: us-electronic-frontier-foundation--us-electronic-frontier-foundation-2
-    left:
-      id: us-electronic-frontier-foundation
-      section: orgs
-      name: Electronic Frontier Foundation (EFF)
-      country: us
-      sub: null
-    right:
-      id: us-electronic-frontier-foundation-2
-      section: orgs
-      name: Electronic Frontier Foundation (EFF)
-      country: us
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-endpoint
-      - shared-acronym
-    shared_domains:
-      - eff.org
-    shared_endpoints:
-      - https://act.eff.org/
-    name_similarity: 1
-  - key: us-electronic-privacy-information-center--us-electronic-privacy-information-center-2
-    left:
-      id: us-electronic-privacy-information-center
-      section: orgs
-      name: Electronic Privacy Information Center (EPIC)
-      country: us
-      sub: null
-    right:
-      id: us-electronic-privacy-information-center-2
-      section: orgs
-      name: Electronic Privacy Information Center (EPIC)
-      country: us
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-endpoint
-      - shared-acronym
-    shared_domains:
-      - epic.org
-    shared_endpoints:
-      - https://epic.org/about/contact
-    name_similarity: 1
-  - key: us-future-life-institute--us-future-life-institute-2
-    left:
-      id: us-future-life-institute
-      section: orgs
-      name: Future of Life Institute (FLI)
-      country: us
-      sub: null
-    right:
-      id: us-future-life-institute-2
-      section: orgs
-      name: Future of Life Institute (FLI)
-      country: us
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-acronym
-    shared_domains:
-      - futureoflife.org
-    shared_endpoints: []
-    name_similarity: 1
-  - key: us-machine-intelligence-research-institute--us-machine-intelligence-research-institute-2
-    left:
-      id: us-machine-intelligence-research-institute
-      section: orgs
-      name: Machine Intelligence Research Institute (MIRI)
-      country: us
-      sub: null
-    right:
-      id: us-machine-intelligence-research-institute-2
-      section: orgs
-      name: Machine Intelligence Research Institute (MIRI)
-      country: us
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-acronym
-    shared_domains: []
-    shared_endpoints: []
-    name_similarity: 1
-  - key: us-midas-project--us-midas-project-2
-    left:
-      id: us-midas-project
-      section: channels
-      name: The Midas Project
-      country: us
-      sub: null
-    right:
-      id: us-midas-project-2
-      section: orgs
-      name: The Midas Project
-      country: us
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-    shared_domains:
-      - themidasproject.com
-    shared_endpoints: []
-    name_similarity: 1
-  - key: us-public-citizen--us-public-citizen-2
-    left:
-      id: us-public-citizen
-      section: orgs
-      name: Public Citizen
-      country: us
-      sub: null
-    right:
-      id: us-public-citizen-2
-      section: orgs
-      name: Public Citizen
-      country: us
-      sub: null
-    severity: high
-    signals:
-      - exact-normalized-name
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - citizen.org
-    shared_endpoints:
-      - https://www.citizen.org/topic/artificial-intelligence
-    name_similarity: 1
   - key: us-subcommittee-commerce--us-subcommittee-commerce-3
     left:
       id: us-subcommittee-commerce
@@ -514,204 +47,6 @@ candidates:
     shared_domains: []
     shared_endpoints: []
     name_similarity: 1
-  - key: br-autoridade-nacional-protecao-dados--br-autoridade-nacional-protecao-dados-2
-    left:
-      id: br-autoridade-nacional-protecao-dados
-      section: bodies
-      name: Autoridade Nacional de Proteção de Dados (ANPD)
-      country: br
-      sub: null
-    right:
-      id: br-autoridade-nacional-protecao-dados-2
-      section: bodies
-      name: Autoridade Nacional de Proteção de Dados (National Data Protection Authority)
-      country: br
-      sub: null
-    severity: medium
-    signals:
-      - numeric-suffix-sibling
-      - shared-official-domain
-    shared_domains:
-      - www.gov.br
-    shared_endpoints: []
-    name_similarity: 0.5
-  - key: cn-concordia-ai--global-concordia-ai
-    left:
-      id: cn-concordia-ai
-      section: bodies
-      name: Concordia AI
-      country: cn
-      sub: null
-    right:
-      id: global-concordia-ai
-      section: orgs
-      name: Concordia AI
-      country: global
-      sub: null
-    severity: medium
-    signals:
-      - exact-normalized-name
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - concordia-ai.com
-    shared_endpoints:
-      - https://concordia-ai.com/contact
-    name_similarity: 1
-  - key: eu-european-ai-office--eu-european-commission-european-ai-office
-    left:
-      id: eu-european-ai-office
-      section: bodies
-      name: European AI Office (within DG CONNECT, European Commission)
-      country: eu
-      sub: null
-    right:
-      id: eu-european-commission-european-ai-office
-      section: bodies
-      name: European Commission — European AI Office (within DG CNECT)
-      country: eu
-      sub: null
-    severity: medium
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - europa.eu
-    shared_endpoints:
-      - https://digital-strategy.ec.europa.eu/en/consultations
-      - https://digital-strategy.ec.europa.eu/en/policies/ai-office
-    name_similarity: 0.75
-  - key: gb-controlai--global-controlai
-    left:
-      id: gb-controlai
-      section: orgs
-      name: ControlAI
-      country: gb
-      sub: null
-    right:
-      id: global-controlai
-      section: orgs
-      name: ControlAI
-      country: global
-      sub: null
-    severity: medium
-    signals:
-      - exact-normalized-name
-      - shared-official-domain
-    shared_domains:
-      - controlai.org
-    shared_endpoints: []
-    name_similarity: 1
-  - key: gb-house-commons-science--gb-house-commons-science-technology-committee
-    left:
-      id: gb-house-commons-science
-      section: bodies
-      name: House of Commons Science, Innovation and Technology Committee
-      country: gb
-      sub: null
-    right:
-      id: gb-house-commons-science-technology-committee
-      section: bodies
-      name: House of Commons Science and Technology Committee (committee id 135; formerly the Science, Innovation and Technology Committee)
-      country: gb
-      sub: null
-    severity: medium
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - parliament.uk
-    shared_endpoints:
-      - https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee
-    name_similarity: 0.727
-  - key: global-india-ai-impact-summit-2026--in-india-ai-impact-summit-2026
-    left:
-      id: global-india-ai-impact-summit-2026
-      section: bodies
-      name: India AI Impact Summit 2026 (AI summit series)
-      country: global
-      sub: null
-    right:
-      id: in-india-ai-impact-summit-2026
-      section: bodies
-      name: India AI Impact Summit 2026
-      country: in
-      sub: null
-    severity: medium
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-      - high-name-similarity
-    shared_domains:
-      - indiaai.gov.in
-    shared_endpoints:
-      - https://impact.indiaai.gov.in/about-summit
-    name_similarity: 0.833
-  - key: global-pauseai--global-pauseai-2
-    left:
-      id: global-pauseai
-      section: orgs
-      name: PauseAI
-      country: global
-      sub: null
-    right:
-      id: global-pauseai-2
-      section: orgs
-      name: PauseAI (PauseAI Global)
-      country: global
-      sub: null
-    severity: medium
-    signals:
-      - numeric-suffix-sibling
-      - shared-official-domain
-    shared_domains:
-      - pauseai.info
-    shared_endpoints: []
-    name_similarity: 0.5
-  - key: global-stopai--us-stopai
-    left:
-      id: global-stopai
-      section: orgs
-      name: StopAI
-      country: global
-      sub: null
-    right:
-      id: us-stopai
-      section: orgs
-      name: StopAI
-      country: us
-      sub: null
-    severity: medium
-    signals:
-      - exact-normalized-name
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - lu.ma
-    shared_endpoints:
-      - https://lu.ma/stopai_info
-    name_similarity: 1
-  - key: us-encode--us-encode-2
-    left:
-      id: us-encode
-      section: orgs
-      name: Encode (formerly Encode Justice)
-      country: us
-      sub: null
-    right:
-      id: us-encode-2
-      section: orgs
-      name: Encode (formerly Encode Justice; also Encode AI)
-      country: us
-      sub: null
-    severity: medium
-    signals:
-      - numeric-suffix-sibling
-      - shared-official-domain
-    shared_domains:
-      - encodeai.org
-    shared_endpoints: []
-    name_similarity: 0.6
   - key: us-house-committee-business-affairs-labor--us-senate-committee-business
     left:
       id: us-house-committee-business-affairs-labor
@@ -735,122 +70,6 @@ candidates:
     shared_endpoints:
       - https://www.leg.state.co.us/CLICS/WitnessR.nsf/register.xsp
     name_similarity: 0.556
-  - key: us-house-committee-science--us-house-committee-science-2
-    left:
-      id: us-house-committee-science
-      section: bodies
-      name: U.S. House Committee on Science, Space, and Technology
-      country: us
-      sub: federal
-    right:
-      id: us-house-committee-science-2
-      section: bodies
-      name: House Committee on Science, Space, and Technology
-      country: us
-      sub: federal
-    severity: medium
-    signals:
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - house.gov
-    shared_endpoints:
-      - https://science.house.gov/
-    name_similarity: 0.778
-  - key: us-joint-committee-advanced-information-technology--us-joint-committee-advanced-information-technology-2
-    left:
-      id: us-joint-committee-advanced-information-technology
-      section: bodies
-      name: Joint Committee on Advanced Information Technology, the Internet and Cybersecurity — Senate chair
-      country: us
-      sub: ma
-    right:
-      id: us-joint-committee-advanced-information-technology-2
-      section: bodies
-      name: Joint Committee on Advanced Information Technology, the Internet and Cybersecurity — House chair
-      country: us
-      sub: ma
-    severity: medium
-    signals:
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-endpoint
-      - high-name-similarity
-    shared_domains:
-      - malegislature.gov
-    shared_endpoints:
-      - https://malegislature.gov/Committees/Detail/J33
-    name_similarity: 0.833
-  - key: us-joint-committee-economic-development-emerging-technologies--us-joint-committee-economic-development-emerging-technologies-2
-    left:
-      id: us-joint-committee-economic-development-emerging-technologies
-      section: bodies
-      name: Joint Committee on Economic Development and Emerging Technologies — Senate chair
-      country: us
-      sub: ma
-    right:
-      id: us-joint-committee-economic-development-emerging-technologies-2
-      section: bodies
-      name: Joint Committee on Economic Development and Emerging Technologies — House chair
-      country: us
-      sub: ma
-    severity: medium
-    signals:
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - malegislature.gov
-    shared_endpoints:
-      - https://malegislature.gov/Committees/Detail/J12
-    name_similarity: 0.818
-  - key: us-joint-committee-general-law-house-co--us-joint-committee-general-law-senate-co
-    left:
-      id: us-joint-committee-general-law-house-co
-      section: bodies
-      name: Joint Committee on General Law — House co-chair
-      country: us
-      sub: ct
-    right:
-      id: us-joint-committee-general-law-senate-co
-      section: bodies
-      name: Joint Committee on General Law — Senate co-chair
-      country: us
-      sub: ct
-    severity: medium
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - ct.gov
-    shared_endpoints:
-      - https://cga.ct.gov/aspx/CGATestimonySub/CGAtestimonysubmission.aspx?comm_code=gl
-      - https://www.cga.ct.gov/gl
-    name_similarity: 0.778
-  - key: us-senate-committee-commerce--us-senate-committee-commerce-2
-    left:
-      id: us-senate-committee-commerce
-      section: bodies
-      name: U.S. Senate Committee on Commerce, Science, and Transportation
-      country: us
-      sub: federal
-    right:
-      id: us-senate-committee-commerce-2
-      section: bodies
-      name: Senate Committee on Commerce, Science, and Transportation
-      country: us
-      sub: federal
-    severity: medium
-    signals:
-      - numeric-suffix-sibling
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - senate.gov
-    shared_endpoints:
-      - https://www.commerce.senate.gov/
-    name_similarity: 0.778
   - key: us-senate-committee-judiciary--us-senate-committee-judiciary-2
     left:
       id: us-senate-committee-judiciary
@@ -871,28 +90,6 @@ candidates:
     shared_domains: []
     shared_endpoints: []
     name_similarity: 1
-  - key: us-senate-committee-judiciary-subcommittee-privacy--us-subcommittee-privacy
-    left:
-      id: us-senate-committee-judiciary-subcommittee-privacy
-      section: bodies
-      name: U.S. Senate Committee on the Judiciary — Subcommittee on Privacy, Technology, and the Law
-      country: us
-      sub: federal
-    right:
-      id: us-subcommittee-privacy
-      section: bodies
-      name: Subcommittee on Privacy, Technology, and the Law
-      country: us
-      sub: federal
-    severity: medium
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - senate.gov
-    shared_endpoints:
-      - https://www.judiciary.senate.gov/about/subcommittees
-    name_similarity: 0.545
   - key: us-subcommittee-commerce--us-subcommittee-commerce-2
     left:
       id: us-subcommittee-commerce
@@ -971,11 +168,11 @@ candidates:
     shared_domains: []
     shared_endpoints: []
     name_similarity: 0.444
-  - key: br-autoridade-nacional-protecao-dados-2--br-chamber-deputies-e-democracia-participa-brasil
+  - key: br-autoridade-nacional-protecao-dados--br-chamber-deputies-e-democracia-participa-brasil
     left:
-      id: br-autoridade-nacional-protecao-dados-2
+      id: br-autoridade-nacional-protecao-dados
       section: bodies
-      name: Autoridade Nacional de Proteção de Dados (National Data Protection Authority)
+      name: Autoridade Nacional de Proteção de Dados (ANPD)
       country: br
       sub: null
     right:
@@ -1214,33 +411,11 @@ candidates:
     shared_endpoints:
       - cnect-aioffice@ec.europa.eu
     name_similarity: 0.063
-  - key: eu-european-commission-executive-vice-president-tech--eu-european-commission-have-your-say-consultation
+  - key: eu-european-commission-executive-vice-president-tech--eu-european-commission-have-your-say-portal
     left:
       id: eu-european-commission-executive-vice-president-tech
       section: bodies
       name: European Commission — Executive Vice-President for Tech Sovereignty, Security and Democracy
-      country: eu
-      sub: null
-    right:
-      id: eu-european-commission-have-your-say-consultation
-      section: bodies
-      name: European Commission — 'Have your say' consultation portal
-      country: eu
-      sub: null
-    severity: low
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - europa.eu
-    shared_endpoints:
-      - https://ec.europa.eu/info/law/better-regulation/have-your-say
-    name_similarity: 0.125
-  - key: eu-european-commission-have-your-say-consultation--eu-european-commission-have-your-say-portal
-    left:
-      id: eu-european-commission-have-your-say-consultation
-      section: bodies
-      name: European Commission — 'Have your say' consultation portal
       country: eu
       sub: null
     right:
@@ -1252,11 +427,12 @@ candidates:
     severity: low
     signals:
       - shared-official-domain
-      - high-name-similarity
+      - shared-endpoint
     shared_domains:
       - europa.eu
-    shared_endpoints: []
-    name_similarity: 0.857
+    shared_endpoints:
+      - https://ec.europa.eu/info/law/better-regulation/have-your-say
+    name_similarity: 0.133
   - key: eu-european-parliament-committee-civil-liberties--eu-european-parliament-committee-petitions
     left:
       id: eu-european-parliament-committee-civil-liberties
@@ -1268,28 +444,6 @@ candidates:
       id: eu-european-parliament-committee-petitions
       section: bodies
       name: European Parliament Committee on Petitions (PETI)
-      country: eu
-      sub: null
-    severity: low
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - europa.eu
-    shared_endpoints:
-      - https://www.europarl.europa.eu/petitions/en/home
-    name_similarity: 0.308
-  - key: eu-european-parliament-committee-civil-liberties--eu-european-parliament-committee-petitions-2
-    left:
-      id: eu-european-parliament-committee-civil-liberties
-      section: bodies
-      name: European Parliament Committee on Civil Liberties, Justice and Home Affairs (LIBE)
-      country: eu
-      sub: null
-    right:
-      id: eu-european-parliament-committee-petitions-2
-      section: bodies
-      name: European Parliament — Committee on Petitions (PETI)
       country: eu
       sub: null
     severity: low
@@ -1385,72 +539,6 @@ candidates:
     shared_endpoints:
       - https://committees.parliament.uk/committee/170/communications-and-digital-committee
     name_similarity: 0.333
-  - key: gb-house-lords-communications-digital-committee-2--gb-house-lords-dedicated-ai-select-committee
-    left:
-      id: gb-house-lords-communications-digital-committee-2
-      section: bodies
-      name: House of Lords Communications and Digital Committee
-      country: gb
-      sub: null
-    right:
-      id: gb-house-lords-dedicated-ai-select-committee
-      section: bodies
-      name: House of Lords — dedicated AI select committee (status check)
-      country: gb
-      sub: null
-    severity: low
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - parliament.uk
-    shared_endpoints:
-      - https://committees.parliament.uk/committee/170/communications-and-digital-committee
-    name_similarity: 0.333
-  - key: gb-ofcom--gb-ofcom-individual-complaint-about-online-service
-    left:
-      id: gb-ofcom
-      section: bodies
-      name: Ofcom (Office of Communications)
-      country: gb
-      sub: null
-    right:
-      id: gb-ofcom-individual-complaint-about-online-service
-      section: channels
-      name: Ofcom — individual complaint about an online service
-      country: gb
-      sub: null
-    severity: low
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - ofcom.org.uk
-    shared_endpoints:
-      - https://www.ofcom.org.uk/make-a-complaint
-    name_similarity: 0.1
-  - key: global-anthropic-responsible-disclosure-policy-usersafety-anthropic--us-anthropic
-    left:
-      id: global-anthropic-responsible-disclosure-policy-usersafety-anthropic
-      section: channels
-      name: Anthropic Responsible Disclosure Policy / usersafety@anthropic.com
-      country: global
-      sub: null
-    right:
-      id: us-anthropic
-      section: channels
-      name: Anthropic
-      country: us
-      sub: null
-    severity: low
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - anthropic.com
-    shared_endpoints:
-      - https://www.anthropic.com/responsible-disclosure-policy
-    name_similarity: 0.167
   - key: global-council-europe-framework-convention-ai-committee--global-huderia
     left:
       id: global-council-europe-framework-convention-ai-committee
@@ -1473,7 +561,7 @@ candidates:
     shared_endpoints:
       - https://www.coe.int/en/web/artificial-intelligence/contact-us
     name_similarity: 0.222
-  - key: global-international-network-advanced-ai-measurement--us-centre-ai-standards-innovation-united-states
+  - key: global-international-network-advanced-ai-measurement--us-center-ai-standards-innovation
     left:
       id: global-international-network-advanced-ai-measurement
       section: bodies
@@ -1481,9 +569,9 @@ candidates:
       country: global
       sub: null
     right:
-      id: us-centre-ai-standards-innovation-united-states
+      id: us-center-ai-standards-innovation
       section: bodies
-      name: Centre for AI Standards and Innovation (CAISI) — United States, listed only to prevent acronym confusion
+      name: Center for AI Standards and Innovation (CAISI)
       country: us
       sub: federal
     severity: low
@@ -1494,29 +582,7 @@ candidates:
       - nist.gov
     shared_endpoints:
       - https://www.nist.gov/news-events/news/2026/02/international-network-advanced-ai-measurement-evaluation-and-science
-    name_similarity: 0.115
-  - key: global-openai-inbound-reporting--us-openai
-    left:
-      id: global-openai-inbound-reporting
-      section: channels
-      name: OpenAI inbound reporting (Bugcrowd bug bounty + in-product feedback)
-      country: global
-      sub: null
-    right:
-      id: us-openai
-      section: channels
-      name: OpenAI
-      country: us
-      sub: null
-    severity: low
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - openai.com
-    shared_endpoints:
-      - https://openai.com/form/model-behavior-feedback
-    name_similarity: 0.111
+    name_similarity: 0.167
   - key: ie-committee-public-petitions-ombudsmen--ie-houses-oireachtas-committee-submission-consultation-system
     left:
       id: ie-committee-public-petitions-ombudsmen
@@ -1762,28 +828,6 @@ candidates:
     shared_endpoints:
       - https://www.aisi.re.kr/eng
     name_similarity: 0.067
-  - key: kr-ai-safety-institute-2--kr-ministry-science-ict-ai-framework-act
-    left:
-      id: kr-ai-safety-institute-2
-      section: bodies
-      name: AI Safety Institute (Korea AISI)
-      country: kr
-      sub: null
-    right:
-      id: kr-ministry-science-ict-ai-framework-act
-      section: bodies
-      name: Ministry of Science and ICT (MSIT) — AI Framework Act supervisory authority
-      country: kr
-      sub: null
-    severity: low
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - aisi.re.kr
-    shared_endpoints:
-      - https://www.aisi.re.kr/eng
-    name_similarity: 0.067
   - key: kr-ministry-science-ict--kr-national-ai-committee
     left:
       id: kr-ministry-science-ict
@@ -2007,27 +1051,6 @@ candidates:
     shared_endpoints:
       - https://aimoneywatch.org/ltf
     name_similarity: 0
-  - key: us-center-ai-standards-innovation--us-centre-ai-standards-innovation-united-states
-    left:
-      id: us-center-ai-standards-innovation
-      section: bodies
-      name: Center for AI Standards and Innovation (CAISI)
-      country: us
-      sub: federal
-    right:
-      id: us-centre-ai-standards-innovation-united-states
-      section: bodies
-      name: Centre for AI Standards and Innovation (CAISI) — United States, listed only to prevent acronym confusion
-      country: us
-      sub: federal
-    severity: low
-    signals:
-      - shared-official-domain
-      - shared-acronym
-    shared_domains:
-      - nist.gov
-    shared_endpoints: []
-    name_similarity: 0.375
   - key: us-center-ai-standards-innovation--us-department-commerce-bureau-industry-security
     left:
       id: us-center-ai-standards-innovation
@@ -2204,28 +1227,6 @@ candidates:
     shared_endpoints:
       - https://www.regulations.gov/
     name_similarity: 0.077
-  - key: us-federal-trade-commission--us-us-ftc-reportfraud-ftc-gov
-    left:
-      id: us-federal-trade-commission
-      section: bodies
-      name: Federal Trade Commission (FTC)
-      country: us
-      sub: federal
-    right:
-      id: us-us-ftc-reportfraud-ftc-gov
-      section: channels
-      name: US FTC — ReportFraud.ftc.gov
-      country: us
-      sub: null
-    severity: low
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - ftc.gov
-    shared_endpoints:
-      - https://reportfraud.ftc.gov/
-    name_similarity: 0.143
   - key: us-house-commerce-finance-policy-committee--us-senate-commerce-consumer-protection-committee
     left:
       id: us-house-commerce-finance-policy-committee
@@ -2313,30 +1314,8 @@ candidates:
       - house.gov
     shared_endpoints:
       - https://science.house.gov/
-    name_similarity: 0.167
-  - key: us-house-committee-science-2--us-subcommittee-investigations-oversight
-    left:
-      id: us-house-committee-science-2
-      section: bodies
-      name: House Committee on Science, Space, and Technology
-      country: us
-      sub: federal
-    right:
-      id: us-subcommittee-investigations-oversight
-      section: bodies
-      name: Subcommittee on Investigations and Oversight
-      country: us
-      sub: federal
-    severity: low
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - house.gov
-    shared_endpoints:
-      - https://science.house.gov/
       - https://science.house.gov/members
-    name_similarity: 0.2
+    name_similarity: 0.167
   - key: us-house-economic-matters-committee--us-senate-education
     left:
       id: us-house-economic-matters-committee
@@ -2359,33 +1338,11 @@ candidates:
     shared_endpoints:
       - https://mgaleg.maryland.gov/pubs-current/current-ecm-faqs.pdf
     name_similarity: 0.1
-  - key: us-joint-committee-advanced-information-technology--us-joint-committee-economic-development-emerging-technologies-2
+  - key: us-joint-committee-advanced-information-technology--us-joint-committee-economic-development-emerging-technologies
     left:
       id: us-joint-committee-advanced-information-technology
       section: bodies
       name: Joint Committee on Advanced Information Technology, the Internet and Cybersecurity — Senate chair
-      country: us
-      sub: ma
-    right:
-      id: us-joint-committee-economic-development-emerging-technologies-2
-      section: bodies
-      name: Joint Committee on Economic Development and Emerging Technologies — House chair
-      country: us
-      sub: ma
-    severity: low
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - malegislature.gov
-    shared_endpoints:
-      - https://malegislature.gov/assets/documents/how-to-submit-testimony-v1.1.pdf
-    name_similarity: 0.313
-  - key: us-joint-committee-advanced-information-technology-2--us-joint-committee-economic-development-emerging-technologies
-    left:
-      id: us-joint-committee-advanced-information-technology-2
-      section: bodies
-      name: Joint Committee on Advanced Information Technology, the Internet and Cybersecurity — House chair
       country: us
       sub: ma
     right:
@@ -2402,7 +1359,8 @@ candidates:
       - malegislature.gov
     shared_endpoints:
       - https://malegislature.gov/Events/Hearings
-    name_similarity: 0.313
+      - https://malegislature.gov/assets/documents/how-to-submit-testimony-v1.1.pdf
+    name_similarity: 0.4
   - key: us-permanent-subcommittee-investigations--us-senate-committee-homeland-security-governmental-affairs
     left:
       id: us-permanent-subcommittee-investigations
@@ -2674,28 +1632,6 @@ candidates:
     shared_endpoints:
       - https://www.judiciary.senate.gov/about/subcommittees
     name_similarity: 0.286
-  - key: us-subcommittee-crime-counterterrorism--us-subcommittee-privacy
-    left:
-      id: us-subcommittee-crime-counterterrorism
-      section: bodies
-      name: Subcommittee on Crime and Counterterrorism
-      country: us
-      sub: federal
-    right:
-      id: us-subcommittee-privacy
-      section: bodies
-      name: Subcommittee on Privacy, Technology, and the Law
-      country: us
-      sub: federal
-    severity: low
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - senate.gov
-    shared_endpoints:
-      - https://www.judiciary.senate.gov/about/subcommittees
-    name_similarity: 0.375
   - key: us-subcommittee-cybersecurity--us-subcommittee-emerging-threats-capabilities
     left:
       id: us-subcommittee-cybersecurity
@@ -2787,25 +1723,3 @@ candidates:
       - https://www.banking.senate.gov/
       - https://www.banking.senate.gov/about/membership
     name_similarity: 0.2
-  - key: us-subcommittee-intellectual-property--us-subcommittee-privacy
-    left:
-      id: us-subcommittee-intellectual-property
-      section: bodies
-      name: Subcommittee on Intellectual Property
-      country: us
-      sub: federal
-    right:
-      id: us-subcommittee-privacy
-      section: bodies
-      name: Subcommittee on Privacy, Technology, and the Law
-      country: us
-      sub: federal
-    severity: low
-    signals:
-      - shared-official-domain
-      - shared-endpoint
-    shared_domains:
-      - senate.gov
-    shared_endpoints:
-      - https://www.judiciary.senate.gov/about/subcommittees
-    name_similarity: 0.25

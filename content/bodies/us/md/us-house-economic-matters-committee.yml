@@ -39,6 +39,9 @@ facts:
     topics:consumer-protection: House committee of reference for AI consumer-protection, surveillance-pricing
     powers:legislate: House committee of reference for AI consumer-protection, surveillance-pricing
   routing_review: drafted
+  entity_key: entity-5b6dec1c-ff97-4fae-a028-2ac461302d56
+  roles:
+    - seat
 strings:
   name: House Economic Matters Committee
   ai_jurisdiction: House committee of reference for AI consumer-protection, surveillance-pricing, business-regulation and technology-commerce bills. 19 members appointed by the Speaker.

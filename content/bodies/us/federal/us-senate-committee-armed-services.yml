@@ -45,6 +45,9 @@ facts:
     topics:export-controls: The Senate NDAA process has also been the vehicle for tightening AI chip export controls.
     powers:legislate: through the NDAA, the one must-pass annual vehicle that reliably carries AI policy
   routing_review: drafted
+  entity_key: entity-98dffd62-1742-4c65-ae47-5864a10f5e06
+  roles:
+    - seat
 strings:
   name: Senate Committee on Armed Services
   ai_jurisdiction: "Military AI and, through the NDAA, the one must-pass annual vehicle that reliably carries AI policy. Send here: autonomous weapons, AI in nuclear command and control, DoD AI adoption and the Chief Digital and AI Office, DARPA, military AI testing and evaluation, AI-enabled cyber operations, and DoD compute and data-center buildout. Also covers the nuclear weapons parts of the Department of Energy."

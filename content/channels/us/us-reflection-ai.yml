@@ -78,6 +78,9 @@ facts:
   contact_disposition: reclassify
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-22af3538-3b19-4689-8632-0877bcfd7087
+  roles:
+    - company
 strings:
   name: Reflection AI
   remit: No publicly named safety or alignment function and no published safety framework, despite positioning as an open frontier lab.

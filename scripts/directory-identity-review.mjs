@@ -63,7 +63,7 @@ export function validateIdentityDecisions({ inventory, ledger, records, now = to
     if (candidate.severity === 'high' && (!row || row.decision === 'pending')) errors.push(`candidate ${candidate.key}: high-confidence candidate needs a current decision`);
   }
 
-  const resolved = [...decisions.values()].filter(row => row.decision !== 'pending').length;
+  const resolved = [...candidates.keys()].filter(key => decisions.has(key) && decisions.get(key).decision !== 'pending').length;
   return {
     errors, warnings,
     totals: { candidates: candidates.size, decisions: decisions.size, resolved, unresolved: candidates.size - resolved }

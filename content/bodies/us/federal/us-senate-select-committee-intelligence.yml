@@ -45,6 +45,9 @@ facts:
     topics:whistleblowing: This committee also operates the statutory Intelligence Community whistleblower channel
     powers:legislate: The committee's AI work is carried in the annual Intelligence Authorization Act.
   routing_review: drafted
+  entity_key: entity-73ae91cb-a2cd-4701-9b64-2e8d2d35bef1
+  roles:
+    - seat
 strings:
   name: Senate Select Committee on Intelligence
   ai_jurisdiction: "Intelligence Community use of AI and AI as an intelligence target. Send here: IC adoption of frontier models, AI in signals and open-source intelligence, foreign adversary AI capabilities assessments, AI-enabled foreign influence operations, and counterintelligence risk to US AI labs (including insider threat and foreign talent access). Proceedings are largely classified, so the public route is narrow and mostly one-way."

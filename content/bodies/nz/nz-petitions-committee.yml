@@ -35,6 +35,9 @@ facts:
     powers:hold-hearings: invite the petitioner to speak in person
     powers:publish: The committee either publishes a report to Parliament on every petition it considers
   routing_review: drafted
+  entity_key: entity-4e8a6d3e-e4b1-4a95-a16b-4717634e5ae0
+  roles:
+    - seat
 strings:
   name: Petitions Committee (54th Parliament)
   ai_jurisdiction: No AI subject matter of its own, but it is the door through which a member of the public — including a single individual — puts a new issue such as AI regulation onto Parliament's agenda when no inquiry is open. It can refer a petition to a subject committee such as Economic Development, Science and Innovation, refer it to a Minister for response, or nominate it for debate in the House.

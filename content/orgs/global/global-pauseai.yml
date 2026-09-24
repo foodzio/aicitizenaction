@@ -40,10 +40,26 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 2aefe1643028
+    - id: action
+      type: action
+      value: https://pauseai.info/action
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 73e0dfa6dc4c
   region: Global
   public_input: open
   tags:
     - research
+    - join
+    - law
+    - tip
+  perspective: safety-advocacy
+  volunteers: yes
+  entity_key: entity-439bef0b-78e2-42c4-afe8-7acf059b3a17
+  roles:
+    - civil-society
+    - organisation
 strings:
   name: PauseAI
   remit: Volunteer grassroots movement calling for a halt to development of the most powerful general AI systems until safety is assured, and for 'a prohibition on the development of superintelligence, not lifted before there is broad scientific consensus'. Organises protests, lobbying days, letter-writing and local meetups; maintains extensive public explainer material.
@@ -67,6 +83,16 @@ strings:
       note: No public email address is listed.
     homepage:
       label: Homepage
+    action:
+      label: Action page
+  the_ask: Stop the development of the most powerful general AI systems, internationally, until we know how to make them safe.
+  what_they_do: Federation of local chapters coordinated by a global entity; petitions, protests, an email-your-representative builder, lobbying guides, 'microcommits' (weekly bite-sized actions), microgrants and volunteer stipends.
+  newcomer_action: Sign the PauseAI statement and the 'Say No To Superintelligent AI' petition (5 minutes), join the Discord, then use the email builder to write to your representative.
+  tips: No formal tip line; contact form and Discord
+  geography: International. Legally Stichting PauseAI (KvK 92951031), Netherlands. Local communities in many countries.
+  scale: Small paid core (CEO, Organizing Director, Communications Director; chapter directors paid by PauseAI Global) plus a large volunteer base. Budget not published.
+  spending: Not disclosed. Accepts donations at pauseai.info/donate.
+  caution: The ask is a halt to frontier development, not tighter rules. Protest-based but explicitly lawful — distinct from StopAI. Chapters vary a lot in activity; check your local one is alive before committing.
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
@@ -79,8 +105,85 @@ meta:
       checked: 2026-09-22
     - url: https://pauseai.info/contact-us
       checked: 2026-09-22
+    - url: https://pauseai.info/action
+      checked: 2026-09-22
   needs_research:
     - topics
   legacy_id: 57d1c13269
   research_order: 127
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - 57d1c13269
+    - 69e2e6158a
+  aliases:
+    - global-pauseai-2
+    - PauseAI (PauseAI Global)
+  redirect_from:
+    - section: orgs
+      id: global-pauseai-2
+  identity_review:
+    evidence_urls:
+      - https://discord.gg/2XXWXvErfA
+      - https://pauseai.info/action
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: global-pauseai
+        source_url: https://discord.gg/2XXWXvErfA
+        checked_on: 2026-09-22
+      - &a2
+        record_id: global-pauseai-2
+        source_url: https://pauseai.info/action
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+    facts.public_input:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+    strings.threat_model:
+      - *a1
+    strings.reality_check:
+      - *a1
+    strings.gov_channel:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.perspective:
+      - *a2
+    facts.volunteers:
+      - *a2
+    strings.the_ask:
+      - *a2
+    strings.what_they_do:
+      - *a2
+    strings.newcomer_action:
+      - *a2
+    strings.tips:
+      - *a2
+    strings.geography:
+      - *a2
+    strings.scale:
+      - *a2
+    strings.spending:
+      - *a2
+    strings.caution:
+      - *a2

@@ -62,6 +62,9 @@ facts:
     powers:fine: impose civil money penalties
     powers:handle-complaints: Patients and clinicians can report harm from an AI-enabled device.
   routing_review: drafted
+  entity_key: entity-e07e4732-537d-4131-81d1-ad2489248dbb
+  roles:
+    - government
 strings:
   name: U.S. Food and Drug Administration (FDA) — Center for Devices and Radiological Health / Digital Health Center of Excellence
   remit: Regulates AI/ML-enabled medical devices and Software as a Medical Device. Can require premarket clearance (510(k)), De Novo or PMA approval; mandates Predetermined Change Control Plans for adaptive models; can order recalls, issue warning letters, and impose civil money penalties. Runs a Digital Health Advisory Committee. In Aug 2026 it opened a major consultation on how to regulate GENERATIVE AI-enabled devices, including foundation models and agentic AI systems.

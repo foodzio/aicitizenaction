@@ -31,6 +31,9 @@ facts:
   tags:
     - law
     - research
+  entity_key: entity-a958d944-1447-49ac-815e-f9d4f75b30d0
+  roles:
+    - academic
 strings:
   name: Institute for AI International Governance (I-AIIG), Tsinghua University
   remit: Tsinghua's AI governance research institute. Conducts research on AI governance frameworks and international cooperation, hosts the International AI Cooperation and Governance Forum, runs talent programmes (including the AI for SDGs Global Youth competition), publishes annual reports and academic work, and coordinates with UN agencies and foreign governments. Tsinghua also hosts the Center for International Security and Strategy (CISS), which does AI-and-security track-II work, and co-launched a UNU Hub on ethical and responsible AI.

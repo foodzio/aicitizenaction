@@ -51,6 +51,9 @@ facts:
     powers:legislate: Primary Assembly committee of first referral for AI, algorithmic decision-making, chatbot, data-privacy and AI-transparency bills
     powers:hold-hearings: In-person testimony at the hearing is open
   routing_review: drafted
+  entity_key: entity-34da1192-38d9-4c41-a746-37189174f3ed
+  roles:
+    - seat
 strings:
   name: Assembly Committee on Privacy and Consumer Protection
   ai_jurisdiction: Primary Assembly committee of first referral for AI, algorithmic decision-making, chatbot, data-privacy and AI-transparency bills (e.g. SB 53, AB 1064, AB 1018, companion-chatbot bills). Also runs a joint hearing track with the Select Committee on Biotechnology and Medical Technology on AI in health.

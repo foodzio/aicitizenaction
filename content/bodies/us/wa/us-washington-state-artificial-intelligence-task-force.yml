@@ -33,6 +33,9 @@ facts:
     powers:advise: assessing AI use across sectors and recommending legislation
     powers:publish: Final Report issued July 2026, containing 11 policy recommendations
   routing_review: drafted
+  entity_key: entity-0b16490b-88b0-4b43-8e3a-ee923d13bdf8
+  roles:
+    - seat
 strings:
   name: Washington State Artificial Intelligence Task Force (Office of the Attorney General)
   ai_jurisdiction: Statutory 19-member task force created by ESSB 5838 (2024), housed in the AG's Office, assessing AI use across sectors and recommending legislation.

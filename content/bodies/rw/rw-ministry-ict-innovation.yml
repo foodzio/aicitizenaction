@@ -34,6 +34,9 @@ facts:
   tags:
     - harm
     - systemic
+  entity_key: entity-858b8b5e-ef2c-4594-b333-11ee9cda98fb
+  roles:
+    - government
 strings:
   name: Ministry of ICT and Innovation (MINICT)
   remit: Owns Rwanda's National AI Policy, approved by Cabinet in April 2023 — one of the first in Africa, developed with The Future Society and GIZ. Policy/strategy body coordinating AI adoption, skills, data infrastructure and an AI ethics framework; implementation runs through the Rwanda Information Society Authority and the National Cyber Security Authority. Rwanda has hosted the Global AI Summit on Africa and is active in continental AI diplomacy. No AI-specific enforcement powers; data protection sits under Rwanda's 2021 DPP law with the NCSA.

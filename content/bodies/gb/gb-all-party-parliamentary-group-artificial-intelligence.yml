@@ -33,6 +33,9 @@ facts:
     powers:convene: it convenes ministers, officials and MPs
     powers:publish: publishes reports
   routing_review: drafted
+  entity_key: entity-436e2b87-1e4d-4b89-a363-84505629e986
+  roles:
+    - seat
 strings:
   name: All-Party Parliamentary Group on Artificial Intelligence (APPG AI)
   ai_jurisdiction: "Cross-party, cross-House informal group. Its registered purpose: 'The APPG explores the social, economic and societal impact and implications of artificial intelligence.' It has no formal powers but it convenes ministers, officials and MPs, runs evidence sessions and publishes reports — and unlike a select committee it is genuinely open to unsolicited outside contact."

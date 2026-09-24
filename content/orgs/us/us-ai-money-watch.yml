@@ -19,6 +19,9 @@ facts:
     - join
     - law
     - tip
+  entity_key: entity-40a79bb0-a3f7-4701-ada0-08136d19bb23
+  roles:
+    - organisation
 strings:
   name: AI Money Watch (a project of Demand Progress)
   the_ask: Make AI industry political spending visible, so voters can see who is paying for which candidate.

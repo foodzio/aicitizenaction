@@ -1,7 +1,9 @@
 id: why-write-to-a-committee
 facts:
-  topics: [frontier-ai]
-  bodies: [us-senate-committee-commerce-2]
+  topics:
+    - frontier-ai
+  bodies:
+    - us-senate-committee-commerce
   action:
     outcome: law
   reading_minutes: 3

@@ -45,6 +45,9 @@ facts:
   tags:
     - law
     - research
+  entity_key: entity-efdd31a5-6847-426f-b682-923e18821b7d
+  roles:
+    - academic
 strings:
   name: Stanford Institute for Human-Centered AI (HAI)
   remit: University institute spanning research, policy and education. Publishes the AI Index (the most-cited annual measurement of AI progress, with the Global Vibrancy Tool), policy briefs, and runs policymaker education including Congressional Boot Camps for members and staff. Houses CRFM (see separate entry) and a large fellowship and seed-grant programme.

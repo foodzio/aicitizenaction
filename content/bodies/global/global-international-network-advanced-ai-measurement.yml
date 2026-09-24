@@ -37,6 +37,9 @@ facts:
     powers:convene: Coordination runs through whichever member hosts a convening
     powers:publish: Publishes joint technical outputs (e.g. Feb 2026 consensus areas on automated evaluations).
   routing_review: drafted
+  entity_key: entity-733a4c60-6e6e-4dbd-8463-549ff8a96841
+  roles:
+    - government
 strings:
   name: International Network for Advanced AI Measurement, Evaluation and Science (NAAIMES) — formerly the International Network of AI Safety Institutes
   remit: "Intergovernmental network of state AI evaluation bodies. Renamed in December 2025 from 'International Network of AI Safety Institutes' — the word 'safety' was dropped in favour of 'measurement, evaluation and science'. Verified membership as of 2026: Australia, Canada, European Union, France, Japan, Kenya, Republic of Korea, Singapore, United Kingdom, United States. NOTE: India, Italy, Spain, Netherlands, Ireland, Switzerland and China are NOT members. Publishes joint technical outputs (e.g. Feb 2026 consensus areas on automated evaluations). No treaty basis, no legal personality."

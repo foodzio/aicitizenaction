@@ -37,6 +37,9 @@ facts:
     topics:safety-testing: independent third-party safety audits of frontier developers
     powers:legislate: Primary House committee for AI, data privacy, algorithmic systems and social-media bills
   routing_review: drafted
+  entity_key: entity-41a82244-99af-4c5b-9524-4c8f5977672e
+  roles:
+    - seat
 strings:
   name: House Committee on Cybersecurity, Data Analytics, & IT (with its Artificial Intelligence Subcommittee, HCDA-HAIE)
   ai_jurisdiction: "Primary House committee for AI, data privacy, algorithmic systems and social-media bills. Has three standing subcommittees: Artificial Intelligence (HAIE), Data Privacy and Analytics (HDPA), and Social Media and Content Moderation (HSMC)."

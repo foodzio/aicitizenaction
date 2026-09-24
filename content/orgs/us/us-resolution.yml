@@ -44,6 +44,9 @@ facts:
   public_input: limited
   tags:
     - research
+  entity_key: entity-72f093f7-00b2-4f46-94ec-00b4bcefc793
+  roles:
+    - civil-society
 strings:
   name: Resolution (formerly Timaeus; launched as Sequent)
   remit: Non-profit alignment research organisation formed by merging researchers from Timaeus (which pioneered applying singular learning theory to alignment and developmental interpretability) with the UK AI Security Institute's Alignment Team. Launched under the name Sequent, then rebranded to Resolution. Portfolio spans scalable oversight, learning theory (SLT, deep learning theory), mechanistic understanding and heuristic arguments, agent foundations, and model personas — with heavy investment in automating alignment research. Targeting 40–80 FTE researchers within two years.

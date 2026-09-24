@@ -53,6 +53,9 @@ facts:
     powers:test-models: "Focus areas: multilingual and multicultural testing, agentic AI testing"
     powers:set-standards: Research/standards body
   routing_review: drafted
+  entity_key: entity-644633c7-93eb-49e8-a523-f979d2a0ee2b
+  roles:
+    - government
 strings:
   name: Singapore AI Safety Institute (Singapore AISI)
   remit: "Designated May 2024. Split model: IMDA (Infocomm Media Development Authority, a statutory board) is the policy owner and handles international engagement; the Digital Trust Centre (DTC), hosted at Nanyang Technological University, executes the technical work. Focus areas: multilingual and multicultural testing, agentic AI testing, societal-impact studies, international partnerships. Research/standards body — the institute itself has no enforcement power, though IMDA as a statutory board has regulatory powers in adjacent media/telecom domains."

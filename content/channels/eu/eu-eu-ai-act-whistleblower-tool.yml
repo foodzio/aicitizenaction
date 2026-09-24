@@ -54,6 +54,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-8c979518-d190-4ab9-98c9-c90cce49b6d3
+  roles:
+    - reporting-channel
 strings:
   name: EU AI Act Whistleblower Tool (AI Office)
   remit: Reports of harmful practices or other AI Act violations, from 'individuals who are professionally connected to providers of general-purpose AI (GPAI) models or of AI systems' within the AI Office's enforcement scope. Supporting documents may be attached.

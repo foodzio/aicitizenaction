@@ -60,6 +60,9 @@ facts:
   contact_disposition: reclassify
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-466e625a-b4b2-4ddd-ad3e-7fc9abc700b1
+  roles:
+    - company
 strings:
   name: G42
   remit: Publishes a Frontier AI Safety Framework as part of the Seoul/Korea frontier safety commitments; no named external-facing safety office.

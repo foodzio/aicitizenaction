@@ -37,6 +37,9 @@ facts:
   public_input: limited
   tags:
     - research
+  entity_key: entity-bb1b7a01-022f-4139-822a-d469c94a63da
+  roles:
+    - academic
 strings:
   name: Leverhulme Centre for the Future of Intelligence (LCFI), University of Cambridge
   remit: Highly interdisciplinary centre — philosophy, computer science, law, politics, history, design — examining how AI reshapes human futures. Projects span AI ethics and narratives, kinds of intelligence, AI and gender/race, the political economy of AI, and AI in the arts. Now part of the Institute for Technology and Humanity.

@@ -26,12 +26,27 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: e3db0eb0ea1a
+    - id: action
+      type: action
+      value: https://www.citizen.org/topic/artificial-intelligence/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: ad7f4231e3ed
   region: United States
   public_input: open
   tags:
     - harm
     - law
     - research
+    - audit
+    - join
+  perspective: civil-liberties
+  volunteers: yes
+  entity_key: entity-89ec4c3d-3eed-44f8-b444-4b38ded0f24f
+  roles:
+    - civil-society
+    - organisation
 strings:
   name: Public Citizen
   remit: Consumer advocacy organisation. AI work covers generative AI risks to consumers and democracy, model state AI legislation, campaigns against non-consensual deepfakes and political deepfakes, data-centre environmental and utility-cost impacts, AI companion products aimed at minors, and opposition to federal preemption of state AI laws. Maintains a tracker of state deepfake legislation.
@@ -48,6 +63,16 @@ strings:
       scope: Anyone
     homepage:
       label: Homepage
+    action:
+      label: Action page
+  the_ask: "Treat generative AI as a present danger: block federal deregulation and pre-emption of state AI laws, stop non-consensual AI images, and halt unchecked data centre build-out."
+  what_they_do: Consumer advocacy, litigation and petitions. Live campaigns include a petition against congressional AI deregulation, a petition on non-consensual AI images, and a letter urging a Texas data centre moratorium.
+  newcomer_action: Sign the petition against congressional AI deregulation (act.citizen.org/page/83712/petition/1) — it takes two minutes — and join the updates list.
+  tips: unclear — no dedicated AI whistleblower line found
+  geography: United States, federal and state.
+  scale: Large, long-established (founded 1971) with lobbying, litigation and research arms.
+  spending: Member and donation funded.
+  caution: Frames AI harm as consumer, labour and democratic harm happening now — it is generally dismissive of framing centred on future superintelligence. If you arrived via extinction-risk arguments, expect a different vocabulary.
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
@@ -56,8 +81,85 @@ meta:
       checked: 2026-09-22
     - url: https://act.citizen.org/
       checked: 2026-09-22
+    - url: https://www.citizen.org/topic/artificial-intelligence/
+      checked: 2026-09-22
   needs_research:
     - topics
   legacy_id: 9463478f1d
   research_order: 120
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - 9463478f1d
+    - 341301b009
+  aliases:
+    - us-public-citizen-2
+    - Public Citizen
+  redirect_from:
+    - section: orgs
+      id: us-public-citizen-2
+  identity_review:
+    evidence_urls:
+      - https://www.citizen.org/about/contact/
+      - https://www.citizen.org/topic/artificial-intelligence/
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: us-public-citizen
+        source_url: https://www.citizen.org/about/contact/
+        checked_on: 2026-09-22
+      - &a2
+        record_id: us-public-citizen-2
+        source_url: https://www.citizen.org/topic/artificial-intelligence/
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+    facts.public_input:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+    strings.threat_model:
+      - *a1
+    strings.reality_check:
+      - *a1
+    strings.gov_channel:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.perspective:
+      - *a2
+    facts.volunteers:
+      - *a2
+    strings.the_ask:
+      - *a2
+    strings.what_they_do:
+      - *a2
+    strings.newcomer_action:
+      - *a2
+    strings.tips:
+      - *a2
+    strings.geography:
+      - *a2
+    strings.scale:
+      - *a2
+    strings.spending:
+      - *a2
+    strings.caution:
+      - *a2

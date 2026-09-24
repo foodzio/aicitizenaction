@@ -17,6 +17,9 @@ facts:
   tags:
     - join
     - law
+  entity_key: entity-693a8eff-4862-4898-b31e-0e0c4ffdc9b5
+  roles:
+    - organisation
 strings:
   name: Common Sense Media
   the_ask: Children should be protected from unsafe AI — independent risk ratings for AI products, and states must keep the power to pass their own children's AI safety laws.

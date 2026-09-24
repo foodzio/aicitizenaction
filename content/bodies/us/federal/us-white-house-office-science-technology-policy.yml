@@ -51,6 +51,9 @@ facts:
   routing_evidence:
     powers:advise: Advises the President on science and technology
   routing_review: drafted
+  entity_key: entity-e8b45ebf-9dc0-4078-a33a-7df6891ec383
+  roles:
+    - government
 strings:
   name: White House Office of Science and Technology Policy (OSTP)
   remit: Advises the President on science and technology; co-ordinates federal AI policy including America's AI Action Plan (July 2025) and implementation of EO 14179 ('Removing Barriers to American Leadership in AI'). Runs the National AI Initiative Office and co-chairs the NSTC machinery. Issues RFIs on AI strategy and the AI R&D Strategic Plan. It has NO regulatory authority — it directs agencies, it does not bind the public.

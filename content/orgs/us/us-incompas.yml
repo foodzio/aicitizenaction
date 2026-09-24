@@ -17,6 +17,9 @@ facts:
   tags:
     - join
     - opposition
+  entity_key: entity-86e93365-7ac7-4910-a4bc-62b8bcf0b609
+  roles:
+    - organisation
 strings:
   name: INCOMPAS
   the_ask: Clear the way for AI infrastructure — faster siting and permitting for data centres, fibre, subsea cables and power — under 'responsible and innovative AI policy'.

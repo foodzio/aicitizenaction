@@ -62,6 +62,9 @@ facts:
     powers:investigate: IDHR investigates charges
     powers:handle-complaints: this is a functioning complaint route
   routing_review: drafted
+  entity_key: entity-15dbdf79-291f-4b3a-9bad-f63998edffcc
+  roles:
+    - government
 strings:
   name: Illinois Department of Human Rights (IDHR)
   remit: Enforces the Illinois Human Rights Act as amended by HB 3773 (effective 1 January 2026), which makes it a civil rights violation for an employer to use AI that discriminates on a protected characteristic, or to use zip code as a proxy for a protected class, and requires notice to employees and applicants when AI is used in employment decisions. IDHR investigates charges, makes substantial-evidence determinations, and cases proceed to the Illinois Human Rights Commission or to circuit court. Illinois also has BIPA (private right of action) and an AI Video Interview Act.

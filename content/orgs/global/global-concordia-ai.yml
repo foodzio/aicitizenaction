@@ -12,6 +12,45 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 9a07fb4bab06
+    - id: general-enquiries
+      type: email
+      value: info@concordia-ai.com
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en, zh
+      source_id: 116411fcba80
+    - id: contact-form
+      type: form
+      value: https://concordia-ai.com/contact/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: 1b7877173d95
+    - id: state-ai-safety-china
+      type: consultation
+      value: https://aisafetychina.com/
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: 00c85c9fff01
+    - id: chinese-perspectives-ai-safety
+      type: consultation
+      value: https://chineseperspectives.ai/About
+      verified: false
+      verification_method: secondary_citation
+      verified_on: null
+      language: en
+      source_id: bd2e173c93c4
+    - id: homepage
+      type: homepage
+      value: https://concordia-ai.com/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: c4df734c93c3
   perspective: safety-advocacy
   volunteers: no
   tags:
@@ -19,6 +58,25 @@ facts:
     - join
     - law
     - tip
+    - harm
+    - systemic
+  local_name: "安远AI (registered entity: 北京谋远咨询有限公司)"
+  region: China
+  public_input: open
+  topics:
+    - frontier-ai
+    - international
+  powers:
+    - publish
+  routing_evidence:
+    topics:frontier-ai: Frontier AI risks including loss of control, CBRN and cyber misuse
+    topics:international: framed through international coordination
+    powers:publish: it publishes the 'State of AI Safety in China' report series
+  routing_review: drafted
+  entity_key: entity-7f0d4377-8032-4154-981b-05a810734685
+  roles:
+    - organisation
+    - government
 strings:
   name: Concordia AI
   the_ask: Build AI safety capacity and international coordination in and with China — better risk monitoring, standards input and cross-border dialogue.
@@ -32,14 +90,125 @@ strings:
   routes:
     action:
       label: Action page
+    general-enquiries:
+      label: General enquiries
+      scope: general
+      note: VERIFIED — published on concordia-ai.com and fetched.
+    contact-form:
+      label: Contact form
+      scope: general
+      note: VERIFIED — published on the homepage.
+    state-ai-safety-china:
+      label: State of AI Safety in China
+      scope: publications
+      note: UNVERIFIED (search result).
+    chinese-perspectives-ai-safety:
+      label: Chinese Perspectives on AI Safety (translations)
+      scope: translations
+      note: UNVERIFIED (search result).
+    homepage:
+      label: Homepage
+  remit: "NOT a government body. A social enterprise 'dedicated to advancing global AI safety and governance', with offices in Beijing and Singapore. It is the de facto bridge organisation between the Chinese and international AI safety communities: it publishes the 'State of AI Safety in China' report series and the AI Safety in China newsletter, co-authored the Frontier AI Risk Management Framework with Shanghai AI Lab, and runs the Chinese Perspectives on AI Safety translation project. Included here because for most outsiders it is the only functioning entry point to Chinese AI safety governance."
+  powers_text: research
+  threat_model: Frontier AI risks including loss of control, CBRN and cyber misuse, framed through international coordination — with the specific thesis that US-China mutual understanding is a precondition for any effective global regime.
+  reality_check: "The single most reliable route for a non-Chinese-speaker trying to understand or engage with Chinese AI governance. English-language, responsive, explicitly international in mission. The caveat is the obvious one: it is a private organisation with no authority, cannot transmit complaints to Chinese regulators, and its access depends on remaining uncontroversial with Chinese authorities. Use it for understanding, not for redress."
+  notes: Category is marked 'government' only because the output schema requires that field; this organisation is explicitly non-governmental.
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
   sources:
     - url: https://concordia-ai.com/contact/
       checked: 2026-09-22
+    - url: https://concordia-ai.com/contact/
+      checked: 2026-09-22
   needs_research:
-    - topics
+    - not_topics
   legacy_id: 492cdad88a
   research_order: 15
   migrated_from: input/data/committees-and-organisations.json#orgs
+  legacy_ids:
+    - 492cdad88a
+    - a14c1cab7b
+  aliases:
+    - cn-concordia-ai
+    - Concordia AI
+  redirect_from:
+    - section: bodies
+      id: cn-concordia-ai
+  identity_review:
+    evidence_urls:
+      - https://concordia-ai.com/contact/
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: global-concordia-ai
+        source_url: https://concordia-ai.com/contact/
+        checked_on: 2026-09-22
+      - &a2
+        record_id: cn-concordia-ai
+        source_url: https://concordia-ai.com/contact/
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.perspective:
+      - *a1
+    facts.volunteers:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.the_ask:
+      - *a1
+    strings.what_they_do:
+      - *a1
+    strings.newcomer_action:
+      - *a1
+    strings.tips:
+      - *a1
+    strings.geography:
+      - *a1
+    strings.scale:
+      - *a1
+    strings.spending:
+      - *a1
+    strings.caution:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.local_name:
+      - *a2
+    facts.region:
+      - *a2
+    facts.public_input:
+      - *a2
+    facts.topics:
+      - *a2
+    facts.powers:
+      - *a2
+    facts.routing_evidence:
+      - *a2
+    facts.routing_review:
+      - *a2
+    strings.remit:
+      - *a2
+    strings.powers_text:
+      - *a2
+    strings.threat_model:
+      - *a2
+    strings.reality_check:
+      - *a2
+    strings.notes:
+      - *a2

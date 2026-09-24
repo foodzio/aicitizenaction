@@ -37,6 +37,9 @@ facts:
   public_input: limited
   tags:
     - research
+  entity_key: entity-f03a8cfb-87c7-4e9b-9b2d-0860cc1aaa6c
+  roles:
+    - academic
 strings:
   name: Stanford Center for Research on Foundation Models (CRFM)
   remit: Interdisciplinary centre spanning 10+ Stanford departments. Coined the term 'foundation models'. Outputs include HELM (Holistic Evaluation of Language Models — a widely used open benchmark suite), the Foundation Model Transparency Index (FMTI, which grades developers on transparency), Ecosystem Graphs, and Levanter. Works across technical foundations, beneficial applications, societal impact (transparency, openness, copyright, privacy, systemic risk) and AI policy.

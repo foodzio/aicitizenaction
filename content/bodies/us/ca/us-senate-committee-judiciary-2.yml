@@ -50,6 +50,9 @@ facts:
     powers:legislate: Senate committee of first referral for frontier-AI safety, liability, digital replica, civil-rights and privacy AI bills
     powers:hold-hearings: "Deadline: 12:00 p.m. the Tuesday before the hearing unless otherwise stated."
   routing_review: drafted
+  entity_key: entity-fa68e2bb-6b30-4731-8207-9a4d349c36f0
+  roles:
+    - seat
 strings:
   name: Senate Committee on Judiciary
   ai_jurisdiction: Senate committee of first referral for frontier-AI safety, liability, digital replica, civil-rights and privacy AI bills. SB 53's Senate policy vehicle.

@@ -86,6 +86,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-9e0630a1-39b6-4d82-8845-448cc7c51f0c
+  roles:
+    - company
 strings:
   name: Scale AI
   remit: Safety, Evaluations and Alignment Lab (SEAL) produces third-party model evaluations and red-teaming for other developers; internally a trust/security function runs disclosure.

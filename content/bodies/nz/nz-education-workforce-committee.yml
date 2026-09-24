@@ -40,6 +40,9 @@ facts:
     powers:oversee: Bills, estimates and annual reviews referred by the House
     powers:publish: It has produced MPs' reporting on AI and business returns.
   routing_review: drafted
+  entity_key: entity-4fc87021-0101-44c6-bbd6-2902478e31fa
+  roles:
+    - seat
 strings:
   name: Education and Workforce Committee (54th Parliament)
   ai_jurisdiction: "Remit: 'education, training, employment, immigration, industrial relations, health and safety, and accident compensation.' This is where AI's labour-market effects land in New Zealand — automation and job displacement, AI in workplaces and workplace surveillance, and AI in education and training. It has produced MPs' reporting on AI and business returns."

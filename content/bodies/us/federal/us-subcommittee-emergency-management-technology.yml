@@ -41,6 +41,9 @@ facts:
   routing_evidence:
     topics:government-use: the venue for DHS's own use of AI
   routing_review: drafted
+  entity_key: entity-a14b5da2-1b95-47a5-8495-dbc5696085b7
+  roles:
+    - seat
 strings:
   name: Subcommittee on Emergency Management and Technology
   ai_jurisdiction: DHS Science and Technology Directorate, FEMA, and department-wide technology adoption — the venue for DHS's own use of AI, AI in emergency response, and DHS AI research programs.

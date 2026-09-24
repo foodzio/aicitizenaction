@@ -54,6 +54,9 @@ facts:
     powers:legislate: first federal AI duty-of-care/product-liability bill, referred to this committee
     powers:hold-hearings: Hearing 'Examining the Harm of AI Chatbots'
   routing_review: drafted
+  entity_key: entity-1040912b-ef25-4b9a-9a09-825bed046dc6
+  roles:
+    - seat
 strings:
   name: Senate Committee on the Judiciary
   ai_jurisdiction: "Rights, remedies and law enforcement. Send here: whether AI companies can be sued (duty of care, product liability, Section 230), AI and copyright/right of publicity, AI-generated CSAM and deepfakes as crimes, DOJ and FBI use of AI, antitrust in AI and cloud/compute markets, AI and immigration adjudication, and constitutional/civil-liberties questions. This is the liability door; Commerce is the regulation door."

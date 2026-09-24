@@ -27,6 +27,9 @@ facts:
     - role: chair
       name: Niamh Smyth
       verified_on: 2026-09-22
+  entity_key: entity-e44ba495-e4a0-47a1-9977-d6bb71f10ed2
+  roles:
+    - seat
 strings:
   name: Government of Ireland — Minister of State with the AI brief, Department of Enterprise, Tourism and Employment
   ai_jurisdiction: The Irish ministerial holder engaging the Oireachtas AI committee. Ireland's AI policy sits in the Department of Enterprise, Tourism and Employment, which is also the department that leads on EU AI Act implementation and the designation of national competent authorities.

@@ -38,6 +38,9 @@ facts:
   tags:
     - harm
     - research
+  entity_key: entity-06ceb38d-fa87-4c2b-a8fb-b3c417eb23fc
+  roles:
+    - civil-society
 strings:
   name: EleutherAI
   remit: Grassroots-origin open research lab. Trains and releases open-source LLMs (GPT-NeoX, Pythia), maintains the LM Evaluation Harness used across the field, and researches interpretability (interpreting across training time), eliciting latent knowledge, alignment, and non-text modalities. Runs almost entirely in public on Discord.

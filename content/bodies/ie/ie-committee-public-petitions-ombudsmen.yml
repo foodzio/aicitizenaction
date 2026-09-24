@@ -34,6 +34,9 @@ facts:
   routing_evidence:
     powers:handle-complaints: A special Committee of TDs and Senators, the Committee on Public Petitions, will consider your petition.
   routing_review: drafted
+  entity_key: entity-b3633e19-f465-4047-b6b7-0c4381060e73
+  roles:
+    - seat
 strings:
   name: Committee on Public Petitions and the Ombudsmen (Houses of the Oireachtas)
   ai_jurisdiction: No AI remit of its own; it is Ireland's citizen-initiated route into the Oireachtas. An AI-related petition — on enforcement of the EU AI Act in Ireland, on data centres, on algorithmic decision-making by a public body — is considered here and can be referred onward to the Joint Committee on Artificial Intelligence.

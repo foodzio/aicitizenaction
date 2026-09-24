@@ -62,6 +62,9 @@ facts:
   contact_disposition: reclassify
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-f14f0051-9a1a-4ea8-898d-b76adc0b0eb4
+  roles:
+    - company
 strings:
   name: Magic
   remit: Published an AGI Readiness Policy — an early, small-lab equivalent of a responsible scaling policy — but has published no named safety function or external channel.

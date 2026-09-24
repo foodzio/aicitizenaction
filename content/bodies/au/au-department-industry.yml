@@ -37,6 +37,9 @@ facts:
     powers:advise: A temporary AI Expert Group advised on testing, transparency and accountability for high-risk AI.
     powers:publish: Government response to the Senate Select Committee on Adopting AI report is published at industry.gov.au/publications.
   routing_review: drafted
+  entity_key: entity-c17dd784-3eb7-4001-9f5b-5ef2bc4c9c72
+  roles:
+    - seat
 strings:
   name: Department of Industry, Science and Resources — AI policy function, National AI Centre and AI Expert Group
   ai_jurisdiction: "The Commonwealth department that owns AI policy: the safe and responsible AI consultation and the Government's interim response, the proposed mandatory guardrails for high-risk AI, the AI Adopt Program, and coordination of Australia's international AI engagement including GPAI. The National Artificial Intelligence Centre, hosted at CSIRO's Data61, 'coordinates Australia's AI expertise and capabilities to address barriers for small and medium enterprises'. A temporary AI Expert Group advised on testing, transparency and accountability for high-risk AI."

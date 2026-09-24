@@ -47,6 +47,9 @@ facts:
     topics:international: The House door for AI export controls and AI diplomacy.
     powers:legislate: committee mark-up held and the bill ordered reported in the nature of a substitute by 42-0
   routing_review: drafted
+  entity_key: entity-068ea49e-7624-4073-9fe3-4424e5ae34db
+  roles:
+    - seat
 strings:
   name: House Committee on Foreign Affairs
   ai_jurisdiction: "The House door for AI export controls and AI diplomacy. Unlike the Senate — where export-control statute sits in Banking — the House routes AI chip export legislation through Foreign Affairs. Send here: export licensing for advanced AI chips and model weights, entity listings, allied controls coordination, State Department AI policy, and AI in foreign influence operations."

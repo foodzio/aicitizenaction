@@ -40,20 +40,29 @@ function mergeObject(left = {}, right = {}) {
 
 function prepareRoutes(canonical, retired) {
   const used = new Map((canonical.facts?.routes ?? []).map(route => [route.id, route]));
-  const routes = clone(retired.facts?.routes ?? []);
+  const routes = [];
   const routeStrings = clone(retired.strings?.routes ?? {});
-  for (const route of routes) {
+  for (const input of retired.facts?.routes ?? []) {
+    const route = clone(input);
     const current = used.get(route.id);
-    if (!current) { used.set(route.id, route); continue; }
+    if (!current) { used.set(route.id, route); routes.push(route); continue; }
     if (same(current, route)) continue;
     if (current.type === route.type && current.value === route.value) {
-      Object.assign(route, mergeObject(current, route));
+      const merged = mergeObject(current, route);
+      const sourceIds = uniq([current.source_id, ...(current.source_ids ?? []), route.source_id, ...(route.source_ids ?? [])]);
+      if (sourceIds.length > 1) merged.source_ids = sourceIds;
+      Object.assign(current, merged);
+      if (!canonical.strings.routes?.[route.id] && routeStrings[route.id]) {
+        canonical.strings.routes ??= {};
+        canonical.strings.routes[route.id] = routeStrings[route.id];
+      }
       continue;
     }
     const old = route.id;
     route.id = `${old}-${hash(retired.id)}`.slice(0, 90).replace(/-+$/, '');
     if (routeStrings[old]) { routeStrings[route.id] = routeStrings[old]; delete routeStrings[old]; }
     used.set(route.id, route);
+    routes.push(route);
   }
   retired.facts.routes = routes;
   retired.strings.routes = routeStrings;
@@ -88,7 +97,9 @@ export function mergeRecords(canonicalInput, retiredInput, decision, keyFactory 
   canonical.meta.redirect_from = mergeArray(canonical.meta.redirect_from, [
     ...(retired.meta.redirect_from ?? []), { section: retiredInput._section, id: retired.id }
   ]);
-  canonical.meta.sources = mergeArray(canonical.meta.sources, retired.meta.sources);
+  // Preserve source multiplicity: identical citations on two imported records are still two
+  // provenance observations and must not disappear during reconciliation.
+  canonical.meta.sources = [...(canonicalInput.meta?.sources ?? []), ...(retiredInput.meta?.sources ?? [])];
   canonical.meta.identity_review = {
     evidence_urls: decision.evidence_urls,
     reviewed_by: decision.reviewed_by,
@@ -98,17 +109,35 @@ export function mergeRecords(canonicalInput, retiredInput, decision, keyFactory 
     note: decision.note
   };
   canonical.meta.merge_provenance = provenance;
+  normalizeMergedRecord(canonical, decision);
   // If both records had sources, every retained top-level field can be traced to both reviewed
   // inputs. sourceEntry is deliberately strict: unsourced destructive merges are rejected below.
   if (!canonicalSource || !retiredSource) throw new Error(`${decision.key}: both records need cited sources before merge`);
   return canonical;
 }
 
-function replaceIds(value, replacements) {
+function normalizeMergedRecord(record, decision) {
+  if (record.meta?.needs_research) {
+    record.meta.needs_research = record.meta.needs_research.filter(key => !record.facts?.[key]?.length);
+    if (!record.meta.needs_research.length) delete record.meta.needs_research;
+  }
+  if (record._section === 'channels' || ['company', 'reporting-channel', 'watchdog'].includes(record.type)) {
+    for (const route of record.facts?.routes ?? []) route.contact ??= {
+      status: 'unknown', directness: 'indirect', review: 'reviewed',
+      reviewed_by: decision.reviewed_by, reviewed_on: decision.reviewed_on,
+      disposition: 'reference-only'
+    };
+  }
+  return record;
+}
+
+const HISTORICAL_KEYS = new Set(['redirect_from', 'aliases', 'legacy_ids', 'merge_provenance']);
+function replaceIds(value, replacements, parentKey = '') {
+  if (HISTORICAL_KEYS.has(parentKey)) return clone(value);
   if (typeof value === 'string') return replacements.get(value) ?? value;
-  if (Array.isArray(value)) return value.map(item => replaceIds(item, replacements));
+  if (Array.isArray(value)) return value.map(item => replaceIds(item, replacements, parentKey));
   if (!value || typeof value !== 'object') return value;
-  return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, replaceIds(item, replacements)]));
+  return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, replaceIds(item, replacements, key)]));
 }
 
 function effectiveDecision(item, defaults) { return { ...defaults, ...item }; }
@@ -149,6 +178,24 @@ export function buildMergePlan(records, ledger) {
   return { merges, errors };
 }
 
+function repairApplied(records, ledger) {
+  const active = new Map(records.filter(record => DIRECTORY.has(record._section)).map(record => [record.id, record]));
+  let repaired = 0;
+  for (const item of ledger.decisions ?? []) {
+    const decision = effectiveDecision(item, ledger.defaults);
+    if (decision.decision !== 'same') continue;
+    const retiredId = decision.records.find(id => id !== decision.canonical_id);
+    if (active.has(retiredId)) continue;
+    const record = active.get(decision.canonical_id);
+    if (!record) continue;
+    const selfRedirect = record.meta?.redirect_from?.find(old => old.id === record.id);
+    if (selfRedirect) { selfRedirect.id = retiredId; repaired++; }
+    normalizeMergedRecord(record, decision);
+    writeFileSync(join(ROOT, record._path), yaml(serializable(record)));
+  }
+  return repaired;
+}
+
 function serializable(record) {
   return Object.fromEntries(Object.entries(record));
 }
@@ -159,6 +206,11 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const inventory = YAML.parse(readFileSync(inventoryPath, 'utf8'));
   const ledger = YAML.parse(readFileSync(ledgerPath, 'utf8'));
   const records = loadContent();
+  if (process.argv.includes('--repair-applied')) {
+    const repaired = repairApplied(records, ledger);
+    console.log(`Repaired ${repaired} historical redirects and normalized already-applied merges.`);
+    process.exit(0);
+  }
   const review = validateIdentityDecisions({ inventory, ledger, records });
   if (review.errors.length) throw new Error(`identity decision ledger is invalid:\n${review.errors.join('\n')}`);
   const plan = buildMergePlan(records, ledger);

@@ -40,6 +40,9 @@ facts:
   routing_evidence:
     powers:publish: It produced a comprehensive final report in December 2024
   routing_review: drafted
+  entity_key: entity-2fee1630-d44a-4c7c-a975-7408214bfaeb
+  roles:
+    - seat
 strings:
   name: House Bipartisan Task Force on Artificial Intelligence
   ai_jurisdiction: A leadership-appointed, time-limited body — not a committee — created by Speaker Mike Johnson and Democratic Leader Hakeem Jeffries in February 2024 and co-chaired by Jay Obernolte (R-CA) and Ted Lieu (D-CA). It produced a comprehensive final report in December 2024 that remains the House's closest thing to a shared AI framework, organized by sector rather than by committee.

@@ -38,6 +38,9 @@ facts:
     powers:legislate: It was the committee that studied Bill C-27 (which contained the Artificial Intelligence and Data Act) clause by clause
     powers:publish: submitters are listed in committee reports
   routing_review: drafted
+  entity_key: entity-c4856743-5a50-4670-96fd-93d6c0be6b05
+  roles:
+    - seat
 strings:
   name: House of Commons Standing Committee on Industry and Technology (INDU)
   ai_jurisdiction: The lead Commons committee for AI. Industry, science, technology, telecommunications, competition and innovation policy. It was the committee that studied Bill C-27 (which contained the Artificial Intelligence and Data Act) clause by clause, and it is now running a dedicated AI study.

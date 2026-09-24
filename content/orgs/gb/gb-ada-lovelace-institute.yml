@@ -38,6 +38,9 @@ facts:
   tags:
     - research
     - systemic
+  entity_key: entity-325863e0-4fb4-47bd-a42e-9e5e84b046dc
+  roles:
+    - civil-society
 strings:
   name: Ada Lovelace Institute
   remit: Independent research institute (funded by the Nuffield Foundation) working on AI governance, policy and regulation; AI evaluation methods; public-sector AI; public participation and deliberation about AI; and law and policy. Notable for running genuine public deliberation exercises and for rigorous work on the limits of AI evaluation and audit.

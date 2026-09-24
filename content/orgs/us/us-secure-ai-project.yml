@@ -18,6 +18,9 @@ facts:
     - fund
     - join
     - law
+  entity_key: entity-07d98561-f6ef-4ea3-9327-40a0c884b6ea
+  roles:
+    - organisation
 strings:
   name: Secure AI Project
   the_ask: Adopt policies that reduce the risk of severe harm from advanced AI, built on transparency, accountability and safe development.

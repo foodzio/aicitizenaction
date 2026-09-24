@@ -47,11 +47,28 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: e23407249d99
+    - id: action
+      type: action
+      value: https://act.eff.org/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: c55624b3c37a
   region: United States
   public_input: open
   tags:
     - flaw
     - research
+    - audit
+    - harm
+    - join
+    - tip
+  perspective: civil-liberties
+  volunteers: yes
+  entity_key: entity-f0d9718f-8f4c-4864-a113-5dd9d4a7355c
+  roles:
+    - civil-society
+    - organisation
 strings:
   name: Electronic Frontier Foundation (EFF)
   remit: Civil liberties organisation using litigation, pressure campaigns, technical analysis and advocacy. On AI it focuses on who uses AI and how — opposing government surveillance expansion, algorithmic policing, corporate data practices, and moves that would entrench incumbent platforms; also defends fair use and the right to build and study models.
@@ -78,6 +95,16 @@ strings:
       note: EFF has a long record of defending security researchers facing legal threats.
     homepage:
       label: Homepage
+    action:
+      label: Action page
+  the_ask: Regulate how AI is used — surveillance, algorithmic decisions, age-gating, encryption and competition — rather than restricting the technology itself; keep AI tools available and competitive.
+  what_they_do: "Litigation, legislative advocacy and technical analysis across eight AI topics: algorithmic decision-making, AI and fair use, AI and surveillance, deepfakes/NCII, age-gating, privacy, encryption and competition. Runs an action centre with alerts to Congress and state legislatures."
+  newcomer_action: Take a live action at act.eff.org, and if you have a legal problem involving AI or surveillance, submit it through the legal assistance page.
+  tips: yes — legal assistance intake at eff.org/pages/legal-assistance; EFF reviews referrals but takes few cases
+  geography: United States primarily, with international policy work.
+  scale: "Large: decades-old, with staff lawyers, technologists and activists."
+  spending: Member-funded nonprofit; accepts donations and has a membership scheme.
+  caution: EFF is explicitly sceptical of broad AI regulation and of some safety-motivated proposals, and defends fair use for AI training. If your ask is 'slow AI down', EFF is not your ally on that point even though it is a genuine civil liberties organisation. It cannot take most cases referred to it.
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
@@ -92,8 +119,85 @@ meta:
       checked: 2026-09-22
     - url: https://www.eff.org/security
       checked: 2026-09-22
+    - url: https://act.eff.org/
+      checked: 2026-09-22
   needs_research:
     - topics
   legacy_id: a76e9570bb
   research_order: 118
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - a76e9570bb
+    - 6bfd60fe51
+  aliases:
+    - us-electronic-frontier-foundation-2
+    - Electronic Frontier Foundation (EFF)
+  redirect_from:
+    - section: orgs
+      id: us-electronic-frontier-foundation-2
+  identity_review:
+    evidence_urls:
+      - https://www.eff.org/pages/legal-assistance
+      - https://act.eff.org/
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: us-electronic-frontier-foundation
+        source_url: https://www.eff.org/pages/legal-assistance
+        checked_on: 2026-09-22
+      - &a2
+        record_id: us-electronic-frontier-foundation-2
+        source_url: https://act.eff.org/
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+    facts.public_input:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+    strings.threat_model:
+      - *a1
+    strings.reality_check:
+      - *a1
+    strings.gov_channel:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.perspective:
+      - *a2
+    facts.volunteers:
+      - *a2
+    strings.the_ask:
+      - *a2
+    strings.what_they_do:
+      - *a2
+    strings.newcomer_action:
+      - *a2
+    strings.tips:
+      - *a2
+    strings.geography:
+      - *a2
+    strings.scale:
+      - *a2
+    strings.spending:
+      - *a2
+    strings.caution:
+      - *a2

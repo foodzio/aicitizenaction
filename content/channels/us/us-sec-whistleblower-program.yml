@@ -54,6 +54,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-6442375e-7d87-4342-bc77-82c20279a16f
+  roles:
+    - reporting-channel
 strings:
   name: SEC Whistleblower Program (Form TCR)
   remit: "Original information about potential violations of the federal securities laws. For AI: material misrepresentation of model capability, safety practices or risk to investors — 'AI-washing' cases have been brought. Reaches Google, Microsoft, Meta and Nvidia; reaches private labs only where securities law otherwise bites."

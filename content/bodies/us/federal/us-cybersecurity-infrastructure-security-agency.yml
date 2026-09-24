@@ -56,6 +56,9 @@ facts:
     powers:compel: administrative subpoena authority for vulnerability identification
     powers:make-rules: binding operational directives that bind FEDERAL agencies only — not AI developers
   routing_review: drafted
+  entity_key: entity-0f40594f-b71c-4982-8605-ad44b1636462
+  roles:
+    - government
 strings:
   name: Cybersecurity and Infrastructure Security Agency (CISA)
   remit: Operational cyber-defence agency for federal civilian networks and critical infrastructure. Issues joint guidance on securing AI systems and on agentic AI governance (2026), runs CISA Central for incident intake, and administers CIRCIA incident-reporting rules for covered entities. Powers are largely voluntary/advisory toward the private sector, with administrative subpoena authority for vulnerability identification and binding operational directives that bind FEDERAL agencies only — not AI developers.

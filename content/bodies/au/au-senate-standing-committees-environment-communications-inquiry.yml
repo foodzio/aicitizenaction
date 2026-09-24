@@ -31,6 +31,9 @@ facts:
     powers:hold-hearings: Public hearings continuing.
     powers:publish: REPORTING DATE 16 NOVEMBER 2026
   routing_review: drafted
+  entity_key: entity-cb27cece-217e-4228-a1e2-34a5c424dab9
+  roles:
+    - seat
 strings:
   name: Senate Standing Committees on Environment and Communications (References Committee) — inquiry into Artificial intelligence and data centres
   ai_jurisdiction: "AI infrastructure. Terms of reference referred on 13 May 2026: the effectiveness of existing regulatory frameworks in managing the growth of data centres in Australia, including in relation to existing and future deals between the Government and global AI companies; the potential impacts of AI and data centres on Australian communities, industries and the environment, water and energy; and any other related matters."

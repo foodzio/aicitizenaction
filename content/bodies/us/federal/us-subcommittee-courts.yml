@@ -52,6 +52,9 @@ facts:
     topics:government-use: courts' use of AI
     powers:hold-hearings: July 2026 hearing at which witnesses urged action
   routing_review: drafted
+  entity_key: entity-04a7cf1b-0871-426c-8c1f-42e2526e6cb1
+  roles:
+    - seat
 strings:
   name: Subcommittee on Courts, Intellectual Property, Artificial Intelligence, and the Internet
   ai_jurisdiction: "The only subcommittee in Congress with 'Artificial Intelligence' in its formal name on the Judiciary side. Send here: AI training data and copyright (fair use, licensing, transparency of training corpora), digital replicas and the right of publicity, AI and patents/inventorship, Copyright Office and USPTO policy, Section 230 and platform liability, and courts' use of AI. If you are a creator, rightsholder or platform, this is the House door."

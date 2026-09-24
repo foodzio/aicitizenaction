@@ -34,6 +34,9 @@ facts:
   tags:
     - law
     - systemic
+  entity_key: entity-391acaf3-7978-4bf3-a133-d94e72ba678d
+  roles:
+    - government
 strings:
   name: AI Office of Ireland (proposed)
   remit: STATUS UNCERTAIN AS OF SEPT 2026 — this body does not yet exist. The Regulation of Artificial Intelligence Bill 2026 was published 17 June 2026 by the Department of Enterprise, Tourism and Employment and would establish 'Oifig IS na hÉireann (AI Office of Ireland)' as an independent statutory body acting as Ireland's central coordinating authority for AI Act implementation. As of this research date the Bill was awaiting passage through the Oireachtas. Ireland had already designated a distributed set of eight/nine existing sectoral regulators as national competent authorities in 2025.

@@ -50,6 +50,9 @@ facts:
     powers:compel: demand documents from institutions
     powers:handle-complaints: Only complaints submitted using the online complaint form below will be processed.
   routing_review: drafted
+  entity_key: entity-be79c1ce-32a5-493d-ad8c-4a380b5f507b
+  roles:
+    - government
 strings:
   name: European Ombudsman
   remit: Investigates maladministration by EU institutions, bodies, offices and agencies — which includes the European Commission and therefore the AI Office, DG CONNECT, and the AI Act's governance bodies. Can open own-initiative inquiries, demand documents from institutions, make findings of maladministration and issue recommendations; can refer a refusal to comply to the European Parliament. It CANNOT overturn a decision, fine anyone, or act against private companies or Member State authorities.

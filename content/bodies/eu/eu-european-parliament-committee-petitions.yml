@@ -26,12 +26,28 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 73d8178a17f7
+    - id: membership
+      type: membership
+      value: https://www.europarl.europa.eu/committees/en/peti/home/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 7588e5a6dd9d
+    - id: public-route
+      type: submission
+      value: https://www.europarl.europa.eu/petitions/en/home
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 8acb3dba45ab
   region: European Union
   public_input: open
   tags:
     - harm
     - law
     - systemic
+    - audit
+    - petition
   powers:
     - handle-complaints
     - hold-hearings
@@ -41,6 +57,15 @@ facts:
     powers:hold-hearings: can hold hearings
     powers:oversee: it can force the Commission to answer in writing on a specific implementation failure
   routing_review: drafted
+  level: bloc
+  seats:
+    - role: chair
+      name: Bogdan Rzońca (ECR, Poland, Prawo i Sprawiedliwość)
+      verified_on: 2026-09-22
+  entity_key: entity-0ed2b823-9a43-4214-88f9-ade0e5058f56
+  roles:
+    - government
+    - seat
 strings:
   name: European Parliament Committee on Petitions (PETI)
   remit: Handles petitions submitted under the Treaty right of petition — a fundamental right of every EU citizen and resident. Examines admissibility, may ask the Commission for information or a legal opinion, can hold hearings, conduct fact-finding visits, and report to plenary. Through petitions it 'conducts an ongoing reality check on the way in which European legislation is implemented'. It cannot legislate or fine, but it can force the Commission to answer in writing on a specific implementation failure.
@@ -58,10 +83,26 @@ strings:
       note: UNVERIFIED as fetched; URL appeared in Parliament's own search results.
     homepage:
       label: Homepage
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+  ai_jurisdiction: PETI has no AI portfolio of its own, but it is the ONLY formal channel through which a private individual can compel the European Parliament to consider a matter. An admissible AI petition — for example on AI Act non-enforcement in a Member State, biometric surveillance, or algorithmic discrimination — is put to the committee, can trigger questions to the Commission, a committee debate, a fact-finding visit, or a referral to LIBE or IMCO.
+  business: Ordinary petition sittings roughly monthly; agendas published as PETI_OJ documents on europarl.europa.eu/doceo.
+  public_route: "WHO MAY PETITION: 'Any citizen of the European Union, or resident in a Member State', individually or collectively, and 'any company, organisation or association with its headquarters in the European Union'. SUBJECT MATTER: the petition must concern a matter 'which comes within the European Union's fields of activity and which affects them directly' — this is the admissibility test and the most common reason petitions are rejected. It may be a complaint, a request, or an observation on the application of EU law, or an appeal for Parliament to take a position. PROCESS: file through the Petitions Web Portal in any of the 24 official EU languages; the secretariat assesses admissibility; admissible petitions go to the committee, which may ask the Commission for a preliminary investigation, put the petition on a meeting agenda, invite the petitioner to speak, refer it to another committee for opinion, or close it with a reasoned reply. THRESHOLD: there is NO signature threshold — one person suffices. (Do not confuse this with the European Citizens' Initiative, which does require one million signatures across at least seven Member States; that is a separate instrument aimed at the Commission, not Parliament.)"
+  format_rules: No word limit. Available in all 24 official EU languages. Petitions and the committee's handling of them are published on the petitions portal unless the petitioner requests confidentiality. You may support an existing petition rather than filing a new one.
+  key_people: "Vice-Chairs: Dolors Montserrat (EPP, ES); Fredis Beleris (EPP, GR); Nils Ušakovs (S&D, LV); Cristina Guarda (Greens/EFA, IT). The committee has 35 members."
+  note: "VERIFIED 2026-09-22: chair from the official PETI member list PDF; eligibility and subject-matter wording quoted from the European Parliament's own 'Be heard — petitions' page at europarl.europa.eu/at-your-service/en/be-heard/petitions."
+  seat_notes:
+    chair: Chair
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
   sources:
+    - url: https://www.europarl.europa.eu/petitions/en/home
+      checked: 2026-09-22
+    - url: https://www.europarl.europa.eu/committees/en/peti/home/members
+      checked: 2026-09-22
     - url: https://www.europarl.europa.eu/petitions/en/home
       checked: 2026-09-22
   needs_research:
@@ -70,3 +111,85 @@ meta:
   legacy_id: 843035c892
   research_order: 183
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - 843035c892
+    - caca6aa23e
+  aliases:
+    - eu-european-parliament-committee-petitions-2
+    - European Parliament — Committee on Petitions (PETI)
+  redirect_from:
+    - section: bodies
+      id: eu-european-parliament-committee-petitions-2
+  identity_review:
+    evidence_urls:
+      - https://www.europarl.europa.eu/petitions/en/home
+      - https://www.europarl.europa.eu/committees/en/peti/home/members
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: eu-european-parliament-committee-petitions
+        source_url: https://www.europarl.europa.eu/petitions/en/home
+        checked_on: 2026-09-22
+      - &a2
+        record_id: eu-european-parliament-committee-petitions-2
+        source_url: https://www.europarl.europa.eu/committees/en/peti/home/members
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+    facts.public_input:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    facts.powers:
+      - *a1
+      - *a2
+    facts.routing_evidence:
+      - *a1
+      - *a2
+    facts.routing_review:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+    strings.powers_text:
+      - *a1
+    strings.reality_check:
+      - *a1
+    strings.notes:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.level:
+      - *a2
+    facts.seats:
+      - *a2
+    strings.ai_jurisdiction:
+      - *a2
+    strings.business:
+      - *a2
+    strings.public_route:
+      - *a2
+    strings.format_rules:
+      - *a2
+    strings.key_people:
+      - *a2
+    strings.note:
+      - *a2
+    strings.seat_notes:
+      - *a2

@@ -43,6 +43,9 @@ facts:
     topics:children: a proposed ban on minors' access to companion chatbots
     powers:legislate: Senate committee of reference for AI consumer-facing bills
   routing_review: drafted
+  entity_key: entity-42a3410f-a000-4582-83cc-c2c85086ad3a
+  roles:
+    - seat
 strings:
   name: Senate Commerce and Consumer Protection Committee
   ai_jurisdiction: Senate committee of reference for AI consumer-facing bills, chatbot restrictions and data privacy. Meets Tue/Thu 12:30–2:30 p.m., Room G-15 Capitol.

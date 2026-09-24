@@ -35,6 +35,9 @@ facts:
   routing_evidence:
     powers:advise: The non-statutory expert advisory council
   routing_review: drafted
+  entity_key: entity-789d7cc9-2a96-4c29-9c96-fa084a3bd6a7
+  roles:
+    - seat
 strings:
   name: AI Strategy Council
   ai_jurisdiction: The non-statutory expert advisory council established in 2023 that produced Japan's interim AI policy positions and laid the groundwork for the AI Act. Now largely superseded.

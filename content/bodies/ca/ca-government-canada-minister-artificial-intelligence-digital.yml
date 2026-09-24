@@ -36,6 +36,9 @@ facts:
     topics:children: new legislation tabled in June 2026 on children's data and privacy
     topics:privacy: new legislation tabled in June 2026 on children's data and privacy
   routing_review: drafted
+  entity_key: entity-bee4672e-32ef-41d5-9a05-72925fcfaed9
+  roles:
+    - seat
 strings:
   name: Government of Canada — Minister of Artificial Intelligence and Digital Innovation
   ai_jurisdiction: Canada's dedicated AI portfolio. Owns the national AI strategy and the federal government's response to the collapse of AI legislation.

@@ -52,6 +52,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-a32c08e1-a439-4169-adc0-a1f972375671
+  roles:
+    - reporting-channel
 strings:
   name: UK Public Interest Disclosure Act — protected disclosure to a prescribed person
   remit: Qualifying disclosures by workers, in the public interest, to a prescribed person with responsibility for the relevant subject matter — giving statutory protection against detriment and dismissal.

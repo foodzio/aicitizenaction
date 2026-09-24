@@ -41,6 +41,9 @@ facts:
   routing_evidence:
     powers:fund: Funds the Department of Energy and the national laboratories
   routing_review: drafted
+  entity_key: entity-91c8df84-0d6f-4a7f-9546-d9bfb697c385
+  roles:
+    - seat
 strings:
   name: Subcommittee on Energy and Water Development and Related Agencies
   ai_jurisdiction: "Funds the Department of Energy and the national laboratories — increasingly the government's largest AI compute holder and a proposed venue for frontier-model risk evaluation. Send here: DOE AI program funding, lab compute, and the energy-side of AI buildout."

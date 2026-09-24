@@ -25,6 +25,9 @@ facts:
   public_input: limited
   tags:
     - law
+  entity_key: entity-4f5554c5-10c2-4306-9729-fa9c88bddf73
+  roles:
+    - government
 strings:
   name: Agencia de Transformación Digital y Telecomunicaciones (ATDT)
   remit: "STATUS AS OF SEPT 2026: NO GENERAL AI LAW. The ATDT, created under the Sheinbaum administration, is the federal digital-transformation and telecommunications agency and the likely institutional home for AI coordination. Multiple general AI bills (iniciativas de Ley General de IA) were in legislative process without passage; regulation has instead advanced sector by sector. Mexico's prior AI-relevant oversight body, INAI, was abolished in 2025 as part of the autonomous-bodies reform, with its functions absorbed into the executive — a significant reduction in independent oversight capacity."

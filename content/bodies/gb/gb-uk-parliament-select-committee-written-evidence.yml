@@ -24,6 +24,9 @@ facts:
     - audit
     - law
     - record
+  entity_key: entity-c7033b52-9dbb-41c2-ac71-85a17aab3798
+  roles:
+    - seat
 strings:
   name: UK Parliament — select committee written evidence system (the key public route)
   ai_jurisdiction: "Not a body but the mechanism: every Commons, Lords and Joint select committee inquiry runs on written evidence solicited from the public. This is the only route by which an ordinary member of the public can put a document directly into the parliamentary record and have MPs' staff read it."

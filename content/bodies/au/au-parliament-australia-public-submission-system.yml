@@ -24,6 +24,9 @@ facts:
     - audit
     - law
     - record
+  entity_key: entity-17cb1894-0213-4847-93bf-fa6406968882
+  roles:
+    - seat
 strings:
   name: Parliament of Australia — public submission system (the public route)
   ai_jurisdiction: The mechanism by which any person reaches any Australian parliamentary committee, including all the AI inquiries above.

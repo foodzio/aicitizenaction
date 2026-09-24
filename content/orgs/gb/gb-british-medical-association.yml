@@ -18,6 +18,9 @@ facts:
     - fund
     - join
     - tip
+  entity_key: entity-17a1a300-a974-41de-8f1b-2c2e6d25a072
+  roles:
+    - organisation
 strings:
   name: British Medical Association (BMA)
   the_ask: AI in the NHS must support and not supplant doctors, with clear principles for safe clinical use and protection of NHS patient data.

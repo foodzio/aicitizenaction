@@ -56,6 +56,9 @@ facts:
     powers:hold-hearings: Subcommittee hearing on protecting creators in the age of AI and the internet
     powers:oversee: Jordan has also run an aggressive oversight track
   routing_review: drafted
+  entity_key: entity-99eb776c-6cab-4026-9c4b-dc812195ef35
+  roles:
+    - seat
 strings:
   name: House Committee on the Judiciary
   ai_jurisdiction: "Courts, DOJ, FBI, copyright and patent law, antitrust, immigration, and constitutional questions. Send here: AI and copyright, AI liability and Section 230, AI-driven antitrust concerns in compute and model markets, law-enforcement use of AI and facial recognition, government pressure on platforms and AI providers over speech, and AI-enabled crime."

@@ -37,6 +37,9 @@ facts:
   public_input: limited
   tags:
     - research
+  entity_key: entity-355edeac-4aa2-4793-b7f6-5a1672d13822
+  roles:
+    - academic
 strings:
   name: Seoul National University — AI policy and trustworthy AI centres
   remit: "Two relevant SNU bodies: the Center for Trustworthy AI (CTAI) at ctai.snu.ac.kr, and the SNU AI Policy Initiative (SAPI) at sapi.co.kr, which convenes the annual Seoul AI Policy Conference (SAIPCON, 2026 edition held). Korea is a significant venue — it hosted the 2024 Seoul AI Summit that produced the Frontier AI Safety Commitments, and operates its own AI Safety Institute."

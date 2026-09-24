@@ -52,6 +52,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-d48a01a5-1d9f-4c50-895d-75df14cb54e7
+  roles:
+    - reporting-channel
 strings:
   name: EU AI Act Article 73 — serious incident reporting
   remit: "Serious incidents as defined in Article 3(49), reported by the provider. Deadlines: immediately after establishing a causal link and in any case not later than 15 days after awareness; 2 days for widespread infringement or certain serious incidents; and for a death, immediately after establishing or suspecting a causal relationship and within 10 days maximum. Incomplete initial reports are permitted, followed by a complete report."

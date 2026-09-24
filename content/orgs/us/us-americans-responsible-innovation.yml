@@ -19,6 +19,9 @@ facts:
     - join
     - law
     - tip
+  entity_key: entity-192e26bf-89a0-433c-aa86-00ec437fcf28
+  roles:
+    - organisation
 strings:
   name: Americans for Responsible Innovation (ARI)
   the_ask: The US government should take a proactive approach to AI governance that protects the public, including preserving states' ability to regulate AI rather than pre-empting them.

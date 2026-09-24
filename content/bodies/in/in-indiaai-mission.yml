@@ -40,6 +40,9 @@ facts:
     topics:discrimination: 13 projects approved under the Safe & Trusted AI pillar addressing deepfakes and bias
     powers:fund: Runs the compute tenders, GPU allocation, model-development grants
   routing_review: drafted
+  entity_key: entity-0080a0b1-d228-4289-9b51-d0406b129c36
+  roles:
+    - seat
 strings:
   name: IndiaAI Mission (IndiaAI Independent Business Division)
   ai_jurisdiction: Executing agency for India's national AI programme (approx. INR 10,372 crore). Seven pillars including Compute Capacity, Foundation Models, Datasets (AIKosh), Application Development, Future Skills, Startup Financing, and Safe & Trusted AI. Runs the compute tenders, GPU allocation, model-development grants, and the Safe & Trusted AI research portfolio.

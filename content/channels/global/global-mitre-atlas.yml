@@ -47,6 +47,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-51be3e26-f40b-412e-b481-eaebae6acee3
+  roles:
+    - reporting-channel
 strings:
   name: MITRE ATLAS (Adversarial Threat Landscape for AI Systems)
   remit: Adversarial ML tactics, techniques and real-world case studies — i.e. attacks against AI systems. Contributions are curated into the ATLAS matrix and case study set.

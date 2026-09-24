@@ -13,6 +13,9 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: e61f4132736a
+      source_ids:
+        - e61f4132736a
+        - 5c108b7c16ba
     - id: public-route
       type: submission
       value: https://malegislature.gov/assets/documents/how-to-submit-testimony-v1.1.pdf
@@ -20,6 +23,13 @@ facts:
       verification_method: fetched_source_page
       verified_on: 2026-09-22
       source_id: 446d668f7221
+    - id: public-route-537871ad
+      type: submission
+      value: https://malegislature.gov/Events/Hearings
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 74c5e083140c
   level: state
   chamber: Senate (joint committee)
   tags:
@@ -29,6 +39,10 @@ facts:
   seats:
     - role: chair
       name: Michael O. Moore
+      party: D
+      verified_on: 2026-09-22
+    - role: chair
+      name: Tricia Farley-Bouvier
       party: D
       verified_on: 2026-09-22
   topics:
@@ -43,6 +57,9 @@ facts:
     topics:security: cybersecurity and internet bills
     powers:legislate: reported favorably 16 Oct 2025, recommended for passage
   routing_review: drafted
+  entity_key: entity-60865244-c8bf-4ded-be69-edc7368c7acd
+  roles:
+    - seat
 strings:
   name: Joint Committee on Advanced Information Technology, the Internet and Cybersecurity — Senate chair
   ai_jurisdiction: The named AI/technology policy committee of the General Court; handles AI in healthcare decision-making, data privacy, cybersecurity and internet bills.
@@ -56,6 +73,8 @@ strings:
       label: Live membership list
     public-route:
       label: Public submission route
+    public-route-537871ad:
+      label: Public submission route
 meta:
   verified_on: 2026-09-22
   review_by: 2026-12-21
@@ -64,8 +83,96 @@ meta:
       checked: 2026-09-22
     - url: https://malegislature.gov/assets/documents/how-to-submit-testimony-v1.1.pdf
       checked: 2026-09-22
+    - url: https://malegislature.gov/Committees/Detail/J33
+      checked: 2026-09-22
+    - url: https://malegislature.gov/Events/Hearings
+      checked: 2026-09-22
   needs_research:
     - not_topics
   legacy_id: 6d958d9285
   research_order: 67
   migrated_from: input/data/committees-and-organisations.json#seats
+  legacy_ids:
+    - 6d958d9285
+    - d5a7382876
+  aliases:
+    - us-joint-committee-advanced-information-technology-2
+    - Joint Committee on Advanced Information Technology, the Internet and Cybersecurity — House chair
+  redirect_from:
+    - section: bodies
+      id: us-joint-committee-advanced-information-technology-2
+  identity_review:
+    evidence_urls:
+      - https://malegislature.gov/Committees/Detail/J33
+      - https://malegislature.gov/Events/Hearings
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: us-joint-committee-advanced-information-technology
+        source_url: https://malegislature.gov/Committees/Detail/J33
+        checked_on: 2026-09-22
+      - &a2
+        record_id: us-joint-committee-advanced-information-technology-2
+        source_url: https://malegislature.gov/Committees/Detail/J33
+        checked_on: 2026-09-22
+    geo.sub:
+      - *a1
+      - *a2
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.level:
+      - *a1
+      - *a2
+    facts.chamber:
+      - *a1
+      - *a2
+    facts.tags:
+      - *a1
+      - *a2
+    facts.seats:
+      - *a1
+      - *a2
+    facts.topics:
+      - *a1
+      - *a2
+    facts.powers:
+      - *a1
+    facts.routing_evidence:
+      - *a1
+      - *a2
+    facts.routing_review:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.ai_jurisdiction:
+      - *a1
+      - *a2
+    strings.business:
+      - *a1
+      - *a2
+    strings.status:
+      - *a1
+      - *a2
+    strings.public_route:
+      - *a1
+      - *a2
+    strings.agency_route:
+      - *a1
+      - *a2
+    strings.note:
+      - *a1
+      - *a2
+    strings.routes:
+      - *a1
+      - *a2

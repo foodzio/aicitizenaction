@@ -54,6 +54,9 @@ facts:
     powers:set-standards: Runs a standing public-comment section (公开征求意见) on draft standards and guidelines.
     powers:enforce: Has licensing and administrative-penalty powers over telecoms and industrial operators.
   routing_review: drafted
+  entity_key: entity-77748bb9-4219-4983-bd1f-799aa66a6660
+  roles:
+    - government
 strings:
   name: Ministry of Industry and Information Technology (MIIT)
   remit: "Industrial regulator for AI as a technology sector: compute infrastructure, telecoms, AI standardisation, humanoid robotics, and the 'AI+' industrial programmes. Issued the 'AI+ Information and Communications' Innovation Development Implementation Opinions (2026–2028) in 2026. Runs a standing public-comment section (公开征求意见) on draft standards and guidelines. Has licensing and administrative-penalty powers over telecoms and industrial operators."

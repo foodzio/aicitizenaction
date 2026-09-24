@@ -38,6 +38,9 @@ facts:
   tags:
     - research
     - systemic
+  entity_key: entity-4ba4a6f2-1be3-4068-82bf-c113121308c8
+  roles:
+    - academic
 strings:
   name: Center for Human-Compatible AI (CHAI), UC Berkeley
   remit: Technical research lab founded by Stuart Russell, devoted to the theory, practice and policy of provably beneficial AI. Core research programme is assistance games / cooperative inverse reinforcement learning — designing AI that is uncertain about human objectives and defers to humans, rather than optimising a fixed specified objective. Interdisciplinary across CS, social science, law, philosophy, economics and governance. Runs an annual workshop and an internship programme.

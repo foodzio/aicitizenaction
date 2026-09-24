@@ -41,14 +41,38 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 050b42e135de
+    - id: membership
+      type: membership
+      value: https://www.commerce.senate.gov/about/members
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e32394c49615
+    - id: public-route
+      type: submission
+      value: https://www.commerce.senate.gov/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 2c9b274a7e91
   region: United States
   public_input: limited
   tags:
     - harm
     - law
     - systemic
+    - audit
+    - petition
   topics:
     - privacy
+    - frontier-ai
+    - safety-testing
+    - preemption
+    - transparency
+    - children
+    - deepfakes
+    - standards
+    - consumer-protection
   powers:
     - legislate
     - hold-hearings
@@ -60,7 +84,43 @@ facts:
     powers:hold-hearings: Holds hearings
     powers:oversee: authorises and oversees NIST
     powers:compel: It can subpoena, compel testimony and legislate
+    topics:frontier-ai: general-purpose/frontier AI regulation
+    topics:safety-testing: AI safety testing and evaluation mandates
+    topics:preemption: federal preemption of state AI laws
+    topics:transparency: AI transparency and disclosure rules
+    topics:children: chatbots and minors
+    topics:deepfakes: deepfakes/NCII
+    topics:standards: NIST and the Center for AI Standards and Innovation (CAISI)
+    topics:consumer-protection: consumer protection, unfair/deceptive AI practices
+    not_topics:copyright: "NOT here: copyright, liability/private rights of action, or DOJ (Judiciary)"
+    not_topics:liability: "NOT here: copyright, liability/private rights of action, or DOJ (Judiciary)"
+    not_topics:government-use: federal agency internal AI use (HSGAC)
+    not_topics:military-ai: military AI (Armed Services)
+    not_topics:export-controls: AI chip export controls (Banking)
   routing_review: drafted
+  level: federal
+  chamber: Senate
+  seats:
+    - role: chair
+      name: Ted Cruz
+      party: R
+      region: TX
+      verified_on: 2026-09-22
+    - role: ranking
+      name: Maria Cantwell
+      party: D
+      region: WA
+      verified_on: 2026-09-22
+  not_topics:
+    - copyright
+    - liability
+    - government-use
+    - military-ai
+    - export-controls
+  entity_key: entity-5b00c199-2576-4b02-8a33-ca37d4469bff
+  roles:
+    - government
+    - seat
 strings:
   name: U.S. Senate Committee on Commerce, Science, and Transportation
   remit: Primary Senate committee of jurisdiction for AI policy, NIST/CAISI authorisation and oversight, the FTC, NTIA and commercial data privacy. Holds hearings, authorises and oversees NIST, and originates most federal AI legislation. It can subpoena, compel testimony and legislate, but does not adjudicate individual complaints.
@@ -86,14 +146,110 @@ strings:
       note: UNVERIFIED — unlike the UK, the US Senate has no standing public written-evidence portal.
     homepage:
       label: Homepage
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+  ai_jurisdiction: "The single most important AI door in the Senate. Owns the FTC (consumer protection, unfair/deceptive AI practices), NIST and the Center for AI Standards and Innovation (CAISI), NTIA, NSF, NOAA, the FCC, interstate commerce generally, and commercial data privacy. Send here: general-purpose/frontier AI regulation, AI safety testing and evaluation mandates, federal preemption of state AI laws, AI transparency and disclosure rules, chatbots and minors, deepfakes/NCII, AI standards, commercial data privacy, autonomous vehicles, and AI in telecom. NOT here: copyright, liability/private rights of action, or DOJ (Judiciary); federal agency internal AI use (HSGAC); military AI (Armed Services); AI chip export controls (Banking)."
+  business: "VERIFIED: 5 Aug 2026 markup advanced S.1748 Kids Online Safety Act (Blackburn/Blumenthal), S.4199 Youth AI Privacy Act (Markey), S.4407 CHATBOT Act (Cruz/Schatz/Curtis), S.5171 Children's Artificial Intelligence Toy Safety Act of 2026 (Duckworth/Murkowski), S.737 SCREEN Act. S.2750 SANDBOX Act (Cruz, Sept 2025) — AI regulatory sandbox, referred here; part of Cruz's announced AI Policy Framework. S.3952 Future of Artificial Intelligence Innovation Act of 2026 (Young) pending. S.2938 Artificial Intelligence Risk Evaluation Act of 2025 (Hawley/Blumenthal) referred here 2025. S.146 TAKE IT DOWN Act (Cruz) enacted 2025. Hearing 'Intelligent Networks: Powering Artificial Intelligence and Transforming Communications' (30 Jul 2026); 'Measuring What Matters: Science, Standards, and Strategic Competition' (21 Jul 2026). 16 Sep 2026: committee approved Cruz-Wyden anti-'jawboning' bill 18-10, which would create a public database of government communications with AI providers; Cantwell amendment to strip the AI references failed 15-13. As of Sept 2026 a Cruz/Klobuchar/Thune frontier-AI 'catastrophic risk' bill is still unreleased after an August markup was pulled, with Cruz and Cantwell split over self-testing vs. mandatory federal vetting."
+  public_route: "VERIFIED contact page https://www.commerce.senate.gov/contact — Majority (R) staff: Dirksen 554, 202-224-1251. Minority (D) staff: Hart 428, 202-224-0411. Main committee: 254 Russell, Washington DC 20510. No public web form and no published staff email directory. Non-constituents are not barred, but the committee publishes no intake process for them; a letter or call to the majority or minority staff line is the only published route."
+  note: Chair/ranking verified 2026-09-22 against senate.gov's official committee membership roster (committee_memberships_SSCM.htm). The FLI guide calls this committee 'Commerce, Science, and Technology' — the correct name is Commerce, Science, and Transportation.
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
   sources:
     - url: https://www.commerce.senate.gov/
       checked: null
-  needs_research:
-    - not_topics
+    - url: https://www.commerce.senate.gov/about/members
+      checked: 2026-09-22
+    - url: https://www.commerce.senate.gov/
+      checked: 2026-09-22
   legacy_id: "7580202834"
   research_order: 156
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - "7580202834"
+    - 72df6721b2
+  aliases:
+    - us-senate-committee-commerce-2
+    - Senate Committee on Commerce, Science, and Transportation
+  redirect_from:
+    - section: bodies
+      id: us-senate-committee-commerce-2
+  identity_review:
+    evidence_urls:
+      - https://www.commerce.senate.gov/
+      - https://www.commerce.senate.gov/about/members
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: us-senate-committee-commerce
+        source_url: https://www.commerce.senate.gov/
+        checked_on: 2026-09-22
+      - &a2
+        record_id: us-senate-committee-commerce-2
+        source_url: https://www.commerce.senate.gov/about/members
+        checked_on: 2026-09-22
+    geo.sub:
+      - *a1
+      - *a2
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+    facts.public_input:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    facts.topics:
+      - *a1
+      - *a2
+    facts.powers:
+      - *a1
+      - *a2
+    facts.routing_evidence:
+      - *a1
+      - *a2
+    facts.routing_review:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+    strings.powers_text:
+      - *a1
+    strings.reality_check:
+      - *a1
+    strings.notes:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.level:
+      - *a2
+    facts.chamber:
+      - *a2
+    facts.seats:
+      - *a2
+    facts.not_topics:
+      - *a2
+    strings.ai_jurisdiction:
+      - *a2
+    strings.business:
+      - *a2
+    strings.public_route:
+      - *a2
+    strings.note:
+      - *a2

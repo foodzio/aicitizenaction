@@ -45,6 +45,9 @@ facts:
   tags:
     - insider
     - research
+  entity_key: entity-81145c5b-2057-47bb-b5fe-e271bc39f104
+  roles:
+    - civil-society
 strings:
   name: METR (Model Evaluation & Threat Research)
   remit: Research non-profit that evaluates frontier models for autonomous and dangerous capabilities and publishes the results. Best known for the time-horizon metric (length of task an agent can complete at 50% reliability), pre-deployment evaluations for OpenAI and Anthropic, and work on threats to evaluation integrity — generalised reward hacking and sandbagging. Formerly ARC Evals.

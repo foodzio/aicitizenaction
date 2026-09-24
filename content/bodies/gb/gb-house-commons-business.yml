@@ -37,6 +37,9 @@ facts:
     powers:hold-hearings: the committee is in the report/oral-evidence phase
     powers:publish: the committee is in the report/oral-evidence phase
   routing_review: drafted
+  entity_key: entity-08b1f216-f3ec-4d0a-8c83-9a9a3161ea69
+  roles:
+    - seat
 strings:
   name: House of Commons Business, Innovation, Science and Trade Committee (committee id 365; formerly the Business and Trade Committee)
   ai_jurisdiction: Departmental select committee for the new Department for Business, Innovation, Science and Trade (DBIST), which absorbed much of the abolished DSIT. It ran the inquiry 'Artificial Intelligence, business and the future of the workforce' — the most substantial Commons AI inquiry of this Parliament. AI's effect on employment, skills, business adoption and industrial strategy sits here.

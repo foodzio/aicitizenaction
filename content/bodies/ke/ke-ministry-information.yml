@@ -41,6 +41,9 @@ facts:
   tags:
     - law
     - systemic
+  entity_key: entity-6b9248a4-3fc3-4ee1-baa7-68be25af08cf
+  roles:
+    - government
 strings:
   name: Ministry of Information, Communications and the Digital Economy (MICDE) — State Department for ICT and the Digital Economy
   remit: Owns the Kenya AI Strategy 2025–2030 and the draft Kenya Artificial Intelligence and Other Emerging Technologies Policy (July 2026). Kenya is the only African member of the international network, though as of Sept 2026 I found NO evidence that a Kenyan AI Safety Institute has actually been stood up — Kenya 'agreed to join' the network with an institute 'in development'. A separate Artificial Intelligence Bill 2026 is before Parliament, which if passed would create statutory powers; until then the ministry is a policy body.

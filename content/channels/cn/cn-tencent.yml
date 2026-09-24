@@ -93,6 +93,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-e3107cf4-0e71-4f1d-9b00-a28144b5987e
+  roles:
+    - company
 strings:
   name: Tencent
   remit: No publicly named frontier safety function. Tencent Security Response Center (TSRC) runs vulnerability intake for Tencent products including Hunyuan.

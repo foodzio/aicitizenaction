@@ -31,6 +31,9 @@ facts:
     - role: chair
       name: Not applicable
       verified_on: 2026-09-22
+  entity_key: entity-708e3ac3-a7c2-444b-b081-11a0c5ae4cf6
+  roles:
+    - seat
 strings:
   name: e-Gov Public Comment (Administrative Procedure Act public comment procedure)
   ai_jurisdiction: "The single mandatory consultation channel for all Japanese ministries when making 命令等 (cabinet orders, ministerial ordinances, notices/告示, administrative guidance). Every AI-related ordinance, notice and Basic Plan draft from the Cabinet Office, METI, MIC and the Digital Agency passes through here. Statutory basis: Administrative Procedure Act (行政手続法), Chapter 6. Policy oversight sits with MIC's Administrative Management Bureau."

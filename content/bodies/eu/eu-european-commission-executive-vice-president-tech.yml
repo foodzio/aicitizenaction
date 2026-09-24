@@ -35,6 +35,9 @@ facts:
     topics:deepfakes: banning 'nudifier' applications
     powers:legislate: The Commission has the exclusive right of legislative initiative, so this is where AI files begin.
   routing_review: drafted
+  entity_key: entity-ae335028-bbee-45d9-b27a-bbbc08f62da4
+  roles:
+    - seat
 strings:
   name: European Commission — Executive Vice-President for Tech Sovereignty, Security and Democracy
   ai_jurisdiction: "The Commissioner-level holder of the digital and AI portfolio: owns the AI Act's implementation through DG CNECT and the AI Office, the Digital Omnibus simplification agenda, the Cloud and AI Development Act, the Apply AI strategy, and AI gigafactory/compute policy. The Commission has the exclusive right of legislative initiative, so this is where AI files begin."

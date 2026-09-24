@@ -11,7 +11,7 @@ facts:
     - children
     - privacy
   bodies:
-    - eu-european-parliament-committee-internal-market-consumer-2
+    - eu-european-parliament-committee-internal-market-consumer
   action:
     outcome: law
     where: eu

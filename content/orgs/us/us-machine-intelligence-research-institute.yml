@@ -54,10 +54,25 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: a03a05af20f2
+    - id: action
+      type: action
+      value: https://ifanyonebuildsit.com/act
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: e7626ccffd64
   region: United States
   public_input: limited
   tags:
     - research
+    - join
+    - law
+  perspective: safety-advocacy
+  volunteers: unclear
+  entity_key: entity-f28d385b-84ff-475a-9355-a093376ab00a
+  roles:
+    - civil-society
+    - organisation
 strings:
   name: Machine Intelligence Research Institute (MIRI)
   remit: "Originally the founding technical alignment research organisation; since 2024 pivoted almost entirely to communications and policy advocacy for an international halt on frontier AI development. Its site states: 'Our survival depends on some form of globally coordinated and collectively enforced moratorium on the development of ASI, as soon as we can, for as long as necessary.' Outputs are now books, essays and briefings rather than alignment papers."
@@ -85,6 +100,16 @@ strings:
       scope: Supporters
     homepage:
       label: Homepage
+    action:
+      label: Action page
+  the_ask: A globally coordinated and collectively enforced moratorium on the development of artificial superintelligence, because on current methods the most likely outcome is human extinction.
+  what_they_do: "Since 2024 primarily a communications and advocacy organisation rather than a technical lab: the book 'If Anyone Builds It, Everyone Dies', the AI StopWatch daily news service, a documentary, and a contact-your-representative tool run off the book's site."
+  newcomer_action: Use ifanyonebuildsit.com/act to call, email or post a letter to your representative asking them to push for an international pause; add your name to the pledge to march in Washington DC (the march is contingent on reaching 100,000 pledges).
+  tips: no
+  geography: United States primarily (the contact tool finds US representatives); global readership.
+  scale: Small research-and-comms nonprofit, long-established (founded 2000), donor-funded.
+  spending: Not disclosed on the pages checked; accepts donations.
+  caution: MIRI's stated position is that building superintelligence with current techniques most likely kills everyone. That is the strongest claim on this list; endorsing it publicly has social and professional costs in some workplaces. The DC march is conditional and may never happen.
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
@@ -93,8 +118,85 @@ meta:
       checked: 2026-09-22
     - url: https://intelligence.org/act/
       checked: 2026-09-22
+    - url: https://ifanyonebuildsit.com/act
+      checked: 2026-09-22
   needs_research:
     - topics
   legacy_id: 62e31e6847
   research_order: 96
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - 62e31e6847
+    - 84e7c5a357
+  aliases:
+    - us-machine-intelligence-research-institute-2
+    - Machine Intelligence Research Institute (MIRI)
+  redirect_from:
+    - section: orgs
+      id: us-machine-intelligence-research-institute-2
+  identity_review:
+    evidence_urls:
+      - https://intelligence.org/contact/
+      - https://ifanyonebuildsit.com/act
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: us-machine-intelligence-research-institute
+        source_url: https://intelligence.org/contact/
+        checked_on: 2026-09-22
+      - &a2
+        record_id: us-machine-intelligence-research-institute-2
+        source_url: https://ifanyonebuildsit.com/act
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+    facts.public_input:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+    strings.threat_model:
+      - *a1
+    strings.reality_check:
+      - *a1
+    strings.gov_channel:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.perspective:
+      - *a2
+    facts.volunteers:
+      - *a2
+    strings.the_ask:
+      - *a2
+    strings.what_they_do:
+      - *a2
+    strings.newcomer_action:
+      - *a2
+    strings.tips:
+      - *a2
+    strings.geography:
+      - *a2
+    strings.scale:
+      - *a2
+    strings.spending:
+      - *a2
+    strings.caution:
+      - *a2

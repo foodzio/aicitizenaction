@@ -52,6 +52,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-899f0265-88e7-42bd-9a8b-57995399aa42
+  roles:
+    - reporting-channel
 strings:
   name: EU AI Act Article 85 — right to lodge a complaint with a market surveillance authority
   remit: Complaints from 'any natural or legal person' with grounds to consider there has been an infringement of the AI Act. No standing requirement, no need to be personally harmed, no institutional affiliation required. Applies without prejudice to other administrative or judicial remedies.

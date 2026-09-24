@@ -45,6 +45,9 @@ facts:
     topics:liability: AI chatbot technology requirements with a private cause of action for harm
     powers:legislate: House committee of reference for AI chatbot, data-privacy, deepfake/'nudification' and consumer-protection bills
   routing_review: drafted
+  entity_key: entity-3937f1c6-90fa-4fda-9424-cfbe9eea756a
+  roles:
+    - seat
 strings:
   name: House Commerce Finance and Policy Committee
   ai_jurisdiction: House committee of reference for AI chatbot, data-privacy, deepfake/'nudification' and consumer-protection bills. Meets Tue/Wed/Thu 8:15 a.m., Capitol 120.

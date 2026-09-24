@@ -61,10 +61,26 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 5aee6f6ec586
+    - id: action
+      type: action
+      value: https://futureoflife.org/take-action/
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: "6050653768e6"
   region: European Union
   public_input: open
   tags:
     - research
+    - fund
+    - join
+    - law
+  perspective: safety-advocacy
+  volunteers: unclear
+  entity_key: entity-5fe1f2d4-9aed-4481-b2f5-48e7db7648f3
+  roles:
+    - civil-society
+    - organisation
 strings:
   name: Future of Life Institute (FLI)
   remit: Advocacy, grantmaking and policy across AI, biotechnology and nuclear weapons. Outputs include the AI Safety Index (latest edition Summer 2026, published July 2026, grading nine companies — Anthropic C+, OpenAI C, Google DeepMind C, Meta D+, Z.ai D-, Alibaba Cloud D-, xAI F, DeepSeek F, Mistral F — reviewed by a seven-member panel of David Krueger, Sharon Li, Tegan Maharaj, Sneha Revanur, Stuart Russell, Robert Trager and Yi Zeng), the 2023 pause letter, EU AI Act advocacy, and substantial grant programmes.
@@ -96,6 +112,16 @@ strings:
       scope: Read; input via policy@
     homepage:
       label: Homepage
+    action:
+      label: Action page
+  the_ask: A moratorium on developing artificial superintelligence for at least 15 years, plus licensing, auditing and enforceable safety standards before scaling — and a participatory global process rather than decisions made by a handful of CEOs.
+  what_they_do: Open letters and petitions (Pause Giant AI Experiments, 31,810 signatories; Asilomar AI Principles), a contact-your-legislator tool, EU AI Act implementation work, grantmaking, the Digital Media Accelerator, and a newsletter with about 70,000 subscribers. It is a registered lobbying entity in both the US and EU.
+  newcomer_action: Use the contact-your-legislator tool, sign the open letters, join the action alerts list, or apply to the Digital Media Accelerator if you make creative content.
+  tips: no
+  geography: United States and European Union (Brussels lobbying presence).
+  scale: Mid-sized and well-funded by the standards of this field; a large grantmaker as well as an advocate.
+  spending: Registers as a federal lobbying client in the US (OpenSecrets ID D000087562) and appears on the EU transparency register; specific figures not retrieved from its own pages.
+  caution: FLI does not have a separately branded advocacy arm — its policy and lobbying work runs through the Institute itself plus EU-registered activity. Its ask is a time-limited moratorium on superintelligence, which is weaker than ControlAI's or StopAI's permanent ban and stronger than Encode's transparency agenda. It is also a funder of other groups on this list, so 'independent' endorsements between these organisations are not always independent.
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
@@ -104,8 +130,85 @@ meta:
       checked: 2026-09-22
     - url: https://futureoflife.org/index
       checked: 2026-09-22
+    - url: https://futureoflife.org/take-action/
+      checked: 2026-09-22
   needs_research:
     - topics
   legacy_id: f6c82db06c
   research_order: 95
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - f6c82db06c
+    - 84d70029dc
+  aliases:
+    - us-future-life-institute-2
+    - Future of Life Institute (FLI)
+  redirect_from:
+    - section: orgs
+      id: us-future-life-institute-2
+  identity_review:
+    evidence_urls:
+      - https://futureoflife.org/our-work/grantmaking-work/
+      - https://futureoflife.org/take-action/
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: us-future-life-institute
+        source_url: https://futureoflife.org/our-work/grantmaking-work/
+        checked_on: 2026-09-22
+      - &a2
+        record_id: us-future-life-institute-2
+        source_url: https://futureoflife.org/take-action/
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+    facts.public_input:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+    strings.threat_model:
+      - *a1
+    strings.reality_check:
+      - *a1
+    strings.gov_channel:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.perspective:
+      - *a2
+    facts.volunteers:
+      - *a2
+    strings.the_ask:
+      - *a2
+    strings.what_they_do:
+      - *a2
+    strings.newcomer_action:
+      - *a2
+    strings.tips:
+      - *a2
+    strings.geography:
+      - *a2
+    strings.scale:
+      - *a2
+    strings.spending:
+      - *a2
+    strings.caution:
+      - *a2

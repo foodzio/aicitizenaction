@@ -48,6 +48,9 @@ facts:
     powers:handle-complaints: https://oag.ca.gov/report (AG consumer/civil-rights complaints)
     powers:convene: directs GovOps, with Cal OES, to convene national experts
   routing_review: drafted
+  entity_key: entity-f0f72c04-caf4-46d9-9a55-52a35fa7e29b
+  roles:
+    - seat
 strings:
   name: Government Operations Agency / CPPA / Attorney General (executive AI oversight)
   ai_jurisdiction: Implementation and enforcement of SB 53, SB 813 and AB 1405; ADMT regulation; FEHA automated-decision rules.

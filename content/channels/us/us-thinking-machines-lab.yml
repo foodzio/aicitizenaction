@@ -93,6 +93,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-0e2258d3-8a96-4b48-b709-3e0113a6e9bf
+  roles:
+    - company
 strings:
   name: Thinking Machines Lab
   remit: States it will contribute to AI safety by 'maintaining a high safety bar—preventing misuse of our released models while maximizing users' freedom', sharing best practices, and 'accelerating external research on alignment by sharing code, datasets, and model specs'. No named safety team.

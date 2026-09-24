@@ -21,10 +21,32 @@ facts:
       verified_on: 2026-09-22
       language: English.
       source_id: 8d113af629bc
+    - id: summit-site-events
+      type: form
+      value: https://impact.indiaai.gov.in/about-summit
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 91e0fd502358
+    - id: un-odet-side-events
+      type: form
+      value: https://www.un.org/digital-emerging-technologies/content/india-ai-impact-summit
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 3e1820e33564
+    - id: homepage
+      type: homepage
+      value: https://impact.indiaai.gov.in/
+      verified: null
+      verification_method: listed_not_independently_checked
+      verified_on: null
+      source_id: 0db673873bbb
   local_name: भारत एआई इम्पैक्ट शिखर सम्मेलन 2026
   level: national
   tags:
     - law
+    - systemic
   seats:
     - role: chair
       name: Ashwini Vaishnaw
@@ -37,6 +59,12 @@ facts:
     topics:international: Host of the fourth in the series of global AI summits (after Bletchley, Seoul, Paris).
     powers:convene: dedicated category sessions for international organisations, industry, startups, academia AND civil society
   routing_review: drafted
+  region: India
+  public_input: limited
+  entity_key: entity-1b1b7e0c-d388-42b9-99d4-e45cd26ffc76
+  roles:
+    - seat
+    - multilateral
 strings:
   name: India AI Impact Summit 2026
   ai_jurisdiction: Host of the fourth in the series of global AI summits (after Bletchley, Seoul, Paris). Held 19-20 February 2026 at Bharat Mandapam, New Delhi. Organised by MeitY/IndiaAI under a 'Sutras and Chakras' framework. Set the agenda for Global South AI positioning; the India AI Governance Guidelines were foregrounded there.
@@ -53,6 +81,19 @@ strings:
       label: Live membership list
     public-route:
       label: Public submission route
+    summit-site-events:
+      label: Summit site — events, Global South Showcase, research symposium
+      scope: Side events, showcases and symposium tracks were open to applications in the run-up
+      note: The 2026 cycle is closed; civil society participated mainly through side events and the research symposium rather than the main plenary.
+    un-odet-side-events:
+      label: UN ODET side-events page for the summit
+      scope: UN-hosted side events
+    homepage:
+      label: Homepage
+  remit: Successor to the Paris AI Action Summit (Feb 2025), held in New Delhi 19–20 February 2026 — the first global AI summit hosted in the Global South. Structured around three Sutras (People, Planet, Progress) and seven Chakras (Human Capital, Social Empowerment, Safe AI, Resilience & Innovation, Science, Democratising AI Resources, Economic Growth). Adopted the New Delhi Declaration plus investment commitments; the government reported very large public attendance (~600,000 across associated events). The International AI Safety Report 2026 was published ahead of it.
+  threat_model: Development-and-diffusion first. 'Safe AI' is one of seven chakras — a demotion relative to Bletchley (2023), continuing the trajectory set at Paris. Emphasis on access, inclusion and economic impact over catastrophic risk.
+  reality_check: "The summit itself is now past. Civil society access in this series has been consistently side-event access, not negotiating-room access, and the safety agenda has thinned at each iteration. UNVERIFIED: no confirmed host or date for the next summit in the series was found at the time of checking — watch for an announcement."
+  gov_channel: Head-of-state level; declarations are politically binding signals, not law.
 meta:
   verified_on: 2026-09-22
   review_by: 2026-12-21
@@ -61,8 +102,100 @@ meta:
       checked: 2026-09-22
     - url: https://impact.indiaai.gov.in/stakeholder-consultation
       checked: 2026-09-22
+    - url: https://impact.indiaai.gov.in/about-summit
+      checked: 2026-09-22
+    - url: https://www.un.org/digital-emerging-technologies/content/india-ai-impact-summit
+      checked: 2026-09-22
   needs_research:
     - not_topics
   legacy_id: 03624ba117
   research_order: 123
   migrated_from: input/data/committees-and-organisations.json#seats
+  legacy_ids:
+    - 03624ba117
+    - f175393922
+  aliases:
+    - global-india-ai-impact-summit-2026
+    - India AI Impact Summit 2026 (AI summit series)
+  redirect_from:
+    - section: bodies
+      id: global-india-ai-impact-summit-2026
+  identity_review:
+    evidence_urls:
+      - https://impact.indiaai.gov.in/about-summit
+      - https://impact.indiaai.gov.in/stakeholder-consultation
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: in-india-ai-impact-summit-2026
+        source_url: https://impact.indiaai.gov.in/about-summit
+        checked_on: 2026-09-22
+      - &a2
+        record_id: global-india-ai-impact-summit-2026
+        source_url: https://impact.indiaai.gov.in/about-summit
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.local_name:
+      - *a1
+    facts.level:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    facts.seats:
+      - *a1
+    facts.topics:
+      - *a1
+      - *a2
+    facts.powers:
+      - *a1
+    facts.routing_evidence:
+      - *a1
+      - *a2
+    facts.routing_review:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.ai_jurisdiction:
+      - *a1
+    strings.business:
+      - *a1
+    strings.public_route:
+      - *a1
+    strings.format_rules:
+      - *a1
+    strings.realistic:
+      - *a1
+    strings.language_note:
+      - *a1
+    strings.note:
+      - *a1
+    strings.seat_notes:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a2
+    facts.public_input:
+      - *a2
+    strings.remit:
+      - *a2
+    strings.threat_model:
+      - *a2
+    strings.reality_check:
+      - *a2
+    strings.gov_channel:
+      - *a2

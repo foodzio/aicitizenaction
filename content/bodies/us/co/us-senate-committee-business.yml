@@ -43,6 +43,9 @@ facts:
     powers:legislate: Senate committee of reference for AI, automated decision-making technology, consumer protection and technology bills
     powers:hold-hearings: Any member of the public may testify in person OR remotely by video at a committee hearing
   routing_review: drafted
+  entity_key: entity-21733c8c-4438-4cdf-85df-71daf82c3ecb
+  roles:
+    - seat
 strings:
   name: Senate Committee on Business, Labor, & Technology
   ai_jurisdiction: Senate committee of reference for AI, automated decision-making technology, consumer protection and technology bills. SB 26-189 was referred here.

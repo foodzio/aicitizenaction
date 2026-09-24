@@ -58,6 +58,9 @@ facts:
     powers:publish: publishes an AI use-case inventory
     powers:handle-complaints: The only route with real bite is the CRCL complaint when DHS's own AI has harmed a specific person
   routing_review: drafted
+  entity_key: entity-c13e32ef-3b3d-4e6e-8c4a-a7146fcffb49
+  roles:
+    - government
 strings:
   name: U.S. Department of Homeland Security (DHS)
   remit: Co-ordinates AI risk to critical infrastructure and homeland security; publishes an AI use-case inventory covering its components including CISA; previously convened the AI Safety and Security Board (an advisory body whose membership was reconstituted under the current administration). DHS components with AI remit include CISA, CBP, TSA and USCIS. DHS itself mostly convenes and issues non-binding frameworks for critical-infrastructure owners rather than regulating AI developers.

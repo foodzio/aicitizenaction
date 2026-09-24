@@ -29,6 +29,9 @@ facts:
     powers:legislate: Every MEP can table amendments
     powers:oversee: ask written questions of the Commission (which must be answered and are published)
   routing_review: drafted
+  entity_key: entity-03c7777d-4128-496f-a070-093e0b7918dc
+  roles:
+    - seat
 strings:
   name: Members of the European Parliament — direct correspondence
   ai_jurisdiction: Every MEP can table amendments, ask written questions of the Commission (which must be answered and are published), sign motions, and speak in committee. On AI, a single MEP's written question can force the Commission to state a position on the record.

@@ -47,6 +47,9 @@ facts:
     topics:whistleblowing: whistleblower route at /contact/whistleblower.htm
     powers:hold-hearings: hearing 'Unlocking the Next Generation of AI in the U.S. Financial System
   routing_review: drafted
+  entity_key: entity-21cb2c8a-19ea-4b06-8a90-77eba022cf65
+  roles:
+    - seat
 strings:
   name: Subcommittee on Digital Assets, Financial Technology, and Artificial Intelligence
   ai_jurisdiction: "The only House subcommittee outside Judiciary with 'Artificial Intelligence' in its name. Send here: AI in financial services products, AI agents transacting autonomously, algorithmic underwriting and fair lending, AI fraud detection and AI-enabled fraud, and the regulatory treatment of AI by the SEC, CFTC, OCC, Fed and CFPB."

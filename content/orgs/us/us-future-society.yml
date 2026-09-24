@@ -18,6 +18,9 @@ facts:
     - fund
     - join
     - law
+  entity_key: entity-ded333b8-735f-4491-88e0-27ec57615809
+  roles:
+    - organisation
 strings:
   name: The Future Society
   the_ask: Align AI through better governance — workable international rules, EU implementation, and AI security policy, rather than leaving frontier development ungoverned.

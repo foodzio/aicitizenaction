@@ -38,6 +38,9 @@ facts:
   tags:
     - harm
     - research
+  entity_key: entity-c027a24c-a56d-434b-9f1c-3eb64d10b2ec
+  roles:
+    - civil-society
 strings:
   name: Centre for the Governance of AI (GovAI)
   remit: Research institute producing academic-quality AI governance research and, critically, a talent pipeline — GovAI Fellowships (biannual UK editions plus other cohorts), an Entrepreneur-in-Residence programme offering a salaried year plus ~$150k seed funding to launch new AI governance organisations, and policy roles. Research spans compute governance, corporate governance of labs, international institutions, and dual-use capability risk (e.g. bioterrorism risk from dual-use AI).

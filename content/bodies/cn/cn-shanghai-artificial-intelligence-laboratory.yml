@@ -54,6 +54,9 @@ facts:
     powers:test-models: an accompanying technical risk-analysis report assessing frontier models against cyber-offence, biological/chemical, persuasion, and loss-of-control risk categories
     powers:publish: Published a Frontier AI Risk Management Framework
   routing_review: drafted
+  entity_key: entity-07a1ae1d-5a5b-449d-9160-e9e95928ff27
+  roles:
+    - government
 strings:
   name: Shanghai Artificial Intelligence Laboratory (Shanghai AI Lab)
   remit: State-backed AI research laboratory, a CnAISDA member, and the most substantive frontier-safety research operation in China. Published a Frontier AI Risk Management Framework (v1.0, with Concordia AI) and an accompanying technical risk-analysis report assessing frontier models against cyber-offence, biological/chemical, persuasion, and loss-of-control risk categories — methodologically comparable to Western frontier safety frameworks. Also produced the AI-45° Law / SafeWork line of research on co-evolving safety and capability. Pure research; no regulatory power.

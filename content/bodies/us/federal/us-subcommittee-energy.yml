@@ -41,6 +41,9 @@ facts:
   routing_evidence:
     topics:safety-testing: DOE's role in AI compute and model evaluation
   routing_review: drafted
+  entity_key: entity-cbf2ed11-17e3-48cd-8f1c-11c8c3bb7d6b
+  roles:
+    - seat
 strings:
   name: Subcommittee on Energy
   ai_jurisdiction: DOE programs, the national laboratories, grid reliability and electricity markets — the subcommittee-level venue for data-center load growth, transmission, and DOE's role in AI compute and model evaluation.

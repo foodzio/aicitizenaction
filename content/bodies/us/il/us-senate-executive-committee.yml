@@ -46,6 +46,9 @@ facts:
     powers:legislate: package reported out of committee 13 May 2026
     powers:hold-hearings: SB 315 and the companion Senate AI bills were heard on this track in May 2026
   routing_review: drafted
+  entity_key: entity-24492e3a-f1ce-46c5-8af7-7ffb80de7beb
+  roles:
+    - seat
 strings:
   name: Senate Executive Committee (with its AI and Social Media Subcommittee, SEXC-AISM)
   ai_jurisdiction: Senate committee of reference for the 2026 AI package; the AI and Social Media subcommittee sits under Executive. SB 315 and the companion Senate AI bills were heard on this track in May 2026.

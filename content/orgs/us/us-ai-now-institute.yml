@@ -33,11 +33,27 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 215d1ce1ad49
+    - id: action
+      type: action
+      value: https://ainowinstitute.org/publications
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 330afbbd8cbf
   region: United States
   public_input: limited
   tags:
     - law
     - research
+    - audit
+    - harm
+    - join
+  perspective: civil-liberties
+  volunteers: no
+  entity_key: entity-e560770a-a9e7-4f42-98fa-bfb21b1c3c51
+  roles:
+    - civil-society
+    - organisation
 strings:
   name: AI Now Institute
   remit: "Independent policy research institute. Current agenda centres on the political economy of AI: market concentration and monopoly (co-executive director Amba Kak has testified before the congressional Monopoly Busters Caucus), data-centre expansion and its infrastructure harms, labour and the gig-ification of professions such as nursing, industry opacity, and AI security vulnerabilities. Publishes the Landscape reports."
@@ -57,14 +73,101 @@ strings:
       scope: General
     homepage:
       label: Homepage
+    action:
+      label: Action page
+  the_ask: Challenge the current trajectory of AI by confronting industry concentration and power — antitrust scrutiny, limits on data centre expansion, and worker protection — rather than accepting scale as inevitable.
+  what_they_do: Independent research and policy analysis; maps the AI market and the industry's sources of power; publishes data centre policy toolkits and labour research (including AI in nursing); testifies to Congress (Monopoly Busters Caucus, Senate Banking Committee); investigates AI security incidents.
+  newcomer_action: Use its data centre policy toolkit if there is a proposed facility near you; cite its market-power research in submissions; apply for a role.
+  tips: no public tip line found
+  geography: United States, with international influence.
+  scale: Small research institute, co-led by Amba Kak and Sarah Myers West; high influence per head.
+  spending: Grant-funded.
+  caution: A research institute, not a campaign — there is no petition, no membership and no volunteering. Its critique targets AI companies' power and is often explicitly at odds with the existential-risk framing used by groups like MIRI and ControlAI.
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
   sources:
     - url: https://ainowinstitute.org/contact-us
       checked: 2026-09-22
+    - url: https://ainowinstitute.org/publications
+      checked: 2026-09-22
   needs_research:
     - topics
   legacy_id: c5a80a0c0c
   research_order: 115
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - c5a80a0c0c
+    - bfa72a95c8
+  aliases:
+    - us-ai-now-institute-2
+    - AI Now Institute
+  redirect_from:
+    - section: orgs
+      id: us-ai-now-institute-2
+  identity_review:
+    evidence_urls:
+      - https://ainowinstitute.org/contact-us
+      - https://ainowinstitute.org/publications
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: us-ai-now-institute
+        source_url: https://ainowinstitute.org/contact-us
+        checked_on: 2026-09-22
+      - &a2
+        record_id: us-ai-now-institute-2
+        source_url: https://ainowinstitute.org/publications
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+    facts.public_input:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+    strings.threat_model:
+      - *a1
+    strings.reality_check:
+      - *a1
+    strings.gov_channel:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.perspective:
+      - *a2
+    facts.volunteers:
+      - *a2
+    strings.the_ask:
+      - *a2
+    strings.what_they_do:
+      - *a2
+    strings.newcomer_action:
+      - *a2
+    strings.tips:
+      - *a2
+    strings.geography:
+      - *a2
+    strings.scale:
+      - *a2
+    strings.spending:
+      - *a2
+    strings.caution:
+      - *a2

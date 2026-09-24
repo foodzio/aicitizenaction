@@ -59,6 +59,9 @@ facts:
     topics:security: validity, safety, security/resilience, accountability/transparency, explainability, privacy, and bias
     powers:set-standards: a voluntary framework structured around Govern, Map, Measure, Manage
   routing_review: drafted
+  entity_key: entity-c44f030e-2cda-4f31-99fc-167963659bbe
+  roles:
+    - standards
 strings:
   name: NIST AI Risk Management Framework (AI RMF) and AI Resource Center
   remit: AI RMF 1.0 (Jan 2023) — a voluntary framework structured around Govern, Map, Measure, Manage — plus the Generative AI Profile (NIST AI 600-1), crosswalks to other frameworks, the AI RMF Roadmap, and the AI Resource Center (AIRC) with the Trustworthy & Responsible AI playbooks. The RMF is being revised under the White House AI Action Plan.

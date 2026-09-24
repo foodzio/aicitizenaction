@@ -17,6 +17,9 @@ facts:
   tags:
     - join
     - tip
+  entity_key: entity-73d768ec-043d-4138-b590-1cb7f227219a
+  roles:
+    - organisation
 strings:
   name: National Union of Journalists (NUJ)
   the_ask: AI must not be used to cut journalism jobs or degrade editorial standards; its use should be negotiated with the union, with transparency and protection of journalists' work.

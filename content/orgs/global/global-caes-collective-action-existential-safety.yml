@@ -17,6 +17,9 @@ facts:
   tags:
     - join
     - law
+  entity_key: entity-513bad87-e3c8-4963-8fb9-9856cd52c158
+  roles:
+    - organisation
 strings:
   name: CAES — Collective Action for Existential Safety (Center for Existential Safety)
   the_ask: Individuals, organisations and nations should each take concrete personal action on existential risk — from AI, nuclear weapons and engineered pandemics — starting today.

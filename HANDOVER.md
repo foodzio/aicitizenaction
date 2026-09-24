@@ -88,6 +88,39 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
+### 2026-09-24T13:52:55Z — Duplicate backlog merged with lossless provenance
+
+- Applied 41 confirmed merges and retired 41 duplicate files, leaving 382 canonical directory
+  entities. Every survivor now has an opaque `entity_key` and plural `roles`; all exact content
+  references were rewritten. Access Now now appears exactly once.
+- Reversed one initially approved merge after the routing regression exposed that the federal and
+  California Senate Judiciary committees are distinct jurisdictions. The ledger now records them
+  `distinct`, and a regression test prevents cross-sub-jurisdiction numeric siblings from ever
+  reaching high confidence. The final ledger resolves all 78 current candidates with 0 pending.
+- Preserved all 423 imported legacy-record observations and all 1,170 indexed source observations.
+  Identical canonical routes retain multiple `source_ids` instead of displaying duplicate routes.
+  Source facts, aliases, retired ids, roles and field-level provenance remain on each canonical.
+- Routing now matches every canonical role rather than only the compatibility `type`, fixing the
+  Senate Commerce ranking after its government/seat profiles were combined. Contact-audit and site
+  tests now use dynamic discovered counts; current channel inventory is 70 records / 232 routes.
+- Verification: 100/100 tests pass; 838-page production build passes; content validation has 0
+  errors/four existing warnings; candidate, decision and contact inventories are current. Phase 2
+  still needs permanent multilingual HTTP redirects for the 41 retired public paths.
+
+### 2026-09-24T13:48:10Z — Merge applied; post-apply repair in progress (do not commit yet)
+
+- Applied the reviewed 42-pair merge set: duplicate files are retired, 381 canonical directory
+  records remain, and all survivors received opaque entity keys and roles. Candidate regeneration
+  currently reports 77 candidates (2 high, 5 medium, 70 low).
+- Post-apply validation correctly caught an applicator bug: the general id-reference rewrite also
+  rewrote ids inside `meta.redirect_from`, producing self-redirects. It also exposed merged
+  `needs_research` flags for newly filled fields and two organisation action routes that need an
+  explicit reference-only contact review after moving into channel records.
+- Current dirty tree is intentionally **not committed** and validation has 55 errors. Repair the
+  applicator first; restore each retired id/section from the pre-merge candidate inventory in git,
+  normalize research flags and channel route reviews, regenerate candidates/decisions, and require
+  zero validation/ledger errors before committing the merge.
+
 ### 2026-09-24T13:47:31Z — Approved merge applicator added and dry-run
 
 - Added `npm run directory-identity-apply`: dry-run by default, explicit `-- --apply` required.

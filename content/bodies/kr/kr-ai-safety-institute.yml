@@ -36,19 +36,54 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: 7d6a68c4f0a3
+    - id: membership
+      type: membership
+      value: https://www.aisi.re.kr/eng/contents/23
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Korean and English. Korea AISI maintains a genuine English site — a notable exception in this jurisdiction and the most accessible Korean AI body for a non-Korean speaker.
+      source_id: 9e86e9d2e725
+    - id: public-route
+      type: submission
+      value: https://www.aisi.re.kr/eng
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: Korean and English. Korea AISI maintains a genuine English site — a notable exception in this jurisdiction and the most accessible Korean AI body for a non-Korean speaker.
+      source_id: 0e116887f0c7
   local_name: 인공지능안전연구소
   region: South Korea
   public_input: limited
   tags:
     - systemic
+    - law
+    - record
   topics:
     - safety-testing
+    - standards
+    - international
   powers:
     - advise
+    - test-models
+    - set-standards
   routing_evidence:
     topics:safety-testing: "Three divisions: AI safety policy, AI safety evaluation, AI safety research."
     powers:advise: Supports MSIT in implementing the AI Framework Act
+    topics:standards: evaluate AI risk and develop safety standards
+    topics:international: Korea's node in the International Network of AI Safety Institutes
+    powers:test-models: Statutory body established under the AI Framework Act to evaluate AI risk
+    powers:set-standards: Work programme covers AI safety policy, evaluation methodology
   routing_review: drafted
+  level: national
+  seats:
+    - role: chair
+      name: KIM Myuhngjoo
+      verified_on: 2026-09-22
+  entity_key: entity-31a5ddc9-825f-4fd9-8983-fa958a0da174
+  roles:
+    - government
+    - seat
 strings:
   name: AI Safety Institute (Korea AISI)
   remit: "Launched Nov 2024. Hosted within ETRI (한국전자통신연구원, Electronics and Telecommunications Research Institute) under the Ministry of Science and ICT (과학기술정보통신부, MSIT). Three divisions: AI safety policy, AI safety evaluation, AI safety research. Supports MSIT in implementing the AI Framework Act but is itself a research institute — it does not issue orders or fines."
@@ -70,6 +105,19 @@ strings:
       note: "VERIFIED fetched. Postal address: A-4F, 22 Daewangpangyo-ro 712beon-gil, Bundang-gu, Seongnam-si, Gyeonggi-do 13488."
     homepage:
       label: Homepage
+    membership:
+      label: Live membership list
+    public-route:
+      label: Public submission route
+  ai_jurisdiction: Statutory body established under the AI Framework Act to evaluate AI risk and develop safety standards. Korea's node in the International Network of AI Safety Institutes. Co-produced the bilingual Korea AI Basic Act resource with the Future of Life Institute.
+  business: "Operates under MSIT with the Electronics and Telecommunications Research Institute (ETRI) as host/supporting organisation — note this dual line: it is statutorily grounded but institutionally embedded in a government research institute rather than standing alone. Work programme covers AI safety policy, evaluation methodology and international AISI collaboration."
+  public_route: "No formal comment mechanism. Practical routes: research collaboration enquiries and general contact via aisi.re.kr; international engagement through the AI Safety Institute network; policy input indirectly via MSIT pre-announcement."
+  format_rules: None; no formal participation process exists to have a threshold.
+  realistic: Not a participation route in any formal sense, but it is the most approachable Korean AI institution for an outsider because it has a working English presence and an internationally-facing research remit. Researchers and technical contributors can realistically make contact. Ordinary citizens have no route here and should use the petition or the MSIT pre-announcement instead.
+  language_note: Korean and English. Korea AISI maintains a genuine English site — a notable exception in this jurisdiction and the most accessible Korean AI body for a non-Korean speaker.
+  note: Director and the MSIT/ETRI institutional relationship VERIFIED from the institute's own English site aisi.re.kr/eng/contents/23 and its site footer. The statutory basis under the AI Framework Act is VERIFIED indirectly via Cooley's analysis, which refers to an 'AI Safety Research Institute' established by the law; the exact article number is UNVERIFIED.
+  seat_notes:
+    chair: Director, AI Safety Institute
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
@@ -80,8 +128,102 @@ meta:
       checked: 2026-09-22
     - url: https://aisi.re.kr/kor
       checked: 2026-09-22
+    - url: https://www.aisi.re.kr/eng/contents/23
+      checked: 2026-09-22
+    - url: https://www.aisi.re.kr/eng
+      checked: 2026-09-22
   needs_research:
     - not_topics
   legacy_id: 303bd34319
   research_order: 32
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - 303bd34319
+    - c1ddf99070
+  aliases:
+    - kr-ai-safety-institute-2
+    - AI Safety Institute (Korea AISI)
+  redirect_from:
+    - section: bodies
+      id: kr-ai-safety-institute-2
+  identity_review:
+    evidence_urls:
+      - https://www.aisi.re.kr/eng
+      - https://www.aisi.re.kr/eng/contents/23
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: kr-ai-safety-institute
+        source_url: https://www.aisi.re.kr/eng
+        checked_on: 2026-09-22
+      - &a2
+        record_id: kr-ai-safety-institute-2
+        source_url: https://www.aisi.re.kr/eng/contents/23
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.local_name:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+    facts.public_input:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    facts.topics:
+      - *a1
+      - *a2
+    facts.powers:
+      - *a1
+      - *a2
+    facts.routing_evidence:
+      - *a1
+      - *a2
+    facts.routing_review:
+      - *a1
+      - *a2
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+    strings.powers_text:
+      - *a1
+    strings.reality_check:
+      - *a1
+    strings.notes:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.level:
+      - *a2
+    facts.seats:
+      - *a2
+    strings.ai_jurisdiction:
+      - *a2
+    strings.business:
+      - *a2
+    strings.public_route:
+      - *a2
+    strings.format_rules:
+      - *a2
+    strings.realistic:
+      - *a2
+    strings.language_note:
+      - *a2
+    strings.note:
+      - *a2
+    strings.seat_notes:
+      - *a2

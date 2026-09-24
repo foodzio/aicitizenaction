@@ -39,6 +39,9 @@ facts:
     - harm
     - research
     - systemic
+  entity_key: entity-4c0818b2-6a85-4512-b05f-dc39e1971080
+  roles:
+    - academic
 strings:
   name: Oxford Martin AI Governance Initiative (AIGI)
   remit: "Research initiative within the Oxford Martin School, co-directed by Robert Trager and Maike Osborne. Three research areas: frontier AI governance, international AI governance (including a China AI Governance programme and the Oxford AI Diplomacy Lab), and technical AI governance (including a Hardware AI Governance Lab working on compute verification and on-chip governance mechanisms). Files responses to government consultations."

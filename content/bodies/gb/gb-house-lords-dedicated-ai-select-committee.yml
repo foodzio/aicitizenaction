@@ -22,6 +22,9 @@ facts:
   level: national
   tags:
     - law
+  entity_key: entity-1e1d1b7c-5ef2-46c1-a024-af3a582491cf
+  roles:
+    - seat
 strings:
   name: House of Lords — dedicated AI select committee (status check)
   ai_jurisdiction: "A standalone Lords AI committee. The Lords Artificial Intelligence Committee (committee id 376) was an ad hoc special inquiry committee that reported 'AI in the UK: ready, willing and able?' in 2018 and was followed up by the Liaison Committee; it is not a standing body."

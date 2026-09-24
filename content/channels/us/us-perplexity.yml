@@ -117,6 +117,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-fedfa640-332b-4813-9949-d7927c5b60d1
+  roles:
+    - company
 strings:
   name: Perplexity
   remit: No publicly named safety or alignment function. A security team runs the VDP; support handles what Perplexity calls 'safety issues' at the account level.

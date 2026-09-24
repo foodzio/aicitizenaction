@@ -51,6 +51,9 @@ facts:
   public_input: limited
   tags:
     - research
+  entity_key: entity-be4c9f1c-c72a-42b9-8d1e-25a79acbbfd9
+  roles:
+    - academic
 strings:
   name: Mila — Quebec AI Institute
   remit: Research institute founded by Yoshua Bengio in 1993, uniting researchers from Université de Montréal, McGill, Polytechnique Montréal and HEC Montréal — 1,400+ researchers and 140+ affiliated professors. AI safety and governance work runs through an AI Governance, Policy and Inclusion division, the AI Policy Compass programme for policymakers, TRAIL responsible-AI training, and the AI4Good Lab, plus Indigenous-AI work.

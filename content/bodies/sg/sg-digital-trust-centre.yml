@@ -43,6 +43,9 @@ facts:
     powers:test-models: Conducts AI testing and evaluation research, including multilingual/multicultural and agentic AI testing
     powers:fund: runs innovation grant calls
   routing_review: drafted
+  entity_key: entity-5a05ec4c-e352-4015-82ee-20409919621b
+  roles:
+    - government
 strings:
   name: Digital Trust Centre (DTC), Nanyang Technological University
   remit: Singapore's national R&D centre for trust technologies, hosted at NTU and funded by IMDA and the National Research Foundation. Designated in May 2024 as the technical execution arm of the Singapore AI Safety Institute. Conducts AI testing and evaluation research, including multilingual/multicultural and agentic AI testing, and runs innovation grant calls. University research centre — no regulatory power.

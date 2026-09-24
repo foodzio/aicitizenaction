@@ -96,6 +96,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-83fc06bb-a048-4fe0-b23f-9c84ab20b7f7
+  roles:
+    - company
 strings:
   name: Moonshot AI
   remit: No publicly named safety or alignment function. A security team exists and responds via the developer forum; Kimi models are released open-weight and via API.

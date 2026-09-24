@@ -41,6 +41,9 @@ facts:
     powers:legislate: House committee of reference for AI, ADMT, technology and labor bills
     powers:hold-hearings: in-person or remote video testimony plus written testimony
   routing_review: drafted
+  entity_key: entity-87cc496a-51d0-4bb6-a4b7-3a6306c391e7
+  roles:
+    - seat
 strings:
   name: House Committee on Business Affairs & Labor
   ai_jurisdiction: House committee of reference for AI, ADMT, technology and labor bills; the House-side counterpart that heard the AI replacement legislation.

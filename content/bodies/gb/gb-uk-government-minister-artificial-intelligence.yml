@@ -33,6 +33,9 @@ facts:
   routing_evidence:
     topics:government-use: Cabinet Office (centre-of-government AI adoption)
   routing_review: drafted
+  entity_key: entity-a5015c46-782b-46a7-97ad-f17182e8a9a3
+  roles:
+    - seat
 strings:
   name: UK Government — Minister for Artificial Intelligence (Cabinet Office and Department for Business, Innovation, Science and Trade)
   ai_jurisdiction: The UK's first Cabinet-level AI minister, holding the AI brief jointly across the Cabinet Office (centre-of-government AI adoption) and DBIST (AI industrial and regulatory policy). This post replaced the AI brief formerly held inside DSIT.

@@ -47,6 +47,9 @@ facts:
   recommend: false
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-ae4a05ca-f16a-45e5-8260-b8bba8dbc74f
+  roles:
+    - reporting-channel
 strings:
   name: UK Parliament — find an inquiry accepting written evidence
   remit: N/A — this is the discovery tool.

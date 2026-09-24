@@ -86,6 +86,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-d291288e-5f02-4f24-8c8c-5da99cceff79
+  roles:
+    - company
 strings:
   name: Allen Institute for AI (Ai2)
   remit: No separately named safety or alignment function. Responsible Use Guidelines govern OLMo, Molmo, Tulu and Ai2 tools; the organisation argues openness is itself the safety mechanism.

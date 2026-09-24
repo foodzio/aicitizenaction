@@ -44,6 +44,9 @@ facts:
     powers:legislate: Approved by the Federal Senate in December 2024, then sent to the Chamber of Deputies
     powers:hold-hearings: Committee hearings have taken evidence from industry and civil society.
   routing_review: drafted
+  entity_key: entity-068e65a2-a7a9-44de-a401-1f07b534ffd7
+  roles:
+    - government
 strings:
   name: Brazilian National Congress — PL 2338/2023 (Marco Legal da Inteligência Artificial)
   remit: "STATUS AS OF SEPT 2026: NOT YET LAW. Approved by the Federal Senate in December 2024, then sent to the Chamber of Deputies where a Comissão Especial sobre Inteligência Artificial was constituted. The final vote slipped repeatedly — pushed to December 2025, then to 2026, amid political deadlock and sustained criticism of the text. The Senate-approved version is risk-tiered on an EU-AI-Act model, prohibits certain uses, creates obligations for 'high-risk' and general-purpose systems, and contemplates fines reaching BRL 50 million per infraction. Until enacted it confers no powers on anyone."

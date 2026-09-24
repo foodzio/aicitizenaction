@@ -49,6 +49,9 @@ facts:
     powers:investigate: The Senate's standing investigative body, with subpoena power
     powers:compel: The Senate's standing investigative body, with subpoena power
   routing_review: drafted
+  entity_key: entity-83d35553-8e03-4c4e-924e-0f39ecd0f145
+  roles:
+    - seat
 strings:
   name: Permanent Subcommittee on Investigations
   ai_jurisdiction: The Senate's standing investigative body, with subpoena power. Not an AI-jurisdiction subcommittee by name, but the correct destination for evidence-backed allegations about an AI company's conduct, federal AI contracting abuse, or AI-enabled fraud schemes. If you have documents rather than an opinion, this is the door.

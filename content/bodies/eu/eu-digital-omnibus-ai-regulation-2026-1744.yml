@@ -32,6 +32,9 @@ facts:
     - harm
     - law
     - systemic
+  entity_key: entity-0c61438c-5b5e-4cba-934e-75e3f7c3884d
+  roles:
+    - government
 strings:
   name: Digital Omnibus on AI — Regulation (EU) 2026/1744
   remit: "NOT A BODY — included because it changed the legal facts every other EU entry depends on, and because prior knowledge of the AI Act timeline is now wrong. Provisional political agreement was reached between Council and Parliament on 7 May 2026; the regulation was published in the Official Journal and ENTERED INTO FORCE ON 27 JULY 2026. It DEFERS the AI Act's high-risk obligations: stand-alone Annex III high-risk systems move from 2 August 2026 to 2 DECEMBER 2027, and Annex I high-risk systems embedded in regulated products to 2 AUGUST 2028. The deferral is limited to Chapter III and does NOT extend to other obligations — notably the Article 50 transparency obligations, which still applied from 2 August 2026. It did NOT defer the GPAI/systemic-risk regime, which has applied since 2 August 2025. It also expanded the AI Office's powers to supervise GPAI providers and certain very large online platforms."

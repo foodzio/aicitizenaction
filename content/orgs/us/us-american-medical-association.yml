@@ -16,6 +16,9 @@ facts:
   volunteers: yes — through the House of Delegates and specialty societies, members only
   tags:
     - join
+  entity_key: entity-6228ff4e-a44f-4253-859b-b91939c17f8d
+  roles:
+    - organisation
 strings:
   name: American Medical Association (AMA)
   the_ask: "Health AI must be ethical, equitable and responsible: disclosed to physicians and patients, overseen by clinicians, with clear rules on physician liability, data privacy, and limits on payers' use of automated decision-making."

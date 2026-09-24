@@ -78,8 +78,9 @@ test('Places to contact publishes only audited destinations', () => {
   assert.match(html, /Only show currently verified contact routes/);
   assert.ok(!html.includes('The perils of AI safety&#39;s insularity'), 'article is absent from the directory');
   const api = JSON.parse(page('api/channels.json'));
-  assert.equal(api.count, 52);
-  assert.equal(api.excluded_count, 22);
+  const channels = records.filter(record => record._section === 'channels');
+  assert.equal(api.count, channels.filter(placeToContact).length);
+  assert.equal(api.excluded_count, channels.filter(record => !placeToContact(record)).length);
   assert.ok(api.records.every(r => r.facts.contact_disposition === 'keep'));
   assert.match(page('en/channels/global-perils-ai-safety-s-insularity-why/index.html'), /not a current contact destination/i);
   const valid = page('en/channels/global-ai-incident-database/index.html');
@@ -165,7 +166,7 @@ test('the top menu is identical on every page, in each language', () => {
     .replace(/ class="aca-nav-link is-active"/g, ' class="aca-nav-link"').replace(/ aria-current="page"/g, '');
   for (const lang of ['en', 'fr']) {
     const pages = [`${lang}/index.html`, `${lang}/start/law/index.html`, `${lang}/directory/index.html`, `${lang}/resources/index.html`,
-      `${lang}/about/index.html`, `${lang}/feedback/index.html`, `${lang}/get-involved/index.html`, `${lang}/bodies/us-senate-committee-commerce-2/index.html`];
+      `${lang}/about/index.html`, `${lang}/feedback/index.html`, `${lang}/get-involved/index.html`, `${lang}/bodies/us-senate-committee-commerce/index.html`];
     const menus = pages.map(p => navOf(page(p)).replace(/href="\/(en|fr)\/[^"]*"/g, m => m.replace(/\/(en|fr)\/.*"/, '/$1/…"')));
     for (const [i, m] of menus.entries()) assert.equal(m, menus[0], `${pages[i]} menu differs`);
     for (const link of ['/start', '/resources/', '/directory/', '/about/', '/get-involved/']) assert.ok(page(`${lang}/index.html`).includes(`href="/${lang}${link === '/start' ? '/' : link}"`), link);
@@ -184,11 +185,11 @@ test('feedback and contributor pages post to the site, never to GitHub', () => {
   assert.match(page('en/get-involved/index.html'), /<form class="form" method="post" action="\/api\/contribute"/);
   for (const f of ['en/index.html', 'en/feedback/index.html', 'en/get-involved/index.html', 'en/about/index.html', 'en/contributors/index.html', 'fr/index.html'])
     assert.ok(!page(f).includes('github.com/foodzio'), `${f} links to the repository`);
-  assert.match(page('en/bodies/us-senate-committee-commerce-2/index.html'), /href="\/en\/feedback\/\?topic=wrong&amp;page=/);
+  assert.match(page('en/bodies/us-senate-committee-commerce/index.html'), /href="\/en\/feedback\/\?topic=wrong&amp;page=/);
 });
 
 test('links to other websites open in a new tab (static pages; links built by the path are marked at runtime)', () => {
-  for (const f of ['en/bodies/us-senate-committee-commerce-2/index.html', 'en/resources/windows/us-co-admt-chatbot-rules-comment/index.html']) {
+  for (const f of ['en/bodies/us-senate-committee-commerce/index.html', 'en/resources/windows/us-co-admt-chatbot-rules-comment/index.html']) {
     const html = page(f);
     const external = [...html.matchAll(/<a [^>]*href="https?:\/\/[^"]+"[^>]*>/g)].map(m => m[0]).filter(a => !/rel="(canonical|alternate)"/.test(a));
     assert.ok(external.length > 0, f);

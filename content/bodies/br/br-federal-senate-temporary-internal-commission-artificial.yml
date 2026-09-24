@@ -37,6 +37,9 @@ facts:
     powers:legislate: the Senate regains jurisdiction only if the Chamber amends the text, in which case it returns for a final Senate vote
     powers:hold-hearings: "'Audiências Interativas' allow live questions to hearing witnesses"
   routing_review: drafted
+  entity_key: entity-726df176-4b9a-4853-a542-d68f35dc19b9
+  roles:
+    - seat
 strings:
   name: Federal Senate — Temporary Internal Commission on Artificial Intelligence (concluded) and Senate Plenary
   ai_jurisdiction: Originating chamber for PL 2338/2023. The CTIA analysed the bill and produced the favourable opinion that the Senate plenary adopted. Its work is done; the Senate regains jurisdiction only if the Chamber amends the text, in which case it returns for a final Senate vote.

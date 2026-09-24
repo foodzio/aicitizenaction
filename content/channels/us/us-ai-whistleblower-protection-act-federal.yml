@@ -48,6 +48,9 @@ facts:
   recommend: false
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-dff7cafb-3c6d-43e9-a7b9-9278620309c4
+  roles:
+    - reporting-channel
 strings:
   name: AI Whistleblower Protection Act (S.1792) — federal, not law
   remit: N/A — not enacted.

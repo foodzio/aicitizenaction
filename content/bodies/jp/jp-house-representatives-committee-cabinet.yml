@@ -44,6 +44,9 @@ facts:
     powers:oversee: Implementation oversight of the AI Act
     powers:hold-hearings: hold 公聴会 (kōchōkai, public hearings) on major bills
   routing_review: drafted
+  entity_key: entity-fb306cce-fef0-4c55-9b06-6058b51db53c
+  roles:
+    - seat
 strings:
   name: House of Representatives Committee on Cabinet
   ai_jurisdiction: The lead Diet committee for AI. Handles legislation under the Cabinet Office, which owns the AI Act (人工知能関連技術の研究開発及び活用の推進に関する法律), the AI Strategy Headquarters, science and technology policy, digital policy and personal information protection. Japan's AI Act was scrutinised here.

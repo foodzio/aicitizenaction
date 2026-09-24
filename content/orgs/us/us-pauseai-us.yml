@@ -18,6 +18,9 @@ facts:
     - fund
     - join
     - law
+  entity_key: entity-ac73dd33-d20a-4bf1-8001-e4a3c8064e6c
+  roles:
+    - organisation
 strings:
   name: PauseAI US
   the_ask: The United States should lead an international treaty to pause frontier AI development, and should pass domestic bills including a 'kill switch' and an AI Risk Evaluation Act.

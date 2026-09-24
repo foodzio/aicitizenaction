@@ -36,6 +36,9 @@ facts:
     topics:standards: delegated and implementing acts, guidelines, standards, national competent authorities
     powers:oversee: monitoring and scrutinizing the implementation and enforcement of the AI Act
   routing_review: drafted
+  entity_key: entity-d6d6439d-ccd6-4fe1-bb3d-73e9a337e716
+  roles:
+    - seat
 strings:
   name: European Parliament — IMCO-LIBE Joint Working Group on the Implementation and Enforcement of the Artificial Intelligence Act
   ai_jurisdiction: "EXACT REMIT, quoted from the Parliament's own page: 'By a decision of IMCO and LIBE Coordinators, a joint Working Group on the implementation and enforcement of the Artificial Intelligence Act (AI Act) was established with the purpose of monitoring and scrutinizing the implementation and enforcement of the AI Act.' In practice it is Parliament's standing oversight body over the Commission's AI Office: it presses on AI Office staffing and transparency, the role of civil society in implementation, delegated and implementing acts, guidelines, standards, national competent authorities, regulatory sandboxes and real-world testing."

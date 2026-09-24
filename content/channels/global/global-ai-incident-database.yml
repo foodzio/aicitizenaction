@@ -126,6 +126,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-cbecca47-b455-4c81-9d21-5d56ad874cb1
+  roles:
+    - watchdog
 strings:
   name: AI Incident Database (Responsible AI Collaborative)
   remit: Public, open-source, citable index of realised AI harms and near-harms, modelled on aviation and cybersecurity incident databases. Community-submitted incidents are editorially reviewed and indexed with reports, entities and classifications. Recent entries span AI medical transcription misuse, deepfake tooling, chatbots implicated in violence planning, and law-enforcement technology abuse.

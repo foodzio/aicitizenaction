@@ -17,6 +17,9 @@ facts:
   tags:
     - join
     - opposition
+  entity_key: entity-34e19bf1-969f-400e-9516-f1ac054ba112
+  roles:
+    - organisation
 strings:
   name: American Technology Excellence Project (Meta)
   the_ask: Stop states passing their own AI and tech rules; replace the 'patchwork' with a single permissive national approach.

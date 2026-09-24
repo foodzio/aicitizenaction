@@ -24,6 +24,9 @@ facts:
   routing_evidence:
     topics:preemption: establishing an AI Litigation Task Force to challenge state AI laws deemed not 'minimally burdensome'
   routing_review: drafted
+  entity_key: entity-315fd84d-3898-4b86-9d49-eff0fa982f73
+  roles:
+    - seat
 strings:
   name: White House AI Litigation Task Force / Department of Commerce BEAD conditions
   ai_jurisdiction: Not a state committee — included because it materially changes the status of every state AI law listed above and is the reason several 2026 state bills were tabled.

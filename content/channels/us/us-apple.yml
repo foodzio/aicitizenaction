@@ -93,6 +93,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-f5dfec21-7927-4bca-b8ef-ce0c0e1c70a4
+  roles:
+    - company
 strings:
   name: Apple
   remit: No publicly named AI safety or alignment function. Apple Security Engineering and Architecture runs the bounty; Private Cloud Compute is the published mechanism for AI privacy guarantees.

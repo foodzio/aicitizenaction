@@ -54,6 +54,9 @@ facts:
     topics:international: co-convened with Switzerland and 50+ UN agencies
     powers:convene: AI for Good itself is a convening platform, not a decision venue
   routing_review: drafted
+  entity_key: entity-9ec8542a-cd1c-4103-a885-a2fda1ab525c
+  roles:
+    - multilateral
 strings:
   name: ITU — AI for Good
   remit: ITU's year-round AI platform, co-convened with Switzerland and 50+ UN agencies, organised around Solutions & Knowledge, Skills & Capacity, and Standards & Policy. Hosts the annual Global Summit in Geneva (which co-located with the inaugural Global Dialogue in July 2026), the Innovation Factory startup pitch programme, and the 'Neural Network' community platform (60k+ members).

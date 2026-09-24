@@ -47,6 +47,9 @@ facts:
   recommend: false
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-214e633a-81ac-4a70-a7f6-61a3cf93d7f6
+  roles:
+    - reporting-channel
 strings:
   name: "'In-House Evaluation Is Not Enough' — third-party AI flaw disclosure framework"
   remit: N/A — it is the proposal document that defines the emerging norm. Read it to understand the vocabulary that labs and coordinators are converging on.

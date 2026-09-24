@@ -43,6 +43,9 @@ facts:
     topics:deepfakes: HB 276 (nonconsensual deepfake intimate imagery
     powers:legislate: House standing committee for AI consumer-protection, generative-AI disclosure and technology-commerce bills
   routing_review: drafted
+  entity_key: entity-bc2430d5-cdb4-4a05-b9b7-c174eb4086b0
+  roles:
+    - seat
 strings:
   name: House Business, Labor, and Commerce Committee
   ai_jurisdiction: House standing committee for AI consumer-protection, generative-AI disclosure and technology-commerce bills, including amendments to the Artificial Intelligence Policy Act and the Office of Artificial Intelligence Policy.

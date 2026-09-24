@@ -48,6 +48,13 @@ test('candidate inventory catches regional spelling plus a shared official acron
   assert.deepEqual(inventory.candidates[0].signals, ['shared-official-domain', 'shared-acronym']);
 });
 
+test('same-name numeric siblings in different sub-jurisdictions never become high confidence', () => {
+  const federal = record('us-judiciary', 'Senate Committee on Judiciary', 'https://judiciary.senate.gov/');
+  const state = record('us-judiciary-2', 'Senate Committee on Judiciary', 'https://senate.ca.gov/', { geo: { country: 'us', sub: 'ca' } });
+  const inventory = candidateInventory([federal, state]);
+  assert.equal(inventory.candidates[0].severity, 'medium');
+});
+
 test('regenerating candidates cannot overwrite the human decision file', () => {
   const dir = tree({
     'content/bodies/us/federal/us-access-now.yml': record('us-access-now', 'Access Now', 'https://www.accessnow.org/contact/'),

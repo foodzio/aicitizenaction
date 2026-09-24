@@ -37,6 +37,9 @@ facts:
   routing_evidence:
     powers:oversee: METI oversight including the AI Industry Strategy Division
   routing_review: drafted
+  entity_key: entity-674214fd-e536-4d9f-b31d-4f886235a5b0
+  roles:
+    - seat
 strings:
   name: House of Representatives Committee on Economy, Trade and Industry
   ai_jurisdiction: Scrutinises METI, which owns AI industrial policy, the AI Guidelines for Business (jointly with MIC), semiconductor and compute policy, and — new in 2026 — a dedicated AI Industry Strategy Division (AI産業戦略課). This is the committee for the industrial/economic side of AI rather than the governance framework side.

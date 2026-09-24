@@ -18,6 +18,9 @@ facts:
     - fund
     - join
     - tip
+  entity_key: entity-a8a25cfa-7858-43d8-8e99-71218528759f
+  roles:
+    - organisation
 strings:
   name: American Federation of Teachers (AFT)
   the_ask: AI's impact on the workplace should be a mandatory subject of collective bargaining, with contract language preventing worker displacement and a union seat at the table during development, procurement and implementation.

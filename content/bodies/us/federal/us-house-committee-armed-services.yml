@@ -43,6 +43,9 @@ facts:
     topics:military-ai: autonomous weapons policy, AI in nuclear command and control
     powers:legislate: the annual NDAA — the most reliable moving vehicle for AI legislation in the House
   routing_review: drafted
+  entity_key: entity-c4671fd6-b142-46d3-b8c6-a646e22cd15e
+  roles:
+    - seat
 strings:
   name: House Committee on Armed Services
   ai_jurisdiction: "DoD and the annual NDAA — the most reliable moving vehicle for AI legislation in the House. Send here: autonomous weapons policy, AI in nuclear command and control, DoD AI acquisition and the Chief Digital and AI Office, DARPA, military AI test and evaluation, DoD compute and data centers, and defense AI workforce."

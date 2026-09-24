@@ -1,19 +1,19 @@
 generated_on: 2026-09-24
 scope: Every route in content/channels; generated rows are reconciled against source content.
 totals:
-  records: 74
-  routes: 234
-  eligible: 84
+  records: 70
+  routes: 232
+  eligible: 82
   ineligible: 150
   record_dispositions:
-    keep: 52
+    keep: 48
     fix: 3
     reclassify: 19
     merge: 0
     remove: 0
     pending: 0
   dispositions:
-    keep: 84
+    keep: 82
     fix: 16
     reclassify: 0
     merge: 0
@@ -1202,6 +1202,7 @@ routes:
     evidence_hint: Anyone
     source_urls:
       - https://ratings.safer-ai.org/
+      - https://www.safer-ai.org/about#donate
     failed_rules: []
     current_result: legacy-eligible
     disposition: keep
@@ -1221,6 +1222,7 @@ routes:
     evidence_hint: Public read; methodology published
     source_urls:
       - https://ratings.safer-ai.org/
+      - https://www.safer-ai.org/about#donate
     failed_rules: []
     current_result: legacy-eligible
     disposition: keep
@@ -1240,6 +1242,7 @@ routes:
     evidence_hint: ""
     source_urls:
       - https://ratings.safer-ai.org/
+      - https://www.safer-ai.org/about#donate
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
@@ -1248,6 +1251,29 @@ routes:
     current_result: ineligible
     disposition: reference-only
     reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
+  - record_id: fr-saferai
+    name: SaferAI
+    file: content/channels/fr/fr-saferai.yml
+    record_type: watchdog
+    country: fr
+    public_input: limited
+    record_disposition: keep
+    route_id: action
+    claimed_type: action
+    value: https://www.safer-ai.org/about#donate
+    verified: true
+    evidence_hint: ""
+    source_urls:
+      - https://ratings.safer-ai.org/
+      - https://www.safer-ai.org/about#donate
+    failed_rules:
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: reference-only
+    reviewer: codex:source-review-2026-09-24
     reviewed_on: 2026-09-24
   - record_id: gb-google-deepmind
     name: Google DeepMind
@@ -1372,48 +1398,6 @@ routes:
       - https://gemini.google.com/
       - https://deepmind.google/
       - https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/strengthening-our-frontier-safety-framework/frontier-safety-framework_3-1.pdf
-    failed_rules:
-      - 2-inbound-mechanism
-      - 3-acceptance-evidence
-      - 4-eligible-user
-      - 6-currently-usable
-    current_result: ineligible
-    disposition: reference-only
-    reviewer: codex:deterministic-contact-audit
-    reviewed_on: 2026-09-24
-  - record_id: gb-ofcom-individual-complaint-about-online-service
-    name: Ofcom — individual complaint about an online service
-    file: content/channels/gb/gb-ofcom-individual-complaint-about-online-service.yml
-    record_type: reporting-channel
-    country: gb
-    public_input: open
-    record_disposition: keep
-    route_id: submission-page
-    claimed_type: complaint
-    value: https://www.ofcom.org.uk/make-a-complaint/
-    verified: true
-    evidence_hint: Complaints about phone, broadband and postal services; TV, radio and on-demand programmes; wireless interference; something you have seen on an online service, website or app; and premium rate services.
-    source_urls:
-      - https://www.ofcom.org.uk/make-a-complaint/
-    failed_rules: []
-    current_result: legacy-eligible
-    disposition: keep
-    reviewer: codex:deterministic-contact-audit
-    reviewed_on: 2026-09-24
-  - record_id: gb-ofcom-individual-complaint-about-online-service
-    name: Ofcom — individual complaint about an online service
-    file: content/channels/gb/gb-ofcom-individual-complaint-about-online-service.yml
-    record_type: reporting-channel
-    country: gb
-    public_input: open
-    record_disposition: keep
-    route_id: homepage
-    claimed_type: homepage
-    value: https://www.ofcom.org.uk/make-a-complaint/
-    verified: null
-    evidence_hint: Complaints about phone, broadband and postal services; TV, radio and on-demand programmes; wireless interference; something you have seen on an online service, website or app; and premium rate services.
-    source_urls:
-      - https://www.ofcom.org.uk/make-a-complaint/
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
@@ -2020,48 +2004,6 @@ routes:
     disposition: reference-only
     reviewer: codex:deterministic-contact-audit
     reviewed_on: 2026-09-24
-  - record_id: global-anthropic-responsible-disclosure-policy-usersafety-anthropic
-    name: Anthropic Responsible Disclosure Policy / usersafety@anthropic.com
-    file: content/channels/global/global-anthropic-responsible-disclosure-policy-usersafety-anthropic.yml
-    record_type: reporting-channel
-    country: global
-    public_input: open
-    record_disposition: keep
-    route_id: submission-page
-    claimed_type: disclosure
-    value: https://www.anthropic.com/responsible-disclosure-policy
-    verified: true
-    evidence_hint: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
-    source_urls:
-      - https://www.anthropic.com/responsible-disclosure-policy
-    failed_rules: []
-    current_result: legacy-eligible
-    disposition: keep
-    reviewer: codex:deterministic-contact-audit
-    reviewed_on: 2026-09-24
-  - record_id: global-anthropic-responsible-disclosure-policy-usersafety-anthropic
-    name: Anthropic Responsible Disclosure Policy / usersafety@anthropic.com
-    file: content/channels/global/global-anthropic-responsible-disclosure-policy-usersafety-anthropic.yml
-    record_type: reporting-channel
-    country: global
-    public_input: open
-    record_disposition: keep
-    route_id: homepage
-    claimed_type: homepage
-    value: https://www.anthropic.com/responsible-disclosure-policy
-    verified: null
-    evidence_hint: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
-    source_urls:
-      - https://www.anthropic.com/responsible-disclosure-policy
-    failed_rules:
-      - 2-inbound-mechanism
-      - 3-acceptance-evidence
-      - 4-eligible-user
-      - 6-currently-usable
-    current_result: ineligible
-    disposition: reference-only
-    reviewer: codex:deterministic-contact-audit
-    reviewed_on: 2026-09-24
   - record_id: global-cert-cc-vince
     name: CERT/CC VINCE (Vulnerability Information and Coordination Environment)
     file: content/channels/global/global-cert-cc-vince.yml
@@ -2464,48 +2406,6 @@ routes:
     source_urls:
       - https://oecd.ai/en/incidents-methodology
       - https://oecd.ai/en/incidents
-    failed_rules:
-      - 2-inbound-mechanism
-      - 3-acceptance-evidence
-      - 4-eligible-user
-      - 6-currently-usable
-    current_result: ineligible
-    disposition: reference-only
-    reviewer: codex:deterministic-contact-audit
-    reviewed_on: 2026-09-24
-  - record_id: global-openai-inbound-reporting
-    name: OpenAI inbound reporting (Bugcrowd bug bounty + in-product feedback)
-    file: content/channels/global/global-openai-inbound-reporting.yml
-    record_type: reporting-channel
-    country: global
-    public_input: open
-    record_disposition: keep
-    route_id: submission-page
-    claimed_type: disclosure
-    value: https://openai.com/form/model-behavior-feedback/
-    verified: true
-    evidence_hint: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
-    source_urls:
-      - https://openai.com/form/model-behavior-feedback/
-    failed_rules: []
-    current_result: legacy-eligible
-    disposition: keep
-    reviewer: codex:deterministic-contact-audit
-    reviewed_on: 2026-09-24
-  - record_id: global-openai-inbound-reporting
-    name: OpenAI inbound reporting (Bugcrowd bug bounty + in-product feedback)
-    file: content/channels/global/global-openai-inbound-reporting.yml
-    record_type: reporting-channel
-    country: global
-    public_input: open
-    record_disposition: keep
-    route_id: homepage
-    claimed_type: homepage
-    value: https://openai.com/form/model-behavior-feedback/
-    verified: null
-    evidence_hint: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
-    source_urls:
-      - https://openai.com/form/model-behavior-feedback/
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
@@ -3138,6 +3038,7 @@ routes:
       - https://www.anthropic.com/responsible-disclosure-policy
       - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
       - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+      - https://www.anthropic.com/responsible-disclosure-policy
     failed_rules: []
     current_result: legacy-eligible
     disposition: keep
@@ -3159,6 +3060,7 @@ routes:
       - https://www.anthropic.com/responsible-disclosure-policy
       - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
       - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+      - https://www.anthropic.com/responsible-disclosure-policy
     failed_rules: []
     current_result: legacy-eligible
     disposition: keep
@@ -3180,6 +3082,7 @@ routes:
       - https://www.anthropic.com/responsible-disclosure-policy
       - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
       - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+      - https://www.anthropic.com/responsible-disclosure-policy
     failed_rules: []
     current_result: legacy-eligible
     disposition: keep
@@ -3201,6 +3104,7 @@ routes:
       - https://www.anthropic.com/responsible-disclosure-policy
       - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
       - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+      - https://www.anthropic.com/responsible-disclosure-policy
     failed_rules: []
     current_result: legacy-eligible
     disposition: keep
@@ -3222,6 +3126,7 @@ routes:
       - https://www.anthropic.com/responsible-disclosure-policy
       - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
       - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+      - https://www.anthropic.com/responsible-disclosure-policy
     failed_rules: []
     current_result: legacy-eligible
     disposition: keep
@@ -3243,6 +3148,7 @@ routes:
       - https://www.anthropic.com/responsible-disclosure-policy
       - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
       - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+      - https://www.anthropic.com/responsible-disclosure-policy
     failed_rules:
       - 3-acceptance-evidence
       - 4-eligible-user
@@ -3262,11 +3168,12 @@ routes:
     claimed_type: homepage
     value: https://www.anthropic.com/
     verified: null
-    evidence_hint: ""
+    evidence_hint: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
     source_urls:
       - https://www.anthropic.com/responsible-disclosure-policy
       - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
       - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+      - https://www.anthropic.com/responsible-disclosure-policy
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
@@ -3287,11 +3194,60 @@ routes:
     claimed_type: framework
     value: https://www.anthropic.com/rsp
     verified: null
-    evidence_hint: ""
+    evidence_hint: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
     source_urls:
       - https://www.anthropic.com/responsible-disclosure-policy
       - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
       - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+      - https://www.anthropic.com/responsible-disclosure-policy
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
+  - record_id: us-anthropic
+    name: Anthropic
+    file: content/channels/us/us-anthropic.yml
+    record_type: company
+    country: us
+    public_input: open
+    record_disposition: keep
+    route_id: submission-page
+    claimed_type: disclosure
+    value: https://www.anthropic.com/responsible-disclosure-policy
+    verified: true
+    evidence_hint: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
+    source_urls:
+      - https://www.anthropic.com/responsible-disclosure-policy
+      - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
+      - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+      - https://www.anthropic.com/responsible-disclosure-policy
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
+  - record_id: us-anthropic
+    name: Anthropic
+    file: content/channels/us/us-anthropic.yml
+    record_type: company
+    country: us
+    public_input: open
+    record_disposition: keep
+    route_id: homepage-f2d0c046
+    claimed_type: homepage
+    value: https://www.anthropic.com/responsible-disclosure-policy
+    verified: null
+    evidence_hint: "Two distinct lanes, and the distinction is the whole point. Security lane (via HackerOne): misconfigurations, CSRF, privilege escalation, SQL injection, XSS, directory traversal on internet-facing systems. Model-safety lane (via email): the policy states explicitly 'We welcome reports concerning safety issues, \"jailbreaks,\" and similar concerns so that we can enhance the safety and harmlessness of our models' — these go to usersafety@anthropic.com."
+    source_urls:
+      - https://www.anthropic.com/responsible-disclosure-policy
+      - https://hackerone.com/4f1f16ba-10d3-4d09-9ecc-c721aad90f24/embedded_submissions/new
+      - https://docs.google.com/forms/d/e/1FAIpQLSf3IuyunFH1Rbz_9Bpt2kGBfwSW5QQ1TBkeAzNZrtCP-hRvNA/viewform
+      - https://www.anthropic.com/responsible-disclosure-policy
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
@@ -4028,6 +3984,7 @@ routes:
     source_urls:
       - https://www.themidasproject.com/tips
       - https://www.themidasproject.com/contact
+      - https://www.themidasproject.com/volunteer
     failed_rules: []
     current_result: legacy-eligible
     disposition: keep
@@ -4048,6 +4005,7 @@ routes:
     source_urls:
       - https://www.themidasproject.com/tips
       - https://www.themidasproject.com/contact
+      - https://www.themidasproject.com/volunteer
     failed_rules:
       - 2-inbound-mechanism
       - 4-eligible-user
@@ -4071,6 +4029,7 @@ routes:
     source_urls:
       - https://www.themidasproject.com/tips
       - https://www.themidasproject.com/contact
+      - https://www.themidasproject.com/volunteer
     failed_rules: []
     current_result: legacy-eligible
     disposition: keep
@@ -4091,6 +4050,7 @@ routes:
     source_urls:
       - https://www.themidasproject.com/tips
       - https://www.themidasproject.com/contact
+      - https://www.themidasproject.com/volunteer
     failed_rules: []
     current_result: legacy-eligible
     disposition: keep
@@ -4111,6 +4071,7 @@ routes:
     source_urls:
       - https://www.themidasproject.com/tips
       - https://www.themidasproject.com/contact
+      - https://www.themidasproject.com/volunteer
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
@@ -4119,6 +4080,30 @@ routes:
     current_result: ineligible
     disposition: reference-only
     reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
+  - record_id: us-midas-project
+    name: The Midas Project
+    file: content/channels/us/us-midas-project.yml
+    record_type: watchdog
+    country: us
+    public_input: open
+    record_disposition: keep
+    route_id: action
+    claimed_type: action
+    value: https://www.themidasproject.com/volunteer
+    verified: true
+    evidence_hint: ""
+    source_urls:
+      - https://www.themidasproject.com/tips
+      - https://www.themidasproject.com/contact
+      - https://www.themidasproject.com/volunteer
+    failed_rules:
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: reference-only
+    reviewer: codex:source-review-2026-09-24
     reviewed_on: 2026-09-24
   - record_id: us-nist-caisi-requests-information-ai
     name: NIST / CAISI requests for information on AI
@@ -4289,6 +4274,7 @@ routes:
       - https://openai.com/index/red-teaming-network/
       - https://openai.com/form/model-behavior-feedback/
       - https://openai.com/form/model-spec-feedback/
+      - https://openai.com/form/model-behavior-feedback/
     failed_rules: []
     current_result: legacy-eligible
     disposition: keep
@@ -4313,6 +4299,7 @@ routes:
       - https://openai.com/index/red-teaming-network/
       - https://openai.com/form/model-behavior-feedback/
       - https://openai.com/form/model-spec-feedback/
+      - https://openai.com/form/model-behavior-feedback/
     failed_rules:
       - 3-acceptance-evidence
       - 4-eligible-user
@@ -4340,6 +4327,7 @@ routes:
       - https://openai.com/index/red-teaming-network/
       - https://openai.com/form/model-behavior-feedback/
       - https://openai.com/form/model-spec-feedback/
+      - https://openai.com/form/model-behavior-feedback/
     failed_rules:
       - 3-acceptance-evidence
       - 4-eligible-user
@@ -4367,6 +4355,7 @@ routes:
       - https://openai.com/index/red-teaming-network/
       - https://openai.com/form/model-behavior-feedback/
       - https://openai.com/form/model-spec-feedback/
+      - https://openai.com/form/model-behavior-feedback/
     failed_rules: []
     current_result: legacy-eligible
     disposition: keep
@@ -4391,6 +4380,7 @@ routes:
       - https://openai.com/index/red-teaming-network/
       - https://openai.com/form/model-behavior-feedback/
       - https://openai.com/form/model-spec-feedback/
+      - https://openai.com/form/model-behavior-feedback/
     failed_rules:
       - 4-eligible-user
       - 6-currently-usable
@@ -4417,6 +4407,7 @@ routes:
       - https://openai.com/index/red-teaming-network/
       - https://openai.com/form/model-behavior-feedback/
       - https://openai.com/form/model-spec-feedback/
+      - https://openai.com/form/model-behavior-feedback/
     failed_rules:
       - 4-eligible-user
       - 6-currently-usable
@@ -4443,6 +4434,7 @@ routes:
       - https://openai.com/index/red-teaming-network/
       - https://openai.com/form/model-behavior-feedback/
       - https://openai.com/form/model-spec-feedback/
+      - https://openai.com/form/model-behavior-feedback/
     failed_rules: []
     current_result: legacy-eligible
     disposition: keep
@@ -4467,6 +4459,7 @@ routes:
       - https://openai.com/index/red-teaming-network/
       - https://openai.com/form/model-behavior-feedback/
       - https://openai.com/form/model-spec-feedback/
+      - https://openai.com/form/model-behavior-feedback/
     failed_rules: []
     current_result: legacy-eligible
     disposition: keep
@@ -4483,7 +4476,7 @@ routes:
     claimed_type: homepage
     value: https://openai.com/
     verified: null
-    evidence_hint: ""
+    evidence_hint: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
     source_urls:
       - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
       - https://openai.com/form/report-content/
@@ -4491,6 +4484,7 @@ routes:
       - https://openai.com/index/red-teaming-network/
       - https://openai.com/form/model-behavior-feedback/
       - https://openai.com/form/model-spec-feedback/
+      - https://openai.com/form/model-behavior-feedback/
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
@@ -4511,7 +4505,7 @@ routes:
     claimed_type: framework
     value: https://model-spec.openai.com/
     verified: null
-    evidence_hint: ""
+    evidence_hint: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
     source_urls:
       - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
       - https://openai.com/form/report-content/
@@ -4519,6 +4513,61 @@ routes:
       - https://openai.com/index/red-teaming-network/
       - https://openai.com/form/model-behavior-feedback/
       - https://openai.com/form/model-spec-feedback/
+      - https://openai.com/form/model-behavior-feedback/
+    failed_rules:
+      - 2-inbound-mechanism
+      - 3-acceptance-evidence
+      - 4-eligible-user
+      - 6-currently-usable
+    current_result: ineligible
+    disposition: reference-only
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
+  - record_id: us-openai
+    name: OpenAI
+    file: content/channels/us/us-openai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    record_disposition: keep
+    route_id: submission-page
+    claimed_type: disclosure
+    value: https://openai.com/form/model-behavior-feedback/
+    verified: true
+    evidence_hint: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
+    source_urls:
+      - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+      - https://openai.com/form/report-content/
+      - https://openai.com/form/researcher-access-program/
+      - https://openai.com/index/red-teaming-network/
+      - https://openai.com/form/model-behavior-feedback/
+      - https://openai.com/form/model-spec-feedback/
+      - https://openai.com/form/model-behavior-feedback/
+    failed_rules: []
+    current_result: legacy-eligible
+    disposition: keep
+    reviewer: codex:deterministic-contact-audit
+    reviewed_on: 2026-09-24
+  - record_id: us-openai
+    name: OpenAI
+    file: content/channels/us/us-openai.yml
+    record_type: company
+    country: us
+    public_input: limited
+    record_disposition: keep
+    route_id: homepage-9304dfe0
+    claimed_type: homepage
+    value: https://openai.com/form/model-behavior-feedback/
+    verified: null
+    evidence_hint: "Bugcrowd program: security vulnerabilities in OpenAI's systems and products."
+    source_urls:
+      - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+      - https://openai.com/form/report-content/
+      - https://openai.com/form/researcher-access-program/
+      - https://openai.com/index/red-teaming-network/
+      - https://openai.com/form/model-behavior-feedback/
+      - https://openai.com/form/model-spec-feedback/
+      - https://openai.com/form/model-behavior-feedback/
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence
@@ -5082,48 +5131,6 @@ routes:
     evidence_hint: Comments from anyone, including non-US persons, on proposed rules, requests for information and requests for comment. No affiliation required.
     source_urls:
       - https://www.regulations.gov/assets/files/Public-Comment-on-Federal-Regulations_Final.pdf
-    failed_rules:
-      - 2-inbound-mechanism
-      - 3-acceptance-evidence
-      - 4-eligible-user
-      - 6-currently-usable
-    current_result: ineligible
-    disposition: reference-only
-    reviewer: codex:deterministic-contact-audit
-    reviewed_on: 2026-09-24
-  - record_id: us-us-ftc-reportfraud-ftc-gov
-    name: US FTC — ReportFraud.ftc.gov
-    file: content/channels/us/us-us-ftc-reportfraud-ftc-gov.yml
-    record_type: reporting-channel
-    country: us
-    public_input: open
-    record_disposition: keep
-    route_id: submission-page
-    claimed_type: complaint
-    value: https://reportfraud.ftc.gov/
-    verified: true
-    evidence_hint: "Reports of fraud, scams and bad business practices — which covers AI-related deception: false capability claims, deceptive AI marketing, undisclosed AI use, AI-enabled impersonation. The FTC has brought AI-deception cases under its Section 5 unfair-or-deceptive-practices authority."
-    source_urls:
-      - https://reportfraud.ftc.gov/
-    failed_rules: []
-    current_result: legacy-eligible
-    disposition: keep
-    reviewer: codex:deterministic-contact-audit
-    reviewed_on: 2026-09-24
-  - record_id: us-us-ftc-reportfraud-ftc-gov
-    name: US FTC — ReportFraud.ftc.gov
-    file: content/channels/us/us-us-ftc-reportfraud-ftc-gov.yml
-    record_type: reporting-channel
-    country: us
-    public_input: open
-    record_disposition: keep
-    route_id: homepage
-    claimed_type: homepage
-    value: https://reportfraud.ftc.gov/
-    verified: null
-    evidence_hint: "Reports of fraud, scams and bad business practices — which covers AI-related deception: false capability claims, deceptive AI marketing, undisclosed AI use, AI-enabled impersonation. The FTC has brought AI-deception cases under its Section 5 unfair-or-deceptive-practices authority."
-    source_urls:
-      - https://reportfraud.ftc.gov/
     failed_rules:
       - 2-inbound-mechanism
       - 3-acceptance-evidence

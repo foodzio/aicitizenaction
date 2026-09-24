@@ -18,6 +18,13 @@ test('US law: the Senate Commerce committee, which holds frontier AI, comes firs
   assert.equal(r.floor, false);
 });
 
+test('routing matches every canonical role, not only the compatibility type', () => {
+  const canonical = records.find(r => r.id === 'us-senate-committee-commerce');
+  assert.ok(canonical.facts.roles.includes('seat'));
+  assert.equal(canonical.type, 'government');
+  assert.equal(route(outcome('law'), { country: 'us' }, [canonical], opts).recipients[0]?.id, canonical.id);
+});
+
 test('unsourced records and records with no reachable route are never recommended', () => {
   for (const o of oc.outcomes) for (const c of ['us', 'gb', 'eu', 'cl', 'nl', '']) {
     for (const x of route(o, { country: c }, records, opts).recipients) {

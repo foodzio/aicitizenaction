@@ -23,6 +23,9 @@ facts:
   public_input: limited
   tags:
     - research
+  entity_key: entity-36aaa0ed-d4d0-4489-bf4d-dbbdf9548f45
+  roles:
+    - academic
 strings:
   name: MIT AI Alignment (MAIA)
   remit: Student-and-researcher group at MIT running AI alignment education and research programmes — reading groups, technical bootcamps and supported research projects, feeding students into alignment research careers. Closely associated with MIT's Algorithmic Alignment Group.

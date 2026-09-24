@@ -60,6 +60,9 @@ facts:
   contact_disposition: reclassify
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-81e02492-f78c-4368-afd6-4a46dc1b7829
+  roles:
+    - company
 strings:
   name: Safe Superintelligence Inc. (SSI)
   remit: The entire company is framed as a safety-first effort — 'safety and capabilities in tandem' — but no internal safety function, framework, model spec or governance structure has been published.

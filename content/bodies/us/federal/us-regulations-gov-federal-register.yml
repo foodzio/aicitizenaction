@@ -31,6 +31,9 @@ facts:
   public_input: open
   tags:
     - systemic
+  entity_key: entity-28c75345-b9f5-401e-96c0-0d613fca28dc
+  roles:
+    - government
 strings:
   name: Regulations.gov / the Federal Register (cross-cutting US public docket system)
   remit: The single statutory channel through which any member of the public can submit a comment on a federal rulemaking, RFI, notice or guidance document, under the Administrative Procedure Act. Agencies must consider and respond to significant comments; failure to do so is grounds for a rule being vacated in court. Comments are published on the docket and are citable.

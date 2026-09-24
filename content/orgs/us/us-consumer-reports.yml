@@ -20,6 +20,9 @@ facts:
     - harm
     - join
     - tip
+  entity_key: entity-204e3ff6-9843-4e5c-83d2-9210bab39819
+  roles:
+    - organisation
 strings:
   name: Consumer Reports
   the_ask: AI products sold to consumers should be tested, transparent and accountable, and states should keep their role in regulating AI.

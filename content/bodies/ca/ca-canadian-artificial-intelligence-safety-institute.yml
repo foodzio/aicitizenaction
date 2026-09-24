@@ -56,6 +56,9 @@ facts:
     powers:advise: advises government on risks from advanced AI systems
     powers:publish: produces guidance for developers and the public
   routing_review: drafted
+  entity_key: entity-adc69470-4602-4244-8757-b3fa76729211
+  roles:
+    - government
 strings:
   name: Canadian Artificial Intelligence Safety Institute (CAISI)
   remit: Announced Nov 2024, sits within Innovation, Science and Economic Development Canada (ISED). Funds and directs AI safety research (investigator-led and government-directed streams, with CIFAR running a research programme and Amii/Mila/Vector involved); advises government on risks from advanced AI systems; produces guidance for developers and the public. Purely research/advisory — Canada has NO in-force AI statute after AIDA (Bill C-27) died on prorogation in January 2025, so CAISI cannot compel or fine anyone.

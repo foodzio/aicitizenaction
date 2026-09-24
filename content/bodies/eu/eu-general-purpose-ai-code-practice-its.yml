@@ -53,6 +53,9 @@ facts:
     topics:security: cybersecurity of model weights
     powers:convene: A Signatory Taskforce, convened by the AI Office, holds ongoing meetings with signatories on implementation.
   routing_review: drafted
+  entity_key: entity-50f8f70c-e432-4a5c-87e3-94a57f1070d2
+  roles:
+    - government
 strings:
   name: General-Purpose AI Code of Practice and its Signatory Taskforce
   remit: Co-regulatory instrument under Article 56 of the AI Act, published by the Commission in its final form in July 2025 and assessed as adequate by the AI Board and the Commission. Signing is voluntary, but signature is the presumptive route to demonstrating compliance with GPAI obligations, which have applied since 2 August 2025; non-signatories must demonstrate compliance by other means and face greater scrutiny. It has three chapters — Transparency, Copyright, and Safety and Security — with the Safety and Security chapter applying only to providers of models with SYSTEMIC RISK. A Signatory Taskforce, convened by the AI Office, holds ongoing meetings with signatories on implementation. The Code was drafted through an open multi-stakeholder process involving roughly a thousand participants.

@@ -40,6 +40,9 @@ facts:
     - insider
     - research
     - systemic
+  entity_key: entity-79552630-82db-4515-8add-1bbefc7640ba
+  roles:
+    - civil-society
 strings:
   name: AI Whistleblower Initiative (AIWI)
   remit: Research, policy and direct support for frontier-AI employees considering disclosure. Founded by Karl Koch. Offers free consultations with specialist whistleblowing attorneys (pro bono or via a defence fund), an AI Whistleblower Defense Fund, a 'Third Opinion' service for independent expert assessment of a concern, privacy and security guidance, and a published AI Whistleblower Guide. Also does policy work on whistleblower protections for AI.

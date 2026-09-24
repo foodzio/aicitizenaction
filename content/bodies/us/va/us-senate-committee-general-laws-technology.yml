@@ -41,6 +41,9 @@ facts:
     topics:health: SB 586 (Salim, health-carrier AI disclosure)
     powers:legislate: Senate committee of reference for AI, technology, data and general-laws bills
   routing_review: drafted
+  entity_key: entity-7456db42-ced7-4ff6-b4d2-f1dcc5cb27de
+  roles:
+    - seat
 strings:
   name: Senate Committee on General Laws and Technology
   ai_jurisdiction: Senate committee of reference for AI, technology, data and general-laws bills. Meets in Senate Room B (Room 306), 30 minutes after adjournment on Wednesdays.

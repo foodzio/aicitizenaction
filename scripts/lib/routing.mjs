@@ -70,7 +70,8 @@ export const membershipRoute = record => (record.facts?.routes ?? []).find(r => 
 
 export function matches(record, match) {
   if (match.sections && !match.sections.includes(record._section)) return false;
-  if (match.types && !match.types.includes(record.type)) return false;
+  const roles = record.facts?.roles?.length ? record.facts.roles : [record.type];
+  if (match.types && !match.types.some(type => roles.includes(type))) return false;
   const tags = new Set(record.facts?.tags ?? []);
   if (match.tags_any && !match.tags_any.some(t => tags.has(t))) return false;
   if (match.route_types_any && !(record.facts?.routes ?? []).some(r => r.value && match.route_types_any.includes(r.type))) return false;
@@ -91,7 +92,8 @@ export const isNamedPerson = name => !!name && !/^(not applicable|none|n\/a|vaca
 // subcommittees, caucuses, task forces and participation systems. The brief's first insight:
 // aim at the seat that decides what gets heard.
 export function seatWeight(r) {
-  if (r.type !== 'seat') return 2;
+  const roles = r.facts?.roles?.length ? r.facts.roles : [r.type];
+  if (!roles.includes('seat')) return 2;
   const name = r.strings?.name ?? '';
   if (/caucus|task force|route|system|method|portal|platform/i.test(name)) return 3;
   const chair = (r.facts?.seats ?? []).some(s => s.role === 'chair' && isNamedPerson(s.name));
@@ -103,8 +105,9 @@ export function seatWeight(r) {
 function rank(outcome) {
   const prefer = outcome.prefer_types ?? [];
   return (a, b) => {
+    const roles = r => r.facts?.roles?.length ? r.facts.roles : [r.type];
     const score = r => [
-      prefer.includes(r.type) ? 0 : 1,
+      prefer.some(type => roles(r).includes(type)) ? 0 : 1,
       seatWeight(r),
       INPUT_RANK[r.facts?.public_input] ?? 1,
       contactRoute(r)?.verified === true ? 0 : 1,

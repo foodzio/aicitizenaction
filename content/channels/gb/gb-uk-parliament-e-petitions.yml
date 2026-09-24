@@ -52,6 +52,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-6b70f210-ab58-48ed-8b56-7df882880bc6
+  roles:
+    - reporting-channel
 strings:
   name: UK Parliament e-petitions
   remit: Petitions from British citizens and UK residents that ask for a clear action from the UK Government or Parliament on a matter within their responsibility.

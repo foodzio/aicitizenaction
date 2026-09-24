@@ -98,6 +98,12 @@
         "source_id": {
           "type": "string"
         },
+        "source_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1 },
+          "description": "All indexed source observations retained when identical routes are merged"
+        },
         "contact": {
           "type": "object",
           "additionalProperties": false,

@@ -17,6 +17,9 @@ facts:
   tags:
     - join
     - tip
+  entity_key: entity-7b2bc0ec-ef1e-465a-8c35-ae073750b88d
+  roles:
+    - organisation
 strings:
   name: National Education Association (NEA)
   the_ask: AI in schools must be equitable, ethical and educator-led — with data privacy safeguards, rigorous vetting of tools for bias and effectiveness, and meaningful educator involvement in every adoption decision.

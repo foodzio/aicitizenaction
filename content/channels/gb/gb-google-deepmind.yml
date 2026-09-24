@@ -93,6 +93,9 @@ facts:
   contact_disposition: fix
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-bee33596-38c8-410b-841d-a5ac0795e3d8
+  roles:
+    - company
 strings:
   name: Google DeepMind
   remit: Responsibility and Safety Council (co-chaired by COO Lila Ibrahim and VP Responsibility Helen King) reviews research and deployments; a separate AGI Safety Council led by co-founder Shane Legg works alongside it on frontier risk.

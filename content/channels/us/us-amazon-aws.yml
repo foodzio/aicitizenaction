@@ -114,6 +114,9 @@ facts:
   contact_disposition: reclassify
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-4f75d5f2-7437-48d7-af9c-f8a8de078551
+  roles:
+    - company
 strings:
   name: Amazon / AWS
   remit: Responsible AI function governing Nova frontier models and Bedrock Guardrails; the Frontier Model Safety Framework commits that Amazon 'will not deploy frontier AI models developed by Amazon that exceed specified risk thresholds without appropriate safeguards in place'.

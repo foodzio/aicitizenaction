@@ -51,6 +51,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-bd3d9262-df31-4f1d-9c11-f4f1790f635f
+  roles:
+    - reporting-channel
 strings:
   name: California Attorney General — consumer complaint
   remit: Complaints about businesses, including AI companies. The AG investigates where complaints suggest patterns of consumer harm or systematic violations of consumer protection law.

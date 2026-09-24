@@ -46,6 +46,9 @@ facts:
   recommend: false
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-941e055a-1352-4e04-af20-0179e6c44b49
+  roles:
+    - reporting-channel
 strings:
   name: AI Incident Database — Editor's Guide (inclusion criteria)
   remit: N/A — this is the criteria document that determines what the database accepts. Read it before submitting.

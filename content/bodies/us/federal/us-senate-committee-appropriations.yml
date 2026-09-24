@@ -45,6 +45,9 @@ facts:
     powers:hold-hearings: formally invites written testimony from the general public every year
     powers:legislate: Subcommittee markup of the FY2027 Commerce, Justice, Science and Related Agencies Appropriations Act held in 2026.
   routing_review: drafted
+  entity_key: entity-73366d48-88ba-4256-ae18-43ac4b587494
+  roles:
+    - seat
 strings:
   name: Senate Committee on Appropriations
   ai_jurisdiction: Money, and therefore the real leverage over AI agencies. Appropriations bills carry both funding levels and policy riders for NIST/CAISI, NSF, DOE labs, DHS/CISA, DoD AI programs and the FTC. Also the only committee in Congress that formally invites written testimony from the general public every year.

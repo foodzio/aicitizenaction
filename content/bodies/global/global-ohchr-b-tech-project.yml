@@ -54,6 +54,9 @@ facts:
     powers:publish: Its generative AI workstream has produced a foundational paper on responsible development/deployment of generative AI
     powers:convene: Engages states, companies, investors and civil society on human-rights due diligence.
   routing_review: drafted
+  entity_key: entity-74e79de7-844e-4027-b160-357d4e8942de
+  roles:
+    - multilateral
 strings:
   name: OHCHR B-Tech Project (UN Human Rights Office)
   remit: Launched 2019 to apply the UN Guiding Principles on Business and Human Rights to the tech sector. Its generative AI workstream has produced a foundational paper on responsible development/deployment of generative AI, a Taxonomy of Generative AI Human Rights Harms, and headline recommendations (2025). Engages states, companies, investors and civil society on human-rights due diligence.

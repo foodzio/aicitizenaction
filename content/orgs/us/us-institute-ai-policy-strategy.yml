@@ -45,6 +45,9 @@ facts:
   tags:
     - law
     - research
+  entity_key: entity-6077be8f-d4b2-4392-8f03-44f83d11953a
+  roles:
+    - civil-society
 strings:
   name: Institute for AI Policy and Strategy (IAPS)
   remit: Nonpartisan think tank producing policy research at the intersection of AI, national security and geopolitics. Focus areas include cyber autonomy and offence-defence balance, timely response mechanisms for AI security and public-safety risks, compute access and governance, and US-China strategic competition. Runs an AI Policy Fellowship.

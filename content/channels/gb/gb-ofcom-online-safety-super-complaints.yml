@@ -52,6 +52,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-b2de5a47-43a1-4704-abf4-387480186648
+  roles:
+    - reporting-channel
 strings:
   name: Ofcom Online Safety super-complaints
   remit: Complaints from eligible entities about a feature or conduct of one or more regulated services presenting a material risk of significant harm, of significant adverse impact on freedom of expression, or other significant adverse impacts. For a single-service complaint you must additionally explain its particular importance or the scale of user impact.

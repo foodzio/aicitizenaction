@@ -48,6 +48,14 @@ facts:
       verification_method: listed_not_independently_checked
       verified_on: null
       source_id: f5b09a16d2d5
+    - id: nist-network-announcement
+      type: docket
+      value: https://www.nist.gov/news-events/news/2026/02/international-network-advanced-ai-measurement-evaluation-and-science
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      language: en
+      source_id: 6350ec9b00ed
   region: United States
   public_input: limited
   tags:
@@ -71,6 +79,9 @@ facts:
     powers:test-models: leads unclassified evaluations of AI capabilities that may pose national-security risk
     powers:set-standards: Develops guidelines/best practices to measure and improve AI system security
   routing_review: drafted
+  entity_key: entity-f0b37108-5bb9-4aea-b137-32474b585f0a
+  roles:
+    - government
 strings:
   name: Center for AI Standards and Innovation (CAISI)
   remit: "RENAMED: was the 'U.S. AI Safety Institute' until 4 June 2025, when Commerce Secretary Lutnick renamed and re-scoped it as CAISI. Develops guidelines/best practices to measure and improve AI system security; leads unclassified evaluations of AI capabilities that may pose national-security risk (cybersecurity, biosecurity, chemical weapons); enters VOLUNTARY agreements with private AI developers and evaluators for pre/post-deployment testing; coordinates with DoD, DOE, DHS and the IC; represents US positions in international AI standards fora. Also runs an AI Agent Standards Initiative (announced Feb 2026)."
@@ -100,14 +111,92 @@ strings:
       note: VERIFIED via NIST news release of May 2026.
     homepage:
       label: Homepage
+    nist-network-announcement:
+      label: NIST network announcement
+      scope: network publications
+      note: VERIFIED fetched.
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
   sources:
     - url: https://www.nist.gov/artificial-intelligence/nist-ai-consortium/submit-letter-interest-join-nist-ai-consortium
       checked: 2026-09-22
+    - url: https://www.nist.gov/news-events/news/2026/02/international-network-advanced-ai-measurement-evaluation-and-science
+      checked: 2026-09-22
   needs_research:
     - not_topics
   legacy_id: 957be4906f
   research_order: 145
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - 957be4906f
+    - 8b4d104f53
+  aliases:
+    - us-centre-ai-standards-innovation-united-states
+    - Centre for AI Standards and Innovation (CAISI) — United States, listed only to prevent acronym confusion
+  redirect_from:
+    - section: bodies
+      id: us-centre-ai-standards-innovation-united-states
+  identity_review:
+    evidence_urls:
+      - https://www.nist.gov/artificial-intelligence/nist-ai-consortium/submit-letter-interest-join-nist-ai-consortium
+      - https://www.nist.gov/news-events/news/2026/02/international-network-advanced-ai-measurement-evaluation-and-science
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: us-center-ai-standards-innovation
+        source_url: https://www.nist.gov/artificial-intelligence/nist-ai-consortium/submit-letter-interest-join-nist-ai-consortium
+        checked_on: 2026-09-22
+      - &a2
+        record_id: us-centre-ai-standards-innovation-united-states
+        source_url: https://www.nist.gov/news-events/news/2026/02/international-network-advanced-ai-measurement-evaluation-and-science
+        checked_on: 2026-09-22
+    geo.sub:
+      - *a1
+      - *a2
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+      - *a2
+    facts.public_input:
+      - *a1
+      - *a2
+    facts.tags:
+      - *a1
+      - *a2
+    facts.topics:
+      - *a1
+    facts.powers:
+      - *a1
+    facts.routing_evidence:
+      - *a1
+    facts.routing_review:
+      - *a1
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+      - *a2
+    strings.powers_text:
+      - *a1
+      - *a2
+    strings.reality_check:
+      - *a1
+      - *a2
+    strings.notes:
+      - *a1
+      - *a2
+    strings.routes:
+      - *a1
+      - *a2

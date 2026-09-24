@@ -43,6 +43,9 @@ facts:
     powers:legislate: Senate committee of referral for TRAIGA (HB 149)
     powers:hold-hearings: committee took up AI and jobs in a hearing week of 21 Sep 2026
   routing_review: drafted
+  entity_key: entity-c89ddbe1-a80f-4602-b941-2d54c81e1d0b
+  roles:
+    - seat
 strings:
   name: Senate Committee on Business and Commerce
   ai_jurisdiction: Senate committee of referral for TRAIGA (HB 149) and holder of the 2026 interim charge to evaluate 'the regulation and use of artificial intelligence systems' under SB 1964 and HB 149, plus data-center growth and grid impacts.

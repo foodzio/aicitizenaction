@@ -31,6 +31,9 @@ facts:
   tags:
     - law
     - research
+  entity_key: entity-53ba992d-66d6-4270-8590-596c5907f5f6
+  roles:
+    - civil-society
 strings:
   name: Alignment Research Center (ARC)
   remit: Small theory-focused non-profit. Current agenda is a theoretical foundation for mechanistic explanations of neural network behaviour — heuristic arguments, low-probability estimation, and algorithms that analyse weights directly rather than by sampling, aimed at predicting out-of-distribution behaviour and detecting anomalies. Its evaluations arm spun out to become METR.

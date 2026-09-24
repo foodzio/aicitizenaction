@@ -36,6 +36,9 @@ facts:
   routing_evidence:
     powers:oversee: Upper-house METI oversight
   routing_review: drafted
+  entity_key: entity-c393e87d-f692-4d79-8d95-1b0b13f1bb67
+  roles:
+    - seat
 strings:
   name: House of Councillors Committee on Economy, Trade and Industry
   ai_jurisdiction: "Upper-house METI oversight: AI industrial policy, compute and semiconductor strategy, AI Guidelines for Business."

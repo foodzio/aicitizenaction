@@ -43,6 +43,9 @@ facts:
     powers:fund: Funds every AI-relevant agency
     powers:hold-hearings: formally solicits written testimony from the general public each year
   routing_review: drafted
+  entity_key: entity-2be21c1c-4c96-4fa5-afe2-5479786f754a
+  roles:
+    - seat
 strings:
   name: House Committee on Appropriations
   ai_jurisdiction: Funds every AI-relevant agency and attaches policy riders that often matter more than authorizing law. Also, with its Senate counterpart, the only committee that formally solicits written testimony from the general public each year.

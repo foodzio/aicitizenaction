@@ -77,6 +77,9 @@ facts:
   contact_disposition: fix
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-d2967738-83f0-4ea3-bd95-8dee80dd3261
+  roles:
+    - company
 strings:
   name: Alibaba (Qwen)
   remit: No separately named frontier safety or alignment function published in English. Security is handled by the Alibaba Security Response Center (ASRC); model governance follows PRC regulatory requirements (CAC algorithm and generative AI filings).

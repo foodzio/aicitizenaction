@@ -57,6 +57,9 @@ facts:
     topics:security: cybersecurity, robustness, logging
     powers:set-standards: Develops the harmonised European standards that give presumption of conformity with the EU AI Act
   routing_review: drafted
+  entity_key: entity-0c0fd8d6-2569-40eb-80e3-0f8c3ca57427
+  roles:
+    - standards
 strings:
   name: CEN-CENELEC JTC 21 — Artificial Intelligence
   remit: Established 1 June 2021; 300+ experts from 20+ countries across five working groups. Develops the harmonised European standards that give presumption of conformity with the EU AI Act once cited in the Official Journal — e.g. AI trustworthiness framework, AI risk management, AI quality management system (prEN 18286), conformity assessment, datasets and bias, cybersecurity, robustness, logging. CEN/CENELEC decided in late 2025 to accelerate the work programme after delays.

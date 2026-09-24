@@ -30,6 +30,9 @@ facts:
     - role: chair
       name: Not applicable
       verified_on: 2026-09-22
+  entity_key: entity-d8d8d53e-588a-4d08-a65c-2fdc4d6f9bd5
+  roles:
+    - seat
 strings:
   name: Senate e-Cidadania — Ideia Legislativa
   ai_jurisdiction: Not AI-specific. A general citizen-initiated legislative proposal channel with a real numeric trigger, usable for an AI proposal.

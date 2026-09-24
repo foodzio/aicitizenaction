@@ -45,6 +45,9 @@ facts:
   public_input: limited
   tags:
     - research
+  entity_key: entity-c588c5d7-c998-475c-b202-6dee633180a2
+  roles:
+    - civil-society
 strings:
   name: RAND Center on AI, Security, and Technology (RAND CAST) — successor to the Technology and Security Policy Center (TASP)
   remit: RAND's AI centre, formed by building on the Global and Emerging Risks division's inaugural centres — the Technology and Security Policy Center (TASP) and the Meselson Center. Research covers AI security, compute policy, AIxBio, bioresilience and transformative-technology risk. Runs a Fellows Programme and publishes reports that feed directly into US policy.

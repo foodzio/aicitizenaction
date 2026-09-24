@@ -52,6 +52,9 @@ facts:
     powers:hold-hearings: Hearing 'The Impact of AI on the Workforce'
     powers:publish: Cassidy released a committee white paper on artificial intelligence
   routing_review: drafted
+  entity_key: entity-81e3e42b-1e94-4b29-8c49-bd7b2a6eee02
+  roles:
+    - seat
 strings:
   name: Senate Committee on Health, Education, Labor, and Pensions
   ai_jurisdiction: "AI where it touches work, health and school. Send here: AI and job displacement, worker surveillance and algorithmic management, AI in hiring and employment discrimination (with EEOC), FDA regulation of AI medical devices and clinical decision support, AI in drug development, AI in K-12 and higher education, and AI literacy. If your concern is 'my employer is using AI on me' or 'an AI tool is making medical decisions', this is the door."

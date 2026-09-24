@@ -47,6 +47,9 @@ facts:
     powers:legislate: Lead Senate committee for AI, frontier-model safety
     powers:hold-hearings: Held a dedicated public hearing on AI in consequential/high-risk contexts on 15 Jan 2026
   routing_review: drafted
+  entity_key: entity-ab8636c1-314b-48a7-8f32-29dfc3a62428
+  roles:
+    - seat
 strings:
   name: Senate Standing Committee on Internet and Technology
   ai_jurisdiction: Lead Senate committee for AI, frontier-model safety, algorithmic pricing, AI training-data transparency and companion-chatbot bills. Held a dedicated public hearing on AI in consequential/high-risk contexts on 15 Jan 2026.

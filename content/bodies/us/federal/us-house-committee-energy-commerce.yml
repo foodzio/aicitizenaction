@@ -53,6 +53,9 @@ facts:
     powers:legislate: The broadest authorizing jurisdiction in the House
     powers:hold-hearings: "'AI and the Grid: Meeting Growing Power Demand While Protecting Ratepayers' (Energy Subcommittee)"
   routing_review: drafted
+  entity_key: entity-ed01c924-42b4-4060-a920-80246da23e30
+  roles:
+    - seat
 strings:
   name: House Committee on Energy and Commerce
   ai_jurisdiction: "The broadest authorizing jurisdiction in the House and the main House counterpart to Senate Commerce. Owns the FTC, FCC, NTIA, interstate commerce, consumer protection, telecommunications, electricity and the grid, and health (FDA/HHS). Send here: comprehensive federal AI legislation and preemption of state AI laws, commercial data privacy, AI consumer protection and deceptive practices, AI and kids, AI's electricity demand and ratepayer impact, AI in health care, and communications infrastructure for AI."

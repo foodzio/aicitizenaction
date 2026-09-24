@@ -52,6 +52,9 @@ facts:
   tags:
     - flaw
     - research
+  entity_key: entity-f8e1dd4a-1d1c-43a1-945c-c23b26472bd9
+  roles:
+    - civil-society
 strings:
   name: FAR.AI
   remit: "Runs three distinct arms: in-house research on a portfolio of agendas (robustness, deception detection, red-teaming, safeguard vulnerabilities); a field-building events programme (Alignment Workshops, the Seoul and Cambridge workshops, verification workshops, technical-governance convenings); and FAR.Labs, a Berkeley co-working space for AI safety researchers, plus a grantmaking programme for academics and independent researchers."

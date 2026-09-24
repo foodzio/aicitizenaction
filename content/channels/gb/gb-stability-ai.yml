@@ -107,6 +107,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-ffe2dd77-3cff-4164-8b00-efe1b1858e7a
+  roles:
+    - company
 strings:
   name: Stability AI
   remit: "'Stable Safety' — the publicly branded safety function covering open-weight image and audio models, built around six principles including Safety-First Open Source and Banning AI Misuse, plus an annual Integrity Transparency Report."

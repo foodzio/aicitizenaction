@@ -16,6 +16,9 @@ facts:
   volunteers: yes — via IEEE membership and the volunteer committees page
   tags:
     - join
+  entity_key: entity-f67f2776-2e57-4d5d-a5cb-1089ea473e2b
+  roles:
+    - organisation
 strings:
   name: IEEE-USA AI Policy Committee (AIPC)
   the_ask: "US AI policy should be grounded in engineering reality: governance and regulation, safety, privacy and cybersecurity, IP protection, transparency, and a workforce pipeline matched to need."

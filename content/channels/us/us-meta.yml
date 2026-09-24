@@ -162,6 +162,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-0dd508bd-ba48-49f8-bae5-62317b26af69
+  roles:
+    - company
 strings:
   name: Meta
   remit: Internal governance function plus a Chief AI Officer and a Director of Alignment and Risk who receive non-compliance reports under the Advanced AI Scaling Framework; preparedness reports are published at model release.

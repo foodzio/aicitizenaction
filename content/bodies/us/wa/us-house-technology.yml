@@ -45,6 +45,9 @@ facts:
     powers:hold-hearings: All three major 2026 AI bills were heard here on 15 Jan 2026
     powers:legislate: All three major 2026 AI bills were heard here on 15 Jan 2026
   routing_review: drafted
+  entity_key: entity-6959f20b-49b8-422a-8847-996846e83827
+  roles:
+    - seat
 strings:
   name: House Technology, Economic Development & Veterans Committee (TEDV)
   ai_jurisdiction: Explicitly holds artificial intelligence, cybersecurity, broadband and telecommunications jurisdiction. All three major 2026 AI bills were heard here on 15 Jan 2026.

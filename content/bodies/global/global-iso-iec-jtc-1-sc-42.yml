@@ -54,6 +54,9 @@ facts:
     topics:international: The lead international AI standardisation committee
     powers:set-standards: 44 published standards and ~49 in development
   routing_review: drafted
+  entity_key: entity-acacb224-c7d6-456c-874f-719d321b0604
+  roles:
+    - standards
 strings:
   name: ISO/IEC JTC 1/SC 42 — Artificial Intelligence
   remit: The lead international AI standardisation committee, established 2017. Five working groups (WG1 foundational standards, WG2 data, WG3 trustworthiness, WG4 use cases and applications, WG5 computational approaches and system characteristics) plus seven joint working groups with other committees. 59 participating and 25 observing member bodies; 44 published standards and ~49 in development — including ISO/IEC 42001 (AI management systems) and 23894 (risk management).

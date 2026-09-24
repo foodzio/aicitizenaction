@@ -46,6 +46,9 @@ facts:
   recommend: false
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-0cbb6e94-560f-4860-ab39-0267ecc1df6a
+  roles:
+    - reporting-channel
 strings:
   name: MIT AI Incident Tracker (AI Risk Repository)
   remit: Nothing directly from the public. It ingests and classifies incidents from the AI Incident Database — 1,600+ incidents classified by risk domain, cause, harm type (10 categories including physical harm, financial loss and human rights), severity, entity and timing.

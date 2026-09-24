@@ -30,6 +30,9 @@ facts:
     powers:hold-hearings: committees may hear submitters 'face to face, by phone, or by video conference'
     powers:publish: both that report and the committee's report to the House are published
   routing_review: drafted
+  entity_key: entity-8aa4c904-abab-4f52-8b0c-fceb862cc9e9
+  roles:
+    - seat
 strings:
   name: New Zealand House of Representatives — select committee submission system (the public route)
   ai_jurisdiction: The mechanism for reaching any New Zealand select committee, including on any future AI bill.

@@ -42,6 +42,9 @@ facts:
     topics:elections: election information
     powers:legislate: package advanced out of committee 17 Mar 2026
   routing_review: drafted
+  entity_key: entity-86da6a17-32b7-45b9-a9ae-f39245f969af
+  roles:
+    - seat
 strings:
   name: Assembly Science, Innovation and Technology Committee
   ai_jurisdiction: The dedicated Assembly committee for AI, deepfakes, chatbots and emerging-technology bills. Released a five-bill AI transparency package on 17 March 2026.

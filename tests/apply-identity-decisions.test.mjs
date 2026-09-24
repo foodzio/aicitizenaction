@@ -30,3 +30,11 @@ test('merge plan accepts approved same decisions and rejects self approval', () 
   const bad = buildMergePlan([a, b], { decisions: [{ ...decision, approved_by: 'reviewer' }] });
   assert.match(bad.errors.join('\n'), /independent approval/);
 });
+
+test('identical routes retain every indexed source without a duplicate public route', () => {
+  const first = record('a', 'orgs', 'organisation', { id: 'contact', type: 'form', value: 'https://example.org/form', verified: true, verified_on: '2026-09-24', source_id: 'source-a' });
+  const second = record('b', 'orgs', 'organisation', { id: 'contact', type: 'form', value: 'https://example.org/form', verified: true, verified_on: '2026-09-24', source_id: 'source-b' });
+  const merged = mergeRecords(first, second, decision, () => 'entity-fixed');
+  assert.equal(merged.facts.routes.length, 1);
+  assert.deepEqual(merged.facts.routes[0].source_ids, ['source-a', 'source-b']);
+});

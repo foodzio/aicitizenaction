@@ -37,6 +37,9 @@ facts:
   public_input: limited
   tags:
     - research
+  entity_key: entity-e3db2402-b83e-4dbb-a65b-87e23204a21b
+  roles:
+    - civil-society
 strings:
   name: LawZero
   remit: Non-profit founded by Yoshua Bengio in June 2025 to develop safe-by-design AI. Core technical bet is 'Scientist AI' — a non-agentic, uncertainty-quantifying system designed to understand and predict rather than to act, usable as a guardrail that monitors and vetoes unsafe actions by agentic systems.

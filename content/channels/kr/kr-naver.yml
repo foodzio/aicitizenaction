@@ -62,6 +62,9 @@ facts:
   contact_disposition: reclassify
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-5e6ea7bd-0a94-4705-bb4c-586376b733d6
+  roles:
+    - company
 strings:
   name: NAVER
   remit: Future AI Center, supported by a risk management working group and a board-level risk management committee, operates the AI Safety Framework; frontier systems are reassessed every three months or when capability increases 6x.

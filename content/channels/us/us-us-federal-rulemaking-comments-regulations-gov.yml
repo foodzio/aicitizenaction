@@ -52,6 +52,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-d2dd743d-a8e7-470a-86b1-2dfa1cad3663
+  roles:
+    - reporting-channel
 strings:
   name: US federal rulemaking comments — Regulations.gov
   remit: Comments from anyone, including non-US persons, on proposed rules, requests for information and requests for comment. No affiliation required.

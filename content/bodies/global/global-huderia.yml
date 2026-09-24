@@ -30,6 +30,9 @@ facts:
   public_input: limited
   tags:
     - systemic
+  entity_key: entity-03d2dcc9-c4e5-4c20-929a-c3224e35d425
+  roles:
+    - multilateral
 strings:
   name: HUDERIA (Council of Europe risk and impact assessment methodology)
   remit: "Human Rights, Democracy and Rule of Law Impact Assessment for AI systems, developed with the Alan Turing Institute. Two parts: the HUDERIA Methodology, approved by the Committee of Ministers on 26 February 2025, and the HUDERIA Model: COBRA (supporting tools for systematic analysis), approved 25 February 2026. Non-binding guidance that parties may adapt. Supported by HUDERIA Academy tracks including Health and Local Authorities; piloted with businesses in Ukraine."

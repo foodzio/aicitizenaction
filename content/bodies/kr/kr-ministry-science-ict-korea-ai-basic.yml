@@ -31,6 +31,9 @@ facts:
   routing_evidence:
     powers:advise: Provides the statutory text, enforcement decree materials and guidance for businesses
   routing_review: drafted
+  entity_key: entity-3e1b73cb-04df-4f3f-99aa-8d8e01b61c7d
+  roles:
+    - government
 strings:
   name: Ministry of Science and ICT — Korea AI Basic Act information portal
   remit: Dedicated government information portal for the AI Framework Act (commonly 'AI Basic Act'), which took effect 22 January 2026. Provides the statutory text, enforcement decree materials and guidance for businesses subject to high-impact AI and generative AI obligations, including the domestic-representative requirement for foreign providers.

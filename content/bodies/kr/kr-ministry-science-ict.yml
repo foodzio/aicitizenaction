@@ -49,6 +49,9 @@ facts:
     powers:fine: MSIT has indicated a one-year grace period before administrative fines are imposed
     powers:hold-hearings: MSIT also runs 공청회 (public hearings)
   routing_review: drafted
+  entity_key: entity-cd9d8659-148f-4f72-831b-a636a41b80d3
+  roles:
+    - seat
 strings:
   name: Ministry of Science and ICT (MSIT)
   ai_jurisdiction: "The competent authority under the AI Framework Act. Powers include: investigating suspected violations and conducting on-site inspections (Art. 40), issuing corrective orders and service suspension orders, confirming on request whether a system is 'high-impact AI', and drafting the Presidential Decree and notices. Also owns national AI R&D, compute and the AI Safety Institute."

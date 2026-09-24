@@ -38,6 +38,9 @@ facts:
     topics:frontier-ai: Synthesises evidence on general-purpose AI capabilities, risks and technical mitigations
     powers:publish: 2026 edition published 3 Feb 2026
   routing_review: drafted
+  entity_key: entity-45783211-a333-4dc7-8088-cf6543524e51
+  roles:
+    - multilateral
 strings:
   name: International AI Safety Report (Bengio-chaired)
   remit: Mandated by the Bletchley summit; chaired by Yoshua Bengio. 2026 edition published 3 Feb 2026 (arXiv 2602.21012) ahead of the India AI Impact Summit, with an Executive Summary and an Extended Summary for Policymakers. Backed by an Expert Advisory Panel of the 30 Bletchley countries plus the EU, OECD and UN. Synthesises evidence on general-purpose AI capabilities, risks and technical mitigations; it does not make policy recommendations.

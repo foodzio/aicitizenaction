@@ -17,6 +17,9 @@ facts:
   tags:
     - join
     - opposition
+  entity_key: entity-96334893-42d2-4578-9081-614299ea83bd
+  roles:
+    - organisation
 strings:
   name: Consumer Technology Association (CTA)
   the_ask: A national AI regulatory framework that is technology-neutral and risk-based and builds on existing law, rather than new rules that it says would hinder innovation and small businesses.

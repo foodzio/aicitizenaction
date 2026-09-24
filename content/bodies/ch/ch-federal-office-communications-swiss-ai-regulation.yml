@@ -54,6 +54,9 @@ facts:
     powers:advise: Advisory/legislative-preparation, not a regulator of AI.
     powers:legislate: BAKOM/OFCOM leads the legislative drafting
   routing_review: drafted
+  entity_key: entity-72ced6ac-e136-42fe-9415-b496a2011542
+  roles:
+    - government
 strings:
   name: Federal Office of Communications (OFCOM / BAKOM) — Swiss AI regulation lead
   remit: "Switzerland has NO AI safety institute and no comprehensive AI act. In February 2025 the Federal Council chose a sectoral, minimally-invasive approach: ratify the Council of Europe Framework Convention on AI (signed by Switzerland) and make only targeted sectoral legal amendments, with non-binding measures elsewhere. BAKOM/OFCOM leads the legislative drafting, with the Federal Chancellery (Bundeskanzlei) handling federal-administration AI use. Consultation drafts were expected through 2026. Advisory/legislative-preparation, not a regulator of AI."

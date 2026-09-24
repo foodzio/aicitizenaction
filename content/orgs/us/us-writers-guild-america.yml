@@ -17,6 +17,9 @@ facts:
   tags:
     - join
     - tip
+  entity_key: entity-03459690-b27b-4dc7-a6be-105054821ef2
+  roles:
+    - organisation
 strings:
   name: Writers Guild of America (WGA West/East)
   the_ask: AI cannot write or rewrite literary material, cannot be credited, and cannot be used to undermine writers' credit or compensation — terms won in the 2023 Minimum Basic Agreement after a 148-day strike.

@@ -44,6 +44,9 @@ facts:
   public_input: limited
   tags:
     - research
+  entity_key: entity-703a4ddf-e7b4-4b03-899c-2f0dd3f3b575
+  roles:
+    - civil-society
 strings:
   name: Goodfire
   remit: For-profit interpretability research lab. Reverse-engineers causal mechanisms in neural networks; commercial product Silico for model understanding, debugging and training-time steering. Publishes interpretability research alongside the commercial offering.

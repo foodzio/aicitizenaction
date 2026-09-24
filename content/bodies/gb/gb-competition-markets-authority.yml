@@ -67,6 +67,9 @@ facts:
     powers:fine: fine up to 10% of global turnover
     powers:handle-complaints: Anyone can report suspected anti-competitive conduct, including in AI markets
   routing_review: drafted
+  entity_key: entity-90e82c14-e51f-4cd7-8471-dabfa756ebad
+  roles:
+    - government
 strings:
   name: Competition and Markets Authority (CMA)
   remit: Competition and consumer protection regulator. Relevant to AI through foundation-model market studies, merger review of AI partnerships and acqui-hires, and the digital markets competition regime (Strategic Market Status designations under the DMCC Act, which allow the CMA to impose conduct requirements and pro-competition interventions on designated firms). Can compel information, conduct market investigations, block or unwind mergers, impose conduct requirements, and fine up to 10% of global turnover — and under the DMCC regime the CMA can now enforce consumer law directly with fines rather than going to court.

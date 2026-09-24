@@ -110,15 +110,38 @@ facts:
         disposition: reference-only
         evidence_url: https://www.themidasproject.com/
         evidence_note: "Tiny, and it absolutely reads its inbox — the single best target in this list for someone with concrete non-public evidence about an AI company's conduct. Note their own advice: if you are an employee considering disclosure, contact the AI Whistleblower Initiative first for independent legal guidance before approaching any journalist or watchdog."
+    - id: action
+      type: action
+      value: https://www.themidasproject.com/volunteer
+      verified: true
+      verification_method: fetched_source_page
+      verified_on: 2026-09-22
+      source_id: 1a6654013285
+      contact:
+        status: unknown
+        directness: indirect
+        review: reviewed
+        reviewed_by: codex:source-review-2026-09-24
+        reviewed_on: 2026-09-24
+        disposition: reference-only
   region: United States
   public_input: open
   tags:
     - flaw
     - insider
     - research
+    - join
+    - law
+    - tip
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  perspective: safety-advocacy
+  volunteers: yes
+  entity_key: entity-57d8acbe-92ed-496b-95ef-96f40f34ae73
+  roles:
+    - watchdog
+    - organisation
 strings:
   name: The Midas Project
   remit: "Watchdog non-profit holding AI companies to their own stated commitments. Projects: Watchtower (tracks changes to and violations of corporate AI safety policies), the Seoul Tracker (whether 16 organisations met the Seoul frontier-safety commitments), The OpenAI Files (documented governance, leadership and culture concerns at OpenAI), and Model Republic (industry influence on policymakers)."
@@ -142,6 +165,16 @@ strings:
       scope: General
     homepage:
       label: Homepage
+    action:
+      label: Action page
+  the_ask: AI companies should keep the safety and transparency commitments they have publicly made, and be held accountable when they quietly walk them back.
+  what_they_do: "Corporate watchdog work: the Watchtower tracker of silent changes to AI company policies, investigations, scorecards, and the OpenAI Files. Runs modelrepublic.org and openaifiles.org."
+  newcomer_action: Send a tip if you have inside knowledge of an AI company; otherwise sign up as a volunteer, join the Discord and help with research or amplifying campaigns.
+  tips: yes — dedicated tip page at themidasproject.com/tips, aimed at industry insiders
+  geography: United States (company-focused, global reach).
+  scale: "Tiny: founded early 2024 by Tyler Johnston, 'a small core team' plus volunteers. 501(c)(3), EIN 99-2326977."
+  spending: Not disclosed.
+  caution: Adversarial toward specific named companies. If you work at an AI lab, sending a tip may breach your employment agreement — take legal advice first; the organisation is small and cannot indemnify you.
 meta:
   verified_on: 2026-09-22
   review_by: 2027-03-21
@@ -150,6 +183,8 @@ meta:
       checked: 2026-09-22
     - url: https://www.themidasproject.com/contact
       checked: 2026-09-22
+    - url: https://www.themidasproject.com/volunteer
+      checked: 2026-09-22
   needs_research:
     - powers
     - topics
@@ -157,3 +192,84 @@ meta:
   legacy_id: b7e97742ac
   research_order: 122
   migrated_from: input/data/institutions.json
+  legacy_ids:
+    - b7e97742ac
+    - 9f4e2aad7e
+  aliases:
+    - us-midas-project-2
+    - The Midas Project
+  redirect_from:
+    - section: orgs
+      id: us-midas-project-2
+  identity_review:
+    evidence_urls:
+      - https://www.themidasproject.com/tips
+      - https://www.themidasproject.com/volunteer
+    reviewed_by: codex:source-review-2026-09-24
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    reviewed_on: 2026-09-24
+    review_by: 2027-03-23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  merge_provenance:
+    geo.country:
+      - &a1
+        record_id: us-midas-project
+        source_url: https://www.themidasproject.com/tips
+        checked_on: 2026-09-22
+      - &a2
+        record_id: us-midas-project-2
+        source_url: https://www.themidasproject.com/volunteer
+        checked_on: 2026-09-22
+    geo.label:
+      - *a1
+      - *a2
+    facts.routes:
+      - *a1
+      - *a2
+    facts.region:
+      - *a1
+    facts.public_input:
+      - *a1
+    facts.tags:
+      - *a1
+      - *a2
+    facts.contact_disposition:
+      - *a1
+    facts.contact_reviewed_by:
+      - *a1
+    facts.contact_reviewed_on:
+      - *a1
+    strings.name:
+      - *a1
+      - *a2
+    strings.remit:
+      - *a1
+    strings.threat_model:
+      - *a1
+    strings.reality_check:
+      - *a1
+    strings.gov_channel:
+      - *a1
+    strings.routes:
+      - *a1
+      - *a2
+    facts.perspective:
+      - *a2
+    facts.volunteers:
+      - *a2
+    strings.the_ask:
+      - *a2
+    strings.what_they_do:
+      - *a2
+    strings.newcomer_action:
+      - *a2
+    strings.tips:
+      - *a2
+    strings.geography:
+      - *a2
+    strings.scale:
+      - *a2
+    strings.spending:
+      - *a2
+    strings.caution:
+      - *a2

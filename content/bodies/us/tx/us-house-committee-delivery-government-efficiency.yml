@@ -41,6 +41,9 @@ facts:
     powers:legislate: House committee that heard and reported TRAIGA (HB 149)
     powers:hold-hearings: House committee that heard and reported TRAIGA (HB 149)
   routing_review: drafted
+  entity_key: entity-8c8380b6-927e-4d54-aee4-7ef8aa1c1465
+  roles:
+    - seat
 strings:
   name: House Committee on Delivery of Government Efficiency
   ai_jurisdiction: House committee that heard and reported TRAIGA (HB 149) in the 89th Legislature; jurisdiction over state technology, AI governance and government efficiency.

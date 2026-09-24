@@ -40,6 +40,9 @@ facts:
   routing_evidence:
     powers:convene: Bipartisan member-education and coordination body
   routing_review: drafted
+  entity_key: entity-ac13418b-5c5c-4ac9-b864-8461d15361ca
+  roles:
+    - seat
 strings:
   name: Senate Artificial Intelligence Caucus
   ai_jurisdiction: Bipartisan member-education and coordination body founded in 2019. No referral jurisdiction. Its value is that its two co-chairs sit on the committees that matter — Heinrich is ranking member of Energy and Natural Resources and sits on Intelligence; Rounds chairs Armed Services' Cybersecurity subcommittee and sits on Banking — so the caucus functions as a bridge between the energy, defense and financial AI conversations.

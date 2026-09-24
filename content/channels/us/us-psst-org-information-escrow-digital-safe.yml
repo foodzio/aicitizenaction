@@ -54,6 +54,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-dd1c4f63-82cb-48e7-924c-94331e16d022
+  roles:
+    - reporting-channel
 strings:
   name: Psst.org — information escrow / 'digital safe'
   remit: Concerns from tech and AI workers, at any level of completeness — explicitly including partial information, 'one line of code that is a red flag', or a general unease. Designed as a 'lower stakes way' to report without becoming a formal whistleblower.

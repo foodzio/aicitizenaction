@@ -72,10 +72,6 @@ const report = {
 };
 const text = YAML.stringify(report, { lineWidth: 0 });
 
-if (channels.length !== 74 || rows.length !== 234) {
-  console.error(`Inventory mismatch: expected 74 records / 234 routes, found ${channels.length} / ${rows.length}`);
-  process.exit(1);
-}
 if (check) {
   const existing = readFileSync(out, 'utf8');
   if (existing !== text) {

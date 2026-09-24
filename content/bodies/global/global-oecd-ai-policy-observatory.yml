@@ -42,6 +42,9 @@ facts:
     topics:transparency: HAIP transparency reporting
     powers:advise: OECD work feeds directly into member-state policy
   routing_review: drafted
+  entity_key: entity-06285a29-a313-4af0-8472-35dfb60392ff
+  roles:
+    - multilateral
 strings:
   name: OECD.AI Policy Observatory (OECD AI Policy Observatory)
   remit: Hub for the OECD AI Principles, national AI policy database, AI Incidents & Hazards Monitor, HAIP transparency reporting, and the GPAI expert community. Underpinned by the Working Party on AI Governance (AIGO) under the Digital Policy Committee.

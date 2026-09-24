@@ -44,6 +44,9 @@ facts:
     topics:military-ai: Funds DoD AI programs, the Chief Digital and AI Office, DARPA and defense compute.
     powers:fund: Funds DoD AI programs
   routing_review: drafted
+  entity_key: entity-6a7e221e-eb99-4a2c-adea-edb750b94206
+  roles:
+    - seat
 strings:
   name: Subcommittee on Defense
   ai_jurisdiction: Funds DoD AI programs, the Chief Digital and AI Office, DARPA and defense compute. The money counterpart to HASC's CITI subcommittee.

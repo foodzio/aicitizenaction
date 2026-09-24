@@ -37,6 +37,9 @@ facts:
   public_input: open
   tags:
     - research
+  entity_key: entity-800584f7-a6e5-45f4-a1f2-748554cc98c4
+  roles:
+    - academic
 strings:
   name: Alignment Research Engineer Accelerator (ARENA)
   remit: Intensive 4–5 week in-person bootcamp training people in the engineering skills for technical AI safety work — transformer internals, interpretability, RL, evals. Runs 2–3 cohorts a year (ARENA 9.0 scheduled 5 Oct – 6 Nov 2026). Covers travel, visas, accommodation and meals to remove financial barriers. Curriculum is public and self-studiable.

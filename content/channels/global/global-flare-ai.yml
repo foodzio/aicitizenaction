@@ -52,6 +52,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-6c87afcb-d500-4569-bdb2-af11c971e222
+  roles:
+    - reporting-channel
 strings:
   name: FLARE-AI (Flaw Reporting for AI)
   remit: A flaw, vulnerability or incident in any AI system. This is the first live implementation of the standardised AI flaw report concept — it covers model-behaviour flaws, biases and incidents, not only security bugs.

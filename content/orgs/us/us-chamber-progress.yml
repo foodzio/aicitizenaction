@@ -18,6 +18,9 @@ facts:
     - fund
     - join
     - opposition
+  entity_key: entity-a665b201-91e6-417b-b559-f4000c946134
+  roles:
+    - organisation
 strings:
   name: Chamber of Progress
   the_ask: Keep AI development and AI-generated work legally unencumbered — defend fair use for AI training, oppose broad restrictions on automated decision systems, and pursue a centre-left 'AI opportunity' agenda.

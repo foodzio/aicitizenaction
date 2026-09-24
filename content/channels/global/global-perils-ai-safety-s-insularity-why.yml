@@ -48,6 +48,9 @@ facts:
   recommend: false
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-bb16b1cb-8917-437b-9070-4aefd6f55b83
+  roles:
+    - reporting-channel
 strings:
   name: "'The perils of AI safety's insularity' — why outside contributions get ignored"
   remit: N/A

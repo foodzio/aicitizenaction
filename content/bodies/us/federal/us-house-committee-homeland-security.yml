@@ -46,6 +46,9 @@ facts:
     powers:hold-hearings: 21 Jan 2026 oversight hearing with CISA, TSA and DHS S&T
     powers:oversee: 21 Jan 2026 oversight hearing with CISA, TSA and DHS S&T
   routing_review: drafted
+  entity_key: entity-f4ad95f2-ac9f-411c-b2c9-81cd1ac92b88
+  roles:
+    - seat
 strings:
   name: House Committee on Homeland Security
   ai_jurisdiction: "DHS, CISA, TSA and DHS Science and Technology. Send here: AI threats to critical infrastructure, AI-enabled cyberattacks, securing AI systems used in government and industry, AI in border and screening operations, AI and CBRN threat detection, and the AI capabilities of adversary states as a homeland-security matter."

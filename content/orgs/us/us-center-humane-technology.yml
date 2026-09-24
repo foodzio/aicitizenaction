@@ -18,6 +18,9 @@ facts:
     - fund
     - join
     - law
+  entity_key: entity-20ab415d-67f6-4e7f-aa93-36f8457280a9
+  roles:
+    - organisation
 strings:
   name: Center for Humane Technology
   the_ask: Change the incentives driving AI deployment, and establish new norms, legal protections and fundamental rights to preserve what makes human life meaningful in the age of AI.

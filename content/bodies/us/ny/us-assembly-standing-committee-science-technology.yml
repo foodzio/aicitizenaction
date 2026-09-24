@@ -43,6 +43,9 @@ facts:
     topics:work: A9581 (AI employment-impact reporting)
     powers:legislate: Assembly committee of reference for AI, emerging-technology and frontier-model bills
   routing_review: drafted
+  entity_key: entity-c9483e7d-821d-4d9b-85ba-11cb8ebc0203
+  roles:
+    - seat
 strings:
   name: Assembly Standing Committee on Science and Technology
   ai_jurisdiction: Assembly committee of reference for AI, emerging-technology and frontier-model bills. Alex Bores, the RAISE Act Assembly sponsor, sits on it.

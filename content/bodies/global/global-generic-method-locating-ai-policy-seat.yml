@@ -33,6 +33,9 @@ facts:
     - role: chair
       name: Not applicable
       verified_on: 2026-09-22
+  entity_key: entity-8a619788-e9f0-4f5b-a970-e8637f4c7fb7
+  roles:
+    - seat
 strings:
   name: How to find the AI committee and the public route in any parliament
   ai_jurisdiction: Applies to any parliamentary or presidential system not covered above.

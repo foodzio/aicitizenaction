@@ -5,263 +5,6 @@ defaults:
   reviewed_on: 2026-09-24
   review_by: 2027-03-23
 decisions:
-  - key: eu-european-parliament-committee-civil-liberties--eu-european-parliament-committee-civil-liberties-2
-    records:
-      - eu-european-parliament-committee-civil-liberties
-      - eu-european-parliament-committee-civil-liberties-2
-    decision: same
-    canonical_id: eu-european-parliament-committee-civil-liberties
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://www.europarl.europa.eu/committees/en/libe/about
-      - https://www.europarl.europa.eu/committees/en/libe/home/members
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: eu-european-parliament-committee-industry--eu-european-parliament-committee-industry-2
-    records:
-      - eu-european-parliament-committee-industry
-      - eu-european-parliament-committee-industry-2
-    decision: same
-    canonical_id: eu-european-parliament-committee-industry
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://www.europarl.europa.eu/committees/en/itre/home/highlights
-      - https://www.europarl.europa.eu/committees/en/itre/home/members
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: eu-european-parliament-committee-internal-market-consumer--eu-european-parliament-committee-internal-market-consumer-2
-    records:
-      - eu-european-parliament-committee-internal-market-consumer
-      - eu-european-parliament-committee-internal-market-consumer-2
-    decision: same
-    canonical_id: eu-european-parliament-committee-internal-market-consumer
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://www.europarl.europa.eu/committees/en/imco/home/highlights
-      - https://www.europarl.europa.eu/committees/en/imco/home/members
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: eu-european-parliament-committee-petitions--eu-european-parliament-committee-petitions-2
-    records:
-      - eu-european-parliament-committee-petitions
-      - eu-european-parliament-committee-petitions-2
-    decision: same
-    canonical_id: eu-european-parliament-committee-petitions
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://www.europarl.europa.eu/petitions/en/home
-      - https://www.europarl.europa.eu/committees/en/peti/home/members
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: fr-saferai--fr-saferai-2
-    records:
-      - fr-saferai
-      - fr-saferai-2
-    decision: same
-    canonical_id: fr-saferai
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://ratings.safer-ai.org/
-      - https://www.safer-ai.org/about#donate
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: gb-house-lords-communications-digital-committee--gb-house-lords-communications-digital-committee-2
-    records:
-      - gb-house-lords-communications-digital-committee
-      - gb-house-lords-communications-digital-committee-2
-    decision: same
-    canonical_id: gb-house-lords-communications-digital-committee
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://committees.parliament.uk/committee/170/communications-and-digital-committee/
-      - https://committees.parliament.uk/committee/170/communications-and-digital-committee/membership/
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: global-access-now--global-access-now-2
-    records:
-      - global-access-now
-      - global-access-now-2
-    decision: same
-    canonical_id: global-access-now
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://www.accessnow.org/contact-us/
-      - https://www.accessnow.org/help/
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: global-ai-safety-asia--global-ai-safety-asia-2
-    records:
-      - global-ai-safety-asia
-      - global-ai-safety-asia-2
-    decision: same
-    canonical_id: global-ai-safety-asia
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://www.linkedin.com/company/103351153
-      - https://www.aisafety.asia/get-involved
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: kr-ai-safety-institute--kr-ai-safety-institute-2
-    records:
-      - kr-ai-safety-institute
-      - kr-ai-safety-institute-2
-    decision: same
-    canonical_id: kr-ai-safety-institute
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://www.aisi.re.kr/eng
-      - https://www.aisi.re.kr/eng/contents/23
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-ai-now-institute--us-ai-now-institute-2
-    records:
-      - us-ai-now-institute
-      - us-ai-now-institute-2
-    decision: same
-    canonical_id: us-ai-now-institute
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://ainowinstitute.org/contact-us
-      - https://ainowinstitute.org/publications
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-algorithmic-justice-league--us-algorithmic-justice-league-2
-    records:
-      - us-algorithmic-justice-league
-      - us-algorithmic-justice-league-2
-    decision: same
-    canonical_id: us-algorithmic-justice-league
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://report.ajl.org
-      - https://www.ajl.org/take-action
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-center-ai-policy--us-center-ai-policy-2
-    records:
-      - us-center-ai-policy
-      - us-center-ai-policy-2
-    decision: same
-    canonical_id: us-center-ai-policy
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://www.centeraipolicy.org/contact
-      - https://www.centeraipolicy.org/
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-center-ai-safety-action-fund--us-center-ai-safety-action-fund-2
-    records:
-      - us-center-ai-safety-action-fund
-      - us-center-ai-safety-action-fund-2
-    decision: same
-    canonical_id: us-center-ai-safety-action-fund
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://action.safe.ai/news
-      - https://action.safe.ai/donate
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-congressional-artificial-intelligence-caucus--us-congressional-artificial-intelligence-caucus-2
-    records:
-      - us-congressional-artificial-intelligence-caucus
-      - us-congressional-artificial-intelligence-caucus-2
-    decision: same
-    canonical_id: us-congressional-artificial-intelligence-caucus
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://artificialintelligencecaucus-beyer.house.gov/
-      - https://artificialintelligencecaucus-beyer.house.gov/members
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-electronic-frontier-foundation--us-electronic-frontier-foundation-2
-    records:
-      - us-electronic-frontier-foundation
-      - us-electronic-frontier-foundation-2
-    decision: same
-    canonical_id: us-electronic-frontier-foundation
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://www.eff.org/pages/legal-assistance
-      - https://act.eff.org/
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-electronic-privacy-information-center--us-electronic-privacy-information-center-2
-    records:
-      - us-electronic-privacy-information-center
-      - us-electronic-privacy-information-center-2
-    decision: same
-    canonical_id: us-electronic-privacy-information-center
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://epic.org/about/contact/
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-future-life-institute--us-future-life-institute-2
-    records:
-      - us-future-life-institute
-      - us-future-life-institute-2
-    decision: same
-    canonical_id: us-future-life-institute
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://futureoflife.org/our-work/grantmaking-work/
-      - https://futureoflife.org/take-action/
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-machine-intelligence-research-institute--us-machine-intelligence-research-institute-2
-    records:
-      - us-machine-intelligence-research-institute
-      - us-machine-intelligence-research-institute-2
-    decision: same
-    canonical_id: us-machine-intelligence-research-institute
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://intelligence.org/contact/
-      - https://ifanyonebuildsit.com/act
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-midas-project--us-midas-project-2
-    records:
-      - us-midas-project
-      - us-midas-project-2
-    decision: same
-    canonical_id: us-midas-project
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://www.themidasproject.com/tips
-      - https://www.themidasproject.com/volunteer
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-public-citizen--us-public-citizen-2
-    records:
-      - us-public-citizen
-      - us-public-citizen-2
-    decision: same
-    canonical_id: us-public-citizen
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://www.citizen.org/about/contact/
-      - https://www.citizen.org/topic/artificial-intelligence/
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-subcommittee-commerce--us-subcommittee-commerce-3
-    records:
-      - us-subcommittee-commerce
-      - us-subcommittee-commerce-3
-    decision: distinct
-    evidence_urls:
-      - https://www.appropriations.senate.gov/subcommittees/commerce-justice-science-and-related-agencies
-      - https://appropriations.house.gov/subcommittees/commerce-justice-science-and-related-agencies-0/member-list
-    note: "Distinct committees in different chambers: Senate Appropriations CJS and House Appropriations CJS."
-  - key: us-subcommittee-energy--us-subcommittee-energy-2
-    records:
-      - us-subcommittee-energy
-      - us-subcommittee-energy-2
-    decision: distinct
-    evidence_urls:
-      - https://www.energy.senate.gov/about/membership
-      - https://energycommerce.house.gov/committees/subcommittee/energy
-    note: "Distinct committees in different chambers: Senate Energy and Natural Resources and House Energy and Commerce."
   - key: br-autoridade-nacional-protecao-dados--br-autoridade-nacional-protecao-dados-2
     records:
       - br-autoridade-nacional-protecao-dados
@@ -274,233 +17,9 @@ decisions:
       - https://www.gov.br/participamaisbrasil/tomada-de-subsidios-inteligencia-artificial-e-revisao-de-decisoes-automatizadas
       - https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/composicao
     note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: cn-concordia-ai--global-concordia-ai
+  - key: br-autoridade-nacional-protecao-dados--br-chamber-deputies-e-democracia-participa-brasil
     records:
-      - cn-concordia-ai
-      - global-concordia-ai
-    decision: same
-    canonical_id: global-concordia-ai
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://concordia-ai.com/contact/
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: eu-european-ai-office--eu-european-commission-european-ai-office
-    records:
-      - eu-european-ai-office
-      - eu-european-commission-european-ai-office
-    decision: same
-    canonical_id: eu-european-ai-office
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://ai-act-service-desk.ec.europa.eu/en/ai-act-service-desk
-      - https://digital-strategy.ec.europa.eu/en/policies/ai-office
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: gb-controlai--global-controlai
-    records:
-      - gb-controlai
-      - global-controlai
-    decision: same
-    canonical_id: global-controlai
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://controlai.org/take-action
-      - https://act.controlai.org/
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: gb-house-commons-science--gb-house-commons-science-technology-committee
-    records:
-      - gb-house-commons-science
-      - gb-house-commons-science-technology-committee
-    decision: same
-    canonical_id: gb-house-commons-science-technology-committee
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/
-      - https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/membership/
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: global-india-ai-impact-summit-2026--in-india-ai-impact-summit-2026
-    records:
-      - global-india-ai-impact-summit-2026
-      - in-india-ai-impact-summit-2026
-    decision: same
-    canonical_id: in-india-ai-impact-summit-2026
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://impact.indiaai.gov.in/about-summit
-      - https://impact.indiaai.gov.in/stakeholder-consultation
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: global-pauseai--global-pauseai-2
-    records:
-      - global-pauseai
-      - global-pauseai-2
-    decision: same
-    canonical_id: global-pauseai
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://discord.gg/2XXWXvErfA
-      - https://pauseai.info/action
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: global-stopai--us-stopai
-    records:
-      - global-stopai
-      - us-stopai
-    decision: same
-    canonical_id: global-stopai
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://lu.ma/stopai_info
-      - https://www.stopai.info/history
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-encode--us-encode-2
-    records:
-      - us-encode
-      - us-encode-2
-    decision: same
-    canonical_id: us-encode
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://encodeai.org
-      - https://encodeai.org/donation/
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-house-committee-business-affairs-labor--us-senate-committee-business
-    records:
-      - us-house-committee-business-affairs-labor
-      - us-senate-committee-business
-    decision: distinct
-    evidence_urls:
-      - https://leg.colorado.gov/committees/2026A/house/BusinessAffairsLabor
-      - https://leg.colorado.gov/committees/2026A/senate/BusinessLaborTechnology
-    note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
-  - key: us-house-committee-science--us-house-committee-science-2
-    records:
-      - us-house-committee-science
-      - us-house-committee-science-2
-    decision: same
-    canonical_id: us-house-committee-science
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://science.house.gov/contact
-      - https://science.house.gov/members
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-joint-committee-advanced-information-technology--us-joint-committee-advanced-information-technology-2
-    records:
-      - us-joint-committee-advanced-information-technology
-      - us-joint-committee-advanced-information-technology-2
-    decision: same
-    canonical_id: us-joint-committee-advanced-information-technology
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://malegislature.gov/Committees/Detail/J33
-      - https://malegislature.gov/Events/Hearings
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-joint-committee-economic-development-emerging-technologies--us-joint-committee-economic-development-emerging-technologies-2
-    records:
-      - us-joint-committee-economic-development-emerging-technologies
-      - us-joint-committee-economic-development-emerging-technologies-2
-    decision: same
-    canonical_id: us-joint-committee-economic-development-emerging-technologies
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://malegislature.gov/Committees/Detail/J12
-      - https://malegislature.gov/assets/documents/how-to-submit-testimony-v1.1.pdf
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-joint-committee-general-law-house-co--us-joint-committee-general-law-senate-co
-    records:
-      - us-joint-committee-general-law-house-co
-      - us-joint-committee-general-law-senate-co
-    decision: same
-    canonical_id: us-joint-committee-general-law-house-co
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://www.cga.ct.gov/gl/
-      - https://cga.ct.gov/aspx/CGATestimonySub/CGAtestimonysubmission.aspx?comm_code=gl
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-senate-committee-commerce--us-senate-committee-commerce-2
-    records:
-      - us-senate-committee-commerce
-      - us-senate-committee-commerce-2
-    decision: same
-    canonical_id: us-senate-committee-commerce
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://www.commerce.senate.gov/
-      - https://www.commerce.senate.gov/about/members
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-senate-committee-judiciary--us-senate-committee-judiciary-2
-    records:
-      - us-senate-committee-judiciary
-      - us-senate-committee-judiciary-2
-    decision: same
-    canonical_id: us-senate-committee-judiciary
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://www.judiciary.senate.gov/about/members
-      - https://sjud.senate.ca.gov/
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-senate-committee-judiciary-subcommittee-privacy--us-subcommittee-privacy
-    records:
-      - us-senate-committee-judiciary-subcommittee-privacy
-      - us-subcommittee-privacy
-    decision: same
-    canonical_id: us-senate-committee-judiciary-subcommittee-privacy
-    approved_by: owner:autonomous-implementation-request-2026-09-24
-    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
-    evidence_urls:
-      - https://www.judiciary.senate.gov/committee-activity/hearings
-      - https://www.judiciary.senate.gov/about/subcommittees
-    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
-  - key: us-subcommittee-commerce--us-subcommittee-commerce-2
-    records:
-      - us-subcommittee-commerce
-      - us-subcommittee-commerce-2
-    decision: distinct
-    evidence_urls:
-      - https://www.appropriations.senate.gov/subcommittees/commerce-justice-science-and-related-agencies
-      - https://energycommerce.house.gov/committees/subcommittee/Commerce
-    note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
-  - key: us-subcommittee-commerce-2--us-subcommittee-commerce-3
-    records:
-      - us-subcommittee-commerce-2
-      - us-subcommittee-commerce-3
-    decision: distinct
-    evidence_urls:
-      - https://energycommerce.house.gov/committees/subcommittee/Commerce
-      - https://appropriations.house.gov/subcommittees/commerce-justice-science-and-related-agencies-0/member-list
-    note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
-  - key: us-subcommittee-cybersecurity--us-subcommittee-cybersecurity-2
-    records:
-      - us-subcommittee-cybersecurity
-      - us-subcommittee-cybersecurity-2
-    decision: distinct
-    evidence_urls:
-      - https://www.armed-services.senate.gov/about/membership
-      - https://oversight.house.gov/subcommittee/cybersecurity-information-technology-government-innovation/
-    note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
-  - key: us-subcommittee-digital-assets--us-subcommittee-digital-assets-2
-    records:
-      - us-subcommittee-digital-assets
-      - us-subcommittee-digital-assets-2
-    decision: distinct
-    evidence_urls:
-      - https://www.banking.senate.gov/about/membership
-      - https://financialservices.house.gov/about/members.htm
-    note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
-  - key: br-autoridade-nacional-protecao-dados-2--br-chamber-deputies-e-democracia-participa-brasil
-    records:
-      - br-autoridade-nacional-protecao-dados-2
+      - br-autoridade-nacional-protecao-dados
       - br-chamber-deputies-e-democracia-participa-brasil
     decision: distinct
     evidence_urls:
@@ -534,6 +53,17 @@ decisions:
       - https://www25.senado.leg.br/web/atividade/materias/-/materia/157233
       - https://www12.senado.leg.br/ecidadania/
     note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
+  - key: cn-concordia-ai--global-concordia-ai
+    records:
+      - cn-concordia-ai
+      - global-concordia-ai
+    decision: same
+    canonical_id: global-concordia-ai
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://concordia-ai.com/contact/
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: eu-ai-act-scientific-panel-independent-experts--eu-ai-act-service-desk-single-information
     records:
       - eu-ai-act-scientific-panel-independent-experts
@@ -591,6 +121,18 @@ decisions:
       - https://artificialintelligenceact.eu/article/85/
       - https://digital-strategy.ec.europa.eu/en/policies/market-surveillance-authorities-under-ai-act
     note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+  - key: eu-european-ai-office--eu-european-commission-european-ai-office
+    records:
+      - eu-european-ai-office
+      - eu-european-commission-european-ai-office
+    decision: same
+    canonical_id: eu-european-ai-office
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://ai-act-service-desk.ec.europa.eu/en/ai-act-service-desk
+      - https://digital-strategy.ec.europa.eu/en/policies/ai-office
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: eu-european-ai-office--eu-general-purpose-ai-code-practice-its
     records:
       - eu-european-ai-office
@@ -601,10 +143,10 @@ decisions:
       - https://ai-act-service-desk.ec.europa.eu/en/ai-act-service-desk
       - https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai
     note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
-  - key: eu-european-commission-executive-vice-president-tech--eu-european-commission-have-your-say-consultation
+  - key: eu-european-commission-executive-vice-president-tech--eu-european-commission-have-your-say-portal
     records:
       - eu-european-commission-executive-vice-president-tech
-      - eu-european-commission-have-your-say-consultation
+      - eu-european-commission-have-your-say-portal
     decision: related
     relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
     evidence_urls:
@@ -623,6 +165,18 @@ decisions:
       - https://ec.europa.eu/info/law/better-regulation/have-your-say
       - https://have-your-say.ec.europa.eu/index_en
     note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: eu-european-parliament-committee-civil-liberties--eu-european-parliament-committee-civil-liberties-2
+    records:
+      - eu-european-parliament-committee-civil-liberties
+      - eu-european-parliament-committee-civil-liberties-2
+    decision: same
+    canonical_id: eu-european-parliament-committee-civil-liberties
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://www.europarl.europa.eu/committees/en/libe/about
+      - https://www.europarl.europa.eu/committees/en/libe/home/members
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: eu-european-parliament-committee-civil-liberties--eu-european-parliament-committee-petitions
     records:
       - eu-european-parliament-committee-civil-liberties
@@ -631,16 +185,32 @@ decisions:
     evidence_urls:
       - https://www.europarl.europa.eu/committees/en/libe/about
       - https://www.europarl.europa.eu/petitions/en/home
-    note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
-  - key: eu-european-parliament-committee-civil-liberties--eu-european-parliament-committee-petitions-2
-    records:
-      - eu-european-parliament-committee-civil-liberties
-      - eu-european-parliament-committee-petitions-2
-    decision: distinct
-    evidence_urls:
-      - https://www.europarl.europa.eu/committees/en/libe/about
       - https://www.europarl.europa.eu/committees/en/peti/home/members
     note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
+  - key: eu-european-parliament-committee-industry--eu-european-parliament-committee-industry-2
+    records:
+      - eu-european-parliament-committee-industry
+      - eu-european-parliament-committee-industry-2
+    decision: same
+    canonical_id: eu-european-parliament-committee-industry
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://www.europarl.europa.eu/committees/en/itre/home/highlights
+      - https://www.europarl.europa.eu/committees/en/itre/home/members
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: eu-european-parliament-committee-internal-market-consumer--eu-european-parliament-committee-internal-market-consumer-2
+    records:
+      - eu-european-parliament-committee-internal-market-consumer
+      - eu-european-parliament-committee-internal-market-consumer-2
+    decision: same
+    canonical_id: eu-european-parliament-committee-internal-market-consumer
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://www.europarl.europa.eu/committees/en/imco/home/highlights
+      - https://www.europarl.europa.eu/committees/en/imco/home/members
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: eu-european-parliament-committee-internal-market-consumer--eu-members-european-parliament-direct-correspondence
     records:
       - eu-european-parliament-committee-internal-market-consumer
@@ -650,6 +220,30 @@ decisions:
       - https://www.europarl.europa.eu/committees/en/imco/home/highlights
       - https://www.europarl.europa.eu/meps/en/home
     note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
+  - key: eu-european-parliament-committee-petitions--eu-european-parliament-committee-petitions-2
+    records:
+      - eu-european-parliament-committee-petitions
+      - eu-european-parliament-committee-petitions-2
+    decision: same
+    canonical_id: eu-european-parliament-committee-petitions
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://www.europarl.europa.eu/petitions/en/home
+      - https://www.europarl.europa.eu/committees/en/peti/home/members
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: fr-saferai--fr-saferai-2
+    records:
+      - fr-saferai
+      - fr-saferai-2
+    decision: same
+    canonical_id: fr-saferai
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://ratings.safer-ai.org/
+      - https://www.safer-ai.org/about#donate
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: gb-ai-security-institute--gb-department-science
     records:
       - gb-ai-security-institute
@@ -669,6 +263,42 @@ decisions:
       - https://www.cser.ac.uk/education/
       - https://www.ith.cam.ac.uk/contact-us
     note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
+  - key: gb-controlai--global-controlai
+    records:
+      - gb-controlai
+      - global-controlai
+    decision: same
+    canonical_id: global-controlai
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://controlai.org/take-action
+      - https://act.controlai.org/
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: gb-house-commons-science--gb-house-commons-science-technology-committee
+    records:
+      - gb-house-commons-science
+      - gb-house-commons-science-technology-committee
+    decision: same
+    canonical_id: gb-house-commons-science-technology-committee
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/
+      - https://committees.parliament.uk/committee/135/science-innovation-and-technology-committee/membership/
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: gb-house-lords-communications-digital-committee--gb-house-lords-communications-digital-committee-2
+    records:
+      - gb-house-lords-communications-digital-committee
+      - gb-house-lords-communications-digital-committee-2
+    decision: same
+    canonical_id: gb-house-lords-communications-digital-committee
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://committees.parliament.uk/committee/170/communications-and-digital-committee/
+      - https://committees.parliament.uk/committee/170/communications-and-digital-committee/membership/
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: gb-house-lords-communications-digital-committee--gb-house-lords-dedicated-ai-select-committee
     records:
       - gb-house-lords-communications-digital-committee
@@ -677,15 +307,7 @@ decisions:
     evidence_urls:
       - https://committees.parliament.uk/committee/170/communications-and-digital-committee/
       - https://committees.parliament.uk/committee/376/artificial-intelligence-committee
-    note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
-  - key: gb-house-lords-communications-digital-committee-2--gb-house-lords-dedicated-ai-select-committee
-    records:
-      - gb-house-lords-communications-digital-committee-2
-      - gb-house-lords-dedicated-ai-select-committee
-    decision: distinct
-    evidence_urls:
       - https://committees.parliament.uk/committee/170/communications-and-digital-committee/membership/
-      - https://committees.parliament.uk/committee/376/artificial-intelligence-committee
     note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
   - key: gb-ofcom--gb-ofcom-individual-complaint-about-online-service
     records:
@@ -698,6 +320,30 @@ decisions:
     evidence_urls:
       - https://www.ofcom.org.uk/make-a-complaint
       - https://www.ofcom.org.uk/make-a-complaint/
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: global-access-now--global-access-now-2
+    records:
+      - global-access-now
+      - global-access-now-2
+    decision: same
+    canonical_id: global-access-now
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://www.accessnow.org/contact-us/
+      - https://www.accessnow.org/help/
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: global-ai-safety-asia--global-ai-safety-asia-2
+    records:
+      - global-ai-safety-asia
+      - global-ai-safety-asia-2
+    decision: same
+    canonical_id: global-ai-safety-asia
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://www.linkedin.com/company/103351153
+      - https://www.aisafety.asia/get-involved
     note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: global-anthropic-responsible-disclosure-policy-usersafety-anthropic--us-anthropic
     records:
@@ -721,10 +367,22 @@ decisions:
       - https://www.coe.int/en/web/artificial-intelligence/contact-us
       - https://www.coe.int/en/web/artificial-intelligence/huderia-academy
     note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
-  - key: global-international-network-advanced-ai-measurement--us-centre-ai-standards-innovation-united-states
+  - key: global-india-ai-impact-summit-2026--in-india-ai-impact-summit-2026
+    records:
+      - global-india-ai-impact-summit-2026
+      - in-india-ai-impact-summit-2026
+    decision: same
+    canonical_id: in-india-ai-impact-summit-2026
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://impact.indiaai.gov.in/about-summit
+      - https://impact.indiaai.gov.in/stakeholder-consultation
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: global-international-network-advanced-ai-measurement--us-center-ai-standards-innovation
     records:
       - global-international-network-advanced-ai-measurement
-      - us-centre-ai-standards-innovation-united-states
+      - us-center-ai-standards-innovation
     decision: related
     relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
     evidence_urls:
@@ -741,6 +399,30 @@ decisions:
     evidence_urls:
       - https://openai.com/form/model-behavior-feedback/
       - https://openai.com/policies/coordinated-vulnerability-disclosure-policy/
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: global-pauseai--global-pauseai-2
+    records:
+      - global-pauseai
+      - global-pauseai-2
+    decision: same
+    canonical_id: global-pauseai
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://discord.gg/2XXWXvErfA
+      - https://pauseai.info/action
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: global-stopai--us-stopai
+    records:
+      - global-stopai
+      - us-stopai
+    decision: same
+    canonical_id: global-stopai
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://lu.ma/stopai_info
+      - https://www.stopai.info/history
     note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: ie-committee-public-petitions-ombudsmen--ie-houses-oireachtas-committee-submission-consultation-system
     records:
@@ -841,6 +523,18 @@ decisions:
       - https://www.ipa.go.jp/contact.html
       - https://aisi.go.jp/about/
     note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+  - key: kr-ai-safety-institute--kr-ai-safety-institute-2
+    records:
+      - kr-ai-safety-institute
+      - kr-ai-safety-institute-2
+    decision: same
+    canonical_id: kr-ai-safety-institute
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://www.aisi.re.kr/eng
+      - https://www.aisi.re.kr/eng/contents/23
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: kr-ai-safety-institute--kr-ministry-science-ict-ai-framework-act
     records:
       - kr-ai-safety-institute
@@ -850,16 +544,7 @@ decisions:
     evidence_urls:
       - https://www.aisi.re.kr/eng
       - https://cset.georgetown.edu/publication/south-korea-ai-law-2025/
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
-  - key: kr-ai-safety-institute-2--kr-ministry-science-ict-ai-framework-act
-    records:
-      - kr-ai-safety-institute-2
-      - kr-ministry-science-ict-ai-framework-act
-    decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
-    evidence_urls:
       - https://www.aisi.re.kr/eng/contents/23
-      - https://www.aisi.re.kr/eng
     note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
   - key: kr-ministry-science-ict--kr-national-ai-committee
     records:
@@ -924,6 +609,30 @@ decisions:
     evidence_urls:
       - https://aimoneywatch.org/ltf
     note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
+  - key: us-ai-now-institute--us-ai-now-institute-2
+    records:
+      - us-ai-now-institute
+      - us-ai-now-institute-2
+    decision: same
+    canonical_id: us-ai-now-institute
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://ainowinstitute.org/contact-us
+      - https://ainowinstitute.org/publications
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: us-algorithmic-justice-league--us-algorithmic-justice-league-2
+    records:
+      - us-algorithmic-justice-league
+      - us-algorithmic-justice-league-2
+    decision: same
+    canonical_id: us-algorithmic-justice-league
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://report.ajl.org
+      - https://www.ajl.org/take-action
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: us-assembly-committee-privacy-consumer-protection--us-senate-committee-judiciary-2
     records:
       - us-assembly-committee-privacy-consumer-protection
@@ -950,6 +659,30 @@ decisions:
     evidence_urls:
       - https://aimoneywatch.org/ltf
     note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
+  - key: us-center-ai-policy--us-center-ai-policy-2
+    records:
+      - us-center-ai-policy
+      - us-center-ai-policy-2
+    decision: same
+    canonical_id: us-center-ai-policy
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://www.centeraipolicy.org/contact
+      - https://www.centeraipolicy.org/
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: us-center-ai-safety-action-fund--us-center-ai-safety-action-fund-2
+    records:
+      - us-center-ai-safety-action-fund
+      - us-center-ai-safety-action-fund-2
+    decision: same
+    canonical_id: us-center-ai-safety-action-fund
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://action.safe.ai/news
+      - https://action.safe.ai/donate
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: us-center-ai-standards-innovation--us-centre-ai-standards-innovation-united-states
     records:
       - us-center-ai-standards-innovation
@@ -1010,6 +743,18 @@ decisions:
       - https://www.nist.gov/artificial-intelligence/nist-ai-consortium/submit-letter-interest-join-nist-ai-consortium
       - https://www.regulations.gov/
     note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+  - key: us-congressional-artificial-intelligence-caucus--us-congressional-artificial-intelligence-caucus-2
+    records:
+      - us-congressional-artificial-intelligence-caucus
+      - us-congressional-artificial-intelligence-caucus-2
+    decision: same
+    canonical_id: us-congressional-artificial-intelligence-caucus
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://artificialintelligencecaucus-beyer.house.gov/
+      - https://artificialintelligencecaucus-beyer.house.gov/members
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: us-department-commerce-bureau-industry-security--us-federal-trade-commission
     records:
       - us-department-commerce-bureau-industry-security
@@ -1029,6 +774,41 @@ decisions:
       - https://www.bis.gov/contact-us
       - https://www.regulations.gov/
     note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+  - key: us-electronic-frontier-foundation--us-electronic-frontier-foundation-2
+    records:
+      - us-electronic-frontier-foundation
+      - us-electronic-frontier-foundation-2
+    decision: same
+    canonical_id: us-electronic-frontier-foundation
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://www.eff.org/pages/legal-assistance
+      - https://act.eff.org/
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: us-electronic-privacy-information-center--us-electronic-privacy-information-center-2
+    records:
+      - us-electronic-privacy-information-center
+      - us-electronic-privacy-information-center-2
+    decision: same
+    canonical_id: us-electronic-privacy-information-center
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://epic.org/about/contact/
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: us-encode--us-encode-2
+    records:
+      - us-encode
+      - us-encode-2
+    decision: same
+    canonical_id: us-encode
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://encodeai.org
+      - https://encodeai.org/donation/
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: us-federal-trade-commission--us-regulations-gov-federal-register
     records:
       - us-federal-trade-commission
@@ -1050,6 +830,18 @@ decisions:
     evidence_urls:
       - https://reportfraud.ftc.gov/
     note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: us-future-life-institute--us-future-life-institute-2
+    records:
+      - us-future-life-institute
+      - us-future-life-institute-2
+    decision: same
+    canonical_id: us-future-life-institute
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://futureoflife.org/our-work/grantmaking-work/
+      - https://futureoflife.org/take-action/
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: us-house-commerce-finance-policy-committee--us-senate-commerce-consumer-protection-committee
     records:
       - us-house-commerce-finance-policy-committee
@@ -1058,6 +850,15 @@ decisions:
     evidence_urls:
       - https://www.house.mn.gov/Committees/home/94004
       - https://www.senate.mn/committees/committee_bio.html?ls=94&cmte_id=3118
+    note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
+  - key: us-house-committee-business-affairs-labor--us-senate-committee-business
+    records:
+      - us-house-committee-business-affairs-labor
+      - us-senate-committee-business
+    decision: distinct
+    evidence_urls:
+      - https://leg.colorado.gov/committees/2026A/house/BusinessAffairsLabor
+      - https://leg.colorado.gov/committees/2026A/senate/BusinessLaborTechnology
     note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
   - key: us-house-committee-cybersecurity--us-senate-executive-committee
     records:
@@ -1078,6 +879,18 @@ decisions:
       - https://financialservices.house.gov/about/members.htm
       - https://financialservices.house.gov/subcommittees
     note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+  - key: us-house-committee-science--us-house-committee-science-2
+    records:
+      - us-house-committee-science
+      - us-house-committee-science-2
+    decision: same
+    canonical_id: us-house-committee-science
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://science.house.gov/contact
+      - https://science.house.gov/members
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: us-house-committee-science--us-subcommittee-investigations-oversight
     records:
       - us-house-committee-science
@@ -1086,15 +899,6 @@ decisions:
     relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
     evidence_urls:
       - https://science.house.gov/contact
-      - https://science.house.gov/members
-    note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
-  - key: us-house-committee-science-2--us-subcommittee-investigations-oversight
-    records:
-      - us-house-committee-science-2
-      - us-subcommittee-investigations-oversight
-    decision: related
-    relationship: Separate but institutionally related records (parent/subunit, service/recipient, programme/member, or shared official route).
-    evidence_urls:
       - https://science.house.gov/members
       - https://science.house.gov/
     note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
@@ -1107,24 +911,75 @@ decisions:
       - https://msa.maryland.gov/msa/mdmanual/06hse/html/com/03eco.html
       - https://mgaleg.maryland.gov/mgawebsite/Committees/Details?cmte=eee&ys=2026RS
     note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
-  - key: us-joint-committee-advanced-information-technology--us-joint-committee-economic-development-emerging-technologies-2
+  - key: us-joint-committee-advanced-information-technology--us-joint-committee-advanced-information-technology-2
     records:
       - us-joint-committee-advanced-information-technology
-      - us-joint-committee-economic-development-emerging-technologies-2
-    decision: distinct
+      - us-joint-committee-advanced-information-technology-2
+    decision: same
+    canonical_id: us-joint-committee-advanced-information-technology
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
     evidence_urls:
       - https://malegislature.gov/Committees/Detail/J33
-      - https://malegislature.gov/Committees/Detail/J12
-    note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
-  - key: us-joint-committee-advanced-information-technology-2--us-joint-committee-economic-development-emerging-technologies
+      - https://malegislature.gov/Events/Hearings
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: us-joint-committee-advanced-information-technology--us-joint-committee-economic-development-emerging-technologies
     records:
-      - us-joint-committee-advanced-information-technology-2
+      - us-joint-committee-advanced-information-technology
       - us-joint-committee-economic-development-emerging-technologies
     decision: distinct
     evidence_urls:
       - https://malegislature.gov/Committees/Detail/J33
       - https://malegislature.gov/Committees/Detail/J12
     note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
+  - key: us-joint-committee-economic-development-emerging-technologies--us-joint-committee-economic-development-emerging-technologies-2
+    records:
+      - us-joint-committee-economic-development-emerging-technologies
+      - us-joint-committee-economic-development-emerging-technologies-2
+    decision: same
+    canonical_id: us-joint-committee-economic-development-emerging-technologies
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://malegislature.gov/Committees/Detail/J12
+      - https://malegislature.gov/assets/documents/how-to-submit-testimony-v1.1.pdf
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: us-joint-committee-general-law-house-co--us-joint-committee-general-law-senate-co
+    records:
+      - us-joint-committee-general-law-house-co
+      - us-joint-committee-general-law-senate-co
+    decision: same
+    canonical_id: us-joint-committee-general-law-house-co
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://www.cga.ct.gov/gl/
+      - https://cga.ct.gov/aspx/CGATestimonySub/CGAtestimonysubmission.aspx?comm_code=gl
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: us-machine-intelligence-research-institute--us-machine-intelligence-research-institute-2
+    records:
+      - us-machine-intelligence-research-institute
+      - us-machine-intelligence-research-institute-2
+    decision: same
+    canonical_id: us-machine-intelligence-research-institute
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://intelligence.org/contact/
+      - https://ifanyonebuildsit.com/act
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: us-midas-project--us-midas-project-2
+    records:
+      - us-midas-project
+      - us-midas-project-2
+    decision: same
+    canonical_id: us-midas-project
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://www.themidasproject.com/tips
+      - https://www.themidasproject.com/volunteer
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: us-permanent-subcommittee-investigations--us-senate-committee-homeland-security-governmental-affairs
     records:
       - us-permanent-subcommittee-investigations
@@ -1135,6 +990,18 @@ decisions:
       - https://www.hsgac.senate.gov/about/members/
       - https://www.hsgac.senate.gov/
     note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+  - key: us-public-citizen--us-public-citizen-2
+    records:
+      - us-public-citizen
+      - us-public-citizen-2
+    decision: same
+    canonical_id: us-public-citizen
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://www.citizen.org/about/contact/
+      - https://www.citizen.org/topic/artificial-intelligence/
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: us-senate-committee-armed-services--us-subcommittee-cybersecurity
     records:
       - us-senate-committee-armed-services
@@ -1175,6 +1042,18 @@ decisions:
       - https://www.banking.senate.gov/about/membership
       - https://www.banking.senate.gov/
     note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+  - key: us-senate-committee-commerce--us-senate-committee-commerce-2
+    records:
+      - us-senate-committee-commerce
+      - us-senate-committee-commerce-2
+    decision: same
+    canonical_id: us-senate-committee-commerce
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://www.commerce.senate.gov/
+      - https://www.commerce.senate.gov/about/members
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
   - key: us-senate-committee-energy-natural-resources--us-subcommittee-energy
     records:
       - us-senate-committee-energy-natural-resources
@@ -1195,6 +1074,15 @@ decisions:
       - https://www.foreign.senate.gov/about/membership
       - https://www.foreign.senate.gov/
     note: Keep separate identities; shared infrastructure is explained by the recorded institutional relationship.
+  - key: us-senate-committee-judiciary--us-senate-committee-judiciary-2
+    records:
+      - us-senate-committee-judiciary
+      - us-senate-committee-judiciary-2
+    decision: distinct
+    evidence_urls:
+      - https://www.judiciary.senate.gov/about/members
+      - https://sjud.senate.ca.gov/
+    note: Distinct federal and California state Senate Judiciary committees; the shared generic name and import suffix do not establish identity.
   - key: us-senate-committee-judiciary--us-senate-committee-judiciary-subcommittee-privacy
     records:
       - us-senate-committee-judiciary
@@ -1223,6 +1111,45 @@ decisions:
       - https://www.judiciary.senate.gov/committee-activity/hearings
       - https://www.judiciary.senate.gov/about/subcommittees
     note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
+  - key: us-senate-committee-judiciary-subcommittee-privacy--us-subcommittee-privacy
+    records:
+      - us-senate-committee-judiciary-subcommittee-privacy
+      - us-subcommittee-privacy
+    decision: same
+    canonical_id: us-senate-committee-judiciary-subcommittee-privacy
+    approved_by: owner:autonomous-implementation-request-2026-09-24
+    approval_basis: Owner explicitly instructed autonomous implementation using best judgement; exact duplicate/import or route-profile split reviewed against cited sources.
+    evidence_urls:
+      - https://www.judiciary.senate.gov/committee-activity/hearings
+      - https://www.judiciary.senate.gov/about/subcommittees
+    note: The records describe one real-world entity; preserve complementary facts and retire the non-canonical public id.
+  - key: us-subcommittee-commerce--us-subcommittee-commerce-2
+    records:
+      - us-subcommittee-commerce
+      - us-subcommittee-commerce-2
+    decision: distinct
+    evidence_urls:
+      - https://www.appropriations.senate.gov/subcommittees/commerce-justice-science-and-related-agencies
+      - https://energycommerce.house.gov/committees/subcommittee/Commerce
+    note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
+  - key: us-subcommittee-commerce--us-subcommittee-commerce-3
+    records:
+      - us-subcommittee-commerce
+      - us-subcommittee-commerce-3
+    decision: distinct
+    evidence_urls:
+      - https://www.appropriations.senate.gov/subcommittees/commerce-justice-science-and-related-agencies
+      - https://appropriations.house.gov/subcommittees/commerce-justice-science-and-related-agencies-0/member-list
+    note: "Distinct committees in different chambers: Senate Appropriations CJS and House Appropriations CJS."
+  - key: us-subcommittee-commerce-2--us-subcommittee-commerce-3
+    records:
+      - us-subcommittee-commerce-2
+      - us-subcommittee-commerce-3
+    decision: distinct
+    evidence_urls:
+      - https://energycommerce.house.gov/committees/subcommittee/Commerce
+      - https://appropriations.house.gov/subcommittees/commerce-justice-science-and-related-agencies-0/member-list
+    note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
   - key: us-subcommittee-consumer-protection--us-subcommittee-science
     records:
       - us-subcommittee-consumer-protection
@@ -1239,13 +1166,14 @@ decisions:
     evidence_urls:
       - https://www.judiciary.senate.gov/about/subcommittees
     note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
-  - key: us-subcommittee-crime-counterterrorism--us-subcommittee-privacy
+  - key: us-subcommittee-cybersecurity--us-subcommittee-cybersecurity-2
     records:
-      - us-subcommittee-crime-counterterrorism
-      - us-subcommittee-privacy
+      - us-subcommittee-cybersecurity
+      - us-subcommittee-cybersecurity-2
     decision: distinct
     evidence_urls:
-      - https://www.judiciary.senate.gov/about/subcommittees
+      - https://www.armed-services.senate.gov/about/membership
+      - https://oversight.house.gov/subcommittee/cybersecurity-information-technology-government-innovation/
     note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
   - key: us-subcommittee-cybersecurity--us-subcommittee-emerging-threats-capabilities
     records:
@@ -1273,6 +1201,15 @@ decisions:
       - https://appropriations.house.gov/about/membership/subcommittee-rosters
       - https://appropriations.house.gov/subcommittees
     note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
+  - key: us-subcommittee-digital-assets--us-subcommittee-digital-assets-2
+    records:
+      - us-subcommittee-digital-assets
+      - us-subcommittee-digital-assets-2
+    decision: distinct
+    evidence_urls:
+      - https://www.banking.senate.gov/about/membership
+      - https://financialservices.house.gov/about/members.htm
+    note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
   - key: us-subcommittee-digital-assets--us-subcommittee-national-security-international-trade-finance
     records:
       - us-subcommittee-digital-assets
@@ -1282,11 +1219,12 @@ decisions:
       - https://www.banking.senate.gov/about/membership
       - https://www.banking.senate.gov/
     note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
-  - key: us-subcommittee-intellectual-property--us-subcommittee-privacy
+  - key: us-subcommittee-energy--us-subcommittee-energy-2
     records:
-      - us-subcommittee-intellectual-property
-      - us-subcommittee-privacy
+      - us-subcommittee-energy
+      - us-subcommittee-energy-2
     decision: distinct
     evidence_urls:
-      - https://www.judiciary.senate.gov/about/subcommittees
-    note: Separate named entities; the match is shared infrastructure, a generic name, or an import suffix rather than shared identity.
+      - https://www.energy.senate.gov/about/membership
+      - https://energycommerce.house.gov/committees/subcommittee/energy
+    note: "Distinct committees in different chambers: Senate Energy and Natural Resources and House Energy and Commerce."

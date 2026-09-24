@@ -30,6 +30,9 @@ facts:
     - role: chair
       name: TAKAICHI Sanae (高市早苗)
       verified_on: 2026-09-22
+  entity_key: entity-9ed3723e-0798-4795-8230-b35370ca809b
+  roles:
+    - seat
 strings:
   name: Artificial Intelligence Strategy Headquarters
   ai_jurisdiction: The statutory apex AI body, established under the AI Act (人工知能関連技術の研究開発及び活用の推進に関する法律). Drafts and administers the AI Basic Plan (人工知能基本計画), coordinates all ministries on AI, and is the control tower for Japanese AI policy. Because it is statutory rather than advisory, it displaced the earlier non-statutory AI Strategy Council.

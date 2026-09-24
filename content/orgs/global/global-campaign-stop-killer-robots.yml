@@ -17,6 +17,9 @@ facts:
   tags:
     - join
     - law
+  entity_key: entity-544b3bad-93c1-48cf-a8bf-d8f3891c82a7
+  roles:
+    - organisation
 strings:
   name: Campaign to Stop Killer Robots
   the_ask: A new international treaty on autonomy in weapons systems, to ensure meaningful human control over the use of force.

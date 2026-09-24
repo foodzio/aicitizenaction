@@ -18,6 +18,9 @@ facts:
     - fund
     - join
     - law
+  entity_key: entity-9bae35b2-0384-4ad2-a05a-e8dd4aad88fa
+  roles:
+    - organisation
 strings:
   name: Existential Risk Observatory
   the_ask: Raise public awareness of existential risks — above all unaligned AI — because public understanding is the precondition for policy that reduces them.

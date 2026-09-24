@@ -55,6 +55,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-9cb0fb53-2c04-468a-aae2-e1b37f6126cd
+  roles:
+    - reporting-channel
 strings:
   name: California SB 53 (Transparency in Frontier Artificial Intelligence Act) — whistleblower protections and public incident reporting
   remit: "Two distinct things. (1) Whistleblower protection: employees and contractors of frontier developers are protected against retaliation for reporting activity connected to catastrophic risks — defined around foreseeable risks of a frontier model causing death or serious injury to 50+ people, enabling weapons creation, engaging in criminal conduct without meaningful human intervention, or evading developer control. Employers must give notice of these rights and maintain anonymous internal reporting channels. (2) Developer reporting: frontier developers must report critical safety incidents to OES within 15 days of discovery, or 24 hours where there is imminent danger of death or serious injury."

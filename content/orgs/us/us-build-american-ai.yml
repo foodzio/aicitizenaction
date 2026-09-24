@@ -18,6 +18,9 @@ facts:
     - join
     - opposition
     - tip
+  entity_key: entity-fd8f1524-3b94-448d-8587-57c005cee417
+  roles:
+    - organisation
 strings:
   name: Build American AI
   the_ask: Shift public opinion toward AI deregulation and a federal framework pre-empting state laws.

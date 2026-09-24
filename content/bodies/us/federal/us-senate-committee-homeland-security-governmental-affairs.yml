@@ -54,6 +54,9 @@ facts:
     powers:compel: The chair holds unilateral subpoena authority in this committee
     powers:legislate: was reported by this committee in the 118th Congress as S.4495
   routing_review: drafted
+  entity_key: entity-0837f8fb-6904-4ef7-9219-dcf4d821b6eb
+  roles:
+    - seat
 strings:
   name: Senate Committee on Homeland Security and Governmental Affairs
   ai_jurisdiction: "How the federal government itself buys, builds and uses AI, plus DHS and CISA. Send here: federal AI procurement rules and contract terms, agency Chief AI Officers, AI risk management inside agencies, AI in federal benefits and enforcement decisions, government use of AI for surveillance or content moderation, GSA and OMB AI policy, federal AI workforce, and AI threats to critical infrastructure on the DHS side. NOT the place for rules on private-sector AI products."

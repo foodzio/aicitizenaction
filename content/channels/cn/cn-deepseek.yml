@@ -96,6 +96,9 @@ facts:
   contact_disposition: keep
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-ed72b4aa-95a2-422e-9e5b-3a8a4d6a9f4d
+  roles:
+    - company
 strings:
   name: DeepSeek
   remit: No publicly named safety or alignment function. Safe Use Policy governs the hosted service; the company publishes research papers but no safety framework.

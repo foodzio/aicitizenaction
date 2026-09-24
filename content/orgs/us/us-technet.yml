@@ -18,6 +18,9 @@ facts:
     - fund
     - join
     - opposition
+  entity_key: entity-3a24e74e-e3f7-4133-a65d-d937b13dae7f
+  roles:
+    - organisation
 strings:
   name: TechNet
   the_ask: Congress should pass a narrow, risk-based federal AI framework that pre-empts state AI laws, without private rights of action or mandatory independent audits.

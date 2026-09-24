@@ -40,6 +40,9 @@ facts:
     topics:privacy: data governance
     not_topics:frontier-ai: Not frontier-safety focused.
   routing_review: drafted
+  entity_key: entity-75e9673a-1c26-4407-9b42-1165a04edae1
+  roles:
+    - multilateral
 strings:
   name: GPAI (Global Partnership on AI)
   remit: Originally an independent multistakeholder partnership (2020); since July 2024 operates as an 'Integrated Partnership on AI with the OECD, under the GPAI brand'. Retains an Expert Community and Centres of Expertise; Council meetings continue (including in New Delhi). Work covers responsible AI, data governance, future of work, and innovation.

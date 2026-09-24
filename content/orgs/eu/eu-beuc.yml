@@ -18,6 +18,9 @@ facts:
     - audit
     - harm
     - join
+  entity_key: entity-69f655d6-3505-4254-8a71-e87ae0e6002e
+  roles:
+    - organisation
 strings:
   name: BEUC (European Consumer Organisation)
   the_ask: The EU AI Act must give consumers real, enforceable rights — accountability, transparency and control over AI — and must not be hollowed out by the digital omnibus deregulation.

@@ -24,6 +24,9 @@ facts:
     - law
     - petition
     - record
+  entity_key: entity-d83481f0-84cf-4722-902c-88bb0ab25e36
+  roles:
+    - seat
 strings:
   name: Houses of the Oireachtas — committee submission and consultation system (the public route)
   ai_jurisdiction: The mechanism for reaching any Oireachtas committee, including the Joint Committee on Artificial Intelligence and the AI-adjacent committees (Enterprise, Tourism and Employment; Further and Higher Education, Research, Innovation and Science; Arts, Media, Communications, Culture and Sport; Justice, Home Affairs and Migration; Finance, Public Expenditure, Public Service Reform and Digitalisation, and Taoiseach).

@@ -62,6 +62,9 @@ facts:
   contact_disposition: reclassify
   contact_reviewed_by: codex:deterministic-contact-audit
   contact_reviewed_on: 2026-09-24
+  entity_key: entity-f2e5b5da-01e4-40ad-8682-3264250224f6
+  roles:
+    - company
 strings:
   name: ByteDance Seed
   remit: A Responsible AI research direction within Seed; TechNode reported in August 2026 that ByteDance formed a new AI Data and Safety department. No named external-facing safety office.

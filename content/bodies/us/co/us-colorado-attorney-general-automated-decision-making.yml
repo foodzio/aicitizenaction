@@ -54,6 +54,9 @@ facts:
     powers:enforce: The Attorney General has exclusive enforcement authority and rulemaking power
     powers:make-rules: The Attorney General has exclusive enforcement authority and rulemaking power
   routing_review: drafted
+  entity_key: entity-20ac73cb-1abf-40f3-93ff-533cc54ea01d
+  roles:
+    - government
 strings:
   name: Colorado Attorney General — Automated Decision-Making Technology Act and Chatbot Safety Act rulemaking
   remit: "RESTRUCTURED: the original Colorado AI Act (SB 24-205) was repealed and reenacted by SB 26-189 in 2026 after its predecessor's enforcement was blocked in federal court; the replacement regime is the Automated Decision-Making Technology (ADMT) Act, with provisions taking effect 1 January 2027, alongside a separate Chatbot Safety Act (passed May 2026) requiring disclosure of AI interaction, protection of minors from harmful content and safety protocols. The Attorney General has exclusive enforcement authority and rulemaking power; no private right of action."

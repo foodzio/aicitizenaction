@@ -40,6 +40,9 @@ facts:
     powers:convene: advocacy and convening body
     powers:publish: produces a Bipartisan State AI Policy Memo
   routing_review: drafted
+  entity_key: entity-7a5a3bc6-83af-4ed8-8bef-d8c7d99e9d5a
+  roles:
+    - seat
 strings:
   name: Future Caucus National Task Force on State AI Policy
   ai_jurisdiction: Cross-partisan task force of Gen Z and millennial state legislators developing shared AI governance approaches across states; hosts public hearings and confidential briefings and produces a Bipartisan State AI Policy Memo.
