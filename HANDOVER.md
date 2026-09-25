@@ -110,7 +110,7 @@ Tracked in git and committed with every step.
   232/232 channel routes reviewed, 41 retired IDs redirected, 914 links checked, zero confirmed
   broken links and no publication blockers. Eleven first-observed failures await the next stateful
   scheduled run; the same six pre-existing human-maintenance facts remain.
-- Final production build emits 839 pages. `npm run check` passes 134/134 tests with 0 validation
+- Final production build emits 839 pages. `npm run check` passes 135/135 tests with 0 validation
   errors and four known warnings. The focused contact browser suite passes 35/35 after updating its
   expected status wording to the new authoritative “Currently verified” label. The visual suite
   passes 8/8 with axe, overflow and contact-semantic assertions.
@@ -1031,7 +1031,7 @@ the remote is empty. Commits also carry the author's configured email. `.projstu
 
 ## How to resume
 
-1. `npm install && npm run check` — must show 0 errors and all tests passing (134 tests at this handover).
+1. `npm install && npm run check` — must show 0 errors and all tests passing (135 tests at this handover).
 2. Run `npm run directory-audit`; triage its six current maintenance facts. On the next scheduled
    full run, let the cached state decide whether the 13 first link failures are consecutive. Run
    the prior-month evidence sample on the monthly schedule.
