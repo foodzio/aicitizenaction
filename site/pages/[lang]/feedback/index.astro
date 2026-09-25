@@ -2,6 +2,8 @@
 // Feedback without an account. The form posts to server.mjs (/api/feedback), which keeps only
 // what is typed here — no IP address, no cookies — and redirects to the thank-you page.
 import Base from '../../../layouts/Base.astro';
+import Button from '../../../components/Button.astro';
+import Notice from '../../../components/Notice.astro';
 import { ui, languages } from '../../../lib/data.mjs';
 export const getStaticPaths = () => languages().map(l => ({ params: { lang: l.code } }));
 const { lang } = Astro.params;
@@ -12,7 +14,7 @@ const topics = ['wrong', 'idea', 'broken', 'other'];
   <div class="narrow">
     <h1>{t('feedback.title')}</h1>
     <p class="lede">{t('feedback.lede')}</p>
-    <p class="notice" id="form-error" hidden>{t('feedback.error')}</p>
+    <Notice id="form-error" hidden>{t('feedback.error')}</Notice>
     <form class="form" method="post" action="/api/feedback">
       <input type="hidden" name="lang" value={lang} />
       <label for="topic">{t('feedback.topic')}</label>
@@ -26,7 +28,7 @@ const topics = ['wrong', 'idea', 'broken', 'other'];
       <input type="text" id="contact" name="contact" maxlength="200" autocomplete="email" inputmode="email" />
       <div class="honeypot" aria-hidden="true"><label for="website">Website</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off" /></div>
       <p class="hint">{t('feedback.sent_note')}</p>
-      <div class="row"><button class="btn" type="submit">{t('feedback.send')}</button></div>
+      <div class="row"><Button type="submit">{t('feedback.send')}</Button></div>
     </form>
   </div>
 </Base>

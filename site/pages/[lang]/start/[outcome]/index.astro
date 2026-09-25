@@ -3,6 +3,8 @@
 // Routing is precomputed at build time for every place; the browser only switches views.
 // Every state has a URL (?where=us&sub=ca&to=<id>&step=3), so a link can open mid-path.
 import Base from '../../../../layouts/Base.astro';
+import Button from '../../../../components/Button.astro';
+import Notice from '../../../../components/Notice.astro';
 import StepMeta from '../../../../components/StepMeta.astro';
 import { data, ui, languages, outcomePayload, placeOptions, guideText, recordUrl } from '../../../../lib/data.mjs';
 
@@ -52,7 +54,7 @@ const steps = [t('door.step1'), t('door.step2'), t('door.step3')];
       <section>
         <h2>{gi('title')}</h2>
         {gi('body').trim().split(/\n\n+/).map(p => <p>{p}</p>)}
-        <p><a class="btn secondary" href={`/${lang}/`}>{gi('back')}</a></p>
+        <p><Button href={`/${lang}/`} variant="secondary">{gi('back')}</Button></p>
       </section>
     ) : (
       <div id="path">
@@ -60,7 +62,7 @@ const steps = [t('door.step1'), t('door.step2'), t('door.step3')];
           <StepMeta steps={3} current={1} labels={steps} />
           <p class="meta-line" id="step-label" aria-live="polite"></p>
         </div>
-        <noscript><p class="notice">{t('path.no_js')} <a href={`/${lang}/directory/`}>{t('site.nav_directory')}</a></p></noscript>
+        <noscript><Notice>{t('path.no_js')} <a href={`/${lang}/directory/`}>{t('site.nav_directory')}</a></Notice></noscript>
 
         {outcome.ask === 'company' ? (
         <section data-step="1" hidden>
@@ -71,7 +73,7 @@ const steps = [t('door.step1'), t('door.step2'), t('door.step3')];
             <option value="">{t('path.company_unsure')}</option>
             {payload.byPlace[''].recipients.filter(r => r.isCompany).sort((a, b) => a.name.localeCompare(b.name)).map(r => <option value={r.id}>{r.name}</option>)}
           </select>
-          <div class="row"><button class="btn" type="button" data-go="2">{t('path.show')}</button></div>
+          <div class="row"><Button data-go="2">{t('path.show')}</Button></div>
         </section>
         ) : (
         <section data-step="1" hidden>
@@ -90,21 +92,21 @@ const steps = [t('door.step1'), t('door.step2'), t('door.step3')];
               {places.states.map(s => <option value={s.code}>{s.name}</option>)}
             </select>
           </div>
-          <div class="row"><button class="btn" type="button" data-go="2">{t('path.show')}</button></div>
+          <div class="row"><Button data-go="2">{t('path.show')}</Button></div>
         </section>
         )}
 
         <section data-step="2" hidden>
           <h2>{t('path.why_title')}</h2>
-          <p class="notice" id="floor" hidden></p>
+          <Notice id="floor" hidden />
           <div id="primary"></div>
           <div id="alts-wrap" hidden>
             <h3>{t('path.alternatives')}</h3>
             <div class="alt" id="alts"></div>
           </div>
           <div class="row">
-            <button class="btn" type="button" data-go="3" id="to-draft">{t('path.write')}</button>
-            <button class="btn secondary" type="button" data-back>{t('path.back')}</button>
+            <Button data-go="3" id="to-draft">{t('path.write')}</Button>
+            <Button variant="secondary" data-back>{t('path.back')}</Button>
           </div>
         </section>
 
@@ -120,14 +122,14 @@ const steps = [t('door.step1'), t('door.step2'), t('door.step3')];
           <h3>{t('path.send_to')}</h3>
           <div id="send-to"></div>
           <div class="row">
-            <button class="btn" type="button" id="copy">{t('path.copy')}</button>
-            <button class="btn secondary" type="button" id="download">{t('path.download')}</button>
+            <Button id="copy">{t('path.copy')}</Button>
+            <Button id="download" variant="secondary">{t('path.download')}</Button>
           </div>
           <h3>{t('path.next_title')}</h3>
           <p>{t('path.next_default')}</p>
           <div class="row">
-            <button class="btn" type="button" data-go="4">{t('path.done_title').split('—')[0].trim()} →</button>
-            <button class="btn secondary" type="button" data-back>{t('path.back')}</button>
+            <Button data-go="4">{t('path.done_title').split('—')[0].trim()} →</Button>
+            <Button variant="secondary" data-back>{t('path.back')}</Button>
           </div>
         </section>
 

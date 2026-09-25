@@ -1,5 +1,6 @@
 ---
 import Base from '../../../layouts/Base.astro';
+import Button from '../../../components/Button.astro';
 import { ui, languages } from '../../../lib/data.mjs';
 export const getStaticPaths = () => languages().map(l => ({ params: { lang: l.code } }));
 const { lang } = Astro.params;
@@ -10,7 +11,7 @@ const t = ui(lang);
     <h1>{t('thanks.title')}</h1>
     <p class="lede" id="thanks-feedback">{t('thanks.feedback')}</p>
     <p class="lede" id="thanks-contribute" hidden>{t('thanks.contribute')}</p>
-    <p><a class="btn secondary" href={`/${lang}/`}>{t('thanks.back')}</a></p>
+    <p><Button href={`/${lang}/`} variant="secondary">{t('thanks.back')}</Button></p>
   </div>
 </Base>
 <script>

@@ -1,5 +1,7 @@
 ---
 import Base from '../../../../../layouts/Base.astro';
+import Button from '../../../../../components/Button.astro';
+import Notice from '../../../../../components/Notice.astro';
 import { ui, languages, placeName } from '../../../../../lib/data.mjs';
 import { resources, handoff, related, isOpen } from '../../../../../lib/resources.mjs';
 
@@ -22,12 +24,12 @@ const rel = related(lang, w.facts);
       <dt>{t('resources.opens')}</dt><dd>{w.facts.opens_on}</dd>
       <dt>{open ? t('resources.closes') : t('resources.closed')}</dt><dd>{w.facts.closes_on}</dd>
     </dl>
-    <p class="notice closed-note" hidden={open}>{t('resources.closed')} {w.facts.closes_on}.</p>
+    <Notice class="closed-note" tone="caution" hidden={open}>{t('resources.closed')} {w.facts.closes_on}.</Notice>
     <p class="lede">{w.strings.summary}</p>
     {w.strings.how && <p>{w.strings.how}</p>}
     <div class="row open-only" hidden={!open}>
-      <a class="btn" href={handoff(lang, w.facts.action)}>{t('resources.newcomer_link')} →</a>
-      <a class="btn secondary" href={w.facts.url} target="_blank" rel="noopener noreferrer">{t('resources.act')} ↗</a>
+      <Button href={handoff(lang, w.facts.action)}>{t('resources.newcomer_link')} →</Button>
+      <Button href={w.facts.url} variant="secondary" external={true}>{t('resources.act')} ↗</Button>
     </div>
     {rel.length > 0 && (<><h3>{t('resources.related')}</h3><ul>{rel.map(r => <li><a href={r.url}>{r.name}</a></li>)}</ul></>)}
     <h3>{t('resources.sources')}</h3>

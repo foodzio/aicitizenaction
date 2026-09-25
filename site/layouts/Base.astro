@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Icon from '../components/Icon.astro';
+import Notice from '../components/Notice.astro';
 import { ui, languages } from '../lib/data.mjs';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -67,7 +68,7 @@ const menuLangs = langs.filter(l => l.public || l.code === lang);
     </header>
     <main id="main">
       <div class="wrap">
-        {lang !== 'en' && !thisLang?.public && <p class="notice" lang={lang}>{t('site.translation_machine')}</p>}
+        {lang !== 'en' && !thisLang?.public && <Notice lang={lang}>{t('site.translation_machine')}</Notice>}
         <slot />
       </div>
     </main>

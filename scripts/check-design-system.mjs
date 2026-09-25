@@ -2,7 +2,7 @@
 // Narrow, deterministic design-system guardrails. This checks enforceable contracts; it does not
 // claim to measure visual quality. A source line can exempt an intentional literal with:
 // design-check-allow: raw-color
-import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { ROOT, loadDirectory } from './lib/content.mjs';
@@ -48,6 +48,17 @@ export function sourceContractIssues(root = ROOT) {
   if (!directory.includes('<StatusBadge')) issues.push('Directory contact states must render with StatusBadge');
   for (const marker of ['data-actionable="${state.actionable}"', 'data-contact-action="primary"', 'data-contact-evidence="true"']) {
     if (!path.includes(marker)) issues.push(`Guided path contact markup is missing: ${marker}`);
+  }
+  for (const directoryPath of ['site/pages', 'site/layouts']) {
+    const sourceDirectory = join(root, directoryPath);
+    if (!existsSync(sourceDirectory)) continue;
+    for (const file of walk(sourceDirectory).filter(file => extension(file) === '.astro')) {
+      for (const [index, line] of readFileSync(file, 'utf8').split('\n').entries()) {
+        if (/<(?:a|button|p|div)\b[^>]*class="[^"]*\b(?:btn|notice)\b/.test(line) && !line.includes('data-ds-component=')) {
+          issues.push(`${relative(root, file)}:${index + 1}: use Button or Notice instead of legacy presentation markup`);
+        }
+      }
+    }
   }
   return issues;
 }

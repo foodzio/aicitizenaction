@@ -35,6 +35,23 @@ test('source contracts reject a removed guided-path marker', () => {
   assert.ok(sourceContractIssues(fakeRoot).some(issue => issue.includes('data-contact-evidence')));
 });
 
+test('source contracts reject legacy button markup on server-rendered pages', () => {
+  const files = [
+    'site/components/StatusBadge.astro', 'site/components/ContactRoute.astro',
+    'site/pages/[lang]/[section]/[id]/index.astro', 'site/pages/[lang]/directory/index.astro',
+    'site/pages/[lang]/start/[outcome]/index.astro'
+  ];
+  const fakeRoot = mkdtempSync(join(tmpdir(), 'aica-design-legacy-'));
+  for (const file of files) {
+    const target = join(fakeRoot, file);
+    mkdirSync(target.slice(0, target.lastIndexOf('/')), { recursive: true });
+    writeFileSync(target, readFileSync(join(ROOT, file), 'utf8'));
+  }
+  mkdirSync(join(fakeRoot, 'site/layouts'), { recursive: true });
+  writeFileSync(join(fakeRoot, 'site/layouts/Fake.astro'), '<a class="btn" href="/">Legacy</a>\n');
+  assert.ok(sourceContractIssues(fakeRoot).some(issue => issue.includes('use Button or Notice')));
+});
+
 test('all published contact data satisfies the action/evidence contract', () => {
   assert.deepEqual(dataContractIssues(loadDirectory()), []);
 });

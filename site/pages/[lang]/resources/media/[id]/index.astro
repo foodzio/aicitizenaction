@@ -2,6 +2,7 @@
 // One media item: title in its original language, publisher and perspective, our neutral
 // prompt, and a way to act. The article itself stays on the publisher's site.
 import Base from '../../../../../layouts/Base.astro';
+import Button from '../../../../../components/Button.astro';
 import { ui, languages } from '../../../../../lib/data.mjs';
 import { resources, handoff, related, topicLabel, perspectiveLabel } from '../../../../../lib/resources.mjs';
 
@@ -27,10 +28,10 @@ const draft = String(m.meta.reviewed_by ?? '').startsWith('draft');
       <dt>{t('resources.kind')}</dt><dd>{t(`resources.kinds.${m.facts.kind}`)} · {m.facts.published_at}</dd>
       {m.facts.topics?.length > 0 && <><dt>{t('resources.topic')}</dt><dd>{m.facts.topics.map(topicLabel).join(', ')}</dd></>}
     </dl>
-    <p><a class="btn secondary" href={m.facts.url} target="_blank" rel="noopener noreferrer">{t('resources.read_at')} {s?.strings.name} ↗</a></p>
+    <p><Button href={m.facts.url} variant="secondary" external={true}>{t('resources.read_at')} {s?.strings.name} ↗</Button></p>
     <h2>{t('resources.act')}</h2>
     <p class="lede">{m.strings.prompt ?? t('resources.default_prompt')}</p>
-    <p><a class="btn" href={handoff(lang, m.facts.action)}>{t('resources.newcomer_link')} →</a></p>
+    <p><Button href={handoff(lang, m.facts.action)}>{t('resources.newcomer_link')} →</Button></p>
     {rel.length > 0 && (<><h3>{t('resources.related')}</h3><ul>{rel.map(r => <li><a href={r.url}>{r.name}</a></li>)}</ul></>)}
   </article>
 </Base>

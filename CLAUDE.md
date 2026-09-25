@@ -30,6 +30,7 @@ Update this table as the repo grows — it is the map, so a stale map is a bug.
 | `AGENTS.md` | Bootstrap pointers for Codex and other agent frameworks |
 | `docs/` | Requirements, specs, plans, design notes, including `design-system-implementation-plan.md` |
 | `docs/ux-brief.md` | UX brief: product definition, user portrait, information architecture, screen flow, testable design principles |
+| `docs/design-system.md` | Implemented design-system source of truth: contact states/contracts, components, content rules, checks, exceptions and consolidation decisions |
 | `docs/content-architecture.md` | Content architecture: content as data, repo layout, record format, translation, freshness, Resources layer, volunteer roles and lifecycle |
 | `docs/implementation-plan.md` | Phased implementation plan for the brief and the architecture, with open decisions and what each blocks |
 | `docs/places-to-contact-audit-plan.md` | Corrective plan to audit all channel records/routes and require deterministic evidence before listing or recommending a Place to Contact |

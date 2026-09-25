@@ -47,7 +47,7 @@ Tracked in git and committed with every step.
 | Design system 7 — Enforcement | **done** | `npm run design:check` enforces tokens, controlled markup and complete contact contracts |
 | Design system 8 — Visual/accessibility regression | **done locally** | 8 reviewed baselines; two stable runs; axe/overflow/action invariants pass |
 | Design system 9 — Comprehension validation | **protocol/tooling done; fieldwork pending** | Deterministic rubric/scorer; needs ≥5 real participants |
-| Design system 10 — Evidence-led consolidation | pending | Review remaining duplication only after critical journey is stable |
+| Design system 10 — Evidence-led consolidation | **done** | Shared buttons/notices migrated; form-field/Storybook abstraction explicitly deferred |
 | 0 — Architecture fixed | done | |
 | A — Validate with five users | blocked | Needs owner answers to brief Q1–4 and five real participants. A testable path prototype can still be built (see phase 3b) |
 | 1 — Schemas and migration | **done** | 423 records, all counts preserved, 22 tests pass |
@@ -103,6 +103,25 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-25T12:09:49Z — Evidence-led consolidation and system documentation completed
+
+- Added `docs/design-system.md` as the implementation source of truth: purpose, “Place to
+  contact” definition, file boundaries, six-state model, component contracts, content/interaction
+  rules, reference/check workflows, exception process and deployment boundary.
+- Replaced repeated server-rendered button/notice markup across the guided path, feedback and
+  contributor forms, Resources, thanks, 404 and the base translation notice with `Button` and
+  `Notice`. Those components now forward ordinary ID/data/hidden attributes without widening their
+  controlled variants. The checker rejects new legacy raw button/notice markup; its mutation test
+  proves the failure.
+- Kept the guided path's client-generated contact HTML as the sole documented mirror because its
+  recipient changes in-browser; semantic markers and the checker bind it to `ContactRoute`.
+- Audited forms and deliberately did not invent generic field/table/card components: their
+  validation, hint, error and state contracts still differ. Storybook/separate packaging remain
+  deferred until inventory or consumers grow.
+- Full check passes with 134 tests and the same four known content warnings; the 839-page build and
+  all 8 visual/axe/overflow scenarios pass with no baseline changes. Phase 10 is complete. Final
+  repository-wide audits and handover reconciliation remain.
 
 ### 2026-09-25T12:09:00Z — Contact comprehension protocol made executable
 
