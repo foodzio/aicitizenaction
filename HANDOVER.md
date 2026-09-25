@@ -37,7 +37,7 @@ Tracked in git and committed with every step.
 
 | Phase | Status | Notes |
 | --- | --- | --- |
-| Design system 0 — Plan and baseline | **in progress** | Revised plan tracked; current implementation and test baseline next |
+| Design system 0 — Plan and baseline | **done** | Plan tracked; 118/118 tests and 838-page build pass after daily contact inventory refresh |
 | Design system 1 — Presentation state | pending | One mapper derived from existing routing/freshness facts |
 | Design system 2 — Contact contract | pending | Required recipient/audience/subjects/mechanism/evidence presentation |
 | Design system 3 — Domain components | pending | Button, StatusBadge, Notice, ContactRoute |
@@ -103,6 +103,17 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-25T11:46:35Z — Design-system baseline established
+
+- The first untouched baseline run exposed the generated contact inventory's intentional daily
+  freshness gate: it still named 2026-09-24, so the fast directory audit blocked publication.
+  Regenerated it for 2026-09-25; the only content change is `generated_on`, with the same 70
+  records and 232 routes.
+- Baseline now passes: content validation has 0 errors/four known warnings, all 118 tests pass and
+  the production build emits 838 pages, 82 redirects and a valid directory snapshot.
+- Design-system phase 0 is complete. Phase 1 is active: add and exhaustively test the pure route
+  presentation-state mapper without changing eligibility policy.
 
 ### 2026-09-25T11:45:15Z — Design-system implementation initialized
 
