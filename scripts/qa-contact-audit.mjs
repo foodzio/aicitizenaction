@@ -69,7 +69,7 @@ for (const [path, name] of pages) {
     check(facts.accessNowRows === 1, 'directory: Access Now appears once', String(facts.accessNowRows));
   }
   if (name === 'valid-contact') {
-    check(/Open contact route|Limited contact route/.test(facts.text), 'record: contact status shown');
+    check(facts.text.includes('Currently verified'), 'record: contact status shown');
     check(facts.text.includes('Evidence that this route accepts contact'), 'record: acceptance evidence shown');
   }
   if (name === 'reference-record') check(facts.text.includes('not a current contact destination'), 'record: reference warning shown');

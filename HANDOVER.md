@@ -12,8 +12,8 @@ Tracked in git and committed with every step.
 
 ## Current plan
 
-- **Active design-system plan:** `docs/design-system-implementation-plan.md` — started
-  2026-09-25 under the owner's autonomous implementation instruction. It makes contact-action
+- **Implemented design-system plan:** `docs/design-system-implementation-plan.md` — completed
+  locally 2026-09-25 under the owner's autonomous implementation instruction. It makes contact-action
   state authoritative and consistent, separates action from evidence, introduces narrowly scoped
   components and deterministic visual/accessibility safeguards, then consolidates only where
   evidence supports it. No deployment is authorized by this implementation request.
@@ -103,6 +103,20 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-25T12:13:58Z — Final design-system verification complete
+
+- The full directory audit passes: 382 canonical entities, 302 with current contact coverage,
+  232/232 channel routes reviewed, 41 retired IDs redirected, 914 links checked, zero confirmed
+  broken links and no publication blockers. Eleven first-observed failures await the next stateful
+  scheduled run; the same six pre-existing human-maintenance facts remain.
+- Final production build emits 839 pages. `npm run check` passes 134/134 tests with 0 validation
+  errors and four known warnings. The focused contact browser suite passes 35/35 after updating its
+  expected status wording to the new authoritative “Currently verified” label. The visual suite
+  passes 8/8 with axe, overflow and contact-semantic assertions.
+- All implementable phases are complete. The only design-system outcome still needing work is the
+  explicitly external five-person comprehension field test; no result has been fabricated. No
+  deployment was performed or authorized.
 
 ### 2026-09-25T12:09:49Z — Evidence-led consolidation and system documentation completed
 
@@ -994,9 +1008,9 @@ re-aimed at the alarmed non-expert rather than someone with evidence.
   scheduled rebuild; automatic deployment remains unauthorized.
 - **Routing heuristics** (`seatWeight`, `research_order`) stand in until drafted topics/powers are reviewed; once some are, add a "what is it about?" question to step 1 (routing already supports `where.topic`).
 - **`powers_text` in the research often overstates** compel/investigate powers (agents' finding). Don't display it as fact without review; the record page shows it under "Its powers" today.
-- **Local-only artefacts:** `tmp/` (link-check state, screenshots) is gitignored. The final local
-  link state is in `tmp/final-linkcheck-state/`; Actions maintains its own cached state. There are
-  13 first-observed failures and zero confirmed failures as of the final run.
+- **Local-only artefacts:** `tmp/` (link-check state, screenshots) is gitignored. Actions maintains
+  its own cached link state. The 2026-09-25 full audit observed 11 first failures and zero confirmed
+  failures; only a later stateful run may promote a repeated failure.
 
 ## Owner decisions
 
@@ -1017,11 +1031,12 @@ the remote is empty. Commits also carry the author's configured email. `.projstu
 
 ## How to resume
 
-1. `npm install && npm run check` — must show 0 errors and all tests passing.
+1. `npm install && npm run check` — must show 0 errors and all tests passing (134 tests at this handover).
 2. Run `npm run directory-audit`; triage its six current maintenance facts. On the next scheduled
    full run, let the cached state decide whether the 13 first link failures are consecutive. Run
    the prior-month evidence sample on the monthly schedule.
-3. Remaining non-automatable work needs people: review routing drafts
+3. Remaining non-automatable work needs people: run the contact comprehension protocol with at
+   least five genuine participants (`docs/design-system-comprehension-test.md`), review routing drafts
    (`docs/routing-drafts-report.md`), editor review of draft/pending Resources, phase A participants
    (`docs/phase-a-test-kit.md`), and a French language steward.
 4. Never edit `input/`. Never deploy a later change without asking the owner. The directory
@@ -1033,4 +1048,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-24T15:11:40Z
+Last modified: 2026-09-25T12:13:58Z
