@@ -1,0 +1,12 @@
+---
+interface Props {
+  tone?: 'information' | 'caution' | 'blocking';
+  class?: string;
+}
+
+const { tone = 'information', class: className } = Astro.props;
+if (!['information', 'caution', 'blocking'].includes(tone)) throw new Error(`Unsupported Notice tone: ${tone}`);
+---
+<div class:list={['notice', `notice-${tone}`, className]} role={tone === 'blocking' ? 'alert' : 'note'} data-ds-component="notice" data-tone={tone}>
+  <slot />
+</div>

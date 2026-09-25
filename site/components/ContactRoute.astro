@@ -1,0 +1,86 @@
+---
+import Button from './Button.astro';
+import Notice from './Notice.astro';
+import StatusBadge from './StatusBadge.astro';
+
+interface Contract {
+  recordId: string | null;
+  routeId: string | null;
+  routeType: string | null;
+  state: { state: string; reason: string; actionable: boolean; validThrough: string | null };
+  mechanism: { kind: string; value: string | null; href: string | null; actionKind: string | null };
+  audience: string[];
+  acceptedSubjects: string[];
+  restrictions: string | null;
+  evidence: { url: string | null; note: string | null; checkedOn: string | null };
+}
+
+interface Props {
+  contract: Contract;
+  recipient: string;
+  routeLabel: string;
+  typeLabel: string;
+  t: (key: string) => string;
+  language?: string | null;
+  scope?: string | null;
+  note?: string | null;
+}
+
+const { contract, recipient, routeLabel, typeLabel, t, language = null, scope = null, note = null } = Astro.props;
+const { state, mechanism, evidence } = contract;
+const stateLabel = t(`contact.state.${state.state}`);
+const stateHelp = t(`contact.state.${state.state}_help`);
+const term = (group: 'audience' | 'subjects', value: string) => {
+  const translated = t(`contact.${group}.${value}`);
+  return translated === `contact.${group}.${value}` ? value.replaceAll('-', ' ') : translated;
+};
+const evidenceIsMechanism = evidence.url && evidence.url === mechanism.value;
+const external = mechanism.href?.startsWith('http') ?? false;
+---
+<article
+  class:list={['contact-route', state.actionable ? 'contact-route-actionable' : 'contact-route-reference']}
+  data-ds-component="contact-route"
+  data-contact-state={state.state}
+  data-contact-reason={state.reason}
+  data-actionable={String(state.actionable)}
+  data-record-id={contract.recordId}
+  data-route-id={contract.routeId}
+>
+  <header class="contact-route-head">
+    <div>
+      <h3>{routeLabel}</h3>
+      <p class="meta-line">{typeLabel}{language && ` · ${t('verify.language')}: ${language}`}</p>
+    </div>
+    <StatusBadge state={state.state} label={stateLabel} help={stateHelp} date={evidence.checkedOn} />
+  </header>
+
+  <dl class="contact-route-facts">
+    <dt>{t('contact.recipient')}</dt><dd>{recipient}</dd>
+    {contract.audience.length > 0 && <><dt>{t('contact.eligible')}</dt><dd>{contract.audience.map(x => term('audience', x)).join('; ')}</dd></>}
+    {contract.acceptedSubjects.length > 0 && <><dt>{t('contact.accepts')}</dt><dd>{contract.acceptedSubjects.map(x => term('subjects', x)).join('; ')}</dd></>}
+    {contract.restrictions && <><dt>{t('contact.restrictions')}</dt><dd>{contract.restrictions}</dd></>}
+    {state.actionable && mechanism.value && <><dt>{t('contact.mechanism')}</dt><dd class="contact-route-value">{mechanism.value}</dd></>}
+  </dl>
+
+  {state.actionable ? (
+    <div class="contact-route-action" data-contact-action="primary">
+      {mechanism.href
+        ? <Button href={mechanism.href} external={external}>{t(`contact.actions.${mechanism.actionKind}`)}</Button>
+        : <Notice tone="information"><strong>{t('contact.actions.details')}</strong><br />{mechanism.value}</Notice>}
+    </div>
+  ) : (
+    <Notice tone={state.state === 'reference_only' ? 'information' : 'caution'}>
+      <strong>{stateLabel}.</strong> {stateHelp} {t('contact.unavailable')}
+    </Notice>
+  )}
+
+  {(evidence.url || evidence.note || scope || note) && (
+    <aside class="contact-route-evidence" aria-label={t('contact.evidence')} data-contact-evidence="true">
+      <h4>{t('contact.evidence')}</h4>
+      {evidence.note && <p>{evidence.note}</p>}
+      {scope && <p>{scope}</p>}
+      {note && <p>{note}</p>}
+      {evidence.url && <p><a href={evidence.url} target="_blank" rel="noopener noreferrer">{evidenceIsMechanism && !state.actionable ? mechanism.value : t('contact.why')}</a>{evidence.checkedOn && <span class="meta-line"> · {t('contact.checked')} {evidence.checkedOn}</span>}</p>}
+    </aside>
+  )}
+</article>

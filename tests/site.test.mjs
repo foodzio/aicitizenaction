@@ -161,6 +161,20 @@ test('design system: tokens, self-hosted Figtree, logo, and the door uses its co
   assert.ok(harm > 0 && join_ > 0);
 });
 
+test('design system: contact components expose controlled semantic contracts', () => {
+  const component = name => readFileSync(join(ROOT, 'site/components', `${name}.astro`), 'utf8');
+  assert.match(component('Button'), /variant\?: 'primary' \| 'secondary'/);
+  assert.match(component('Button'), /data-ds-component="button"/);
+  assert.match(component('StatusBadge'), /CONTACT_PRESENTATION_STATES/);
+  assert.match(component('StatusBadge'), /data-contact-state=/);
+  assert.match(component('Notice'), /'information' \| 'caution' \| 'blocking'/);
+  const route = component('ContactRoute');
+  assert.match(route, /data-actionable=/);
+  assert.match(route, /data-contact-action="primary"/);
+  assert.match(route, /data-contact-evidence="true"/);
+  assert.match(route, /mechanism\.href/);
+});
+
 test('the top menu is identical on every page, in each language', () => {
   const navOf = html => (html.match(/<header class="aca-header">[\s\S]*?<\/header>/) ?? [''])[0]
     .replace(/ class="aca-nav-link is-active"/g, ' class="aca-nav-link"').replace(/ aria-current="page"/g, '');

@@ -1,0 +1,23 @@
+---
+import { CONTACT_PRESENTATION_STATES } from '../../scripts/lib/routing.mjs';
+
+interface Props {
+  state: 'verified' | 'unverified' | 'expired' | 'closed' | 'unusable' | 'reference_only';
+  label: string;
+  help?: string;
+  date?: string | null;
+}
+
+const { state, label, help, date = null } = Astro.props;
+if (!CONTACT_PRESENTATION_STATES.includes(state)) throw new Error(`Unsupported contact state: ${state}`);
+const icons = { verified: '✓', unverified: '?', expired: '!', closed: '×', unusable: '—', reference_only: 'i' };
+---
+<span
+  class:list={['badge', 'contact-status', `contact-status-${state}`]}
+  title={help}
+  data-ds-component="status-badge"
+  data-contact-state={state}
+>
+  <span class="contact-status-icon" aria-hidden="true">{icons[state]}</span>
+  <span>{label}</span>{date && <span class="contact-status-date"> · {date}</span>}
+</span>

@@ -40,7 +40,7 @@ Tracked in git and committed with every step.
 | Design system 0 — Plan and baseline | **done** | Plan tracked; 118/118 tests and 838-page build pass after daily contact inventory refresh |
 | Design system 1 — Presentation state | **done** | Pure assessment drives eligibility; six states/reasons and EN/FR copy tested |
 | Design system 2 — Contact contract | **done** | Normalized mechanism/action/audience/subjects/evidence contract plus validation |
-| Design system 3 — Domain components | pending | Button, StatusBadge, Notice, ContactRoute |
+| Design system 3 — Domain components | **done** | Presentation-only Button, StatusBadge, Notice and ContactRoute with semantic markers |
 | Design system 4 — Critical journey | pending | Directory, records and guided path only |
 | Design system 5 — CSS organization | pending | Proportional split: tokens/global/components |
 | Design system 6 — Reference page | pending | Unlisted/noindex, fictional fixtures |
@@ -103,6 +103,21 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-25T11:54:40Z — Contact-domain component contracts implemented
+
+- Added presentation-only `Button`, `StatusBadge`, `Notice` and `ContactRoute` Astro components.
+  Each has a deliberately small controlled variant/state API and stable semantic `data-*` markers
+  for deterministic enforcement.
+- `ContactRoute` renders the normalized contract: recipient, audience, accepted subjects,
+  restrictions and mechanism; it puts the primary action in a dedicated region and evidence in a
+  separate labelled aside. Non-actionable states render an explanation and no action href.
+- Status badges carry a visible non-colour symbol, text and optional evidence date. Buttons preserve
+  anchor/button semantics and external-link safety. The existing stylesheet classes are reused for
+  now; dedicated component rules arrive in phase 5.
+- The focused site suite passes 19/19 and asserts the controlled APIs/semantic markers. Phase 3 is
+  complete. Phase 4 is active: render these components in record, directory and guided-path
+  surfaces and replace raw-state reconstruction.
 
 ### 2026-09-25T11:52:30Z — Contact information contract formalized
 

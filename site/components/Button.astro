@@ -1,0 +1,35 @@
+---
+interface Props {
+  href?: string | null;
+  variant?: 'primary' | 'secondary';
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
+  id?: string;
+  class?: string;
+  external?: boolean;
+  download?: string | boolean;
+}
+
+const {
+  href = null, variant = 'primary', disabled = false, type = 'button', id,
+  class: className, external = false, download
+} = Astro.props;
+if (!['primary', 'secondary'].includes(variant)) throw new Error(`Unsupported Button variant: ${variant}`);
+const classes = ['btn', variant === 'secondary' && 'secondary', className];
+---
+{href && !disabled ? (
+  <a
+    id={id}
+    class:list={classes}
+    href={href}
+    target={external ? '_blank' : undefined}
+    rel={external ? 'noopener noreferrer' : undefined}
+    download={download}
+    data-ds-component="button"
+    data-variant={variant}
+  ><slot /></a>
+) : href ? (
+  <span id={id} class:list={classes} aria-disabled="true" data-ds-component="button" data-variant={variant}><slot /></span>
+) : (
+  <button id={id} class:list={classes} type={type} disabled={disabled} data-ds-component="button" data-variant={variant}><slot /></button>
+)}
