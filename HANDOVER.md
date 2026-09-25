@@ -16,7 +16,8 @@ Tracked in git and committed with every step.
   locally 2026-09-25 under the owner's autonomous implementation instruction. It makes contact-action
   state authoritative and consistent, separates action from evidence, introduces narrowly scoped
   components and deterministic visual/accessibility safeguards, then consolidates only where
-  evidence supports it. No deployment is authorized by this implementation request.
+  evidence supports it. The owner separately authorized deployment on 2026-09-25; the release is
+  live on the Railway production service.
 - **Plan:** `docs/implementation-plan.md` — implements `docs/ux-brief.md` (the product) and
   `docs/content-architecture.md` (content as data, translation, freshness, Resources, volunteers).
 - **Corrective plan:** `docs/places-to-contact-audit-plan.md` — deterministic review and correction
@@ -103,6 +104,18 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-25T13:06:38Z — Design-system release deployed
+
+- Owner explicitly authorized deployment. Railway production deployment
+  `b5a5e5c1-f12f-493e-b157-04edf8d72da6` built all 839 pages successfully and reached `SUCCESS`
+  with a running instance. The first public release served version `0.1.83`.
+- Public smoke checks returned HTTP 200 for the version endpoint, directory, actionable record,
+  reference-only record and noindex design reference. The reference-only record exposes no primary
+  contact action; the actionable record shows “Currently verified” and a primary action.
+- This tracked handover commit advances the repository to `0.1.84`; deploy that documentation-only
+  checkpoint immediately so the public version and repository remain aligned. The only runtime-log
+  diagnostic is npm's harmless production-config deprecation warning; the server listens on 8080.
 
 ### 2026-09-25T12:13:58Z — Final design-system verification complete
 
@@ -1039,8 +1052,8 @@ the remote is empty. Commits also carry the author's configured email. `.projstu
    least five genuine participants (`docs/design-system-comprehension-test.md`), review routing drafts
    (`docs/routing-drafts-report.md`), editor review of draft/pending Resources, phase A participants
    (`docs/phase-a-test-kit.md`), and a French language steward.
-4. Never edit `input/`. Never deploy a later change without asking the owner. The directory
-   integrity release itself is live as deployment `d84b4913-076b-4965-bb81-deb951eaf306`.
+4. Never edit `input/`. Never deploy a later change without asking the owner. The design-system
+   release is live in Railway production; this authorization applies only to the current release.
 
 Reference prototypes (published, private):
 - Concern Register — https://claude.ai/artifact/9BhNrXsW43HJ4rjH5fSuNy
@@ -1048,4 +1061,4 @@ Reference prototypes (published, private):
 
 ---
 
-Last modified: 2026-09-25T12:13:58Z
+Last modified: 2026-09-25T13:06:38Z
