@@ -44,7 +44,7 @@ Tracked in git and committed with every step.
 | Design system 4 — Critical journey | **done** | Directory, records and guided path share state/contract and action/evidence separation |
 | Design system 5 — CSS organization | **done** | Proportional split: tokens/global/components; responsive contact states use existing tokens |
 | Design system 6 — Reference page | **done** | Unlisted/noindex English page; fictional fixtures cover every state and component |
-| Design system 7 — Enforcement | pending | Narrow checker plus component/integration tests |
+| Design system 7 — Enforcement | **done** | `npm run design:check` enforces tokens, controlled markup and complete contact contracts |
 | Design system 8 — Visual/accessibility regression | pending | Stable screenshots, axe and overflow coverage |
 | Design system 9 — Comprehension validation | pending | Repeatable protocol; real participant results cannot be fabricated |
 | Design system 10 — Evidence-led consolidation | pending | Review remaining duplication only after critical journey is stable |
@@ -103,6 +103,19 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-25T12:05:30Z — Deterministic design-system enforcement added
+
+- Added `scripts/check-design-system.mjs` and `npm run design:check`, now part of the normal
+  `npm run check` gate. It rejects raw colours outside `tokens.css`, missing supported-state
+  symbols, legacy/missing markup on the migrated surfaces, missing action/evidence separation,
+  incomplete actionable contracts, action hrefs on non-actionable routes and published contact
+  entities without an actionable route.
+- Literal colour exceptions are explicit and line-local (`design-check-allow: raw-color`). The
+  checker deliberately states its narrow scope and makes no visual-quality claim.
+- Added positive and mutation tests for the checker and documented the command/layout in
+  `CLAUDE.md`. Full validation/check passes: 512 files, 0 errors/four known warnings, 131/131 tests.
+  Phase 7 is complete; phase 8 is active.
 
 ### 2026-09-25T12:01:30Z — Private design-system reference added
 

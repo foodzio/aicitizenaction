@@ -1,6 +1,6 @@
 {
   "name": "aicitizenaction",
-  "version": "0.1.76",
+  "version": "0.1.77",
   "private": true,
   "type": "module",
   "description": "Routes an alarmed non-expert to the one institution that can act on their AI concern, and hands them a draft.",
@@ -19,8 +19,9 @@
     "directory-audit:full": "node scripts/directory-audit.mjs --full",
     "directory-issues": "node scripts/file-directory-issues.mjs tmp/directory-audit/report.json --dry-run",
     "directory-sample": "node scripts/monthly-route-sample.mjs",
+    "design:check": "node scripts/check-design-system.mjs",
     "test": "node --test \"tests/**/*.test.mjs\"",
-    "check": "npm run validate && npm test",
+    "check": "npm run validate && npm run design:check && npm test",
     "dev": "astro dev",
     "build": "astro build && node scripts/build-redirects.mjs && node scripts/build-directory-validity.mjs",
     "preview": "astro preview",
