@@ -528,6 +528,55 @@ strings:
       value: Moyen de contact non vérifié
       src: 68d0ce67
       machine: true
+    state:
+      verified:
+        value: Actuellement vérifié
+        src: a596cedc
+        machine: true
+      verified_help:
+        value: Nous avons vérifié que ce moyen accepte actuellement le type de contact décrit.
+        src: 1b0877ca
+        machine: true
+      unverified:
+        value: Non vérifié actuellement
+        src: "87433663"
+        machine: true
+      unverified_help:
+        value: Nous ne pouvons pas confirmer actuellement tous les éléments nécessaires pour recommander ce moyen.
+        src: 650af720
+        machine: true
+      expired:
+        value: Vérification expirée
+        src: a58d601d
+        machine: true
+      expired_help:
+        value: Ce moyen a déjà été vérifié, mais ses preuves datent maintenant de plus de 180 jours.
+        src: 5b03f8b6
+        machine: true
+      closed:
+        value: Les contacts ne sont pas acceptés actuellement
+        src: 5b5ef821
+        machine: true
+      closed_help:
+        value: La période de contact indiquée est fermée ou n'a pas encore commencé.
+        src: eeafa532
+        machine: true
+      unusable:
+        value: Aucun moyen de contact utilisable
+        src: 2c483272
+        machine: true
+      unusable_help:
+        value: Cette fiche ne contient ni adresse, ni formulaire, ni numéro de téléphone, ni autre moyen de contact utilisable.
+        src: 5a0aad60
+        machine: true
+      reference_only:
+        value: Information uniquement
+        src: eca3ce15
+        machine: true
+      reference_only_help:
+        value: Ce lien fournit des informations ou des preuves ; ce n'est pas un endroit où envoyer un message.
+        src: d0d39c73
+        machine: true
     eligible:
       value: Qui peut l’utiliser
       src: 2faf1ec7

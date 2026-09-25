@@ -3,7 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { loadDirectory, loadContent } from '../scripts/lib/content.mjs';
-import { route, contactRoute, eligibleContactRoute, isCurrentSeat, recommendable, fillTemplate, diversify } from '../scripts/lib/routing.mjs';
+import { route, contactRoute, contactRouteAssessment, eligibleContactRoute, isCurrentSeat, recommendable, fillTemplate, diversify } from '../scripts/lib/routing.mjs';
 
 const records = loadDirectory();
 const guides = loadContent('guides');
@@ -110,6 +110,54 @@ test('contact eligibility fails closed for unavailable, contradictory and expire
     status: 'open', directness: 'direct', eligible_users: ['public'], accepted_subjects: ['ai-incident'],
     evidence_url: route.value, checked_on: '2026-09-24', review: 'reviewed', closes_on: '2026-09-23'
   } }, '2026-09-24'), false);
+});
+
+test('contact presentation states are deterministic and share the eligibility decision', () => {
+  const record = { facts: { public_input: 'open' }, meta: {}, strings: {} };
+  const current = { id: 'r', type: 'form', value: 'https://example.org/report', verified: true, contact: {
+    status: 'open', directness: 'direct', eligible_users: ['members of the public'], accepted_subjects: ['AI incidents'],
+    evidence_url: 'https://example.org/report', evidence_note: 'The page invites reports.', checked_on: '2026-09-24', review: 'reviewed'
+  } };
+  const cases = [
+    [current, record, '2026-09-25', 'verified', 'current_contact'],
+    [{ ...current, verified: false }, record, '2026-09-25', 'unverified', 'route_unverified'],
+    [{ ...current, contact: { ...current.contact, checked_on: '2026-03-28' } }, record, '2026-09-25', 'expired', 'evidence_expired'],
+    [{ ...current, contact: { ...current.contact, closes_on: '2026-09-24' } }, record, '2026-09-25', 'closed', 'window_closed'],
+    [{ ...current, value: 'none published' }, record, '2026-09-25', 'unusable', 'unusable_value'],
+    [{ ...current, contact: { ...current.contact, status: 'none', disposition: 'reference-only' } }, record, '2026-09-25', 'reference_only', 'route_reference_only'],
+  ];
+  for (const [candidate, owner, today, state, reason] of cases) {
+    const result = contactRouteAssessment(owner, candidate, today);
+    assert.equal(result.state, state, reason);
+    assert.equal(result.reason, reason);
+    assert.equal(result.actionable, eligibleContactRoute(owner, candidate, today));
+    assert.equal(result.actionable, state === 'verified');
+  }
+});
+
+test('contact presentation state explains every fail-closed boundary', () => {
+  const record = { facts: { public_input: 'open' }, meta: {}, strings: {} };
+  const current = { id: 'r', type: 'form', value: 'https://example.org/report', verified: true, contact: {
+    status: 'limited', directness: 'direct', restrictions: 'Adults only', eligible_users: ['adults'], accepted_subjects: ['AI incidents'],
+    evidence_url: 'https://example.org/report', evidence_note: 'The page invites reports.', checked_on: '2026-09-24', review: 'reviewed'
+  } };
+  const check = (owner, candidate, state, reason) => assert.deepEqual(
+    (({ state, reason, actionable }) => ({ state, reason, actionable }))(contactRouteAssessment(owner, candidate, '2026-09-25')),
+    { state, reason, actionable: state === 'verified' }
+  );
+  check(record, null, 'unusable', 'missing_route');
+  check(record, { ...current, contact: { ...current.contact, opens_on: '2026-09-26' } }, 'closed', 'window_not_open');
+  check({ ...record, facts: { ...record.facts, recommend: false } }, current, 'reference_only', 'record_not_recommended');
+  check({ ...record, facts: { ...record.facts, public_input: 'none' } }, current, 'reference_only', 'no_public_input');
+  check(record, { ...current, type: 'homepage' }, 'reference_only', 'not_contact_type');
+  check({ ...record, strings: { accepts: 'Nothing from the public.' } }, current, 'reference_only', 'record_contradiction');
+  check({ ...record, meta: { unsourced: 'not found' } }, current, 'unverified', 'record_unsourced');
+  check(record, { ...current, contact: { ...current.contact, review: 'pending' } }, 'unverified', 'review_pending');
+  check(record, { ...current, contact: { ...current.contact, status: 'unknown' } }, 'unverified', 'status_unknown');
+  check(record, { ...current, contact: { ...current.contact, evidence_url: undefined } }, 'unverified', 'missing_evidence');
+  check(record, { ...current, contact: { ...current.contact, eligible_users: [] } }, 'unverified', 'missing_eligible_users');
+  check(record, { ...current, contact: { ...current.contact, accepted_subjects: [] } }, 'unverified', 'missing_accepted_subjects');
+  check(record, { ...current, contact: { ...current.contact, restrictions: null } }, 'unverified', 'missing_restrictions');
 });
 
 test('named seat holders fail closed after 90 days', () => {

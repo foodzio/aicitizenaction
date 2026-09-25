@@ -53,35 +53,62 @@ function legacyContradiction(record, route) {
     .filter(Boolean).some(x => CONTRADICTION.test(String(x).trim()));
 }
 
-/** Whether one route is safe to present as a current inbound contact mechanism. */
-export function eligibleContactRoute(record, route, today = new Date().toISOString().slice(0, 10)) {
-  if (!route || record.facts?.recommend === false || record.meta?.unsourced) return false;
-  if (record.facts?.public_input === 'none') return false;
-  if (!CONTACT_TYPES.includes(route.type) || !isUsableValue(route.value)) return false;
-  // `verified` means the destination was actually opened. Unchecked and failed routes are useful
-  // research leads, but must never be handed to a user as the place to send a finished message.
-  if (route.verified !== true) return false;
+export const CONTACT_PRESENTATION_STATES = Object.freeze([
+  'verified', 'unverified', 'expired', 'closed', 'unusable', 'reference_only'
+]);
 
-  // A route is a current recommendation only while its own evidence is current. Structured
-  // contact reviews use checked_on; legacy reviewed routes use verified_on. Missing or expired
-  // dates fail closed instead of silently remaining recommendable forever.
-  const expiresOn = contactValidThrough(route);
-  if (!expiresOn || today > expiresOn) return false;
+const assessment = (state, reason, validThrough = null) => Object.freeze({
+  state, reason, actionable: state === 'verified', validThrough
+});
+
+/**
+ * One authoritative interpretation of a route for both policy and presentation.
+ *
+ * `state` is deliberately small and stable for UI use; `reason` preserves the exact factual
+ * cause for tests, audits and explanatory copy. Components must render this result rather than
+ * reconstructing eligibility from raw fields.
+ */
+export function contactRouteAssessment(record = {}, route, today = new Date().toISOString().slice(0, 10)) {
+  if (!route || !isUsableValue(route.value)) return assessment('unusable', route ? 'unusable_value' : 'missing_route');
 
   const c = route.contact;
+  if (c?.status === 'closed' || (c?.closes_on && c.closes_on < today)) return assessment('closed', 'window_closed', contactValidThrough(route));
+  if (c?.opens_on && c.opens_on > today) return assessment('closed', 'window_not_open', contactValidThrough(route));
+
+  if (record.facts?.recommend === false) return assessment('reference_only', 'record_not_recommended', contactValidThrough(route));
+  if (record.facts?.public_input === 'none') return assessment('reference_only', 'no_public_input', contactValidThrough(route));
+  if (!CONTACT_TYPES.includes(route.type)) return assessment('reference_only', 'not_contact_type', contactValidThrough(route));
+  if (c?.status === 'none' || c?.disposition === 'reference-only') return assessment('reference_only', 'route_reference_only', contactValidThrough(route));
+  if (legacyContradiction(record, route)) return assessment('reference_only', 'record_contradiction', contactValidThrough(route));
+
+  // `verified` means the destination was actually opened. Unchecked and failed routes are useful
+  // research leads, but must never be handed to a user as the place to send a finished message.
+  if (record.meta?.unsourced) return assessment('unverified', 'record_unsourced', contactValidThrough(route));
+  if (route.verified !== true) return assessment('unverified', 'route_unverified', contactValidThrough(route));
+
+  // A route is a current recommendation only while its own evidence is current. Structured
+  // contact reviews use checked_on; legacy reviewed routes use verified_on. Missing dates are an
+  // evidence failure; elapsed dates get the distinct expired state.
+  const expiresOn = contactValidThrough(route);
+  if (!expiresOn) return assessment('unverified', 'missing_check_date');
+  if (today > expiresOn) return assessment('expired', 'evidence_expired', expiresOn);
+
   if (c) {
-    if (c.review !== 'reviewed' || !['open', 'limited'].includes(c.status)) return false;
-    if (!c.evidence_url || !c.checked_on) return false;
-    if (!c.eligible_users?.length || !c.accepted_subjects?.length) return false;
-    if (c.status === 'limited' && !c.restrictions) return false;
-    if (c.opens_on && c.opens_on > today) return false;
-    if (c.closes_on && c.closes_on < today) return false;
-    return true;
+    if (c.review !== 'reviewed') return assessment('unverified', 'review_pending', expiresOn);
+    if (c.status === 'unknown') return assessment('unverified', 'status_unknown', expiresOn);
+    if (!['open', 'limited'].includes(c.status)) return assessment('unverified', 'status_unsupported', expiresOn);
+    if (!c.evidence_url || !c.checked_on) return assessment('unverified', 'missing_evidence', expiresOn);
+    if (!c.eligible_users?.length) return assessment('unverified', 'missing_eligible_users', expiresOn);
+    if (!c.accepted_subjects?.length) return assessment('unverified', 'missing_accepted_subjects', expiresOn);
+    if (c.status === 'limited' && !c.restrictions) return assessment('unverified', 'missing_restrictions', expiresOn);
   }
 
-  // Legacy records are allowed only through this deliberately narrow bridge. Phase 3 of the
-  // contact audit removes the bridge once every recommendable route has structured evidence.
-  return !legacyContradiction(record, route);
+  return assessment('verified', 'current_contact', expiresOn);
+}
+
+/** Whether one route is safe to present as a current inbound contact mechanism. */
+export function eligibleContactRoute(record, route, today = new Date().toISOString().slice(0, 10)) {
+  return contactRouteAssessment(record, route, today).actionable;
 }
 
 /** The route a user should use to reach this record, or null. */

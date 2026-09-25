@@ -38,7 +38,7 @@ Tracked in git and committed with every step.
 | Phase | Status | Notes |
 | --- | --- | --- |
 | Design system 0 — Plan and baseline | **done** | Plan tracked; 118/118 tests and 838-page build pass after daily contact inventory refresh |
-| Design system 1 — Presentation state | pending | One mapper derived from existing routing/freshness facts |
+| Design system 1 — Presentation state | **done** | Pure assessment drives eligibility; six states/reasons and EN/FR copy tested |
 | Design system 2 — Contact contract | pending | Required recipient/audience/subjects/mechanism/evidence presentation |
 | Design system 3 — Domain components | pending | Button, StatusBadge, Notice, ContactRoute |
 | Design system 4 — Critical journey | pending | Directory, records and guided path only |
@@ -103,6 +103,19 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-25T11:49:10Z — Authoritative contact presentation state implemented
+
+- Added `contactRouteAssessment()` beside the routing predicate. It returns one of six stable UI
+  states plus a factual reason, actionability and the evidence horizon. `eligibleContactRoute()`
+  now delegates to that assessment, so policy and presentation cannot drift.
+- Explicitly covers missing/unusable mechanisms, closed and not-yet-open windows, record- and
+  route-level reference-only facts, unverified/incomplete evidence, expired evidence and current
+  verified contacts. Legacy contradictions remain fail-closed through the same assessment.
+- Added current English and machine-French labels/help for every state. Focused routing/i18n tests
+  pass 26/26; validation passes with the same four known warnings.
+- Phase 1 is complete. Phase 2 is active: formalize the rendered contact information contract and
+  mechanism-specific actions without duplicating the assessment logic.
 
 ### 2026-09-25T11:46:35Z — Design-system baseline established
 

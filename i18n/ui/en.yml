@@ -139,6 +139,19 @@ strings:
     closed: Closed contact route
     none: Reference only — not a contact route
     unknown: Contact route not verified
+    state:
+      verified: Currently verified
+      verified_help: We checked that this route currently accepts the described contact.
+      unverified: Not currently verified
+      unverified_help: We cannot currently confirm all the evidence needed to recommend this route.
+      expired: Verification expired
+      expired_help: This route was previously verified, but its evidence is now more than 180 days old.
+      closed: Not currently accepting contact
+      closed_help: The stated contact window is closed or has not opened yet.
+      unusable: No usable contact mechanism
+      unusable_help: This entry does not contain an address, form, phone number, or other usable contact mechanism.
+      reference_only: Information only
+      reference_only_help: This link provides background or evidence; it is not a place to send a message.
     eligible: Who may use it
     restrictions: Restrictions
     evidence: Evidence that this route accepts contact
