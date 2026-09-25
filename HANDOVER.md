@@ -42,7 +42,7 @@ Tracked in git and committed with every step.
 | Design system 2 — Contact contract | **done** | Normalized mechanism/action/audience/subjects/evidence contract plus validation |
 | Design system 3 — Domain components | **done** | Presentation-only Button, StatusBadge, Notice and ContactRoute with semantic markers |
 | Design system 4 — Critical journey | **done** | Directory, records and guided path share state/contract and action/evidence separation |
-| Design system 5 — CSS organization | pending | Proportional split: tokens/global/components |
+| Design system 5 — CSS organization | **done** | Proportional split: tokens/global/components; responsive contact states use existing tokens |
 | Design system 6 — Reference page | pending | Unlisted/noindex, fictional fixtures |
 | Design system 7 — Enforcement | pending | Narrow checker plus component/integration tests |
 | Design system 8 — Visual/accessibility regression | pending | Stable screenshots, axe and overflow coverage |
@@ -103,6 +103,17 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-25T11:58:56Z — Component styles separated and completed
+
+- Added `site/styles/components.css` and kept `global.css` focused on foundations, page layout and
+  one-off composition. Existing design tokens remain the only source of colour, spacing, radius and
+  type values; no parallel utility layer or new dependency was introduced.
+- Added deliberate responsive styles for contact facts, action regions and evidence regions, plus
+  distinct non-colour status symbols for all six contact states. Non-actionable cards cannot look
+  like primary actions; long mechanisms wrap and mobile actions fill the available width.
+- `git diff --check`, the 838-page production build and all 21 site integration tests pass. Phase 5
+  is complete. Phase 6 is active: add the unlisted/noindex reference page using fictional fixtures.
 
 ### 2026-09-25T11:56:37Z — Critical contact journey migrated
 
