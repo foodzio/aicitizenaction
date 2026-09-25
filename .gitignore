@@ -36,6 +36,8 @@ logs/
 *.png
 # ...except the build-reference renders, which are tracked project assets
 !input/screenshots/*.png
+# ...and reviewed design-system visual-regression baselines
+!tests/visual-baselines/*.png
 # ...and the logo files the site serves
 !site/public/brand/*.png
 

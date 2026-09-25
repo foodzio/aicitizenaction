@@ -104,7 +104,7 @@ Tracked in git and committed with every step.
 
 ## Implementation log (newest first)
 
-### 2026-09-25T12:14:00Z — Visual and accessibility regression established
+### 2026-09-25T12:05:59Z — Visual and accessibility regression established
 
 - Added `scripts/visual-regression.mjs`, `visual:check` and review-only `visual:update`. Eight fixed
   desktop/mobile and light/dark scenarios cover the component reference, directory, actionable and
@@ -112,7 +112,7 @@ Tracked in git and committed with every step.
   font readiness and scroll position are stabilized.
 - Every scenario runs axe, horizontal-overflow checks and contact action/evidence invariants.
   Reviewed PNG baselines plus the browser/platform manifest are tracked under
-  `tests/visual-baselines/`; actual/diff images remain in `tmp/visual-regression/`. Pixel comparison
+  `tests/visual-baselines/` (the PNGs have an explicit `.gitignore` exception); actual/diff images remain in `tmp/visual-regression/`. Pixel comparison
   permits no more than 12 rasterisation-only pixels. Two consecutive unchanged runs passed 8/8.
 - The first run found non-unique evidence landmark names. Evidence landmarks now include the route
   label in both server-rendered and guided-path markup; the rerun has zero axe violations. Added
