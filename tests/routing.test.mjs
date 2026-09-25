@@ -176,7 +176,22 @@ test('the contact information contract exposes mechanism, audience, subjects and
   assert.deepEqual(contract.audience, ['public']);
   assert.deepEqual(contract.acceptedSubjects, ['harm']);
   assert.equal(contract.restrictions, 'Residents only');
-  assert.deepEqual(contract.evidence, { url: 'https://example.org/rules', note: 'The rules invite complaints.', checkedOn: '2026-09-24' });
+  assert.deepEqual(contract.evidence, { url: 'https://example.org/rules', note: 'The rules invite complaints.', checkedOn: '2026-09-24', basis: 'structured' });
+});
+
+test('every routed contact has a complete display contract without invented facts', () => {
+  for (const record of records) {
+    const route = contactRoute(record, '2026-09-25');
+    if (!route) continue;
+    const contract = contactRouteContract(record, route, '2026-09-25');
+    assert.equal(contract.state.actionable, true, record.id);
+    assert.ok(contract.mechanism.value, `${record.id}: mechanism`);
+    assert.ok(contract.audience.length, `${record.id}: audience`);
+    assert.ok(contract.acceptedSubjects.length, `${record.id}: accepted subjects`);
+    assert.ok(contract.evidence.url, `${record.id}: evidence URL`);
+    assert.ok(contract.evidence.note, `${record.id}: evidence note`);
+    assert.ok(contract.evidence.checkedOn, `${record.id}: checked date`);
+  }
 });
 
 test('contact mechanism and action labels are deterministic and non-actionable routes get no href', () => {

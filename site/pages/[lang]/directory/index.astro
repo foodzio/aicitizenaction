@@ -1,9 +1,10 @@
 ---
 // The reference layer: every record, searchable. Never the front door (docs/ux-brief.md).
 import Base from '../../../layouts/Base.astro';
+import StatusBadge from '../../../components/StatusBadge.astro';
 import { data, ui, languages, placeName, recordStrings, recordUrl, placeToContact, SECTIONS } from '../../../lib/data.mjs';
 import { vocabLabel } from '../../../../scripts/lib/content.mjs';
-import { contactRoute } from '../../../../scripts/lib/routing.mjs';
+import { contactRoute, contactRouteContract } from '../../../../scripts/lib/routing.mjs';
 
 export const getStaticPaths = () => languages().map(l => ({ params: { lang: l.code } }));
 const { lang } = Astro.params;
@@ -13,11 +14,13 @@ const rows = records.filter(r => r._section !== 'channels' || placeToContact(r))
   const s = recordStrings(r, lang);
   const blurb = s.ai_jurisdiction?.text || s.remit?.text || s.the_ask?.text || s.what_they_do?.text || '';
   const contact = contactRoute(r);
+  const contract = contact ? contactRouteContract(r, contact) : null;
   return {
     id: r.id, section: r._section, name: s.name.text, url: recordUrl(lang, r),
     type: vocabLabel(vocab, 'record-types', r.type), country: r.geo.country, place: placeName(r.geo, lang),
-    verified: !!contact,
-    contactStatus: contact?.contact?.status ?? '',
+    verified: !!contract?.state.actionable,
+    contactState: contract?.state ?? null,
+    contactChecked: contract?.evidence.checkedOn ?? null,
     search: `${s.name.text} ${s.local_name?.text ?? ''} ${r.facts.local_name ?? ''} ${blurb}`.toLowerCase()
   };
 }).sort((a, b) => a.name.localeCompare(b.name, lang));
@@ -52,7 +55,8 @@ const countries = [...new Set(rows.map(r => r.country))].map(c => ({ c, name: pl
     {rows.map(r => (
       <li data-section={r.section} data-country={r.country} data-verified={String(r.verified)} data-search={r.search}>
         <a href={r.url}>{r.name}</a><br />
-        <span class="meta-line">{r.type} · {r.place}{r.contactStatus && ` · ${t(`contact.${r.contactStatus}`)}`}</span>
+        <span class="meta-line">{r.type} · {r.place}</span>
+        {r.contactState && <> <StatusBadge state={r.contactState.state} label={t(`contact.state.${r.contactState.state}`)} help={t(`contact.state.${r.contactState.state}_help`)} date={r.contactChecked} /></>}
       </li>
     ))}
   </ul>

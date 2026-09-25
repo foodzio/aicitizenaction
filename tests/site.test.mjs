@@ -84,7 +84,8 @@ test('Places to contact publishes only audited destinations', () => {
   assert.ok(api.records.every(r => r.facts.contact_disposition === 'keep'));
   assert.match(page('en/channels/global-perils-ai-safety-s-insularity-why/index.html'), /not a current contact destination/i);
   const valid = page('en/channels/global-ai-incident-database/index.html');
-  assert.match(valid, /Open contact route|Limited contact route/);
+  assert.match(valid, /data-contact-state="verified"[^>]*data-actionable="true"/);
+  assert.match(valid, /Currently verified/);
   assert.match(valid, /Evidence that this route accepts contact/);
 });
 
@@ -92,7 +93,40 @@ test('regression: Argentina bill attachment is never offered as the send-to addr
   const json = JSON.parse(page('en/start/record/index.html').match(/id="payload">([\s\S]*?)<\/script>/)[1]);
   const argentina = json.byPlace.ar;
   assert.ok(!argentina || argentina.recipients.every(r => r.id !== 'ar-argentina-ai-governance'));
-  for (const result of Object.values(json.byPlace)) assert.ok(result.recipients.every(r => r.contact?.verified === true));
+  for (const result of Object.values(json.byPlace)) assert.ok(result.recipients.every(r => r.contact?.contract?.state?.actionable === true));
+});
+
+test('contact presentation separates actionable routes from evidence and reference-only links', () => {
+  const actionable = page('en/channels/us-openai/index.html');
+  assert.match(actionable, /data-contact-state="verified"[^>]*data-actionable="true"/);
+  assert.match(actionable, /data-contact-action="primary"/);
+  assert.match(actionable, /data-contact-evidence="true"/);
+  assert.match(actionable, /Currently verified/);
+  assert.match(actionable, /Who may use it/);
+  assert.match(actionable, /What it accepts/);
+
+  const reference = page('en/channels/global-house-evaluation-is-not-enough-third/index.html');
+  assert.match(reference, /data-contact-state="reference_only"[^>]*data-actionable="false"/);
+  assert.match(reference, /Information only/);
+  assert.match(reference, /No contact action is available/);
+  assert.doesNotMatch(reference, /data-contact-action="primary"/);
+});
+
+test('every guided-path recipient carries the complete authoritative contact contract', () => {
+  for (const lang of ['en', 'fr']) for (const outcome of ['law', 'harm', 'fix', 'record', 'join']) {
+    const html = page(`${lang}/start/${outcome}/index.html`);
+    const payload = JSON.parse(html.match(/id="payload">([\s\S]*?)<\/script>/)[1]);
+    for (const result of Object.values(payload.byPlace)) for (const recipient of result.recipients) {
+      const c = recipient.contact?.contract;
+      assert.ok(c, `${lang}/${outcome}/${recipient.id}: contract`);
+      assert.equal(c.state.state, 'verified', `${lang}/${outcome}/${recipient.id}: state`);
+      assert.equal(c.state.actionable, true, `${lang}/${outcome}/${recipient.id}: actionable`);
+      assert.ok(c.audience.length, `${lang}/${outcome}/${recipient.id}: audience`);
+      assert.ok(c.acceptedSubjects.length, `${lang}/${outcome}/${recipient.id}: accepted subjects`);
+      assert.ok(c.mechanism.value, `${lang}/${outcome}/${recipient.id}: mechanism`);
+      assert.ok(c.evidence.url && c.evidence.note && c.evidence.checkedOn, `${lang}/${outcome}/${recipient.id}: evidence`);
+    }
+  }
 });
 
 test('Resources: only published items get pages', async () => {

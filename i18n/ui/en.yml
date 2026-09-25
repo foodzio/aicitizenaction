@@ -171,6 +171,7 @@ strings:
     audience:
       public: Members of the public
       users-meeting-published-eligibility: People who meet the published eligibility requirements
+      users-following-published-instructions: People following the published contact instructions
     subjects:
       behaviour: Observed model behaviour
       bounty: Eligible bounty reports
@@ -183,11 +184,18 @@ strings:
       form: Submissions accepted by the form
       harm: AI-related harm
       insider: Insider concerns
+      audit: Oversight and audit concerns
+      fund: Funding AI work
+      join: Joining or supporting the organisation
       law: AI laws and policy
+      opposition: Opposition to AI regulation
+      petition: Petitions
+      record: Concerns to put on the public record
       reporting: Reports
       research: AI research concerns
       submission: Written submissions
       systemic: Systemic AI risks
+      tip: Tips and leads
       whistleblowing: Protected disclosures and whistleblowing
     eligible: Who may use it
     restrictions: Restrictions

@@ -145,6 +145,15 @@ export function contactRouteAssessment(record = {}, route, today = new Date().to
 export function contactRouteContract(record = {}, route, today = new Date().toISOString().slice(0, 10)) {
   const state = contactRouteAssessment(record, route, today);
   const valueKind = contactValueKind(route?.value);
+  const c = route?.contact;
+  const routeStrings = record.strings?.routes?.[route?.id] ?? {};
+  const legacyAudience = record.facts?.public_input === 'open' ? ['public']
+    : record.facts?.public_input === 'limited' ? ['users-meeting-published-eligibility']
+      : ['users-following-published-instructions'];
+  const legacyNote = routeStrings.note ?? routeStrings.scope ?? record.strings?.public_route
+    ?? record.strings?.how ?? record.strings?.accepts ?? record.strings?.newcomer_action
+    ?? record.strings?.the_ask ?? record.strings?.what_they_do ?? record.strings?.remit ?? null;
+  const valueIsUrl = contactValueKind(route?.value) === 'web';
   return Object.freeze({
     recordId: record.id ?? null,
     routeId: route?.id ?? null,
@@ -156,13 +165,14 @@ export function contactRouteContract(record = {}, route, today = new Date().toIS
       href: state.actionable ? contactHref(route) : null,
       actionKind: state.actionable ? contactActionKind(route) : null
     }),
-    audience: Object.freeze([...(route?.contact?.eligible_users ?? [])]),
-    acceptedSubjects: Object.freeze([...(route?.contact?.accepted_subjects ?? [])]),
-    restrictions: route?.contact?.restrictions ?? null,
+    audience: Object.freeze([...(c?.eligible_users?.length ? c.eligible_users : legacyAudience)]),
+    acceptedSubjects: Object.freeze([...(c?.accepted_subjects?.length ? c.accepted_subjects : record.facts?.tags ?? [])]),
+    restrictions: c?.restrictions ?? null,
     evidence: Object.freeze({
-      url: route?.contact?.evidence_url ?? null,
-      note: route?.contact?.evidence_note ?? null,
-      checkedOn: route?.contact?.checked_on ?? route?.verified_on ?? null
+      url: c?.evidence_url ?? record.meta?.sources?.[0]?.url ?? (valueIsUrl ? route.value : null),
+      note: c?.evidence_note ?? legacyNote,
+      checkedOn: c?.checked_on ?? route?.verified_on ?? null,
+      basis: c ? 'structured' : 'legacy'
     })
   });
 }

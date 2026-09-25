@@ -26,7 +26,12 @@ const places = placeOptions(lang);
 const keys = ['path.step', 'path.of', 'path.floor_bloc', 'path.floor_global', 'path.none', 'path.can_do', 'path.leverage',
   'path.how_reach', 'path.people', 'path.checked', 'path.membership', 'path.details', 'path.choose', 'path.chosen',
   'path.copied', 'path.copy', 'verify.true', 'verify.false', 'verify.null', 'verify.true_hint', 'verify.false_hint',
-  'verify.null_hint', 'verify.language', 'verify.overdue', 'path.own_words_missing', 'path.method_link', 'path.step4', 'door.step1', 'door.step2', 'door.step3'];
+  'verify.null_hint', 'verify.language', 'verify.overdue', 'path.own_words_missing', 'path.method_link', 'path.step4', 'door.step1', 'door.step2', 'door.step3',
+  'contact.recipient', 'contact.eligible', 'contact.accepts', 'contact.restrictions', 'contact.mechanism', 'contact.evidence', 'contact.checked', 'contact.why', 'contact.unavailable',
+  ...['verified', 'unverified', 'expired', 'closed', 'unusable', 'reference_only'].flatMap(x => [`contact.state.${x}`, `contact.state.${x}_help`]),
+  ...['email', 'phone', 'details', 'consultation', 'submission', 'report', 'petition', 'feedback', 'form'].map(x => `contact.actions.${x}`),
+  ...['public', 'users-meeting-published-eligibility', 'users-following-published-instructions'].map(x => `contact.audience.${x}`),
+  ...['audit', 'behaviour', 'bounty', 'complaint', 'consultation', 'disclosure', 'email', 'feedback', 'flaw', 'form', 'fund', 'harm', 'insider', 'join', 'law', 'opposition', 'petition', 'record', 'reporting', 'research', 'submission', 'systemic', 'tip', 'whistleblowing'].map(x => `contact.subjects.${x}`)];
 const payload = outcome.stop ? null : {
   lang,
   outcome: { id: outcome.id, ignoreGeo: !!outcome.ignore_geo && outcome.ask !== 'company', ask: outcome.ask ?? null },
@@ -177,19 +182,28 @@ const steps = [t('door.step1'), t('door.step2'), t('door.step3')];
     };
     const chosen = () => { const r = result(); return r.recipients.find(x => x.id === state.to) ?? r.recipients[0]; };
 
-    function badge(v, on) {
-      const k = String(v);
-      return `<span class="badge v-${k}" title="${esc(T['verify.' + k + '_hint'])}">${esc(T['verify.' + k])}${on ? ` · ${esc(on)}` : ''}</span>`;
-    }
     function contactHtml(c) {
       if (!c) return '';
-      const href = c.isUrl ? c.value : /@/.test(c.value) ? `mailto:${c.value}` : '';
-      const val = href ? `<a href="${esc(href)}"${c.isUrl ? ' target="_blank"' : ''} rel="noopener noreferrer">${esc(c.value)}</a>` : esc(c.value);
-      const status = c.status ? `<span class="badge v-true">${esc(T['contact.' + c.status])}${c.evidenceChecked ? ` · ${esc(c.evidenceChecked)}` : ''}</span>` : badge(c.verified, c.verifiedOn);
-      const eligible = c.eligibleUsers?.length ? `<div class="meta-line"><strong>${esc(T['contact.eligible'])}:</strong> ${esc(c.eligibleUsers.join(', '))}</div>` : '';
-      const restrictions = c.restrictions ? `<div class="meta-line"><strong>${esc(T['contact.restrictions'])}:</strong> ${esc(c.restrictions)}</div>` : '';
-      const evidence = c.evidenceUrl ? `<div class="meta-line"><a href="${esc(c.evidenceUrl)}" target="_blank" rel="noopener noreferrer">${esc(T['contact.evidence'])}</a></div>` : '';
-      return `<div>${esc(c.label || c.type)}</div><div>${val}</div><div class="meta-line">${status}${c.language ? ` · ${esc(T['verify.language'])}: ${esc(c.language)}` : ''}</div>${eligible}${restrictions}${evidence}`;
+      const k = c.contract, state = k.state, mechanism = k.mechanism, evidence = k.evidence;
+      const term = (group, value) => T[`contact.${group}.${value}`] || value.replaceAll('-', ' ');
+      const list = (group, values) => values?.length ? values.map(x => term(group, x)).join('; ') : '';
+      const badge = `<span class="badge contact-status contact-status-${esc(state.state)}" title="${esc(T[`contact.state.${state.state}_help`])}" data-ds-component="status-badge" data-contact-state="${esc(state.state)}"><span class="contact-status-icon" aria-hidden="true">✓</span><span>${esc(T[`contact.state.${state.state}`])}</span>${evidence.checkedOn ? `<span class="contact-status-date"> · ${esc(evidence.checkedOn)}</span>` : ''}</span>`;
+      const facts = [
+        [T['contact.recipient'], c.recipient],
+        [T['contact.eligible'], list('audience', k.audience)],
+        [T['contact.accepts'], list('subjects', k.acceptedSubjects)],
+        [T['contact.restrictions'], k.restrictions],
+        [T['contact.mechanism'], state.actionable ? mechanism.value : '']
+      ].filter(([, value]) => value).map(([label, value]) => `<dt>${esc(label)}</dt><dd>${esc(value)}</dd>`).join('');
+      const external = mechanism.href?.startsWith('http');
+      const action = state.actionable
+        ? mechanism.href
+          ? `<div class="contact-route-action" data-contact-action="primary"><a class="btn" href="${esc(mechanism.href)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''} data-ds-component="button" data-variant="primary">${esc(T[`contact.actions.${mechanism.actionKind}`])}</a></div>`
+          : `<div class="notice notice-information" role="note" data-ds-component="notice" data-tone="information"><strong>${esc(T['contact.actions.details'])}</strong><br>${esc(mechanism.value)}</div>`
+        : `<div class="notice notice-caution" role="note" data-ds-component="notice" data-tone="caution"><strong>${esc(T[`contact.state.${state.state}`])}.</strong> ${esc(T[`contact.state.${state.state}_help`])} ${esc(T['contact.unavailable'])}</div>`;
+      const evidenceNotes = [...new Set([evidence.note, c.scope, c.note].filter(Boolean))];
+      const evidenceBlock = evidence.url || evidenceNotes.length ? `<aside class="contact-route-evidence" aria-label="${esc(T['contact.evidence'])}" data-contact-evidence="true"><h4>${esc(T['contact.evidence'])}</h4>${evidenceNotes.map(value => `<p>${esc(value)}</p>`).join('')}${evidence.url ? `<p><a href="${esc(evidence.url)}" target="_blank" rel="noopener noreferrer">${esc(T['contact.why'])}</a>${evidence.checkedOn ? `<span class="meta-line"> · ${esc(T['contact.checked'])} ${esc(evidence.checkedOn)}</span>` : ''}</p>` : ''}</aside>` : '';
+      return `<article class="contact-route ${state.actionable ? 'contact-route-actionable' : 'contact-route-reference'}" data-ds-component="contact-route" data-contact-state="${esc(state.state)}" data-contact-reason="${esc(state.reason)}" data-actionable="${state.actionable}" data-record-id="${esc(k.recordId)}" data-route-id="${esc(k.routeId)}"><header class="contact-route-head"><div><h3>${esc(c.label || c.type)}</h3><p class="meta-line">${esc(c.type)}${c.language ? ` · ${esc(T['verify.language'])}: ${esc(c.language)}` : ''}</p></div>${badge}</header><dl class="contact-route-facts">${facts}</dl>${action}${evidenceBlock}</article>`;
     }
     function cardHtml(r, primary) {
       const seats = r.seats.length ? `<dt>${esc(T['path.people'])}</dt><dd>${r.seats.map(s => `${esc(s.name)} (${esc(s.role)}${s.party ? ', ' + esc(s.party) : ''}${s.region ? ', ' + esc(s.region) : ''}) <span class="meta-line">· ${esc(T['path.checked'])} ${esc(s.verifiedOn)}</span>`).join('<br>')}${r.membership ? `<br><a href="${esc(r.membership)}" target="_blank" rel="noopener noreferrer">${esc(T['path.membership'])}</a>` : ''}</dd>` : '';

@@ -6,7 +6,7 @@ const record = n => ({
   id: `record-${n}`, _section: 'channels', _path: `content/channels/global/record-${n}.yml`, meta: {}, strings: {},
   facts: { public_input: 'open', routes: [{
     id: 'route', type: 'form', value: `https://example.org/${n}`, verified: true,
-    contact: { status: 'open', review: 'reviewed', directness: 'direct', checked_on: '2026-08-15', evidence_url: `https://example.org/${n}`, eligible_users: ['public'], accepted_subjects: ['harm'] }
+    contact: { status: 'open', review: 'reviewed', directness: 'direct', disposition: 'keep', checked_on: '2026-08-15', evidence_url: `https://example.org/${n}`, eligible_users: ['public'], accepted_subjects: ['harm'] }
   }] }
 });
 

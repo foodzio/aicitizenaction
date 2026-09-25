@@ -41,7 +41,7 @@ Tracked in git and committed with every step.
 | Design system 1 — Presentation state | **done** | Pure assessment drives eligibility; six states/reasons and EN/FR copy tested |
 | Design system 2 — Contact contract | **done** | Normalized mechanism/action/audience/subjects/evidence contract plus validation |
 | Design system 3 — Domain components | **done** | Presentation-only Button, StatusBadge, Notice and ContactRoute with semantic markers |
-| Design system 4 — Critical journey | pending | Directory, records and guided path only |
+| Design system 4 — Critical journey | **done** | Directory, records and guided path share state/contract and action/evidence separation |
 | Design system 5 — CSS organization | pending | Proportional split: tokens/global/components |
 | Design system 6 — Reference page | pending | Unlisted/noindex, fictional fixtures |
 | Design system 7 — Enforcement | pending | Narrow checker plus component/integration tests |
@@ -103,6 +103,25 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-25T11:56:37Z — Critical contact journey migrated
+
+- Record pages now render every route through `ContactRoute`; directory rows use the same status
+  badge; guided-path recipient and final send-to cards serialize and render the same authoritative
+  contract. Existing measurement events and routing decisions are unchanged.
+- Primary actions use explicit mechanism labels such as “Open the submission page” or “Email the
+  recipient.” Evidence lives in a separately labelled region. Reference-only records such as the
+  reported Transformer/arXiv examples expose no primary contact action.
+- The first build exposed 254 still-supported legacy routes without structured contact fields.
+  Their display contracts now derive audience, accepted subjects and evidence only from existing
+  `public_input`, controlled tags, route/record prose, verification date and cited sources. A new
+  invariant test proves every routed recipient has a complete contract; this does not relax or
+  duplicate eligibility.
+- Added all derived terms in current English and machine French and updated older test fixtures to
+  the now-required `keep` disposition. Focused routing/site/i18n/validity/sample tests pass 54/54,
+  validation has 0 errors/four known warnings, and the 838-page build succeeds.
+- Phase 4 is complete. Phase 5 is active: give the new components deliberate responsive styles and
+  move reusable component rules out of the foundation stylesheet without changing the identity.
 
 ### 2026-09-25T11:54:40Z — Contact-domain component contracts implemented
 

@@ -647,6 +647,10 @@ strings:
         value: Personnes remplissant les conditions d'admissibilité publiées
         src: 73cc131f
         machine: true
+      users-following-published-instructions:
+        value: Personnes suivant les instructions de contact publiées
+        src: 7986e5ec
+        machine: true
     subjects:
       behaviour:
         value: Comportement observé du modèle
@@ -692,9 +696,33 @@ strings:
         value: Préoccupations internes
         src: f9b09714
         machine: true
+      audit:
+        value: Préoccupations liées au contrôle et à l'audit
+        src: 4f5be667
+        machine: true
+      fund:
+        value: Financement de travaux sur l'IA
+        src: 2b9d4bde
+        machine: true
+      join:
+        value: Adhésion ou soutien à l'organisation
+        src: 65ba5a28
+        machine: true
       law:
         value: Lois et politiques sur l'IA
         src: dfb0b423
+        machine: true
+      opposition:
+        value: Opposition à la réglementation de l'IA
+        src: 6763776b
+        machine: true
+      petition:
+        value: Pétitions
+        src: ebd71dcb
+        machine: true
+      record:
+        value: Préoccupations à inscrire au registre public
+        src: d2c6117c
         machine: true
       reporting:
         value: Signalements
@@ -711,6 +739,10 @@ strings:
       systemic:
         value: Risques systémiques liés à l'IA
         src: 24cfa728
+        machine: true
+      tip:
+        value: Informations et pistes
+        src: ede2a9da
         machine: true
       whistleblowing:
         value: Divulgations protégées et alertes internes

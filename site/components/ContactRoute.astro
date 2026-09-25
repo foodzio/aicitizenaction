@@ -36,6 +36,7 @@ const term = (group: 'audience' | 'subjects', value: string) => {
 };
 const evidenceIsMechanism = evidence.url && evidence.url === mechanism.value;
 const external = mechanism.href?.startsWith('http') ?? false;
+const evidenceNotes = [...new Set([evidence.note, scope, note].filter(Boolean))];
 ---
 <article
   class:list={['contact-route', state.actionable ? 'contact-route-actionable' : 'contact-route-reference']}
@@ -74,12 +75,10 @@ const external = mechanism.href?.startsWith('http') ?? false;
     </Notice>
   )}
 
-  {(evidence.url || evidence.note || scope || note) && (
+  {(evidence.url || evidenceNotes.length > 0) && (
     <aside class="contact-route-evidence" aria-label={t('contact.evidence')} data-contact-evidence="true">
       <h4>{t('contact.evidence')}</h4>
-      {evidence.note && <p>{evidence.note}</p>}
-      {scope && <p>{scope}</p>}
-      {note && <p>{note}</p>}
+      {evidenceNotes.map(value => <p>{value}</p>)}
       {evidence.url && <p><a href={evidence.url} target="_blank" rel="noopener noreferrer">{evidenceIsMechanism && !state.actionable ? mechanism.value : t('contact.why')}</a>{evidence.checkedOn && <span class="meta-line"> · {t('contact.checked')} {evidence.checkedOn}</span>}</p>}
     </aside>
   )}

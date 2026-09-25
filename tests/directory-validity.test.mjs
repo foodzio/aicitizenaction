@@ -5,7 +5,7 @@ import { validityManifest } from '../scripts/build-directory-validity.mjs';
 const route = checked => ({
   id: 'report', type: 'form', value: 'https://example.org/report', verified: true,
   contact: {
-    status: 'open', review: 'reviewed', directness: 'direct', checked_on: checked,
+    status: 'open', review: 'reviewed', directness: 'direct', disposition: 'keep', checked_on: checked,
     eligible_users: ['public'], accepted_subjects: ['ai-incident'], evidence_url: 'https://example.org/report'
   }
 });

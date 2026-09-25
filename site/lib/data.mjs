@@ -4,7 +4,7 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadDirectory, loadContent, loadVocab, vocabLabel, readYaml, walk, I18N, ROOT } from '../../scripts/lib/content.mjs';
 import { stringsOf, resolveString } from '../../scripts/lib/i18n.mjs';
-import { route, places, contactRoute, membershipRoute, fillTemplate, isCurrentSeat, placeToContact } from '../../scripts/lib/routing.mjs';
+import { route, places, contactRoute, contactRouteContract, membershipRoute, fillTemplate, isCurrentSeat, placeToContact } from '../../scripts/lib/routing.mjs';
 
 export const SECTIONS = ['bodies', 'channels', 'orgs'];
 
@@ -94,6 +94,23 @@ export function firstSentences(text, n = 2, max = 420) {
 
 export const recordUrl = (lang, r) => `/${lang}/${r._section}/${r.id}/`;
 
+/** Localized labels wrapped around the authoritative, non-localized contact contract. */
+export function contactCard(record, contact, lang) {
+  if (!contact) return null;
+  const s = recordStrings(record, lang);
+  const text = key => s[key]?.text ?? '';
+  const { vocab } = data();
+  return {
+    recipient: text('name'),
+    label: text(`routes.${contact.id}.label`) || vocabLabel(vocab, 'route-types', contact.type),
+    type: vocabLabel(vocab, 'route-types', contact.type),
+    language: contact.language ?? null,
+    scope: text(`routes.${contact.id}.scope`) || null,
+    note: text(`routes.${contact.id}.note`) || null,
+    contract: contactRouteContract(record, contact)
+  };
+}
+
 export function isOverdue(r, now = new Date().toISOString().slice(0, 10)) {
   return r.meta?.review_by && r.meta.review_by < now;
 }
@@ -118,21 +135,7 @@ export function card(r, lang) {
     canDo: firstSentences(text('ai_jurisdiction') || text('remit') || text('what_they_do') || text('the_ask'), 2),
     leverage: firstSentences(text('realistic') || text('reality_check') || text('caution') || text('newcomer_action'), 2),
     how: firstSentences(text('public_route') || text('how') || text(`routes.${contact?.id}.note`) || text(`routes.${contact?.id}.scope`), 2),
-    contact: contact && {
-      type: vocabLabel(vocab, 'route-types', contact.type),
-      label: text(`routes.${contact.id}.label`),
-      value: contact.value,
-      verified: contact.verified,
-      verifiedOn: contact.verified_on ?? null,
-      language: contact.language ?? null,
-      isUrl: /^https?:\/\//.test(contact.value),
-      status: contact.contact?.status ?? null,
-      directness: contact.contact?.directness ?? null,
-      eligibleUsers: contact.contact?.eligible_users ?? [],
-      restrictions: contact.contact?.restrictions ?? null,
-      evidenceUrl: contact.contact?.evidence_url ?? null,
-      evidenceChecked: contact.contact?.checked_on ?? null
-    },
+    contact: contactCard(r, contact, lang),
     membership: member?.value ?? null,
     seats: (r.facts.seats ?? []).filter(isCurrentSeat).map(x => ({ role: x.role, name: x.name, party: x.party ?? '', region: x.region ?? '', verifiedOn: x.verified_on })),
     checked: r.meta.verified_on,

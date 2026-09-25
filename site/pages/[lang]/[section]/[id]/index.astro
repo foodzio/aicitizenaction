@@ -2,9 +2,11 @@
 // One record: every date beside the fact it applies to, the membership list first-class,
 // three-state verification labelled, route language shown before the click.
 import Base from '../../../../layouts/Base.astro';
-import { data, ui, languages, placeName, recordStrings, isOverdue, SECTIONS } from '../../../../lib/data.mjs';
+import ContactRoute from '../../../../components/ContactRoute.astro';
+import Notice from '../../../../components/Notice.astro';
+import { data, ui, languages, placeName, recordStrings, contactCard, isOverdue, SECTIONS } from '../../../../lib/data.mjs';
 import { vocabLabel } from '../../../../../scripts/lib/content.mjs';
-import { eligibleContactRoute, isCurrentSeat } from '../../../../../scripts/lib/routing.mjs';
+import { isCurrentSeat } from '../../../../../scripts/lib/routing.mjs';
 
 export function getStaticPaths() {
   const { records } = data();
@@ -23,9 +25,7 @@ const fieldOrder = ['remit', 'ai_jurisdiction', 'the_ask', 'what_they_do', 'powe
 const fields = fieldOrder.filter(k => text(k));
 const membership = r.facts.routes.find(x => x.type === 'membership' && x.value);
 const routes = r.facts.routes.filter(x => x !== membership);
-const contactEligible = x => eligibleContactRoute(r, x);
 const fallback = Object.values(s).some(x => x.state === 'fallback' || x.state === 'stale') && lang !== 'en';
-const href = v => /^https?:\/\//.test(v) ? v : /@/.test(v) ? `mailto:${v}` : null;
 ---
 <Base lang={lang} title={text('name')} current="directory">
   <article>
@@ -39,10 +39,10 @@ const href = v => /^https?:\/\//.test(v) ? v : /@/.test(v) ? `mailto:${v}` : nul
         <dt>{t('record.last_checked')}</dt><dd>{r.meta.verified_on}</dd>
         <dt>{t('record.review_by')}</dt><dd>{r.meta.review_by}</dd>
       </dl>
-      {isOverdue(r) && <p class="notice">{t('verify.overdue')} {r.meta.review_by}.</p>}
-      {r.meta.unsourced && <p class="notice">{t('verify.unsourced')}</p>}
-      {section === 'channels' && r.facts.contact_disposition !== 'keep' && <p class="notice">{t('record.not_contact')}</p>}
-      {fallback && <p class="notice">{t('site.translation_fallback')}</p>}
+      {isOverdue(r) && <Notice tone="caution">{t('verify.overdue')} {r.meta.review_by}.</Notice>}
+      {r.meta.unsourced && <Notice tone="blocking">{t('verify.unsourced')}</Notice>}
+      {section === 'channels' && r.facts.contact_disposition !== 'keep' && <Notice tone="information">{t('record.not_contact')}</Notice>}
+      {fallback && <Notice tone="information">{t('site.translation_fallback')}</Notice>}
     </div>
 
     {r.facts.seats?.length > 0 && (
@@ -60,23 +60,10 @@ const href = v => /^https?:\/\//.test(v) ? v : /@/.test(v) ? `mailto:${v}` : nul
     <section>
       <h2>{t('record.routes')}</h2>
       <ul class="routes">
-        {(r.facts.seats?.length ? routes : r.facts.routes).map(x => (
-          <li>
-            <div><strong>{text(`routes.${x.id}.label`) || vocabLabel(vocab, 'route-types', x.type)}</strong> <span class="meta-line">· {vocabLabel(vocab, 'route-types', x.type)}</span></div>
-            {x.language && <div class="meta-line">{t('verify.language')}: {x.language}</div>}
-            <div>{x.value ? (href(x.value) ? <a href={href(x.value)} target={/^https?:/.test(x.value) ? '_blank' : undefined} rel="noopener noreferrer">{x.value}</a> : x.value) : <em class="muted">—</em>}</div>
-            <div class="meta-line">
-              {x.contact ? <span class={`badge v-${contactEligible(x)}`}>{contactEligible(x) ? t(`contact.${x.contact.status}`) : t('verify.expired')}{x.contact.checked_on && ` · ${x.contact.checked_on}`}</span>
-                : <span class={`badge v-${x.verified === true && !contactEligible(x) ? false : x.verified}`} title={t(`verify.${x.verified}_hint`)}>{x.verified === true && !contactEligible(x) ? t('verify.expired') : t(`verify.${x.verified}`)}{x.verified_on && ` · ${x.verified_on}`}</span>}
-            </div>
-            {!contactEligible(x) && x.verified === true && <p class="notice">{t('contact.stale')}</p>}
-            {x.contact?.eligible_users?.length > 0 && <p class="meta-line"><strong>{t('contact.eligible')}:</strong> {x.contact.eligible_users.join(', ')}</p>}
-            {x.contact?.restrictions && <p class="meta-line"><strong>{t('contact.restrictions')}:</strong> {x.contact.restrictions}</p>}
-            {x.contact?.evidence_url && <p class="meta-line"><a href={x.contact.evidence_url} target="_blank" rel="noopener noreferrer">{t('contact.evidence')}</a>{x.contact.checked_on && ` · ${x.contact.checked_on}`}</p>}
-            {text(`routes.${x.id}.scope`) && <p class="meta-line">{text(`routes.${x.id}.scope`)}</p>}
-            {text(`routes.${x.id}.note`) && <p class="meta-line">{text(`routes.${x.id}.note`)}</p>}
-          </li>
-        ))}
+        {(r.facts.seats?.length ? routes : r.facts.routes).map(x => {
+          const c = contactCard(r, x, lang);
+          return <li><ContactRoute contract={c.contract} recipient={c.recipient} routeLabel={c.label} typeLabel={c.type} language={c.language} scope={c.scope} note={c.note} t={t} /></li>;
+        })}
       </ul>
     </section>
 
