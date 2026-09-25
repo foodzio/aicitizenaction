@@ -46,7 +46,7 @@ Tracked in git and committed with every step.
 | Design system 6 — Reference page | **done** | Unlisted/noindex English page; fictional fixtures cover every state and component |
 | Design system 7 — Enforcement | **done** | `npm run design:check` enforces tokens, controlled markup and complete contact contracts |
 | Design system 8 — Visual/accessibility regression | **done locally** | 8 reviewed baselines; two stable runs; axe/overflow/action invariants pass |
-| Design system 9 — Comprehension validation | pending | Repeatable protocol; real participant results cannot be fabricated |
+| Design system 9 — Comprehension validation | **protocol/tooling done; fieldwork pending** | Deterministic rubric/scorer; needs ≥5 real participants |
 | Design system 10 — Evidence-led consolidation | pending | Review remaining duplication only after critical journey is stable |
 | 0 — Architecture fixed | done | |
 | A — Validate with five users | blocked | Needs owner answers to brief Q1–4 and five real participants. A testable path prototype can still be built (see phase 3b) |
@@ -103,6 +103,20 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-25T12:09:00Z — Contact comprehension protocol made executable
+
+- Added `docs/design-system-comprehension-test.md`: a repeatable, phone-first protocol covering
+  recipient, accepted content, eligibility, availability, contact action, evidence meaning and the
+  unavailable reason. It counterbalances actionable/reference-only examples and forbids prompting.
+- Added a deterministic true/false coding rubric, independent second review, privacy limits and
+  predeclared targets: at least five participants, at least 90% action/evidence accuracy, and zero
+  reference-only links mistaken for submission routes.
+- Added `scripts/score-contact-comprehension.mjs` and three tests. It rejects incomplete,
+  non-boolean or duplicate observations, reports every dimension and cannot claim success with
+  fewer than five people. Focused tests pass 3/3.
+- No human result was fabricated. Protocol/tooling is complete; real fieldwork remains external.
+  Phase 10 is active: review remaining duplication and write the design-system source of truth.
 
 ### 2026-09-25T12:05:59Z — Visual and accessibility regression established
 

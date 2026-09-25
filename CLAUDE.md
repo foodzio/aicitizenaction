@@ -76,6 +76,7 @@ Update this table as the repo grows — it is the map, so a stale map is a bug.
 | `docs/test-scenarios.md` | End-to-end browser scenarios (door, path, directory, Resources, language, hygiene) run by a QA agent |
 | `docs/test-results.md` | Results of each QA run of the browser scenarios |
 | `docs/phase-a-test-kit.md` | Script and templates for the five-person user test (phase A) |
+| `docs/design-system-comprehension-test.md` | Repeatable contact-action/evidence comprehension protocol, deterministic coding rubric and JSON scoring format |
 | `docs/routing-drafts-report.md` | Phase 1b: how to review drafted topics/powers, and per-record reviewer notes |
 | `docs/accessibility.md` | How to run the axe-core check and the latest results |
 | `docs/link-check-trial.md` | First full link-check run: 404s and cross-host redirects for stewards to re-verify |
@@ -120,6 +121,7 @@ able to work in this repo using only what is written in this section.)_
 - Apply the deterministic channel review: `npm run contact-review` (dry-run summary), or `npm run contact-review -- --apply` to rewrite all 74 channel records; regenerate the inventory afterward
 - Focused browser/accessibility QA: build, copy `node_modules/axe-core/axe.min.js` to `dist/`, serve locally, start Chrome for Testing on the project CDP port, then run `AICA_QA_URL=http://127.0.0.1:<port> node scripts/qa-contact-audit.mjs`
 - Design-system visual/accessibility regression: after the same build/serve/browser setup, run `AICA_QA_URL=http://127.0.0.1:<port> npm run visual:check`; reviewed baselines are in `tests/visual-baselines/`. Use `npm run visual:update` only after reviewing every image. Actuals/diffs go to `tmp/visual-regression/`.
+- Score genuine contact-comprehension observations: `node scripts/score-contact-comprehension.mjs <results.json>` (requires five participants, 90% action/evidence accuracy and zero reference-only mistakes; protocol in `docs/design-system-comprehension-test.md`)
 - Test: `npm test`
 - Design-system guardrails: `npm run design:check` (raw colours outside tokens, controlled contact markup and complete action/evidence contracts; intentional literal-colour exceptions require `design-check-allow: raw-color` on the same line)
 - Validate + design-system guardrails + test: `npm run check`
