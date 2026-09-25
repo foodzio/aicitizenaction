@@ -120,6 +120,7 @@ export function validateAll({ now = today() } = {}) {
           if (c.opens_on && c.closes_on && c.closes_on < c.opens_on) err(p, `route ${route.id}: contact.closes_on is before opens_on`);
           if (c.review === 'reviewed' && ['open', 'limited'].includes(c.status)) {
             if (route.verified !== true) err(p, `route ${route.id}: reviewed contact route must be verified true`);
+            if (c.disposition !== 'keep') err(p, `route ${route.id}: reviewed open or limited contact route needs disposition keep`);
             if (!c.evidence_url || !c.checked_on || !c.evidence_note) err(p, `route ${route.id}: reviewed contact route needs evidence_url, evidence_note and checked_on`);
             if (!c.eligible_users?.length) err(p, `route ${route.id}: reviewed contact route needs eligible_users`);
             if (!c.accepted_subjects?.length) err(p, `route ${route.id}: reviewed contact route needs accepted_subjects`);

@@ -41,6 +41,37 @@ export function isUsableValue(v) {
   return /\d{3}/.test(s) && /[\s-]/.test(s);             // phone number or postal address
 }
 
+/** Structural mechanism represented by a route value; never inferred from its display label. */
+export function contactValueKind(value) {
+  const v = String(value ?? '').trim();
+  if (/^https?:\/\/\S+$/i.test(v)) return 'web';
+  if (/^[^\s@/]+@[^\s@]+\.[a-z]{2,}$/i.test(v)) return 'email';
+  if (/^\+?[\d().\s-]{7,}(?:\s*(?:x|ext\.?|extension)\s*\d+)?$/i.test(v)) return 'phone';
+  return isUsableValue(v) ? 'details' : 'none';
+}
+
+/** Safe actionable href where the mechanism supports one-click contact. */
+export function contactHref(route) {
+  const value = String(route?.value ?? '').trim();
+  const kind = contactValueKind(value);
+  if (kind === 'web') return value;
+  if (kind === 'email') return `mailto:${value}`;
+  if (kind === 'phone') return `tel:${value.replace(/(?:\s*(?:x|ext\.?|extension)\s*\d+)?$/i, '').replace(/[^\d+]/g, '')}`;
+  return null;
+}
+
+/** Controlled label family for the primary action. */
+export function contactActionKind(route) {
+  const kind = contactValueKind(route?.value);
+  if (kind === 'email' || kind === 'phone' || kind === 'details') return kind;
+  if (route?.type === 'consultation') return 'consultation';
+  if (['submission', 'evidence', 'docket'].includes(route?.type)) return 'submission';
+  if (['complaint', 'reporting', 'whistleblowing', 'disclosure', 'bounty'].includes(route?.type)) return 'report';
+  if (route?.type === 'petition') return 'petition';
+  if (route?.type === 'feedback') return 'feedback';
+  return 'form';
+}
+
 // A conservative compatibility gate used while legacy records are being given structured
 // contact evidence. These phrases are an explicit statement that the record is not a current
 // inbound destination; a route must never outrank the record's own warning.
@@ -78,7 +109,7 @@ export function contactRouteAssessment(record = {}, route, today = new Date().to
   if (record.facts?.recommend === false) return assessment('reference_only', 'record_not_recommended', contactValidThrough(route));
   if (record.facts?.public_input === 'none') return assessment('reference_only', 'no_public_input', contactValidThrough(route));
   if (!CONTACT_TYPES.includes(route.type)) return assessment('reference_only', 'not_contact_type', contactValidThrough(route));
-  if (c?.status === 'none' || c?.disposition === 'reference-only') return assessment('reference_only', 'route_reference_only', contactValidThrough(route));
+  if (c?.status === 'none' || ['reference-only', 'remove'].includes(c?.disposition)) return assessment('reference_only', 'route_reference_only', contactValidThrough(route));
   if (legacyContradiction(record, route)) return assessment('reference_only', 'record_contradiction', contactValidThrough(route));
 
   // `verified` means the destination was actually opened. Unchecked and failed routes are useful
@@ -95,6 +126,7 @@ export function contactRouteAssessment(record = {}, route, today = new Date().to
 
   if (c) {
     if (c.review !== 'reviewed') return assessment('unverified', 'review_pending', expiresOn);
+    if (c.disposition !== 'keep') return assessment('unverified', 'disposition_not_keep', expiresOn);
     if (c.status === 'unknown') return assessment('unverified', 'status_unknown', expiresOn);
     if (!['open', 'limited'].includes(c.status)) return assessment('unverified', 'status_unsupported', expiresOn);
     if (!c.evidence_url || !c.checked_on) return assessment('unverified', 'missing_evidence', expiresOn);
@@ -104,6 +136,35 @@ export function contactRouteAssessment(record = {}, route, today = new Date().to
   }
 
   return assessment('verified', 'current_contact', expiresOn);
+}
+
+/**
+ * Normalized, non-localized information contract consumed by every contact presentation.
+ * Raw controlled terms are translated at the final UI boundary.
+ */
+export function contactRouteContract(record = {}, route, today = new Date().toISOString().slice(0, 10)) {
+  const state = contactRouteAssessment(record, route, today);
+  const valueKind = contactValueKind(route?.value);
+  return Object.freeze({
+    recordId: record.id ?? null,
+    routeId: route?.id ?? null,
+    routeType: route?.type ?? null,
+    state,
+    mechanism: Object.freeze({
+      kind: valueKind,
+      value: route?.value ?? null,
+      href: state.actionable ? contactHref(route) : null,
+      actionKind: state.actionable ? contactActionKind(route) : null
+    }),
+    audience: Object.freeze([...(route?.contact?.eligible_users ?? [])]),
+    acceptedSubjects: Object.freeze([...(route?.contact?.accepted_subjects ?? [])]),
+    restrictions: route?.contact?.restrictions ?? null,
+    evidence: Object.freeze({
+      url: route?.contact?.evidence_url ?? null,
+      note: route?.contact?.evidence_note ?? null,
+      checkedOn: route?.contact?.checked_on ?? route?.verified_on ?? null
+    })
+  });
 }
 
 /** Whether one route is safe to present as a current inbound contact mechanism. */

@@ -39,7 +39,7 @@ Tracked in git and committed with every step.
 | --- | --- | --- |
 | Design system 0 — Plan and baseline | **done** | Plan tracked; 118/118 tests and 838-page build pass after daily contact inventory refresh |
 | Design system 1 — Presentation state | **done** | Pure assessment drives eligibility; six states/reasons and EN/FR copy tested |
-| Design system 2 — Contact contract | pending | Required recipient/audience/subjects/mechanism/evidence presentation |
+| Design system 2 — Contact contract | **done** | Normalized mechanism/action/audience/subjects/evidence contract plus validation |
 | Design system 3 — Domain components | pending | Button, StatusBadge, Notice, ContactRoute |
 | Design system 4 — Critical journey | pending | Directory, records and guided path only |
 | Design system 5 — CSS organization | pending | Proportional split: tokens/global/components |
@@ -103,6 +103,22 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-25T11:52:30Z — Contact information contract formalized
+
+- Added `contactRouteContract()` as the non-localized data contract for every contact
+  presentation: route identity, authoritative state, mechanism kind/value/safe action href,
+  controlled action family, audience, accepted subjects, restrictions and evidence.
+- Added deterministic web/email/phone/details detection. Non-actionable routes never receive an
+  action href or label family; mixed postal/phone details remain visible text instead of receiving
+  a misleading link.
+- Tightened validation and eligibility so reviewed open/limited routes must carry the explicit
+  `keep` disposition. Added complete English and machine-French contact-contract terminology,
+  including mechanism-specific actions, the two audited audience values and all 17 accepted
+  subject values present in actionable routes.
+- Focused routing/validation/i18n tests pass 46/46; content validation remains at 0 errors/four
+  known warnings. Phase 2 is complete. Phase 3 is active: implement the four presentation-only
+  Astro components against this contract.
 
 ### 2026-09-25T11:49:10Z — Authoritative contact presentation state implemented
 

@@ -577,6 +577,145 @@ strings:
         value: Ce lien fournit des informations ou des preuves ; ce n'est pas un endroit où envoyer un message.
         src: d0d39c73
         machine: true
+    recipient:
+      value: Destinataire
+      src: 51fac985
+      machine: true
+    accepts:
+      value: Ce qui est accepté
+      src: 4f8674d5
+      machine: true
+    mechanism:
+      value: Moyen de contact
+      src: f6366002
+      machine: true
+    checked:
+      value: Dernière vérification
+      src: 0c0c351a
+      machine: true
+    why:
+      value: Pourquoi nous le classons ainsi
+      src: 290749ad
+      machine: true
+    unavailable:
+      value: Aucune action de contact n'est disponible pour cette fiche.
+      src: 3c696480
+      machine: true
+    actions:
+      email:
+        value: Envoyer un courriel au destinataire
+        src: 722e0a55
+        machine: true
+      phone:
+        value: Appeler le destinataire
+        src: 01d83146
+        machine: true
+      details:
+        value: Utiliser ces coordonnées
+        src: 71991dd6
+        machine: true
+      consultation:
+        value: Ouvrir la consultation
+        src: a601713c
+        machine: true
+      submission:
+        value: Ouvrir la page de dépôt
+        src: 62b038bc
+        machine: true
+      report:
+        value: Ouvrir le canal de signalement
+        src: d4170485
+        machine: true
+      petition:
+        value: Ouvrir la pétition
+        src: b37e6f94
+        machine: true
+      feedback:
+        value: Ouvrir le formulaire de retour
+        src: 52adbb76
+        machine: true
+      form:
+        value: Ouvrir le formulaire de contact
+        src: 420afe80
+        machine: true
+    audience:
+      public:
+        value: Membres du public
+        src: 7db52589
+        machine: true
+      users-meeting-published-eligibility:
+        value: Personnes remplissant les conditions d'admissibilité publiées
+        src: 73cc131f
+        machine: true
+    subjects:
+      behaviour:
+        value: Comportement observé du modèle
+        src: e300112f
+        machine: true
+      bounty:
+        value: Signalements admissibles à une prime
+        src: 782a62b7
+        machine: true
+      complaint:
+        value: Plaintes
+        src: 3f1c40e9
+        machine: true
+      consultation:
+        value: Réponses à une consultation
+        src: aa929e20
+        machine: true
+      disclosure:
+        value: Divulgations responsables
+        src: f39867f8
+        machine: true
+      email:
+        value: Messages pertinents par courriel
+        src: cd91716d
+        machine: true
+      feedback:
+        value: Retours
+        src: aac77df3
+        machine: true
+      flaw:
+        value: Failles de modèles d'IA
+        src: "01923e58"
+        machine: true
+      form:
+        value: Dépôts acceptés par le formulaire
+        src: a6175cf5
+        machine: true
+      harm:
+        value: Préjudices liés à l'IA
+        src: 6d96bf0a
+        machine: true
+      insider:
+        value: Préoccupations internes
+        src: f9b09714
+        machine: true
+      law:
+        value: Lois et politiques sur l'IA
+        src: dfb0b423
+        machine: true
+      reporting:
+        value: Signalements
+        src: dacca3cb
+        machine: true
+      research:
+        value: Préoccupations liées à la recherche sur l'IA
+        src: a43440e0
+        machine: true
+      submission:
+        value: Contributions écrites
+        src: 10c72a5f
+        machine: true
+      systemic:
+        value: Risques systémiques liés à l'IA
+        src: 24cfa728
+        machine: true
+      whistleblowing:
+        value: Divulgations protégées et alertes internes
+        src: cefbde08
+        machine: true
     eligible:
       value: Qui peut l’utiliser
       src: 2faf1ec7

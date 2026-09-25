@@ -127,6 +127,7 @@ test('a reviewed open contact route requires evidence, audience and subjects', (
   assert.ok(has(r, 'needs evidence_url'));
   assert.ok(has(r, 'needs eligible_users'));
   assert.ok(has(r, 'needs accepted_subjects'));
+  assert.ok(has(r, 'needs disposition keep'));
 });
 
 test('a reviewed limited contact route requires restrictions', () => {

@@ -3,7 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { loadDirectory, loadContent } from '../scripts/lib/content.mjs';
-import { route, contactRoute, contactRouteAssessment, eligibleContactRoute, isCurrentSeat, recommendable, fillTemplate, diversify } from '../scripts/lib/routing.mjs';
+import { route, contactRoute, contactRouteAssessment, contactRouteContract, contactActionKind, contactHref, contactValueKind, eligibleContactRoute, isCurrentSeat, recommendable, fillTemplate, diversify } from '../scripts/lib/routing.mjs';
 
 const records = loadDirectory();
 const guides = loadContent('guides');
@@ -115,7 +115,7 @@ test('contact eligibility fails closed for unavailable, contradictory and expire
 test('contact presentation states are deterministic and share the eligibility decision', () => {
   const record = { facts: { public_input: 'open' }, meta: {}, strings: {} };
   const current = { id: 'r', type: 'form', value: 'https://example.org/report', verified: true, contact: {
-    status: 'open', directness: 'direct', eligible_users: ['members of the public'], accepted_subjects: ['AI incidents'],
+    status: 'open', directness: 'direct', disposition: 'keep', eligible_users: ['members of the public'], accepted_subjects: ['AI incidents'],
     evidence_url: 'https://example.org/report', evidence_note: 'The page invites reports.', checked_on: '2026-09-24', review: 'reviewed'
   } };
   const cases = [
@@ -138,7 +138,7 @@ test('contact presentation states are deterministic and share the eligibility de
 test('contact presentation state explains every fail-closed boundary', () => {
   const record = { facts: { public_input: 'open' }, meta: {}, strings: {} };
   const current = { id: 'r', type: 'form', value: 'https://example.org/report', verified: true, contact: {
-    status: 'limited', directness: 'direct', restrictions: 'Adults only', eligible_users: ['adults'], accepted_subjects: ['AI incidents'],
+    status: 'limited', directness: 'direct', disposition: 'keep', restrictions: 'Adults only', eligible_users: ['adults'], accepted_subjects: ['AI incidents'],
     evidence_url: 'https://example.org/report', evidence_note: 'The page invites reports.', checked_on: '2026-09-24', review: 'reviewed'
   } };
   const check = (owner, candidate, state, reason) => assert.deepEqual(
@@ -153,11 +153,45 @@ test('contact presentation state explains every fail-closed boundary', () => {
   check({ ...record, strings: { accepts: 'Nothing from the public.' } }, current, 'reference_only', 'record_contradiction');
   check({ ...record, meta: { unsourced: 'not found' } }, current, 'unverified', 'record_unsourced');
   check(record, { ...current, contact: { ...current.contact, review: 'pending' } }, 'unverified', 'review_pending');
+  check(record, { ...current, contact: { ...current.contact, disposition: 'fix' } }, 'unverified', 'disposition_not_keep');
   check(record, { ...current, contact: { ...current.contact, status: 'unknown' } }, 'unverified', 'status_unknown');
   check(record, { ...current, contact: { ...current.contact, evidence_url: undefined } }, 'unverified', 'missing_evidence');
   check(record, { ...current, contact: { ...current.contact, eligible_users: [] } }, 'unverified', 'missing_eligible_users');
   check(record, { ...current, contact: { ...current.contact, accepted_subjects: [] } }, 'unverified', 'missing_accepted_subjects');
   check(record, { ...current, contact: { ...current.contact, restrictions: null } }, 'unverified', 'missing_restrictions');
+});
+
+test('the contact information contract exposes mechanism, audience, subjects and evidence', () => {
+  const record = { id: 'example-body', facts: { public_input: 'open' }, meta: {}, strings: { name: 'Example body' } };
+  const route = { id: 'send', type: 'complaint', value: 'https://example.org/complain', verified: true, contact: {
+    status: 'limited', directness: 'direct', disposition: 'keep', restrictions: 'Residents only',
+    eligible_users: ['public'], accepted_subjects: ['harm'], evidence_url: 'https://example.org/rules',
+    evidence_note: 'The rules invite complaints.', checked_on: '2026-09-24', review: 'reviewed'
+  } };
+  const contract = contactRouteContract(record, route, '2026-09-25');
+  assert.equal(contract.state.state, 'verified');
+  assert.equal(contract.mechanism.kind, 'web');
+  assert.equal(contract.mechanism.href, route.value);
+  assert.equal(contract.mechanism.actionKind, 'report');
+  assert.deepEqual(contract.audience, ['public']);
+  assert.deepEqual(contract.acceptedSubjects, ['harm']);
+  assert.equal(contract.restrictions, 'Residents only');
+  assert.deepEqual(contract.evidence, { url: 'https://example.org/rules', note: 'The rules invite complaints.', checkedOn: '2026-09-24' });
+});
+
+test('contact mechanism and action labels are deterministic and non-actionable routes get no href', () => {
+  assert.equal(contactValueKind('hello@example.org'), 'email');
+  assert.equal(contactHref({ value: 'hello@example.org' }), 'mailto:hello@example.org');
+  assert.equal(contactActionKind({ type: 'email', value: 'hello@example.org' }), 'email');
+  assert.equal(contactValueKind('+32 2 555 12 12'), 'phone');
+  assert.equal(contactHref({ value: '+32 2 555 12 12' }), 'tel:+3225551212');
+  assert.equal(contactActionKind({ type: 'complaint', value: '+32 2 555 12 12' }), 'phone');
+  assert.equal(contactActionKind({ type: 'consultation', value: 'https://example.org' }), 'consultation');
+  assert.equal(contactActionKind({ type: 'petition', value: 'https://example.org' }), 'petition');
+  const reference = contactRouteContract({ facts: { recommend: false } }, { id: 'paper', type: 'disclosure', value: 'https://example.org/paper', verified: true }, '2026-09-25');
+  assert.equal(reference.state.state, 'reference_only');
+  assert.equal(reference.mechanism.href, null);
+  assert.equal(reference.mechanism.actionKind, null);
 });
 
 test('named seat holders fail closed after 90 days', () => {

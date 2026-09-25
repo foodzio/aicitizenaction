@@ -152,6 +152,43 @@ strings:
       unusable_help: This entry does not contain an address, form, phone number, or other usable contact mechanism.
       reference_only: Information only
       reference_only_help: This link provides background or evidence; it is not a place to send a message.
+    recipient: Recipient
+    accepts: What it accepts
+    mechanism: Contact mechanism
+    checked: Last checked
+    why: Why we classify it this way
+    unavailable: No contact action is available for this entry.
+    actions:
+      email: Email the recipient
+      phone: Call the recipient
+      details: Use these contact details
+      consultation: Open the consultation
+      submission: Open the submission page
+      report: Open the reporting route
+      petition: Open the petition
+      feedback: Open the feedback form
+      form: Open the contact form
+    audience:
+      public: Members of the public
+      users-meeting-published-eligibility: People who meet the published eligibility requirements
+    subjects:
+      behaviour: Observed model behaviour
+      bounty: Eligible bounty reports
+      complaint: Complaints
+      consultation: Consultation responses
+      disclosure: Responsible disclosures
+      email: Relevant messages by email
+      feedback: Feedback
+      flaw: AI model flaws
+      form: Submissions accepted by the form
+      harm: AI-related harm
+      insider: Insider concerns
+      law: AI laws and policy
+      reporting: Reports
+      research: AI research concerns
+      submission: Written submissions
+      systemic: Systemic AI risks
+      whistleblowing: Protected disclosures and whistleblowing
     eligible: Who may use it
     restrictions: Restrictions
     evidence: Evidence that this route accepts contact
