@@ -54,3 +54,22 @@ The same run confirmed that eligibility and evidence are visible, the article is
 directory, the Argentina bill attachment is absent from “How to send it,” French uses “Lieux à
 contacter,” and `/api/channels.json` exposes only the audited set. Result: 25/25 checks pass.
 Screenshots and the machine-readable result are generated under `tmp/qa-contact/` (gitignored).
+
+## Design-system regression — 2026-09-25
+
+`scripts/visual-regression.mjs` now checks eight fixed scenarios covering the fictional component
+reference, directory, an actionable record, a reference-only record and the guided path at desktop
+and mobile widths in light and dark themes. It fixes scale, locale, timezone, reduced motion,
+animations, font readiness and scroll position before capture. Every scenario runs axe-core and a
+horizontal-overflow check; contact cards additionally prove actionability matches the number of
+primary actions and that evidence never receives button styling.
+
+Reviewed PNG baselines and their environment manifest live in `tests/visual-baselines/`. Exact
+matches pass; a tolerance of at most 12 anti-aliased pixels handles observed GPU rasterisation
+jitter while retaining larger actual and diff images under `tmp/visual-regression/`. Two
+consecutive unchanged runs passed 8/8 in Chrome for Testing 151 on macOS arm64. The pass also fixed
+non-unique evidence-landmark names by including each route label in its accessible name.
+
+This command is intentionally separate from `npm run check`: screenshot baselines are platform and
+browser-build specific. Add it as a blocking CI job only after a fixed CI Chrome-for-Testing image
+has its own reviewed baseline; axe and semantic contact rules remain blocking in the normal suite.

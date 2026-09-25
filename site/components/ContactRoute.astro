@@ -76,7 +76,7 @@ const evidenceNotes = [...new Set([evidence.note, scope, note].filter(Boolean))]
   )}
 
   {(evidence.url || evidenceNotes.length > 0) && (
-    <aside class="contact-route-evidence" aria-label={t('contact.evidence')} data-contact-evidence="true">
+    <aside class="contact-route-evidence" aria-label={`${t('contact.evidence')}: ${routeLabel}`} data-contact-evidence="true">
       <h4>{t('contact.evidence')}</h4>
       {evidenceNotes.map(value => <p>{value}</p>)}
       {evidence.url && <p><a href={evidence.url} target="_blank" rel="noopener noreferrer">{evidenceIsMechanism && !state.actionable ? mechanism.value : t('contact.why')}</a>{evidence.checkedOn && <span class="meta-line"> · {t('contact.checked')} {evidence.checkedOn}</span>}</p>}

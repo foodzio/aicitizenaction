@@ -45,7 +45,7 @@ Tracked in git and committed with every step.
 | Design system 5 — CSS organization | **done** | Proportional split: tokens/global/components; responsive contact states use existing tokens |
 | Design system 6 — Reference page | **done** | Unlisted/noindex English page; fictional fixtures cover every state and component |
 | Design system 7 — Enforcement | **done** | `npm run design:check` enforces tokens, controlled markup and complete contact contracts |
-| Design system 8 — Visual/accessibility regression | pending | Stable screenshots, axe and overflow coverage |
+| Design system 8 — Visual/accessibility regression | **done locally** | 8 reviewed baselines; two stable runs; axe/overflow/action invariants pass |
 | Design system 9 — Comprehension validation | pending | Repeatable protocol; real participant results cannot be fabricated |
 | Design system 10 — Evidence-led consolidation | pending | Review remaining duplication only after critical journey is stable |
 | 0 — Architecture fixed | done | |
@@ -103,6 +103,23 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-25T12:14:00Z — Visual and accessibility regression established
+
+- Added `scripts/visual-regression.mjs`, `visual:check` and review-only `visual:update`. Eight fixed
+  desktop/mobile and light/dark scenarios cover the component reference, directory, actionable and
+  reference-only records, and guided path. Locale, timezone, scale, reduced motion, animation,
+  font readiness and scroll position are stabilized.
+- Every scenario runs axe, horizontal-overflow checks and contact action/evidence invariants.
+  Reviewed PNG baselines plus the browser/platform manifest are tracked under
+  `tests/visual-baselines/`; actual/diff images remain in `tmp/visual-regression/`. Pixel comparison
+  permits no more than 12 rasterisation-only pixels. Two consecutive unchanged runs passed 8/8.
+- The first run found non-unique evidence landmark names. Evidence landmarks now include the route
+  label in both server-rendered and guided-path markup; the rerun has zero axe violations. Added
+  `pixelmatch`/`pngjs` only for deterministic image comparison and documented the workflow.
+- Screenshot comparison remains separate from blocking CI because the reviewed baseline is for
+  Chrome for Testing 151 on macOS arm64; normal CI still blocks on semantic and accessibility-adjacent
+  source/data checks. Phase 8 is locally complete; phase 9 is active.
 
 ### 2026-09-25T12:05:30Z — Deterministic design-system enforcement added
 
