@@ -12,6 +12,11 @@ Tracked in git and committed with every step.
 
 ## Current plan
 
+- **Active design-system plan:** `docs/design-system-implementation-plan.md` — started
+  2026-09-25 under the owner's autonomous implementation instruction. It makes contact-action
+  state authoritative and consistent, separates action from evidence, introduces narrowly scoped
+  components and deterministic visual/accessibility safeguards, then consolidates only where
+  evidence supports it. No deployment is authorized by this implementation request.
 - **Plan:** `docs/implementation-plan.md` — implements `docs/ux-brief.md` (the product) and
   `docs/content-architecture.md` (content as data, translation, freshness, Resources, volunteers).
 - **Corrective plan:** `docs/places-to-contact-audit-plan.md` — deterministic review and correction
@@ -32,6 +37,17 @@ Tracked in git and committed with every step.
 
 | Phase | Status | Notes |
 | --- | --- | --- |
+| Design system 0 — Plan and baseline | **in progress** | Revised plan tracked; current implementation and test baseline next |
+| Design system 1 — Presentation state | pending | One mapper derived from existing routing/freshness facts |
+| Design system 2 — Contact contract | pending | Required recipient/audience/subjects/mechanism/evidence presentation |
+| Design system 3 — Domain components | pending | Button, StatusBadge, Notice, ContactRoute |
+| Design system 4 — Critical journey | pending | Directory, records and guided path only |
+| Design system 5 — CSS organization | pending | Proportional split: tokens/global/components |
+| Design system 6 — Reference page | pending | Unlisted/noindex, fictional fixtures |
+| Design system 7 — Enforcement | pending | Narrow checker plus component/integration tests |
+| Design system 8 — Visual/accessibility regression | pending | Stable screenshots, axe and overflow coverage |
+| Design system 9 — Comprehension validation | pending | Repeatable protocol; real participant results cannot be fabricated |
+| Design system 10 — Evidence-led consolidation | pending | Review remaining duplication only after critical journey is stable |
 | 0 — Architecture fixed | done | |
 | A — Validate with five users | blocked | Needs owner answers to brief Q1–4 and five real participants. A testable path prototype can still be built (see phase 3b) |
 | 1 — Schemas and migration | **done** | 423 records, all counts preserved, 22 tests pass |
@@ -87,6 +103,18 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-25T11:45:15Z — Design-system implementation initialized
+
+- Added the revised, acceptance-driven plan at `docs/design-system-implementation-plan.md` and
+  made it the active repo-level implementation track.
+- Confirmed a clean worktree on `main`, 25 commits ahead of `origin/main`; those existing commits
+  are owner/project work and will be preserved. No deployment or remote mutation is authorized.
+- Mandatory skill discovery found no project-specific skill for this Astro refactor. Browser work
+  will use the documented `/browser-init` skill before Playwright and will not use native computer
+  control.
+- Next: capture the current automated baseline and implement a pure authoritative presentation
+  state beside `eligibleContactRoute()`.
 
 ### 2026-09-24T15:11:40Z — Directory integrity release deployed and verified
 
