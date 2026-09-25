@@ -209,6 +209,22 @@ test('design system: contact components expose controlled semantic contracts', (
   assert.match(route, /mechanism\.href/);
 });
 
+test('design system: the unlisted reference page uses fictional fixtures for every state', () => {
+  const html = page('en/design-system/index.html');
+  assert.match(html, /<meta name="robots" content="noindex"/);
+  assert.match(html, /data-design-system-reference="fictional"/);
+  assert.match(html, /Nothing on this page is a real place to contact/);
+  for (const state of ['verified', 'unverified', 'expired', 'closed', 'unusable', 'reference_only']) {
+    assert.match(html, new RegExp(`data-contact-state="${state}"`), state);
+  }
+  for (const component of ['button', 'notice', 'status-badge', 'contact-route']) {
+    assert.match(html, new RegExp(`data-ds-component="${component}"`), component);
+  }
+  assert.equal((html.match(/data-contact-action="primary"/g) ?? []).length, 1);
+  assert.ok(!html.includes('href="/en/design-system/"'), 'reference page is absent from global navigation');
+  assert.ok(!records.some(record => html.includes(`data-record-id="${record.id}"`)), 'reference page contains no real record fixture');
+});
+
 test('the top menu is identical on every page, in each language', () => {
   const navOf = html => (html.match(/<header class="aca-header">[\s\S]*?<\/header>/) ?? [''])[0]
     .replace(/ class="aca-nav-link is-active"/g, ' class="aca-nav-link"').replace(/ aria-current="page"/g, '');

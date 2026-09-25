@@ -43,7 +43,7 @@ Tracked in git and committed with every step.
 | Design system 3 — Domain components | **done** | Presentation-only Button, StatusBadge, Notice and ContactRoute with semantic markers |
 | Design system 4 — Critical journey | **done** | Directory, records and guided path share state/contract and action/evidence separation |
 | Design system 5 — CSS organization | **done** | Proportional split: tokens/global/components; responsive contact states use existing tokens |
-| Design system 6 — Reference page | pending | Unlisted/noindex, fictional fixtures |
+| Design system 6 — Reference page | **done** | Unlisted/noindex English page; fictional fixtures cover every state and component |
 | Design system 7 — Enforcement | pending | Narrow checker plus component/integration tests |
 | Design system 8 — Visual/accessibility regression | pending | Stable screenshots, axe and overflow coverage |
 | Design system 9 — Comprehension validation | pending | Repeatable protocol; real participant results cannot be fabricated |
@@ -103,6 +103,17 @@ Tracked in git and committed with every step.
 18. **Report links point at GitHub issue forms**, which only work for the public once the repo is public — the repo is private today.
 
 ## Implementation log (newest first)
+
+### 2026-09-25T12:01:30Z — Private design-system reference added
+
+- Added `/en/design-system/` as an unlisted, `noindex` component reference. It uses only explicitly
+  fictional recipients, routes, mechanisms and evidence; no live directory record is used as a
+  fixture. The page is intentionally absent from global navigation and its language switcher is
+  disabled because no translated route exists.
+- The page exercises primary/secondary/disabled buttons, all three notice tones, every one of the
+  six contact states, action/evidence separation, long text and absent optional data.
+- A build-level test proves the privacy/indexing, fictional-data, component, state and single-action
+  invariants. All 22 site integration tests pass. Phase 6 is complete; phase 7 is active.
 
 ### 2026-09-25T11:58:56Z — Component styles separated and completed
 

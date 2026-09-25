@@ -1,0 +1,75 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Button from '../../../components/Button.astro';
+import ContactRoute from '../../../components/ContactRoute.astro';
+import Notice from '../../../components/Notice.astro';
+import StatusBadge from '../../../components/StatusBadge.astro';
+import { ui } from '../../../lib/data.mjs';
+
+const t = ui('en');
+const states = [
+  { state: 'verified', actionable: true, reason: 'fictional-current-evidence', kind: 'web', value: 'https://example.invalid/report', href: 'https://example.invalid/report', actionKind: 'web', checkedOn: '2026-09-25' },
+  { state: 'unverified', actionable: false, reason: 'fictional-incomplete-evidence', kind: 'email', value: 'reports@example.invalid', href: null, actionKind: null, checkedOn: null },
+  { state: 'expired', actionable: false, reason: 'fictional-evidence-expired', kind: 'web', value: 'https://example.invalid/old-form', href: null, actionKind: null, checkedOn: '2025-01-01' },
+  { state: 'closed', actionable: false, reason: 'fictional-window-closed', kind: 'web', value: 'https://example.invalid/closed', href: null, actionKind: null, checkedOn: '2026-01-01' },
+  { state: 'unusable', actionable: false, reason: 'fictional-missing-mechanism', kind: 'none', value: null, href: null, actionKind: null, checkedOn: null },
+  { state: 'reference_only', actionable: false, reason: 'fictional-background-source', kind: 'web', value: 'https://example.invalid/article', href: null, actionKind: null, checkedOn: '2026-09-25' }
+];
+
+const fixtures = states.map((item, index) => ({
+  recordId: `fictional-record-${index + 1}`,
+  routeId: `fictional-route-${index + 1}`,
+  routeType: item.kind,
+  state: { state: item.state, reason: item.reason, actionable: item.actionable, validThrough: item.state === 'verified' ? '2027-03-24' : null },
+  mechanism: { kind: item.kind, value: item.value, href: item.href, actionKind: item.actionKind },
+  audience: item.state === 'unusable' ? [] : ['general-public'],
+  acceptedSubjects: item.state === 'unusable' ? [] : ['ai-safety'],
+  restrictions: item.state === 'verified' ? 'Fictional example: include enough detail for the recipient to assess the concern.' : null,
+  evidence: { url: item.value?.startsWith('http') ? item.value : null, note: item.state === 'unusable' ? null : 'Fictional evidence note for layout testing only.', checkedOn: item.checkedOn }
+}));
+---
+<Base lang="en" title="Design system reference" noindex={true} languageSwitcher={false}>
+  <div class="narrow design-reference" data-design-system-reference="fictional">
+    <h1>Design system reference</h1>
+    <p class="lede">An unlisted, non-production reference for checking interface states. Every recipient, route, address and evidence statement below is fictional.</p>
+    <Notice tone="blocking"><strong>Fixture data only.</strong> Nothing on this page is a real place to contact.</Notice>
+
+    <h2>Buttons</h2>
+    <div class="row">
+      <Button href="#contact-routes">Primary action</Button>
+      <Button href="#notices" variant="secondary">Secondary action</Button>
+      <Button disabled={true}>Disabled action</Button>
+    </div>
+
+    <h2 id="notices">Notices</h2>
+    <Notice tone="information">Information explains context without changing whether an action is available.</Notice>
+    <Notice tone="caution">Caution identifies a limitation that deserves attention.</Notice>
+    <Notice tone="blocking">Blocking means the user should not continue with this route.</Notice>
+
+    <h2>Status badges</h2>
+    <div class="row">
+      {states.map(item => <StatusBadge state={item.state} label={t(`contact.state.${item.state}`)} help={t(`contact.state.${item.state}_help`)} date={item.checkedOn} />)}
+    </div>
+
+    <h2 id="contact-routes">Contact routes</h2>
+    <p>The first fixture demonstrates a real action region separated from its evidence. The other five demonstrate every non-actionable state, including missing optional data and an unusually long label.</p>
+    <div class="reference-stack">
+      {fixtures.map((contract, index) => (
+        <ContactRoute
+          contract={contract}
+          recipient={index === 0 ? 'Fictional Office for an Intentionally Long Recipient Name That Tests Wrapping' : `Fictional recipient ${index + 1}`}
+          routeLabel={index === 0 ? 'Fictional public reporting form with a deliberately long descriptive route label' : `Fictional ${contract.state.state.replace('_', ' ')} route`}
+          typeLabel="Fictional contact mechanism"
+          t={t}
+          language={index === 0 ? 'en' : null}
+          scope={index === 0 ? 'Fictional scope note. This route accepts a detailed report from the general public.' : null}
+        />
+      ))}
+    </div>
+  </div>
+</Base>
+
+<style>
+  .design-reference > h2 { margin-top: var(--space-9); }
+  .reference-stack { display: grid; gap: var(--space-6); }
+</style>
