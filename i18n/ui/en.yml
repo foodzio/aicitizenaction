@@ -22,6 +22,7 @@ strings:
     translation_machine: Machine translation, not yet reviewed.
   door:
     title: What do you want to happen with AI?
+    title_emphasis: you
     lede: You don't need to be an expert. Your view counts because you live with the results.
     shape: About fifteen minutes · you leave with a message ready to send
     step1: Answer one question

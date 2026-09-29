@@ -87,6 +87,7 @@ footer.site .wrap { display: flex; flex-wrap: wrap; gap: var(--space-3) var(--sp
 /* ── Door: display question, lead, StepMeta, ActionCard grid, ReassuranceNote ── */
 .display { font-size: clamp(40px, 9vw, 64px); line-height: 1.12; font-weight: 800; letter-spacing: -0.02em; margin: var(--space-4) 0 var(--space-6); max-width: 16ch; }
 .lead { font-size: clamp(20px, 4.2vw, 30px); line-height: 1.47; font-weight: 400; color: var(--ink); max-width: 34ch; margin: 0; }
+.door-you { color: var(--coral-ink); }
 .door .aca-steps { margin: var(--space-8) 0 var(--space-10); }
 .aca-grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr; gap: var(--space-4) var(--space-5); }
 @media (min-width: 720px) { .aca-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

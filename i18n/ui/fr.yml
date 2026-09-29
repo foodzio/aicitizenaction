@@ -75,6 +75,10 @@ strings:
       value: Que voulez-vous qu'il se passe avec l'IA ?
       src: 2a24e6c9
       machine: true
+    title_emphasis:
+      value: vous
+      src: bb0347a4
+      machine: true
     lede:
       value: Pas besoin d'être expert. Votre avis compte parce que vous vivez avec les conséquences.
       src: 50de43a6

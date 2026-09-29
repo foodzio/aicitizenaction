@@ -10,6 +10,18 @@ Tracked in git and committed with every step.
 
 ---
 
+## Latest change — hero "you" accent (2026-09-29T13:47:05+02:00)
+
+- **Done (local, not deployed):** the home-page title now sets the addressed word ("you" / "vous")
+  in `var(--coral-ink)`. New UI key `door.title_emphasis` in `i18n/ui/en.yml` and `fr.yml`;
+  `site/pages/[lang]/index.astro` wraps its first whole-word match in `<span class="door-you">`
+  (plain title if not found); style in `site/styles/global.css`.
+- **Checks:** validate, design:check and i18n-sync pass. `npm test` has one failure — "fast directory
+  audit passes current integrity gates" — which fails identically without this change (pre-existing).
+- **Next:** deploy only when the owner asks.
+
+---
+
 ## Current plan
 
 - **Implemented design-system plan:** `docs/design-system-implementation-plan.md` — completed

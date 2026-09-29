@@ -13,10 +13,14 @@ const t = ui(lang);
 const oc = data().guide('outcomes');
 const g = guideText('outcomes', lang);
 const facts = t('door.shape').split(/\s*·\s*/);
+// The addressed "you" in the title is set in the accent colour; falls back to plain text if the word isn't found.
+const title = t('door.title');
+const emphasis = t('door.title_emphasis');
+const at = title.search(new RegExp(`(?<![\\p{L}])${emphasis}(?![\\p{L}])`, 'iu'));
 ---
 <Base lang={lang} current="start" description={t('site.tagline')}>
   <div class="door">
-    <h1 class="display">{t('door.title')}</h1>
+    <h1 class="display">{at < 0 ? title : <>{title.slice(0, at)}<span class="door-you">{title.slice(at, at + emphasis.length)}</span>{title.slice(at + emphasis.length)}</>}</h1>
     <p class="lead">{t('door.lede')}</p>
     <StepMeta steps={3} labelled labels={[t('door.step1'), t('door.step2'), t('door.step3')]} facts={facts} />
     <ul class="aca-grid">
