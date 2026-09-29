@@ -10,13 +10,13 @@ Tracked in git and committed with every step.
 
 ---
 
-## Latest change — preview fix for the root URL (2026-09-29T13:57:09+02:00, local, NOT deployed)
+## Latest change — preview fix for the root URL (2026-09-29T13:57:09+02:00, deployed 2026-09-29T14:06:24+02:00, v0.1.88)
 
 - **Problem:** sharing `https://web-production-ce384.up.railway.app/` showed no preview. `/` is a
   meta-refresh page to `/en/` with no `og:` tags, and crawlers do not follow the refresh.
 - **Fix:** tags moved into `site/components/SocialMeta.astro` (holds `PUBLIC_URL`), used by
   `site/layouts/Base.astro` and the root `site/pages/index.astro`. Redirect behaviour unchanged.
-- **Next:** deploy when the owner approves; then re-scrape in Facebook Sharing Debugger / LinkedIn Post Inspector.
+- **Next:** owner re-scrapes in Facebook Sharing Debugger / LinkedIn Post Inspector.
 
 ## Deployed 2026-09-29T13:52:40+02:00 (owner approved): v0.1.86 live with hero accent + social preview; `main` pushed to GitHub (43 commits).
 

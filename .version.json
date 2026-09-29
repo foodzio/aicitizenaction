@@ -1,10 +1,10 @@
 {
   "major": 0,
   "minor": 1,
-  "patch": 88,
-  "build": 89,
-  "version": "0.1.88",
-  "lastModified": "2026-09-29T11:57:09Z",
+  "patch": 89,
+  "build": 90,
+  "version": "0.1.89",
+  "lastModified": "2026-09-29T12:06:25Z",
   "_meta": {
     "description": "Universal version tracking - works with any project type",
     "usage": {
