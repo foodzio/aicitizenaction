@@ -10,7 +10,17 @@ Tracked in git and committed with every step.
 
 ---
 
-## Latest change — hero "you" accent (2026-09-29T13:47:05+02:00)
+## Latest change — social preview image (2026-09-29T13:50:07+02:00)
+
+- **Done (local, not deployed):** `site/public/brand/social-preview.png` (1200×630): "What do *you*
+  want to happen with AI?" + "Reach out to the people who can actually do something about your
+  concern." Rendered by `scripts/social-image.mjs` (headless Chrome, site tokens + Figtree + lockup).
+  `site/layouts/Base.astro` adds `og:*` and `twitter:card` tags on every page.
+- **Watch:** absolute URLs use the Railway host (`PUBLIC_URL` in `Base.astro`) because
+  `aicitizenaction.org` (Astro `site`, also used by canonical/hreflang) currently serves a parked
+  lander. Switch `PUBLIC_URL` when the domain is live. Test status unchanged (1 pre-existing failure).
+
+## Earlier change — hero "you" accent (2026-09-29T13:47:05+02:00)
 
 - **Done (local, not deployed):** the home-page title now sets the addressed word ("you" / "vous")
   in `var(--coral-ink)`. New UI key `door.title_emphasis` in `i18n/ui/en.yml` and `fr.yml`;

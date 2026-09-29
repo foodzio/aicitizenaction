@@ -135,6 +135,7 @@ able to work in this repo using only what is written in this section.)_
 - Link check: `node scripts/check-links.mjs [--files f.yml …] [--state s.json] [--out o.json]` (full run ≈ 5 min for ~780 URLs)
 - Point tools at another tree: `AICA_CONTENT=/path/content AICA_I18N=/path/i18n npm run validate`
 - Build the site: `npm run build` (→ `dist/`, ~4 s, ~900 pages in en + fr)
+- Social preview image: `CHROME="<Chrome for Testing binary>" node scripts/social-image.mjs` re-renders `site/public/brand/social-preview.png` (1200×630, used by the `og:`/`twitter:` tags in `site/layouts/Base.astro`)
 - Develop: `npm run dev` (Astro dev server — local only, never in production)
 - Serve the build locally: `PORT=4321 COUNTS_FILE=tmp/counts.json node server.mjs` (or `npx serve dist -l 4321` without counting)
 - **Live:** https://web-production-ce384.up.railway.app — Railway workspace `iconducteur`, project `aicitizenaction`, service `web`, environment `production`, source `foodzio/aicitizenaction@main`, volume `web-volume` at `/data`, `COUNTS_FILE=/data/counts.json`.
@@ -233,4 +234,4 @@ List every `HANDOVER.md` in this repo and what it covers, so the map stays true:
 | `HANDOVER.md` | Repo-wide work for `aicitizenaction` |
 | _(add rows as subprojects appear)_ | |
 
-Last modified: 2026-09-24T13:37:08Z
+Last modified: 2026-09-29T13:50:07+02:00
