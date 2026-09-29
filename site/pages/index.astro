@@ -1,5 +1,7 @@
 ---
 // The root sends everyone to the English door; language is always in the URL.
+// It carries the social preview tags because crawlers read this page and do not follow the refresh.
+import SocialMeta from '../components/SocialMeta.astro';
 ---
 <!doctype html>
 <html lang="en">
@@ -8,6 +10,7 @@
     <meta http-equiv="refresh" content="0; url=/en/" />
     <link rel="canonical" href="/en/" />
     <title>AI Citizen Action</title>
+    <SocialMeta siteName="AICitizenAction.org" title="AICitizenAction.org" description="Reach out to the people who can actually do something about your concern." />
   </head>
   <body><p><a href="/en/">Continue to AI Citizen Action</a></p></body>
 </html>
