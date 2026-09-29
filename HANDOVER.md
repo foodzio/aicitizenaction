@@ -10,9 +10,11 @@ Tracked in git and committed with every step.
 
 ---
 
+## Deployed 2026-09-29T13:52:40+02:00 (owner approved): v0.1.86 live with hero accent + social preview; `main` pushed to GitHub (43 commits).
+
 ## Latest change — social preview image (2026-09-29T13:50:07+02:00)
 
-- **Done (local, not deployed):** `site/public/brand/social-preview.png` (1200×630): "What do *you*
+- **Done (deployed):** `site/public/brand/social-preview.png` (1200×630): "What do *you*
   want to happen with AI?" + "Reach out to the people who can actually do something about your
   concern." Rendered by `scripts/social-image.mjs` (headless Chrome, site tokens + Figtree + lockup).
   `site/layouts/Base.astro` adds `og:*` and `twitter:card` tags on every page.
@@ -22,7 +24,7 @@ Tracked in git and committed with every step.
 
 ## Earlier change — hero "you" accent (2026-09-29T13:47:05+02:00)
 
-- **Done (local, not deployed):** the home-page title now sets the addressed word ("you" / "vous")
+- **Done (deployed):** the home-page title now sets the addressed word ("you" / "vous")
   in `var(--coral-ink)`. New UI key `door.title_emphasis` in `i18n/ui/en.yml` and `fr.yml`;
   `site/pages/[lang]/index.astro` wraps its first whole-word match in `<span class="door-you">`
   (plain title if not found); style in `site/styles/global.css`.
